@@ -103378,8 +103378,8 @@
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/locales/zh-CN/eval.json",
-      "bytes": 17016,
-      "sha256": "f33e805cc5ece8f35d4e0232080e6dc4a825fb9cbf09d994340ade60772a6bb7"
+      "bytes": 16682,
+      "sha256": "a74f99399e2a7b62158c77331d651c68beeb9bcf71e3d836b1f10ca1dd435836"
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/locales/zh-CN/file.json",
@@ -103548,8 +103548,8 @@
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/next-env.d.ts",
-      "bytes": 257,
-      "sha256": "083e23c4c5e7761db151134ea1ef7896120c86c5888cdc8a861f534f7e86d6fd"
+      "bytes": 251,
+      "sha256": "7ad303e40d4fddf44f156129e397511953a71481c5cfd86b1862649aaaf240cc"
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/next.config.ts",
@@ -118723,8 +118723,8 @@
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/engine-version.json",
-      "bytes": 508,
-      "sha256": "b79f89306373c0e6ff09752626cc505a6a7186da8b84dd4db5727ffb78fb3a53"
+      "bytes": 498,
+      "sha256": "80e7d9ac123a873b3c86c039aeaf23e863b382acd4afedf042fbc97cfc52d47b"
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py",
@@ -118733,8 +118733,8 @@
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/provenance.json",
-      "bytes": 421,
-      "sha256": "711907b0f4c9273a1d24c475e09e530290d7c1854d40197855335f8ed25d3347"
+      "bytes": 406,
+      "sha256": "dc6e92763f1386d47a2f359f71317a1579009577eb9d5b652ef0a8e3bf42a4bf"
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/review_cli.py",
@@ -118743,8 +118743,8 @@
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py",
-      "bytes": 5347,
-      "sha256": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e"
+      "bytes": 5269,
+      "sha256": "a0a1c125a98071f13d26e12d7d5530b0572d953beb70a34cbfb9eb6d1218e716"
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/test_adapter.py",
@@ -132733,8 +132733,8 @@
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/src/routes/(main)/eval/features/DatasetEditModal/index.tsx",
-      "bytes": 6801,
-      "sha256": "d84dfa13487256cfa41c47b13e8e30d5d5c8e1786ee368aaf7048ab3dd38d53b"
+      "bytes": 6608,
+      "sha256": "e6b2125287f55a5e1bad47f887028bbaac42f541785983830722d7211e6458e1"
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/src/routes/(main)/eval/features/DatasetImportModal/MappingStep.tsx",
@@ -137143,8 +137143,8 @@
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/__tests__/judgeLifecycle.test.ts",
-      "bytes": 8491,
-      "sha256": "5ab6623740bd194f7e6782c2d165f7fb94271ba09b9880507fb949fd126c8a4c"
+      "bytes": 8285,
+      "sha256": "23810857a27651a18abc088fd7000a97a841496145a23c1036ea9d9a9aa4b054"
     },
     {
       "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/__tests__/judgeMock.test.ts",
@@ -152794,7 +152794,7 @@
     {
       "path": "DELIVERY_MANIFEST.json",
       "bytes": 8521515,
-      "sha256": "dcc576b1db6b3476d2dcfb83199f1b1aab2fc92294ea72fc26bdb64a3364a7ea"
+      "sha256": "ed4c794bf1d033b5c4313384212f9c8dcf87820a3c6f7c0d15027b07a121f762"
     }
   ],
   "exportRedactions": [],
@@ -152884,5 +152884,14 @@
       "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/aiAgent/__tests__/execAgent.memory.test.ts",
       "kind": "api_key"
     }
+  ],
+  "gitLineEndingNormalization": [
+    "local_checks/2026-11-08_platform_audit/platform/locales/zh-CN/eval.json",
+    "local_checks/2026-11-08_platform_audit/platform/next-env.d.ts",
+    "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/engine-version.json",
+    "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/provenance.json",
+    "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py",
+    "local_checks/2026-11-08_platform_audit/platform/src/routes/(main)/eval/features/DatasetEditModal/index.tsx",
+    "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/__tests__/judgeLifecycle.test.ts"
   ]
 }
