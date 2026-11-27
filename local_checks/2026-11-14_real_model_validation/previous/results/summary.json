@@ -1,0 +1,23 @@
+{
+  "offlineQualityMeanMs": 0.6837799999630079,
+  "offlineQualityMaxMs": 1.8823000136762857,
+  "realModelLatency": null,
+  "realModelTokens": null,
+  "realModelCost": null,
+  "paidCalls": 0,
+  "localBudgetAttempts": 18,
+  "providerFinalSuite": {
+    "tests": 10,
+    "localRequests": 7
+  },
+  "regressionExitCodes": {
+    "new-quality4": 0,
+    "previous14": 0,
+    "previous18": 0,
+    "previous15": 0,
+    "originalPython36": 0,
+    "ts-score-and-attribution": 0,
+    "provider-config4": 0
+  },
+  "dbStopped": true
+}

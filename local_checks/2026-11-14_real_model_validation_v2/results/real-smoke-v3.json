@@ -1,0 +1,485 @@
+{
+  "stage": "development_smoke_v3_NOT_holdout",
+  "firstV1RequestPreserved": true,
+  "formalCalls": 0,
+  "records": [
+    {
+      "case": "answer_mismatch",
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "smoke-answer",
+        "inputDigest": "smoke-answer-digest",
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "smoke-answer-u",
+            "messageId": "u",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\": \"smoke-answer-order\", \"year\": 2025}",
+            "sourcePointer": "synthetic/u",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-answer-c",
+            "messageId": "c",
+            "parentId": null,
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/c",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": "{\"orderId\": \"smoke-answer-order\", \"year\": 2025}",
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-answer-r",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"smoke-answer-order\", \"status\": \"pending\", \"year\": 2025}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-answer-a",
+            "messageId": "a",
+            "parentId": null,
+            "role": "assistant",
+            "content": "{\"orderId\": \"smoke-answer-order\", \"status\": \"shipped\", \"year\": 2025}",
+            "sourcePointer": "synthetic/a",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 8,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "{\"orderId\": \"smoke-answer-order\", \"year\": 2025}",
+          "expected": null,
+          "actual": "{\"orderId\": \"smoke-answer-order\", \"status\": \"shipped\", \"year\": 2025}",
+          "criteria": null
+        }
+      },
+      "response": {
+        "candidate": {
+          "schemaVersion": 1,
+          "scope": {
+            "runId": "smoke-answerrun",
+            "caseId": "smoke-answer",
+            "topicId": "smoke-answertopic",
+            "threadId": null,
+            "operationId": "smoke-answerop",
+            "traceIds": []
+          },
+          "inputDigest": "smoke-answer-digest",
+          "decision": "candidates",
+          "observations": [
+            {
+              "id": "obs-1",
+              "category": "answer_tool_mismatch",
+              "claimLevel": "observation",
+              "summary": "Final answer reports status \"shipped\" but the paired orders.lookup result for this order reports status \"pending\".",
+              "comparison": {
+                "key": "status",
+                "expected": "pending",
+                "actual": "shipped"
+              },
+              "evidenceRefs": [
+                {
+                  "nodeId": "smoke-answer-r",
+                  "field": "content",
+                  "quote": "\"status\": \"pending\""
+                },
+                {
+                  "nodeId": "smoke-answer-a",
+                  "field": "content",
+                  "quote": "\"status\": \"shipped\""
+                }
+              ]
+            }
+          ]
+        },
+        "rawOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"smoke-answerrun\",\"caseId\":\"smoke-answer\",\"topicId\":\"smoke-answertopic\",\"threadId\":null,\"operationId\":\"smoke-answerop\",\"traceIds\":[]},\"inputDigest\":\"smoke-answer-digest\",\"decision\":\"candidates\",\"observations\":[{\"id\":\"obs-1\",\"category\":\"answer_tool_mismatch\",\"claimLevel\":\"observation\",\"summary\":\"Final answer reports status \\\"shipped\\\" but the paired orders.lookup result for this order reports status \\\"pending\\\".\",\"comparison\":{\"key\":\"status\",\"expected\":\"pending\",\"actual\":\"shipped\"},\"evidenceRefs\":[{\"nodeId\":\"smoke-answer-r\",\"field\":\"content\",\"quote\":\"\\\"status\\\": \\\"pending\\\"\"},{\"nodeId\":\"smoke-answer-a\",\"field\":\"content\",\"quote\":\"\\\"status\\\": \\\"shipped\\\"\"}]}]}",
+        "usage": {
+          "prompt_tokens": 1154,
+          "completion_tokens": 193,
+          "total_tokens": 1347,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1154
+        },
+        "returnedModel": "deepseek-flash",
+        "finishReason": "stop",
+        "model": "deepseek-flash",
+        "provider": "openai",
+        "promptVersion": "acceptance-v3-explicit-decision-types",
+        "latencyMs": 1525.4534000000003,
+        "actualCost": null,
+        "mode": "paid"
+      },
+      "audits": [
+        {
+          "status": 200,
+          "responseBody": "{\"id\":\"a2ac454a-7b87-4227-a8ec-997064c23878\",\"object\":\"chat.completion\",\"created\":1794649806,\"model\":\"deepseek-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":1,\\\"scope\\\":{\\\"runId\\\":\\\"smoke-answerrun\\\",\\\"caseId\\\":\\\"smoke-answer\\\",\\\"topicId\\\":\\\"smoke-answertopic\\\",\\\"threadId\\\":null,\\\"operationId\\\":\\\"smoke-answerop\\\",\\\"traceIds\\\":[]},\\\"inputDigest\\\":\\\"smoke-answer-digest\\\",\\\"decision\\\":\\\"candidates\\\",\\\"observations\\\":[{\\\"id\\\":\\\"obs-1\\\",\\\"category\\\":\\\"answer_tool_mismatch\\\",\\\"claimLevel\\\":\\\"observation\\\",\\\"summary\\\":\\\"Final answer reports status \\\\\\\"shipped\\\\\\\" but the paired orders.lookup result for this order reports status \\\\\\\"pending\\\\\\\".\\\",\\\"comparison\\\":{\\\"key\\\":\\\"status\\\",\\\"expected\\\":\\\"pending\\\",\\\"actual\\\":\\\"shipped\\\"},\\\"evidenceRefs\\\":[{\\\"nodeId\\\":\\\"smoke-answer-r\\\",\\\"field\\\":\\\"content\\\",\\\"quote\\\":\\\"\\\\\\\"status\\\\\\\": \\\\\\\"pending\\\\\\\"\\\"},{\\\"nodeId\\\":\\\"smoke-answer-a\\\",\\\"field\\\":\\\"content\\\",\\\"quote\\\":\\\"\\\\\\\"status\\\\\\\": \\\\\\\"shipped\\\\\\\"\\\"}]}]}\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1154,\"completion_tokens\":193,\"total_tokens\":1347,\"prompt_tokens_details\":{\"cached_tokens\":0},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":1154},\"system_fingerprint\":\"bc19ba97cbe016479903222bb1578db6\"}"
+        }
+      ],
+      "expectedSemanticAbstention": false
+    },
+    {
+      "case": "normal",
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "smoke-normal",
+        "inputDigest": "smoke-normal-digest",
+        "scope": {
+          "runId": "smoke-normalrun",
+          "caseId": "smoke-normal",
+          "topicId": "smoke-normaltopic",
+          "threadId": null,
+          "operationId": "smoke-normalop",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "smoke-normal-u",
+            "messageId": "u",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\": \"smoke-normal-order\", \"year\": 2025}",
+            "sourcePointer": "synthetic/u",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-normal-c",
+            "messageId": "c",
+            "parentId": null,
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/c",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": "{\"orderId\": \"smoke-normal-order\", \"year\": 2025}",
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-normal-r",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"smoke-normal-order\", \"status\": \"pending\", \"year\": 2025}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-normal-a",
+            "messageId": "a",
+            "parentId": null,
+            "role": "assistant",
+            "content": "{\"orderId\": \"smoke-normal-order\", \"status\": \"pending\", \"year\": 2025}",
+            "sourcePointer": "synthetic/a",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 8,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "{\"orderId\": \"smoke-normal-order\", \"year\": 2025}",
+          "expected": null,
+          "actual": "{\"orderId\": \"smoke-normal-order\", \"status\": \"pending\", \"year\": 2025}",
+          "criteria": null
+        }
+      },
+      "response": {
+        "candidate": {
+          "schemaVersion": 1,
+          "scope": {
+            "runId": "smoke-normalrun",
+            "caseId": "smoke-normal",
+            "topicId": "smoke-normaltopic",
+            "threadId": null,
+            "operationId": "smoke-normalop",
+            "traceIds": []
+          },
+          "inputDigest": "smoke-normal-digest",
+          "decision": "abstain",
+          "observations": []
+        },
+        "rawOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"smoke-normalrun\",\"caseId\":\"smoke-normal\",\"topicId\":\"smoke-normaltopic\",\"threadId\":null,\"operationId\":\"smoke-normalop\",\"traceIds\":[]},\"inputDigest\":\"smoke-normal-digest\",\"decision\":\"abstain\",\"observations\":[]}",
+        "usage": {
+          "prompt_tokens": 1137,
+          "completion_tokens": 73,
+          "total_tokens": 1210,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 753
+        },
+        "returnedModel": "deepseek-flash",
+        "finishReason": "stop",
+        "model": "deepseek-flash",
+        "provider": "openai",
+        "promptVersion": "acceptance-v3-explicit-decision-types",
+        "latencyMs": 1495.5442999999996,
+        "actualCost": null,
+        "mode": "paid"
+      },
+      "audits": [
+        {
+          "status": 200,
+          "responseBody": "{\"id\":\"4f6bdb07-a627-451b-b274-662e2f84b83a\",\"object\":\"chat.completion\",\"created\":1794649808,\"model\":\"deepseek-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":1,\\\"scope\\\":{\\\"runId\\\":\\\"smoke-normalrun\\\",\\\"caseId\\\":\\\"smoke-normal\\\",\\\"topicId\\\":\\\"smoke-normaltopic\\\",\\\"threadId\\\":null,\\\"operationId\\\":\\\"smoke-normalop\\\",\\\"traceIds\\\":[]},\\\"inputDigest\\\":\\\"smoke-normal-digest\\\",\\\"decision\\\":\\\"abstain\\\",\\\"observations\\\":[]}\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1137,\"completion_tokens\":73,\"total_tokens\":1210,\"prompt_tokens_details\":{\"cached_tokens\":384},\"prompt_cache_hit_tokens\":384,\"prompt_cache_miss_tokens\":753},\"system_fingerprint\":\"bc19ba97cbe016479903222bb1578db6\"}"
+        }
+      ],
+      "expectedSemanticAbstention": true
+    },
+    {
+      "case": "recovered",
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "smoke-recovered",
+        "inputDigest": "smoke-recovered-digest",
+        "scope": {
+          "runId": "smoke-recoveredrun",
+          "caseId": "smoke-recovered",
+          "topicId": "smoke-recoveredtopic",
+          "threadId": null,
+          "operationId": "smoke-recoveredop",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "smoke-recovered-u",
+            "messageId": "u",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\": \"smoke-recovered-order\", \"year\": 2025}",
+            "sourcePointer": "synthetic/u",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-recovered-c",
+            "messageId": "c",
+            "parentId": null,
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/c",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": "{\"orderId\": \"smoke-recovered-order\", \"year\": 2025}",
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-recovered-r",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"smoke-recovered-order\", \"status\": \"shipped\", \"year\": 2025}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-recovered-c2",
+            "messageId": "c",
+            "parentId": null,
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/c",
+            "error": null,
+            "toolCallId": "tc2",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": "{\"orderId\": \"smoke-recovered-order\", \"year\": 2025}",
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-recovered-r2",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"smoke-recovered-order\", \"status\": \"pending\", \"year\": 2025}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc2",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-recovered-a",
+            "messageId": "a",
+            "parentId": null,
+            "role": "assistant",
+            "content": "{\"orderId\": \"smoke-recovered-order\", \"status\": \"pending\", \"year\": 2025}",
+            "sourcePointer": "synthetic/a",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 8,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "{\"orderId\": \"smoke-recovered-order\", \"year\": 2025}",
+          "expected": null,
+          "actual": "{\"orderId\": \"smoke-recovered-order\", \"status\": \"pending\", \"year\": 2025}",
+          "criteria": null
+        }
+      },
+      "response": {
+        "candidate": {
+          "schemaVersion": 1,
+          "scope": {
+            "runId": "smoke-recoveredrun",
+            "caseId": "smoke-recovered",
+            "topicId": "smoke-recoveredtopic",
+            "threadId": null,
+            "operationId": "smoke-recoveredop",
+            "traceIds": []
+          },
+          "inputDigest": "smoke-recovered-digest",
+          "decision": "abstain",
+          "observations": []
+        },
+        "rawOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"smoke-recoveredrun\",\"caseId\":\"smoke-recovered\",\"topicId\":\"smoke-recoveredtopic\",\"threadId\":null,\"operationId\":\"smoke-recoveredop\",\"traceIds\":[]},\"inputDigest\":\"smoke-recovered-digest\",\"decision\":\"abstain\",\"observations\":[]}",
+        "usage": {
+          "prompt_tokens": 1354,
+          "completion_tokens": 76,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 384
+          },
+          "prompt_cache_hit_tokens": 384,
+          "prompt_cache_miss_tokens": 970
+        },
+        "returnedModel": "deepseek-flash",
+        "finishReason": "stop",
+        "model": "deepseek-flash",
+        "provider": "openai",
+        "promptVersion": "acceptance-v3-explicit-decision-types",
+        "latencyMs": 1104.3234000000011,
+        "actualCost": null,
+        "mode": "paid"
+      },
+      "audits": [
+        {
+          "status": 200,
+          "responseBody": "{\"id\":\"915b561c-625e-4cc0-a8e4-376238a48c55\",\"object\":\"chat.completion\",\"created\":1794649809,\"model\":\"deepseek-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":1,\\\"scope\\\":{\\\"runId\\\":\\\"smoke-recoveredrun\\\",\\\"caseId\\\":\\\"smoke-recovered\\\",\\\"topicId\\\":\\\"smoke-recoveredtopic\\\",\\\"threadId\\\":null,\\\"operationId\\\":\\\"smoke-recoveredop\\\",\\\"traceIds\\\":[]},\\\"inputDigest\\\":\\\"smoke-recovered-digest\\\",\\\"decision\\\":\\\"abstain\\\",\\\"observations\\\":[]}\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1354,\"completion_tokens\":76,\"total_tokens\":1430,\"prompt_tokens_details\":{\"cached_tokens\":384},\"prompt_cache_hit_tokens\":384,\"prompt_cache_miss_tokens\":970},\"system_fingerprint\":\"bc19ba97cbe016479903222bb1578db6\"}"
+        }
+      ],
+      "expectedSemanticAbstention": true
+    }
+  ],
+  "ledger": {
+    "attempts": 6,
+    "approved": 6
+  },
+  "actualBill": null
+}

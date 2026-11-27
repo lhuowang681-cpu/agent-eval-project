@@ -1,0 +1,609 @@
+{
+  "status": "failed_or_blocked",
+  "conditions": "Real PostgreSQL, original runtime/tool executor and HTTP; actual fixed Python child process. Synthetic source executions, not real-user labeled accuracy.",
+  "events": [
+    {
+      "stage": "quality-source-run",
+      "detail": {
+        "id": "run_zfrdtlTzMrH6",
+        "datasetId": "ds_F0ViWxQ9UjF9",
+        "targetAgentId": "agt_J6iQ4aCn1EMc",
+        "userId": "phase2-audit-user",
+        "name": "Quality failures without established root cause",
+        "status": "completed",
+        "config": {
+          "k": 1,
+          "timeout": 60000,
+          "maxSteps": 8,
+          "agentSnapshot": {
+            "model": "mock-model",
+            "params": {
+              "top_p": 1,
+              "temperature": 1,
+              "presence_penalty": 0,
+              "frequency_penalty": 0
+            },
+            "plugins": [],
+            "provider": "openai",
+            "chatConfig": {
+              "searchMode": "auto",
+              "historyCount": 20,
+              "searchFCModel": {
+                "model": "claude-sonnet-4-6",
+                "provider": "openai"
+              },
+              "enableReasoning": true,
+              "enableStreaming": true,
+              "enableHistoryCount": false,
+              "reasoningBudgetToken": 1024,
+              "enableAutoCreateTopic": true,
+              "enableCompressHistory": true,
+              "enableAdaptiveThinking": true,
+              "autoCreateTopicThreshold": 2,
+              "enableContextCompression": true
+            },
+            "systemRole": "Phase2 synthetic agent",
+            "description": null
+          }
+        },
+        "metrics": {
+          "steps": 3,
+          "tokens": 36279,
+          "duration": 787,
+          "llmCalls": 3,
+          "passRate": 0,
+          "errorCases": 0,
+          "totalCases": 3,
+          "failedCases": 3,
+          "passedCases": 0,
+          "totalTokens": 36279,
+          "averageScore": 0,
+          "perCaseSteps": 1,
+          "rubricScores": {
+            "eval-mode-contains": 0
+          },
+          "timeoutCases": 0,
+          "perCaseTokens": 12093,
+          "totalDuration": 1357,
+          "completedCases": 3,
+          "perCaseLlmCalls": 1
+        },
+        "startedAt": "2026-11-08T08:57:05.305Z",
+        "accessedAt": "2026-11-08T08:57:06.093Z",
+        "createdAt": "2026-11-08T08:57:05.138Z",
+        "updatedAt": "2026-11-08T08:57:06.092Z",
+        "dataset": {
+          "id": "ds_F0ViWxQ9UjF9",
+          "benchmarkId": "evb_4p7g0LOwsqC7",
+          "identifier": "phase2-1794128224968109200",
+          "userId": "phase2-audit-user",
+          "name": "Synthetic contains",
+          "description": null,
+          "evalMode": "contains",
+          "evalConfig": {},
+          "metadata": null,
+          "accessedAt": "2026-11-08T08:57:05.023Z",
+          "createdAt": "2026-11-08T08:57:05.023Z",
+          "updatedAt": "2026-11-08T08:57:05.023Z",
+          "testCases": [
+            {
+              "id": "case_rH9dT7PBQSZ6",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_F0ViWxQ9UjF9",
+              "content": {
+                "input": "Quality failure fixture 1794128224968102800 0",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T08:57:05.062Z",
+              "createdAt": "2026-11-08T08:57:05.062Z",
+              "updatedAt": "2026-11-08T08:57:05.062Z"
+            },
+            {
+              "id": "case_QJmRR4UmnqdE",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_F0ViWxQ9UjF9",
+              "content": {
+                "input": "Quality failure fixture 1794128224968106100 1",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T08:57:05.062Z",
+              "createdAt": "2026-11-08T08:57:05.062Z",
+              "updatedAt": "2026-11-08T08:57:05.062Z"
+            },
+            {
+              "id": "case_D3wiSDAXdEPW",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_F0ViWxQ9UjF9",
+              "content": {
+                "input": "Quality failure fixture 1794128224968106700 2",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T08:57:05.062Z",
+              "createdAt": "2026-11-08T08:57:05.062Z",
+              "updatedAt": "2026-11-08T08:57:05.062Z"
+            }
+          ]
+        },
+        "targetAgent": {
+          "avatar": null,
+          "id": "agt_J6iQ4aCn1EMc",
+          "model": "mock-model",
+          "provider": "openai",
+          "title": null
+        },
+        "topics": [
+          {
+            "createdAt": "2026-11-08T08:57:05.153Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12093,
+              "duration": 410,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794128225526_agt_J6iQ4aCn1EMc_tpc_1RtdTId8L47C_WmyahdJ1",
+              "rubricScores": [
+                {
+                  "score": 0,
+                  "rubricId": "eval-mode-contains",
+                  "scoringSource": "rule"
+                }
+              ],
+              "scoringSource": "rule",
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "failed",
+            "testCase": {
+              "id": "case_rH9dT7PBQSZ6",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_F0ViWxQ9UjF9",
+              "content": {
+                "input": "Quality failure fixture 1794128224968102800 0",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T08:57:05.062Z",
+              "createdAt": "2026-11-08T08:57:05.062Z",
+              "updatedAt": "2026-11-08T08:57:05.062Z"
+            },
+            "testCaseId": "case_rH9dT7PBQSZ6",
+            "topic": {
+              "id": "tpc_1RtdTId8L47C",
+              "title": "[Eval Case #1] Quality failure fixture 1794128224968102800 0...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_J6iQ4aCn1EMc",
+              "groupId": null,
+              "userId": "phase2-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T08:57:05.751Z",
+              "createdAt": "2026-11-08T08:57:05.148Z",
+              "updatedAt": "2026-11-08T08:57:05.750Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T08:57:05.153Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12093,
+              "duration": 478,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794128225463_agt_J6iQ4aCn1EMc_tpc_147EoMUwZkIS_oRquIrt6",
+              "rubricScores": [
+                {
+                  "score": 0,
+                  "rubricId": "eval-mode-contains",
+                  "scoringSource": "rule"
+                }
+              ],
+              "scoringSource": "rule",
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "failed",
+            "testCase": {
+              "id": "case_QJmRR4UmnqdE",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_F0ViWxQ9UjF9",
+              "content": {
+                "input": "Quality failure fixture 1794128224968106100 1",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T08:57:05.062Z",
+              "createdAt": "2026-11-08T08:57:05.062Z",
+              "updatedAt": "2026-11-08T08:57:05.062Z"
+            },
+            "testCaseId": "case_QJmRR4UmnqdE",
+            "topic": {
+              "id": "tpc_147EoMUwZkIS",
+              "title": "[Eval Case #2] Quality failure fixture 1794128224968106100 1...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_J6iQ4aCn1EMc",
+              "groupId": null,
+              "userId": "phase2-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T08:57:05.691Z",
+              "createdAt": "2026-11-08T08:57:05.148Z",
+              "updatedAt": "2026-11-08T08:57:05.690Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T08:57:05.153Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12093,
+              "duration": 469,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794128225552_agt_J6iQ4aCn1EMc_tpc_GJzpiGE0Ersm_pVdBjeOp",
+              "rubricScores": [
+                {
+                  "score": 0,
+                  "rubricId": "eval-mode-contains",
+                  "scoringSource": "rule"
+                }
+              ],
+              "scoringSource": "rule",
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "failed",
+            "testCase": {
+              "id": "case_D3wiSDAXdEPW",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_F0ViWxQ9UjF9",
+              "content": {
+                "input": "Quality failure fixture 1794128224968106700 2",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T08:57:05.062Z",
+              "createdAt": "2026-11-08T08:57:05.062Z",
+              "updatedAt": "2026-11-08T08:57:05.062Z"
+            },
+            "testCaseId": "case_D3wiSDAXdEPW",
+            "topic": {
+              "id": "tpc_GJzpiGE0Ersm",
+              "title": "[Eval Case #3] Quality failure fixture 1794128224968106700 2...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_J6iQ4aCn1EMc",
+              "groupId": null,
+              "userId": "phase2-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T08:57:05.767Z",
+              "createdAt": "2026-11-08T08:57:05.148Z",
+              "updatedAt": "2026-11-08T08:57:05.766Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stage": "idempotent-enqueue",
+      "queued": [
+        {
+          "id": "ab98fff9-63f6-5409-a610-0c4a87a0ca76",
+          "created": true,
+          "status": "pending",
+          "scope": {
+            "runId": "run_zfrdtlTzMrH6",
+            "caseId": "case_rH9dT7PBQSZ6",
+            "topicId": "tpc_1RtdTId8L47C",
+            "threadId": null,
+            "operationId": "op_1794128225526_agt_J6iQ4aCn1EMc_tpc_1RtdTId8L47C_WmyahdJ1",
+            "traceIds": []
+          }
+        },
+        {
+          "id": "3296ff40-882c-59c0-a0d6-16544e4ff61d",
+          "created": true,
+          "status": "pending",
+          "scope": {
+            "runId": "run_zfrdtlTzMrH6",
+            "caseId": "case_QJmRR4UmnqdE",
+            "topicId": "tpc_147EoMUwZkIS",
+            "threadId": null,
+            "operationId": "op_1794128225463_agt_J6iQ4aCn1EMc_tpc_147EoMUwZkIS_oRquIrt6",
+            "traceIds": []
+          }
+        },
+        {
+          "id": "efcc5308-7446-5a78-aa79-2fc4abd04ab2",
+          "created": true,
+          "status": "pending",
+          "scope": {
+            "runId": "run_zfrdtlTzMrH6",
+            "caseId": "case_D3wiSDAXdEPW",
+            "topicId": "tpc_GJzpiGE0Ersm",
+            "threadId": null,
+            "operationId": "op_1794128225552_agt_J6iQ4aCn1EMc_tpc_GJzpiGE0Ersm_pVdBjeOp",
+            "traceIds": []
+          }
+        }
+      ],
+      "duplicate": [
+        {
+          "id": "ab98fff9-63f6-5409-a610-0c4a87a0ca76",
+          "created": false,
+          "status": "pending",
+          "scope": {
+            "runId": "run_zfrdtlTzMrH6",
+            "caseId": "case_rH9dT7PBQSZ6",
+            "topicId": "tpc_1RtdTId8L47C",
+            "threadId": null,
+            "operationId": "op_1794128225526_agt_J6iQ4aCn1EMc_tpc_1RtdTId8L47C_WmyahdJ1",
+            "traceIds": []
+          }
+        },
+        {
+          "id": "3296ff40-882c-59c0-a0d6-16544e4ff61d",
+          "created": false,
+          "status": "pending",
+          "scope": {
+            "runId": "run_zfrdtlTzMrH6",
+            "caseId": "case_QJmRR4UmnqdE",
+            "topicId": "tpc_147EoMUwZkIS",
+            "threadId": null,
+            "operationId": "op_1794128225463_agt_J6iQ4aCn1EMc_tpc_147EoMUwZkIS_oRquIrt6",
+            "traceIds": []
+          }
+        },
+        {
+          "id": "efcc5308-7446-5a78-aa79-2fc4abd04ab2",
+          "created": false,
+          "status": "pending",
+          "scope": {
+            "runId": "run_zfrdtlTzMrH6",
+            "caseId": "case_D3wiSDAXdEPW",
+            "topicId": "tpc_GJzpiGE0Ersm",
+            "threadId": null,
+            "operationId": "op_1794128225552_agt_J6iQ4aCn1EMc_tpc_GJzpiGE0Ersm_pVdBjeOp",
+            "traceIds": []
+          }
+        }
+      ]
+    },
+    {
+      "stage": "tool-source-run",
+      "detail": {
+        "id": "run_DyKGOfHL0ePO",
+        "datasetId": "ds_a3rExq1QRrHN",
+        "targetAgentId": "agt_J6iQ4aCn1EMc",
+        "userId": "phase2-audit-user",
+        "name": "Actual failed tool execution",
+        "status": "completed",
+        "config": {
+          "k": 1,
+          "timeout": 60000,
+          "maxSteps": 8,
+          "agentSnapshot": {
+            "model": "mock-model",
+            "params": {
+              "top_p": 1,
+              "temperature": 1,
+              "presence_penalty": 0,
+              "frequency_penalty": 0
+            },
+            "plugins": [
+              "lobe-calculator"
+            ],
+            "provider": "openai",
+            "chatConfig": {
+              "searchMode": "auto",
+              "historyCount": 20,
+              "searchFCModel": {
+                "model": "claude-sonnet-4-6",
+                "provider": "openai"
+              },
+              "enableReasoning": true,
+              "enableStreaming": true,
+              "enableHistoryCount": false,
+              "reasoningBudgetToken": 1024,
+              "enableAutoCreateTopic": true,
+              "enableCompressHistory": true,
+              "enableAdaptiveThinking": true,
+              "autoCreateTopicThreshold": 2,
+              "enableContextCompression": true
+            },
+            "systemRole": "Phase2 synthetic agent",
+            "description": null
+          }
+        },
+        "metrics": {
+          "steps": 3,
+          "tokens": 26797,
+          "duration": 748,
+          "llmCalls": 2,
+          "passRate": 0,
+          "toolCalls": 1,
+          "errorCases": 0,
+          "totalCases": 1,
+          "failedCases": 1,
+          "passedCases": 0,
+          "totalTokens": 26797,
+          "averageScore": 0,
+          "perCaseSteps": 3,
+          "rubricScores": {
+            "eval-mode-contains": 0
+          },
+          "timeoutCases": 0,
+          "perCaseTokens": 26797,
+          "totalDuration": 644,
+          "completedCases": 1,
+          "perCaseLlmCalls": 2,
+          "perCaseToolCalls": 1
+        },
+        "startedAt": "2026-11-08T08:57:06.879Z",
+        "accessedAt": "2026-11-08T08:57:07.627Z",
+        "createdAt": "2026-11-08T08:57:06.740Z",
+        "updatedAt": "2026-11-08T08:57:07.627Z",
+        "dataset": {
+          "id": "ds_a3rExq1QRrHN",
+          "benchmarkId": "evb_4p7g0LOwsqC7",
+          "identifier": "phase2-1794128226584144900",
+          "userId": "phase2-audit-user",
+          "name": "Synthetic contains",
+          "description": null,
+          "evalMode": "contains",
+          "evalConfig": {},
+          "metadata": null,
+          "accessedAt": "2026-11-08T08:57:06.632Z",
+          "createdAt": "2026-11-08T08:57:06.632Z",
+          "updatedAt": "2026-11-08T08:57:06.632Z",
+          "testCases": [
+            {
+              "id": "case_FSPAV0pkqyu2",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_a3rExq1QRrHN",
+              "content": {
+                "input": "Controlled calculator syntax failure 1794128226584140300",
+                "expected": "INTENTIONALLY_ABSENT_TOOL_SUCCESS"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T08:57:06.670Z",
+              "createdAt": "2026-11-08T08:57:06.670Z",
+              "updatedAt": "2026-11-08T08:57:06.670Z"
+            }
+          ]
+        },
+        "targetAgent": {
+          "avatar": null,
+          "id": "agt_J6iQ4aCn1EMc",
+          "model": "mock-model",
+          "provider": "openai",
+          "title": null
+        },
+        "topics": [
+          {
+            "createdAt": "2026-11-08T08:57:06.745Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 3,
+              "tokens": 26797,
+              "duration": 644,
+              "llmCalls": 2,
+              "toolCalls": 1,
+              "operationId": "op_1794128226956_agt_J6iQ4aCn1EMc_tpc_FOZmkiXFLgK5_XSOtbuOV",
+              "rubricScores": [
+                {
+                  "score": 0,
+                  "rubricId": "eval-mode-contains",
+                  "scoringSource": "rule"
+                }
+              ],
+              "scoringSource": "rule",
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "failed",
+            "testCase": {
+              "id": "case_FSPAV0pkqyu2",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_a3rExq1QRrHN",
+              "content": {
+                "input": "Controlled calculator syntax failure 1794128226584140300",
+                "expected": "INTENTIONALLY_ABSENT_TOOL_SUCCESS"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T08:57:06.670Z",
+              "createdAt": "2026-11-08T08:57:06.670Z",
+              "updatedAt": "2026-11-08T08:57:06.670Z"
+            },
+            "testCaseId": "case_FSPAV0pkqyu2",
+            "topic": {
+              "id": "tpc_FOZmkiXFLgK5",
+              "title": "[Eval Case #1] Controlled calculator syntax failure 1794128226584...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_J6iQ4aCn1EMc",
+              "groupId": null,
+              "userId": "phase2-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T08:57:07.459Z",
+              "createdAt": "2026-11-08T08:57:06.742Z",
+              "updatedAt": "2026-11-08T08:57:07.459Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "errorType": "KeyError",
+      "error": "'topicId'"
+    }
+  ]
+}

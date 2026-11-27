@@ -1,0 +1,4297 @@
+{
+  "engine": "optimized",
+  "engineDirectory": "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\optimized",
+  "records": [
+    {
+      "id": "ho-006",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_tool_failure",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-006:n03",
+                "field": "error",
+                "quote": "{\"message\": \"No response before 8000ms deadline\", \"name\": \"TimeoutError\"}"
+              },
+              {
+                "nodeId": "ho-006:n02",
+                "field": "arguments",
+                "quote": "{\"id\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_tool_failure",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具执行失败 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-006:n03",
+                  "field": "error",
+                  "quote": "{\"message\": \"No response before 8000ms deadline\", \"name\": \"TimeoutError\"}"
+                },
+                {
+                  "nodeId": "ho-006:n02",
+                  "field": "arguments",
+                  "quote": "{\"id\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 0.0005675
+        },
+        "direct": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "观察到调用等待超时，但缺少服务端接收与处理记录，不能确定网络、排队还是执行阶段的根因。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.8e-06
+        },
+        "structured": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "观察到调用等待超时，但缺少服务端接收与处理记录，不能确定网络、排队还是执行阶段的根因。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1e-05
+        },
+        "citations": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "观察到调用等待超时，但缺少服务端接收与处理记录，不能确定网络、排队还是执行阶段的根因。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.9e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "not_applicable",
+                "issues": []
+              },
+              "support": {
+                "status": "not_applicable",
+                "issues": []
+              }
+            },
+            "sourceDigest": "acdae9d70f25fae6f2f0362a27699262a3ccdc591451fdaf7fced1f46582d1dc",
+            "scope": {
+              "caseId": "case-ho-006",
+              "operationId": "op-ho-006",
+              "runId": "run-ho-006",
+              "threadId": null,
+              "topicId": "topic-ho-006",
+              "traceIds": [
+                "trace-ho-006"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 2.26e-05
+        }
+      }
+    },
+    {
+      "id": "ho-012",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-012:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"message\":\"E_JOB_773\"}"
+              },
+              {
+                "nodeId": "ho-012:n02",
+                "field": "arguments",
+                "quote": "{\"task\":\"T9\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-012:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"message\":\"E_JOB_773\"}"
+                },
+                {
+                  "nodeId": "ho-012:n02",
+                  "field": "arguments",
+                  "quote": "{\"task\":\"T9\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 0.0002335
+        },
+        "direct": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "当前只记录了内置任务失败代号，缺少其定义和执行阶段，暂不定位责任模块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.7e-06
+        },
+        "structured": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "当前只记录了内置任务失败代号，缺少其定义和执行阶段，暂不定位责任模块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.7e-06
+        },
+        "citations": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "当前只记录了内置任务失败代号，缺少其定义和执行阶段，暂不定位责任模块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.5e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "not_applicable",
+                "issues": []
+              },
+              "support": {
+                "status": "not_applicable",
+                "issues": []
+              }
+            },
+            "sourceDigest": "7620db643519b18d1df9b9523eceadb9af7af62cdc2c2c2395be8922463203fe",
+            "scope": {
+              "caseId": "case-ho-012",
+              "operationId": "op-ho-012",
+              "runId": "run-ho-012",
+              "threadId": null,
+              "topicId": "topic-ho-012",
+              "traceIds": [
+                "trace-ho-012"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.77e-05
+        }
+      }
+    },
+    {
+      "id": "ho-017",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-017:n03",
+                "field": "error",
+                "quote": "{\"message\": \"tool arguments JSON parse failed: missing closing brace\", \"serializationAudit\": {\"emittedArguments\": \"{\\\"id\\\":\\\"A17\\\"\", \"modelArguments\": \"{\\\"id\\\":\\\"A17\\\"}\", \"stage\": \"InstructionExecutor\"}}"
+              },
+              {
+                "nodeId": "ho-017:n02",
+                "field": "arguments",
+                "quote": "{\"id\":\"A17\""
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-017:n03",
+                  "field": "error",
+                  "quote": "{\"message\": \"tool arguments JSON parse failed: missing closing brace\", \"serializationAudit\": {\"emittedArguments\": \"{\\\"id\\\":\\\"A17\\\"\", \"modelArguments\": \"{\\\"id\\\":\\\"A17\\\"}\", \"stage\": \"InstructionExecutor\"}}"
+                },
+                {
+                  "nodeId": "ho-017:n02",
+                  "field": "arguments",
+                  "quote": "{\"id\":\"A17\""
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.77e-05
+        },
+        "direct": {
+          "output": {
+            "category": "builtin_tool_contract_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-017:n03",
+                "quote": "modelArguments"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-017:n03",
+                "quote": "emittedArguments"
+              },
+              {
+                "field": "arguments",
+                "nodeId": "ho-017:n02",
+                "quote": "{\"id\":\"A17\""
+              }
+            ],
+            "moduleId": "L2.5",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "InstructionExecutor序列化记录中合法模型参数少了末尾大括号，内置工具因此在解析入口拒绝参数。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1e-05
+        },
+        "structured": {
+          "output": {
+            "category": "builtin_tool_contract_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-017:n03",
+                "quote": "modelArguments"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-017:n03",
+                "quote": "emittedArguments"
+              },
+              {
+                "field": "arguments",
+                "nodeId": "ho-017:n02",
+                "quote": "{\"id\":\"A17\""
+              }
+            ],
+            "moduleId": "L2.5",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "InstructionExecutor序列化记录中合法模型参数少了末尾大括号，内置工具因此在解析入口拒绝参数。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.41e-05
+        },
+        "citations": {
+          "output": {
+            "category": "builtin_tool_contract_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-017:n03",
+                "quote": "modelArguments"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-017:n03",
+                "quote": "emittedArguments"
+              },
+              {
+                "field": "arguments",
+                "nodeId": "ho-017:n02",
+                "quote": "{\"id\":\"A17\""
+              }
+            ],
+            "moduleId": "L2.5",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "InstructionExecutor序列化记录中合法模型参数少了末尾大括号，内置工具因此在解析入口拒绝参数。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.22e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "53f6b75790996c8f865da42d06fe2728d571d097e08e5dc7a6bcafb07a6941e8",
+            "scope": {
+              "caseId": "case-ho-017",
+              "operationId": "op-ho-017",
+              "runId": "run-ho-017",
+              "threadId": null,
+              "topicId": "topic-ho-017",
+              "traceIds": [
+                "trace-ho-017"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 2.87e-05
+        }
+      }
+    },
+    {
+      "id": "ho-001",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_tool_failure",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-001:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"status\":503,\"message\":\"upstream unavailable\"}"
+              },
+              {
+                "nodeId": "ho-001:n02",
+                "field": "arguments",
+                "quote": "{\"id\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_tool_failure",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具执行失败 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-001:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"status\":503,\"message\":\"upstream unavailable\"}"
+                },
+                {
+                  "nodeId": "ho-001:n02",
+                  "field": "arguments",
+                  "quote": "{\"id\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 4.27e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-001:n03",
+                "quote": "503"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "这个 MCP 调用的结果报告 503，上游本次未能完成响应；不能据此定位参数生成方。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.8e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-001:n03",
+                "quote": "503"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "这个 MCP 调用的结果报告 503，上游本次未能完成响应；不能据此定位参数生成方。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.3e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-001:n03",
+                "quote": "503"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "这个 MCP 调用的结果报告 503，上游本次未能完成响应；不能据此定位参数生成方。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.7e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "1a847f3d8b2d25af6d5279677b0fbd7f7dbaade56842bfa8270a4e78589397c5",
+            "scope": {
+              "caseId": "case-ho-001",
+              "operationId": "op-ho-001",
+              "runId": "run-ho-001",
+              "threadId": null,
+              "topicId": "topic-ho-001",
+              "traceIds": [
+                "trace-ho-001"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 3.54e-05
+        }
+      }
+    },
+    {
+      "id": "ho-010",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-010:n03",
+                "field": "error",
+                "quote": "{\"message\": \"No runtime registered for reports.render\"}"
+              },
+              {
+                "nodeId": "ho-010:n02",
+                "field": "arguments",
+                "quote": "{\"order\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-010:n03",
+                  "field": "error",
+                  "quote": "{\"message\": \"No runtime registered for reports.render\"}"
+                },
+                {
+                  "nodeId": "ho-010:n02",
+                  "field": "arguments",
+                  "quote": "{\"order\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 4.83e-05
+        },
+        "direct": {
+          "output": {
+            "category": "builtin_tool_unavailable",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-010:n03",
+                "quote": "No runtime registered"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "内置reports.render在当前执行环境没有已注册运行时。谁删掉注册项仍不清楚。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8e-06
+        },
+        "structured": {
+          "output": {
+            "category": "builtin_tool_unavailable",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-010:n03",
+                "quote": "No runtime registered"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "内置reports.render在当前执行环境没有已注册运行时。谁删掉注册项仍不清楚。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.5e-06
+        },
+        "citations": {
+          "output": {
+            "category": "builtin_tool_unavailable",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-010:n03",
+                "quote": "No runtime registered"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "内置reports.render在当前执行环境没有已注册运行时。谁删掉注册项仍不清楚。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.21e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "784fc3936537c3fdc20c23983ba3147572ce4a87738c4f16520e68a8cf5c38ea",
+            "scope": {
+              "caseId": "case-ho-010",
+              "operationId": "op-ho-010",
+              "runId": "run-ho-010",
+              "threadId": null,
+              "topicId": "topic-ho-010",
+              "traceIds": [
+                "trace-ho-010"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 3.89e-05
+        }
+      }
+    },
+    {
+      "id": "ho-023",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "no_supported_failure_signal"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.1e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-023:n03",
+                "quote": "401 invalid API key"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "这个MCP调用失败且凭证无效，因为工具内容出现401 invalid API key。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.2e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-023:n03",
+                "quote": "401 invalid API key"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "这个MCP调用失败且凭证无效，因为工具内容出现401 invalid API key。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.5e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-023:n03",
+                "quote": "401 invalid API key"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "这个MCP调用失败且凭证无效，因为工具内容出现401 invalid API key。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.8e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "e206a17d10ee3d89b8fc034b232c23965551b54cefcc7c6c1e8feda138fb3b1c",
+            "scope": {
+              "caseId": "case-ho-023",
+              "operationId": "op-ho-023",
+              "runId": "run-ho-023",
+              "threadId": null,
+              "topicId": "topic-ho-023",
+              "traceIds": [
+                "trace-ho-023"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 2.4e-05
+        }
+      }
+    },
+    {
+      "id": "ho-018",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_credential",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-018:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"code\":401,\"message\":\"credential does not belong to account\"}"
+              },
+              {
+                "nodeId": "ho-018:n02",
+                "field": "arguments",
+                "quote": "{\"account\":\"acct-A\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "unclassified_runtime_error"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_credential",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具凭证或绑定异常 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-018:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"code\":401,\"message\":\"credential does not belong to account\"}"
+                },
+                {
+                  "nodeId": "ho-018:n02",
+                  "field": "arguments",
+                  "quote": "{\"account\":\"acct-A\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 0.0003603
+        },
+        "direct": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-018:n04",
+                "quote": "configuredFingerprint"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-018:n04",
+                "quote": "selectedFingerprint"
+              },
+              {
+                "field": "content",
+                "nodeId": "ho-018:n03",
+                "quote": "credential does not belong"
+              }
+            ],
+            "moduleId": "L8.6",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "CredentialSelector为acct-A选择了与配置不一致的fp-B，外部服务报告账户凭证不匹配；记录支持本地凭证选择错误。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.8e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-018:n04",
+                "quote": "configuredFingerprint"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-018:n04",
+                "quote": "selectedFingerprint"
+              },
+              {
+                "field": "content",
+                "nodeId": "ho-018:n03",
+                "quote": "credential does not belong"
+              }
+            ],
+            "moduleId": "L8.6",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "CredentialSelector为acct-A选择了与配置不一致的fp-B，外部服务报告账户凭证不匹配；记录支持本地凭证选择错误。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.25e-05
+        },
+        "citations": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-018:n04",
+                "quote": "configuredFingerprint"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-018:n04",
+                "quote": "selectedFingerprint"
+              },
+              {
+                "field": "content",
+                "nodeId": "ho-018:n03",
+                "quote": "credential does not belong"
+              }
+            ],
+            "moduleId": "L8.6",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "CredentialSelector为acct-A选择了与配置不一致的fp-B，外部服务报告账户凭证不匹配；记录支持本地凭证选择错误。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.12e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "a3f9728bc0b51bcd755fc7bf6863f22c229d32e347b3aa58627e523b753d67ce",
+            "scope": {
+              "caseId": "case-ho-018",
+              "operationId": "op-ho-018",
+              "runId": "run-ho-018",
+              "threadId": null,
+              "topicId": "topic-ho-018",
+              "traceIds": [
+                "trace-ho-018"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 2.91e-05
+        }
+      }
+    },
+    {
+      "id": "ho-014",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "provider_payload_invalid",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-014:n01",
+                "field": "error",
+                "quote": "{\"conversionRecord\": {\"component\": \"OpenAIContextBuilder\", \"convertedBlocks\": [{\"text\": \"\", \"type\": \"text\"}], \"requestTag\": \"req-14\", \"sourceText\": \"Ready\"}, \"message\": \"text content blocks must contain non-whitespace text\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "provider_payload_invalid",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Provider 请求 Payload 非法 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-014:n01",
+                  "field": "error",
+                  "quote": "{\"conversionRecord\": {\"component\": \"OpenAIContextBuilder\", \"convertedBlocks\": [{\"text\": \"\", \"type\": \"text\"}], \"requestTag\": \"req-14\", \"sourceText\": \"Ready\"}, \"message\": \"text content blocks must contain non-whitespace text\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 3.55e-05
+        },
+        "direct": {
+          "output": {
+            "category": "provider_payload_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "sourceText"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "convertedBlocks"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "non-whitespace"
+              }
+            ],
+            "moduleId": "L5.4",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "上下文转换记录表明非空源文本在OpenAIContextBuilder内变成空text block，Provider随后拒绝了该块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.6e-06
+        },
+        "structured": {
+          "output": {
+            "category": "provider_payload_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "sourceText"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "convertedBlocks"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "non-whitespace"
+              }
+            ],
+            "moduleId": "L5.4",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "上下文转换记录表明非空源文本在OpenAIContextBuilder内变成空text block，Provider随后拒绝了该块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.16e-05
+        },
+        "citations": {
+          "output": {
+            "category": "provider_payload_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "sourceText"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "convertedBlocks"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-014:n01",
+                "quote": "non-whitespace"
+              }
+            ],
+            "moduleId": "L5.4",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "上下文转换记录表明非空源文本在OpenAIContextBuilder内变成空text block，Provider随后拒绝了该块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.17e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "349eec05efd08aa5c119ce7337fea9553d34732d17d11413cca5feabf61be6df",
+            "scope": {
+              "caseId": "case-ho-014",
+              "operationId": "op-ho-014",
+              "runId": "run-ho-014",
+              "threadId": null,
+              "topicId": "topic-ho-014",
+              "traceIds": [
+                "trace-ho-014"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 2.38e-05
+        }
+      }
+    },
+    {
+      "id": "ho-007",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal",
+              "unknown_tool_source"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.9e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-007:n03",
+                "quote": "ECONNRESET"
+              }
+            ],
+            "moduleId": "L6.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "工具名含mcp已经证明是MCP服务器崩溃，而且本地执行器一定没有问题。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.1e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-007:n03",
+                "quote": "ECONNRESET"
+              }
+            ],
+            "moduleId": "L6.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "工具名含mcp已经证明是MCP服务器崩溃，而且本地执行器一定没有问题。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 7.9e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-007:n03",
+                "quote": "ECONNRESET"
+              }
+            ],
+            "moduleId": "L6.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "工具名含mcp已经证明是MCP服务器崩溃，而且本地执行器一定没有问题。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "96b3b0d74149ac6c3257cce76b34ebe516377630770c6f787e9fc287a499335f",
+            "scope": {
+              "caseId": "case-ho-007",
+              "operationId": "op-ho-007",
+              "runId": "run-ho-007",
+              "threadId": null,
+              "topicId": "topic-ho-007",
+              "traceIds": [
+                "trace-ho-007"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.86e-05
+        }
+      }
+    },
+    {
+      "id": "ho-026",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_transport",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-026:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"status\":502,\"message\":\"bad gateway\"}"
+              },
+              {
+                "nodeId": "ho-026:n02",
+                "field": "arguments",
+                "quote": "{\"id\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-026:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"status\":502,\"message\":\"bad gateway\"}"
+                },
+                {
+                  "nodeId": "ho-026:n02",
+                  "field": "arguments",
+                  "quote": "{\"id\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.11e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-026:n03",
+                "quote": "502"
+              },
+              {
+                "field": "content",
+                "nodeId": "ho-026:n07",
+                "quote": "\"success\":true"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "订单调用返回502；后来的成功属于另一个天气调用，不足以证明订单任务已恢复。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.9e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-026:n03",
+                "quote": "502"
+              },
+              {
+                "field": "content",
+                "nodeId": "ho-026:n07",
+                "quote": "\"success\":true"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "订单调用返回502；后来的成功属于另一个天气调用，不足以证明订单任务已恢复。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.9e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-026:n03",
+                "quote": "502"
+              },
+              {
+                "field": "content",
+                "nodeId": "ho-026:n07",
+                "quote": "\"success\":true"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "订单调用返回502；后来的成功属于另一个天气调用，不足以证明订单任务已恢复。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.59e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "eb60a92d4a76ab85c857b1c5192197d590b5082275c66899a937433ea60a44d1",
+            "scope": {
+              "caseId": "case-ho-026",
+              "operationId": "op-ho-026",
+              "runId": "run-ho-026",
+              "threadId": null,
+              "topicId": "topic-ho-026",
+              "traceIds": [
+                "trace-ho-026"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 5.61e-05
+        }
+      }
+    },
+    {
+      "id": "ho-011",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-011:n03",
+                "field": "error",
+                "quote": "{\"message\": \"Result JSON parse failed at position 0\", \"receivedPrefix\": \"<html>\"}"
+              },
+              {
+                "nodeId": "ho-011:n02",
+                "field": "arguments",
+                "quote": "{\"document\":\"D5\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-011:n03",
+                  "field": "error",
+                  "quote": "{\"message\": \"Result JSON parse failed at position 0\", \"receivedPrefix\": \"<html>\"}"
+                },
+                {
+                  "nodeId": "ho-011:n02",
+                  "field": "arguments",
+                  "quote": "{\"document\":\"D5\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5e-05
+        },
+        "direct": {
+          "output": {
+            "category": "builtin_result_parse_failed",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-011:n03",
+                "quote": "Result JSON parse failed"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-011:n03",
+                "quote": "<html>"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "文档工具的结果JSON解析失败；这里只能看到收到的前缀是HTML。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.5e-06
+        },
+        "structured": {
+          "output": {
+            "category": "builtin_result_parse_failed",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-011:n03",
+                "quote": "Result JSON parse failed"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-011:n03",
+                "quote": "<html>"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "文档工具的结果JSON解析失败；这里只能看到收到的前缀是HTML。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.05e-05
+        },
+        "citations": {
+          "output": {
+            "category": "builtin_result_parse_failed",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-011:n03",
+                "quote": "Result JSON parse failed"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-011:n03",
+                "quote": "<html>"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "文档工具的结果JSON解析失败；这里只能看到收到的前缀是HTML。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.57e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "094d53f19bf302cae9270029c66ae2cafe0dc0e4210214baaa8193d1fa8d6d9a",
+            "scope": {
+              "caseId": "case-ho-011",
+              "operationId": "op-ho-011",
+              "runId": "run-ho-011",
+              "threadId": null,
+              "topicId": "topic-ho-011",
+              "traceIds": [
+                "trace-ho-011"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 5.6e-05
+        }
+      }
+    },
+    {
+      "id": "ho-005",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_quota",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-005:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"code\":429,\"message\":\"monthly quota exhausted\"}"
+              },
+              {
+                "nodeId": "ho-005:n02",
+                "field": "arguments",
+                "quote": "{\"q\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_quota",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具额度或限流 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-005:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"code\":429,\"message\":\"monthly quota exhausted\"}"
+                },
+                {
+                  "nodeId": "ho-005:n02",
+                  "field": "arguments",
+                  "quote": "{\"q\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 3.46e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-005:n03",
+                "quote": "monthly quota exhausted"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "外部搜索接口报告月配额耗尽；本记录没有显示是谁消耗了配额。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.6e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-005:n03",
+                "quote": "monthly quota exhausted"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "外部搜索接口报告月配额耗尽；本记录没有显示是谁消耗了配额。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.6e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-005:n03",
+                "quote": "monthly quota exhausted"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "外部搜索接口报告月配额耗尽；本记录没有显示是谁消耗了配额。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "98e6d55c92579ad2bc27b43624df15a428698905823860ac1ba63bf6a88b34ad",
+            "scope": {
+              "caseId": "case-ho-005",
+              "operationId": "op-ho-005",
+              "runId": "run-ho-005",
+              "threadId": null,
+              "topicId": "topic-ho-005",
+              "traceIds": [
+                "trace-ho-005"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 4.18e-05
+        }
+      }
+    },
+    {
+      "id": "ho-003",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_permission",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-003:n03",
+                "field": "content",
+                "quote": "{\"ok\":false,\"code\":403,\"message\":\"access denied by policy\"}"
+              },
+              {
+                "nodeId": "ho-003:n02",
+                "field": "arguments",
+                "quote": "{\"order\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_permission",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具权限不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-003:n03",
+                  "field": "content",
+                  "quote": "{\"ok\":false,\"code\":403,\"message\":\"access denied by policy\"}"
+                },
+                {
+                  "nodeId": "ho-003:n02",
+                  "field": "arguments",
+                  "quote": "{\"order\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 3e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_permission",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-003:n03",
+                "quote": "access denied by policy"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "插件端返回策略拒绝访问。当前记录没有说明策略配置者或拒绝是否合理。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.4e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_permission",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-003:n03",
+                "quote": "access denied by policy"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "插件端返回策略拒绝访问。当前记录没有说明策略配置者或拒绝是否合理。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 7.9e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_permission",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-003:n03",
+                "quote": "access denied by policy"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "插件端返回策略拒绝访问。当前记录没有说明策略配置者或拒绝是否合理。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 7.8e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "a473f0cd8a11c4708b5b83942d30c1bf29e4a34a5e9abc81d63600fda41e4413",
+            "scope": {
+              "caseId": "case-ho-003",
+              "operationId": "op-ho-003",
+              "runId": "run-ho-003",
+              "threadId": null,
+              "topicId": "topic-ho-003",
+              "traceIds": [
+                "trace-ho-003"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 3.32e-05
+        }
+      }
+    },
+    {
+      "id": "ho-021",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_tool_failure",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-021:n00",
+                "field": "content",
+                "quote": "{\"success\":false,\"status\":503,\"message\":\"temporarily unavailable\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "incomplete_source_coverage",
+              "missing_or_ambiguous_tool_call"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_tool_failure",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具执行失败 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-021:n00",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"status\":503,\"message\":\"temporarily unavailable\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 3.19e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-021:n00",
+                "quote": "503"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "根因就是上游连接端故障，与本地请求加工无关。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.29e-05
+        },
+        "structured": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-021:n00",
+                "quote": "503"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "根因就是上游连接端故障，与本地请求加工无关。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.7e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-021:n00",
+                "quote": "503"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "根因就是上游连接端故障，与本地请求加工无关。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.4e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "1436027033a3d2379b17ac47b407ecf7582aa4ca6fed6b642a324b6bbd24a61a",
+            "scope": {
+              "caseId": "case-ho-021",
+              "operationId": "op-ho-021",
+              "runId": "run-ho-021",
+              "threadId": null,
+              "topicId": "topic-ho-021",
+              "traceIds": [
+                "trace-ho-021"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.19e-05
+        }
+      }
+    },
+    {
+      "id": "ho-016",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "no_supported_failure_signal",
+              "unclassified_runtime_error"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 4.86e-05
+        },
+        "direct": {
+          "output": {
+            "category": "model_missing",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-016:n01",
+                "quote": "model field is required"
+              }
+            ],
+            "moduleId": "L5.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "model field is required已经证明ModelParamsResolver没有选择模型，应该修改解析器的模型选择逻辑。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6e-06
+        },
+        "structured": {
+          "output": {
+            "category": "model_missing",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-016:n01",
+                "quote": "model field is required"
+              }
+            ],
+            "moduleId": "L5.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "model field is required已经证明ModelParamsResolver没有选择模型，应该修改解析器的模型选择逻辑。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.1e-06
+        },
+        "citations": {
+          "output": {
+            "category": "model_missing",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-016:n01",
+                "quote": "model field is required"
+              }
+            ],
+            "moduleId": "L5.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "model field is required已经证明ModelParamsResolver没有选择模型，应该修改解析器的模型选择逻辑。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.26e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "808ebe0f2f1c4285ece89af757ac6112d2e79317f4e775b7f7e9043edf85f595",
+            "scope": {
+              "caseId": "case-ho-016",
+              "operationId": "op-ho-016",
+              "runId": "run-ho-016",
+              "threadId": null,
+              "topicId": "topic-ho-016",
+              "traceIds": [
+                "trace-ho-016"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.74e-05
+        }
+      }
+    },
+    {
+      "id": "ho-015",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "no_supported_failure_signal",
+              "unclassified_runtime_error"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 4.38e-05
+        },
+        "direct": {
+          "output": {
+            "category": "thinking_type_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "selectedThinking"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "emittedThinking"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "thinking.type must"
+              }
+            ],
+            "moduleId": "L5.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "ModelParamsResolver把已选择的enabled输出成auto，并且Provider看到的也是auto；这次非法thinking值源自参数解析边界。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9e-06
+        },
+        "structured": {
+          "output": {
+            "category": "thinking_type_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "selectedThinking"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "emittedThinking"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "thinking.type must"
+              }
+            ],
+            "moduleId": "L5.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "ModelParamsResolver把已选择的enabled输出成auto，并且Provider看到的也是auto；这次非法thinking值源自参数解析边界。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.13e-05
+        },
+        "citations": {
+          "output": {
+            "category": "thinking_type_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "selectedThinking"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "emittedThinking"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-015:n01",
+                "quote": "thinking.type must"
+              }
+            ],
+            "moduleId": "L5.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "ModelParamsResolver把已选择的enabled输出成auto，并且Provider看到的也是auto；这次非法thinking值源自参数解析边界。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "529a4995ff2be14526a48351f99690249ca8da265e8d4d8e3d89dc601b056101",
+            "scope": {
+              "caseId": "case-ho-015",
+              "operationId": "op-ho-015",
+              "runId": "run-ho-015",
+              "threadId": null,
+              "topicId": "topic-ho-015",
+              "traceIds": [
+                "trace-ho-015"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.98e-05
+        }
+      }
+    },
+    {
+      "id": "ho-022",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_tool_failure",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-022:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"code\":403,\"message\":\"policy blocked account\"}"
+              },
+              {
+                "nodeId": "ho-022:n02",
+                "field": "arguments",
+                "quote": "{\"id\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_tool_failure",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具执行失败 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-022:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"code\":403,\"message\":\"policy blocked account\"}"
+                },
+                {
+                  "nodeId": "ho-022:n02",
+                  "field": "arguments",
+                  "quote": "{\"id\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 4.01e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_permission",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-022:n04",
+                "quote": "AgentStateManager内存状态被破坏"
+              }
+            ],
+            "moduleId": "L3.1",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "assistant的总结已经证明AgentStateManager状态损坏才是根因，权限错误只是伪装。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.3e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_permission",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-022:n04",
+                "quote": "AgentStateManager内存状态被破坏"
+              }
+            ],
+            "moduleId": "L3.1",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "assistant的总结已经证明AgentStateManager状态损坏才是根因，权限错误只是伪装。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 7.6e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_permission",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-022:n04",
+                "quote": "AgentStateManager内存状态被破坏"
+              }
+            ],
+            "moduleId": "L3.1",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "assistant的总结已经证明AgentStateManager状态损坏才是根因，权限错误只是伪装。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "a3a6d873b1e0f82cb20955a85c1ed9a1f76bd17c878171ff97d7736460ceba2c",
+            "scope": {
+              "caseId": "case-ho-022",
+              "operationId": "op-ho-022",
+              "runId": "run-ho-022",
+              "threadId": null,
+              "topicId": "topic-ho-022",
+              "traceIds": [
+                "trace-ho-022"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.62e-05
+        }
+      }
+    },
+    {
+      "id": "ho-025",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-025:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"code\":429,\"message\":\"quota exhausted\"}"
+              },
+              {
+                "nodeId": "ho-025:n02",
+                "field": "arguments",
+                "quote": "{\"q\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_quota",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具额度或限流 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-025:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"code\":429,\"message\":\"quota exhausted\"}"
+                },
+                {
+                  "nodeId": "ho-025:n02",
+                  "field": "arguments",
+                  "quote": "{\"q\":\"A17\"}"
+                }
+              ]
+            },
+            {
+              "category": "context_window_exceeded",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "上下文构造超过模型窗口 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-025:n04",
+                  "field": "error",
+                  "quote": "{\"message\": \"maximum context length 8192 exceeded by 9216 input tokens\", \"requestId\": \"req-other\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 4.23e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-025:n03",
+                "quote": "quota exhausted"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "本次唯一故障就是外部配额不足，Provider调用完全正常，没有任何上下文超限。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.4e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-025:n03",
+                "quote": "quota exhausted"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "本次唯一故障就是外部配额不足，Provider调用完全正常，没有任何上下文超限。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.2e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-025:n03",
+                "quote": "quota exhausted"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "本次唯一故障就是外部配额不足，Provider调用完全正常，没有任何上下文超限。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.2e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "e88fd5b4056e09bffc5a4284e700f9bb87622b76bbdbdf0e39334e71a2bbbc14",
+            "scope": {
+              "caseId": "case-ho-025",
+              "operationId": "op-ho-025",
+              "runId": "run-ho-025",
+              "threadId": null,
+              "topicId": "topic-ho-025",
+              "traceIds": [
+                "trace-ho-025"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 3.8e-05
+        }
+      }
+    },
+    {
+      "id": "ho-009",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-009:n03",
+                "field": "error",
+                "quote": "{\"code\": \"SCHEMA_VALIDATION\", \"message\": \"limit must be integer\"}"
+              },
+              {
+                "nodeId": "ho-009:n02",
+                "field": "arguments",
+                "quote": "{\"limit\":\"several\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-009:n03",
+                  "field": "error",
+                  "quote": "{\"code\": \"SCHEMA_VALIDATION\", \"message\": \"limit must be integer\"}"
+                },
+                {
+                  "nodeId": "ho-009:n02",
+                  "field": "arguments",
+                  "quote": "{\"limit\":\"several\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 4.74e-05
+        },
+        "direct": {
+          "output": {
+            "category": "builtin_tool_contract_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-009:n03",
+                "quote": "limit must be integer"
+              }
+            ],
+            "moduleId": "L2.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "limit必须是整数这条验证错误已经证明规划器故意忽略了工具Schema。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.2e-06
+        },
+        "structured": {
+          "output": {
+            "category": "builtin_tool_contract_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-009:n03",
+                "quote": "limit must be integer"
+              }
+            ],
+            "moduleId": "L2.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "limit必须是整数这条验证错误已经证明规划器故意忽略了工具Schema。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.7e-06
+        },
+        "citations": {
+          "output": {
+            "category": "builtin_tool_contract_invalid",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-009:n03",
+                "quote": "limit must be integer"
+              }
+            ],
+            "moduleId": "L2.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "limit必须是整数这条验证错误已经证明规划器故意忽略了工具Schema。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.19e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "1a613b289ec70649419c2311ecbc522b53e5dd611fcf78e3f3489c49a5d58f93",
+            "scope": {
+              "caseId": "case-ho-009",
+              "operationId": "op-ho-009",
+              "runId": "run-ho-009",
+              "threadId": null,
+              "topicId": "topic-ho-009",
+              "traceIds": [
+                "trace-ho-009"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.99e-05
+        }
+      }
+    },
+    {
+      "id": "ho-028",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_tool_failure",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-028:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"message\":\"record unavailable\"}"
+              },
+              {
+                "nodeId": "ho-028:n02",
+                "field": "arguments",
+                "quote": "{\"id\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_tool_failure",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具执行失败 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-028:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"message\":\"record unavailable\"}"
+                },
+                {
+                  "nodeId": "ho-028:n02",
+                  "field": "arguments",
+                  "quote": "{\"id\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 3.44e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_tool_failure",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-028:foreign-node",
+                "quote": "DELETE order A17"
+              }
+            ],
+            "moduleId": "L8.1",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "当前轨迹已有数据库删除订单的记录，证明数据库层把A17删掉了。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.7e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_tool_failure",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-028:foreign-node",
+                "quote": "DELETE order A17"
+              }
+            ],
+            "moduleId": "L8.1",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "当前轨迹已有数据库删除订单的记录，证明数据库层把A17删掉了。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.1e-06
+        },
+        "citations": {
+          "output": null,
+          "issues": [
+            "node_missing_in_scope"
+          ],
+          "executionError": null,
+          "localSeconds": 3.9e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "missing_evidence_node",
+            "invalid_evidence"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "invalid",
+                "issues": [
+                  {
+                    "code": "missing_evidence_node",
+                    "nodeId": "ho-028:foreign-node",
+                    "message": "Node is absent from this trajectory scope"
+                  }
+                ]
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "invalid_evidence",
+                    "nodeId": null,
+                    "message": "Missing or mismatched evidence cannot support a conclusion"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "6244fefafbe992f2b8254c14553d2204ee70f167def140ae4a549b9255ea0129",
+            "scope": {
+              "caseId": "case-ho-028",
+              "operationId": "op-ho-028",
+              "runId": "run-ho-028",
+              "threadId": null,
+              "topicId": "topic-ho-028",
+              "traceIds": [
+                "trace-ho-028"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.57e-05
+        }
+      }
+    },
+    {
+      "id": "ho-004",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_tool_failure",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-004:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"code\":401,\"message\":\"token_expired\"}"
+              },
+              {
+                "nodeId": "ho-004:n02",
+                "field": "arguments",
+                "quote": "{\"sku\":\"S8\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "unclassified_runtime_error"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_tool_failure",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具执行失败 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-004:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"code\":401,\"message\":\"token_expired\"}"
+                },
+                {
+                  "nodeId": "ho-004:n02",
+                  "field": "arguments",
+                  "quote": "{\"sku\":\"S8\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.42e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-004:n03",
+                "quote": "token_expired"
+              }
+            ],
+            "moduleId": "L8.6",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "凭证审计已经证明本地把令牌字符串拼错，因此401由本地Credentials管理代码损坏造成。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.6e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-004:n03",
+                "quote": "token_expired"
+              }
+            ],
+            "moduleId": "L8.6",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "凭证审计已经证明本地把令牌字符串拼错，因此401由本地Credentials管理代码损坏造成。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.1e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_credential",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-004:n03",
+                "quote": "token_expired"
+              }
+            ],
+            "moduleId": "L8.6",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "凭证审计已经证明本地把令牌字符串拼错，因此401由本地Credentials管理代码损坏造成。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.5e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "c485ec3fde3fa513180b526bf68639bee65598c1439a10fe438a1ff1823caa51",
+            "scope": {
+              "caseId": "case-ho-004",
+              "operationId": "op-ho-004",
+              "runId": "run-ho-004",
+              "threadId": null,
+              "topicId": "topic-ho-004",
+              "traceIds": [
+                "trace-ho-004"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.79e-05
+        }
+      }
+    },
+    {
+      "id": "ho-019",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-019:n03",
+                "field": "error",
+                "quote": "{\"message\": \"No executor found for calculator.calculate\", \"registryConstruction\": {\"component\": \"BuiltinToolsExecutor\", \"constructedEntries\": [], \"manifestEntries\": [\"calculator.calculate\"]}}"
+              },
+              {
+                "nodeId": "ho-019:n02",
+                "field": "arguments",
+                "quote": "{\"expression\":\"6*7\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-019:n03",
+                  "field": "error",
+                  "quote": "{\"message\": \"No executor found for calculator.calculate\", \"registryConstruction\": {\"component\": \"BuiltinToolsExecutor\", \"constructedEntries\": [], \"manifestEntries\": [\"calculator.calculate\"]}}"
+                },
+                {
+                  "nodeId": "ho-019:n02",
+                  "field": "arguments",
+                  "quote": "{\"expression\":\"6*7\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.59e-05
+        },
+        "direct": {
+          "output": {
+            "category": "builtin_tool_unavailable",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "manifestEntries"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "constructedEntries"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "No executor found"
+              }
+            ],
+            "moduleId": "L6.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "BuiltinToolsExecutor已有calculator清单，却构建出空执行注册表，导致这次内置调用找不到executor。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.7e-06
+        },
+        "structured": {
+          "output": {
+            "category": "builtin_tool_unavailable",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "manifestEntries"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "constructedEntries"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "No executor found"
+              }
+            ],
+            "moduleId": "L6.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "BuiltinToolsExecutor已有calculator清单，却构建出空执行注册表，导致这次内置调用找不到executor。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.13e-05
+        },
+        "citations": {
+          "output": {
+            "category": "builtin_tool_unavailable",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "manifestEntries"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "constructedEntries"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-019:n03",
+                "quote": "No executor found"
+              }
+            ],
+            "moduleId": "L6.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "BuiltinToolsExecutor已有calculator清单，却构建出空执行注册表，导致这次内置调用找不到executor。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.07e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "96e98173a8efd6c24746cdc6c5b4fed5ddbd1d3920a5be8ad106e45d3b8425d7",
+            "scope": {
+              "caseId": "case-ho-019",
+              "operationId": "op-ho-019",
+              "runId": "run-ho-019",
+              "threadId": null,
+              "topicId": "topic-ho-019",
+              "traceIds": [
+                "trace-ho-019"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 2.46e-05
+        }
+      }
+    },
+    {
+      "id": "ho-002",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_tool_failure",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-002:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"status\":503,\"message\":\"upstream unavailable\"}"
+              },
+              {
+                "nodeId": "ho-002:n02",
+                "field": "arguments",
+                "quote": "{\"id\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "unclassified_runtime_error"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_tool_failure",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具执行失败 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-002:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"status\":503,\"message\":\"upstream unavailable\"}"
+                },
+                {
+                  "nodeId": "ho-002:n02",
+                  "field": "arguments",
+                  "quote": "{\"id\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.94e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-002:n03",
+                "quote": "503"
+              }
+            ],
+            "moduleId": "L2.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "503 已经证明 GeneralChatAgent 生成了错误订单参数，必须修改其参数规划。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.3e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-002:n03",
+                "quote": "503"
+              }
+            ],
+            "moduleId": "L2.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "503 已经证明 GeneralChatAgent 生成了错误订单参数，必须修改其参数规划。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-002:n03",
+                "quote": "503"
+              }
+            ],
+            "moduleId": "L2.2",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "503 已经证明 GeneralChatAgent 生成了错误订单参数，必须修改其参数规划。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "3475c4d7759ecf4d145b4ea6502af9066adbc0a7e2b049c92f223314f486b5dd",
+            "scope": {
+              "caseId": "case-ho-002",
+              "operationId": "op-ho-002",
+              "runId": "run-ho-002",
+              "threadId": null,
+              "topicId": "topic-ho-002",
+              "traceIds": [
+                "trace-ho-002"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 9.35e-05
+        }
+      }
+    },
+    {
+      "id": "ho-024",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "no_supported_failure_signal"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.78e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-024:n00",
+                "quote": "429 quota exceeded"
+              }
+            ],
+            "moduleId": "L5.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "系统提示中的429 quota exceeded证明本次Provider配额耗尽，Provider Factory应承担回答错误责任。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.69e-05
+        },
+        "structured": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-024:n00",
+                "quote": "429 quota exceeded"
+              }
+            ],
+            "moduleId": "L5.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "系统提示中的429 quota exceeded证明本次Provider配额耗尽，Provider Factory应承担回答错误责任。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.01e-05
+        },
+        "citations": {
+          "output": {
+            "category": "external_quota",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-024:n00",
+                "quote": "429 quota exceeded"
+              }
+            ],
+            "moduleId": "L5.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "系统提示中的429 quota exceeded证明本次Provider配额耗尽，Provider Factory应承担回答错误责任。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.4e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "e58de6c2e195dd660ff6a50a6e96c5453374f026c82294f51aeb2cea4e1fc2df",
+            "scope": {
+              "caseId": "case-ho-024",
+              "operationId": "op-ho-024",
+              "runId": "run-ho-024",
+              "threadId": null,
+              "topicId": "topic-ho-024",
+              "traceIds": [
+                "trace-ho-024"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.54e-05
+        }
+      }
+    },
+    {
+      "id": "ho-027",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "no_supported_failure_signal"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.64e-05
+        },
+        "direct": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "工具结果是42而最后回答为43，说明答案不正确；现有记录不足以确定是哪个内部阶段造成，暂不指定根因模块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.3e-06
+        },
+        "structured": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "工具结果是42而最后回答为43，说明答案不正确；现有记录不足以确定是哪个内部阶段造成，暂不指定根因模块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.4e-06
+        },
+        "citations": {
+          "output": {
+            "category": null,
+            "claimLevel": "observation",
+            "evidenceRefs": [],
+            "moduleId": null,
+            "reasonCodes": [
+              "insufficient_evidence"
+            ],
+            "status": "unknown",
+            "summary": "工具结果是42而最后回答为43，说明答案不正确；现有记录不足以确定是哪个内部阶段造成，暂不指定根因模块。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.9e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "not_applicable",
+                "issues": []
+              },
+              "support": {
+                "status": "not_applicable",
+                "issues": []
+              }
+            },
+            "sourceDigest": "83a7649613e8828080504e66947e364413ab43341877849121e1c3fc75dad244",
+            "scope": {
+              "caseId": "case-ho-027",
+              "operationId": "op-ho-027",
+              "runId": "run-ho-027",
+              "threadId": null,
+              "topicId": "topic-ho-027",
+              "traceIds": [
+                "trace-ho-027"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.65e-05
+        }
+      }
+    },
+    {
+      "id": "ho-013",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "no_supported_failure_signal",
+              "unclassified_runtime_error"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.03e-05
+        },
+        "direct": {
+          "output": {
+            "category": "context_window_exceeded",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "entrySystemHashes"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "exitSystemHashes"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "8300 > 8192"
+              }
+            ],
+            "moduleId": "L4.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "同一次SystemPromptInjector处理把同一个系统段重复加入出站上下文，记录中的窗口超限由该重复注入造成。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.6e-06
+        },
+        "structured": {
+          "output": {
+            "category": "context_window_exceeded",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "entrySystemHashes"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "exitSystemHashes"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "8300 > 8192"
+              }
+            ],
+            "moduleId": "L4.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "同一次SystemPromptInjector处理把同一个系统段重复加入出站上下文，记录中的窗口超限由该重复注入造成。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.26e-05
+        },
+        "citations": {
+          "output": {
+            "category": "context_window_exceeded",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "entrySystemHashes"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "exitSystemHashes"
+              },
+              {
+                "field": "error",
+                "nodeId": "ho-013:n01",
+                "quote": "8300 > 8192"
+              }
+            ],
+            "moduleId": "L4.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "同一次SystemPromptInjector处理把同一个系统段重复加入出站上下文，记录中的窗口超限由该重复注入造成。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.64e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "1f0d186871b6ff23004886835fb5e72b59676460a9c010c7e3045b2d3746a996",
+            "scope": {
+              "caseId": "case-ho-013",
+              "operationId": "op-ho-013",
+              "runId": "run-ho-013",
+              "threadId": null,
+              "topicId": "topic-ho-013",
+              "traceIds": [
+                "trace-ho-013"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 2.75e-05
+        }
+      }
+    },
+    {
+      "id": "ho-008",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "external_tool_failure",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-008:n03",
+                "field": "content",
+                "quote": "{\"success\":false,\"message\":\"operation rejected; reason unavailable\"}"
+              },
+              {
+                "nodeId": "ho-008:n02",
+                "field": "arguments",
+                "quote": "{\"order\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "external_tool_failure",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具执行失败 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-008:n03",
+                  "field": "content",
+                  "quote": "{\"success\":false,\"message\":\"operation rejected; reason unavailable\"}"
+                },
+                {
+                  "nodeId": "ho-008:n02",
+                  "field": "arguments",
+                  "quote": "{\"order\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 3.48e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_tool_failure",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-008:n03",
+                "quote": "operation rejected"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "MCP返回操作失败，具体原因未提供，不能把它细化为权限、凭证或超时。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.2e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_tool_failure",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-008:n03",
+                "quote": "operation rejected"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "MCP返回操作失败，具体原因未提供，不能把它细化为权限、凭证或超时。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 7.9e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_tool_failure",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "nodeId": "ho-008:n03",
+                "quote": "operation rejected"
+              }
+            ],
+            "moduleId": null,
+            "reasonCodes": [
+              "evidence_observed"
+            ],
+            "status": "resolved",
+            "summary": "MCP返回操作失败，具体原因未提供，不能把它细化为权限、凭证或超时。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.5e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "failure_claim_not_supported"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "failure_claim_not_supported",
+                    "nodeId": null,
+                    "message": "Cited original fields do not support this failure category"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "dbaa6ce20b4cdbfb64ac7dd2dd250c6e74ffbf8dd75baadd7510974c33bc2681",
+            "scope": {
+              "caseId": "case-ho-008",
+              "operationId": "op-ho-008",
+              "runId": "run-ho-008",
+              "threadId": null,
+              "topicId": "topic-ho-008",
+              "traceIds": [
+                "trace-ho-008"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 4.05e-05
+        }
+      }
+    },
+    {
+      "id": "ho-020",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "ho-020:n03",
+                "field": "error",
+                "quote": "{\"conversionAudit\": {\"component\": \"BuiltinToolsExecutor\", \"decodeAppliedAgain\": true, \"receivedValueType\": \"object\"}, \"message\": \"JSON parse failed on [object Object]\"}"
+              },
+              {
+                "nodeId": "ho-020:n02",
+                "field": "arguments",
+                "quote": "{\"order\":\"A17\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "ho-020:n03",
+                  "field": "error",
+                  "quote": "{\"conversionAudit\": {\"component\": \"BuiltinToolsExecutor\", \"decodeAppliedAgain\": true, \"receivedValueType\": \"object\"}, \"message\": \"JSON parse failed on [object Object]\"}"
+                },
+                {
+                  "nodeId": "ho-020:n02",
+                  "field": "arguments",
+                  "quote": "{\"order\":\"A17\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.23e-05
+        },
+        "direct": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-020:n03",
+                "quote": "JSON parse failed"
+              }
+            ],
+            "moduleId": "L6.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "JSON parse failed已经确认MCP网络连接断开；因此应修MCP Service的网络重连。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.3e-06
+        },
+        "structured": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-020:n03",
+                "quote": "JSON parse failed"
+              }
+            ],
+            "moduleId": "L6.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "JSON parse failed已经确认MCP网络连接断开；因此应修MCP Service的网络重连。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.8e-06
+        },
+        "citations": {
+          "output": {
+            "category": "external_transport",
+            "claimLevel": "root_cause",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "nodeId": "ho-020:n03",
+                "quote": "JSON parse failed"
+              }
+            ],
+            "moduleId": "L6.3",
+            "reasonCodes": [
+              "candidate_causal_claim"
+            ],
+            "status": "resolved",
+            "summary": "JSON parse failed已经确认MCP网络连接断开；因此应修MCP Service的网络重连。"
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.27e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "root_cause_chain_not_available"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "root_cause_chain_not_available",
+                    "nodeId": null,
+                    "message": "Failure exposure alone does not prove the originating responsible module"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "bd5768b3750e45033ef51ce6f133dd32871f897623ed1bda003d20ec3013774e",
+            "scope": {
+              "caseId": "case-ho-020",
+              "operationId": "op-ho-020",
+              "runId": "run-ho-020",
+              "threadId": null,
+              "topicId": "topic-ho-020",
+              "traceIds": [
+                "trace-ho-020"
+              ]
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 2.2e-05
+        }
+      }
+    }
+  ],
+  "modelCalls": 0,
+  "tokenUsage": null,
+  "modelLatencySeconds": null,
+  "supplierCost": null,
+  "candidateGeneration": "Fixed offline fixtures; no LLM inference."
+}

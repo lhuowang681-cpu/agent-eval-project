@@ -1,0 +1,19 @@
+2026-11-14T08:23:39.102Z lobe-mcp:deps-check Installation checker registered: npm
+2026-11-14T08:23:39.103Z lobe-mcp:deps-check Installation checker registered: python
+2026-11-14T08:23:39.103Z lobe-mcp:deps-check Installation checker registered: manual
+C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\packages\builtin-skills\src\opencli\references\opencli-adapter-author.md:1
+---
+
+SyntaxError: Invalid left-hand side expression in prefix operation
+    at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+    at Module._compile (node:internal/modules/cjs/loader:1846:20)
+    at node:internal/modules/cjs/loader:2003:10
+    at Object.transformer (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:9:2916)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1396:12)
+    at Module._load (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-14_real_acceptance\integration\validator-compat.cjs:8:18)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+
+Node.js v24.19.0

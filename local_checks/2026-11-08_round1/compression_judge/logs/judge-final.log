@@ -1,0 +1,11 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform[39m
+
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.judge.test.ts [2m([22m[2m24 tests[22m[2m)[22m[33m 1442[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m24 passed[39m[22m[90m (24)[39m
+[2m   Start at [22m 15:31:41
+[2m   Duration [22m 89.88s[2m (transform 12.61s, setup 38.41s, collect 49.00s, tests 1.44s, environment 0ms, prepare 343ms)[22m
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_round1/compression_judge/judge-final.json

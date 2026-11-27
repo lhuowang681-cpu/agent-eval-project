@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-14T08:24:56.236318+00:00",
+  "files": {
+    "holdout.jsonl": "11024d010df603a5af6164457c8eb2af8e2893fc0b2cd07839fb286731b556be",
+    "build.py": "512ff16c0c1cf9d815998295c602b3c8f11745cf7138917f0c0017e0bc9641eb"
+  },
+  "cases": 40,
+  "singleAuthor": true,
+  "independentFromModelOutputs": true,
+  "notIndependentHumanGold": true,
+  "evaluationPerformed": false,
+  "criteria": {
+    "databaseChecks": "all specified isolation and identity assertions pass",
+    "reviewFalseSupport": 0,
+    "noNewFalseGapOnLocalFacts": true,
+    "normalFinalFailureFalsePositives": 0,
+    "promotionRequiresRealLLMIncrement": true,
+    "realLLMQuality": "not measured without authorized budget",
+    "latencyTargetMs": 15000,
+    "costCeilingPerRequest": "requires approved price/budget, unset means paid blocked"
+  }
+}

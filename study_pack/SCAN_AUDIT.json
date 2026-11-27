@@ -1,0 +1,601 @@
+{
+  "date": "2026-11-08",
+  "scope": "agent-eval-project only; sibling job projects excluded",
+  "currentPlatformFileInventory": {
+    "src": 4870,
+    "packages": 2423,
+    "scripts": 97,
+    "tools": 26
+  },
+  "inventoryMeaning": "File enumeration is scope discovery, not a claim to have deeply read every file",
+  "selectedSourceFilesRead": 33,
+  "sourceAnchorsVerified": 40,
+  "protectedReferenceFilesVerified": 96,
+  "businessCodeExecuted": false,
+  "paidModelCalls": 0,
+  "platformTestsRerunForCourse": false,
+  "teachingStarted": false,
+  "currentProductionReviewerMatchesRestoreReceipt": true,
+  "pythonAst": [
+    {
+      "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py",
+      "definitions": [
+        {
+          "name": "ContractError",
+          "line": 19,
+          "endLine": 20
+        },
+        {
+          "name": "serialize",
+          "line": 23,
+          "endLine": 24
+        },
+        {
+          "name": "require",
+          "line": 27,
+          "endLine": 29
+        },
+        {
+          "name": "validate",
+          "line": 32,
+          "endLine": 70
+        },
+        {
+          "name": "base_result",
+          "line": 73,
+          "endLine": 81
+        },
+        {
+          "name": "reference",
+          "line": 84,
+          "endLine": 85
+        },
+        {
+          "name": "analyze",
+          "line": 88,
+          "endLine": 149
+        },
+        {
+          "name": "analyze_reviewed",
+          "line": 152,
+          "endLine": 164
+        },
+        {
+          "name": "failed_result",
+          "line": 167,
+          "endLine": 172
+        },
+        {
+          "name": "main",
+          "line": 175,
+          "endLine": 190
+        }
+      ]
+    },
+    {
+      "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py",
+      "definitions": [
+        {
+          "name": "issue",
+          "line": 10,
+          "endLine": 11
+        },
+        {
+          "name": "text",
+          "line": 14,
+          "endLine": 15
+        },
+        {
+          "name": "observed_category",
+          "line": 18,
+          "endLine": 30
+        },
+        {
+          "name": "review_candidate",
+          "line": 33,
+          "endLine": 128
+        },
+        {
+          "name": "audited_candidate",
+          "line": 131,
+          "endLine": 144
+        }
+      ]
+    },
+    {
+      "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py",
+      "definitions": [
+        {
+          "name": "decode",
+          "line": 11,
+          "endLine": 16
+        },
+        {
+          "name": "flatten",
+          "line": 18,
+          "endLine": 27
+        },
+        {
+          "name": "parse_obj",
+          "line": 29,
+          "endLine": 31
+        },
+        {
+          "name": "norm",
+          "line": 33,
+          "endLine": 33
+        },
+        {
+          "name": "pick",
+          "line": 35,
+          "endLine": 39
+        },
+        {
+          "name": "failure_envelope",
+          "line": 41,
+          "endLine": 51
+        },
+        {
+          "name": "classify_builtin",
+          "line": 60,
+          "endLine": 68
+        },
+        {
+          "name": "classify_external",
+          "line": 70,
+          "endLine": 78
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/badcase_analysis.py",
+      "definitions": [
+        {
+          "name": "run_pipeline",
+          "line": 33,
+          "endLine": 165
+        },
+        {
+          "name": "main",
+          "line": 168,
+          "endLine": 195
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/structured_jsonl_attribution.py",
+      "definitions": [
+        {
+          "name": "decode",
+          "line": 17,
+          "endLine": 22
+        },
+        {
+          "name": "extract_messages",
+          "line": 24,
+          "endLine": 33
+        },
+        {
+          "name": "flatten",
+          "line": 35,
+          "endLine": 44
+        },
+        {
+          "name": "parse_obj",
+          "line": 46,
+          "endLine": 48
+        },
+        {
+          "name": "norm",
+          "line": 50,
+          "endLine": 50
+        },
+        {
+          "name": "pick",
+          "line": 51,
+          "endLine": 55
+        },
+        {
+          "name": "tool_source",
+          "line": 57,
+          "endLine": 62
+        },
+        {
+          "name": "failure_envelope",
+          "line": 64,
+          "endLine": 74
+        },
+        {
+          "name": "classify_builtin",
+          "line": 83,
+          "endLine": 91
+        },
+        {
+          "name": "classify_external",
+          "line": 93,
+          "endLine": 101
+        },
+        {
+          "name": "scan",
+          "line": 103,
+          "endLine": 139
+        },
+        {
+          "name": "main",
+          "line": 141,
+          "endLine": 145
+        },
+        {
+          "name": "walk",
+          "line": 26,
+          "endLine": 32
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/trace_denoiser.py",
+      "definitions": [
+        {
+          "name": "_json",
+          "line": 19,
+          "endLine": 23
+        },
+        {
+          "name": "clean_text",
+          "line": 25,
+          "endLine": 30
+        },
+        {
+          "name": "compact_error",
+          "line": 32,
+          "endLine": 44
+        },
+        {
+          "name": "compact_tools",
+          "line": 46,
+          "endLine": 59
+        },
+        {
+          "name": "_bool",
+          "line": 61,
+          "endLine": 63
+        },
+        {
+          "name": "denoise_trace_nodes",
+          "line": 65,
+          "endLine": 106
+        },
+        {
+          "name": "enrich_traces_from_xlsx",
+          "line": 108,
+          "endLine": 116
+        },
+        {
+          "name": "main",
+          "line": 118,
+          "endLine": 120
+        },
+        {
+          "name": "walk",
+          "line": 36,
+          "endLine": 43
+        },
+        {
+          "name": "walk",
+          "line": 48,
+          "endLine": 57
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/llm_classifier.py",
+      "definitions": [
+        {
+          "name": "_client",
+          "line": 56,
+          "endLine": 61
+        },
+        {
+          "name": "_safe",
+          "line": 63,
+          "endLine": 66
+        },
+        {
+          "name": "build_payload",
+          "line": 68,
+          "endLine": 70
+        },
+        {
+          "name": "_extract_json",
+          "line": 72,
+          "endLine": 80
+        },
+        {
+          "name": "_fallback",
+          "line": 82,
+          "endLine": 92
+        },
+        {
+          "name": "normalize_result",
+          "line": 94,
+          "endLine": 123
+        },
+        {
+          "name": "classify_single",
+          "line": 125,
+          "endLine": 137
+        },
+        {
+          "name": "classify_batch",
+          "line": 139,
+          "endLine": 145
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/reattribution_validator.py",
+      "definitions": [
+        {
+          "name": "t",
+          "line": 5,
+          "endLine": 5
+        },
+        {
+          "name": "validate",
+          "line": 6,
+          "endLine": 23
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/development_priority.py",
+      "definitions": [
+        {
+          "name": "clamp",
+          "line": 36,
+          "endLine": 36
+        },
+        {
+          "name": "truth",
+          "line": 37,
+          "endLine": 41
+        },
+        {
+          "name": "parse_ids",
+          "line": 42,
+          "endLine": 47
+        },
+        {
+          "name": "evidence_score",
+          "line": 49,
+          "endLine": 67
+        },
+        {
+          "name": "actionability_score",
+          "line": 69,
+          "endLine": 85
+        },
+        {
+          "name": "impact_score",
+          "line": 87,
+          "endLine": 87
+        },
+        {
+          "name": "frequency_score",
+          "line": 88,
+          "endLine": 90
+        },
+        {
+          "name": "calculate_priority",
+          "line": 92,
+          "endLine": 101
+        },
+        {
+          "name": "validate_config",
+          "line": 103,
+          "endLine": 104
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/cause_convergence.py",
+      "definitions": [
+        {
+          "name": "normalize_text",
+          "line": 61,
+          "endLine": 62
+        },
+        {
+          "name": "signature",
+          "line": 63,
+          "endLine": 77
+        },
+        {
+          "name": "severity_for",
+          "line": 79,
+          "endLine": 87
+        },
+        {
+          "name": "score",
+          "line": 88,
+          "endLine": 90
+        },
+        {
+          "name": "tokenize",
+          "line": 91,
+          "endLine": 91
+        },
+        {
+          "name": "medoid",
+          "line": 92,
+          "endLine": 98
+        },
+        {
+          "name": "converge",
+          "line": 99,
+          "endLine": 110
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/representative_case_selector.py",
+      "definitions": [
+        {
+          "name": "normalize_error_message",
+          "line": 18,
+          "endLine": 24
+        },
+        {
+          "name": "has_error_body",
+          "line": 26,
+          "endLine": 29
+        },
+        {
+          "name": "select_representative_trace",
+          "line": 31,
+          "endLine": 103
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/aggregator.py",
+      "definitions": [
+        {
+          "name": "load_classified",
+          "line": 8,
+          "endLine": 15
+        },
+        {
+          "name": "aggregate",
+          "line": 17,
+          "endLine": 24
+        },
+        {
+          "name": "print_summary",
+          "line": 26,
+          "endLine": 30
+        },
+        {
+          "name": "save_csv",
+          "line": 32,
+          "endLine": 40
+        }
+      ]
+    },
+    {
+      "path": "source-reference/attribution/high_frequency_case_report.py",
+      "definitions": [
+        {
+          "name": "safe_json",
+          "line": 26,
+          "endLine": 29
+        },
+        {
+          "name": "clean_text",
+          "line": 31,
+          "endLine": 37
+        },
+        {
+          "name": "tool_names",
+          "line": 39,
+          "endLine": 50
+        },
+        {
+          "name": "parse_usage",
+          "line": 52,
+          "endLine": 55
+        },
+        {
+          "name": "select_trace_nodes",
+          "line": 57,
+          "endLine": 86
+        },
+        {
+          "name": "aggregate_usage",
+          "line": 88,
+          "endLine": 100
+        },
+        {
+          "name": "build_report",
+          "line": 102,
+          "endLine": 208
+        },
+        {
+          "name": "main",
+          "line": 210,
+          "endLine": 217
+        },
+        {
+          "name": "walk",
+          "line": 42,
+          "endLine": 48
+        }
+      ]
+    },
+    {
+      "path": "local_checks/2026-11-08_phase3/experiment/metrics.py",
+      "definitions": [
+        {
+          "name": "ratio",
+          "line": 5,
+          "endLine": 5
+        },
+        {
+          "name": "claim",
+          "line": 8,
+          "endLine": 9
+        },
+        {
+          "name": "root_claim",
+          "line": 12,
+          "endLine": 13
+        },
+        {
+          "name": "valid_references",
+          "line": 16,
+          "endLine": 29
+        },
+        {
+          "name": "correctness",
+          "line": 32,
+          "endLine": 47
+        },
+        {
+          "name": "support",
+          "line": 50,
+          "endLine": 59
+        },
+        {
+          "name": "summarize",
+          "line": 62,
+          "endLine": 117
+        }
+      ]
+    },
+    {
+      "path": "local_checks/2026-11-08_phase3/experiment/engine_worker.py",
+      "definitions": [
+        {
+          "name": "structure",
+          "line": 17,
+          "endLine": 32
+        },
+        {
+          "name": "citations",
+          "line": 35,
+          "endLine": 45
+        },
+        {
+          "name": "evaluate",
+          "line": 48,
+          "endLine": 56
+        },
+        {
+          "name": "main",
+          "line": 59,
+          "endLine": 80
+        }
+      ]
+    }
+  ]
+}

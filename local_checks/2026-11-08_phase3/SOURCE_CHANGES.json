@@ -1,0 +1,128 @@
+{
+  "changedFiles": [
+    {
+      "path": "scripts/eval-attribution/engine-version.json",
+      "baselineSha256": "b79f89306373c0e6ff09752626cc505a6a7186da8b84dd4db5727ffb78fb3a53",
+      "sha256": "19247aef34d91a02ae4f93ae94ba027c3874c5823a62729a6716093725f445b7",
+      "addedLines": 3,
+      "removedLines": 3
+    },
+    {
+      "path": "scripts/eval-attribution/evidence_review.py",
+      "baselineSha256": "d9ea1fb10ade950a05118904cade82882fba26227735bb0474eeff67aa986f29",
+      "sha256": "310fd00767ef9da00eb2a222d497ed1e58d95132854dd4d11d1b96515c1a52ff",
+      "addedLines": 34,
+      "removedLines": 5
+    },
+    {
+      "path": "scripts/eval-attribution/README.md",
+      "baselineSha256": "cd4d409df9d8ce97f4c29cdcb13a3e5914a31496355ec093ac6e05df3bbd5f2e",
+      "sha256": "83a1bd06a4af444a6e100e6ec88a0b208c868b5b491f806152abb3049d122b46",
+      "addedLines": 1,
+      "removedLines": 1
+    },
+    {
+      "path": "scripts/eval-attribution/test_evidence_review.py",
+      "baselineSha256": "8d09b0a937c9f7923b33ab7f0e1ddb7b6d12663e016705bb714d58f9ed8a5258",
+      "sha256": "77bc139da75307df830f6db12e1698ca6254562ddfd1844e29078214da7ff5fa",
+      "addedLines": 6,
+      "removedLines": 2
+    }
+  ],
+  "algorithmFrozenBeforeHoldout": true,
+  "candidatePromoted": false,
+  "currentSourceMatchesBaseline": true,
+  "optimizedSnapshotUnchanged": true,
+  "adapterAndPureClassifierUnchanged": true,
+  "patchCommands": [
+    {
+      "command": [
+        "git",
+        "apply",
+        "--ignore-space-change",
+        "--check",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\platform-phase3.patch"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--ignore-space-change",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\platform-phase3.patch"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--ignore-space-change",
+        "-R",
+        "--check",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\platform-phase3.patch"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--ignore-space-change",
+        "-R",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\platform-phase3.patch"
+      ],
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "patchComparisons": [
+    {
+      "phase": "apply",
+      "path": "scripts/eval-attribution/engine-version.json",
+      "matches": true
+    },
+    {
+      "phase": "apply",
+      "path": "scripts/eval-attribution/evidence_review.py",
+      "matches": true
+    },
+    {
+      "phase": "apply",
+      "path": "scripts/eval-attribution/README.md",
+      "matches": true
+    },
+    {
+      "phase": "apply",
+      "path": "scripts/eval-attribution/test_evidence_review.py",
+      "matches": true
+    },
+    {
+      "phase": "rollback",
+      "path": "scripts/eval-attribution/engine-version.json",
+      "matches": true
+    },
+    {
+      "phase": "rollback",
+      "path": "scripts/eval-attribution/evidence_review.py",
+      "matches": true
+    },
+    {
+      "phase": "rollback",
+      "path": "scripts/eval-attribution/README.md",
+      "matches": true
+    },
+    {
+      "phase": "rollback",
+      "path": "scripts/eval-attribution/test_evidence_review.py",
+      "matches": true
+    }
+  ],
+  "patchAndRollbackVerified": true,
+  "originalReferences": 96,
+  "originalReferencesUnchanged": true
+}

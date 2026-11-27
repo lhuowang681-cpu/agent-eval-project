@@ -1,0 +1,296 @@
+{
+  "newPosthocProbes": [
+    {
+      "id": "fresh-16",
+      "probe": "short_excerpt_same_field_envelope",
+      "review": {
+        "schemaVersion": 2,
+        "existence": "valid",
+        "source": "known_with_partial_trace",
+        "localSupport": "supported",
+        "causalSupport": "insufficient",
+        "global": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "synthetic_missing_provider_events"
+          ]
+        },
+        "decision": "supported",
+        "observations": [
+          {
+            "category": "observed_execution_failure",
+            "claimLevel": "observation",
+            "nodeId": "fresh-16-n2",
+            "evidenceRefs": [
+              {
+                "nodeId": "fresh-16-n2",
+                "field": "content",
+                "quote": "service unavailable"
+              }
+            ],
+            "summary": "Original cited field records an execution failure; causal owner unknown."
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "id": "fresh-17",
+      "probe": "short_excerpt_same_field_envelope",
+      "review": {
+        "schemaVersion": 2,
+        "existence": "valid",
+        "source": "known_with_partial_trace",
+        "localSupport": "supported",
+        "causalSupport": "insufficient",
+        "global": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "synthetic_missing_provider_events"
+          ]
+        },
+        "decision": "supported",
+        "observations": [
+          {
+            "category": "observed_execution_failure",
+            "claimLevel": "observation",
+            "nodeId": "fresh-17-n2",
+            "evidenceRefs": [
+              {
+                "nodeId": "fresh-17-n2",
+                "field": "content",
+                "quote": "service unavailable"
+              }
+            ],
+            "summary": "Original cited field records an execution failure; causal owner unknown."
+          }
+        ],
+        "issues": []
+      }
+    },
+    {
+      "id": "fresh-4",
+      "probe": "root",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "synth-run-4",
+          "caseId": "fresh-4",
+          "threadId": "thread-4",
+          "topicId": "topic-4",
+          "operationId": "op-4",
+          "traceIds": []
+        },
+        "inputDigest": "fresh-4-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "root_cause",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "state",
+              "expected": "unpaid",
+              "actual": "paid"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "fresh-4-n2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"entity-339\", \"state\": \"unpaid\"}}"
+              },
+              {
+                "nodeId": "fresh-4-n3",
+                "field": "content",
+                "quote": "{\"orderId\": \"entity-339\", \"state\": \"paid\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "synth-run-4",
+          "caseId": "fresh-4",
+          "threadId": "thread-4",
+          "topicId": "topic-4",
+          "operationId": "op-4",
+          "traceIds": []
+        },
+        "inputDigest": "fresh-4-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "causal_or_impact_claim_unverified"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "synthetic_missing_provider_events"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fresh-4",
+      "probe": "wrong_value",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "synth-run-4",
+          "caseId": "fresh-4",
+          "threadId": "thread-4",
+          "topicId": "topic-4",
+          "operationId": "op-4",
+          "traceIds": []
+        },
+        "inputDigest": "fresh-4-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "state",
+              "expected": "not-in-tool-result",
+              "actual": "paid"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "fresh-4-n2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"entity-339\", \"state\": \"unpaid\"}}"
+              },
+              {
+                "nodeId": "fresh-4-n3",
+                "field": "content",
+                "quote": "{\"orderId\": \"entity-339\", \"state\": \"paid\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "synth-run-4",
+          "caseId": "fresh-4",
+          "threadId": "thread-4",
+          "topicId": "topic-4",
+          "operationId": "op-4",
+          "traceIds": []
+        },
+        "inputDigest": "fresh-4-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "comparison_not_proven_by_cited_local_facts"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "synthetic_missing_provider_events"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fresh-4",
+      "probe": "fake_quote",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "synth-run-4",
+          "caseId": "fresh-4",
+          "threadId": "thread-4",
+          "topicId": "topic-4",
+          "operationId": "op-4",
+          "traceIds": []
+        },
+        "inputDigest": "fresh-4-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "state",
+              "expected": "unpaid",
+              "actual": "paid"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "fresh-4-n2",
+                "field": "content",
+                "quote": "fabricated"
+              },
+              {
+                "nodeId": "fresh-4-n3",
+                "field": "content",
+                "quote": "{\"orderId\": \"entity-339\", \"state\": \"paid\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "synth-run-4",
+          "caseId": "fresh-4",
+          "threadId": "thread-4",
+          "topicId": "topic-4",
+          "operationId": "op-4",
+          "traceIds": []
+        },
+        "inputDigest": "fresh-4-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "invalid",
+            "support": "insufficient",
+            "issues": [
+              "invalid_observation_or_reference"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "synthetic_missing_provider_events"
+          ]
+        }
+      }
+    }
+  ],
+  "historicalVerdictsReproduced": 12,
+  "noAlgorithmChanges": true,
+  "notIndependentScores": true
+}

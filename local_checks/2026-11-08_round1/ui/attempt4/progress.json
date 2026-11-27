@@ -1,0 +1,59 @@
+{
+  "startedAt": "2026-11-08T07:32:42.893Z",
+  "baseURL": "http://127.0.0.1:13010",
+  "steps": [
+    {
+      "name": "00-api-fixture-setup",
+      "status": "passed",
+      "milliseconds": 3890,
+      "signupHTTP": 422,
+      "signinHTTP": 200,
+      "fixtureAgentId": "agt_UPMVH6nRulJc",
+      "sessionUserId": "user_Xwc2Ex5OVadgL4lAEr54aI1XeQ8",
+      "cookiesClearedBeforeUILogin": true
+    },
+    {
+      "name": "01-signin",
+      "status": "passed",
+      "milliseconds": 24716,
+      "authMode": "UI form",
+      "authenticatedSession": true,
+      "finalPath": "/eval"
+    },
+    {
+      "name": "02-create-benchmark",
+      "status": "passed",
+      "milliseconds": 1329,
+      "benchmarkId": "evb_N2PGbxYbURUZ"
+    }
+  ],
+  "console": [],
+  "pageErrors": [],
+  "requestFailed": [
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff2",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff2",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "httpErrors": [],
+  "method": "Headless installed Edge, real BetterAuth session, no development auth header",
+  "currentStep": "03-create-dataset",
+  "pendingRequests": [
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff"
+  ],
+  "authenticatedSession": true,
+  "authMode": "UI form"
+}

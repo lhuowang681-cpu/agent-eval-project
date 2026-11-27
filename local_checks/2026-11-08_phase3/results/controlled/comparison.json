@@ -1,0 +1,1463 @@
+{
+  "dataset": "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\data\\controlled-replay.jsonl",
+  "datasetSha256": "863b36a612b7532c4a273918e0d169a7df2eb76961d9d98465c8e78d15624ce6",
+  "recordedAtUtc": "2026-11-08T10:17:53.835616+00:00",
+  "cases": 4,
+  "candidateGeneration": "Offline controlled fixture replay, not LLM inference.",
+  "realModel": {
+    "status": "blocked",
+    "reason": "No confirmed provider/model available for this experiment; no external model request."
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-E",
+        "-s",
+        "-X",
+        "utf8",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\experiment\\engine_worker.py",
+        "baseline"
+      ],
+      "exitCode": 0,
+      "seconds": 0.07187839999096468,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-E",
+        "-s",
+        "-X",
+        "utf8",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\experiment\\engine_worker.py",
+        "optimized"
+      ],
+      "exitCode": 0,
+      "seconds": 0.0798750999965705,
+      "stderr": ""
+    }
+  ],
+  "engines": {
+    "baseline": {
+      "metrics": {
+        "rules": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 4.7550000000000004e-05,
+            "p95NearestRank": 0.0005716
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        },
+        "direct": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 6.300000000000001e-06,
+            "p95NearestRank": 1.2e-05
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        },
+        "structured": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 8.45e-06,
+            "p95NearestRank": 1.57e-05
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        },
+        "citations": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 8.3e-06,
+            "p95NearestRank": 2.33e-05
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        },
+        "full": {
+          "cases": 4,
+          "claims": 0,
+          "claimCoverage": 0.0,
+          "abstentions": 4,
+          "executionErrors": 0,
+          "abstentionRate": 1.0,
+          "judgedClaims": 0,
+          "judgedCoverage": 0.0,
+          "correctClaims": 0,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": null,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": null,
+          "allClaimErrorRiskBounds": [
+            null,
+            null
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 0,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": null,
+          "allClaimSupportPrecisionBounds": [
+            null,
+            null
+          ],
+          "references": 0,
+          "validReferences": 0,
+          "evidenceReferenceValidity": null,
+          "claimsWithValidEvidence": 0,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 0,
+          "effectiveObservationCoverage": 0.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [
+            "controlled-4"
+          ],
+          "localLatencySeconds": {
+            "median": 1.54e-05,
+            "p95NearestRank": 0.0001342
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        }
+      },
+      "caseMetrics": [
+        {
+          "id": "controlled-1",
+          "method": "rules",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 8.31e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "rules",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.2e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "rules",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 9.9e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "rules",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 0.0005716,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-1",
+          "method": "direct",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 7.5e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "direct",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 4.8e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "direct",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 5.1e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "direct",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 1.2e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-1",
+          "method": "structured",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "structured",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 6.9e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "structured",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 6.5e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "structured",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 1.57e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-1",
+          "method": "citations",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 9.8e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "citations",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 6.8e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "citations",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 6.3e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "citations",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 2.33e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-1",
+          "method": "full",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.79e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "full",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.29e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "full",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.03e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "full",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 0.0001342,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": true
+        }
+      ],
+      "riskCoveragePoints": [
+        {
+          "gate": "rules",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        },
+        {
+          "gate": "direct",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        },
+        {
+          "gate": "structured",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        },
+        {
+          "gate": "citations",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        },
+        {
+          "gate": "full",
+          "coverage": 0.0,
+          "judgedCoverage": 0.0,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": null,
+          "allClaimErrorRiskBounds": [
+            null,
+            null
+          ],
+          "judgedClaims": 0,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": null,
+          "supportUnjudgedClaims": 0
+        }
+      ],
+      "confidenceInterval": "None: small, authored fixtures; no iid or generalization assumption. Zero observed errors is not proof of zero real risk."
+    },
+    "optimized": {
+      "metrics": {
+        "rules": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 5.1649999999999995e-05,
+            "p95NearestRank": 0.0007664
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        },
+        "direct": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 6.7e-06,
+            "p95NearestRank": 1.32e-05
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        },
+        "structured": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 9.45e-06,
+            "p95NearestRank": 1.74e-05
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        },
+        "citations": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 8.8e-06,
+            "p95NearestRank": 2.38e-05
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        },
+        "full": {
+          "cases": 4,
+          "claims": 1,
+          "claimCoverage": 0.25,
+          "abstentions": 3,
+          "executionErrors": 0,
+          "abstentionRate": 0.75,
+          "judgedClaims": 1,
+          "judgedCoverage": 0.25,
+          "correctClaims": 1,
+          "wrongClaims": 0,
+          "unjudgedClaims": 0,
+          "unjudgedCoverage": 0.0,
+          "acceptedAccuracy": 1.0,
+          "knownWrongAttributionRate": 0.0,
+          "selectiveKnownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "unsupportedClaims": 0,
+          "unsupportedClaimRate": 0.0,
+          "supportJudgedClaims": 1,
+          "supportUnjudgedClaims": 0,
+          "acceptedSupportPrecision": 1.0,
+          "allClaimSupportPrecisionBounds": [
+            1.0,
+            1.0
+          ],
+          "references": 2,
+          "validReferences": 2,
+          "evidenceReferenceValidity": 1.0,
+          "claimsWithValidEvidence": 1,
+          "observationEligibleCases": 1,
+          "effectiveObservationCases": 1,
+          "effectiveObservationCoverage": 1.0,
+          "knownRootCases": 0,
+          "rootClaims": 0,
+          "knownRootClaims": 0,
+          "correctKnownRoots": 0,
+          "rootClassificationAccuracyAllKnown": null,
+          "selectiveKnownRootAccuracy": null,
+          "rootClaimCoverage": 0.0,
+          "rootAbstentionRate": 1.0,
+          "falseRefusals": [],
+          "localLatencySeconds": {
+            "median": 1.555e-05,
+            "p95NearestRank": 0.0005711
+          },
+          "llmTokens": null,
+          "llmLatencySeconds": null,
+          "supplierCost": null
+        }
+      },
+      "caseMetrics": [
+        {
+          "id": "controlled-1",
+          "method": "rules",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 9.13e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "rules",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.2e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "rules",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.15e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "rules",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 0.0007664,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-1",
+          "method": "direct",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 7.8e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "direct",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 5.2e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "direct",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 5.6e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "direct",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 1.32e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-1",
+          "method": "structured",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.19e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "structured",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 6.6e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "structured",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 7e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "structured",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 1.74e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-1",
+          "method": "citations",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.01e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "citations",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 7.1e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "citations",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 7.5e-06,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "citations",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 2.38e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-1",
+          "method": "full",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.87e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-2",
+          "method": "full",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.24e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-3",
+          "method": "full",
+          "claim": false,
+          "rootClaim": false,
+          "correct": null,
+          "supported": null,
+          "references": {
+            "references": 0,
+            "valid": 0,
+            "claimHasValidEvidence": false
+          },
+          "executionError": null,
+          "localSeconds": 1.11e-05,
+          "knownRootCorrect": false,
+          "effectiveObservation": false,
+          "falseRefusal": false
+        },
+        {
+          "id": "controlled-4",
+          "method": "full",
+          "claim": true,
+          "rootClaim": false,
+          "correct": true,
+          "supported": true,
+          "references": {
+            "references": 2,
+            "valid": 2,
+            "claimHasValidEvidence": true
+          },
+          "executionError": null,
+          "localSeconds": 0.0005711,
+          "knownRootCorrect": false,
+          "effectiveObservation": true,
+          "falseRefusal": false
+        }
+      ],
+      "riskCoveragePoints": [
+        {
+          "gate": "rules",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        },
+        {
+          "gate": "direct",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        },
+        {
+          "gate": "structured",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        },
+        {
+          "gate": "citations",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        },
+        {
+          "gate": "full",
+          "coverage": 0.25,
+          "judgedCoverage": 0.25,
+          "unjudgedCoverage": 0.0,
+          "knownErrorRisk": 0.0,
+          "allClaimErrorRiskBounds": [
+            0.0,
+            0.0
+          ],
+          "judgedClaims": 1,
+          "unjudgedClaims": 0,
+          "supportRiskOnJudged": 0.0,
+          "supportUnjudgedClaims": 0
+        }
+      ],
+      "confidenceInterval": "None: small, authored fixtures; no iid or generalization assumption. Zero observed errors is not proof of zero real risk."
+    }
+  }
+}

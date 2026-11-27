@@ -1,0 +1,25 @@
+{
+  "utc": "2026-11-14T09:44:45.602095+00:00",
+  "beforeRealV2": true,
+  "files": {
+    "integration/offline.test.ts": "c77d431064ab454b5cc52ce22c8cad914baac2f34863dcc2f91fe3ba63b58bab",
+    "integration/provider.ts": "d319f81cc465cc70e3968b0bb3ea54aa3e2daaa5c5037946f4a4217f41c1f744",
+    "integration/run.ts": "89eac7ef6abf98288f783472cc33b4fae16b12d0005461960c7266ea725496a2",
+    "integration/v1-v2.patch": "dfdfe7c2569af9ae4529105b7532c7c2d258026d760f3cd339343a8e7e1961dd",
+    "smoke/answer_mismatch.json": "2a141baf74fb932de34a8b53cd6d77283dc8a2cb4e461cfcea77c6830785318f",
+    "smoke/CASES.json": "fc26a74530821557736e29aad0b12131a2add4416a5df74de84cf65519f0f7f9",
+    "smoke/normal.json": "c37612d8e0fab825a5407df7ddc2e8d06a203d4707982a5433e22c3b411ec3a8",
+    "smoke/parameter_closed.json": "3e48d8bd51272b53cdf42c8e87831509a5ac104210c1245de41143565d01ff73",
+    "smoke/recovered.json": "0ec16df08b0ee475600b75f4ef9307092584f2d12ebf63f60afdb4a60637e318",
+    "smoke/stale_result.json": "328f1f84c783a2c2617503bc8cc2768113ab283ef308af5741f8be1c79b31417",
+    "CONFIG.json": "53e4e6a9e6db89d8c0db3ec715bd8df0578369dfcaf4c91da8c0f25b7e93191e",
+    "REVISION_PLAN.md": "e48efd7558d64d6515a09c65144ff410d2b35f02abcc53f0033a1ca0b2ec3b26",
+    "AUTHORIZATION.json": "4792be66e7cf2231b9d2bba328889fc875b75c594017545e260d8aec8f78671f"
+  },
+  "sharedLedgerInitial": {
+    "attempts": 1,
+    "approved": 6
+  },
+  "formalCalls": 0,
+  "reviewRulesChanged": false
+}

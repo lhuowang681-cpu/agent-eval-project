@@ -1,0 +1,514 @@
+[
+  {
+    "id": "claim-001",
+    "split": "development",
+    "caseId": "dev-external500_wrong_L2_2",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "cb65ff82630118f934e6eea35e0cdf7f8931fd9ccbcdb2c41c2ad6d901bf4864"
+  },
+  {
+    "id": "claim-002",
+    "split": "development",
+    "caseId": "dev-valid_quote_no_causal_chain",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "6e3beb972fcca236d8795fff333253a1b9f2e8a748d89c03a783aee1253cb38e"
+  },
+  {
+    "id": "claim-003",
+    "split": "development",
+    "caseId": "dev-fabricated_node",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "e30f475e3e4c24938f6d71d43585bca33b86236be2c1d74aaedc9e6c1e942ce7"
+  },
+  {
+    "id": "claim-004",
+    "split": "development",
+    "caseId": "dev-cross_case_node",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "aca232a343346670931c2142898af956cd40afe280d49d8aeade6af62a1783c4"
+  },
+  {
+    "id": "claim-005",
+    "split": "development",
+    "caseId": "dev-missing_parent",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "173019dd20e78b823050eb01afb99592416c05d54c02c61f8465ba5163d0d3d6"
+  },
+  {
+    "id": "claim-006",
+    "split": "development",
+    "caseId": "dev-invalid_category_module",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "11e5675074f49c03b786c3b0f6ff7c68a9c2824b9a2d5455f296f65516f941d4"
+  },
+  {
+    "id": "claim-007",
+    "split": "development",
+    "caseId": "dev-extra_causal_summary",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "5b2faa311269cdccb47ae59f14bd85eb9e1f5850ea9c4fa3d217800761c286c3"
+  },
+  {
+    "id": "claim-008",
+    "split": "development",
+    "caseId": "dev-valid_observation_template",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "562b5c5adf21df797bd32d42f3bc672d6dd453ac2430b9ea7563adaec5d259d3"
+  },
+  {
+    "id": "claim-008",
+    "split": "development",
+    "caseId": "dev-valid_observation_template",
+    "engine": "baseline",
+    "method": "full",
+    "outputSha256": "562b5c5adf21df797bd32d42f3bc672d6dd453ac2430b9ea7563adaec5d259d3"
+  },
+  {
+    "id": "claim-009",
+    "split": "development",
+    "caseId": "dev-supported_paraphrase",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "b081a88fa3d1fb9e004d286933c332043e766fac6d2015ae70397cb147ce7f69"
+  },
+  {
+    "id": "claim-001",
+    "split": "development",
+    "caseId": "dev-external500_wrong_L2_2",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "cb65ff82630118f934e6eea35e0cdf7f8931fd9ccbcdb2c41c2ad6d901bf4864"
+  },
+  {
+    "id": "claim-002",
+    "split": "development",
+    "caseId": "dev-valid_quote_no_causal_chain",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "6e3beb972fcca236d8795fff333253a1b9f2e8a748d89c03a783aee1253cb38e"
+  },
+  {
+    "id": "claim-003",
+    "split": "development",
+    "caseId": "dev-fabricated_node",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "e30f475e3e4c24938f6d71d43585bca33b86236be2c1d74aaedc9e6c1e942ce7"
+  },
+  {
+    "id": "claim-004",
+    "split": "development",
+    "caseId": "dev-cross_case_node",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "aca232a343346670931c2142898af956cd40afe280d49d8aeade6af62a1783c4"
+  },
+  {
+    "id": "claim-005",
+    "split": "development",
+    "caseId": "dev-missing_parent",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "173019dd20e78b823050eb01afb99592416c05d54c02c61f8465ba5163d0d3d6"
+  },
+  {
+    "id": "claim-005",
+    "split": "development",
+    "caseId": "dev-missing_parent",
+    "engine": "optimized",
+    "method": "full",
+    "outputSha256": "173019dd20e78b823050eb01afb99592416c05d54c02c61f8465ba5163d0d3d6"
+  },
+  {
+    "id": "claim-006",
+    "split": "development",
+    "caseId": "dev-invalid_category_module",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "11e5675074f49c03b786c3b0f6ff7c68a9c2824b9a2d5455f296f65516f941d4"
+  },
+  {
+    "id": "claim-007",
+    "split": "development",
+    "caseId": "dev-extra_causal_summary",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "5b2faa311269cdccb47ae59f14bd85eb9e1f5850ea9c4fa3d217800761c286c3"
+  },
+  {
+    "id": "claim-008",
+    "split": "development",
+    "caseId": "dev-valid_observation_template",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "562b5c5adf21df797bd32d42f3bc672d6dd453ac2430b9ea7563adaec5d259d3"
+  },
+  {
+    "id": "claim-008",
+    "split": "development",
+    "caseId": "dev-valid_observation_template",
+    "engine": "optimized",
+    "method": "full",
+    "outputSha256": "562b5c5adf21df797bd32d42f3bc672d6dd453ac2430b9ea7563adaec5d259d3"
+  },
+  {
+    "id": "claim-009",
+    "split": "development",
+    "caseId": "dev-supported_paraphrase",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "b081a88fa3d1fb9e004d286933c332043e766fac6d2015ae70397cb147ce7f69"
+  },
+  {
+    "id": "claim-010",
+    "split": "controlled",
+    "caseId": "controlled-4",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "49f590c09f2a87dfc03d8ddc5b6ded020ef6c77709260b85f3b0ae86488ef746"
+  },
+  {
+    "id": "claim-010",
+    "split": "controlled",
+    "caseId": "controlled-4",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "49f590c09f2a87dfc03d8ddc5b6ded020ef6c77709260b85f3b0ae86488ef746"
+  },
+  {
+    "id": "claim-010",
+    "split": "controlled",
+    "caseId": "controlled-4",
+    "engine": "optimized",
+    "method": "full",
+    "outputSha256": "49f590c09f2a87dfc03d8ddc5b6ded020ef6c77709260b85f3b0ae86488ef746"
+  },
+  {
+    "id": "claim-011",
+    "split": "holdout",
+    "caseId": "ho-006",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "d11c68a669f8cbaa2d9a6e0e950362b9df362dacde4d69d772811f290ba714db"
+  },
+  {
+    "id": "claim-012",
+    "split": "holdout",
+    "caseId": "ho-012",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "5adb01dafd44f455256a16afd6629d6bc6ab8e588a96f6d720d8399363cbba43"
+  },
+  {
+    "id": "claim-013",
+    "split": "holdout",
+    "caseId": "ho-017",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "efa131324ae6bc6ffcf59a6ab2d16835710615d0e6dfeb09c3a8fa8aa9efe110"
+  },
+  {
+    "id": "claim-014",
+    "split": "holdout",
+    "caseId": "ho-001",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "988c457ee8e67960eb654ebac16774fd9610d78fb0f9c71427f778cb2c623cf7"
+  },
+  {
+    "id": "claim-015",
+    "split": "holdout",
+    "caseId": "ho-010",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "ad0a80cbad4606652cf38b105007d39bfe78b24b4fd2a641e4258e52746fe0f0"
+  },
+  {
+    "id": "claim-016",
+    "split": "holdout",
+    "caseId": "ho-018",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "b61b9b9e7874b34f1fb281e2c83c4c1e4d5cd11930f0e9861b5fccaa2980cbc5"
+  },
+  {
+    "id": "claim-017",
+    "split": "holdout",
+    "caseId": "ho-014",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "6440cae50edadfba67f8c7b86100222ee66e4f3b12bbb5ddb492d0af9f1b3aa2"
+  },
+  {
+    "id": "claim-018",
+    "split": "holdout",
+    "caseId": "ho-026",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "3e3accdaabe343730a7f6a558fa4aa009f258933e852a0bee932a39bc2af33b6"
+  },
+  {
+    "id": "claim-019",
+    "split": "holdout",
+    "caseId": "ho-011",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "4800ccaf81f3f35b8e6bfae269259c06fd083a4294f2b2f40a68372663e6a426"
+  },
+  {
+    "id": "claim-020",
+    "split": "holdout",
+    "caseId": "ho-005",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "8af10031c43adb6a1a7803e719287aa7e5a482b5488833f38170ce35a24a3784"
+  },
+  {
+    "id": "claim-021",
+    "split": "holdout",
+    "caseId": "ho-003",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "4b3e5459f5dd53acd4f438fa55a615c6e463abf4e4c5130b7ff0dcbbe71c85b9"
+  },
+  {
+    "id": "claim-022",
+    "split": "holdout",
+    "caseId": "ho-021",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "b2ebf6c24dd8818f6b75d8eae539ba11859c7c9eaa092106535b2dea53de627c"
+  },
+  {
+    "id": "claim-023",
+    "split": "holdout",
+    "caseId": "ho-022",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "0ed11cb131e29cc56c0e96c4c7e00b02f59d46be9d91145cdae772890106615c"
+  },
+  {
+    "id": "claim-024",
+    "split": "holdout",
+    "caseId": "ho-009",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "8e5acae60ecf4550d4cdc78d0e71b98028c61f8b726f70364f9536a0c6bde197"
+  },
+  {
+    "id": "claim-025",
+    "split": "holdout",
+    "caseId": "ho-028",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "f5eea325d6a6e6f7194c34ea0bea741fd5df5736a6d9b8f37bfab3926cd72ea9"
+  },
+  {
+    "id": "claim-026",
+    "split": "holdout",
+    "caseId": "ho-004",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "17c49a17e67e120683b42d7fc1f7f694e2bf08b7397a45a397317e2e3a3519f0"
+  },
+  {
+    "id": "claim-027",
+    "split": "holdout",
+    "caseId": "ho-019",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "65fce8cd3f919e757bdd1bb7ed436a2b9797c258c2cd777c5974be3f85066037"
+  },
+  {
+    "id": "claim-028",
+    "split": "holdout",
+    "caseId": "ho-002",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "9c854c0c53725570a598d2449a4d5f40c34e2ff4db2cd096639524b2d861dd5a"
+  },
+  {
+    "id": "claim-029",
+    "split": "holdout",
+    "caseId": "ho-008",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "638629e572d7cd2095544ca6a32c2116913171397720f615417e6641c5051048"
+  },
+  {
+    "id": "claim-030",
+    "split": "holdout",
+    "caseId": "ho-020",
+    "engine": "baseline",
+    "method": "rules",
+    "outputSha256": "d7bea8f19a7532919e5b1f00c9af9547a59604cf0f41287c8657b1487d62f3de"
+  },
+  {
+    "id": "claim-011",
+    "split": "holdout",
+    "caseId": "ho-006",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "d11c68a669f8cbaa2d9a6e0e950362b9df362dacde4d69d772811f290ba714db"
+  },
+  {
+    "id": "claim-012",
+    "split": "holdout",
+    "caseId": "ho-012",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "5adb01dafd44f455256a16afd6629d6bc6ab8e588a96f6d720d8399363cbba43"
+  },
+  {
+    "id": "claim-013",
+    "split": "holdout",
+    "caseId": "ho-017",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "efa131324ae6bc6ffcf59a6ab2d16835710615d0e6dfeb09c3a8fa8aa9efe110"
+  },
+  {
+    "id": "claim-014",
+    "split": "holdout",
+    "caseId": "ho-001",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "988c457ee8e67960eb654ebac16774fd9610d78fb0f9c71427f778cb2c623cf7"
+  },
+  {
+    "id": "claim-015",
+    "split": "holdout",
+    "caseId": "ho-010",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "ad0a80cbad4606652cf38b105007d39bfe78b24b4fd2a641e4258e52746fe0f0"
+  },
+  {
+    "id": "claim-016",
+    "split": "holdout",
+    "caseId": "ho-018",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "b61b9b9e7874b34f1fb281e2c83c4c1e4d5cd11930f0e9861b5fccaa2980cbc5"
+  },
+  {
+    "id": "claim-017",
+    "split": "holdout",
+    "caseId": "ho-014",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "6440cae50edadfba67f8c7b86100222ee66e4f3b12bbb5ddb492d0af9f1b3aa2"
+  },
+  {
+    "id": "claim-018",
+    "split": "holdout",
+    "caseId": "ho-026",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "3e3accdaabe343730a7f6a558fa4aa009f258933e852a0bee932a39bc2af33b6"
+  },
+  {
+    "id": "claim-019",
+    "split": "holdout",
+    "caseId": "ho-011",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "4800ccaf81f3f35b8e6bfae269259c06fd083a4294f2b2f40a68372663e6a426"
+  },
+  {
+    "id": "claim-020",
+    "split": "holdout",
+    "caseId": "ho-005",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "8af10031c43adb6a1a7803e719287aa7e5a482b5488833f38170ce35a24a3784"
+  },
+  {
+    "id": "claim-021",
+    "split": "holdout",
+    "caseId": "ho-003",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "4b3e5459f5dd53acd4f438fa55a615c6e463abf4e4c5130b7ff0dcbbe71c85b9"
+  },
+  {
+    "id": "claim-022",
+    "split": "holdout",
+    "caseId": "ho-021",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "b2ebf6c24dd8818f6b75d8eae539ba11859c7c9eaa092106535b2dea53de627c"
+  },
+  {
+    "id": "claim-023",
+    "split": "holdout",
+    "caseId": "ho-022",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "0ed11cb131e29cc56c0e96c4c7e00b02f59d46be9d91145cdae772890106615c"
+  },
+  {
+    "id": "claim-024",
+    "split": "holdout",
+    "caseId": "ho-009",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "8e5acae60ecf4550d4cdc78d0e71b98028c61f8b726f70364f9536a0c6bde197"
+  },
+  {
+    "id": "claim-025",
+    "split": "holdout",
+    "caseId": "ho-028",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "f5eea325d6a6e6f7194c34ea0bea741fd5df5736a6d9b8f37bfab3926cd72ea9"
+  },
+  {
+    "id": "claim-026",
+    "split": "holdout",
+    "caseId": "ho-004",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "17c49a17e67e120683b42d7fc1f7f694e2bf08b7397a45a397317e2e3a3519f0"
+  },
+  {
+    "id": "claim-027",
+    "split": "holdout",
+    "caseId": "ho-019",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "65fce8cd3f919e757bdd1bb7ed436a2b9797c258c2cd777c5974be3f85066037"
+  },
+  {
+    "id": "claim-028",
+    "split": "holdout",
+    "caseId": "ho-002",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "9c854c0c53725570a598d2449a4d5f40c34e2ff4db2cd096639524b2d861dd5a"
+  },
+  {
+    "id": "claim-029",
+    "split": "holdout",
+    "caseId": "ho-008",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "638629e572d7cd2095544ca6a32c2116913171397720f615417e6641c5051048"
+  },
+  {
+    "id": "claim-030",
+    "split": "holdout",
+    "caseId": "ho-020",
+    "engine": "optimized",
+    "method": "rules",
+    "outputSha256": "d7bea8f19a7532919e5b1f00c9af9547a59604cf0f41287c8657b1487d62f3de"
+  }
+]

@@ -1,0 +1,2941 @@
+▲ Next.js 16.1.5 (Turbopack)
+- Local:         http://127.0.0.1:49196
+- Network:       http://127.0.0.1:49196
+- Experiments (use with caution):
+  · optimizePackageImports
+  ⨯ serverMinification
+  · webVitalsAttribution
+
+✓ Starting...
+[instrumentation] vampire-core serverHook activated
+[instrumentation] vampire-core bootstrap() invoked
+[instrumentation] node.ts loaded
+[bootstrap] ZXQSTASH_TOKEN not set — skipping schedule "lobe-task-schedule-dispatch".
+[bootstrap] ZXQSTASH_TOKEN not set — skipping schedule "memory-user-memory.call-cron-hourly-analysis".
+[bootstrap] ZXQSTASH_TOKEN not set — skipping schedule "lobe-agent-operation-watchdog".
+2026-11-08T06:38:55.088Z lobe-server:api-key-cache-bus Redis not configured — API key cache invalidation falls back to TTL only
+✓ Ready in 9s
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./packages/utils/src/server/auth.ts [App Route]
+    ./packages/openapi/src/middleware/auth.ts [App Route]
+    ./packages/openapi/src/index.ts [App Route]
+    ./src/app/(backend)/api/v1/[[...route]]/route.ts [App Route]
+
+
+<-- GET /api/v1/health
+2026-11-08T06:39:02.125Z lobe-hono:auth-middleware Development debug mode, using mock user ID
+--> GET /api/v1/health [32m200[0m 4ms
+ GET /api/v1/health 200 in 7.0s (compile: 5.8s, proxy.ts: 1170ms, render: 57ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/fetch/index.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./packages/utils/src/server/withProxy.ts [App Route]
+    ./src/libs/mcp/client.ts [App Route]
+    ./src/server/services/mcp/index.ts [App Route]
+    ./src/server/services/agentRuntime/AgentRuntimeService.ts [App Route]
+    ./src/app/(backend)/api/agent/run/route.ts [App Route]
+
+
+ GET /api/agent/run 200 in 485ms (compile: 470ms, proxy.ts: 5ms, render: 10ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:04.182Z lobe-async:init Initializing async tRPC with context and superjson transformer
+2026-11-08T06:39:04.182Z lobe-async:init Async tRPC initialized successfully
+2026-11-08T06:39:07.450Z lobe-async:init Initializing async tRPC with context and superjson transformer
+2026-11-08T06:39:07.451Z lobe-async:init Async tRPC initialized successfully
+2026-11-08T06:39:07.899Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+ GET /trpc/lambda/healthcheck 200 in 5.3s (compile: 5.2s, proxy.ts: 8ms, render: 17ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./packages/utils/src/server/auth.ts [App Route]
+    ./packages/openapi/src/middleware/auth.ts [App Route]
+    ./packages/openapi/src/index.ts [App Route]
+    ./src/app/(backend)/api/v1/[[...route]]/route.ts [App Route]
+
+
+<-- GET /api/v1/users/me
+2026-11-08T06:39:07.938Z lobe-hono:auth-middleware Development debug mode, using mock user ID
+[UserService] 获取当前登录用户信息及角色信息 
+--> GET /api/v1/users/me [32m200[0m 41ms
+ GET /api/v1/users/me 200 in 73ms (compile: 20ms, proxy.ts: 5ms, render: 48ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./packages/utils/src/server/auth.ts [App Route]
+    ./packages/openapi/src/middleware/auth.ts [App Route]
+    ./packages/openapi/src/index.ts [App Route]
+    ./src/app/(backend)/api/v1/[[...route]]/route.ts [App Route]
+
+
+<-- GET /api/v1/users/me
+2026-11-08T06:39:08.025Z lobe-hono:auth-middleware Processing authentication for request: GET http://localhost:49196/api/v1/users/me
+2026-11-08T06:39:08.025Z lobe-hono:auth-middleware Authentication failed - no valid credentials found
+2026-11-08T06:39:08.025Z lobe-hono:auth-middleware Authentication required but user not authenticated
+--> GET /api/v1/users/me [33m401[0m 1ms
+ GET /api/v1/users/me 401 in 34ms (compile: 17ms, proxy.ts: 6ms, render: 11ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:08.085Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+ GET /trpc/lambda/agent.getBuiltinAgent?input=%7B%22json%22%3A%7B%22slug%22%3A%22inbox%22%7D%7D 200 in 100ms (compile: 28ms, proxy.ts: 7ms, render: 65ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:08.202Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+ POST /trpc/lambda/topic.createTopic 200 in 120ms (compile: 20ms, proxy.ts: 9ms, render: 91ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:08.329Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+2026-11-08T06:39:08.342Z lobe-lambda-router:ai-chat sendMessageInServer called for agentId: agt_K0lVQ0B10VYl
+2026-11-08T06:39:08.342Z lobe-lambda-router:ai-chat topicId: tpc_MtJEoIuD7ZKl, newTopic: undefined, newThread: undefined
+2026-11-08T06:39:08.345Z lobe-lambda-router:ai-chat creating user message with content length: 22
+2026-11-08T06:39:08.388Z lobe-lambda-router:ai-chat user message created with id: msg_LfiaMJt2zuSVSS
+2026-11-08T06:39:08.388Z lobe-lambda-router:ai-chat creating assistant message with model: mock-model, provider: openai, metadata: undefined
+2026-11-08T06:39:08.398Z lobe-lambda-router:ai-chat assistant message created with id: msg_JU1Ece2XDAh4f4
+2026-11-08T06:39:08.398Z lobe-lambda-router:ai-chat retrieving messages and topics
+2026-11-08T06:39:08.476Z lobe-lambda-router:ai-chat retrieved 2 messages, 0 topics
+ POST /trpc/lambda/aiChat.sendMessageInServer 200 in 181ms (compile: 18ms, proxy.ts: 5ms, render: 157ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:08.515Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+2026-11-08T06:39:08.517Z lobe-server:agent-runtime:timing Redis client not initialized, creating new instance at 1794119948517
+[Agent Runtime Redis] No Redis URL available. Agent Runtime features are disabled.
+2026-11-08T06:39:08.518Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:08.518Z lobe-server:agent-runtime:factory Queue mode disabled, using InMemoryAgentStateManager
+2026-11-08T06:39:08.576Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:08.576Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.576Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:08.576Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.576Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.576Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.576Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.577Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.577Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.577Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.577Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.577Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.577Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.577Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.577Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.577Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.578Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.578Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.578Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.578Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.578Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.578Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.578Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.578Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.578Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.579Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.579Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.579Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.579Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.579Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.579Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.579Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:08.579Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:08.579Z lobe-server:agent-runtime-service Setting up local execution callback
+2026-11-08T06:39:08.579Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119948579
+2026-11-08T06:39:08.579Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:08.579Z lobe-server:agent-runtime:factory Queue mode disabled, using InMemoryAgentStateManager
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:08.580Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:08.580Z lobe-server:agent-runtime-service Setting up local execution callback
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.580Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.580Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:08.581Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:08.581Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:08.581Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:08.583Z lobe-server:ai-agent-router input: {
+  agentConfig: {},
+  agentId: 'agt_K0lVQ0B10VYl',
+  autoStart: true,
+  messages: [
+    {
+      id: 'msg_LfiaMJt2zuSVSS',
+      role: 'user',
+      content: 'smoke test: 检查点9 纯文本闭环',
+      editorData: null,
+      reasoning: null,
+      search: null,
+      metadata: null,
+      error: null,
+      createdAt: '2026-11-08T06:39:08.345Z',
+      updatedAt: '2026-11-08T06:39:08.345Z',
+      topicId: 'tpc_MtJEoIuD7ZKl',
+      parentId: null,
+      threadId: null,
+      groupId: null,
+      agentId: 'agt_K0lVQ0B10VYl',
+      targetId: null,
+      tools: null,
+      tool_call_id: null,
+      plugin: null,
+      pluginError: null,
+      pluginIntervention: null,
+      pluginState: null,
+      chunksList: [],
+      extra: [Object],
+      fileList: [],
+      imageList: [],
+      model: null,
+      provider: null,
+      ragQuery: null,
+      ragQueryId: null,
+      ragRawQuery: null,
+      taskDetail: null,
+      videoList: []
+    },
+    {
+      id: 'msg_JU1Ece2XDAh4f4',
+      role: 'assistant',
+      content: '...',
+      editorData: null,
+      reasoning: null,
+      search: null,
+      metadata: null,
+      error: null,
+      createdAt: '2026-11-08T06:39:08.389Z',
+      updatedAt: '2026-11-08T06:39:08.389Z',
+      topicId: 'tpc_MtJEoIuD7ZKl',
+      parentId: 'msg_LfiaMJt2zuSVSS',
+      threadId: null,
+      groupId: null,
+      agentId: 'agt_K0lVQ0B10VYl',
+      targetId: null,
+      tools: null,
+      tool_call_id: null,
+      plugin: null,
+      pluginError: null,
+      pluginIntervention: null,
+      pluginState: null,
+      chunksList: [],
+      extra: [Object],
+      fileList: [],
+      imageList: [],
+      model: 'mock-model',
+      provider: 'openai',
+      ragQuery: null,
+      ragQueryId: null,
+      ragRawQuery: null,
+      taskDetail: null,
+      videoList: []
+    }
+  ],
+  modelRuntimeConfig: { model: 'mock-model', provider: 'openai' },
+  toolManifestMap: {
+    'lobe-calculator': {
+      api: [Array],
+      identifier: 'lobe-calculator',
+      meta: [Object],
+      type: 'builtin'
+    }
+  },
+  topicId: 'tpc_MtJEoIuD7ZKl'
+}
+2026-11-08T06:39:08.583Z lobe-server:ai-agent-router Creating operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx for user audit-user
+2026-11-08T06:39:08.583Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Creating new operation (autoStart: true) with params: model=undefined, provider=undefined, tools=0, messages=2, manifests=1, memory=none
+2026-11-08T06:39:08.584Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Created operation metadata
+2026-11-08T06:39:08.584Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event agent_runtime_init for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0
+2026-11-08T06:39:08.584Z lobe-server:agent-runtime:coordinator [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Agent operation created and initialized
+2026-11-08T06:39:08.584Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Saved state for step 0
+2026-11-08T06:39:08.598Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Scheduled first step (messageId: local-agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx-0-1794119948597)
+2026-11-08T06:39:08.598Z lobe-server:ai-agent-router Operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx created and first step scheduled (messageId: local-agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx-0-1794119948597)
+ POST /trpc/lambda/aiAgent.createOperation 200 in 112ms (compile: 13ms, proxy.ts: 8ms, render: 91ms)
+2026-11-08T06:39:08.653Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx][0] Local step executing...
+2026-11-08T06:39:08.655Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx][0] Start step executing...
+2026-11-08T06:39:08.656Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_start for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0
+2026-11-08T06:39:08.656Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Loaded state (step 0)
+2026-11-08T06:39:08.660Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Loaded state (step 0)
+2026-11-08T06:39:08.661Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Saved state for step 0
+2026-11-08T06:39:08.764Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0][call_llm] Starting operation
+2026-11-08T06:39:08.776Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0][call_llm] Created new assistant message: msg_KRDAx9Ol8eVuIc
+2026-11-08T06:39:08.777Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_start for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0
+2026-11-08T06:39:08.917Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0][call_llm] calling model-runtime chat (model: mock-model, messages: 3, tools: 0)
+2026-11-08T06:39:08.917Z lobe-model-runtime:openai:chat chat called with model: mock-model, stream: true
+2026-11-08T06:39:08.918Z lobe-model-runtime:openai:shouldUseResponsesAPI using Chat Completions API for chat
+2026-11-08T06:39:08.919Z lobe-model-runtime:openai:chat sending chat completion request with 3 messages
+(node:64732) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-08T06:39:08.952Z lobe-model-runtime:openai:chat processing streaming response
+2026-11-08T06:39:08.964Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onThinking received chunk at 1794119948964, length: 4
+2026-11-08T06:39:08.966Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onThinking received chunk at 1794119948966, length: 4
+2026-11-08T06:39:08.966Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onThinking received chunk at 1794119948966, length: 4
+2026-11-08T06:39:08.967Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onThinking received chunk at 1794119948967, length: 4
+2026-11-08T06:39:08.967Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onThinking received chunk at 1794119948967, length: 4
+2026-11-08T06:39:08.968Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onThinking received chunk at 1794119948968, length: 1
+2026-11-08T06:39:08.969Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948969, length: 4
+2026-11-08T06:39:08.970Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948969, length: 4
+2026-11-08T06:39:08.970Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948970, length: 4
+2026-11-08T06:39:08.971Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948971, length: 4
+2026-11-08T06:39:08.971Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948971, length: 4
+2026-11-08T06:39:08.972Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948972, length: 4
+2026-11-08T06:39:08.972Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948972, length: 4
+2026-11-08T06:39:08.973Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948973, length: 4
+2026-11-08T06:39:08.973Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948973, length: 4
+2026-11-08T06:39:08.974Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948974, length: 4
+2026-11-08T06:39:08.974Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948974, length: 4
+2026-11-08T06:39:08.975Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948975, length: 4
+2026-11-08T06:39:08.976Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948976, length: 4
+2026-11-08T06:39:08.976Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948976, length: 4
+2026-11-08T06:39:08.977Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948977, length: 4
+2026-11-08T06:39:08.977Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948977, length: 4
+2026-11-08T06:39:08.978Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948977, length: 4
+2026-11-08T06:39:08.978Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948978, length: 4
+2026-11-08T06:39:08.979Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948979, length: 4
+2026-11-08T06:39:08.979Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948979, length: 4
+2026-11-08T06:39:08.980Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948980, length: 4
+2026-11-08T06:39:08.980Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] onText received chunk at 1794119948980, length: 4
+2026-11-08T06:39:08.981Z lobe-cost:convertOpenAIUsage convertOpenAIUsage data(completion-api): {
+  inputTextTokens: 38,
+  outputTextTokens: 28,
+  totalInputTokens: 38,
+  totalOutputTokens: 28,
+  totalTokens: 66
+}
+2026-11-08T06:39:08.983Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] flushTextBuffer: 这是来自本地 Mock LLM 的回答。当前请求没有触发任何工具调用，用于验证最短的 agent 闭环：createOperation → call_llm → finish。
+2026-11-08T06:39:08.983Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_chunk for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0
+2026-11-08T06:39:08.983Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] flushTextBuffer published at 1794119948983, took 0ms, length: 88
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] flushReasoningBuffer: 用户只是打招呼，不需要工具，直接回答即可。
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_chunk for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:timing [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] flushReasoningBuffer published at 1794119948984, took 0ms, length: 21
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] finish model-runtime calling | content: 88 chars | reasoning: 21 chars | tools: 0 | usage: yes
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0][reasoning] 用户只是打招呼，不需要工具，直接回答即可。
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0][content] 这是来自本地 Mock LLM 的回答。当前请求没有触发任何工具调用，用于验证最短的 agent 闭环：createOperation → call_llm → finish。
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0][usage] {
+  inputTextTokens: 38,
+  outputTextTokens: 28,
+  totalInputTokens: 38,
+  totalOutputTokens: 28,
+  totalTokens: 66
+}
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_end for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0
+2026-11-08T06:39:08.984Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] call_llm completed
+2026-11-08T06:39:08.995Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Loaded state (step 0)
+2026-11-08T06:39:08.995Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Loaded state (step 0)
+2026-11-08T06:39:08.995Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0] Saved step result with 4 events
+2026-11-08T06:39:08.998Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_complete for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:0
+2026-11-08T06:39:08.998Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx][0] completed [llm] 💭 "用户只是打招呼，不需要工具，直接回答即可。" | "这是来自本地 Mock LLM 的回答。..." | total: 66 tokens / $0.0000 | llm×1 | tools×0
+2026-11-08T06:39:09.002Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx][0] Scheduled next step 1
+2026-11-08T06:39:09.054Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx][1] Local step executing...
+2026-11-08T06:39:09.055Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx][1] Start step executing...
+2026-11-08T06:39:09.055Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_start for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:1
+2026-11-08T06:39:09.055Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Loaded state (step 1)
+2026-11-08T06:39:09.094Z lobe-server:agent-runtime:streaming-executors [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:1] Finishing execution: (completed)
+2026-11-08T06:39:09.094Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_complete for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:1
+2026-11-08T06:39:09.094Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Loaded state (step 1)
+2026-11-08T06:39:09.094Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Loaded state (step 1)
+2026-11-08T06:39:09.095Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:1] Saved step result with 1 events
+2026-11-08T06:39:09.095Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event agent_runtime_end for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:1
+2026-11-08T06:39:09.095Z lobe-server:agent-runtime:coordinator [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Agent runtime reached terminal state after step result: done
+2026-11-08T06:39:09.098Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_complete for operation agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx:1
+2026-11-08T06:39:09.098Z lobe-server:agent-runtime-service [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx][1] completed [done] reason=completed | total: 66 tokens / $0.0000 | llm×1 | tools×0
+2026-11-08T06:39:09.104Z lobe-server:hook-dispatcher [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Unregistered all hooks
+2026-11-08T06:39:11.089Z lobe-async:init Initializing async tRPC with context and superjson transformer
+2026-11-08T06:39:11.089Z lobe-async:init Async tRPC initialized successfully
+○ Compiling /api/agent/stream ...
+2026-11-08T06:39:12.644Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119952644
+2026-11-08T06:39:12.644Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+ GET /api/agent/stream?operationId=agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx&includeHistory=true&lastEventId=0 200 in 4.1s (compile: 4.0s, proxy.ts: 5ms, render: 19ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:12.694Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+2026-11-08T06:39:12.694Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119952694
+2026-11-08T06:39:12.694Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:12.694Z lobe-server:agent-runtime:factory Queue mode disabled, using InMemoryAgentStateManager
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.695Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.695Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:12.695Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:12.695Z lobe-server:agent-runtime-service Setting up local execution callback
+2026-11-08T06:39:12.695Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119952695
+2026-11-08T06:39:12.695Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:12.696Z lobe-server:agent-runtime:factory Queue mode disabled, using InMemoryAgentStateManager
+2026-11-08T06:39:12.696Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:12.696Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.696Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:12.696Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.696Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.696Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.696Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.696Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.696Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.696Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.696Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.696Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.696Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.696Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.696Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.696Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.696Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.697Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.697Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.697Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.697Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.697Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.697Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.697Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.697Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.697Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.697Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.697Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.697Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.697Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.697Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.697Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:12.697Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:12.697Z lobe-server:agent-runtime-service Setting up local execution callback
+2026-11-08T06:39:12.697Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.698Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.698Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.699Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.699Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.699Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.699Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.699Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.699Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.699Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:12.699Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:12.699Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:12.699Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:12.700Z lobe-server:ai-agent-router Getting operation status for agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx
+2026-11-08T06:39:12.701Z lobe-server:agent-runtime-service Getting operation status for agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx
+2026-11-08T06:39:12.701Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx] Loaded state (step 1)
+ GET /trpc/lambda/aiAgent.getOperationStatus?input=%7B%22json%22%3A%7B%22includeHistory%22%3Atrue%2C%22operationId%22%3A%22agt_1794119948583_agt_K0lVQ0B10VYl_tpc_MtJEoIuD7ZKl_zVrDbIsx%22%7D%7D 200 in 48ms (compile: 25ms, proxy.ts: 4ms, render: 20ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:13.241Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+ GET /trpc/lambda/agent.getBuiltinAgent?input=%7B%22json%22%3A%7B%22slug%22%3A%22inbox%22%7D%7D 200 in 37ms (compile: 11ms, proxy.ts: 4ms, render: 22ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:13.293Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+ POST /trpc/lambda/topic.createTopic 200 in 37ms (compile: 15ms, proxy.ts: 5ms, render: 17ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:13.399Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+2026-11-08T06:39:13.402Z lobe-lambda-router:ai-chat sendMessageInServer called for agentId: agt_K0lVQ0B10VYl
+2026-11-08T06:39:13.402Z lobe-lambda-router:ai-chat topicId: tpc_NNi33B2nlvO0, newTopic: undefined, newThread: undefined
+2026-11-08T06:39:13.416Z lobe-lambda-router:ai-chat creating user message with content length: 22
+2026-11-08T06:39:13.423Z lobe-lambda-router:ai-chat user message created with id: msg_f30tPFv3Yf6KoN
+2026-11-08T06:39:13.424Z lobe-lambda-router:ai-chat creating assistant message with model: mock-model, provider: openai, metadata: undefined
+2026-11-08T06:39:13.432Z lobe-lambda-router:ai-chat assistant message created with id: msg_iXoLtmls1H1kqm
+2026-11-08T06:39:13.432Z lobe-lambda-router:ai-chat retrieving messages and topics
+2026-11-08T06:39:13.446Z lobe-lambda-router:ai-chat retrieved 2 messages, 0 topics
+ POST /trpc/lambda/aiChat.sendMessageInServer 200 in 134ms (compile: 31ms, proxy.ts: 6ms, render: 97ms)
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:13.480Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+2026-11-08T06:39:13.481Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119953481
+2026-11-08T06:39:13.481Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:13.481Z lobe-server:agent-runtime:factory Queue mode disabled, using InMemoryAgentStateManager
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:13.481Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.481Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.481Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.481Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.481Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.481Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.481Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.481Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.481Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.481Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:13.482Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:13.482Z lobe-server:agent-runtime-service Setting up local execution callback
+2026-11-08T06:39:13.482Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119953482
+2026-11-08T06:39:13.482Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:13.482Z lobe-server:agent-runtime:factory Queue mode disabled, using InMemoryAgentStateManager
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.482Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.482Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:13.483Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:13.483Z lobe-server:agent-runtime-service Setting up local execution callback
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:13.483Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:13.483Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:13.483Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:13.484Z lobe-server:ai-agent-router input: {
+  agentConfig: {},
+  agentId: 'agt_K0lVQ0B10VYl',
+  autoStart: true,
+  messages: [
+    {
+      id: 'msg_f30tPFv3Yf6KoN',
+      role: 'user',
+      content: 'smoke test: 检查点10 工具闭环',
+      editorData: null,
+      reasoning: null,
+      search: null,
+      metadata: null,
+      error: null,
+      createdAt: '2026-11-08T06:39:13.417Z',
+      updatedAt: '2026-11-08T06:39:13.417Z',
+      topicId: 'tpc_NNi33B2nlvO0',
+      parentId: null,
+      threadId: null,
+      groupId: null,
+      agentId: 'agt_K0lVQ0B10VYl',
+      targetId: null,
+      tools: null,
+      tool_call_id: null,
+      plugin: null,
+      pluginError: null,
+      pluginIntervention: null,
+      pluginState: null,
+      chunksList: [],
+      extra: [Object],
+      fileList: [],
+      imageList: [],
+      model: null,
+      provider: null,
+      ragQuery: null,
+      ragQueryId: null,
+      ragRawQuery: null,
+      taskDetail: null,
+      videoList: []
+    },
+    {
+      id: 'msg_iXoLtmls1H1kqm',
+      role: 'assistant',
+      content: '...',
+      editorData: null,
+      reasoning: null,
+      search: null,
+      metadata: null,
+      error: null,
+      createdAt: '2026-11-08T06:39:13.424Z',
+      updatedAt: '2026-11-08T06:39:13.424Z',
+      topicId: 'tpc_NNi33B2nlvO0',
+      parentId: 'msg_f30tPFv3Yf6KoN',
+      threadId: null,
+      groupId: null,
+      agentId: 'agt_K0lVQ0B10VYl',
+      targetId: null,
+      tools: null,
+      tool_call_id: null,
+      plugin: null,
+      pluginError: null,
+      pluginIntervention: null,
+      pluginState: null,
+      chunksList: [],
+      extra: [Object],
+      fileList: [],
+      imageList: [],
+      model: 'mock-model',
+      provider: 'openai',
+      ragQuery: null,
+      ragQueryId: null,
+      ragRawQuery: null,
+      taskDetail: null,
+      videoList: []
+    }
+  ],
+  modelRuntimeConfig: { model: 'mock-model', provider: 'openai' },
+  toolManifestMap: {
+    'lobe-calculator': {
+      api: [Array],
+      identifier: 'lobe-calculator',
+      meta: [Object],
+      type: 'builtin'
+    }
+  },
+  topicId: 'tpc_NNi33B2nlvO0'
+}
+2026-11-08T06:39:13.484Z lobe-server:ai-agent-router Creating operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd for user audit-user
+2026-11-08T06:39:13.484Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Creating new operation (autoStart: true) with params: model=undefined, provider=undefined, tools=0, messages=2, manifests=1, memory=none
+2026-11-08T06:39:13.485Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Created operation metadata
+2026-11-08T06:39:13.485Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event agent_runtime_init for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0
+2026-11-08T06:39:13.485Z lobe-server:agent-runtime:coordinator [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Agent operation created and initialized
+2026-11-08T06:39:13.485Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Saved state for step 0
+2026-11-08T06:39:13.488Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Scheduled first step (messageId: local-agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd-0-1794119953487)
+2026-11-08T06:39:13.488Z lobe-server:ai-agent-router Operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd created and first step scheduled (messageId: local-agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd-0-1794119953487)
+ POST /trpc/lambda/aiAgent.createOperation 200 in 36ms (compile: 16ms, proxy.ts: 6ms, render: 15ms)
+2026-11-08T06:39:13.512Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119953512
+2026-11-08T06:39:13.512Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:13.545Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][0] Local step executing...
+2026-11-08T06:39:13.545Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][0] Start step executing...
+2026-11-08T06:39:13.545Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_start for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0
+2026-11-08T06:39:13.545Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] SSE sent step_start, original timestamp 1794119953545, sent at 1794119953545, total latency 0ms
+2026-11-08T06:39:13.545Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 0)
+2026-11-08T06:39:13.546Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 0)
+2026-11-08T06:39:13.546Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Saved state for step 0
+2026-11-08T06:39:13.573Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0][call_llm] Starting operation
+2026-11-08T06:39:13.579Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0][call_llm] Created new assistant message: msg_pwDuNLtpJPyPfZ
+2026-11-08T06:39:13.579Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_start for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0
+2026-11-08T06:39:13.579Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] SSE sent stream_start, original timestamp 1794119953579, sent at 1794119953579, total latency 0ms
+2026-11-08T06:39:13.595Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0][call_llm] calling model-runtime chat (model: mock-model, messages: 3, tools: 0)
+2026-11-08T06:39:13.595Z lobe-model-runtime:openai:chat chat called with model: mock-model, stream: true
+2026-11-08T06:39:13.595Z lobe-model-runtime:openai:shouldUseResponsesAPI using Chat Completions API for chat
+2026-11-08T06:39:13.595Z lobe-model-runtime:openai:chat sending chat completion request with 3 messages
+2026-11-08T06:39:13.609Z lobe-model-runtime:openai:chat processing streaming response
+2026-11-08T06:39:13.610Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] onThinking received chunk at 1794119953610, length: 4
+2026-11-08T06:39:13.612Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] onThinking received chunk at 1794119953612, length: 4
+2026-11-08T06:39:13.613Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] onThinking received chunk at 1794119953613, length: 2
+2026-11-08T06:39:13.617Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_chunk for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0
+2026-11-08T06:39:13.618Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] SSE sent stream_chunk, original timestamp 1794119953617, sent at 1794119953618, total latency 1ms
+2026-11-08T06:39:13.618Z lobe-cost:convertOpenAIUsage convertOpenAIUsage data(completion-api): {
+  inputTextTokens: 38,
+  outputTextTokens: 3,
+  totalInputTokens: 38,
+  totalOutputTokens: 3,
+  totalTokens: 41
+}
+2026-11-08T06:39:13.620Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] flushReasoningBuffer: 需要先算一下再回答。
+2026-11-08T06:39:13.620Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_chunk for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0
+2026-11-08T06:39:13.620Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] SSE sent stream_chunk, original timestamp 1794119953620, sent at 1794119953620, total latency 0ms
+2026-11-08T06:39:13.620Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] flushReasoningBuffer published at 1794119953620, took 0ms, length: 10
+2026-11-08T06:39:13.620Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] finish model-runtime calling | content: 0 chars | reasoning: 10 chars | tools: 1 | usage: yes
+2026-11-08T06:39:13.620Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0][reasoning] 需要先算一下再回答。
+2026-11-08T06:39:13.620Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0][toolsCalling]  [
+  {
+    apiName: 'calculate',
+    arguments: '{"expression":"2 + 2"}',
+    id: 'call_mock_1794119953608_0',
+    identifier: 'lobe-calculator',
+    thoughtSignature: undefined,
+    type: 'default',
+    source: undefined
+  }
+]
+2026-11-08T06:39:13.621Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0][usage] {
+  inputTextTokens: 38,
+  outputTextTokens: 3,
+  totalInputTokens: 38,
+  totalOutputTokens: 3,
+  totalTokens: 41
+}
+2026-11-08T06:39:13.621Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_end for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0
+2026-11-08T06:39:13.621Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] SSE sent stream_end, original timestamp 1794119953621, sent at 1794119953621, total latency 0ms
+2026-11-08T06:39:13.621Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] call_llm completed
+2026-11-08T06:39:13.627Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 0)
+2026-11-08T06:39:13.628Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 0)
+2026-11-08T06:39:13.628Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] Saved step result with 3 events
+2026-11-08T06:39:13.630Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_complete for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0
+2026-11-08T06:39:13.630Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:0] SSE sent step_complete, original timestamp 1794119953630, sent at 1794119953630, total latency 0ms
+2026-11-08T06:39:13.630Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][0] completed [llm] 💭 "需要先算一下再回答。" | → call tools: lobe-calculator|calculate | total: 41 tokens / $0.0000 | llm×1 | tools×0
+2026-11-08T06:39:13.633Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][0] Scheduled next step 1
+2026-11-08T06:39:13.685Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][1] Local step executing...
+2026-11-08T06:39:13.686Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][1] Start step executing...
+2026-11-08T06:39:13.686Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_start for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1
+2026-11-08T06:39:13.686Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] SSE sent step_start, original timestamp 1794119953686, sent at 1794119953686, total latency 0ms
+2026-11-08T06:39:13.686Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 1)
+2026-11-08T06:39:13.717Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] payload: {
+  parentMessageId: 'msg_pwDuNLtpJPyPfZ',
+  toolCalling: {
+    apiName: 'calculate',
+    arguments: '{"expression":"2 + 2"}',
+    id: 'call_mock_1794119953608_0',
+    identifier: 'lobe-calculator',
+    thoughtSignature: undefined,
+    type: 'default',
+    source: undefined
+  }
+}
+2026-11-08T06:39:13.717Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event tool_start for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1
+2026-11-08T06:39:13.717Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] SSE sent tool_start, original timestamp 1794119953717, sent at 1794119953717, total latency 0ms
+2026-11-08T06:39:13.717Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] Executing tool lobe-calculator/calculate ...
+2026-11-08T06:39:13.718Z lobe-server:tool-execution-service Executing tool: lobe-calculator:calculate (type: default)
+2026-11-08T06:39:13.718Z lobe-server:plugin-gateway-service Executing plugin: lobe-calculator:calculate with args: { expression: '2 + 2' } {
+  activeDeviceId: undefined,
+  activatedSkillNames: [],
+  agentId: 'agt_K0lVQ0B10VYl',
+  isSubAgent: false,
+  memoryToolPermission: undefined,
+  messageId: 'msg_pwDuNLtpJPyPfZ',
+  operationId: 'agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd',
+  parentOperationId: undefined,
+  serverDB: NodePgDatabase {
+    query: {
+      account: [RelationalQueryBuilder],
+      agentBotProviders: [RelationalQueryBuilder],
+      agentCronJobs: [RelationalQueryBuilder],
+      agentDocuments: [RelationalQueryBuilder],
+      agentEvalBenchmarks: [RelationalQueryBuilder],
+      agentEvalDatasets: [RelationalQueryBuilder],
+      agentEvalRunTopics: [RelationalQueryBuilder],
+      agentEvalRuns: [RelationalQueryBuilder],
+      agentEvalTestCases: [RelationalQueryBuilder],
+      agentOperations: [RelationalQueryBuilder],
+      agentSkills: [RelationalQueryBuilder],
+      agents: [RelationalQueryBuilder],
+      agentsFiles: [RelationalQueryBuilder],
+      agentsKnowledgeBases: [RelationalQueryBuilder],
+      agentsToSessions: [RelationalQueryBuilder],
+      aiModels: [RelationalQueryBuilder],
+      aiProviders: [RelationalQueryBuilder],
+      apiKeys: [RelationalQueryBuilder],
+      asyncTasks: [RelationalQueryBuilder],
+      briefs: [RelationalQueryBuilder],
+      chatGroups: [RelationalQueryBuilder],
+      chatGroupsAgents: [RelationalQueryBuilder],
+      chunks: [RelationalQueryBuilder],
+      devices: [RelationalQueryBuilder],
+      documentChunks: [RelationalQueryBuilder],
+      documents: [RelationalQueryBuilder],
+      embeddings: [RelationalQueryBuilder],
+      evalDatasetRecords: [RelationalQueryBuilder],
+      evalDatasets: [RelationalQueryBuilder],
+      evalEvaluation: [RelationalQueryBuilder],
+      evaluationRecords: [RelationalQueryBuilder],
+      fileChunks: [RelationalQueryBuilder],
+      files: [RelationalQueryBuilder],
+      filesToSessions: [RelationalQueryBuilder],
+      generationBatches: [RelationalQueryBuilder],
+      generationTopics: [RelationalQueryBuilder],
+      generations: [RelationalQueryBuilder],
+      globalFiles: [RelationalQueryBuilder],
+      knowledgeBaseFiles: [RelationalQueryBuilder],
+      knowledgeBases: [RelationalQueryBuilder],
+      marketAgentUsageRecords: [RelationalQueryBuilder],
+      marketAgents: [RelationalQueryBuilder],
+      marketKbChunks: [RelationalQueryBuilder],
+      marketKbDocumentChunks: [RelationalQueryBuilder],
+      marketKbDocuments: [RelationalQueryBuilder],
+      marketKbEmbeddings: [RelationalQueryBuilder],
+      marketKbFileChunks: [RelationalQueryBuilder],
+      marketKbFileLinks: [RelationalQueryBuilder],
+      marketKbFiles: [RelationalQueryBuilder],
+      marketKnowledgeBases: [RelationalQueryBuilder],
+      marketMcpUsageRecords: [RelationalQueryBuilder],
+      marketMcps: [RelationalQueryBuilder],
+      marketSkillUsageRecords: [RelationalQueryBuilder],
+      marketSkills: [RelationalQueryBuilder],
+      messageChunks: [RelationalQueryBuilder],
+      messageGroups: [RelationalQueryBuilder],
+      messagePlugins: [RelationalQueryBuilder],
+      messageQueries: [RelationalQueryBuilder],
+      messageQueryChunks: [RelationalQueryBuilder],
+      messageTTS: [RelationalQueryBuilder],
+      messageTranslates: [RelationalQueryBuilder],
+      messages: [RelationalQueryBuilder],
+      messagesFiles: [RelationalQueryBuilder],
+      nextauthAccounts: [RelationalQueryBuilder],
+      nextauthAuthenticators: [RelationalQueryBuilder],
+      nextauthSessions: [RelationalQueryBuilder],
+      nextauthVerificationTokens: [RelationalQueryBuilder],
+      oauthHandoffs: [RelationalQueryBuilder],
+      oidcAccessTokens: [RelationalQueryBuilder],
+      oidcAuthorizationCodes: [RelationalQueryBuilder],
+      oidcClients: [RelationalQueryBuilder],
+      oidcConsents: [RelationalQueryBuilder],
+      oidcDeviceCodes: [RelationalQueryBuilder],
+      oidcGrants: [RelationalQueryBuilder],
+      oidcInteractions: [RelationalQueryBuilder],
+      oidcRefreshTokens: [RelationalQueryBuilder],
+      oidcSessions: [RelationalQueryBuilder],
+      passkey: [RelationalQueryBuilder],
+      permissions: [RelationalQueryBuilder],
+      rolePermissions: [RelationalQueryBuilder],
+      roles: [RelationalQueryBuilder],
+      session: [RelationalQueryBuilder],
+      sessionGroups: [RelationalQueryBuilder],
+      sessions: [RelationalQueryBuilder],
+      shares: [RelationalQueryBuilder],
+      taskComments: [RelationalQueryBuilder],
+      taskDependencies: [RelationalQueryBuilder],
+      taskDocuments: [RelationalQueryBuilder],
+      taskTopics: [RelationalQueryBuilder],
+      tasks: [RelationalQueryBuilder],
+      threads: [RelationalQueryBuilder],
+      topicDocuments: [RelationalQueryBuilder],
+      topicShares: [RelationalQueryBuilder],
+      topics: [RelationalQueryBuilder],
+      twoFactor: [RelationalQueryBuilder],
+      unstructuredChunks: [RelationalQueryBuilder],
+      userInstalledPlugins: [RelationalQueryBuilder],
+      userMemories: [RelationalQueryBuilder],
+      userMemoriesActivities: [RelationalQueryBuilder],
+      userMemoriesContexts: [RelationalQueryBuilder],
+      userMemoriesExperiences: [RelationalQueryBuilder],
+      userMemoriesIdentities: [RelationalQueryBuilder],
+      userMemoriesPreferences: [RelationalQueryBuilder],
+      userPersonaDocumentHistories: [RelationalQueryBuilder],
+      userPersonaDocuments: [RelationalQueryBuilder],
+      userRoles: [RelationalQueryBuilder],
+      userSettings: [RelationalQueryBuilder],
+      users: [RelationalQueryBuilder],
+      verification: [RelationalQueryBuilder]
+    },
+    '$with': [Function: $with],
+    '$cache': undefined,
+    authToken: undefined,
+    dialect: PgDialect { casing: [CasingCache] },
+    session: NodePgSession {
+      dialect: [PgDialect],
+      logger: NoopLogger {},
+      cache: NoopCache {},
+      client: [BoundPool],
+      schema: [Object],
+      options: [Object]
+    },
+    _: {
+      schema: [Object],
+      fullSchema: [Object [Module]],
+      tableNamesMap: [Object],
+      session: [NodePgSession]
+    },
+    '$client': BoundPool {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      options: [Object],
+      log: [Function (anonymous)],
+      Client: [Function],
+      Promise: [Function: Promise],
+      _clients: [Array],
+      _idle: [Array],
+      _expired: [WeakSet],
+      _pendingQueue: [],
+      _endCallback: undefined,
+      ending: false,
+      ended: false,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    }
+  },
+  toolManifestMap: {
+    'lobe-calculator': {
+      api: [Array],
+      identifier: 'lobe-calculator',
+      meta: [Object],
+      type: 'builtin'
+    }
+  },
+  toolResultMaxLength: undefined,
+  topicId: 'tpc_NNi33B2nlvO0',
+  userId: 'audit-user',
+  workingDirectory: undefined
+}
+Error executing plugin lobe-calculator:calculate: {
+  body: Error [ZodError]: [
+    {
+      "code": "invalid_type",
+      "expected": "object",
+      "received": "undefined",
+      "path": [
+        "manifest",
+        "api",
+        0,
+        "parameters",
+        "properties"
+      ],
+      "message": "Required"
+    },
+    {
+      "expected": "'object'",
+      "received": "undefined",
+      "code": "invalid_type",
+      "path": [
+        "manifest",
+        "api",
+        0,
+        "parameters",
+        "type"
+      ],
+      "message": "Required"
+    },
+    {
+      "received": "builtin",
+      "code": "invalid_enum_value",
+      "options": [
+        "default",
+        "markdown",
+        "standalone"
+      ],
+      "path": [
+        "manifest",
+        "type"
+      ],
+      "message": "Invalid enum value. Expected 'default' | 'markdown' | 'standalone', received 'builtin'"
+    }
+  ]
+      at PluginGatewayService.execute (src\server\services\pluginGateway\index.ts:42:38)
+      at async ToolExecutionService.executeTool (src\server\services\toolExecution\index.ts:73:18)
+      at async call_tool (src\server\modules\AgentRuntime\RuntimeExecutors.ts:996:31)
+      at async AgentRuntime.step (packages\agent-runtime\src\core\runtime.ts:185:20)
+      at async AgentRuntimeService.executeStep (src\server\services\agentRuntime\AgentRuntimeService.ts:884:26)
+      at async LocalQueueServiceImpl.executionCallback (src\server\services\agentRuntime\AgentRuntimeService.ts:296:9)
+      at async Timeout._onTimeout (src\server\services\queue\impls\local.ts:73:9)
+    40 |       });
+    41 |
+  > 42 |       const response = await gateway.execute(requestBody);
+       |                                      ^
+    43 |
+    44 |       log('Plugin execution result: %O', response);
+    45 | {
+    issues: [ [Object], [Object], [Object] ],
+    addIssue: [Function (anonymous)],
+    addIssues: [Function (anonymous)]
+  },
+  errorType: 400,
+  success: false
+}
+2026-11-08T06:39:14.131Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] Executing lobe-calculator/calculate in 413ms, result: {
+  content: undefined,
+  error: { message: undefined },
+  success: false,
+  executionTime: 413
+}
+2026-11-08T06:39:14.131Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event tool_end for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1
+2026-11-08T06:39:14.131Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] SSE sent tool_end, original timestamp 1794119954131, sent at 1794119954131, total latency 0ms
+2026-11-08T06:39:14.143Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1][tool usage] lobe-calculator/calculate: calls=1, time=413ms, success=false, cost=$0.0000
+2026-11-08T06:39:14.143Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] Tool execution completed
+2026-11-08T06:39:14.143Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 1)
+2026-11-08T06:39:14.143Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 1)
+2026-11-08T06:39:14.143Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] Saved step result with 1 events
+2026-11-08T06:39:14.146Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_complete for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1
+2026-11-08T06:39:14.146Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:1] SSE sent step_complete, original timestamp 1794119954146, sent at 1794119954146, total latency 0ms
+2026-11-08T06:39:14.146Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][1] completed [tool] lobe-calculator/calculate | total: 41 tokens / $0.0000 | llm×1 | tools×1
+2026-11-08T06:39:14.150Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][1] Scheduled next step 2
+2026-11-08T06:39:14.255Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][2] Local step executing...
+2026-11-08T06:39:14.256Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][2] Start step executing...
+2026-11-08T06:39:14.256Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_start for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2
+2026-11-08T06:39:14.256Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] SSE sent step_start, original timestamp 1794119954256, sent at 1794119954256, total latency 0ms
+2026-11-08T06:39:14.256Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 2)
+2026-11-08T06:39:14.280Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2][call_llm] Starting operation
+2026-11-08T06:39:14.284Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2][call_llm] Created new assistant message: msg_sPZahnAO3D4mnb
+2026-11-08T06:39:14.284Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_start for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2
+2026-11-08T06:39:14.284Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] SSE sent stream_start, original timestamp 1794119954284, sent at 1794119954284, total latency 0ms
+2026-11-08T06:39:14.301Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2][call_llm] calling model-runtime chat (model: mock-model, messages: 5, tools: 0)
+2026-11-08T06:39:14.301Z lobe-model-runtime:openai:chat chat called with model: mock-model, stream: true
+2026-11-08T06:39:14.301Z lobe-model-runtime:openai:shouldUseResponsesAPI using Chat Completions API for chat
+2026-11-08T06:39:14.301Z lobe-model-runtime:openai:chat sending chat completion request with 5 messages
+2026-11-08T06:39:14.320Z lobe-model-runtime:openai:chat processing streaming response
+2026-11-08T06:39:14.322Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] onText received chunk at 1794119954322, length: 4
+2026-11-08T06:39:14.322Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] onText received chunk at 1794119954322, length: 4
+2026-11-08T06:39:14.322Z lobe-cost:convertOpenAIUsage convertOpenAIUsage data(completion-api): {
+  inputTextTokens: 138,
+  outputTextTokens: 2,
+  totalInputTokens: 138,
+  totalOutputTokens: 2,
+  totalTokens: 140
+}
+2026-11-08T06:39:14.323Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] flushTextBuffer: 计算结果是 4。
+2026-11-08T06:39:14.323Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_chunk for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2
+2026-11-08T06:39:14.323Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] SSE sent stream_chunk, original timestamp 1794119954323, sent at 1794119954323, total latency 0ms
+2026-11-08T06:39:14.324Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] flushTextBuffer published at 1794119954323, took 1ms, length: 8
+2026-11-08T06:39:14.324Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] finish model-runtime calling | content: 8 chars | reasoning: 0 chars | tools: 0 | usage: yes
+2026-11-08T06:39:14.324Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2][content] 计算结果是 4。
+2026-11-08T06:39:14.324Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2][usage] {
+  inputTextTokens: 138,
+  outputTextTokens: 2,
+  totalInputTokens: 138,
+  totalOutputTokens: 2,
+  totalTokens: 140
+}
+2026-11-08T06:39:14.324Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event stream_end for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2
+2026-11-08T06:39:14.324Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] SSE sent stream_end, original timestamp 1794119954324, sent at 1794119954324, total latency 0ms
+2026-11-08T06:39:14.324Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] call_llm completed
+2026-11-08T06:39:14.329Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 2)
+2026-11-08T06:39:14.329Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 2)
+2026-11-08T06:39:14.330Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] Saved step result with 3 events
+2026-11-08T06:39:14.331Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_complete for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2
+2026-11-08T06:39:14.331Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:2] SSE sent step_complete, original timestamp 1794119954331, sent at 1794119954331, total latency 0ms
+2026-11-08T06:39:14.332Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][2] completed [llm] "计算结果是 4。" | total: 181 tokens / $0.0000 | llm×2 | tools×1
+2026-11-08T06:39:14.336Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][2] Scheduled next step 3
+2026-11-08T06:39:14.396Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][3] Local step executing...
+2026-11-08T06:39:14.396Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][3] Start step executing...
+2026-11-08T06:39:14.396Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_start for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3
+2026-11-08T06:39:14.396Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3] SSE sent step_start, original timestamp 1794119954396, sent at 1794119954396, total latency 0ms
+2026-11-08T06:39:14.396Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 3)
+2026-11-08T06:39:14.418Z lobe-server:agent-runtime:streaming-executors [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3] Finishing execution: (completed)
+2026-11-08T06:39:14.418Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_complete for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3
+2026-11-08T06:39:14.418Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3] SSE sent step_complete, original timestamp 1794119954418, sent at 1794119954418, total latency 0ms
+2026-11-08T06:39:14.419Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 3)
+2026-11-08T06:39:14.419Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 3)
+2026-11-08T06:39:14.419Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3] Saved step result with 1 events
+2026-11-08T06:39:14.419Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event agent_runtime_end for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3
+2026-11-08T06:39:14.419Z lobe-server:agent-runtime:timing [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3] SSE sent agent_runtime_end, original timestamp 1794119954419, sent at 1794119954419, total latency 0ms
+2026-11-08T06:39:14.419Z lobe-server:agent-runtime:coordinator [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Agent runtime reached terminal state after step result: done
+ GET /api/agent/stream?operationId=agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd&includeHistory=true&lastEventId=0 200 in 928ms (compile: 9ms, proxy.ts: 5ms, render: 913ms)
+2026-11-08T06:39:14.421Z lobe-server:agent-runtime:in-memory-stream-event-manager Published event step_complete for operation agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd:3
+2026-11-08T06:39:14.421Z lobe-server:agent-runtime-service [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd][3] completed [done] reason=completed | total: 181 tokens / $0.0000 | llm×2 | tools×1
+2026-11-08T06:39:14.423Z lobe-server:hook-dispatcher [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Unregistered all hooks
+⚠ [externals]/node:buffer
+unexpected export *
+export * used with module [externals]/node:buffer [external] (node:buffer, cjs) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import trace:
+  external:
+    [externals]/node:buffer [external]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/util.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/lib/web/websocket/websocket.js [App Route]
+    ./node_modules/.pnpm/undici@7.19.1/node_modules/undici/index.js [App Route]
+    ./src/libs/better-auth/define-config.ts [App Route]
+    ./src/auth.ts [App Route]
+    ./src/libs/trpc/lambda/context.ts [App Route]
+    ./src/app/(backend)/trpc/lambda/[trpc]/route.ts [App Route]
+
+
+2026-11-08T06:39:14.462Z lobe-trpc:lambda:context createContextInner called with params: {
+  authorizationHeader: null,
+  clientPlatform: undefined,
+  userId: 'audit-user'
+}
+2026-11-08T06:39:14.462Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119954462
+2026-11-08T06:39:14.462Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:14.462Z lobe-server:agent-runtime:factory Queue mode disabled, using InMemoryAgentStateManager
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:14.463Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.463Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.463Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.463Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.463Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.463Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.463Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.463Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.463Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.463Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.464Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.464Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.464Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.464Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.464Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.464Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.464Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.464Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.464Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.464Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.464Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.464Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.464Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.464Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:14.464Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:14.464Z lobe-server:agent-runtime-service Setting up local execution callback
+2026-11-08T06:39:14.464Z lobe-server:agent-runtime:timing Redis client already initialized, reusing at 1794119954464
+2026-11-08T06:39:14.464Z lobe-server:agent-runtime:factory Redis unavailable and queue mode disabled, using InMemoryStreamEventManager
+2026-11-08T06:39:14.464Z lobe-server:agent-runtime:factory Queue mode disabled, using InMemoryAgentStateManager
+2026-11-08T06:39:14.465Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:14.465Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.465Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:14.465Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.465Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.465Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.465Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.465Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.465Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.465Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.465Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.465Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.465Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.465Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.465Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.465Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:14.466Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:14.466Z lobe-server:agent-runtime-service Setting up local execution callback
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Created new headers object with User-Agent: LobeHub-Market-SDK/0.31.3
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk MarketSDK instance created
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-market-sdk:core Using shared headers object
+2026-11-08T06:39:14.466Z lobe-market-sdk:core BaseSDK instance created: {
+  baseUrl: 'https://market.calcifer.train.ctripcorp.com',
+  defaultLocale: 'en-US',
+  hasApiKey: false,
+  hasInitialAccessToken: false,
+  hasM2MCredentials: false,
+  hasSharedTokenState: true,
+  hasTrustedClientToken: false
+}
+2026-11-08T06:39:14.466Z lobe-server:market-service MarketService initialized: baseURL=https://market.calcifer.train.ctripcorp.com, hasAccessToken=false, hasTrustedToken=false, hasClientCredentials=false
+2026-11-08T06:39:14.466Z lobe-server:klavis-service KlavisService initialized: hasDB=true, hasUserId=true, isClientAvailable=false
+2026-11-08T06:39:14.467Z lobe-server:ai-agent-router Getting operation status for agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd
+2026-11-08T06:39:14.467Z lobe-server:agent-runtime-service Getting operation status for agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd
+2026-11-08T06:39:14.467Z lobe-server:agent-runtime:in-memory-state-manager [agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd] Loaded state (step 3)
+ GET /trpc/lambda/aiAgent.getOperationStatus?input=%7B%22json%22%3A%7B%22includeHistory%22%3Atrue%2C%22operationId%22%3A%22agt_1794119953484_agt_K0lVQ0B10VYl_tpc_NNi33B2nlvO0_ksqS5vZd%22%7D%7D 200 in 39ms (compile: 19ms, proxy.ts: 5ms, render: 15ms)

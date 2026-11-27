@@ -1,0 +1,11 @@
+{
+  "name": "@ctrip/peta-ai-client",
+  "version": "0.0.16",
+  "private": true,
+  "description": "Local stub. See stubs/README.md.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts"
+}

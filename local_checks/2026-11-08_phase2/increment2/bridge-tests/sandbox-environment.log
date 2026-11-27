@@ -1,0 +1,47 @@
+
+ RUN  v3.2.7 C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/server/services/agentEvalAttribution/__tests__/python.integration.test.ts [ src/server/services/agentEvalAttribution/__tests__/python.integration.test.ts ]
+Error: Cannot find package 'zod' imported from 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts'
+ ❯ src/server/services/agentEvalAttribution/contracts.ts:2:1
+      1| import { createHash } from 'node:crypto';
+      2| import { z } from 'zod';
+       | ^
+      3| 
+      4| export const MAX_TRACE_BYTES = 1024 * 1024;
+
+Caused by: Error: Failed to load url zod (resolved id: zod) in C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts. Does the file exist?
+ ❯ loadAndTransform ../../../../../%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/vite@7.3.6_@types+node@24.1_e83214c7f4cb5b57480e2c6cbf4fd815/node_modules/vite/dist/node/chunks/config.js:22739:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: EPERM: operation not permitted, realpath 'C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\vitest@3.2.7_@edge-runtime+_08920355de6c0766ef4b0bac25c23505\node_modules\vitest\dist\spy.js'
+ ❯ node:fs:2910:18
+ ❯ getRealPath ../../../../../%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/vite@7.3.6_@types+node@24.1_e83214c7f4cb5b57480e2c6cbf4fd815/node_modules/vite/dist/node/chunks/config.js:33013:36
+ ❯ tryResolveRealFileOrType ../../../../../%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/vite@7.3.6_@types+node@24.1_e83214c7f4cb5b57480e2c6cbf4fd815/node_modules/vite/dist/node/chunks/config.js:33007:9
+ ❯ tryCleanFsResolve ../../../../../%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/vite@7.3.6_@types+node@24.1_e83214c7f4cb5b57480e2c6cbf4fd815/node_modules/vite/dist/node/chunks/config.js:32731:21
+ ❯ tryFsResolve ../../../../../%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/vite@7.3.6_@types+node@24.1_e83214c7f4cb5b57480e2c6cbf4fd815/node_modules/vite/dist/node/chunks/config.js:32724:14
+ ❯ ResolveIdContext.handler ../../../../../%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/vite@7.3.6_@types+node@24.1_e83214c7f4cb5b57480e2c6cbf4fd815/node_modules/vite/dist/node/chunks/config.js:32598:16
+ ❯ EnvironmentPluginContainer.resolveId ../../../../../%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/vite@7.3.6_@types+node@24.1_e83214c7f4cb5b57480e2c6cbf4fd815/node_modules/vite/dist/node/chunks/config.js:28797:56
+ ❯ process.processTicksAndRejections node:internal/process/task_queues:104:5
+ ❯ EventEmitter.onMessage ../../../../../%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/vitest@3.2.7_@edge-runtime+_08920355de6c0766ef4b0bac25c23505/node_modules/vitest/dist/chunks/index.B521nVV-.js:103:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed (2)
+      Tests  no tests
+     Errors  1 error
+   Start at  16:37:20
+   Duration  1.20s (transform 114ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 303ms)
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase2/increment2/bridge-tests/results.json

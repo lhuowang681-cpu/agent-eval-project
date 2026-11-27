@@ -1,0 +1,47 @@
+{
+  "distinctPassed": 945,
+  "groups": [
+    {
+      "source": "regression-core-final.json",
+      "reportedPassed": 376,
+      "distinctAdded": 376
+    },
+    {
+      "source": "regression-db-final.json",
+      "reportedPassed": 149,
+      "distinctAdded": 149
+    },
+    {
+      "source": "regression-router-final.json",
+      "reportedPassed": 58,
+      "distinctAdded": 58
+    },
+    {
+      "source": "increment1/final-lifecycle-regression.json",
+      "reportedPassed": 157,
+      "distinctAdded": 157
+    },
+    {
+      "source": "increment1/modal-render.json",
+      "reportedPassed": 4,
+      "distinctAdded": 4
+    },
+    {
+      "source": "increment3/attribution-reviewed-final.json",
+      "reportedPassed": 71,
+      "distinctAdded": 71
+    },
+    {
+      "source": "increment2/tool-error-evidence/after.json",
+      "reportedPassed": 128,
+      "distinctAdded": 128
+    },
+    {
+      "source": "increment3/experiment/mock-fixture-tests.json",
+      "reportedPassed": 2,
+      "distinctAdded": 2
+    }
+  ],
+  "duplicates": [],
+  "boundary": "Distinct latest selected Vitest assertions only; Python, HTTP, UI and experiment counts are separate."
+}

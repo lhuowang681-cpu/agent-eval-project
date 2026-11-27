@@ -1,0 +1,1762 @@
+{
+  "mode": "controlled_fixture_replay_NOT_LLM",
+  "records": [
+    {
+      "id": "dev0",
+      "kind": "A",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev0run",
+          "caseId": "dev0",
+          "topicId": "dev0topic",
+          "threadId": null,
+          "operationId": "dev0op",
+          "traceIds": []
+        },
+        "inputDigest": "dev0-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev0-u",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev0-order\", \"year\": 2025}"
+              },
+              {
+                "nodeId": "dev0-c",
+                "field": "arguments",
+                "quote": "{\"orderId\": \"dev0-order\", \"year\": 2024}"
+              }
+            ],
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "parameter_task_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev0-u",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev0-order\", \"year\": 2025}"
+            },
+            {
+              "nodeId": "dev0-c",
+              "field": "arguments",
+              "quote": "{\"orderId\": \"dev0-order\", \"year\": 2024}"
+            }
+          ],
+          "comparison": {
+            "key": "year",
+            "expected": 2025,
+            "actual": 2024
+          }
+        }
+      ],
+      "reviewed": [
+        {
+          "id": "s1",
+          "category": "parameter_task_mismatch",
+          "claimLevel": "observation",
+          "comparison": {
+            "key": "year",
+            "expected": 2025,
+            "actual": 2024
+          },
+          "evidenceRefs": [
+            {
+              "nodeId": "dev0-u",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev0-order\", \"year\": 2025}"
+            },
+            {
+              "nodeId": "dev0-c",
+              "field": "arguments",
+              "quote": "{\"orderId\": \"dev0-order\", \"year\": 2024}"
+            }
+          ],
+          "summary": "Observed parameter_task_mismatch: year expected 2025; actual 2024. Causal owner and task impact unconfirmed."
+        }
+      ],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev0run",
+          "caseId": "dev0",
+          "topicId": "dev0topic",
+          "threadId": null,
+          "operationId": "dev0op",
+          "traceIds": []
+        },
+        "inputDigest": "dev0-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev0-u",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev0-order\", \"year\": 2025}"
+              },
+              {
+                "nodeId": "dev0-c",
+                "field": "arguments",
+                "quote": "{\"orderId\": \"dev0-order\", \"year\": 2024}"
+              }
+            ],
+            "summary": "Observed parameter_task_mismatch: year expected 2025; actual 2024. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev1",
+      "kind": "B",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev1run",
+          "caseId": "dev1",
+          "topicId": "dev1topic",
+          "threadId": null,
+          "operationId": "dev1op",
+          "traceIds": []
+        },
+        "inputDigest": "dev1-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev1-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev1-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev1-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev1-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev1-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev1-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev1-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev1-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          }
+        }
+      ],
+      "reviewed": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          },
+          "evidenceRefs": [
+            {
+              "nodeId": "dev1-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev1-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev1-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev1-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+        }
+      ],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev1run",
+          "caseId": "dev1",
+          "topicId": "dev1topic",
+          "threadId": null,
+          "operationId": "dev1op",
+          "traceIds": []
+        },
+        "inputDigest": "dev1-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev1-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev1-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev1-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev1-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev2",
+      "kind": "C",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev2run",
+          "caseId": "dev2",
+          "topicId": "dev2topic",
+          "threadId": null,
+          "operationId": "dev2op",
+          "traceIds": []
+        },
+        "inputDigest": "dev2-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev2-r2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev2-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          },
+          {
+            "id": "s2",
+            "category": "stale_information_use",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev2-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev2-r2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev2-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev2-r2",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev2-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          }
+        },
+        {
+          "id": "s2",
+          "category": "stale_information_use",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev2-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev2-r2",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev2-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          }
+        }
+      ],
+      "reviewed": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          },
+          "evidenceRefs": [
+            {
+              "nodeId": "dev2-r2",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev2-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+        },
+        {
+          "id": "s2",
+          "category": "stale_information_use",
+          "claimLevel": "observation",
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          },
+          "evidenceRefs": [
+            {
+              "nodeId": "dev2-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev2-r2",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev2-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "summary": "Observed stale_information_use: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+        }
+      ],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev2run",
+          "caseId": "dev2",
+          "topicId": "dev2topic",
+          "threadId": null,
+          "operationId": "dev2op",
+          "traceIds": []
+        },
+        "inputDigest": "dev2-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          },
+          {
+            "id": "s2",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev2-r2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev2-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          },
+          {
+            "id": "s2",
+            "category": "stale_information_use",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev2-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev2-r2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev2-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev2-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev2-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed stale_information_use: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev3",
+      "kind": "normal",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev3run",
+          "caseId": "dev3",
+          "topicId": "dev3topic",
+          "threadId": null,
+          "operationId": "dev3op",
+          "traceIds": []
+        },
+        "inputDigest": "dev3-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "rules": [],
+      "direct": [],
+      "reviewed": [],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev3run",
+          "caseId": "dev3",
+          "topicId": "dev3topic",
+          "threadId": null,
+          "operationId": "dev3op",
+          "traceIds": []
+        },
+        "inputDigest": "dev3-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev4",
+      "kind": "recovered",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev4run",
+          "caseId": "dev4",
+          "topicId": "dev4topic",
+          "threadId": null,
+          "operationId": "dev4op",
+          "traceIds": []
+        },
+        "inputDigest": "dev4-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "rules": [],
+      "direct": [],
+      "reviewed": [],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev4run",
+          "caseId": "dev4",
+          "topicId": "dev4topic",
+          "threadId": null,
+          "operationId": "dev4op",
+          "traceIds": []
+        },
+        "inputDigest": "dev4-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev5",
+      "kind": "multi",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev5run",
+          "caseId": "dev5",
+          "topicId": "dev5topic",
+          "threadId": null,
+          "operationId": "dev5op",
+          "traceIds": []
+        },
+        "inputDigest": "dev5-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev5-u",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev5-order\", \"year\": 2025}"
+              },
+              {
+                "nodeId": "dev5-c",
+                "field": "arguments",
+                "quote": "{\"orderId\": \"dev5-order\", \"year\": 2024}"
+              }
+            ],
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            }
+          },
+          {
+            "id": "s2",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev5-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev5-order\", \"status\": \"pending\", \"year\": 2024}}"
+              },
+              {
+                "nodeId": "dev5-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev5-order\", \"status\": \"shipped\", \"year\": 2024}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "parameter_task_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev5-u",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev5-order\", \"year\": 2025}"
+            },
+            {
+              "nodeId": "dev5-c",
+              "field": "arguments",
+              "quote": "{\"orderId\": \"dev5-order\", \"year\": 2024}"
+            }
+          ],
+          "comparison": {
+            "key": "year",
+            "expected": 2025,
+            "actual": 2024
+          }
+        },
+        {
+          "id": "s2",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev5-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev5-order\", \"status\": \"pending\", \"year\": 2024}}"
+            },
+            {
+              "nodeId": "dev5-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev5-order\", \"status\": \"shipped\", \"year\": 2024}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          }
+        }
+      ],
+      "reviewed": [
+        {
+          "id": "s1",
+          "category": "parameter_task_mismatch",
+          "claimLevel": "observation",
+          "comparison": {
+            "key": "year",
+            "expected": 2025,
+            "actual": 2024
+          },
+          "evidenceRefs": [
+            {
+              "nodeId": "dev5-u",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev5-order\", \"year\": 2025}"
+            },
+            {
+              "nodeId": "dev5-c",
+              "field": "arguments",
+              "quote": "{\"orderId\": \"dev5-order\", \"year\": 2024}"
+            }
+          ],
+          "summary": "Observed parameter_task_mismatch: year expected 2025; actual 2024. Causal owner and task impact unconfirmed."
+        },
+        {
+          "id": "s2",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          },
+          "evidenceRefs": [
+            {
+              "nodeId": "dev5-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev5-order\", \"status\": \"pending\", \"year\": 2024}}"
+            },
+            {
+              "nodeId": "dev5-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev5-order\", \"status\": \"shipped\", \"year\": 2024}"
+            }
+          ],
+          "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+        }
+      ],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev5run",
+          "caseId": "dev5",
+          "topicId": "dev5topic",
+          "threadId": null,
+          "operationId": "dev5op",
+          "traceIds": []
+        },
+        "inputDigest": "dev5-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          },
+          {
+            "id": "s2",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev5-u",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev5-order\", \"year\": 2025}"
+              },
+              {
+                "nodeId": "dev5-c",
+                "field": "arguments",
+                "quote": "{\"orderId\": \"dev5-order\", \"year\": 2024}"
+              }
+            ],
+            "summary": "Observed parameter_task_mismatch: year expected 2025; actual 2024. Causal owner and task impact unconfirmed."
+          },
+          {
+            "id": "s2",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev5-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev5-order\", \"status\": \"pending\", \"year\": 2024}}"
+              },
+              {
+                "nodeId": "dev5-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev5-order\", \"status\": \"shipped\", \"year\": 2024}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev6",
+      "kind": "explicit",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev6run",
+          "caseId": "dev6",
+          "topicId": "dev6topic",
+          "threadId": null,
+          "operationId": "dev6op",
+          "traceIds": []
+        },
+        "inputDigest": "dev6-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "rules": [
+        {
+          "category": "external_transport",
+          "moduleId": null,
+          "claimLevel": "observation",
+          "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev6-r",
+              "field": "error",
+              "quote": "{\"message\": \"service unavailable\"}"
+            },
+            {
+              "nodeId": "dev6-c",
+              "field": "arguments",
+              "quote": "{\"orderId\": \"dev6-order\", \"year\": 2025}"
+            }
+          ]
+        }
+      ],
+      "direct": [],
+      "reviewed": [],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev6run",
+          "caseId": "dev6",
+          "topicId": "dev6topic",
+          "threadId": null,
+          "operationId": "dev6op",
+          "traceIds": []
+        },
+        "inputDigest": "dev6-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev7",
+      "kind": "fake",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev7run",
+          "caseId": "dev7",
+          "topicId": "dev7topic",
+          "threadId": null,
+          "operationId": "dev7op",
+          "traceIds": []
+        },
+        "inputDigest": "dev7-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev7-r",
+                "field": "content",
+                "quote": "not in original field"
+              },
+              {
+                "nodeId": "dev7-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev7-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev7-r",
+              "field": "content",
+              "quote": "not in original field"
+            },
+            {
+              "nodeId": "dev7-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev7-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          }
+        }
+      ],
+      "reviewed": [],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev7run",
+          "caseId": "dev7",
+          "topicId": "dev7topic",
+          "threadId": null,
+          "operationId": "dev7op",
+          "traceIds": []
+        },
+        "inputDigest": "dev7-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "invalid",
+            "support": "insufficient",
+            "issues": [
+              "invalid_observation_or_reference"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev8",
+      "kind": "scope",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev8run",
+          "caseId": "another-case",
+          "topicId": "dev8topic",
+          "threadId": null,
+          "operationId": "dev8op",
+          "traceIds": []
+        },
+        "inputDigest": "dev8-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev8-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev8-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev8-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev8-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev8-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev8-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev8-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev8-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          }
+        }
+      ],
+      "reviewed": [],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev8run",
+          "caseId": "dev8",
+          "topicId": "dev8topic",
+          "threadId": null,
+          "operationId": "dev8op",
+          "traceIds": []
+        },
+        "inputDigest": "dev8-digest",
+        "decision": "needs_review",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "error": "invalid_contract_or_identity"
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev9",
+      "kind": "wrong",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev9run",
+          "caseId": "dev9",
+          "topicId": "dev9topic",
+          "threadId": null,
+          "operationId": "dev9op",
+          "traceIds": []
+        },
+        "inputDigest": "dev9-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev9-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev9-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev9-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev9-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "cancelled",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev9-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev9-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev9-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev9-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "cancelled",
+            "actual": "shipped"
+          }
+        }
+      ],
+      "reviewed": [],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev9run",
+          "caseId": "dev9",
+          "topicId": "dev9topic",
+          "threadId": null,
+          "operationId": "dev9op",
+          "traceIds": []
+        },
+        "inputDigest": "dev9-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "comparison_not_proven_by_cited_local_facts"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev10",
+      "kind": "root",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev10run",
+          "caseId": "dev10",
+          "topicId": "dev10topic",
+          "threadId": null,
+          "operationId": "dev10op",
+          "traceIds": []
+        },
+        "inputDigest": "dev10-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "root_cause",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev10-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev10-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev10-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev10-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "root_cause",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev10-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev10-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev10-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev10-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          }
+        }
+      ],
+      "reviewed": [],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev10run",
+          "caseId": "dev10",
+          "topicId": "dev10topic",
+          "threadId": null,
+          "operationId": "dev10op",
+          "traceIds": []
+        },
+        "inputDigest": "dev10-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "causal_or_impact_claim_unverified"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    },
+    {
+      "id": "dev11",
+      "kind": "missing",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev11run",
+          "caseId": "dev11",
+          "topicId": "dev11topic",
+          "threadId": null,
+          "operationId": "dev11op",
+          "traceIds": []
+        },
+        "inputDigest": "dev11-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "dev11-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev11-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "dev11-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"dev11-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "rules": [],
+      "direct": [
+        {
+          "id": "s1",
+          "category": "answer_tool_mismatch",
+          "claimLevel": "observation",
+          "summary": "A bounded field mismatch; causal owner unknown.",
+          "evidenceRefs": [
+            {
+              "nodeId": "dev11-r",
+              "field": "content",
+              "quote": "{\"success\": true, \"data\": {\"orderId\": \"dev11-order\", \"status\": \"pending\", \"year\": 2025}}"
+            },
+            {
+              "nodeId": "dev11-a",
+              "field": "content",
+              "quote": "{\"orderId\": \"dev11-order\", \"status\": \"shipped\", \"year\": 2025}"
+            }
+          ],
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          }
+        }
+      ],
+      "reviewed": [],
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "dev11run",
+          "caseId": "dev11",
+          "topicId": "dev11topic",
+          "threadId": null,
+          "operationId": "dev11op",
+          "traceIds": []
+        },
+        "inputDigest": "dev11-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "invalid",
+            "support": "insufficient",
+            "issues": [
+              "invalid_observation_or_reference"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "transport": {
+        "error": null,
+        "usage": null,
+        "realCalls": 0,
+        "fixtureReplay": true
+      }
+    }
+  ],
+  "metrics": {
+    "rules": {
+      "cases": 12,
+      "claims": 1,
+      "correctObservations": 1,
+      "wrongObservations": 0,
+      "falseSupport": null,
+      "falseGap": null,
+      "validReferences": 2,
+      "references": 2,
+      "referenceValidity": 1.0,
+      "semanticPositiveCases": 8,
+      "coveredSemanticCases": 0,
+      "effectiveSemanticCaseCoverage": 0.0,
+      "semanticCategoriesDetected": 0,
+      "semanticCategoryTargets": 10,
+      "abstentions": 11,
+      "abstentionRate": 0.9166666666666666,
+      "byType": {
+        "A": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "B": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "C": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "normal": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "recovered": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "multi": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "explicit": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 0
+        },
+        "fake": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "scope": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "wrong": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "root": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "missing": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        }
+      }
+    },
+    "direct": {
+      "cases": 12,
+      "claims": 11,
+      "correctObservations": 9,
+      "wrongObservations": 2,
+      "falseSupport": null,
+      "falseGap": null,
+      "validReferences": 21,
+      "references": 23,
+      "referenceValidity": 0.9130434782608695,
+      "semanticPositiveCases": 8,
+      "coveredSemanticCases": 7,
+      "effectiveSemanticCaseCoverage": 0.875,
+      "semanticCategoriesDetected": 9,
+      "semanticCategoryTargets": 10,
+      "abstentions": 3,
+      "abstentionRate": 0.25,
+      "byType": {
+        "A": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "B": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "C": {
+          "cases": 1,
+          "claims": 2,
+          "correctCategories": 2
+        },
+        "normal": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "recovered": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "multi": {
+          "cases": 1,
+          "claims": 2,
+          "correctCategories": 2
+        },
+        "explicit": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "fake": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "scope": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "wrong": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "root": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 0
+        },
+        "missing": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 0
+        }
+      }
+    },
+    "reviewed": {
+      "cases": 12,
+      "claims": 6,
+      "correctObservations": 6,
+      "wrongObservations": 0,
+      "falseSupport": 0,
+      "falseGap": 3,
+      "validReferences": 13,
+      "references": 13,
+      "referenceValidity": 1.0,
+      "semanticPositiveCases": 8,
+      "coveredSemanticCases": 4,
+      "effectiveSemanticCaseCoverage": 0.5,
+      "semanticCategoriesDetected": 6,
+      "semanticCategoryTargets": 10,
+      "abstentions": 8,
+      "abstentionRate": 0.6666666666666666,
+      "byType": {
+        "A": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "B": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "C": {
+          "cases": 1,
+          "claims": 2,
+          "correctCategories": 2
+        },
+        "normal": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "recovered": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "multi": {
+          "cases": 1,
+          "claims": 2,
+          "correctCategories": 2
+        },
+        "explicit": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "fake": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "scope": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "wrong": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "root": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "missing": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        }
+      }
+    }
+  },
+  "realCalls": 0,
+  "costStatus": "actual bill unknown",
+  "datasetSha256": "77dff0310ab180a3b6cd4b6798738ea7ef768c7ff672a8cfb2ddefde343ecc08"
+}

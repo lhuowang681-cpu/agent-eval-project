@@ -1,0 +1,3086 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794129024934,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Class:packages/database/src/models/message.ts:MessageModel",
+    "name": "MessageModel",
+    "type": "Class",
+    "filePath": "packages/database/src/models/message.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 180,
+  "risk": "CRITICAL",
+  "riskSharedAxes": "CRITICAL",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "summary": {
+    "direct": 77,
+    "processes_affected": 15,
+    "modules_affected": 18
+  },
+  "byDepthCounts": {
+    "1": 77,
+    "2": 42,
+    "3": 61
+  },
+  "affected_processes": [
+    {
+      "name": "createResponse",
+      "type": "Function",
+      "filePath": "packages/openapi/src/controllers/responses.controller.ts",
+      "affected_process_count": 17,
+      "total_hits": 35,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts",
+      "affected_process_count": 14,
+      "total_hits": 22,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/agent/route.ts",
+      "affected_process_count": 20,
+      "total_hits": 20,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/agent/run/route.ts",
+      "affected_process_count": 11,
+      "total_hits": 19,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts",
+      "affected_process_count": 13,
+      "total_hits": 19,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "compress_context",
+      "type": "Function",
+      "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+      "affected_process_count": 8,
+      "total_hits": 16,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "watchdog",
+      "type": "Function",
+      "filePath": "src/server/workflows-hono/agentOperation/handlers/watchdog.ts",
+      "affected_process_count": 14,
+      "total_hits": 14,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "call_tools_batch",
+      "type": "Function",
+      "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+      "affected_process_count": 11,
+      "total_hits": 11,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "createMessage",
+      "type": "Function",
+      "filePath": "src/server/services/message/index.ts",
+      "affected_process_count": 9,
+      "total_hits": 9,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "heartbeatTick",
+      "type": "Function",
+      "filePath": "src/server/workflows-hono/task/handlers/heartbeatTick.ts",
+      "affected_process_count": 4,
+      "total_hits": 8,
+      "earliest_broken_step": 2
+    },
+    {
+      "name": "cancelCompression",
+      "type": "Function",
+      "filePath": "src/server/services/message/index.ts",
+      "affected_process_count": 5,
+      "total_hits": 5,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "updateMessageGroupMetadata",
+      "type": "Function",
+      "filePath": "src/server/services/message/index.ts",
+      "affected_process_count": 5,
+      "total_hits": 5,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "analyzeVisualMedia",
+      "type": "Function",
+      "filePath": "src/server/services/toolExecution/serverRuntimes/lobeAgentVisualMedia.ts",
+      "affected_process_count": 5,
+      "total_hits": 5,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "scheduleExecute",
+      "type": "Function",
+      "filePath": "src/server/workflows-hono/task/handlers/scheduleExecute.ts",
+      "affected_process_count": 5,
+      "total_hits": 5,
+      "earliest_broken_step": 2
+    },
+    {
+      "name": "call_llm",
+      "type": "Function",
+      "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+      "affected_process_count": 3,
+      "total_hits": 3,
+      "earliest_broken_step": 1
+    }
+  ],
+  "affected_modules": [
+    {
+      "name": "Services",
+      "hits": 22,
+      "impact": "direct"
+    },
+    {
+      "name": "Controllers",
+      "hits": 15,
+      "impact": "indirect"
+    },
+    {
+      "name": "Models",
+      "hits": 14,
+      "impact": "direct"
+    },
+    {
+      "name": "AgentEvalRun",
+      "hits": 12,
+      "impact": "direct"
+    },
+    {
+      "name": "AiAgent",
+      "hits": 7,
+      "impact": "direct"
+    },
+    {
+      "name": "AgentRuntime",
+      "hits": 5,
+      "impact": "direct"
+    },
+    {
+      "name": "Lambda",
+      "hits": 5,
+      "impact": "direct"
+    },
+    {
+      "name": "Market",
+      "hits": 4,
+      "impact": "direct"
+    },
+    {
+      "name": "Bot",
+      "hits": 3,
+      "impact": "indirect"
+    },
+    {
+      "name": "PlanRuntime",
+      "hits": 3,
+      "impact": "direct"
+    },
+    {
+      "name": "Message",
+      "hits": 2,
+      "impact": "direct"
+    },
+    {
+      "name": "AgentTracing",
+      "hits": 1,
+      "impact": "indirect"
+    },
+    {
+      "name": "Chat",
+      "hits": 1,
+      "impact": "direct"
+    },
+    {
+      "name": "Examples",
+      "hits": 1,
+      "impact": "direct"
+    },
+    {
+      "name": "Executor",
+      "hits": 1,
+      "impact": "direct"
+    },
+    {
+      "name": "Klavis",
+      "hits": 1,
+      "impact": "direct"
+    },
+    {
+      "name": "Local",
+      "hits": 1,
+      "impact": "indirect"
+    },
+    {
+      "name": "Trusted-client",
+      "hits": 1,
+      "impact": "indirect"
+    }
+  ],
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "Class:src/server/services/toolExecution/serverRuntimes/lobeAgent.ts:LobeAgentServerExecutionRuntime",
+        "name": "LobeAgentServerExecutionRuntime",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/lobeAgent.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Class:src/server/services/toolExecution/serverRuntimes/topicReference.ts:TopicReferenceExecutionRuntime",
+        "name": "TopicReferenceExecutionRuntime",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/topicReference.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+        "name": "RuntimeExecutors.ts",
+        "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/aiAgent.ts",
+        "name": "aiAgent.ts",
+        "filePath": "src/server/routers/lambda/aiAgent.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/aiChat.ts",
+        "name": "aiChat.ts",
+        "filePath": "src/server/routers/lambda/aiChat.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/chunk.ts",
+        "name": "chunk.ts",
+        "filePath": "src/server/routers/lambda/chunk.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/document.ts",
+        "name": "document.ts",
+        "filePath": "src/server/routers/lambda/document.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/exporter.ts",
+        "name": "exporter.ts",
+        "filePath": "src/server/routers/lambda/exporter.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/message.ts",
+        "name": "message.ts",
+        "filePath": "src/server/routers/lambda/message.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/thread.ts",
+        "name": "thread.ts",
+        "filePath": "src/server/routers/lambda/thread.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/topic.ts",
+        "name": "topic.ts",
+        "filePath": "src/server/routers/lambda/topic.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/lambda/user.ts",
+        "name": "user.ts",
+        "filePath": "src/server/routers/lambda/user.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/routers/tools/market.ts",
+        "name": "market.ts",
+        "filePath": "src/server/routers/tools/market.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/agentEvalRun/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "name": "AgentRuntimeService.ts",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/aiAgent/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/aiChat/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/aiChat/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/market/openSandbox/dispatcher.ts",
+        "name": "dispatcher.ts",
+        "filePath": "src/server/services/market/openSandbox/dispatcher.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/market/openSandbox/ensureTopicSandboxFiles.ts",
+        "name": "ensureTopicSandboxFiles.ts",
+        "filePath": "src/server/services/market/openSandbox/ensureTopicSandboxFiles.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/market/preInjectSandboxFiles.ts",
+        "name": "preInjectSandboxFiles.ts",
+        "filePath": "src/server/services/market/preInjectSandboxFiles.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/message/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/sandbox/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/sandbox/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/toolExecution/serverRuntimes/cloudSandbox.ts",
+        "name": "cloudSandbox.ts",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/cloudSandbox.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/toolExecution/serverRuntimes/lobeAgent.ts",
+        "name": "lobeAgent.ts",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/lobeAgent.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/toolExecution/serverRuntimes/lobeAgentVisualMedia.ts",
+        "name": "lobeAgentVisualMedia.ts",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/lobeAgentVisualMedia.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/toolExecution/serverRuntimes/topicReference.ts",
+        "name": "topicReference.ts",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/topicReference.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/modules/AgentRuntime/RuntimeExecutors.ts:createRuntimeExecutors.call_llm@120:2",
+        "name": "call_llm",
+        "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_88_call_llm",
+            "label": "Call_llm → ToolNameResolver",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_55_call_llm",
+            "label": "Call_llm → GenHash",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_129_call_llm",
+            "label": "Call_llm → MapSource",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/modules/AgentRuntime/RuntimeExecutors.ts:createRuntimeExecutors.call_tool@958:2",
+        "name": "call_tool",
+        "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/modules/AgentRuntime/RuntimeExecutors.ts:createRuntimeExecutors.call_tools_batch@1246:2",
+        "name": "call_tools_batch",
+        "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_20_call_tools_batch",
+            "label": "Call_tools_batch → AggregateMetadata",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_19_call_tools_batch",
+            "label": "Call_tools_batch → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_21_call_tools_batch",
+            "label": "Call_tools_batch → SplitMetadata",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_22_call_tools_batch",
+            "label": "Call_tools_batch → CollectToolMessages",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_59_call_tools_batch",
+            "label": "Call_tools_batch → IsCompareMode",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_34_call_tools_batch",
+            "label": "Call_tools_batch → IsAssistantGroupNode",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_18_call_tools_batch",
+            "label": "Call_tools_batch → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_23_call_tools_batch",
+            "label": "Call_tools_batch → CollectAssistantGroupMessages",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_58_call_tools_batch",
+            "label": "Call_tools_batch → CreateMessageNode",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_56_call_tools_batch",
+            "label": "Call_tools_batch → CreateGroupTasksMessage",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_57_call_tools_batch",
+            "label": "Call_tools_batch → IsAgentCouncilMode",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/modules/AgentRuntime/RuntimeExecutors.ts:createRuntimeExecutors.compress_context@710:2",
+        "name": "compress_context",
+        "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_247_compress_context",
+            "label": "Compress_context → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_248_compress_context",
+            "label": "Compress_context → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_89_compress_context",
+            "label": "Compress_context → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_279_compress_context",
+            "label": "Compress_context → Values",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_339_compress_context",
+            "label": "Compress_context → Where",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_340_compress_context",
+            "label": "Compress_context → Where",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_293_compress_context",
+            "label": "Compress_context → Query",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_202_compress_context",
+            "label": "Compress_context → GetQueryOptions",
+            "processType": "intra_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/modules/AgentRuntime/RuntimeExecutors.ts:createRuntimeExecutors.resolve_aborted_tools@1652:2",
+        "name": "resolve_aborted_tools",
+        "filePath": "src/server/modules/AgentRuntime/RuntimeExecutors.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/lambda/aiAgent.ts:aiAgentProcedure",
+        "name": "aiAgentProcedure",
+        "filePath": "src/server/routers/lambda/aiAgent.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/lambda/aiChat.ts:aiChatProcedure",
+        "name": "aiChatProcedure",
+        "filePath": "src/server/routers/lambda/aiChat.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/lambda/chunk.ts:chunkProcedure",
+        "name": "chunkProcedure",
+        "filePath": "src/server/routers/lambda/chunk.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/lambda/document.ts:documentProcedure",
+        "name": "documentProcedure",
+        "filePath": "src/server/routers/lambda/document.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/lambda/exporter.ts:exportProcedure",
+        "name": "exportProcedure",
+        "filePath": "src/server/routers/lambda/exporter.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/lambda/message.ts:messageProcedure",
+        "name": "messageProcedure",
+        "filePath": "src/server/routers/lambda/message.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/lambda/thread.ts:threadProcedure",
+        "name": "threadProcedure",
+        "filePath": "src/server/routers/lambda/thread.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/lambda/user.ts:userProcedure",
+        "name": "userProcedure",
+        "filePath": "src/server/routers/lambda/user.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/routers/tools/market.ts:execInSandboxHandler",
+        "name": "execInSandboxHandler",
+        "filePath": "src/server/routers/tools/market.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/services/aiAgent/index.ts:AiAgentService.createThreadHooks.handler@1548:8",
+        "name": "handler",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/services/aiAgent/index.ts:AiAgentService.createThreadMetadataCallbacks.onComplete@1421:6",
+        "name": "onComplete",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/services/market/openSandbox/dispatcher.ts:createOpenSandboxRunBuildInTool",
+        "name": "createOpenSandboxRunBuildInTool",
+        "filePath": "src/server/services/market/openSandbox/dispatcher.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/services/toolExecution/serverRuntimes/cloudSandbox.ts:cloudSandboxRuntime.factory",
+        "name": "factory",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/cloudSandbox.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/services/toolExecution/serverRuntimes/lobeAgentVisualMedia.ts:analyzeVisualMedia",
+        "name": "analyzeVisualMedia",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/lobeAgentVisualMedia.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_537_analyzevisualmedia",
+            "label": "AnalyzeVisualMedia → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_461_analyzevisualmedia",
+            "label": "AnalyzeVisualMedia → GetQConfigAiInfraConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_326_analyzevisualmedia",
+            "label": "AnalyzeVisualMedia → NormalizeProviderId",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_364_analyzevisualmedia",
+            "label": "AnalyzeVisualMedia → GetFallbackTaskConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_204_analyzevisualmedia",
+            "label": "AnalyzeVisualMedia → NormalizeStringArray",
+            "processType": "intra_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.constructor#2",
+        "name": "constructor",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.evaluateCase#2",
+        "name": "evaluateCase",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_291_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_118_post",
+            "label": "POST → Query",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_290_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_292_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.evaluateThread#1",
+        "name": "evaluateThread",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_117_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_115_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_114_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_116_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentRuntime/AgentRuntimeService.ts:AgentRuntimeService.completeSubAgentBridge#1",
+        "name": "completeSubAgentBridge",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_91_watchdog",
+            "label": "Watchdog → LoadAgentState",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_92_watchdog",
+            "label": "Watchdog → AsyncToolVerifyDelayMs",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_63_watchdog",
+            "label": "Watchdog → ScheduleMessage",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_35_watchdog",
+            "label": "Watchdog → ExecutionCallback",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_90_watchdog",
+            "label": "Watchdog → LoadAgentState",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_205_watchdog",
+            "label": "Watchdog → UpdateToolMessage",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_62_watchdog",
+            "label": "Watchdog → ScheduleMessage",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentRuntime/AgentRuntimeService.ts:AgentRuntimeService.computeDeviceContext#1",
+        "name": "computeDeviceContext",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentRuntime/AgentRuntimeService.ts:AgentRuntimeService.constructor#3",
+        "name": "constructor",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentRuntime/AgentRuntimeService.ts:AgentRuntimeService.createAgentRuntime#1",
+        "name": "createAgentRuntime",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentRuntime/AgentRuntimeService.ts:AgentRuntimeService.ensureTopicSandboxFilesBeforeStep#1",
+        "name": "ensureTopicSandboxFilesBeforeStep",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.constructor#3",
+        "name": "constructor",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execAgent#1",
+        "name": "execAgent",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_241_post",
+            "label": "POST → GetAppConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_7_post",
+            "label": "POST → ResolveTaskEntry",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_47_post",
+            "label": "POST → CleanObject",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_76_createresponse",
+            "label": "CreateResponse → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_242_post",
+            "label": "POST → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_11_createresponse",
+            "label": "CreateResponse → Merge",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_13_createresponse",
+            "label": "CreateResponse → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_8_createresponse",
+            "label": "CreateResponse → GetServiceModelTaskConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_46_post",
+            "label": "POST → GetMergedModelDevParams",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_6_post",
+            "label": "POST → GetQConfigServiceModelConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_5_post",
+            "label": "POST → GetFallbackTaskConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_277_post",
+            "label": "POST → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_75_createresponse",
+            "label": "CreateResponse → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_12_createresponse",
+            "label": "CreateResponse → GetAppConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_240_post",
+            "label": "POST → Merge",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_278_post",
+            "label": "POST → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/aiChat/index.ts:AiChatService.constructor#2",
+        "name": "constructor",
+        "filePath": "src/server/services/aiChat/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/aiChat/index.ts:AiChatService.getMessagesAndTopics#1",
+        "name": "getMessagesAndTopics",
+        "filePath": "src/server/services/aiChat/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.addFilesToMessage#3",
+        "name": "addFilesToMessage",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.cancelCompression#2",
+        "name": "cancelCompression",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_663_cancelcompression",
+            "label": "CancelCompression → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_677_cancelcompression",
+            "label": "CancelCompression → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_845_cancelcompression",
+            "label": "CancelCompression → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_685_cancelcompression",
+            "label": "CancelCompression → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_619_cancelcompression",
+            "label": "CancelCompression → Where",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.constructor#2",
+        "name": "constructor",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.createCompressionGroup#3",
+        "name": "createCompressionGroup",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_247_compress_context",
+            "label": "Compress_context → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_279_compress_context",
+            "label": "Compress_context → Values",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_89_compress_context",
+            "label": "Compress_context → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_340_compress_context",
+            "label": "Compress_context → Where",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_202_compress_context",
+            "label": "Compress_context → GetQueryOptions",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_293_compress_context",
+            "label": "Compress_context → Query",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_248_compress_context",
+            "label": "Compress_context → Set",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.createMessage#1",
+        "name": "createMessage",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_535_createmessage",
+            "label": "CreateMessage → CheckLobehubStatus",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_543_createmessage",
+            "label": "CreateMessage → SkillConnectionPopupBlockedError",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_846_createmessage",
+            "label": "CreateMessage → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_489_createmessage",
+            "label": "CreateMessage → ModalContent",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_547_createmessage",
+            "label": "CreateMessage → GetLobehubAuth",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_523_createmessage",
+            "label": "CreateMessage → CreateMCPError",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_511_createmessage",
+            "label": "CreateMessage → RefreshKlavisServerTools",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_544_createmessage",
+            "label": "CreateMessage → Cleanup",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_517_createmessage",
+            "label": "CreateMessage → StopMonitor",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.finalizeCompression#3",
+        "name": "finalizeCompression",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_339_compress_context",
+            "label": "Compress_context → Where",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.queryWithSuccess#1",
+        "name": "queryWithSuccess",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.removeMessage#2",
+        "name": "removeMessage",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.removeMessages#2",
+        "name": "removeMessages",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updateMessage#3",
+        "name": "updateMessage",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updateMessageGroupMetadata#3",
+        "name": "updateMessageGroupMetadata",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": [
+          {
+            "id": "proc_694_updatemessagegroupme",
+            "label": "UpdateMessageGroupMetadata → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_591_updatemessagegroupme",
+            "label": "UpdateMessageGroupMetadata → Where",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_686_updatemessagegroupme",
+            "label": "UpdateMessageGroupMetadata → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_847_updatemessagegroupme",
+            "label": "UpdateMessageGroupMetadata → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_630_updatemessagegroupme",
+            "label": "UpdateMessageGroupMetadata → Where",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updateMessagePlugin#3",
+        "name": "updateMessagePlugin",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updateMessageRAG#3",
+        "name": "updateMessageRAG",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updateMetadata#3",
+        "name": "updateMetadata",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updatePluginError#3",
+        "name": "updatePluginError",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updatePluginState#3",
+        "name": "updatePluginState",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updateToolArguments#3",
+        "name": "updateToolArguments",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.updateToolMessage#3",
+        "name": "updateToolMessage",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/sandbox/index.ts:ServerSandboxService.callTool#2",
+        "name": "callTool",
+        "filePath": "src/server/services/sandbox/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/sandbox/index.ts:ServerSandboxService.constructor#1",
+        "name": "constructor",
+        "filePath": "src/server/services/sandbox/index.ts",
+        "relationType": "ACCESSES",
+        "confidence": 1,
+        "processes": []
+      }
+    ],
+    "2": [
+      {
+        "depth": 2,
+        "id": "File:packages/openapi/src/services/responses.service.ts",
+        "name": "responses.service.ts",
+        "filePath": "packages/openapi/src/services/responses.service.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/agent/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/agent/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/finalize-run/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/finalize-run/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/resume-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/resume-agent-trajectory/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/resume-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/resume-thread-trajectory/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/modules/AgentRuntime/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/modules/AgentRuntime/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/routers/lambda/agentEval.ts",
+        "name": "agentEval.ts",
+        "filePath": "src/server/routers/lambda/agentEval.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/routers/lambda/agentEvalExternal.ts",
+        "name": "agentEvalExternal.ts",
+        "filePath": "src/server/routers/lambda/agentEvalExternal.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/routers/lambda/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/routers/lambda/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/routers/mobile/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/routers/mobile/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/routers/tools/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/routers/tools/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/agentEvalRun/orchestrator.ts",
+        "name": "orchestrator.ts",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/agentRuntime/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/agentRuntime/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/bot/AgentBridgeService.ts",
+        "name": "AgentBridgeService.ts",
+        "filePath": "src/server/services/bot/AgentBridgeService.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/bot/BotMessageRouter.ts",
+        "name": "BotMessageRouter.ts",
+        "filePath": "src/server/services/bot/BotMessageRouter.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/market/openSandbox/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/market/openSandbox/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/task/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/task/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/taskRunner/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/taskRunner/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/toolExecution/serverRuntimes/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/services/cloudSandbox.ts",
+        "name": "cloudSandbox.ts",
+        "filePath": "src/services/cloudSandbox.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Function:src/app/(backend)/api/agent/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/agent/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_46_post",
+            "label": "POST → GetMergedModelDevParams",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_5_post",
+            "label": "POST → GetFallbackTaskConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_277_post",
+            "label": "POST → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_6_post",
+            "label": "POST → GetQConfigServiceModelConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_240_post",
+            "label": "POST → Merge",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_278_post",
+            "label": "POST → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_7_post",
+            "label": "POST → ResolveTaskEntry",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_47_post",
+            "label": "POST → CleanObject",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_242_post",
+            "label": "POST → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_241_post",
+            "label": "POST → GetAppConfig",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Function:src/server/services/toolExecution/serverRuntimes/lobeAgent.ts:lobeAgentRuntime.factory",
+        "name": "factory",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/lobeAgent.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Function:src/server/services/toolExecution/serverRuntimes/topicReference.ts:topicReferenceRuntime.factory",
+        "name": "factory",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/topicReference.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Function:src/server/workflows-hono/agentOperation/handlers/watchdog.ts:watchdog",
+        "name": "watchdog",
+        "filePath": "src/server/workflows-hono/agentOperation/handlers/watchdog.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_90_watchdog",
+            "label": "Watchdog → LoadAgentState",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_205_watchdog",
+            "label": "Watchdog → UpdateToolMessage",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_91_watchdog",
+            "label": "Watchdog → LoadAgentState",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_62_watchdog",
+            "label": "Watchdog → ScheduleMessage",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_63_watchdog",
+            "label": "Watchdog → ScheduleMessage",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_92_watchdog",
+            "label": "Watchdog → AsyncToolVerifyDelayMs",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_35_watchdog",
+            "label": "Watchdog → ExecutionCallback",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.callTool#2",
+        "name": "callTool",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:packages/openapi/src/services/responses.service.ts:ResponsesService.createResponse#1",
+        "name": "createResponse",
+        "filePath": "packages/openapi/src/services/responses.service.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:packages/openapi/src/services/responses.service.ts:ResponsesService.createStreamingResponse#1",
+        "name": "createStreamingResponse",
+        "filePath": "packages/openapi/src/services/responses.service.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_75_createresponse",
+            "label": "CreateResponse → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_12_createresponse",
+            "label": "CreateResponse → GetAppConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_11_createresponse",
+            "label": "CreateResponse → Merge",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_13_createresponse",
+            "label": "CreateResponse → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_8_createresponse",
+            "label": "CreateResponse → GetServiceModelTaskConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_153_createresponse",
+            "label": "CreateResponse → ExtractTopicIdFromResponseId",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_100_createresponse",
+            "label": "CreateResponse → ExtractInputInstructions",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_76_createresponse",
+            "label": "CreateResponse → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_152_createresponse",
+            "label": "CreateResponse → ExtractPrompt",
+            "processType": "cross_community",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeThreadTrajectory#1",
+        "name": "executeThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeTrajectory#1",
+        "name": "executeTrajectory",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordThreadCompletion#1",
+        "name": "recordThreadCompletion",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_176_post",
+            "label": "POST → QueryByTopicId",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_112_post",
+            "label": "POST → RoundCost",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_115_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_117_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_114_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_116_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_177_post",
+            "label": "POST → Update",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_113_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordTrajectoryCompletion#1",
+        "name": "recordTrajectoryCompletion",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_118_post",
+            "label": "POST → Query",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_289_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_290_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_292_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_179_post",
+            "label": "POST → FindByRunAndTestCase",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_291_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentRuntime/AgentRuntimeService.ts:AgentRuntimeService.executeStep#1",
+        "name": "executeStep",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_104_post",
+            "label": "POST → TryClaimStep",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_103_post",
+            "label": "POST → TryClaimStep",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_105_post",
+            "label": "POST → GenerateEventId",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_487_post",
+            "label": "POST → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_513_post",
+            "label": "POST → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_473_post",
+            "label": "POST → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_165_post",
+            "label": "POST → GetStepCallbacks",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_166_post",
+            "label": "POST → PublishStreamEvent",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execAgentThreadRun#2",
+        "name": "execAgentThreadRun",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execGroupAgent#1",
+        "name": "execGroupAgent",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/bot/AgentBridgeService.ts:AgentBridgeService.executeWithHooksLocalMode#3",
+        "name": "executeWithHooksLocalMode",
+        "filePath": "src/server/services/bot/AgentBridgeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/bot/AgentBridgeService.ts:AgentBridgeService.executeWithHooksQueueMode#4",
+        "name": "executeWithHooksQueueMode",
+        "filePath": "src/server/services/bot/AgentBridgeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/market/index.ts:MarketService.constructor#1",
+        "name": "constructor",
+        "filePath": "src/server/services/market/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/taskRunner/index.ts:TaskRunnerService.runTask#1",
+        "name": "runTask",
+        "filePath": "src/server/services/taskRunner/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_132_heartbeattick",
+            "label": "HeartbeatTick → GetBuiltinAgent",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_67_heartbeattick",
+            "label": "HeartbeatTick → Where",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_66_heartbeattick",
+            "label": "HeartbeatTick → Where",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_320_heartbeattick",
+            "label": "HeartbeatTick → Set",
+            "processType": "cross_community",
+            "step": 3
+          }
+        ]
+      }
+    ],
+    "3": [
+      {
+        "depth": 3,
+        "id": "File:apps/cli/src/api/client.ts",
+        "name": "client.ts",
+        "filePath": "apps/cli/src/api/client.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/executor/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/executor/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/openapi/src/controllers/responses.controller.ts",
+        "name": "responses.controller.ts",
+        "filePath": "packages/openapi/src/controllers/responses.controller.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/api/agent/run/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/agent/run/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/api/agent/stream/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/agent/stream/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/trpc/lambda/[trpc]/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/trpc/lambda/[trpc]/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/trpc/mobile/[trpc]/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/trpc/mobile/[trpc]/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/trpc/tools/[trpc]/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/trpc/tools/[trpc]/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/webapi/create-image/comfyui/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/webapi/create-image/comfyui/route.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/libs/trpc/client/lambda.ts",
+        "name": "lambda.ts",
+        "filePath": "src/libs/trpc/client/lambda.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/libs/trpc/client/tools.ts",
+        "name": "tools.ts",
+        "filePath": "src/libs/trpc/client/tools.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/libs/trpc/mock.ts",
+        "name": "mock.ts",
+        "filePath": "src/libs/trpc/mock.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/routers/async/eval.ts",
+        "name": "eval.ts",
+        "filePath": "src/server/routers/async/eval.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/routers/lambda/agentBotProvider.ts",
+        "name": "agentBotProvider.ts",
+        "filePath": "src/server/routers/lambda/agentBotProvider.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/routers/lambda/task.ts",
+        "name": "task.ts",
+        "filePath": "src/server/routers/lambda/task.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/bot/BotCallbackService.ts",
+        "name": "BotCallbackService.ts",
+        "filePath": "src/server/services/bot/BotCallbackService.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/bot/agentBotProviderSettings.ts",
+        "name": "agentBotProviderSettings.ts",
+        "filePath": "src/server/services/bot/agentBotProviderSettings.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/bot/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/bot/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/brief/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/brief/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/market/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/market/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/taskLifecycle/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/taskLifecycle/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/taskRunner/heartbeatTick.ts",
+        "name": "heartbeatTick.ts",
+        "filePath": "src/server/services/taskRunner/heartbeatTick.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/taskRunner/scheduleTick.ts",
+        "name": "scheduleTick.ts",
+        "filePath": "src/server/services/taskRunner/scheduleTick.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/toolExecution/builtin.ts",
+        "name": "builtin.ts",
+        "filePath": "src/server/services/toolExecution/builtin.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/workflows-hono/agentOperation/handlers/watchdog.ts",
+        "name": "watchdog.ts",
+        "filePath": "src/server/workflows-hono/agentOperation/handlers/watchdog.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/workflows-hono/eval/handlers/onThreadComplete.ts",
+        "name": "onThreadComplete.ts",
+        "filePath": "src/server/workflows-hono/eval/handlers/onThreadComplete.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/workflows-hono/eval/handlers/onTrajectoryComplete.ts",
+        "name": "onTrajectoryComplete.ts",
+        "filePath": "src/server/workflows-hono/eval/handlers/onTrajectoryComplete.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/store/tool/slices/builtin/executors/lobe-skills.ts",
+        "name": "lobe-skills.ts",
+        "filePath": "src/store/tool/slices/builtin/executors/lobe-skills.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/app/(backend)/api/agent/run/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/agent/run/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_473_post",
+            "label": "POST → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_163_post",
+            "label": "POST → GetOperationMetadata",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_165_post",
+            "label": "POST → GetStepCallbacks",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_166_post",
+            "label": "POST → PublishStreamEvent",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_80_post",
+            "label": "POST → B64urlDecode",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_487_post",
+            "label": "POST → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_513_post",
+            "label": "POST → Set",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_104_post",
+            "label": "POST → TryClaimStep",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_103_post",
+            "label": "POST → TryClaimStep",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_105_post",
+            "label": "POST → GenerateEventId",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_164_post",
+            "label": "POST → GetOperationMetadata",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_778_post",
+            "label": "POST → GetDBInstance",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_176_post",
+            "label": "POST → QueryByTopicId",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_178_post",
+            "label": "POST → GetWorkflowUrl",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_114_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_116_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_177_post",
+            "label": "POST → Update",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_113_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_115_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_117_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_112_post",
+            "label": "POST → RoundCost",
+            "processType": "intra_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_179_post",
+            "label": "POST → FindByRunAndTestCase",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_291_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_118_post",
+            "label": "POST → Query",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_289_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_290_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_292_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_780_post",
+            "label": "POST → GetDBInstance",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_820_post",
+            "label": "POST → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_305_post",
+            "label": "POST → GetWorkflowUrl",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeThreadTrajectory.handler@419:12",
+        "name": "handler",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeTrajectory.handler@277:12",
+        "name": "handler",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/server/services/taskRunner/heartbeatTick.ts:runHeartbeatTick",
+        "name": "runHeartbeatTick",
+        "filePath": "src/server/services/taskRunner/heartbeatTick.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_67_heartbeattick",
+            "label": "HeartbeatTick → Where",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_132_heartbeattick",
+            "label": "HeartbeatTick → GetBuiltinAgent",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_66_heartbeattick",
+            "label": "HeartbeatTick → Where",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_320_heartbeattick",
+            "label": "HeartbeatTick → Set",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/server/services/taskRunner/scheduleTick.ts:runScheduleTick",
+        "name": "runScheduleTick",
+        "filePath": "src/server/services/taskRunner/scheduleTick.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_270_scheduleexecute",
+            "label": "ScheduleExecute → Where",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_413_scheduleexecute",
+            "label": "ScheduleExecute → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_348_scheduleexecute",
+            "label": "ScheduleExecute → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_269_scheduleexecute",
+            "label": "ScheduleExecute → Where",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_372_scheduleexecute",
+            "label": "ScheduleExecute → Set",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.editLocalFile#1",
+        "name": "editLocalFile",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.executeCode#1",
+        "name": "executeCode",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.getCommandOutput#1",
+        "name": "getCommandOutput",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.globLocalFiles#1",
+        "name": "globLocalFiles",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.grepContent#1",
+        "name": "grepContent",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.killCommand#1",
+        "name": "killCommand",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.listLocalFiles#1",
+        "name": "listLocalFiles",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.moveLocalFiles#1",
+        "name": "moveLocalFiles",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.readLocalFile#1",
+        "name": "readLocalFile",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.renameLocalFile#1",
+        "name": "renameLocalFile",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.runCommand#1",
+        "name": "runCommand",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.searchLocalFiles#1",
+        "name": "searchLocalFiles",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts:CloudSandboxExecutionRuntime.writeLocalFile#1",
+        "name": "writeLocalFile",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/openapi/src/controllers/responses.controller.ts:ResponsesController.createResponse#1",
+        "name": "createResponse",
+        "filePath": "packages/openapi/src/controllers/responses.controller.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_75_createresponse",
+            "label": "CreateResponse → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_12_createresponse",
+            "label": "CreateResponse → GetAppConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_11_createresponse",
+            "label": "CreateResponse → Merge",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_13_createresponse",
+            "label": "CreateResponse → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_752_createresponse",
+            "label": "CreateResponse → GetDBInstance",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_8_createresponse",
+            "label": "CreateResponse → GetServiceModelTaskConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_153_createresponse",
+            "label": "CreateResponse → ExtractTopicIdFromResponseId",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_795_createresponse",
+            "label": "CreateResponse → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_100_createresponse",
+            "label": "CreateResponse → ExtractInputInstructions",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_76_createresponse",
+            "label": "CreateResponse → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_152_createresponse",
+            "label": "CreateResponse → ExtractPrompt",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/openapi/src/controllers/responses.controller.ts:ResponsesController.handleStreamingResponse#3",
+        "name": "handleStreamingResponse",
+        "filePath": "packages/openapi/src/controllers/responses.controller.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_8_createresponse",
+            "label": "CreateResponse → GetServiceModelTaskConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_11_createresponse",
+            "label": "CreateResponse → Merge",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_13_createresponse",
+            "label": "CreateResponse → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_12_createresponse",
+            "label": "CreateResponse → GetAppConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_76_createresponse",
+            "label": "CreateResponse → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_152_createresponse",
+            "label": "CreateResponse → ExtractPrompt",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_100_createresponse",
+            "label": "CreateResponse → ExtractInputInstructions",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_153_createresponse",
+            "label": "CreateResponse → ExtractTopicIdFromResponseId",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_75_createresponse",
+            "label": "CreateResponse → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.onThreadComplete#1",
+        "name": "onThreadComplete",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.onTrajectoryComplete#1",
+        "name": "onTrajectoryComplete",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runAgentTrajectory#1",
+        "name": "runAgentTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runThreadTrajectory#1",
+        "name": "runThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentRuntime/AgentRuntimeService.ts:AgentRuntimeService.executeSync#2",
+        "name": "executeSync",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentRuntime/AgentRuntimeService.ts:AgentRuntimeService.setupLocalExecutionCallback#0",
+        "name": "setupLocalExecutionCallback",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execSubAgentTask#1",
+        "name": "execSubAgentTask",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execVirtualSubAgent#1",
+        "name": "execVirtualSubAgent",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/bot/AgentBridgeService.ts:AgentBridgeService.executeWithCallback#3",
+        "name": "executeWithCallback",
+        "filePath": "src/server/services/bot/AgentBridgeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/task/index.ts:TaskService.runReadySubtasks#1",
+        "name": "runReadySubtasks",
+        "filePath": "src/server/services/task/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/taskRunner/index.ts:TaskRunnerService.cascadeOnCompletion#1",
+        "name": "cascadeOnCompletion",
+        "filePath": "src/server/services/taskRunner/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ]
+  }
+}

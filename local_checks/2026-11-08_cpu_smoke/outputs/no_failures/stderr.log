@@ -1,0 +1,18 @@
+Failed to find real location of C:\ProgramData\anaconda3\python.exe
+Traceback (most recent call last):
+  File "C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_cpu_smoke\run_check.py", line 23, in <module>
+    runpy.run_path(str(SRC / 'structured_jsonl_attribution.py'), run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\1\Desktop\就业agent\agent-eval-project\source-reference\attribution\structured_jsonl_attribution.py", line 146, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\1\Desktop\就业agent\agent-eval-project\source-reference\attribution\structured_jsonl_attribution.py", line 143, in main
+    d.to_csv(out/'classified_all.csv',index=False,encoding='utf-8-sig');internal=d[(d.actionability=='agent_orchestration_actionable')&(~d.needs_causal_review.astype(bool))].copy();external=d[~d.index.isin(internal.index)].copy();internal.to_csv(out/'classified_internal.csv',index=False,encoding='utf-8-sig');external.to_csv(out/'classified_external.csv',index=False,encoding='utf-8-sig');(out/'classified_all.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
+                                                                                    ^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\site-packages\pandas\core\generic.py", line 6321, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'actionability'

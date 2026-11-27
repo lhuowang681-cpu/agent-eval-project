@@ -1,0 +1,62 @@
+[
+  {
+    "name": "previous18",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "test_round2",
+      "test_metrics"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-14_system_vnext\\baseline",
+    "exitCode": 0,
+    "seconds": 0.248
+  },
+  {
+    "name": "previous15",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "test_shadow.py"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-14_system_vnext\\baseline\\previous",
+    "exitCode": 0,
+    "seconds": 1.354
+  },
+  {
+    "name": "python36",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/eval-attribution",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform",
+    "exitCode": 0,
+    "seconds": 0.533
+  },
+  {
+    "name": "bridge71",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "src/server/services/agentEvalAttribution",
+      "--environment=node",
+      "--maxWorkers=2",
+      "--testTimeout=20000",
+      "--hookTimeout=60000",
+      "--reporter=default"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform",
+    "exitCode": 0,
+    "seconds": 32.221
+  }
+]

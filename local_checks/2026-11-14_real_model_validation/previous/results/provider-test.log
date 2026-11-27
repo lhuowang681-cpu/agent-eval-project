@@ -1,0 +1,13 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+Error: aborted
+    at abortIncoming (node:_http_server:911:17)
+    at socketOnClose (node:_http_server:904:3)
+    at Socket.emit (node:events:521:24)
+    at TCP.<anonymous> (node:net:355:12) {
+  code: 'ECONNRESET'
+}
+
+Node.js v24.19.0

@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "test_shadow.Tests.test_three_types",
+        "test_shadow.Tests.test_metric_truth_evidence_and_unknown_separate"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "run_experiment.py",
+        "replay",
+        "dev"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "run_experiment.py",
+        "replay",
+        "holdout"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "summarize.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "verify_delivery.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-c",
+        "import run_experiment as r; assert r.RULES_DIR == r.BASE / \"baseline\"; print(\"portable_baseline_used\")"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "shadow.cli"
+      ],
+      "exitCode": 0,
+      "decision": "supported"
+    }
+  ],
+  "externalCalls": 0,
+  "originalPlatformUsedByReplay": false
+}

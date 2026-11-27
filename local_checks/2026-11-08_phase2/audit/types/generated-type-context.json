@@ -1,0 +1,18 @@
+[
+  {
+    "path": ".next/dev/types/cache-life.d.ts",
+    "sha256": "d1986184a09a52db8228cb2bb2a61a8c05c9354e5b93cec8e2628d8579c892d7"
+  },
+  {
+    "path": ".next/dev/types/package.json",
+    "sha256": "e3d5a4a2d8551aa52c5a01d2a0efb2e06a2d9711b4f5c5f1d20de6e21807e2cd"
+  },
+  {
+    "path": ".next/dev/types/routes.d.ts",
+    "sha256": "584cf769216705cb0feeef1a69cb8564ece91ad9b524169ab0bf47b6952e001f"
+  },
+  {
+    "path": ".next/dev/types/validator.ts",
+    "sha256": "e0916f19ac5436f29fc065d098dfeaa3251b733f48b18baa97019cd56f7847b8"
+  }
+]

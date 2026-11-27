@@ -1,0 +1,108 @@
+--- source-reference/attribution/structured_jsonl_attribution.py
++++ round1/attribution/structured_jsonl_attribution.py
+@@ -9,7 +9,7 @@
+ """
+ from __future__ import annotations
+ from pathlib import Path
+-import argparse,collections,hashlib,json,re
++import argparse,hashlib,json,re
+ import pandas as pd
+ 
+ MCP_NAME_RE=re.compile(r'(?:^|____)(?:mcp|[^_]*-mcp)(?:____|$)|____mcp$',re.I)
+@@ -73,6 +73,29 @@
+  if re.match(r'^(error|failed|exception)\s*[:：]',low):reasons.append('explicit error prefix')
+  return bool(reasons),reasons,flat
+ 
++def confirmed_retry(msgs,idx,call,calls):
++ """Confirm only identical tool/arguments retry within the same user turn.
++
++ This is tool-call recovery evidence, not proof that the user's task completed.
++ Missing identity or ambiguous/unstructured success stays unconfirmed.
++ """
++ if not call.get('tool') or not call.get('args'):return ''
++ def arguments(value):
++  obj=decode(value)
++  return json.dumps(obj,sort_keys=True,ensure_ascii=False) if isinstance(obj,(dict,list)) else str(value).strip()
++ for pos in range(idx+1,len(msgs)):
++  msg=msgs[pos];role=str(msg.get('role','')).lower()
++  if role=='user':break
++  if role!='tool':continue
++  cid=str(msg.get('tool_call_id') or '');retry=calls.get(cid,{})
++  if not idx<retry.get('idx',-1)<pos:continue
++  if retry.get('tool')!=call['tool'] or arguments(retry.get('args',''))!=arguments(call['args']):continue
++  if msg.get('name') and msg['name']!=call['tool']:continue
++  content=msg.get('content');obj=decode(content)
++  if failure_envelope(content)[0] or not isinstance(obj,dict):continue
++  if obj.get('ok') is True or obj.get('success') is True or str(obj.get('status','')).lower() in {'success','succeeded','completed'}:return cid
++ return ''
++
+ PROVIDER_CONTRACTS=[
+  ('context_window_exceeded','上下文构造超过模型窗口','L4.5','消息变形处理器组',r'(?:maximum context length|context window exceeded|prompt is too long|exceededcontextwindow)'),
+  ('provider_payload_invalid','Provider 请求 Payload 非法','L5.4','Context Builders',r'(?:text content blocks must contain non-whitespace|tool use ids without tool result|assistant message must not be empty)'),
+@@ -101,13 +124,21 @@
+  return (cat,zh,'L6.3' if source=='mcp' else 'L6.4','MCP Service' if source=='mcp' else 'Plugin Gateway Service','external_uncontrollable',f'工具来源为 {source}，按规则直接归外部原因，不进入 Agent 源码榜')
+ 
+ def scan(input_dir):
+- rows=[];seen=set();scope=collections.Counter()
++ rows=[];seen=set();scope={'traces':0,'input_lines':0,'blank_lines':0,'invalid_lines':0,'raw_failure_events':0,'duplicate_failure_events':0,'input_errors':[]}
+  for fp in sorted(Path(input_dir).glob('part_*.jsonl')):
+   with fp.open(encoding='utf-8',errors='replace') as f:
+-   for line in f:
+-    x=json.loads(line);scope['traces']+=1;tid=str(x.get('id') or '');sid=str(x.get('sessionId') or tid);msgs=extract_messages(x.get('input'));calls={};latest_user=''
++   for line_number,line in enumerate(f,1):
++    scope['input_lines']+=1
++    if not line.strip():scope['blank_lines']+=1;continue
++    try:
++     x=json.loads(line)
++     if not isinstance(x,dict):raise ValueError('Trace must be a JSON object')
++    except (json.JSONDecodeError,ValueError) as exc:
++     scope['invalid_lines']+=1;scope['input_errors'].append({'file':fp.name,'line':line_number,'error':str(exc)});continue
++    scope['traces']+=1;tid=str(x.get('id') or '');sid=str(x.get('sessionId') or tid);msgs=extract_messages(x.get('input'));calls={};latest_user='';tasks={};trace_start=len(rows)
+     for idx,m in enumerate(msgs):
+      if str(m.get('role','')).lower()=='user' and str(m.get('content','')).strip():latest_user=norm(m.get('content'),1200)
++     tasks[idx]=latest_user
+      for tc in m.get('tool_calls') or []:
+       if isinstance(tc,dict):
+        fn=tc.get('function') or {};calls[str(tc.get('id') or '')]={'tool':str(fn.get('name') or ''),'args':str(fn.get('arguments') or ''),'idx':idx}
+@@ -117,13 +148,14 @@
+      if not failed:continue
+      cid=str(m.get('tool_call_id') or '');call=calls.get(cid,{});tool=str(m.get('name') or call.get('tool') or '');source=tool_source(tool)
+      event_id=cid or hashlib.sha1((tool+'|'+norm(content,1800)).encode()).hexdigest()[:20];key=(sid,event_id)
+-     if key in seen:continue
++     scope['raw_failure_events']+=1
++     if key in seen:scope['duplicate_failure_events']+=1;continue
+      seen.add(key)
+      if source=='builtin':result=classify_builtin(tool,content,flat,call.get('args',''))
+      else:result=classify_external(tool,content,flat,source)
+      cat,zh,mid,mn,action,basis=result
+-     later=msgs[idx+1:];recovered=any(str(z.get('role','')).lower()=='tool' and not failure_envelope(str(z.get('content') or ''))[0] for z in later)
+-     rows.append({'trace_id':tid,'topic_id':sid,'timestamp':x.get('timestamp',''),'category':cat,'category_zh':zh,'module_id':mid,'module_name':mn,'badcase_kind':'recovered_with_capability_issue' if recovered else 'runtime_error','actionability':action,'needs_causal_review':action!='agent_orchestration_actionable','tool_source':source,'tool_name':tool,'tool_call_id':cid,'tool_arguments':norm(call.get('args',''),2400),'signal':'; '.join(reasons)+' | '+norm(pick(flat,'message','msg','reason','detail','error') or content,900),'context':norm(content,4200),'attribution_basis':basis,'error_exposure_node':f'{source} Tool Result: {tool}','abnormal_input_source':'Agent→Builtin 调用参数' if source=='builtin' else f'{source} 外部工具','user_task':latest_user,'recovered':recovered,'candidate_modules':[]})
++     recovery_id=confirmed_retry(msgs,idx,call,calls);recovered=bool(recovery_id)
++     rows.append({'trace_id':tid,'topic_id':sid,'timestamp':x.get('timestamp',''),'category':cat,'category_zh':zh,'module_id':mid,'module_name':mn,'badcase_kind':'recovered_with_capability_issue' if recovered else 'runtime_error','actionability':action,'needs_causal_review':action!='agent_orchestration_actionable','tool_source':source,'tool_name':tool,'tool_call_id':cid,'tool_arguments':norm(call.get('args',''),2400),'signal':'; '.join(reasons)+' | '+norm(pick(flat,'message','msg','reason','detail','error') or content,900),'context':norm(content,4200),'attribution_basis':basis,'error_exposure_node':f'{source} Tool Result: {tool}','abnormal_input_source':'Agent→Builtin 调用参数' if source=='builtin' else f'{source} 外部工具','user_task':tasks[idx],'recovered':recovered,'recovery_tool_call_id':recovery_id,'recovery_scope':'same_tool_same_arguments_within_turn' if recovered else 'unconfirmed','candidate_modules':[]})
+     # Provider output: only explicit structured error envelope, never scan input/system/metadata.
+     out=decode(x.get('output'));out_text=json.dumps(out,ensure_ascii=False,default=str) if not isinstance(out,str) else out
+     err_type='';err_msg=''
+@@ -133,14 +165,21 @@
+      for cat,zh,mid,mn,pat in PROVIDER_CONTRACTS:
+       if not re.search(pat,combined,re.I|re.S):continue
+       key=(sid,'provider',cat,hashlib.sha1(combined.encode()).hexdigest()[:12])
+-      if key in seen:continue
++      scope['raw_failure_events']+=1
++      if key in seen:scope['duplicate_failure_events']+=1;continue
+       seen.add(key);rows.append({'trace_id':tid,'topic_id':sid,'timestamp':x.get('timestamp',''),'category':cat,'category_zh':zh,'module_id':mid,'module_name':mn,'badcase_kind':'runtime_error','actionability':'agent_orchestration_actionable','needs_causal_review':False,'tool_source':'provider_runtime','tool_name':'','tool_call_id':'','tool_arguments':'','signal':norm(err_type+' | '+err_msg,900),'context':norm(out_text,3000),'attribution_basis':'真实 Provider output Error Envelope 满足类别证据契约','error_exposure_node':'Provider output','abnormal_input_source':f'{mid} {mn}','user_task':latest_user,'recovered':False,'candidate_modules':[]})
++    for row in rows[trace_start:]:row.update(source_file=fp.name,source_line=line_number)
+   print(fp.name,'done',len(rows),flush=True)
+  return rows,scope
+ 
++OUTPUT_COLUMNS=['trace_id','topic_id','timestamp','category','category_zh','module_id','module_name','badcase_kind','actionability','needs_causal_review','tool_source','tool_name','tool_call_id','tool_arguments','signal','context','attribution_basis','error_exposure_node','abnormal_input_source','user_task','recovered','recovery_tool_call_id','recovery_scope','candidate_modules','source_file','source_line']
++
+ def main():
+- p=argparse.ArgumentParser();p.add_argument('--input-dir',required=True);p.add_argument('--output-dir',required=True);a=p.parse_args();out=Path(a.output_dir);out.mkdir(parents=True,exist_ok=True);rows,scope=scan(a.input_dir);d=pd.DataFrame(rows)
++ p=argparse.ArgumentParser();p.add_argument('--input-dir',required=True);p.add_argument('--output-dir',required=True);a=p.parse_args();out=Path(a.output_dir);out.mkdir(parents=True,exist_ok=True);rows,scope=scan(a.input_dir);d=pd.DataFrame(rows,columns=OUTPUT_COLUMNS)
+  d.to_csv(out/'classified_all.csv',index=False,encoding='utf-8-sig');internal=d[(d.actionability=='agent_orchestration_actionable')&(~d.needs_causal_review.astype(bool))].copy();external=d[~d.index.isin(internal.index)].copy();internal.to_csv(out/'classified_internal.csv',index=False,encoding='utf-8-sig');external.to_csv(out/'classified_external.csv',index=False,encoding='utf-8-sig');(out/'classified_all.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
+  summary={'input_traces':scope['traces'],'failure_events':len(d),'failure_topics':d.topic_id.nunique() if len(d) else 0,'internal_events':len(internal),'internal_topics':internal.topic_id.nunique() if len(internal) else 0,'external_events':len(external),'external_topics':external.topic_id.nunique() if len(external) else 0,'tool_sources':d.tool_source.value_counts().to_dict() if len(d) else {},'internal_categories':internal.category.value_counts().to_dict() if len(internal) else {},'external_categories':external.category.value_counts().to_dict() if len(external) else {}}
++ summary.update({k:v for k,v in scope.items() if k not in {'traces','input_errors'}})
++ summary['input_complete']=not bool(scope['invalid_lines'])
++ (out/'input_errors.json').write_text(json.dumps(scope['input_errors'],ensure_ascii=False,indent=2),encoding='utf-8')
+  (out/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(summary,ensure_ascii=False))
+ if __name__=='__main__':main()

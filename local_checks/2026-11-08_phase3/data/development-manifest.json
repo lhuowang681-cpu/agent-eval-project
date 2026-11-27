@@ -1,0 +1,10 @@
+{
+  "split": "development_only",
+  "cases": 12,
+  "source": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_phase2\\increment3\\experiment\\input.json",
+  "sourceSha256": "85f25ca6a9622c622470c37b30053769c315323a74f608e33aabb4263bc3a689",
+  "sha256": "bff0c6d21240ff74143453416e6e356abb810bccb9f8a47717c0c2423a10f583",
+  "labels": "Single-author manual reannotation; public/disclosed development fixtures, not gold real labels.",
+  "rootAccuracyMeasurable": false,
+  "candidateGeneration": "Preserved Phase2 controlled candidate; prior localhost SDK echo receipt is separate, not inference."
+}

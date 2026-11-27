@@ -1,0 +1,82 @@
+// --------------- Core types & utilities ---------------
+// --------------- Registry singleton ---------------
+import { feishu } from './feishu/definitions/feishu';
+import { lark } from './feishu/definitions/lark';
+import { PlatformRegistry } from './registry';
+
+export {
+  allowFromField,
+  type BotReplyLocale,
+  displayToolCallsField,
+  type DmDecision,
+  type DmPolicy,
+  type DmSettings,
+  extractDmSettings,
+  extractGroupSettings,
+  extractUserAllowlist,
+  extractWatchKeywordEntries,
+  extractWatchKeywords,
+  findMatchingWatchKeywordEntries,
+  getBotReplyLocale,
+  getStepReactionEmoji,
+  type GroupPolicy,
+  type GroupSettings,
+  makeDmPolicyField,
+  makeGroupPolicyFields,
+  makeServerIdField,
+  makeUserIdField,
+  messageMatchesWatchKeyword,
+  normalizeAllowFromEntries,
+  normalizeBotReplyLocale,
+  RECEIVED_REACTION_EMOJI,
+  shouldAllowSender,
+  shouldHandleDm,
+  shouldHandleGroup,
+  THINKING_REACTION_EMOJI,
+  type UserAllowlist,
+  validateAccessSettings,
+  type WatchKeywordEntry,
+  watchKeywordsField,
+  WORKING_REACTION_EMOJI,
+} from './const';
+export { PlatformRegistry } from './registry';
+export type {
+  BotMessageAttachment,
+  BotPlatformRedisClient,
+  BotPlatformRuntimeContext,
+  BotProviderConfig,
+  ConnectionMode,
+  ExtractFilesResult,
+  FieldSchema,
+  MessengerContent,
+  PlatformClient,
+  PlatformDefinition,
+  PlatformDocumentation,
+  PlatformMessenger,
+  SerializedPlatformDefinition,
+  UsageStats,
+  ValidationResult,
+} from './types';
+export { ClientFactory, messengerContentText } from './types';
+export type { ProviderConfigInput, ResolvedBotProviderConfig } from './utils';
+export {
+  buildRuntimeKey,
+  extractDefaults,
+  formatDuration,
+  formatTokens,
+  formatUsageStats,
+  getEffectiveConnectionMode,
+  mergeWithDefaults,
+  parseRuntimeKey,
+  resolveBotProviderConfig,
+  resolveConnectionMode,
+} from './utils';
+
+// --------------- Platform definitions ---------------
+export { feishu } from './feishu/definitions/feishu';
+export { lark } from './feishu/definitions/lark';
+
+export const platformRegistry = new PlatformRegistry();
+
+platformRegistry.register(feishu);
+platformRegistry.register(lark);

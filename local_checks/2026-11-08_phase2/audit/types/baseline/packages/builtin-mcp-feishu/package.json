@@ -1,0 +1,14 @@
+{
+  "name": "@lobechat/builtin-mcp-feishu",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client/index.ts"
+  },
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@lobechat/feishu-auth-scopes": "workspace:*",
+    "@lobechat/types": "workspace:*"
+  }
+}

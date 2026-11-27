@@ -1,0 +1,49 @@
+Judge UI forms 1794128687391
+Dashboard
+Datasets
+1
+Judge form dataset 1794128687391
+Runs
+No runs yet
+Back to Benchmark
+Judge form dataset 1794128687391
+Edit
+Delete
+Test Cases
+0 test case0}
+All
+Easy
+Medium
+Hard
+Import Test Cases
+Add Test Case
+#	Input	Expected Answer	Eval Mode	Category	
+
+No data
+Related Runs (0)
+New Run
+
+No runs yet
+
+Start your first evaluation run on this benchmark
+
+New Evaluation
+Dataset updated successfully
+Add Test Case
+Input
+Expected Output
+Eval Mode
+LLM Judge
+评分供应商
+评分模型
+评分标准
+评分系统提示词（选填）
+评分超时（毫秒，默认60000）
+旧版评分提示词（仅在评分标准为空时使用）
+题目单独配置会完整覆盖数据集配置，请同时填写供应商和模型。
+More Options
+Difficulty
+Difficulty
+Tags
+Cancel
+Create

@@ -1,0 +1,97 @@
+
+  GitNexus Context (1.6.12)
+{"level":40,"time":1794125199977,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "status": "found",
+  "symbol": {
+    "uid": "Function:packages/eval-rubric/src/matchers/llmRubric.ts:matchLLMRubric",
+    "name": "matchLLMRubric",
+    "kind": "Function",
+    "filePath": "packages/eval-rubric/src/matchers/llmRubric.ts",
+    "startLine": 38,
+    "endLine": 86
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "incoming": {
+    "calls": [
+      {
+        "uid": "Function:packages/eval-rubric/src/matchers/index.ts:match",
+        "name": "match",
+        "filePath": "packages/eval-rubric/src/matchers/index.ts"
+      }
+    ]
+  },
+  "outgoing": {
+    "accesses": [
+      {
+        "uid": "Const:packages/eval-rubric/src/matchers/llmRubric.ts:DEFAULT_SYSTEM_ROLE",
+        "name": "DEFAULT_SYSTEM_ROLE",
+        "filePath": "packages/eval-rubric/src/matchers/llmRubric.ts"
+      },
+      {
+        "uid": "Property:packages/eval-rubric/src/matchers/types.ts:MatchContext.generateObject",
+        "name": "generateObject",
+        "filePath": "packages/eval-rubric/src/matchers/types.ts"
+      },
+      {
+        "uid": "Property:packages/eval-rubric/src/matchers/types.ts:MatchContext.judgeModel",
+        "name": "judgeModel",
+        "filePath": "packages/eval-rubric/src/matchers/types.ts"
+      },
+      {
+        "uid": "Property:packages/types/src/eval/rubric.ts:EvalBenchmarkRubric.config",
+        "name": "config",
+        "filePath": "packages/types/src/eval/rubric.ts"
+      },
+      {
+        "uid": "Property:packages/types/src/eval/rubric.ts:EvalBenchmarkRubric.threshold",
+        "name": "threshold",
+        "filePath": "packages/types/src/eval/rubric.ts"
+      },
+      {
+        "uid": "Property:packages/types/src/eval/rubric.ts:RubricConfigLLM.criteria",
+        "name": "criteria",
+        "filePath": "packages/types/src/eval/rubric.ts"
+      },
+      {
+        "uid": "Property:packages/types/src/eval/rubric.ts:RubricConfigLLM.model",
+        "name": "model",
+        "filePath": "packages/types/src/eval/rubric.ts"
+      },
+      {
+        "uid": "Property:packages/types/src/eval/rubric.ts:RubricConfigLLM.provider",
+        "name": "provider",
+        "filePath": "packages/types/src/eval/rubric.ts"
+      },
+      {
+        "uid": "Property:packages/types/src/eval/rubric.ts:RubricConfigLLM.systemRole",
+        "name": "systemRole",
+        "filePath": "packages/types/src/eval/rubric.ts"
+      }
+    ],
+    "calls": [
+      {
+        "uid": "Function:packages/eval-rubric/src/matchers/llmRubric.ts:buildJudgeUserPrompt",
+        "name": "buildJudgeUserPrompt",
+        "filePath": "packages/eval-rubric/src/matchers/llmRubric.ts"
+      },
+      {
+        "uid": "Property:packages/eval-rubric/src/matchers/types.ts:MatchContext.generateObject",
+        "name": "generateObject",
+        "filePath": "packages/eval-rubric/src/matchers/types.ts"
+      }
+    ]
+  },
+  "processes": []
+}

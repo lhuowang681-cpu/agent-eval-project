@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-14T09:25:17.938378+00:00",
+  "phase": "before_paid_smoke",
+  "files": {
+    "integration/prepare.test.ts": "0bb45bed29131367c6ed7280341170b6f0978ba1d1b277dfa0ff2616695039a5",
+    "integration/provider-transport.patch": "df9d1f6958c22a71840c07645702e8f7b9f11030a8e279fdb42dc4f8aef76879",
+    "integration/provider.ts": "616412edbfd6f9dabf93fcedce1237620b82ea153370c9ec2252d30460b34fb5",
+    "integration/smoke.ts": "ead0222d01f4f93cd1516f1a03be7065f0dfa81a9f76f98107ac8efcfa8bf692",
+    "SMOKE_CONFIG.json": "53e4e6a9e6db89d8c0db3ec715bd8df0578369dfcaf4c91da8c0f25b7e93191e",
+    "EXPERIMENT_PROTOCOL.md": "081c237eb02e0fd301bd3036bf0d656f7fa44523cba72893a5ae1d5610f1a90b",
+    "smoke/answer_mismatch.json": "2a141baf74fb932de34a8b53cd6d77283dc8a2cb4e461cfcea77c6830785318f",
+    "smoke/CASES.json": "75a95bfe14c49c145000d71792300a5a7fd53262f41b30c73429b5a44f50a984",
+    "smoke/insufficient.json": "5cc7ccd8430b87f0a435c97888c710ce71db7f55e9dc4d88b9e8c339cf258d31",
+    "smoke/normal.json": "c37612d8e0fab825a5407df7ddc2e8d06a203d4707982a5433e22c3b411ec3a8",
+    "smoke/parameter_closed.json": "3e48d8bd51272b53cdf42c8e87831509a5ac104210c1245de41143565d01ff73",
+    "smoke/recovered.json": "0ec16df08b0ee475600b75f4ef9307092584f2d12ebf63f60afdb4a60637e318",
+    "smoke/stale_result.json": "328f1f84c783a2c2617503bc8cc2768113ab283ef308af5741f8be1c79b31417",
+    "gold/REVIEW.json": "7367dce31f0f03161da393673b72ac9487a48f9c3691ab4b7a7965e54c39c8ab",
+    "gold/VIEW.jsonl": "3c457021d43bee51624b4e0707f603b3f3774ab718ba6df71e229df522199d73"
+  },
+  "approvalFileIntentionallySeparate": true,
+  "paidRequests": 0
+}

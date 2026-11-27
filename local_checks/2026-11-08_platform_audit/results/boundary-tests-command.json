@@ -1,0 +1,13 @@
+{
+  "label": "boundary-tests",
+  "cwd": ".",
+  "command": [
+    "node",
+    "tooling/node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "tooling/audit-boundaries.config.mts"
+  ],
+  "exitCode": 0,
+  "seconds": 1.21
+}

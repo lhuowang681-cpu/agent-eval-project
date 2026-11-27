@@ -1,0 +1,1024 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform[39m
+
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.judge.test.ts [2m([22m[2m24 tests[22m[2m)[22m[33m 1434[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/judgeLifecycle.test.ts [2m([22m[2m21 tests[22m[2m)[22m[33m 2017[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalAttribution/__tests__/python.integration.test.ts [2m([22m[2m27 tests[22m[2m)[22m[33m 1078[2mms[22m[39m
+[90mstderr[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mterminates K2 when startup failure arrives first
+[22m[39m[run-thread-trajectory] execAgent failed for run=run_uxKDBatfVm5W thread=thd_srHa5v0qjQY6pN8M: Error: Synthetic startup failure
+    at Object.<anonymous> [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:65:19[90m)[39m
+    at Object.mockCall [90m(file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/@vitest+spy@3.2.7/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15[90m)[39m
+    at Object.spy [as execAgent] [90m(file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/tinyspy@4.0.4/node_modules/[4mtinyspy[24m/dist/index.js:47:80[90m)[39m
+    at AgentEvalRunService.executeThreadTrajectory [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:435:47[90m)[39m
+    at onThread [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:88:34[90m)[39m
+    at [90mC:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:398:9
+    at Array.map (<anonymous>)
+    at AgentEvalRunService.executeMultiThreadTrajectory [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:397:17[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90mC:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:79:7
+
+2026-11-14T08:43:54.078Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_uxKDBatfVm5W
+2026-11-14T08:43:54.081Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:43:54.082Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 104,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 0
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mterminates K2 when startup failure arrives first
+[22m[39m[finalize-run] Run run_uxKDBatfVm5W completed: score=1.00 pass=1/1 error=0
+
+[90mstderr[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mterminates K2 when startup failure arrives last
+[22m[39m[run-thread-trajectory] execAgent failed for run=run_aNKtzOqQPncY thread=thd_SOKLYQylJSTkiqWP: Error: Synthetic startup failure
+    at Object.<anonymous> [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:65:19[90m)[39m
+    at Object.mockCall [90m(file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/@vitest+spy@3.2.7/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15[90m)[39m
+    at Object.spy [as execAgent] [90m(file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/tinyspy@4.0.4/node_modules/[4mtinyspy[24m/dist/index.js:47:80[90m)[39m
+    at AgentEvalRunService.executeThreadTrajectory [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:435:47[90m)[39m
+    at onThread [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:88:34[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at async Promise.all (index 1)
+    at AgentEvalRunService.executeMultiThreadTrajectory [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:396:5[90m)[39m
+    at [90mC:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:79:7
+    at [90mfile:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@3.2.7/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+
+2026-11-14T08:43:54.173Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_aNKtzOqQPncY
+2026-11-14T08:43:54.176Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:43:54.176Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 47,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 0
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mterminates K2 when startup failure arrives last
+[22m[39m[finalize-run] Run run_aNKtzOqQPncY completed: score=1.00 pass=1/1 error=0
+
+[90mstderr[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mterminates K2 when startup failure arrives both
+[22m[39m[run-thread-trajectory] execAgent failed for run=run_W0oeY9hvnzSR thread=thd_Vt0TQK6HKSra7ycR: Error: Synthetic startup failure
+    at Object.<anonymous> [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:65:19[90m)[39m
+    at Object.mockCall [90m(file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/@vitest+spy@3.2.7/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15[90m)[39m
+    at Object.spy [as execAgent] [90m(file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/tinyspy@4.0.4/node_modules/[4mtinyspy[24m/dist/index.js:47:80[90m)[39m
+    at AgentEvalRunService.executeThreadTrajectory [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:435:47[90m)[39m
+    at onThread [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:88:34[90m)[39m
+    at [90mC:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:398:9
+    at Array.map (<anonymous>)
+    at AgentEvalRunService.executeMultiThreadTrajectory [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:397:17[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90mC:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:79:7
+
+[90mstderr[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mterminates K2 when startup failure arrives both
+[22m[39m[run-thread-trajectory] execAgent failed for run=run_W0oeY9hvnzSR thread=thd_KMJKw8ILK8jMRH24: Error: Synthetic startup failure
+    at Object.<anonymous> [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:65:19[90m)[39m
+    at Object.mockCall [90m(file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/@vitest+spy@3.2.7/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15[90m)[39m
+    at Object.spy [as execAgent] [90m(file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/tinyspy@4.0.4/node_modules/[4mtinyspy[24m/dist/index.js:47:80[90m)[39m
+    at AgentEvalRunService.executeThreadTrajectory [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:435:47[90m)[39m
+    at onThread [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:88:34[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at async Promise.all (index 1)
+    at AgentEvalRunService.executeMultiThreadTrajectory [90m(C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\index.ts:396:5[90m)[39m
+    at [90mC:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\localThreadCompletion.integration.test.ts:79:7
+    at [90mfile:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@3.2.7/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+
+2026-11-14T08:43:54.242Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_W0oeY9hvnzSR
+2026-11-14T08:43:54.243Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:43:54.243Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 0,
+  completedCases: 1,
+  cost: undefined,
+  duration: 25,
+  errorCases: 1,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 0,
+  passedCases: 0,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 0,
+  passAllK: 0
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mterminates K2 when startup failure arrives both
+[22m[39m[finalize-run] Run run_W0oeY9hvnzSR failed: score=0.00 pass=0/1 error=1
+
+2026-11-14T08:43:54.370Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_7QhQWLa2RuZW
+2026-11-14T08:43:54.372Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:43:54.372Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 21,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mretains K1 scoring when execAgent resolves after onComplete
+[22m[39m[finalize-run] Run run_7QhQWLa2RuZW completed: score=1.00 pass=1/1 error=0
+
+2026-11-14T08:43:54.560Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_G3iR39fwwOdp
+2026-11-14T08:43:54.563Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:54.563Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 166,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mcontains: three cases, concurrent callbacks=false
+[22m[39m[finalize-run] Run run_G3iR39fwwOdp completed: score=1.00 pass=3/3 error=0
+
+2026-11-14T08:43:54.732Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_eI5aWdUoujF8
+2026-11-14T08:43:54.733Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_eI5aWdUoujF8
+2026-11-14T08:43:54.734Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_eI5aWdUoujF8
+2026-11-14T08:43:54.735Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_eI5aWdUoujF8
+2026-11-14T08:43:54.736Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_eI5aWdUoujF8
+2026-11-14T08:43:54.739Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_eI5aWdUoujF8
+2026-11-14T08:43:54.746Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:54.746Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 152,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:54.747Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:54.748Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 154,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:54.750Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:54.750Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 156,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:54.752Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:54.752Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 158,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:54.754Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:54.754Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 160,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:54.756Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:54.757Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 162,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mcontains: three cases, concurrent callbacks=true
+[22m[39m[finalize-run] Run run_eI5aWdUoujF8 completed: score=1.00 pass=3/3 error=0
+
+2026-11-14T08:43:55.012Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_V9mChxDmj695
+2026-11-14T08:43:55.016Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:55.016Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 214,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mllm-rubric: three cases, concurrent callbacks=false
+[22m[39m[finalize-run] Run run_V9mChxDmj695 completed: score=1.00 pass=3/3 error=0
+
+2026-11-14T08:43:55.232Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_ladEElpTgm1W
+2026-11-14T08:43:55.234Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_ladEElpTgm1W
+2026-11-14T08:43:55.236Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_ladEElpTgm1W
+2026-11-14T08:43:55.238Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_ladEElpTgm1W
+2026-11-14T08:43:55.240Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_ladEElpTgm1W
+2026-11-14T08:43:55.241Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_ladEElpTgm1W
+2026-11-14T08:43:55.252Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:55.252Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 206,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:55.254Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:55.254Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 208,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:55.256Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:55.257Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 211,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:55.260Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:55.260Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 214,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:55.262Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:55.262Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 216,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:55.265Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:43:55.265Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 219,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mllm-rubric: three cases, concurrent callbacks=true
+[22m[39m[finalize-run] Run run_ladEElpTgm1W completed: score=1.00 pass=3/3 error=0
+
+2026-11-14T08:43:55.345Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_gvoeVdn1rb0l
+2026-11-14T08:43:55.346Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_gvoeVdn1rb0l
+2026-11-14T08:43:55.348Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:43:55.348Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 55,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+2026-11-14T08:43:55.349Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:43:55.349Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 56,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: {},
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined,
+  passAtK: 1,
+  passAllK: 1
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts[2m > [22m[2mlocal K=2 completion hook finalizes run[2m > [22m[2mretains completed thread metadata when execAgent resolves after onComplete
+[22m[39m[finalize-run] Run run_gvoeVdn1rb0l completed: score=1.00 pass=1/1 error=0
+
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 1414[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalAttribution/__tests__/trace.integration.test.ts [2m([22m[2m15 tests[22m[2m)[22m[33m 734[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.thread.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 579[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.trajectory.test.ts [2m([22m[2m13 tests[22m[2m)[22m[33m 475[2mms[22m[39m
+2026-11-14T08:44:29.618Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_e4Flxn1L2cQa
+2026-11-14T08:44:29.622Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:44:29.624Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1034,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mkeeps completed metrics and duration on a delayed sequential duplicate
+[22m[39m[finalize-run] Run run_e4Flxn1L2cQa completed: score=1.00 pass=1/1 error=0
+
+2026-11-14T08:44:29.628Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_e4Flxn1L2cQa
+2026-11-14T08:44:29.688Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_NEHBcivBq4LS
+2026-11-14T08:44:29.725Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_ObZS5l76QQE6
+2026-11-14T08:44:29.726Z lobe-server:agent-eval-run:orchestrator Run aborted, skipping finalize: runId=run_ObZS5l76QQE6
+2026-11-14T08:44:29.763Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_JpOjQ2g3dAS2
+2026-11-14T08:44:29.767Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:44:29.828Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_JpOjQ2g3dAS2
+2026-11-14T08:44:29.831Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:44:29.890Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1021,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2matomically keeps the first finalization when two callbacks computed different durations
+[22m[39m[finalize-run] Run run_JpOjQ2g3dAS2 completed: score=1.00 pass=1/1 error=0
+
+2026-11-14T08:44:29.892Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 31081,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+2026-11-14T08:44:29.927Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_1izJMd6RPJLe
+2026-11-14T08:44:29.929Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:44:29.985Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1016,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+2026-11-14T08:44:30.018Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_vnbbxoxoIclB
+2026-11-14T08:44:30.020Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:44:30.020Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1015,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mallows valid external to finalize after external scoring or retry
+[22m[39m[finalize-run] Run run_vnbbxoxoIclB completed: score=1.00 pass=1/1 error=0
+
+2026-11-14T08:44:30.052Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_L4yXnt0YOaA3
+2026-11-14T08:44:30.055Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-14T08:44:30.055Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1017,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mallows valid running to finalize after external scoring or retry
+[22m[39m[finalize-run] Run run_L4yXnt0YOaA3 completed: score=1.00 pass=1/1 error=0
+
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 498[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.timeout.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 426[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalAttribution/__tests__/tasks.integration.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 537[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.lifecycle.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 304[2mms[22m[39m
+[90mstderr[2m | src/server/services/agentEvalRun/__tests__/trajectoryMethods.test.ts[2m > [22m[2mAgentEvalRunService[2m > [22m[2mexecuteTrajectory[2m > [22m[2mshould mark runTopic as error and return error when execAgent throws
+[22m[39m[run-agent-trajectory] execAgent failed for run=run_KXLZL0pxnDv8 testCase=case_lnQDQ3de8ydX: Error: Connection refused
+    at [90mC:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\[39msrc\server\services\agentEvalRun\__tests__\trajectoryMethods.test.ts:273:39
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90mfile:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/[39mnode_modules/[4m.pnpm[24m/@vitest+runner@3.2.7/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+
+[90mstderr[2m | src/server/services/agentEvalRun/__tests__/trajectoryMethods.test.ts[2m > [22m[2mAgentEvalRunService[2m > [22m[2mexecuteTrajectory[2m > [22m[2mshould handle non-Error thrown value
+[22m[39m[run-agent-trajectory] execAgent failed for run=run_mlIHc6URXV6U testCase=case_nccb8PhYX3Vm: some string error
+
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/trajectoryMethods.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 235[2mms[22m[39m
+2026-11-14T08:45:04.462Z lobe-mcp:deps-check Installation checker registered: npm
+2026-11-14T08:45:04.463Z lobe-mcp:deps-check Installation checker registered: python
+2026-11-14T08:45:04.463Z lobe-mcp:deps-check Installation checker registered: manual
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/evaluateCase.integration.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 173[2mms[22m[39m
+2026-11-14T08:45:18.598Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_3Z2MXjGQGrc5
+2026-11-14T08:45:18.601Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:45:18.602Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 64,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localCompletion.integration.test.ts[2m > [22m[2mlocal completion finalizes an evaluation run[2m > [22m[2mfinalizes three cases, concurrent callbacks=false
+[22m[39m[finalize-run] Run run_3Z2MXjGQGrc5 completed: score=1.00 pass=3/3 error=0
+
+2026-11-14T08:45:18.611Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_3Z2MXjGQGrc5
+2026-11-14T08:45:18.729Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_O1A1r6oTy5Yr
+2026-11-14T08:45:18.730Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_O1A1r6oTy5Yr
+2026-11-14T08:45:18.732Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_O1A1r6oTy5Yr
+2026-11-14T08:45:18.738Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:45:18.738Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 91,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+2026-11-14T08:45:18.740Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:45:18.740Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 93,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+2026-11-14T08:45:18.742Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 3
+2026-11-14T08:45:18.743Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 3,
+  cost: undefined,
+  duration: 95,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 3,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 3,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/localCompletion.integration.test.ts[2m > [22m[2mlocal completion finalizes an evaluation run[2m > [22m[2mfinalizes three cases, concurrent callbacks=true
+[22m[39m[finalize-run] Run run_O1A1r6oTy5Yr completed: score=1.00 pass=3/3 error=0
+
+2026-11-14T08:45:18.755Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_O1A1r6oTy5Yr
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/localCompletion.integration.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 247[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.evaluate.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 132[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.filter.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 101[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/judgeDeadline.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalAttribution/__tests__/contracts.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/judgeMock.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalAttribution/__tests__/review-gate.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m src/server/services/agentEvalRun/__tests__/agentEvalRunService.createRun.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m21 passed[39m[22m[90m (21)[39m
+[2m      Tests [22m [1m[32m225 passed[39m[22m[90m (225)[39m
+[2m   Start at [22m 16:43:07
+[2m   Duration [22m 157.66s[2m (transform 7.06s, setup 56.20s, collect 238.95s, tests 10.47s, environment 3ms, prepare 2.51s)[22m
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-14_real_acceptance/results/ts-regression.json

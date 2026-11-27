@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-12T04:23:13.941735+00:00",
+  "stage": "before_formal_evaluation",
+  "files": {
+    "evaluate.py": "556cb9ab508a4216a0dc5c26654261393a89ac1475127aec3658a42dda936f01",
+    "run_experiment.py": "f86540b9bfc17a9ab88d812186652260432c94bc4ad28dba97be67cfe3417a53",
+    "test_metrics.py": "6028525543c49e5655aac473439bd970f315cafcd5498975427d74b8cbfc23ff",
+    "data/cases.jsonl": "3d6867cf0f5b8cdc1095a37d2ddfc715c77ce4ab9c403df12f201a4924bf5db3",
+    "data/build_cases.py": "046504c141eb453c15a1c1cf355db0a89181c48299e8a4a35e880c2881f8467b",
+    "data/DATA_FREEZE.json": "38c8d8410399d6b430350987e26ed072decacd514dd16fa0e16d8b0965ffbc5b",
+    "data/LABEL_REVIEW.json": "b9840dd814f608053e6a1dab0150e42fff844a6a3c87bf2277a415e4d1124786",
+    "data/LABEL_ADDENDUM.json": "cab97c48b5d12b1f97fc22d270bb02e7a4eb07fb8a6ddcc03eda5024a22185a5"
+  },
+  "singleAuthor": true,
+  "strictBlindGeneralization": false
+}

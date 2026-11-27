@@ -1,0 +1,473 @@
+{
+  "probes": [
+    {
+      "id": "probe-A",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "probe-A",
+        "inputDigest": "probe-A-digest",
+        "scope": {
+          "runId": "probe-Arun",
+          "caseId": "probe-A",
+          "topicId": "probe-Atopic",
+          "threadId": null,
+          "operationId": "probe-Aop",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "probe-A-u",
+            "messageId": "u",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"year\": 2025, \"task\": \"Compare 2025 and 2024; both years permitted\"}",
+            "sourcePointer": "synthetic/u",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "probe-A-c",
+            "messageId": "c",
+            "parentId": null,
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/c",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": "{\"orderId\": \"probe-A-order\", \"year\": 2024}",
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "probe-A-r",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"probe-A-order\", \"status\": \"pending\", \"year\": 2024}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "probe-A-a",
+            "messageId": "a",
+            "parentId": null,
+            "role": "assistant",
+            "content": "{\"orderId\": \"probe-A-order\", \"status\": \"pending\", \"year\": 2024}",
+            "sourcePointer": "synthetic/a",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 8,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "{\"orderId\": \"probe-A-order\", \"year\": 2025}",
+          "expected": null,
+          "actual": "{\"orderId\": \"probe-A-order\", \"status\": \"pending\", \"year\": 2024}",
+          "criteria": null
+        }
+      },
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "probe-Arun",
+          "caseId": "probe-A",
+          "topicId": "probe-Atopic",
+          "threadId": null,
+          "operationId": "probe-Aop",
+          "traceIds": []
+        },
+        "inputDigest": "probe-A-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "probe-A-u",
+                "field": "content",
+                "quote": "{\"year\": 2025, \"task\": \"Compare 2025 and 2024; both years permitted\"}"
+              },
+              {
+                "nodeId": "probe-A-c",
+                "field": "arguments",
+                "quote": "{\"orderId\": \"probe-A-order\", \"year\": 2024}"
+              }
+            ],
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            }
+          }
+        ]
+      },
+      "old": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "probe-Arun",
+          "caseId": "probe-A",
+          "topicId": "probe-Atopic",
+          "threadId": null,
+          "operationId": "probe-Aop",
+          "traceIds": []
+        },
+        "inputDigest": "probe-A-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "probe-A-u",
+                "field": "content",
+                "quote": "{\"year\": 2025, \"task\": \"Compare 2025 and 2024; both years permitted\"}"
+              },
+              {
+                "nodeId": "probe-A-c",
+                "field": "arguments",
+                "quote": "{\"orderId\": \"probe-A-order\", \"year\": 2024}"
+              }
+            ],
+            "summary": "Observed parameter_task_mismatch: year expected 2025; actual 2024. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "new": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "probe-Arun",
+          "caseId": "probe-A",
+          "topicId": "probe-Atopic",
+          "threadId": null,
+          "operationId": "probe-Aop",
+          "traceIds": []
+        },
+        "inputDigest": "probe-A-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "closed_task_constraint_violation_not_proven"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "id": "probe-B",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "probe-B",
+        "inputDigest": "probe-B-digest",
+        "scope": {
+          "runId": "probe-Brun",
+          "caseId": "probe-B",
+          "topicId": "probe-Btopic",
+          "threadId": null,
+          "operationId": "probe-Bop",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "probe-B-u",
+            "messageId": "u",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\": \"probe-B-order\", \"year\": 2025}",
+            "sourcePointer": "synthetic/u",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "probe-B-c",
+            "messageId": "c",
+            "parentId": null,
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/c",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": "{\"orderId\": \"probe-B-order\", \"year\": 2025}",
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "probe-B-r",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"probe-B-order\", \"status\": \"shipped\", \"year\": 2025}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "probe-B-conflict",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"probe-B-order\", \"status\": \"pending\", \"year\": 2025}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": null
+          },
+          {
+            "id": "probe-B-a",
+            "messageId": "a",
+            "parentId": null,
+            "role": "assistant",
+            "content": "{\"orderId\": \"probe-B-order\", \"status\": \"shipped\", \"year\": 2025}",
+            "sourcePointer": "synthetic/a",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 8,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "{\"orderId\": \"probe-B-order\", \"year\": 2025}",
+          "expected": null,
+          "actual": "{\"orderId\": \"probe-B-order\", \"status\": \"shipped\", \"year\": 2025}",
+          "criteria": null
+        }
+      },
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "probe-Brun",
+          "caseId": "probe-B",
+          "topicId": "probe-Btopic",
+          "threadId": null,
+          "operationId": "probe-Bop",
+          "traceIds": []
+        },
+        "inputDigest": "probe-B-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "probe-B-conflict",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"probe-B-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "probe-B-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"probe-B-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "old": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "probe-Brun",
+          "caseId": "probe-B",
+          "topicId": "probe-Btopic",
+          "threadId": null,
+          "operationId": "probe-Bop",
+          "traceIds": []
+        },
+        "inputDigest": "probe-B-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "probe-B-conflict",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"probe-B-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "probe-B-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"probe-B-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "new": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "probe-Brun",
+          "caseId": "probe-B",
+          "topicId": "probe-Btopic",
+          "threadId": null,
+          "operationId": "probe-Bop",
+          "traceIds": []
+        },
+        "inputDigest": "probe-B-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "conflicting_results_for_call"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      }
+    }
+  ],
+  "previous": [
+    {
+      "experiment": "replay-dev",
+      "savedVerdictsReproduced": 12
+    },
+    {
+      "experiment": "replay-holdout",
+      "savedVerdictsReproduced": 24
+    },
+    {
+      "experiment": "real-holdout",
+      "savedVerdictsReproduced": 6
+    }
+  ],
+  "externalCalls": 0
+}

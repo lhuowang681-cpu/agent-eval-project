@@ -1,0 +1,20 @@
+{
+  "label": "final-after-k2",
+  "cwd": "../../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/server/services/agentEvalRun/__tests__",
+    "src/routes/(main)/eval/config/judgeConfig.test.ts",
+    "--environment=node",
+    "--maxWorkers=2",
+    "--testTimeout=20000",
+    "--hookTimeout=60000",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_phase2/increment1/final-after-k2.json"
+  ],
+  "exitCode": 0,
+  "seconds": 212.57
+}

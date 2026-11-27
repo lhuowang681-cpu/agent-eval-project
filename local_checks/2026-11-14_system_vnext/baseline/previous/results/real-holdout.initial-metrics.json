@@ -1,0 +1,155 @@
+{
+  "metrics": {
+    "rules": {
+      "cases": 6,
+      "claims": 0,
+      "correctObservations": 0,
+      "wrongObservations": 0,
+      "falseSupport": null,
+      "falseGap": null,
+      "validReferences": 0,
+      "references": 0,
+      "referenceValidity": null,
+      "semanticPositiveCases": 4,
+      "coveredSemanticCases": 0,
+      "effectiveSemanticCaseCoverage": 0.0,
+      "semanticCategoriesDetected": 0,
+      "semanticCategoryTargets": 6,
+      "abstentions": 6,
+      "abstentionRate": 1.0,
+      "byType": {
+        "A": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "B": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "C": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "normal": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "recovered": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "multi": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        }
+      }
+    },
+    "direct": {
+      "cases": 6,
+      "claims": 6,
+      "correctObservations": 6,
+      "wrongObservations": 0,
+      "falseSupport": null,
+      "falseGap": null,
+      "validReferences": 13,
+      "references": 13,
+      "referenceValidity": 1.0,
+      "semanticPositiveCases": 4,
+      "coveredSemanticCases": 4,
+      "effectiveSemanticCaseCoverage": 1.0,
+      "semanticCategoriesDetected": 6,
+      "semanticCategoryTargets": 6,
+      "abstentions": 2,
+      "abstentionRate": 0.3333333333333333,
+      "byType": {
+        "A": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "B": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "C": {
+          "cases": 1,
+          "claims": 2,
+          "correctCategories": 2
+        },
+        "normal": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "recovered": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "multi": {
+          "cases": 1,
+          "claims": 2,
+          "correctCategories": 2
+        }
+      }
+    },
+    "reviewed": {
+      "cases": 6,
+      "claims": 6,
+      "correctObservations": 6,
+      "wrongObservations": 0,
+      "falseSupport": 0,
+      "falseGap": 0,
+      "validReferences": 13,
+      "references": 13,
+      "referenceValidity": 1.0,
+      "semanticPositiveCases": 4,
+      "coveredSemanticCases": 4,
+      "effectiveSemanticCaseCoverage": 1.0,
+      "semanticCategoriesDetected": 6,
+      "semanticCategoryTargets": 6,
+      "abstentions": 2,
+      "abstentionRate": 0.3333333333333333,
+      "byType": {
+        "A": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "B": {
+          "cases": 1,
+          "claims": 1,
+          "correctCategories": 1
+        },
+        "C": {
+          "cases": 1,
+          "claims": 2,
+          "correctCategories": 2
+        },
+        "normal": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "recovered": {
+          "cases": 1,
+          "claims": 0,
+          "correctCategories": 0
+        },
+        "multi": {
+          "cases": 1,
+          "claims": 2,
+          "correctCategories": 2
+        }
+      }
+    }
+  },
+  "note": "Prior evaluator output retained; use final metrics, see EVALUATOR_CHANGELOG.md"
+}

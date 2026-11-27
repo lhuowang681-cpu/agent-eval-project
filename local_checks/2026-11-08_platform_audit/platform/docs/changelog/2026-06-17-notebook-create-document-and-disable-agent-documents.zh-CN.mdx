@@ -1,0 +1,28 @@
+---
+title: "Notebook createDocument Fix and Agent Documents Disabled \U0001F4D3"
+description: >-
+  Notebook createDocument no longer fails when content is omitted, and Agent
+  Documents is temporarily disabled to avoid accidental context pollution.
+tags:
+  - Notebook
+  - Agent Documents
+  - Bug Fix
+  - Agent Tools
+---
+
+# Notebook 创建文档修复与 Agent Documents 临时禁用 📓
+
+本次更新让 Notebook 的文档创建对能力较弱的模型更友好，并临时禁用 Agent Documents 工具，避免用户无意间创建 agent 文档后污染对话上下文、造成困惑。
+
+## 🐛 问题修复
+
+- 📓 **Notebook `createDocument` 不再要求必填 `content`**：当 Agent 未传正文时，工具会依次回退到 `description`，再回退到空字符串，而不是直接校验失败。能力较弱的模型在只传标题和摘要、想先占位再补内容时，不再频繁调用出错。
+
+## 🌟 重要更新
+
+- 🚫 **临时禁用 Agent Documents 工具**：即使 Agent 配置里曾勾选该内置工具，也不会再向 Agent 暴露。这样可以避免用户无意间创建 agent 级文档、把大量内容注入上下文，导致对话变乱、体验困惑。后续会改为**渐进式加载 agent document** 的方式重新开放。
+
+## 💡 使用建议
+
+- 需要在本话题内保存笔记、报告、草稿时，优先使用 **Notebook**，用户可在侧边栏查看和编辑。
+- 若需要跨 Agent 共享的工作文档，请等待后续的渐进式加载方案，当前对话中请勿依赖 Agent Documents。

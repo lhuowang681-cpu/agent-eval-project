@@ -1,0 +1,24 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric[39m
+
+ [32m✓[39m src/matchers/judgeContext.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/jsonSchema.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 67[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/llmRubric.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m __tests__/extractors.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m __tests__/evaluate.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m __tests__/boundaries.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/anyOf.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/contains.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/numeric.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/levenshtein.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/endsWith.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/equals.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/startsWith.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m src/matchers/__tests__/regex.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m14 passed[39m[22m[90m (14)[39m
+[2m      Tests [22m [1m[32m99 passed[39m[22m[90m (99)[39m
+[2m   Start at [22m 16:26:34
+[2m   Duration [22m 77.56s[2m (transform 369ms, setup 59.91s, collect 1.37s, tests 143ms, environment 10.61s, prepare 2.01s)[22m
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase2/increment1/rubric.json

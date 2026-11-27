@@ -1,0 +1,13 @@
+{
+  "name": "@lobechat/heterogeneous-agents",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client/index.ts"
+  },
+  "main": "./src/index.ts",
+  "peerDependencies": {
+    "@lobehub/icons": "*"
+  }
+}

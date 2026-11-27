@@ -1,0 +1,1779 @@
+{
+  "utc": "2026-11-14T09:17:31.904357+00:00",
+  "originalFileSha256": "11024d010df603a5af6164457c8eb2af8e2893fc0b2cd07839fb286731b556be",
+  "priorAdjudicationSha256": "afa4da3202e839f357be673cd71dd57b983ce8df3e96edb4b4f5c705cb92de73",
+  "newLabelChanges": 0,
+  "reviewBeforeNewModelOutput": true,
+  "independentHumanGold": false,
+  "caseReviews": [
+    {
+      "id": "fresh-0",
+      "scenario": "parameter",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "parameter_task_mismatch",
+          "key": "year",
+          "expected": 2027,
+          "actual": 2023,
+          "evidenceScope": [
+            [
+              "fresh-0-n0",
+              "content"
+            ],
+            [
+              "fresh-0-n1",
+              "arguments"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-0-n0",
+            "content"
+          ],
+          [
+            "fresh-0-n1",
+            "arguments"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-1",
+      "scenario": "legal_base",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-2",
+      "scenario": "ambiguous",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": true,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-3",
+      "scenario": "changed",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "parameter_task_mismatch",
+          "key": "year",
+          "expected": 2028,
+          "actual": 2027,
+          "evidenceScope": [
+            [
+              "fresh-3-n0",
+              "content"
+            ],
+            [
+              "fresh-3-n1",
+              "arguments"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-3-n0",
+            "content"
+          ],
+          [
+            "fresh-3-n1",
+            "arguments"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "change_in_one_text_not_true_multi_turn",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-4",
+      "scenario": "answer",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "unpaid",
+          "actual": "paid",
+          "evidenceScope": [
+            [
+              "fresh-4-n2",
+              "content"
+            ],
+            [
+              "fresh-4-n3",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-4-n2",
+            "content"
+          ],
+          [
+            "fresh-4-n3",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-5",
+      "scenario": "answer",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": 9,
+          "actual": 90,
+          "evidenceScope": [
+            [
+              "fresh-5-n2",
+              "content"
+            ],
+            [
+              "fresh-5-n3",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-5-n2",
+            "content"
+          ],
+          [
+            "fresh-5-n3",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-6",
+      "scenario": "answer",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "available",
+          "actual": "borrowed",
+          "evidenceScope": [
+            [
+              "fresh-6-n2",
+              "content"
+            ],
+            [
+              "fresh-6-n3",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-6-n2",
+            "content"
+          ],
+          [
+            "fresh-6-n3",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-7",
+      "scenario": "stale",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "cancelled",
+          "actual": "confirmed",
+          "evidenceScope": [
+            [
+              "fresh-7-n4",
+              "content"
+            ],
+            [
+              "fresh-7-n5",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        },
+        {
+          "kind": "stale_information_use",
+          "key": "state",
+          "expected": "cancelled",
+          "actual": "confirmed",
+          "evidenceScope": [
+            [
+              "fresh-7-n2",
+              "content"
+            ],
+            [
+              "fresh-7-n4",
+              "content"
+            ],
+            [
+              "fresh-7-n5",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-7-n4",
+            "content"
+          ],
+          [
+            "fresh-7-n5",
+            "content"
+          ]
+        ],
+        [
+          [
+            "fresh-7-n2",
+            "content"
+          ],
+          [
+            "fresh-7-n4",
+            "content"
+          ],
+          [
+            "fresh-7-n5",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-8",
+      "scenario": "recovered",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": true,
+      "evaluationPassed": true,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-8-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-8-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-9",
+      "scenario": "recovered",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": true,
+      "evaluationPassed": true,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-9-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-9-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-10",
+      "scenario": "normal",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-11",
+      "scenario": "normal",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-12",
+      "scenario": "nested",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-13",
+      "scenario": "nested",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-14",
+      "scenario": "explicit",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-14-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-14-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-15",
+      "scenario": "explicit",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-15-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-15-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-16",
+      "scenario": "short",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-16-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-16-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "gold_observation_does_not_itself_test_adversarial_candidate",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-17",
+      "scenario": "short",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-17-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-17-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "gold_observation_does_not_itself_test_adversarial_candidate",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-18",
+      "scenario": "missing",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": true,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-19",
+      "scenario": "unpaired",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": true,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-20",
+      "scenario": "conflict",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": true,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-21",
+      "scenario": "duplicate",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "pending",
+          "actual": "sent",
+          "evidenceScope": [
+            [
+              "fresh-21-n3",
+              "content"
+            ],
+            [
+              "fresh-21-n4",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-21-n3",
+            "content"
+          ],
+          [
+            "fresh-21-n4",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-22",
+      "scenario": "root",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "pending",
+          "actual": "sent",
+          "evidenceScope": [
+            [
+              "fresh-22-n2",
+              "content"
+            ],
+            [
+              "fresh-22-n3",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-22-n2",
+            "content"
+          ],
+          [
+            "fresh-22-n3",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "gold_observation_does_not_itself_test_adversarial_candidate",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-23",
+      "scenario": "legal_base",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-24",
+      "scenario": "answer",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "rejected",
+          "actual": "approved",
+          "evidenceScope": [
+            [
+              "fresh-24-n2",
+              "content"
+            ],
+            [
+              "fresh-24-n3",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-24-n2",
+            "content"
+          ],
+          [
+            "fresh-24-n3",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-25",
+      "scenario": "stale",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": 3,
+          "actual": 6,
+          "evidenceScope": [
+            [
+              "fresh-25-n4",
+              "content"
+            ],
+            [
+              "fresh-25-n5",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        },
+        {
+          "kind": "stale_information_use",
+          "key": "state",
+          "expected": 3,
+          "actual": 6,
+          "evidenceScope": [
+            [
+              "fresh-25-n2",
+              "content"
+            ],
+            [
+              "fresh-25-n4",
+              "content"
+            ],
+            [
+              "fresh-25-n5",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-25-n4",
+            "content"
+          ],
+          [
+            "fresh-25-n5",
+            "content"
+          ]
+        ],
+        [
+          [
+            "fresh-25-n2",
+            "content"
+          ],
+          [
+            "fresh-25-n4",
+            "content"
+          ],
+          [
+            "fresh-25-n5",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-26",
+      "scenario": "recovered_quality",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": true,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-26-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-26-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-27",
+      "scenario": "nested",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-28",
+      "scenario": "multi",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "parameter_task_mismatch",
+          "key": "year",
+          "expected": 2027,
+          "actual": 2023,
+          "evidenceScope": [
+            [
+              "fresh-28-n0",
+              "content"
+            ],
+            [
+              "fresh-28-n1",
+              "arguments"
+            ]
+          ],
+          "rootClaimVerified": false
+        },
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": 2027,
+          "actual": 2023,
+          "evidenceScope": [
+            [
+              "fresh-28-n2",
+              "content"
+            ],
+            [
+              "fresh-28-n3",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-28-n0",
+            "content"
+          ],
+          [
+            "fresh-28-n1",
+            "arguments"
+          ]
+        ],
+        [
+          [
+            "fresh-28-n2",
+            "content"
+          ],
+          [
+            "fresh-28-n3",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "previous_explicit_addendum_adds_answer_observation",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-29",
+      "scenario": "multi_call",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "not_shipped",
+          "actual": "shipped",
+          "evidenceScope": [
+            [
+              "fresh-29-n4",
+              "content"
+            ],
+            [
+              "fresh-29-n5",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-29-n4",
+            "content"
+          ],
+          [
+            "fresh-29-n5",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-30",
+      "scenario": "normal_text",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-31",
+      "scenario": "ambiguous",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": true,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-32",
+      "scenario": "natural_result",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "not_delivered",
+          "actual": "delivered",
+          "evidenceScope": [
+            [
+              "fresh-32-n2",
+              "content"
+            ],
+            [
+              "fresh-32-n3",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-32-n2",
+            "content"
+          ],
+          [
+            "fresh-32-n3",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-33",
+      "scenario": "natural_answer",
+      "observableFault": true,
+      "explicitFault": false,
+      "semanticFault": true,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "answer_tool_mismatch",
+          "key": "state",
+          "expected": "pending",
+          "actual": "approved",
+          "evidenceScope": [
+            [
+              "fresh-33-n2",
+              "content"
+            ],
+            [
+              "fresh-33-n3",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-33-n2",
+            "content"
+          ],
+          [
+            "fresh-33-n3",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-34",
+      "scenario": "legal_base",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-35",
+      "scenario": "recovered",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": true,
+      "evaluationPassed": true,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-35-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-35-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-36",
+      "scenario": "explicit",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-36-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-36-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-37",
+      "scenario": "explicit_semantic",
+      "observableFault": true,
+      "explicitFault": true,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [
+        {
+          "kind": "execution_failure",
+          "key": null,
+          "expected": null,
+          "actual": null,
+          "evidenceScope": [
+            [
+              "fresh-37-n2",
+              "content"
+            ]
+          ],
+          "rootClaimVerified": false
+        }
+      ],
+      "evidenceScope": [
+        [
+          [
+            "fresh-37-n2",
+            "content"
+          ]
+        ]
+      ],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "task_contains_diagnostic_or_answer_hint",
+        "previous_addendum_correctly_excludes_latent_unobserved_state",
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-38",
+      "scenario": "unknown_source",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": false,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": true,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    },
+    {
+      "id": "fresh-39",
+      "scenario": "normal_multi",
+      "observableFault": false,
+      "explicitFault": false,
+      "semanticFault": false,
+      "recovered": false,
+      "evaluationPassed": true,
+      "correctObservations": [],
+      "evidenceScope": [],
+      "forbiddenConclusions": [
+        "unproven root cause",
+        "internal module ownership",
+        "recovered incident implies final failure"
+      ],
+      "abstainDueToInsufficientEvidence": false,
+      "rootVerified": false,
+      "reviewerIndependent": false,
+      "newRealModelOutputsSeen": false,
+      "labelChangeThisRound": false,
+      "limitations": [
+        "single_author_synthetic",
+        "no_causal_root_positive",
+        "shared_flat_json_scaffold"
+      ]
+    }
+  ]
+}

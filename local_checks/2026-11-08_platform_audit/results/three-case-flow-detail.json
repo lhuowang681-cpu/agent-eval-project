@@ -1,0 +1,768 @@
+{
+  "conditions": "PGlite + actual parser/models/eval service/rubric; AiAgentService.execAgent synthetic substitute; no actual model/tool execution or HTTP/browser. Judge run characterizes a missing injected judge context, not model failure.",
+  "before": {
+    "run": {
+      "id": "run_UW95nnTqU4u8",
+      "datasetId": "ds_LbyqEdV8BtmJ",
+      "targetAgentId": "agt_3pPLISb5nuYQ",
+      "userId": "audit-three-cases",
+      "name": "v1",
+      "status": "running",
+      "config": {
+        "agentSnapshot": {
+          "model": "synthetic-model",
+          "title": "Audit Agent",
+          "params": {
+            "top_p": 1,
+            "temperature": 1,
+            "presence_penalty": 0,
+            "frequency_penalty": 0
+          },
+          "plugins": [
+            "builtin-feishu-mcp",
+            "lobe-artifacts"
+          ],
+          "provider": "audit",
+          "chatConfig": {
+            "searchMode": "auto",
+            "historyCount": 20,
+            "searchFCModel": {
+              "model": "claude-sonnet-4-6",
+              "provider": "openai"
+            },
+            "enableReasoning": true,
+            "enableStreaming": true,
+            "enableHistoryCount": false,
+            "reasoningBudgetToken": 1024,
+            "enableAutoCreateTopic": true,
+            "enableCompressHistory": true,
+            "enableAdaptiveThinking": true,
+            "autoCreateTopicThreshold": 2,
+            "enableContextCompression": true
+          },
+          "systemRole": "v1",
+          "description": null
+        }
+      },
+      "metrics": {
+        "steps": 3,
+        "tokens": 15,
+        "llmCalls": 3,
+        "errorCases": 0,
+        "totalCases": 3,
+        "failedCases": 1,
+        "passedCases": 2,
+        "totalTokens": 15,
+        "perCaseSteps": 1,
+        "timeoutCases": 0,
+        "perCaseTokens": 5,
+        "totalDuration": 30,
+        "completedCases": 3,
+        "perCaseLlmCalls": 1
+      },
+      "startedAt": null,
+      "accessedAt": "2026-11-08T06:37:17.515Z",
+      "createdAt": "2026-11-08T06:37:17.443Z",
+      "updatedAt": "2026-11-08T06:37:17.515Z"
+    },
+    "cases": [
+      {
+        "createdAt": "2026-11-08T06:37:17.448Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_UW95nnTqU4u8-0",
+          "rubricScores": [
+            {
+              "score": 1,
+              "rubricId": "eval-mode-equals"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": true,
+        "runId": "run_UW95nnTqU4u8",
+        "score": 1,
+        "status": "passed",
+        "testCase": {
+          "id": "case_VT04US02mlfk",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q1",
+            "expected": "42"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 0,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_VT04US02mlfk",
+        "topic": {
+          "id": "tpc_biyJas1WbEAw",
+          "title": "[Eval Case #1] Q1...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.445Z",
+          "createdAt": "2026-11-08T06:37:17.445Z",
+          "updatedAt": "2026-11-08T06:37:17.445Z"
+        },
+        "topicId": "tpc_biyJas1WbEAw"
+      },
+      {
+        "createdAt": "2026-11-08T06:37:17.448Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_UW95nnTqU4u8-1",
+          "rubricScores": [
+            {
+              "score": 0,
+              "rubricId": "eval-mode-equals"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": false,
+        "runId": "run_UW95nnTqU4u8",
+        "score": 0,
+        "status": "failed",
+        "testCase": {
+          "id": "case_NWs2TgulD4II",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q2",
+            "expected": "Paris"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 1,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_NWs2TgulD4II",
+        "topic": {
+          "id": "tpc_P6jqAB1CWRfc",
+          "title": "[Eval Case #2] Q2...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.445Z",
+          "createdAt": "2026-11-08T06:37:17.445Z",
+          "updatedAt": "2026-11-08T06:37:17.445Z"
+        },
+        "topicId": "tpc_P6jqAB1CWRfc"
+      },
+      {
+        "createdAt": "2026-11-08T06:37:17.448Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_UW95nnTqU4u8-2",
+          "rubricScores": [
+            {
+              "score": 1,
+              "rubricId": "eval-mode-equals"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": true,
+        "runId": "run_UW95nnTqU4u8",
+        "score": 1,
+        "status": "passed",
+        "testCase": {
+          "id": "case_0pFOGxElJcc1",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q3",
+            "expected": "yes"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 2,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_0pFOGxElJcc1",
+        "topic": {
+          "id": "tpc_jIFIylG5mS0r",
+          "title": "[Eval Case #3] Q3...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.445Z",
+          "createdAt": "2026-11-08T06:37:17.445Z",
+          "updatedAt": "2026-11-08T06:37:17.445Z"
+        },
+        "topicId": "tpc_jIFIylG5mS0r"
+      }
+    ]
+  },
+  "after": {
+    "run": {
+      "id": "run_8pZHs4eWxe0T",
+      "datasetId": "ds_LbyqEdV8BtmJ",
+      "targetAgentId": "agt_3pPLISb5nuYQ",
+      "userId": "audit-three-cases",
+      "name": "v2",
+      "status": "running",
+      "config": {
+        "agentSnapshot": {
+          "model": "synthetic-model",
+          "title": "Audit Agent",
+          "params": {
+            "top_p": 1,
+            "temperature": 1,
+            "presence_penalty": 0,
+            "frequency_penalty": 0
+          },
+          "plugins": [
+            "builtin-feishu-mcp",
+            "lobe-artifacts"
+          ],
+          "provider": "audit",
+          "chatConfig": {
+            "searchMode": "auto",
+            "historyCount": 20,
+            "searchFCModel": {
+              "model": "claude-sonnet-4-6",
+              "provider": "openai"
+            },
+            "enableReasoning": true,
+            "enableStreaming": true,
+            "enableHistoryCount": false,
+            "reasoningBudgetToken": 1024,
+            "enableAutoCreateTopic": true,
+            "enableCompressHistory": true,
+            "enableAdaptiveThinking": true,
+            "autoCreateTopicThreshold": 2,
+            "enableContextCompression": true
+          },
+          "systemRole": "v2",
+          "description": null
+        }
+      },
+      "metrics": {
+        "steps": 3,
+        "tokens": 15,
+        "llmCalls": 3,
+        "errorCases": 0,
+        "totalCases": 3,
+        "failedCases": 0,
+        "passedCases": 3,
+        "totalTokens": 15,
+        "perCaseSteps": 1,
+        "timeoutCases": 0,
+        "perCaseTokens": 5,
+        "totalDuration": 30,
+        "completedCases": 3,
+        "perCaseLlmCalls": 1
+      },
+      "startedAt": null,
+      "accessedAt": "2026-11-08T06:37:17.635Z",
+      "createdAt": "2026-11-08T06:37:17.536Z",
+      "updatedAt": "2026-11-08T06:37:17.635Z"
+    },
+    "cases": [
+      {
+        "createdAt": "2026-11-08T06:37:17.543Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_8pZHs4eWxe0T-0",
+          "rubricScores": [
+            {
+              "score": 1,
+              "rubricId": "eval-mode-equals"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": true,
+        "runId": "run_8pZHs4eWxe0T",
+        "score": 1,
+        "status": "passed",
+        "testCase": {
+          "id": "case_VT04US02mlfk",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q1",
+            "expected": "42"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 0,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_VT04US02mlfk",
+        "topic": {
+          "id": "tpc_ly4Gq25P0GpQ",
+          "title": "[Eval Case #1] Q1...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.540Z",
+          "createdAt": "2026-11-08T06:37:17.540Z",
+          "updatedAt": "2026-11-08T06:37:17.540Z"
+        },
+        "topicId": "tpc_ly4Gq25P0GpQ"
+      },
+      {
+        "createdAt": "2026-11-08T06:37:17.543Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_8pZHs4eWxe0T-1",
+          "rubricScores": [
+            {
+              "score": 1,
+              "rubricId": "eval-mode-equals"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": true,
+        "runId": "run_8pZHs4eWxe0T",
+        "score": 1,
+        "status": "passed",
+        "testCase": {
+          "id": "case_NWs2TgulD4II",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q2",
+            "expected": "Paris"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 1,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_NWs2TgulD4II",
+        "topic": {
+          "id": "tpc_0hB1mIyPkH75",
+          "title": "[Eval Case #2] Q2...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.540Z",
+          "createdAt": "2026-11-08T06:37:17.540Z",
+          "updatedAt": "2026-11-08T06:37:17.540Z"
+        },
+        "topicId": "tpc_0hB1mIyPkH75"
+      },
+      {
+        "createdAt": "2026-11-08T06:37:17.543Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_8pZHs4eWxe0T-2",
+          "rubricScores": [
+            {
+              "score": 1,
+              "rubricId": "eval-mode-equals"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": true,
+        "runId": "run_8pZHs4eWxe0T",
+        "score": 1,
+        "status": "passed",
+        "testCase": {
+          "id": "case_0pFOGxElJcc1",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q3",
+            "expected": "yes"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 2,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_0pFOGxElJcc1",
+        "topic": {
+          "id": "tpc_m2DOpZQiaoFx",
+          "title": "[Eval Case #3] Q3...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.540Z",
+          "createdAt": "2026-11-08T06:37:17.540Z",
+          "updatedAt": "2026-11-08T06:37:17.540Z"
+        },
+        "topicId": "tpc_m2DOpZQiaoFx"
+      }
+    ]
+  },
+  "judgeRun": {
+    "run": {
+      "id": "run_NIzwinCiQbZo",
+      "datasetId": "ds_LbyqEdV8BtmJ",
+      "targetAgentId": "agt_3pPLISb5nuYQ",
+      "userId": "audit-three-cases",
+      "name": "llm-judge-context-check",
+      "status": "running",
+      "config": {
+        "agentSnapshot": {
+          "model": "synthetic-model",
+          "title": "Audit Agent",
+          "params": {
+            "top_p": 1,
+            "temperature": 1,
+            "presence_penalty": 0,
+            "frequency_penalty": 0
+          },
+          "plugins": [
+            "builtin-feishu-mcp",
+            "lobe-artifacts"
+          ],
+          "provider": "audit",
+          "chatConfig": {
+            "searchMode": "auto",
+            "historyCount": 20,
+            "searchFCModel": {
+              "model": "claude-sonnet-4-6",
+              "provider": "openai"
+            },
+            "enableReasoning": true,
+            "enableStreaming": true,
+            "enableHistoryCount": false,
+            "reasoningBudgetToken": 1024,
+            "enableAutoCreateTopic": true,
+            "enableCompressHistory": true,
+            "enableAdaptiveThinking": true,
+            "autoCreateTopicThreshold": 2,
+            "enableContextCompression": true
+          },
+          "systemRole": "v2",
+          "description": null
+        }
+      },
+      "metrics": {
+        "steps": 3,
+        "tokens": 15,
+        "llmCalls": 3,
+        "errorCases": 0,
+        "totalCases": 3,
+        "failedCases": 3,
+        "passedCases": 0,
+        "totalTokens": 15,
+        "perCaseSteps": 1,
+        "timeoutCases": 0,
+        "perCaseTokens": 5,
+        "totalDuration": 30,
+        "completedCases": 3,
+        "perCaseLlmCalls": 1
+      },
+      "startedAt": null,
+      "accessedAt": "2026-11-08T06:37:17.793Z",
+      "createdAt": "2026-11-08T06:37:17.658Z",
+      "updatedAt": "2026-11-08T06:37:17.793Z"
+    },
+    "cases": [
+      {
+        "createdAt": "2026-11-08T06:37:17.667Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_NIzwinCiQbZo-0",
+          "rubricScores": [
+            {
+              "score": 0,
+              "reason": "LLM judge not available",
+              "rubricId": "eval-mode-llm-rubric"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": false,
+        "runId": "run_NIzwinCiQbZo",
+        "score": 0,
+        "status": "failed",
+        "testCase": {
+          "id": "case_VT04US02mlfk",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q1",
+            "expected": "42"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 0,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_VT04US02mlfk",
+        "topic": {
+          "id": "tpc_Dx8wm0XG7uo3",
+          "title": "[Eval Case #1] Q1...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.663Z",
+          "createdAt": "2026-11-08T06:37:17.663Z",
+          "updatedAt": "2026-11-08T06:37:17.663Z"
+        },
+        "topicId": "tpc_Dx8wm0XG7uo3"
+      },
+      {
+        "createdAt": "2026-11-08T06:37:17.667Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_NIzwinCiQbZo-1",
+          "rubricScores": [
+            {
+              "score": 0,
+              "reason": "LLM judge not available",
+              "rubricId": "eval-mode-llm-rubric"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": false,
+        "runId": "run_NIzwinCiQbZo",
+        "score": 0,
+        "status": "failed",
+        "testCase": {
+          "id": "case_NWs2TgulD4II",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q2",
+            "expected": "Paris"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 1,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_NWs2TgulD4II",
+        "topic": {
+          "id": "tpc_Fn3N4OGoniQw",
+          "title": "[Eval Case #2] Q2...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.663Z",
+          "createdAt": "2026-11-08T06:37:17.663Z",
+          "updatedAt": "2026-11-08T06:37:17.663Z"
+        },
+        "topicId": "tpc_Fn3N4OGoniQw"
+      },
+      {
+        "createdAt": "2026-11-08T06:37:17.667Z",
+        "evalResult": {
+          "steps": 1,
+          "tokens": 5,
+          "duration": 10,
+          "llmCalls": 1,
+          "toolCalls": 0,
+          "operationId": "synthetic-op-run_NIzwinCiQbZo-2",
+          "rubricScores": [
+            {
+              "score": 0,
+              "reason": "LLM judge not available",
+              "rubricId": "eval-mode-llm-rubric"
+            }
+          ],
+          "completionReason": "stop"
+        },
+        "passed": false,
+        "runId": "run_NIzwinCiQbZo",
+        "score": 0,
+        "status": "failed",
+        "testCase": {
+          "id": "case_0pFOGxElJcc1",
+          "userId": "audit-three-cases",
+          "datasetId": "ds_LbyqEdV8BtmJ",
+          "content": {
+            "input": "Q3",
+            "expected": "yes"
+          },
+          "evalMode": null,
+          "evalConfig": null,
+          "metadata": null,
+          "sortOrder": 2,
+          "accessedAt": "2026-11-08T06:37:17.412Z",
+          "createdAt": "2026-11-08T06:37:17.412Z",
+          "updatedAt": "2026-11-08T06:37:17.412Z"
+        },
+        "testCaseId": "case_0pFOGxElJcc1",
+        "topic": {
+          "id": "tpc_UwC4Sh0bhMBF",
+          "title": "[Eval Case #3] Q3...",
+          "favorite": false,
+          "sessionId": null,
+          "content": null,
+          "editorData": null,
+          "agentId": "agt_3pPLISb5nuYQ",
+          "groupId": null,
+          "userId": "audit-three-cases",
+          "clientId": null,
+          "description": null,
+          "historySummary": null,
+          "metadata": null,
+          "trigger": "eval",
+          "mode": null,
+          "status": null,
+          "completedAt": null,
+          "accessedAt": "2026-11-08T06:37:17.663Z",
+          "createdAt": "2026-11-08T06:37:17.663Z",
+          "updatedAt": "2026-11-08T06:37:17.663Z"
+        },
+        "topicId": "tpc_UwC4Sh0bhMBF"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "label": "shadow",
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-10_semantic_vnext",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "test_shadow.py"
+    ],
+    "exitCode": 0,
+    "seconds": 1.236
+  },
+  {
+    "label": "old-python",
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/eval-attribution",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exitCode": 0,
+    "seconds": 0.524
+  },
+  {
+    "label": "old-bridge",
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "src/server/services/agentEvalAttribution",
+      "--environment=node",
+      "--maxWorkers=2",
+      "--testTimeout=20000",
+      "--hookTimeout=60000",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-10_semantic_vnext\\results\\old-bridge.json"
+    ],
+    "exitCode": 0,
+    "seconds": 27.145
+  }
+]

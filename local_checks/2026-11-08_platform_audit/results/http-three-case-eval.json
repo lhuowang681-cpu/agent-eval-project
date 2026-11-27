@@ -1,0 +1,10 @@
+{
+  "status": "blocked_or_failed",
+  "conditions": "Real HTTP/DB/Agent runtime/async eval routes; original local Mock LLM, not model quality evidence; no browser interaction",
+  "events": [
+    {
+      "errorType": "HTTPError",
+      "error": "HTTP Error 500: Internal Server Error"
+    }
+  ]
+}

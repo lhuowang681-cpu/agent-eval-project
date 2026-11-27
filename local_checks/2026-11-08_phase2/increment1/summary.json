@@ -1,0 +1,28 @@
+{
+  "rubric": {
+    "tests": 99,
+    "passed": 99,
+    "failed": 0,
+    "files": 14
+  },
+  "finalServiceAndConfig": {
+    "tests": 157,
+    "passed": 157,
+    "failed": 0,
+    "files": 17
+  },
+  "modalRender": {
+    "tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "files": 1
+  },
+  "uniqueTests": 314,
+  "typeCheck": "Parent-coordinated final comparison pending; root reported 295 historical diagnostics.",
+  "routerRegression": {
+    "tests": 54,
+    "passed": 54,
+    "failed": 0,
+    "files": 2
+  }
+}

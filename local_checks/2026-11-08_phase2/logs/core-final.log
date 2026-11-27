@@ -1,0 +1,36 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mC:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform[39m
+
+ [32m✓[39m packages/agent-runtime/src/utils/tokenCounter.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m packages/agent-runtime/src/core/__tests__/runtime.test.ts [2m([22m[2m49 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m packages/agent-runtime/src/agents/__tests__/GeneralChatAgent.test.ts [2m([22m[2m63 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/jsonSchema.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m packages/agent-runtime/src/core/__tests__/InterventionChecker.test.ts [2m([22m[2m57 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m packages/agent-runtime/src/core/__tests__/UsageCounter.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m packages/agent-runtime/src/groupOrchestration/__tests__/GroupOrchestrationSupervisor.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m packages/eval-dataset-parser/__tests__/parseDataset.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/__tests__/boundaries.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/__tests__/evaluate.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m packages/agent-runtime/src/audit/__tests__/createSecurityBlacklistAudit.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m packages/agent-runtime/src/utils/messageSelectors.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/agent-runtime/src/utils/stepContextComputer.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/judgeContext.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/eval-dataset-parser/__tests__/jsonl-lines.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/__tests__/extractors.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/numeric.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/levenshtein.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/contains.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-dataset-parser/__tests__/detectFormat.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/anyOf.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/endsWith.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/equals.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/startsWith.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/regex.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m26 passed[39m[22m[90m (26)[39m
+[2m      Tests [22m [1m[32m376 passed[39m[22m[90m (376)[39m
+[2m   Start at [22m 17:24:44
+[2m   Duration [22m 4.63s[2m (transform 406ms, setup 70ms, collect 1.80s, tests 170ms, environment 3ms, prepare 2.58s)[22m
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase2/regression-core-final.json

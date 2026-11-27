@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-12T04:18:35.373259+00:00",
+  "files": {
+    "cases.jsonl": "3d6867cf0f5b8cdc1095a37d2ddfc715c77ce4ab9c403df12f201a4924bf5db3",
+    "build_cases.py": "046504c141eb453c15a1c1cf355db0a89181c48299e8a4a35e880c2881f8467b"
+  },
+  "cases": 48,
+  "independentAuthor": false,
+  "modelGeneratedLabels": false,
+  "candidateImports": false,
+  "formalEvaluationHasRun": false
+}

@@ -1,0 +1,26 @@
+test_context_and_privacy_gate (__main__.Tests.test_context_and_privacy_gate) ... ok
+test_cross_entity (__main__.Tests.test_cross_entity) ... ok
+test_free_text_not_proven (__main__.Tests.test_free_text_not_proven) ... ok
+test_impact_and_prose_untrusted (__main__.Tests.test_impact_and_prose_untrusted) ... ok
+test_invalid_candidates (__main__.Tests.test_invalid_candidates) ... ok
+test_negative_and_recovered (__main__.Tests.test_negative_and_recovered) ... ok
+test_partial_coverage_and_no_mutation (__main__.Tests.test_partial_coverage_and_no_mutation) ... ok
+test_real_http_mock_errors (__main__.Tests.test_real_http_mock_errors) ... FAIL
+test_scalar_false_not_zero (__main__.Tests.test_scalar_false_not_zero) ... ok
+test_short_excerpt_same_field_context (__main__.Tests.test_short_excerpt_same_field_context) ... ok
+test_three_types (__main__.Tests.test_three_types) ... ok
+test_unknown_source (__main__.Tests.test_unknown_source) ... ok
+
+======================================================================
+FAIL: test_real_http_mock_errors (__main__.Tests.test_real_http_mock_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\1\Desktop\��ҵagent\agent-eval-project\local_checks\2026-11-10_semantic_vnext\test_shadow.py", line 48, in test_real_http_mock_errors
+    Handler.body=body;candidate,meta=generate(make('test','A')['trajectory'],'synthetic','synthetic-test-key',endpoint='http://127.0.0.1:'+str(server.server_port));self.assertEqual(bool(meta['error']),error)
+                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True != False
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.530s
+
+FAILED (failures=1)

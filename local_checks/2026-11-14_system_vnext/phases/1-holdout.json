@@ -1,0 +1,1297 @@
+[
+  {
+    "id": "0",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-0",
+      "inputDigest": "hold-0-digest",
+      "scope": {
+        "runId": "hold-0run",
+        "caseId": "hold-0",
+        "topicId": "hold-0topic",
+        "threadId": null,
+        "operationId": "hold-0op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-0-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-0-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-0-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-0-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-0-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": false, \"message\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-0-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-0-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-0-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-0-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-0-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": true
+  },
+  {
+    "id": "1",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-1",
+      "inputDigest": "hold-1-digest",
+      "scope": {
+        "runId": "hold-1run",
+        "caseId": "hold-1",
+        "topicId": "hold-1topic",
+        "threadId": null,
+        "operationId": "hold-1op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-1-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-1-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-1-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-1-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-1-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": true, \"history\": {\"success\": false, \"message\": \"service unavailable\"}}",
+          "sourcePointer": "synthetic/r",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-1-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-1-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-1-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-1-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-1-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": false
+  },
+  {
+    "id": "2",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-2",
+      "inputDigest": "hold-2-digest",
+      "scope": {
+        "runId": "hold-2run",
+        "caseId": "hold-2",
+        "topicId": "hold-2topic",
+        "threadId": null,
+        "operationId": "hold-2op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-2-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-2-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-2-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-2-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-2-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": true, \"note\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-2-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-2-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-2-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-2-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-2-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": false
+  },
+  {
+    "id": "3",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-3",
+      "inputDigest": "hold-3-digest",
+      "scope": {
+        "runId": "hold-3run",
+        "caseId": "hold-3",
+        "topicId": "hold-3topic",
+        "threadId": null,
+        "operationId": "hold-3op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-3-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-3-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-3-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-3-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-3-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": false, \"message\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-3-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-3-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-3-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-3-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-3-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "root_cause",
+    "expectedLocalAccepted": false
+  },
+  {
+    "id": "4",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-4",
+      "inputDigest": "hold-4-digest",
+      "scope": {
+        "runId": "hold-4run",
+        "caseId": "hold-4",
+        "topicId": "hold-4topic",
+        "threadId": null,
+        "operationId": "hold-4op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-4-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-4-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-4-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-4-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-4-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": false, \"message\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-4-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-4-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-4-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-4-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-4-r",
+        "field": "content",
+        "quote": "not found"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": false
+  },
+  {
+    "id": "5",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-5",
+      "inputDigest": "hold-5-digest",
+      "scope": {
+        "runId": "hold-5run",
+        "caseId": "hold-5",
+        "topicId": "hold-5topic",
+        "threadId": null,
+        "operationId": "hold-5op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-5-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-5-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-5-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-5-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-5-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": false, \"message\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null,
+          "scope": {
+            "caseId": "foreign"
+          }
+        },
+        {
+          "id": "hold-5-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-5-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-5-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-5-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-5-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": false
+  },
+  {
+    "id": "6",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-6",
+      "inputDigest": "hold-6-digest",
+      "scope": {
+        "runId": "hold-6run",
+        "caseId": "hold-6",
+        "topicId": "hold-6topic",
+        "threadId": null,
+        "operationId": "hold-6op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-6-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-6-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-6-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-6-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-6-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": false, \"message\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-6-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-6-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "passed",
+        "score": 1,
+        "task": "{\"orderId\": \"hold-6-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-6-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-6-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": true
+  },
+  {
+    "id": "7",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-7",
+      "inputDigest": "hold-7-digest",
+      "scope": {
+        "runId": "hold-7run",
+        "caseId": "hold-7",
+        "topicId": "hold-7topic",
+        "threadId": null,
+        "operationId": "hold-7op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-7-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-7-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-7-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-7-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-7-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": false, \"message\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-7-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-7-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-7-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-7-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-7-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": true
+  },
+  {
+    "id": "8",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-8",
+      "inputDigest": "hold-8-digest",
+      "scope": {
+        "runId": "hold-8run",
+        "caseId": "hold-8",
+        "topicId": "hold-8topic",
+        "threadId": null,
+        "operationId": "hold-8op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-8-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-8-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-8-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-8-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-8-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": true, \"history\": {\"success\": false, \"message\": \"service unavailable\"}}",
+          "sourcePointer": "synthetic/r",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-8-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-8-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-8-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-8-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-8-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": false
+  },
+  {
+    "id": "9",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-9",
+      "inputDigest": "hold-9-digest",
+      "scope": {
+        "runId": "hold-9run",
+        "caseId": "hold-9",
+        "topicId": "hold-9topic",
+        "threadId": null,
+        "operationId": "hold-9op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-9-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-9-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-9-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-9-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-9-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": true, \"note\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-9-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-9-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-9-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-9-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-9-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": false
+  },
+  {
+    "id": "10",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-10",
+      "inputDigest": "hold-10-digest",
+      "scope": {
+        "runId": "hold-10run",
+        "caseId": "hold-10",
+        "topicId": "hold-10topic",
+        "threadId": null,
+        "operationId": "hold-10op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-10-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-10-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-10-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-10-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-10-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": false, \"message\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-10-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-10-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-10-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-10-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-10-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "root_cause",
+    "expectedLocalAccepted": false
+  },
+  {
+    "id": "11",
+    "trajectory": {
+      "schemaVersion": 1,
+      "trajectoryId": "hold-11",
+      "inputDigest": "hold-11-digest",
+      "scope": {
+        "runId": "hold-11run",
+        "caseId": "hold-11",
+        "topicId": "hold-11topic",
+        "threadId": null,
+        "operationId": "hold-11op",
+        "traceIds": []
+      },
+      "nodes": [
+        {
+          "id": "hold-11-u",
+          "messageId": "u",
+          "parentId": null,
+          "role": "user",
+          "content": "{\"orderId\": \"hold-11-order\", \"year\": 2025}",
+          "sourcePointer": "synthetic/u",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 0,
+          "createdAt": null
+        },
+        {
+          "id": "hold-11-c",
+          "messageId": "c",
+          "parentId": null,
+          "role": "call",
+          "content": "",
+          "sourcePointer": "synthetic/c",
+          "error": null,
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": "{\"orderId\": \"hold-11-order\", \"year\": 2025}",
+          "traceId": null,
+          "sequence": 1,
+          "createdAt": null
+        },
+        {
+          "id": "hold-11-r",
+          "messageId": "r",
+          "parentId": null,
+          "role": "tool",
+          "content": "{\"success\": false, \"message\": \"service unavailable\"}",
+          "sourcePointer": "synthetic/r",
+          "error": {
+            "message": "service unavailable"
+          },
+          "toolCallId": "tc1",
+          "toolSource": "mcp",
+          "toolName": "orders.lookup",
+          "arguments": null,
+          "traceId": null,
+          "sequence": 2,
+          "createdAt": null
+        },
+        {
+          "id": "hold-11-a",
+          "messageId": "a",
+          "parentId": null,
+          "role": "assistant",
+          "content": "{\"orderId\": \"hold-11-order\", \"status\": \"pending\", \"year\": 2025}",
+          "sourcePointer": "synthetic/a",
+          "error": null,
+          "toolCallId": null,
+          "toolSource": "unknown",
+          "toolName": null,
+          "arguments": null,
+          "traceId": null,
+          "sequence": 8,
+          "createdAt": null
+        }
+      ],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "evaluation": {
+        "status": "failed",
+        "score": 0,
+        "task": "{\"orderId\": \"hold-11-order\", \"year\": 2025}",
+        "expected": null,
+        "actual": "{\"orderId\": \"hold-11-order\", \"status\": \"pending\", \"year\": 2025}",
+        "criteria": null
+      }
+    },
+    "refs": [
+      {
+        "nodeId": "hold-11-r",
+        "field": "content",
+        "quote": "service unavailable"
+      }
+    ],
+    "claim": "observation",
+    "expectedLocalAccepted": true
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "label": "direct-sdk",
+  "cwd": "../../../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "../../2026-11-08_phase2/increment3/experiment/direct.ts",
+    "../../2026-11-08_phase2/increment3/experiment/input.json",
+    "../../2026-11-08_phase2/increment3/experiment/direct.json",
+    "http://127.0.0.1:18088/v1",
+    "offline",
+    "openai",
+    "mock-attribution-candidate"
+  ],
+  "exitCode": 0,
+  "seconds": 16.86
+}

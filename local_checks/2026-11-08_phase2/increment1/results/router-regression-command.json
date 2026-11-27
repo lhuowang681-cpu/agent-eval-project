@@ -1,0 +1,20 @@
+{
+  "label": "router-regression",
+  "cwd": "../../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/server/routers/lambda/__tests__/integration/agentEval.integration.test.ts",
+    "src/server/routers/lambda/__tests__/integration/agentEval.run.integration.test.ts",
+    "--environment=node",
+    "--maxWorkers=2",
+    "--testTimeout=20000",
+    "--hookTimeout=60000",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_phase2/increment1/router-regression.json"
+  ],
+  "exitCode": 0,
+  "seconds": 42.92
+}

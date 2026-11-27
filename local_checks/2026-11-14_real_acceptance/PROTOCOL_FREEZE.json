@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-14T08:39:19.280770+00:00",
+  "beforeQualityEvaluation": true,
+  "singleAuthor": true,
+  "files": {
+    "quality.py": "ee3ea3acb2220ec8cc58384b65943539901f48545f15acef6d87086b405f385e",
+    "test_quality.py": "0ff0c72da34b38d46c33219910c74f9c93958957b51fb07db3eac3ebd38393d7",
+    "review_candidate.py": "07a32576d149b7a1224c94df05273efa12d00180fc52275eaf50c671fa9d1ba8",
+    "dataset/ADJUDICATION.json": "afa4da3202e839f357be673cd71dd57b983ce8df3e96edb4b4f5c705cb92de73",
+    "dataset/build.py": "512ff16c0c1cf9d815998295c602b3c8f11745cf7138917f0c0017e0bc9641eb",
+    "dataset/FREEZE.json": "cd2eec728b59f528a993da134038be309815a0b16a7c2c2cafd8e2e1753d2e75",
+    "dataset/holdout.jsonl": "11024d010df603a5af6164457c8eb2af8e2893fc0b2cd07839fb286731b556be",
+    "integration/provider.ts": "bd224e8d7067bd46f5b828c95c70301e42d3c6a207209680796ded1a7d5fe35e"
+  },
+  "originalPromptAndReviewUntouched": true
+}

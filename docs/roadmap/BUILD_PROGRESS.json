@@ -1,0 +1,540 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-23",
+  "nextTask": "A2",
+  "tasks": {
+    "A1": {
+      "learning": {
+        "status": "complete",
+        "startedAt": "2026-10-23",
+        "completedAt": "2026-10-23",
+        "evidence": [
+          "docs/learning/build-records/A1_范围图.md"
+        ],
+        "notes": "通过两次实际回答说明使用者、Trace输入、证据报告输出与改进用途，并拒绝无依据的内部参数归因；范围图已保存。A1本次验收完成，待间隔复习，不代表整个E01掌握或个人代码完成。实际时长未知。"
+      },
+      "development": null
+    },
+    "A2": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/build-records/A2_身份字典.md"
+        ],
+        "notes": "用户已正确区分重复采集、真实重试与同任务影响。跨Trace且Session缺失题已拆开补讲，用户反馈懂了；该点转为待迁移复习，不记错误或独立验收通过。A2仍进行中，可继续相关结果合同教学，实际时长未知。"
+      },
+      "development": null
+    },
+    "A3": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [],
+        "notes": "开始相关结果合同讲解：一次调用的结果与最终业务目标分开判断；A2待迁移复习不因教学继续而自动完成。A3尚未验收，实际时长未知。"
+      },
+      "development": null
+    },
+    "A4": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "B1": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+        ],
+        "notes": "按用户加速偏好合并工程讲授，材料已保存；教学前置不等于用户已独立验收，本段未打完成勾，未部署或实测参考平台。"
+      },
+      "development": null
+    },
+    "B2": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+        ],
+        "notes": "按用户加速偏好合并工程讲授，材料已保存；教学前置不等于用户已独立验收，本段未打完成勾，未部署或实测参考平台。"
+      },
+      "development": null
+    },
+    "B3": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+        ],
+        "notes": "按用户加速偏好合并工程讲授，材料已保存；教学前置不等于用户已独立验收，本段未打完成勾，未部署或实测参考平台。"
+      },
+      "development": null
+    },
+    "B4": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+        ],
+        "notes": "按用户加速偏好合并工程讲授，材料已保存；教学前置不等于用户已独立验收，本段未打完成勾，未部署或实测参考平台。"
+      },
+      "development": null
+    },
+    "C1": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+        ],
+        "notes": "按用户加速偏好合并工程讲授，材料已保存；教学前置不等于用户已独立验收，本段未打完成勾，未部署或实测参考平台。"
+      },
+      "development": null
+    },
+    "C2": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+        ],
+        "notes": "按用户加速偏好合并工程讲授，材料已保存；教学前置不等于用户已独立验收，本段未打完成勾，未部署或实测参考平台。"
+      },
+      "development": null
+    },
+    "C3": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+        ],
+        "notes": "按用户加速偏好合并工程讲授，材料已保存；教学前置不等于用户已独立验收，本段未打完成勾，未部署或实测参考平台。"
+      },
+      "development": null
+    },
+    "C4": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+        ],
+        "notes": "按用户加速偏好合并工程讲授，材料已保存；教学前置不等于用户已独立验收，本段未打完成勾，未部署或实测参考平台。"
+      },
+      "development": null
+    },
+    "D1": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_项目框架与归因输入链路.md"
+        ],
+        "notes": "合并框架讲授，已保存真实入口和实现边界；没有独立验收结果，不标完成，未运行参考脚本。"
+      },
+      "development": null
+    },
+    "D2": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_项目框架与归因输入链路.md"
+        ],
+        "notes": "合并框架讲授，已保存真实入口和实现边界；没有独立验收结果，不标完成，未运行参考脚本。"
+      },
+      "development": null
+    },
+    "D3": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_项目框架与归因输入链路.md"
+        ],
+        "notes": "合并框架讲授，已保存真实入口和实现边界；没有独立验收结果，不标完成，未运行参考脚本。"
+      },
+      "development": null
+    },
+    "D4": {
+      "learning": {
+        "status": "in_progress",
+        "startedAt": "2026-10-23",
+        "completedAt": null,
+        "evidence": [
+          "docs/learning/2026-10-23_项目框架与归因输入链路.md"
+        ],
+        "notes": "合并框架讲授，已保存真实入口和实现边界；没有独立验收结果，不标完成，未运行参考脚本。"
+      },
+      "development": null
+    },
+    "E1": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "E2": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "E3": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "E4": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "F1": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "F2": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "F3": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "F4": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "G1": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "G2": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "G3": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "G4": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "H1": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "H2": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "H3": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "H4": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": null
+    },
+    "I1": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      }
+    },
+    "I2": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      }
+    },
+    "I3": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      }
+    },
+    "I4": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      }
+    },
+    "J1": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      }
+    },
+    "J2": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      }
+    },
+    "J3": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      }
+    },
+    "J4": {
+      "learning": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      },
+      "development": {
+        "status": "not_started",
+        "startedAt": null,
+        "completedAt": null,
+        "evidence": [],
+        "notes": ""
+      }
+    }
+  },
+  "history": [
+    {
+      "date": "2026-10-23",
+      "taskId": "A1",
+      "track": "learning",
+      "event": "session_started",
+      "timeBudgetMinutes": 60,
+      "actualMinutes": null,
+      "note": "开始总介绍与A1；等待实际教学互动和验收。"
+    },
+    {
+      "date": "2026-10-23",
+      "taskId": "A1",
+      "track": "learning",
+      "event": "acceptance_completed",
+      "evidence": [
+        "docs/learning/build-records/A1_范围图.md"
+      ],
+      "note": "两次真实问答和已保存范围图满足A1验收；下一项A2开始讲授。实际学习时长未记录。"
+    },
+    {
+      "date": "2026-10-23",
+      "track": "learning",
+      "event": "engineering_block_started",
+      "taskIds": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "evidence": [
+        "docs/learning/2026-10-23_服务端执行与可靠性讲解.md"
+      ],
+      "actualMinutes": null,
+      "note": "合并讲授，不自动完成A/B/C任务；讲授记录与个人实现状态分开。"
+    },
+    {
+      "date": "2026-10-23",
+      "track": "learning",
+      "event": "project_framework_block_started",
+      "taskIds": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "evidence": [
+        "docs/learning/2026-10-23_项目框架与归因输入链路.md"
+      ],
+      "actualMinutes": null,
+      "note": "老师视角、项目框架和源码证据为主；仅登记讲授，不虚构验收或实现。"
+    }
+  ]
+}

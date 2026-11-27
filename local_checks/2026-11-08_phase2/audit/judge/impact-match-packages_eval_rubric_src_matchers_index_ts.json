@@ -1,0 +1,292 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794125533991,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Function:packages/eval-rubric/src/matchers/index.ts:match",
+    "name": "match",
+    "type": "Function",
+    "filePath": "packages/eval-rubric/src/matchers/index.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 8,
+  "risk": "HIGH",
+  "riskSharedAxes": "LOW",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "summary": {
+    "direct": 1,
+    "processes_affected": 2,
+    "modules_affected": 3
+  },
+  "byDepthCounts": {
+    "1": 1,
+    "2": 3,
+    "3": 4
+  },
+  "affected_processes": [
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts",
+      "affected_process_count": 8,
+      "total_hits": 12,
+      "earliest_broken_step": 2
+    },
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts",
+      "affected_process_count": 6,
+      "total_hits": 10,
+      "earliest_broken_step": 2
+    }
+  ],
+  "affected_modules": [
+    {
+      "name": "TaskReview",
+      "hits": 4,
+      "impact": "direct"
+    },
+    {
+      "name": "AgentEvalRun",
+      "hits": 2,
+      "impact": "indirect"
+    },
+    {
+      "name": "Services",
+      "hits": 2,
+      "impact": "indirect"
+    }
+  ],
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "Function:packages/eval-rubric/src/evaluate.ts:evaluate",
+        "name": "evaluate",
+        "filePath": "packages/eval-rubric/src/evaluate.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ],
+    "2": [
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.evaluateCase#2",
+        "name": "evaluateCase",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_290_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_292_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_291_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_118_post",
+            "label": "POST → Query",
+            "processType": "cross_community",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.evaluateThread#1",
+        "name": "evaluateThread",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_117_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_114_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_116_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_115_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/taskReview/index.ts:TaskReviewService.review#1",
+        "name": "review",
+        "filePath": "src/server/services/taskReview/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ],
+    "3": [
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordThreadCompletion#1",
+        "name": "recordThreadCompletion",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_112_post",
+            "label": "POST → RoundCost",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_176_post",
+            "label": "POST → QueryByTopicId",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_115_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_117_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_114_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_116_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_177_post",
+            "label": "POST → Update",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_113_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordTrajectoryCompletion#1",
+        "name": "recordTrajectoryCompletion",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_289_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_290_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_292_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_118_post",
+            "label": "POST → Query",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_291_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_179_post",
+            "label": "POST → FindByRunAndTestCase",
+            "processType": "intra_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/task/index.ts:TaskService.runReview#1",
+        "name": "runReview",
+        "filePath": "src/server/services/task/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/taskLifecycle/index.ts:TaskLifecycleService.runAutoReview#5",
+        "name": "runAutoReview",
+        "filePath": "src/server/services/taskLifecycle/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ]
+  }
+}

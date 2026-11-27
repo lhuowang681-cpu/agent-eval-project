@@ -1,0 +1,368 @@
+{
+  "startedAt": "2026-11-08T07:36:53.701Z",
+  "baseURL": "http://127.0.0.1:13010",
+  "steps": [
+    {
+      "name": "00-api-fixture-setup",
+      "status": "passed",
+      "milliseconds": 1930,
+      "signupHTTP": 422,
+      "signinHTTP": 200,
+      "fixtureAgentId": "agt_UPMVH6nRulJc",
+      "sessionUserId": "user_Xwc2Ex5OVadgL4lAEr54aI1XeQ8",
+      "cookiesClearedBeforeUILogin": true
+    },
+    {
+      "name": "01-signin",
+      "status": "passed",
+      "milliseconds": 15199,
+      "authMode": "UI form",
+      "authenticatedSession": true,
+      "finalPath": "/eval"
+    },
+    {
+      "name": "02-create-benchmark",
+      "status": "passed",
+      "milliseconds": 1148,
+      "benchmarkId": "evb_i9TuRyn4HeoS"
+    },
+    {
+      "name": "03-create-dataset",
+      "status": "passed",
+      "milliseconds": 14082,
+      "datasetId": "ds_ZNIOVm5qYjIe"
+    },
+    {
+      "name": "04-create-three-cases",
+      "status": "passed",
+      "milliseconds": 3877,
+      "createdCases": 3
+    },
+    {
+      "name": "05-run-and-report-v1",
+      "status": "failed",
+      "error": "agentEval.createRun HTTP 500",
+      "milliseconds": 12901
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    },
+    {
+      "type": "error",
+      "text": "TRPCClientError: Failed query: insert into \"agent_eval_runs\" (\"id\", \"dataset_id\", \"target_agent_id\", \"user_id\", \"name\", \"status\", \"config\", \"metrics\", \"started_at\", \"accessed_at\", \"created_at\", \"updated_at\") values ($1, $2, $3, $4, $5, default, $6, default, default, default, default, default) returning \"id\", \"dataset_id\", \"target_agent_id\", \"user_id\", \"name\", \"status\", \"config\", \"metrics\", \"started_at\", \"accessed_at\", \"created_at\", \"updated_at\"\nparams: run_D0wFSPCagD5z,ds_ZNIOVm5qYjIe,inbox,user_Xwc2Ex5OVadgL4lAEr54aI1XeQ8,UI v1 1794123413702,{\"k\":1,\"maxSteps\":100,\"timeout\":1800000}\n    at TRPCClientError2.from (http://localhost:9876/node_modules/.vite/deps/chunk-5OR6JTG3.js?v=690b9e7c:1096:44)\n    at http://localhost:9876/node_modules/.vite/deps/chunk-5OR6JTG3.js?v=690b9e7c:1504:44"
+    }
+  ],
+  "pageErrors": [
+    "Failed query: insert into \"agent_eval_runs\" (\"id\", \"dataset_id\", \"target_agent_id\", \"user_id\", \"name\", \"status\", \"config\", \"metrics\", \"started_at\", \"accessed_at\", \"created_at\", \"updated_at\") values ($1, $2, $3, $4, $5, default, $6, default, default, default, default, default) returning \"id\", \"dataset_id\", \"target_agent_id\", \"user_id\", \"name\", \"status\", \"config\", \"metrics\", \"started_at\", \"accessed_at\", \"created_at\", \"updated_at\"\nparams: run_D0wFSPCagD5z,ds_ZNIOVm5qYjIe,inbox,user_Xwc2Ex5OVadgL4lAEr54aI1XeQ8,UI v1 1794123413702,{\"k\":1,\"maxSteps\":100,\"timeout\":1800000}"
+  ],
+  "requestFailed": [
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+      "error": "net::ERR_FAILED"
+    }
+  ],
+  "httpErrors": [
+    {
+      "url": "http://127.0.0.1:13010/trpc/lambda/agentEval.createRun",
+      "status": 500
+    }
+  ],
+  "method": "Headless installed Edge, real BetterAuth session, no development auth header",
+  "blockedNonBusinessAssets": [
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2"
+  ],
+  "currentStep": "05-run-and-report-v1",
+  "authenticatedSession": true,
+  "authMode": "UI form",
+  "pendingRequests": [
+    "http://localhost:9876/node_modules/.vite/deps/chunk-EXE77CS5.js",
+    "http://localhost:9876/src/services/userMemory/crud.ts",
+    "http://localhost:9876/src/services/userMemory/extraction.ts",
+    "http://localhost:9876/packages/model-runtime/src/const/models.ts",
+    "http://localhost:9876/packages/model-runtime/src/core/BaseAI.ts",
+    "http://localhost:9876/packages/model-runtime/src/core/contextBuilders/openai.ts",
+    "http://localhost:9876/packages/model-runtime/src/core/ModelRuntime.ts",
+    "http://localhost:9876/packages/model-runtime/src/core/openaiCompatibleFactory/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/core/RouterRuntime/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/core/usageConverters/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/helpers/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/akashchat/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/anthropic/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/azureai/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/azureOpenai/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/bedrock/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/bfl/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/cerebras/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/cometapi/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/comfyui/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/deepseek/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/google/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/groq/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/lobehub/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/longcat/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/minimax/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/mistral/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/moonshot/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/nebius/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/newapi/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/ollama/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/ollamacloud/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/openai/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/openrouter/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/perplexity/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/qwen/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/stepfun/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/straico/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/togetherai/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/volcengine/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/xiaomimimo/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/zenmux/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/zeroone/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/providers/zhipu/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/types/index.ts",
+    "http://localhost:9876/packages/model-runtime/src/types/error.ts",
+    "http://localhost:9876/packages/model-runtime/src/utils/consumeStream.ts",
+    "http://localhost:9876/packages/model-runtime/src/utils/createError.ts",
+    "http://localhost:9876/packages/model-runtime/src/utils/getFallbackModelProperty.ts",
+    "http://localhost:9876/packages/model-runtime/src/utils/getModelPricing.ts",
+    "http://localhost:9876/packages/model-runtime/src/utils/structuredOutputParseError.ts",
+    "http://localhost:9876/packages/model-runtime/src/utils/uriParser.ts",
+    "http://localhost:9876/src/store/page/slices/list/action.ts",
+    "http://localhost:9876/src/store/page/slices/list/initialState.ts",
+    "http://localhost:9876/src/store/page/slices/crud/action.ts",
+    "http://localhost:9876/src/store/page/slices/crud/initialState.ts",
+    "http://localhost:9876/src/store/page/slices/internal/action.ts",
+    "http://localhost:9876/src/store/page/slices/internal/reducer.ts",
+    "http://localhost:9876/src/store/page/slices/selection/action.ts",
+    "http://localhost:9876/src/store/page/slices/selection/initialState.ts",
+    "http://localhost:9876/src/store/chat/initialState.ts",
+    "http://localhost:9876/src/store/chat/slices/aiAgent/actions/index.ts",
+    "http://localhost:9876/src/store/chat/slices/aiChat/actions/index.ts",
+    "http://localhost:9876/src/store/chat/slices/builtinTool/actions/index.ts",
+    "http://localhost:9876/src/store/chat/slices/message/actions/index.ts",
+    "http://localhost:9876/src/store/chat/slices/operation/actions.ts",
+    "http://localhost:9876/src/store/chat/slices/plugin/actions/index.ts",
+    "http://localhost:9876/src/store/chat/slices/portal/action.ts",
+    "http://localhost:9876/src/store/chat/slices/thread/action.ts",
+    "http://localhost:9876/src/store/chat/slices/topic/action.ts",
+    "http://localhost:9876/src/store/chat/slices/translate/action.ts",
+    "http://localhost:9876/src/store/chat/slices/tts/action.ts",
+    "http://localhost:9876/src/store/session/initialState.ts",
+    "http://localhost:9876/src/store/session/slices/homeInput/action.ts",
+    "http://localhost:9876/src/store/session/slices/recent/action.ts",
+    "http://localhost:9876/src/store/session/slices/session/action.ts",
+    "http://localhost:9876/src/store/session/slices/sessionGroup/action.ts",
+    "http://localhost:9876/src/routes/(main)/home/_layout/hooks/useProjectMenuItems.tsx",
+    "http://localhost:9876/src/routes/(main)/home/_layout/hooks/useSessionGroupMenuItems.tsx",
+    "http://localhost:9876/node_modules/.vite/deps/chunk-JSV73T6W.js",
+    "http://localhost:9876/node_modules/.vite/deps/chunk-VZHOQZPB.js",
+    "http://localhost:9876/src/routes/(main)/home/_layout/Body/Agent/AllAgentsDrawer/index.tsx",
+    "http://localhost:9876/src/routes/(main)/home/_layout/Body/Agent/List/Group/index.tsx",
+    "http://localhost:9876/src/routes/(main)/home/_layout/Body/Agent/List/InboxItem.tsx",
+    "http://localhost:9876/src/routes/(main)/home/_layout/Body/Agent/List/List.tsx",
+    "http://localhost:9876/src/routes/(main)/home/_layout/Body/Agent/List/useAgentList.tsx",
+    "http://localhost:9876/src/libs/router/navigation.ts",
+    "http://localhost:9876/src/features/AgentSelectionEmpty.tsx",
+    "http://localhost:9876/src/features/ModelSelect/index.tsx",
+    "http://localhost:9876/src/hooks/useEnabledChatModels.ts",
+    "http://localhost:9876/src/features/GroupAvatar/index.tsx",
+    "http://localhost:9876/src/features/AgentSetting/AgentMeta/BackgroundSwatches.tsx",
+    "http://localhost:9876/src/components/Branding/ProductLogo/Custom.tsx",
+    "http://localhost:9876/src/business/client/features/User/BusinessPanelContent.tsx",
+    "http://localhost:9876/src/components/Menu/index.tsx",
+    "http://localhost:9876/src/features/User/DataStatistics.tsx",
+    "http://localhost:9876/src/features/User/UserLoginOrSignup/index.tsx",
+    "http://localhost:9876/src/features/User/UserPanel/LangButton.tsx",
+    "http://localhost:9876/src/features/User/UserPanel/useMenu.tsx",
+    "http://localhost:9876/node_modules/.vite/deps/gray-matter.js"
+  ],
+  "status": "failed",
+  "error": "agentEval.createRun HTTP 500",
+  "finishedAt": "2026-11-08T07:37:44.096Z"
+}

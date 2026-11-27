@@ -1,0 +1,40 @@
+node:internal/modules/cjs/loader:1517
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module 'validator/es/lib/isEmail.cjs'
+Require stack:
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\better-auth-harmony@1.2.5_b_a44143d1ce96d2d9cb30940f44f4b2e1\node_modules\better-auth-harmony\dist\index.cjs
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\src\libs\better-auth\define-config.ts
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\src\auth.ts
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\packages\utils\src\server\auth.ts
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\packages\utils\src\server\index.ts
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\src\libs\trpc\lambda\middleware\keyVaults.ts
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\src\libs\trpc\lambda\middleware\index.ts
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\src\server\routers\lambda\agentEvalExternal.ts
+- C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-14_real_acceptance\integration\postgres.ts
+    at node:internal/modules/cjs/loader:1517:15
+    at nextResolveSimple (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:10:1017)
+    at C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:9:4613
+    at C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:9:3894
+    at resolveTsPaths (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:10:770)
+    at C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:10:1171
+    at T._resolveFilename (file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/tsx@4.23.0/node_modules/tsx/dist/register-D5KIhaFJ.mjs:2:15244)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at defaultResolve (node:internal/modules/cjs/loader:1152:20) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\node_modules\\.pnpm\\better-auth-harmony@1.2.5_b_a44143d1ce96d2d9cb30940f44f4b2e1\\node_modules\\better-auth-harmony\\dist\\index.cjs',
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\src\\libs\\better-auth\\define-config.ts',
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\src\\auth.ts',
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\packages\\utils\\src\\server\\auth.ts',
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\packages\\utils\\src\\server\\index.ts',
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\src\\libs\\trpc\\lambda\\middleware\\keyVaults.ts',
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\src\\libs\\trpc\\lambda\\middleware\\index.ts',
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\src\\server\\routers\\lambda\\agentEvalExternal.ts',
+    'C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-14_real_acceptance\\integration\\postgres.ts'
+  ]
+}
+
+Node.js v24.19.0

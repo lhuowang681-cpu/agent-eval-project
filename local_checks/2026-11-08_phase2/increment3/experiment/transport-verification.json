@@ -1,0 +1,20 @@
+{
+  "cases": 12,
+  "allEchoesMatch": true,
+  "rawHttpResponses": 12,
+  "httpStatuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "crossCaseReferencedNodeExistsElsewhere": true
+}

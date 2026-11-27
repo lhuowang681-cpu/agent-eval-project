@@ -1,0 +1,3097 @@
+{
+  "database": "real PostgreSQL, synthetic seeded rows",
+  "transport": "real tRPC server-side caller, not HTTP or login UI",
+  "records": [
+    {
+      "name": "normal_passed",
+      "runId": "run_Xo4uVuqrJns8",
+      "caseId": "case_Yb71zg20DjcS",
+      "threadId": "thd_mhNOdzlemEmKZWDD",
+      "passed": true,
+      "skippedByExistingPolicy": true
+    },
+    {
+      "name": "recovered_passed",
+      "runId": "run_SjR32sUi1xyC",
+      "caseId": "case_2s7e6t2S7Cnz",
+      "threadId": "thd_41NunzgDM4prOjmU",
+      "passed": true,
+      "skippedByExistingPolicy": true
+    },
+    {
+      "name": "explicit_off",
+      "runId": "run_M8A8vD6NSZjI",
+      "caseId": "case_kkJ8xYZ1eigf",
+      "threadId": "thd_vUbeklR3huAGs8i2",
+      "passed": false,
+      "job": {
+        "id": "481569b6-43e1-5a40-a64a-118fecf172ea",
+        "status": "success",
+        "createdAt": "2026-11-14T08:42:08.093Z",
+        "updatedAt": "2026-11-14T08:42:08.180Z",
+        "error": null,
+        "inputDigest": "9296cf124ce2a984f1485ce1c23337dbe754b561a3524b944052b52bbbda3bf0",
+        "scope": {
+          "runId": "run_M8A8vD6NSZjI",
+          "caseId": "case_kkJ8xYZ1eigf",
+          "topicId": "tpc_nQPEcLALU3sx",
+          "threadId": "thd_vUbeklR3huAGs8i2",
+          "operationId": "explicit_off-operation",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_M8A8vD6NSZjI:case_kkJ8xYZ1eigf:tpc_nQPEcLALU3sx:thd_vUbeklR3huAGs8i2",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_M8A8vD6NSZjI:case_kkJ8xYZ1eigf:tpc_nQPEcLALU3sx:thd_vUbeklR3huAGs8i2",
+          "inputDigest": "9296cf124ce2a984f1485ce1c23337dbe754b561a3524b944052b52bbbda3bf0",
+          "scope": {
+            "runId": "run_M8A8vD6NSZjI",
+            "caseId": "case_kkJ8xYZ1eigf",
+            "topicId": "tpc_nQPEcLALU3sx",
+            "threadId": "thd_vUbeklR3huAGs8i2",
+            "operationId": "explicit_off-operation",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "needs_review",
+            "category": "external_transport",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_h5VUKZta612w",
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}"
+              },
+              {
+                "nodeId": "call:msg_RpXSQbGhhQEW:0",
+                "field": "arguments",
+                "quote": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"year\":2025}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "evidence_review_not_supported",
+              "incomplete_source_coverage"
+            ]
+          },
+          "observations": [
+            {
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_h5VUKZta612w",
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}"
+                },
+                {
+                  "nodeId": "call:msg_RpXSQbGhhQEW:0",
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"year\":2025}"
+                }
+              ]
+            }
+          ],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "valid",
+              "issues": []
+            },
+            "support": {
+              "status": "insufficient",
+              "issues": [
+                {
+                  "code": "incomplete_source_coverage",
+                  "nodeId": null,
+                  "message": "Source coverage is incomplete"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_M8A8vD6NSZjI:case_kkJ8xYZ1eigf:tpc_nQPEcLALU3sx:thd_vUbeklR3huAGs8i2",
+        "inputDigest": "9296cf124ce2a984f1485ce1c23337dbe754b561a3524b944052b52bbbda3bf0",
+        "scope": {
+          "runId": "run_M8A8vD6NSZjI",
+          "caseId": "case_kkJ8xYZ1eigf",
+          "topicId": "tpc_nQPEcLALU3sx",
+          "threadId": "thd_vUbeklR3huAGs8i2",
+          "operationId": "explicit_off-operation",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_nWSTDthWHywj",
+            "messageId": "msg_nWSTDthWHywj",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"year\":2025}",
+            "sourcePointer": "messages/msg_nWSTDthWHywj",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-14T08:42:07.966Z"
+          },
+          {
+            "id": "message:msg_RpXSQbGhhQEW",
+            "messageId": "msg_RpXSQbGhhQEW",
+            "parentId": "message:msg_nWSTDthWHywj",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_RpXSQbGhhQEW",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-14T08:42:07.976Z"
+          },
+          {
+            "id": "call:msg_RpXSQbGhhQEW:0",
+            "messageId": "msg_RpXSQbGhhQEW",
+            "parentId": "message:msg_RpXSQbGhhQEW",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_RpXSQbGhhQEW/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-14T08:42:07.976Z"
+          },
+          {
+            "id": "message:msg_h5VUKZta612w",
+            "messageId": "msg_h5VUKZta612w",
+            "parentId": "message:msg_RpXSQbGhhQEW",
+            "role": "tool",
+            "content": "{\"success\":false,\"error\":\"service unavailable\"}",
+            "sourcePointer": "messages/msg_h5VUKZta612w",
+            "errorSourcePointer": "message_plugins/msg_h5VUKZta612w/error",
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"year\":2025}",
+            "error": {
+              "message": "service unavailable"
+            },
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-14T08:42:07.986Z"
+          },
+          {
+            "id": "message:msg_fe2wyOMFe39K",
+            "messageId": "msg_fe2wyOMFe39K",
+            "parentId": "message:msg_h5VUKZta612w",
+            "role": "assistant",
+            "content": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"status\":\"pending\"}",
+            "sourcePointer": "messages/msg_fe2wyOMFe39K",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-14T08:42:07.996Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Isolated explicit_off",
+          "expected": "absent-reference",
+          "actual": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"status\":\"pending\"}",
+          "criteria": null
+        }
+      },
+      "processed": {
+        "claimed": true,
+        "stale": false,
+        "job": {
+          "id": "481569b6-43e1-5a40-a64a-118fecf172ea",
+          "status": "success",
+          "createdAt": "2026-11-14T08:42:08.093Z",
+          "updatedAt": "2026-11-14T08:42:08.180Z",
+          "error": null,
+          "inputDigest": "9296cf124ce2a984f1485ce1c23337dbe754b561a3524b944052b52bbbda3bf0",
+          "scope": {
+            "runId": "run_M8A8vD6NSZjI",
+            "caseId": "case_kkJ8xYZ1eigf",
+            "topicId": "tpc_nQPEcLALU3sx",
+            "threadId": "thd_vUbeklR3huAGs8i2",
+            "operationId": "explicit_off-operation",
+            "traceIds": []
+          },
+          "trajectoryId": "eval:run_M8A8vD6NSZjI:case_kkJ8xYZ1eigf:tpc_nQPEcLALU3sx:thd_vUbeklR3huAGs8i2",
+          "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+          "result": {
+            "schemaVersion": 1,
+            "trajectoryId": "eval:run_M8A8vD6NSZjI:case_kkJ8xYZ1eigf:tpc_nQPEcLALU3sx:thd_vUbeklR3huAGs8i2",
+            "inputDigest": "9296cf124ce2a984f1485ce1c23337dbe754b561a3524b944052b52bbbda3bf0",
+            "scope": {
+              "runId": "run_M8A8vD6NSZjI",
+              "caseId": "case_kkJ8xYZ1eigf",
+              "topicId": "tpc_nQPEcLALU3sx",
+              "threadId": "thd_vUbeklR3huAGs8i2",
+              "operationId": "explicit_off-operation",
+              "traceIds": []
+            },
+            "jobExecution": {
+              "status": "completed",
+              "errors": []
+            },
+            "diagnosis": {
+              "status": "needs_review",
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_h5VUKZta612w",
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}"
+                },
+                {
+                  "nodeId": "call:msg_RpXSQbGhhQEW:0",
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"year\":2025}"
+                }
+              ],
+              "reasonCodes": [
+                "causal_owner_unconfirmed",
+                "evidence_review_not_supported",
+                "incomplete_source_coverage"
+              ]
+            },
+            "observations": [
+              {
+                "category": "external_transport",
+                "moduleId": null,
+                "claimLevel": "observation",
+                "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+                "evidenceRefs": [
+                  {
+                    "nodeId": "message:msg_h5VUKZta612w",
+                    "field": "error",
+                    "quote": "{\"message\": \"service unavailable\"}"
+                  },
+                  {
+                    "nodeId": "call:msg_RpXSQbGhhQEW:0",
+                    "field": "arguments",
+                    "quote": "{\"orderId\":\"case_kkJ8xYZ1eigf\",\"year\":2025}"
+                  }
+                ]
+              }
+            ],
+            "coverage": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "provenance": {
+              "rulesVersion": "round1-structured-v1",
+              "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+            },
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "incomplete_source_coverage",
+                    "nodeId": null,
+                    "message": "Source coverage is incomplete"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "explicit_on",
+      "runId": "run_pUEEp6he9GhQ",
+      "caseId": "case_urVmr71hPDuD",
+      "threadId": "thd_VaqW9XclFNDxtyJZ",
+      "passed": false,
+      "job": {
+        "id": "ab1988b9-2c71-5eca-ab82-3a173350edce",
+        "status": "success",
+        "createdAt": "2026-11-14T08:42:08.258Z",
+        "updatedAt": "2026-11-14T08:42:08.419Z",
+        "error": null,
+        "inputDigest": "6ec44520efab6b5652eb005d56ef07fc084fb049be1f78b00b5e904c5e343610",
+        "scope": {
+          "runId": "run_pUEEp6he9GhQ",
+          "caseId": "case_urVmr71hPDuD",
+          "topicId": "tpc_zWHIKx858jx4",
+          "threadId": "thd_VaqW9XclFNDxtyJZ",
+          "operationId": "explicit_on-operation",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_pUEEp6he9GhQ:case_urVmr71hPDuD:tpc_zWHIKx858jx4:thd_VaqW9XclFNDxtyJZ",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_pUEEp6he9GhQ:case_urVmr71hPDuD:tpc_zWHIKx858jx4:thd_VaqW9XclFNDxtyJZ",
+          "inputDigest": "6ec44520efab6b5652eb005d56ef07fc084fb049be1f78b00b5e904c5e343610",
+          "scope": {
+            "runId": "run_pUEEp6he9GhQ",
+            "caseId": "case_urVmr71hPDuD",
+            "topicId": "tpc_zWHIKx858jx4",
+            "threadId": "thd_VaqW9XclFNDxtyJZ",
+            "operationId": "explicit_on-operation",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "needs_review",
+            "category": "external_transport",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_PSWPzQytl6Ia",
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}"
+              },
+              {
+                "nodeId": "call:msg_3u5TbUUwbQ5p:0",
+                "field": "arguments",
+                "quote": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "evidence_review_not_supported",
+              "incomplete_source_coverage"
+            ]
+          },
+          "observations": [
+            {
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_PSWPzQytl6Ia",
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}"
+                },
+                {
+                  "nodeId": "call:msg_3u5TbUUwbQ5p:0",
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}"
+                }
+              ]
+            }
+          ],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "valid",
+              "issues": []
+            },
+            "support": {
+              "status": "insufficient",
+              "issues": [
+                {
+                  "code": "incomplete_source_coverage",
+                  "nodeId": null,
+                  "message": "Source coverage is incomplete"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_pUEEp6he9GhQ:case_urVmr71hPDuD:tpc_zWHIKx858jx4:thd_VaqW9XclFNDxtyJZ",
+        "inputDigest": "6ec44520efab6b5652eb005d56ef07fc084fb049be1f78b00b5e904c5e343610",
+        "scope": {
+          "runId": "run_pUEEp6he9GhQ",
+          "caseId": "case_urVmr71hPDuD",
+          "topicId": "tpc_zWHIKx858jx4",
+          "threadId": "thd_VaqW9XclFNDxtyJZ",
+          "operationId": "explicit_on-operation",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_IOckreyjhKWn",
+            "messageId": "msg_IOckreyjhKWn",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}",
+            "sourcePointer": "messages/msg_IOckreyjhKWn",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-14T08:42:07.977Z"
+          },
+          {
+            "id": "message:msg_3u5TbUUwbQ5p",
+            "messageId": "msg_3u5TbUUwbQ5p",
+            "parentId": "message:msg_IOckreyjhKWn",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_3u5TbUUwbQ5p",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-14T08:42:07.987Z"
+          },
+          {
+            "id": "call:msg_3u5TbUUwbQ5p:0",
+            "messageId": "msg_3u5TbUUwbQ5p",
+            "parentId": "message:msg_3u5TbUUwbQ5p",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_3u5TbUUwbQ5p/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-14T08:42:07.987Z"
+          },
+          {
+            "id": "message:msg_PSWPzQytl6Ia",
+            "messageId": "msg_PSWPzQytl6Ia",
+            "parentId": "message:msg_3u5TbUUwbQ5p",
+            "role": "tool",
+            "content": "{\"success\":false,\"error\":\"service unavailable\"}",
+            "sourcePointer": "messages/msg_PSWPzQytl6Ia",
+            "errorSourcePointer": "message_plugins/msg_PSWPzQytl6Ia/error",
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}",
+            "error": {
+              "message": "service unavailable"
+            },
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-14T08:42:07.997Z"
+          },
+          {
+            "id": "message:msg_gSDhY2byWxKI",
+            "messageId": "msg_gSDhY2byWxKI",
+            "parentId": "message:msg_PSWPzQytl6Ia",
+            "role": "assistant",
+            "content": "{\"orderId\":\"case_urVmr71hPDuD\",\"status\":\"pending\"}",
+            "sourcePointer": "messages/msg_gSDhY2byWxKI",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-14T08:42:08.007Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Isolated explicit_on",
+          "expected": "absent-reference",
+          "actual": "{\"orderId\":\"case_urVmr71hPDuD\",\"status\":\"pending\"}",
+          "criteria": null
+        }
+      },
+      "artifact": {
+        "scope": {
+          "runId": "run_pUEEp6he9GhQ",
+          "caseId": "case_urVmr71hPDuD",
+          "topicId": "tpc_zWHIKx858jx4",
+          "threadId": "thd_VaqW9XclFNDxtyJZ",
+          "traceIds": [],
+          "operationId": "explicit_on-operation"
+        },
+        "semantic": {
+          "error": null,
+          "review": null,
+          "status": "disabled",
+          "candidate": null,
+          "modelCalls": 0
+        },
+        "diagnosis": {
+          "status": "needs_review",
+          "moduleId": null,
+          "rootCause": null,
+          "claimLevel": "observation"
+        },
+        "inputDigest": "6ec44520efab6b5652eb005d56ef07fc084fb049be1f78b00b5e904c5e343610",
+        "persistence": "sidecar_only_no_score_write",
+        "observations": [
+          {
+            "nodeId": "message:msg_PSWPzQytl6Ia",
+            "summary": "Original cited field records an execution failure; causal owner unknown.",
+            "category": "observed_execution_failure",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}",
+                "nodeId": "message:msg_PSWPzQytl6Ia"
+              }
+            ]
+          }
+        ],
+        "rulesBaseline": {
+          "scope": {
+            "runId": "run_pUEEp6he9GhQ",
+            "caseId": "case_urVmr71hPDuD",
+            "topicId": "tpc_zWHIKx858jx4",
+            "threadId": "thd_VaqW9XclFNDxtyJZ",
+            "traceIds": [],
+            "operationId": "explicit_on-operation"
+          },
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "diagnosis": {
+            "status": "needs_review",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "category": "external_transport",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "incomplete_source_coverage"
+            ],
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}",
+                "nodeId": "message:msg_PSWPzQytl6Ia"
+              },
+              {
+                "field": "arguments",
+                "quote": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}",
+                "nodeId": "call:msg_3u5TbUUwbQ5p:0"
+              }
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "inputDigest": "6ec44520efab6b5652eb005d56ef07fc084fb049be1f78b00b5e904c5e343610",
+          "jobExecution": {
+            "errors": [],
+            "status": "completed"
+          },
+          "observations": [
+            {
+              "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "evidenceRefs": [
+                {
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}",
+                  "nodeId": "message:msg_PSWPzQytl6Ia"
+                },
+                {
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}",
+                  "nodeId": "call:msg_3u5TbUUwbQ5p:0"
+                }
+              ]
+            }
+          ],
+          "trajectoryId": "eval:run_pUEEp6he9GhQ:case_urVmr71hPDuD:tpc_zWHIKx858jx4:thd_VaqW9XclFNDxtyJZ",
+          "schemaVersion": 1
+        },
+        "schemaVersion": 2,
+        "evidenceReviews": [
+          {
+            "global": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "issues": [],
+            "source": "known_with_partial_trace",
+            "decision": "supported",
+            "existence": "valid",
+            "localSupport": "supported",
+            "observations": [
+              {
+                "nodeId": "message:msg_PSWPzQytl6Ia",
+                "summary": "Original cited field records an execution failure; causal owner unknown.",
+                "category": "observed_execution_failure",
+                "claimLevel": "observation",
+                "evidenceRefs": [
+                  {
+                    "field": "error",
+                    "quote": "{\"message\": \"service unavailable\"}",
+                    "nodeId": "message:msg_PSWPzQytl6Ia"
+                  }
+                ]
+              }
+            ],
+            "causalSupport": "insufficient",
+            "schemaVersion": 2
+          }
+        ]
+      },
+      "processed": {
+        "claimed": true,
+        "stale": false,
+        "job": {
+          "id": "ab1988b9-2c71-5eca-ab82-3a173350edce",
+          "status": "success",
+          "createdAt": "2026-11-14T08:42:08.258Z",
+          "updatedAt": "2026-11-14T08:42:08.419Z",
+          "error": null,
+          "inputDigest": "6ec44520efab6b5652eb005d56ef07fc084fb049be1f78b00b5e904c5e343610",
+          "scope": {
+            "runId": "run_pUEEp6he9GhQ",
+            "caseId": "case_urVmr71hPDuD",
+            "topicId": "tpc_zWHIKx858jx4",
+            "threadId": "thd_VaqW9XclFNDxtyJZ",
+            "operationId": "explicit_on-operation",
+            "traceIds": []
+          },
+          "trajectoryId": "eval:run_pUEEp6he9GhQ:case_urVmr71hPDuD:tpc_zWHIKx858jx4:thd_VaqW9XclFNDxtyJZ",
+          "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+          "result": {
+            "schemaVersion": 1,
+            "trajectoryId": "eval:run_pUEEp6he9GhQ:case_urVmr71hPDuD:tpc_zWHIKx858jx4:thd_VaqW9XclFNDxtyJZ",
+            "inputDigest": "6ec44520efab6b5652eb005d56ef07fc084fb049be1f78b00b5e904c5e343610",
+            "scope": {
+              "runId": "run_pUEEp6he9GhQ",
+              "caseId": "case_urVmr71hPDuD",
+              "topicId": "tpc_zWHIKx858jx4",
+              "threadId": "thd_VaqW9XclFNDxtyJZ",
+              "operationId": "explicit_on-operation",
+              "traceIds": []
+            },
+            "jobExecution": {
+              "status": "completed",
+              "errors": []
+            },
+            "diagnosis": {
+              "status": "needs_review",
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_PSWPzQytl6Ia",
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}"
+                },
+                {
+                  "nodeId": "call:msg_3u5TbUUwbQ5p:0",
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}"
+                }
+              ],
+              "reasonCodes": [
+                "causal_owner_unconfirmed",
+                "evidence_review_not_supported",
+                "incomplete_source_coverage"
+              ]
+            },
+            "observations": [
+              {
+                "category": "external_transport",
+                "moduleId": null,
+                "claimLevel": "observation",
+                "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+                "evidenceRefs": [
+                  {
+                    "nodeId": "message:msg_PSWPzQytl6Ia",
+                    "field": "error",
+                    "quote": "{\"message\": \"service unavailable\"}"
+                  },
+                  {
+                    "nodeId": "call:msg_3u5TbUUwbQ5p:0",
+                    "field": "arguments",
+                    "quote": "{\"orderId\":\"case_urVmr71hPDuD\",\"year\":2025}"
+                  }
+                ]
+              }
+            ],
+            "coverage": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "provenance": {
+              "rulesVersion": "round1-structured-v1",
+              "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+            },
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "incomplete_source_coverage",
+                    "nodeId": null,
+                    "message": "Source coverage is incomplete"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "recovered_quality_failed",
+      "runId": "run_YnVFtjMPrWLA",
+      "caseId": "case_fCy2M4dI6jja",
+      "threadId": "thd_iXevM1505t6RQAJH",
+      "passed": false,
+      "job": {
+        "id": "f009bac0-fbfc-5864-afd5-76c29bc44a13",
+        "status": "success",
+        "createdAt": "2026-11-14T08:42:08.504Z",
+        "updatedAt": "2026-11-14T08:42:08.658Z",
+        "error": null,
+        "inputDigest": "ff540209fb1710f2074017e4207a53bf998628dc1088e7caf6c400dae4845f28",
+        "scope": {
+          "runId": "run_YnVFtjMPrWLA",
+          "caseId": "case_fCy2M4dI6jja",
+          "topicId": "tpc_o4bbNaEWzz3k",
+          "threadId": "thd_iXevM1505t6RQAJH",
+          "operationId": "recovered_quality_failed-operation",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_YnVFtjMPrWLA:case_fCy2M4dI6jja:tpc_o4bbNaEWzz3k:thd_iXevM1505t6RQAJH",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_YnVFtjMPrWLA:case_fCy2M4dI6jja:tpc_o4bbNaEWzz3k:thd_iXevM1505t6RQAJH",
+          "inputDigest": "ff540209fb1710f2074017e4207a53bf998628dc1088e7caf6c400dae4845f28",
+          "scope": {
+            "runId": "run_YnVFtjMPrWLA",
+            "caseId": "case_fCy2M4dI6jja",
+            "topicId": "tpc_o4bbNaEWzz3k",
+            "threadId": "thd_iXevM1505t6RQAJH",
+            "operationId": "recovered_quality_failed-operation",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "needs_review",
+            "category": "external_transport",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_3gdeHZNwcy5D",
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}"
+              },
+              {
+                "nodeId": "call:msg_Y5LA5qb6Go4q:0",
+                "field": "arguments",
+                "quote": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "evidence_review_not_supported",
+              "incomplete_source_coverage"
+            ]
+          },
+          "observations": [
+            {
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_3gdeHZNwcy5D",
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}"
+                },
+                {
+                  "nodeId": "call:msg_Y5LA5qb6Go4q:0",
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}"
+                }
+              ]
+            }
+          ],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "valid",
+              "issues": []
+            },
+            "support": {
+              "status": "insufficient",
+              "issues": [
+                {
+                  "code": "incomplete_source_coverage",
+                  "nodeId": null,
+                  "message": "Source coverage is incomplete"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_YnVFtjMPrWLA:case_fCy2M4dI6jja:tpc_o4bbNaEWzz3k:thd_iXevM1505t6RQAJH",
+        "inputDigest": "ff540209fb1710f2074017e4207a53bf998628dc1088e7caf6c400dae4845f28",
+        "scope": {
+          "runId": "run_YnVFtjMPrWLA",
+          "caseId": "case_fCy2M4dI6jja",
+          "topicId": "tpc_o4bbNaEWzz3k",
+          "threadId": "thd_iXevM1505t6RQAJH",
+          "operationId": "recovered_quality_failed-operation",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_uk9W9XsqUKyw",
+            "messageId": "msg_uk9W9XsqUKyw",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}",
+            "sourcePointer": "messages/msg_uk9W9XsqUKyw",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-14T08:42:07.988Z"
+          },
+          {
+            "id": "message:msg_Y5LA5qb6Go4q",
+            "messageId": "msg_Y5LA5qb6Go4q",
+            "parentId": "message:msg_uk9W9XsqUKyw",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_Y5LA5qb6Go4q",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-14T08:42:07.998Z"
+          },
+          {
+            "id": "call:msg_Y5LA5qb6Go4q:0",
+            "messageId": "msg_Y5LA5qb6Go4q",
+            "parentId": "message:msg_Y5LA5qb6Go4q",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_Y5LA5qb6Go4q/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-14T08:42:07.998Z"
+          },
+          {
+            "id": "message:msg_3gdeHZNwcy5D",
+            "messageId": "msg_3gdeHZNwcy5D",
+            "parentId": "message:msg_Y5LA5qb6Go4q",
+            "role": "tool",
+            "content": "{\"success\":false,\"error\":\"service unavailable\"}",
+            "sourcePointer": "messages/msg_3gdeHZNwcy5D",
+            "errorSourcePointer": "message_plugins/msg_3gdeHZNwcy5D/error",
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}",
+            "error": {
+              "message": "service unavailable"
+            },
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-14T08:42:08.008Z"
+          },
+          {
+            "id": "message:msg_JW4tyhKsiVrr",
+            "messageId": "msg_JW4tyhKsiVrr",
+            "parentId": "message:msg_3gdeHZNwcy5D",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_JW4tyhKsiVrr",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-14T08:42:08.018Z"
+          },
+          {
+            "id": "call:msg_JW4tyhKsiVrr:0",
+            "messageId": "msg_JW4tyhKsiVrr",
+            "parentId": "message:msg_JW4tyhKsiVrr",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_JW4tyhKsiVrr/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-1",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 5,
+            "createdAt": "2026-11-14T08:42:08.018Z"
+          },
+          {
+            "id": "message:msg_FlBkHHNUodkb",
+            "messageId": "msg_FlBkHHNUodkb",
+            "parentId": "message:msg_JW4tyhKsiVrr",
+            "role": "tool",
+            "content": "{\"success\":true,\"data\":{\"orderId\":\"case_fCy2M4dI6jja\",\"status\":\"pending\"}}",
+            "sourcePointer": "messages/msg_FlBkHHNUodkb",
+            "errorSourcePointer": null,
+            "toolCallId": "call-1",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 6,
+            "createdAt": "2026-11-14T08:42:08.028Z"
+          },
+          {
+            "id": "message:msg_4iAMGksT4omp",
+            "messageId": "msg_4iAMGksT4omp",
+            "parentId": "message:msg_FlBkHHNUodkb",
+            "role": "assistant",
+            "content": "{\"orderId\":\"case_fCy2M4dI6jja\",\"status\":\"pending\"}",
+            "sourcePointer": "messages/msg_4iAMGksT4omp",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 7,
+            "createdAt": "2026-11-14T08:42:08.038Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Isolated recovered_quality_failed",
+          "expected": "absent-reference",
+          "actual": "{\"orderId\":\"case_fCy2M4dI6jja\",\"status\":\"pending\"}",
+          "criteria": null
+        }
+      },
+      "artifact": {
+        "scope": {
+          "runId": "run_YnVFtjMPrWLA",
+          "caseId": "case_fCy2M4dI6jja",
+          "topicId": "tpc_o4bbNaEWzz3k",
+          "threadId": "thd_iXevM1505t6RQAJH",
+          "traceIds": [],
+          "operationId": "recovered_quality_failed-operation"
+        },
+        "semantic": {
+          "error": null,
+          "review": null,
+          "status": "disabled",
+          "candidate": null,
+          "modelCalls": 0
+        },
+        "diagnosis": {
+          "status": "needs_review",
+          "moduleId": null,
+          "rootCause": null,
+          "claimLevel": "observation"
+        },
+        "inputDigest": "ff540209fb1710f2074017e4207a53bf998628dc1088e7caf6c400dae4845f28",
+        "persistence": "sidecar_only_no_score_write",
+        "observations": [
+          {
+            "nodeId": "message:msg_3gdeHZNwcy5D",
+            "summary": "Original cited field records an execution failure; causal owner unknown.",
+            "category": "observed_execution_failure",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}",
+                "nodeId": "message:msg_3gdeHZNwcy5D"
+              }
+            ]
+          }
+        ],
+        "rulesBaseline": {
+          "scope": {
+            "runId": "run_YnVFtjMPrWLA",
+            "caseId": "case_fCy2M4dI6jja",
+            "topicId": "tpc_o4bbNaEWzz3k",
+            "threadId": "thd_iXevM1505t6RQAJH",
+            "traceIds": [],
+            "operationId": "recovered_quality_failed-operation"
+          },
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "diagnosis": {
+            "status": "needs_review",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "category": "external_transport",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "incomplete_source_coverage"
+            ],
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}",
+                "nodeId": "message:msg_3gdeHZNwcy5D"
+              },
+              {
+                "field": "arguments",
+                "quote": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}",
+                "nodeId": "call:msg_Y5LA5qb6Go4q:0"
+              }
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "inputDigest": "ff540209fb1710f2074017e4207a53bf998628dc1088e7caf6c400dae4845f28",
+          "jobExecution": {
+            "errors": [],
+            "status": "completed"
+          },
+          "observations": [
+            {
+              "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "evidenceRefs": [
+                {
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}",
+                  "nodeId": "message:msg_3gdeHZNwcy5D"
+                },
+                {
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}",
+                  "nodeId": "call:msg_Y5LA5qb6Go4q:0"
+                }
+              ]
+            }
+          ],
+          "trajectoryId": "eval:run_YnVFtjMPrWLA:case_fCy2M4dI6jja:tpc_o4bbNaEWzz3k:thd_iXevM1505t6RQAJH",
+          "schemaVersion": 1
+        },
+        "schemaVersion": 2,
+        "evidenceReviews": [
+          {
+            "global": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "issues": [],
+            "source": "known_with_partial_trace",
+            "decision": "supported",
+            "existence": "valid",
+            "localSupport": "supported",
+            "observations": [
+              {
+                "nodeId": "message:msg_3gdeHZNwcy5D",
+                "summary": "Original cited field records an execution failure; causal owner unknown.",
+                "category": "observed_execution_failure",
+                "claimLevel": "observation",
+                "evidenceRefs": [
+                  {
+                    "field": "error",
+                    "quote": "{\"message\": \"service unavailable\"}",
+                    "nodeId": "message:msg_3gdeHZNwcy5D"
+                  }
+                ]
+              }
+            ],
+            "causalSupport": "insufficient",
+            "schemaVersion": 2
+          }
+        ]
+      },
+      "processed": {
+        "claimed": true,
+        "stale": false,
+        "job": {
+          "id": "f009bac0-fbfc-5864-afd5-76c29bc44a13",
+          "status": "success",
+          "createdAt": "2026-11-14T08:42:08.504Z",
+          "updatedAt": "2026-11-14T08:42:08.658Z",
+          "error": null,
+          "inputDigest": "ff540209fb1710f2074017e4207a53bf998628dc1088e7caf6c400dae4845f28",
+          "scope": {
+            "runId": "run_YnVFtjMPrWLA",
+            "caseId": "case_fCy2M4dI6jja",
+            "topicId": "tpc_o4bbNaEWzz3k",
+            "threadId": "thd_iXevM1505t6RQAJH",
+            "operationId": "recovered_quality_failed-operation",
+            "traceIds": []
+          },
+          "trajectoryId": "eval:run_YnVFtjMPrWLA:case_fCy2M4dI6jja:tpc_o4bbNaEWzz3k:thd_iXevM1505t6RQAJH",
+          "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+          "result": {
+            "schemaVersion": 1,
+            "trajectoryId": "eval:run_YnVFtjMPrWLA:case_fCy2M4dI6jja:tpc_o4bbNaEWzz3k:thd_iXevM1505t6RQAJH",
+            "inputDigest": "ff540209fb1710f2074017e4207a53bf998628dc1088e7caf6c400dae4845f28",
+            "scope": {
+              "runId": "run_YnVFtjMPrWLA",
+              "caseId": "case_fCy2M4dI6jja",
+              "topicId": "tpc_o4bbNaEWzz3k",
+              "threadId": "thd_iXevM1505t6RQAJH",
+              "operationId": "recovered_quality_failed-operation",
+              "traceIds": []
+            },
+            "jobExecution": {
+              "status": "completed",
+              "errors": []
+            },
+            "diagnosis": {
+              "status": "needs_review",
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_3gdeHZNwcy5D",
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}"
+                },
+                {
+                  "nodeId": "call:msg_Y5LA5qb6Go4q:0",
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}"
+                }
+              ],
+              "reasonCodes": [
+                "causal_owner_unconfirmed",
+                "evidence_review_not_supported",
+                "incomplete_source_coverage"
+              ]
+            },
+            "observations": [
+              {
+                "category": "external_transport",
+                "moduleId": null,
+                "claimLevel": "observation",
+                "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+                "evidenceRefs": [
+                  {
+                    "nodeId": "message:msg_3gdeHZNwcy5D",
+                    "field": "error",
+                    "quote": "{\"message\": \"service unavailable\"}"
+                  },
+                  {
+                    "nodeId": "call:msg_Y5LA5qb6Go4q:0",
+                    "field": "arguments",
+                    "quote": "{\"orderId\":\"case_fCy2M4dI6jja\",\"year\":2025}"
+                  }
+                ]
+              }
+            ],
+            "coverage": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "provenance": {
+              "rulesVersion": "round1-structured-v1",
+              "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+            },
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "incomplete_source_coverage",
+                    "nodeId": null,
+                    "message": "Source coverage is incomplete"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "multi",
+      "runId": "run_fSeFrPW7Xlhs",
+      "caseId": "case_yam4oHgfgtjN",
+      "threadId": "thd_ADd6rU7AW9dFdIR4",
+      "passed": false,
+      "job": {
+        "id": "0d40bea7-f131-554f-abe7-54df99e7583d",
+        "status": "success",
+        "createdAt": "2026-11-14T08:42:08.731Z",
+        "updatedAt": "2026-11-14T08:42:08.897Z",
+        "error": null,
+        "inputDigest": "0536d8b6523346e68fb79c22f9037348cc0aa3ab53fd2b4211c75f2c105b42d6",
+        "scope": {
+          "runId": "run_fSeFrPW7Xlhs",
+          "caseId": "case_yam4oHgfgtjN",
+          "topicId": "tpc_wArCP0NdsDSL",
+          "threadId": "thd_ADd6rU7AW9dFdIR4",
+          "operationId": "multi-operation",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_fSeFrPW7Xlhs:case_yam4oHgfgtjN:tpc_wArCP0NdsDSL:thd_ADd6rU7AW9dFdIR4",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_fSeFrPW7Xlhs:case_yam4oHgfgtjN:tpc_wArCP0NdsDSL:thd_ADd6rU7AW9dFdIR4",
+          "inputDigest": "0536d8b6523346e68fb79c22f9037348cc0aa3ab53fd2b4211c75f2c105b42d6",
+          "scope": {
+            "runId": "run_fSeFrPW7Xlhs",
+            "caseId": "case_yam4oHgfgtjN",
+            "topicId": "tpc_wArCP0NdsDSL",
+            "threadId": "thd_ADd6rU7AW9dFdIR4",
+            "operationId": "multi-operation",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "needs_review",
+            "category": "external_transport",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_e7BD02NWNhtZ",
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}"
+              },
+              {
+                "nodeId": "call:msg_jdELYUZaLkUT:0",
+                "field": "arguments",
+                "quote": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "evidence_review_not_supported",
+              "incomplete_source_coverage"
+            ]
+          },
+          "observations": [
+            {
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_e7BD02NWNhtZ",
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}"
+                },
+                {
+                  "nodeId": "call:msg_jdELYUZaLkUT:0",
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}"
+                }
+              ]
+            }
+          ],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "valid",
+              "issues": []
+            },
+            "support": {
+              "status": "insufficient",
+              "issues": [
+                {
+                  "code": "incomplete_source_coverage",
+                  "nodeId": null,
+                  "message": "Source coverage is incomplete"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_fSeFrPW7Xlhs:case_yam4oHgfgtjN:tpc_wArCP0NdsDSL:thd_ADd6rU7AW9dFdIR4",
+        "inputDigest": "0536d8b6523346e68fb79c22f9037348cc0aa3ab53fd2b4211c75f2c105b42d6",
+        "scope": {
+          "runId": "run_fSeFrPW7Xlhs",
+          "caseId": "case_yam4oHgfgtjN",
+          "topicId": "tpc_wArCP0NdsDSL",
+          "threadId": "thd_ADd6rU7AW9dFdIR4",
+          "operationId": "multi-operation",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_1HqXZYOrLca3",
+            "messageId": "msg_1HqXZYOrLca3",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}",
+            "sourcePointer": "messages/msg_1HqXZYOrLca3",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-14T08:42:08.001Z"
+          },
+          {
+            "id": "message:msg_jdELYUZaLkUT",
+            "messageId": "msg_jdELYUZaLkUT",
+            "parentId": "message:msg_1HqXZYOrLca3",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_jdELYUZaLkUT",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-14T08:42:08.011Z"
+          },
+          {
+            "id": "call:msg_jdELYUZaLkUT:0",
+            "messageId": "msg_jdELYUZaLkUT",
+            "parentId": "message:msg_jdELYUZaLkUT",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_jdELYUZaLkUT/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-14T08:42:08.011Z"
+          },
+          {
+            "id": "message:msg_e7BD02NWNhtZ",
+            "messageId": "msg_e7BD02NWNhtZ",
+            "parentId": "message:msg_jdELYUZaLkUT",
+            "role": "tool",
+            "content": "{\"success\":false,\"error\":\"service unavailable\"}",
+            "sourcePointer": "messages/msg_e7BD02NWNhtZ",
+            "errorSourcePointer": "message_plugins/msg_e7BD02NWNhtZ/error",
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}",
+            "error": {
+              "message": "service unavailable"
+            },
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-14T08:42:08.021Z"
+          },
+          {
+            "id": "message:msg_FTNs5yaIPhMH",
+            "messageId": "msg_FTNs5yaIPhMH",
+            "parentId": "message:msg_e7BD02NWNhtZ",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_FTNs5yaIPhMH",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-14T08:42:08.031Z"
+          },
+          {
+            "id": "call:msg_FTNs5yaIPhMH:0",
+            "messageId": "msg_FTNs5yaIPhMH",
+            "parentId": "message:msg_FTNs5yaIPhMH",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_FTNs5yaIPhMH/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-1",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 5,
+            "createdAt": "2026-11-14T08:42:08.031Z"
+          },
+          {
+            "id": "message:msg_OhEsHxaWIfVD",
+            "messageId": "msg_OhEsHxaWIfVD",
+            "parentId": "message:msg_FTNs5yaIPhMH",
+            "role": "tool",
+            "content": "{\"success\":true,\"data\":{\"orderId\":\"case_yam4oHgfgtjN\",\"status\":\"pending\"}}",
+            "sourcePointer": "messages/msg_OhEsHxaWIfVD",
+            "errorSourcePointer": null,
+            "toolCallId": "call-1",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 6,
+            "createdAt": "2026-11-14T08:42:08.041Z"
+          },
+          {
+            "id": "message:msg_ac6gEEqcM3y3",
+            "messageId": "msg_ac6gEEqcM3y3",
+            "parentId": "message:msg_OhEsHxaWIfVD",
+            "role": "assistant",
+            "content": "{\"orderId\":\"case_yam4oHgfgtjN\",\"status\":\"pending\"}",
+            "sourcePointer": "messages/msg_ac6gEEqcM3y3",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 7,
+            "createdAt": "2026-11-14T08:42:08.051Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Isolated multi",
+          "expected": "absent-reference",
+          "actual": "{\"orderId\":\"case_yam4oHgfgtjN\",\"status\":\"pending\"}",
+          "criteria": null
+        }
+      },
+      "artifact": {
+        "scope": {
+          "runId": "run_fSeFrPW7Xlhs",
+          "caseId": "case_yam4oHgfgtjN",
+          "topicId": "tpc_wArCP0NdsDSL",
+          "threadId": "thd_ADd6rU7AW9dFdIR4",
+          "traceIds": [],
+          "operationId": "multi-operation"
+        },
+        "semantic": {
+          "error": null,
+          "review": null,
+          "status": "disabled",
+          "candidate": null,
+          "modelCalls": 0
+        },
+        "diagnosis": {
+          "status": "needs_review",
+          "moduleId": null,
+          "rootCause": null,
+          "claimLevel": "observation"
+        },
+        "inputDigest": "0536d8b6523346e68fb79c22f9037348cc0aa3ab53fd2b4211c75f2c105b42d6",
+        "persistence": "sidecar_only_no_score_write",
+        "observations": [
+          {
+            "nodeId": "message:msg_e7BD02NWNhtZ",
+            "summary": "Original cited field records an execution failure; causal owner unknown.",
+            "category": "observed_execution_failure",
+            "claimLevel": "observation",
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}",
+                "nodeId": "message:msg_e7BD02NWNhtZ"
+              }
+            ]
+          }
+        ],
+        "rulesBaseline": {
+          "scope": {
+            "runId": "run_fSeFrPW7Xlhs",
+            "caseId": "case_yam4oHgfgtjN",
+            "topicId": "tpc_wArCP0NdsDSL",
+            "threadId": "thd_ADd6rU7AW9dFdIR4",
+            "traceIds": [],
+            "operationId": "multi-operation"
+          },
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "diagnosis": {
+            "status": "needs_review",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "category": "external_transport",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "incomplete_source_coverage"
+            ],
+            "evidenceRefs": [
+              {
+                "field": "error",
+                "quote": "{\"message\": \"service unavailable\"}",
+                "nodeId": "message:msg_e7BD02NWNhtZ"
+              },
+              {
+                "field": "arguments",
+                "quote": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}",
+                "nodeId": "call:msg_jdELYUZaLkUT:0"
+              }
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "inputDigest": "0536d8b6523346e68fb79c22f9037348cc0aa3ab53fd2b4211c75f2c105b42d6",
+          "jobExecution": {
+            "errors": [],
+            "status": "completed"
+          },
+          "observations": [
+            {
+              "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "evidenceRefs": [
+                {
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}",
+                  "nodeId": "message:msg_e7BD02NWNhtZ"
+                },
+                {
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}",
+                  "nodeId": "call:msg_jdELYUZaLkUT:0"
+                }
+              ]
+            }
+          ],
+          "trajectoryId": "eval:run_fSeFrPW7Xlhs:case_yam4oHgfgtjN:tpc_wArCP0NdsDSL:thd_ADd6rU7AW9dFdIR4",
+          "schemaVersion": 1
+        },
+        "schemaVersion": 2,
+        "evidenceReviews": [
+          {
+            "global": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "issues": [],
+            "source": "known_with_partial_trace",
+            "decision": "supported",
+            "existence": "valid",
+            "localSupport": "supported",
+            "observations": [
+              {
+                "nodeId": "message:msg_e7BD02NWNhtZ",
+                "summary": "Original cited field records an execution failure; causal owner unknown.",
+                "category": "observed_execution_failure",
+                "claimLevel": "observation",
+                "evidenceRefs": [
+                  {
+                    "field": "error",
+                    "quote": "{\"message\": \"service unavailable\"}",
+                    "nodeId": "message:msg_e7BD02NWNhtZ"
+                  }
+                ]
+              }
+            ],
+            "causalSupport": "insufficient",
+            "schemaVersion": 2
+          }
+        ]
+      },
+      "processed": {
+        "claimed": true,
+        "stale": false,
+        "job": {
+          "id": "0d40bea7-f131-554f-abe7-54df99e7583d",
+          "status": "success",
+          "createdAt": "2026-11-14T08:42:08.731Z",
+          "updatedAt": "2026-11-14T08:42:08.897Z",
+          "error": null,
+          "inputDigest": "0536d8b6523346e68fb79c22f9037348cc0aa3ab53fd2b4211c75f2c105b42d6",
+          "scope": {
+            "runId": "run_fSeFrPW7Xlhs",
+            "caseId": "case_yam4oHgfgtjN",
+            "topicId": "tpc_wArCP0NdsDSL",
+            "threadId": "thd_ADd6rU7AW9dFdIR4",
+            "operationId": "multi-operation",
+            "traceIds": []
+          },
+          "trajectoryId": "eval:run_fSeFrPW7Xlhs:case_yam4oHgfgtjN:tpc_wArCP0NdsDSL:thd_ADd6rU7AW9dFdIR4",
+          "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+          "result": {
+            "schemaVersion": 1,
+            "trajectoryId": "eval:run_fSeFrPW7Xlhs:case_yam4oHgfgtjN:tpc_wArCP0NdsDSL:thd_ADd6rU7AW9dFdIR4",
+            "inputDigest": "0536d8b6523346e68fb79c22f9037348cc0aa3ab53fd2b4211c75f2c105b42d6",
+            "scope": {
+              "runId": "run_fSeFrPW7Xlhs",
+              "caseId": "case_yam4oHgfgtjN",
+              "topicId": "tpc_wArCP0NdsDSL",
+              "threadId": "thd_ADd6rU7AW9dFdIR4",
+              "operationId": "multi-operation",
+              "traceIds": []
+            },
+            "jobExecution": {
+              "status": "completed",
+              "errors": []
+            },
+            "diagnosis": {
+              "status": "needs_review",
+              "category": "external_transport",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_e7BD02NWNhtZ",
+                  "field": "error",
+                  "quote": "{\"message\": \"service unavailable\"}"
+                },
+                {
+                  "nodeId": "call:msg_jdELYUZaLkUT:0",
+                  "field": "arguments",
+                  "quote": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}"
+                }
+              ],
+              "reasonCodes": [
+                "causal_owner_unconfirmed",
+                "evidence_review_not_supported",
+                "incomplete_source_coverage"
+              ]
+            },
+            "observations": [
+              {
+                "category": "external_transport",
+                "moduleId": null,
+                "claimLevel": "observation",
+                "summary": "外部工具网络或服务异常 (observed failure; causal owner unconfirmed)",
+                "evidenceRefs": [
+                  {
+                    "nodeId": "message:msg_e7BD02NWNhtZ",
+                    "field": "error",
+                    "quote": "{\"message\": \"service unavailable\"}"
+                  },
+                  {
+                    "nodeId": "call:msg_jdELYUZaLkUT:0",
+                    "field": "arguments",
+                    "quote": "{\"orderId\":\"case_yam4oHgfgtjN\",\"year\":2025}"
+                  }
+                ]
+              }
+            ],
+            "coverage": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "provenance": {
+              "rulesVersion": "round1-structured-v1",
+              "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+            },
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "incomplete_source_coverage",
+                    "nodeId": null,
+                    "message": "Source coverage is incomplete"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "missing_call",
+      "runId": "run_83c79HYyNq8w",
+      "caseId": "case_JEbmRBkjuf1E",
+      "threadId": "thd_WQy7lvaiDJ160GEx",
+      "passed": false,
+      "job": {
+        "id": "2caddd41-6c10-5cb7-a3e1-7185304d2d94",
+        "status": "success",
+        "createdAt": "2026-11-14T08:42:09.017Z",
+        "updatedAt": "2026-11-14T08:42:09.198Z",
+        "error": null,
+        "inputDigest": "00c60bed5d8bb61f83ceec99c701af58ca03b4458643155390486cbde34be4d6",
+        "scope": {
+          "runId": "run_83c79HYyNq8w",
+          "caseId": "case_JEbmRBkjuf1E",
+          "topicId": "tpc_Em3jA6SUUIbp",
+          "threadId": "thd_WQy7lvaiDJ160GEx",
+          "operationId": "missing_call-operation",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_83c79HYyNq8w:case_JEbmRBkjuf1E:tpc_Em3jA6SUUIbp:thd_WQy7lvaiDJ160GEx",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_83c79HYyNq8w:case_JEbmRBkjuf1E:tpc_Em3jA6SUUIbp:thd_WQy7lvaiDJ160GEx",
+          "inputDigest": "00c60bed5d8bb61f83ceec99c701af58ca03b4458643155390486cbde34be4d6",
+          "scope": {
+            "runId": "run_83c79HYyNq8w",
+            "caseId": "case_JEbmRBkjuf1E",
+            "topicId": "tpc_Em3jA6SUUIbp",
+            "threadId": "thd_WQy7lvaiDJ160GEx",
+            "operationId": "missing_call-operation",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "missing_or_ambiguous_tool_call",
+              "no_supported_failure_signal",
+              "unknown_tool_source"
+            ]
+          },
+          "observations": [],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "missing_or_ambiguous_tool_call",
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "not_applicable",
+              "issues": []
+            },
+            "support": {
+              "status": "not_applicable",
+              "issues": []
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_83c79HYyNq8w:case_JEbmRBkjuf1E:tpc_Em3jA6SUUIbp:thd_WQy7lvaiDJ160GEx",
+        "inputDigest": "00c60bed5d8bb61f83ceec99c701af58ca03b4458643155390486cbde34be4d6",
+        "scope": {
+          "runId": "run_83c79HYyNq8w",
+          "caseId": "case_JEbmRBkjuf1E",
+          "topicId": "tpc_Em3jA6SUUIbp",
+          "threadId": "thd_WQy7lvaiDJ160GEx",
+          "operationId": "missing_call-operation",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_yzPVa5hqollG",
+            "messageId": "msg_yzPVa5hqollG",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\":\"case_JEbmRBkjuf1E\",\"year\":2025}",
+            "sourcePointer": "messages/msg_yzPVa5hqollG",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-14T08:42:08.016Z"
+          },
+          {
+            "id": "message:msg_Pc1fXCHpsJXr",
+            "messageId": "msg_Pc1fXCHpsJXr",
+            "parentId": "message:msg_yzPVa5hqollG",
+            "role": "tool",
+            "content": "{\"success\":false,\"error\":\"service unavailable\"}",
+            "sourcePointer": "messages/msg_Pc1fXCHpsJXr",
+            "errorSourcePointer": "message_plugins/msg_Pc1fXCHpsJXr/error",
+            "toolCallId": "call-0",
+            "toolSource": "unknown",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_JEbmRBkjuf1E\",\"year\":2025}",
+            "error": {
+              "message": "service unavailable"
+            },
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-14T08:42:08.026Z"
+          },
+          {
+            "id": "message:msg_7WT9i49IOw1e",
+            "messageId": "msg_7WT9i49IOw1e",
+            "parentId": "message:msg_Pc1fXCHpsJXr",
+            "role": "assistant",
+            "content": "{\"orderId\":\"case_JEbmRBkjuf1E\",\"status\":\"pending\"}",
+            "sourcePointer": "messages/msg_7WT9i49IOw1e",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-14T08:42:08.036Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "missing_or_ambiguous_tool_call",
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Isolated missing_call",
+          "expected": "absent-reference",
+          "actual": "{\"orderId\":\"case_JEbmRBkjuf1E\",\"status\":\"pending\"}",
+          "criteria": null
+        }
+      },
+      "artifact": {
+        "scope": {
+          "runId": "run_83c79HYyNq8w",
+          "caseId": "case_JEbmRBkjuf1E",
+          "topicId": "tpc_Em3jA6SUUIbp",
+          "threadId": "thd_WQy7lvaiDJ160GEx",
+          "traceIds": [],
+          "operationId": "missing_call-operation"
+        },
+        "semantic": {
+          "error": null,
+          "review": null,
+          "status": "disabled",
+          "candidate": null,
+          "modelCalls": 0
+        },
+        "diagnosis": {
+          "status": "unknown",
+          "moduleId": null,
+          "rootCause": null,
+          "claimLevel": "observation"
+        },
+        "inputDigest": "00c60bed5d8bb61f83ceec99c701af58ca03b4458643155390486cbde34be4d6",
+        "persistence": "sidecar_only_no_score_write",
+        "observations": [],
+        "rulesBaseline": {
+          "scope": {
+            "runId": "run_83c79HYyNq8w",
+            "caseId": "case_JEbmRBkjuf1E",
+            "topicId": "tpc_Em3jA6SUUIbp",
+            "threadId": "thd_WQy7lvaiDJ160GEx",
+            "traceIds": [],
+            "operationId": "missing_call-operation"
+          },
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "missing_or_ambiguous_tool_call",
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "diagnosis": {
+            "status": "unknown",
+            "summary": "No supported root-cause conclusion",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "missing_or_ambiguous_tool_call",
+              "no_supported_failure_signal",
+              "unknown_tool_source"
+            ],
+            "evidenceRefs": []
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "inputDigest": "00c60bed5d8bb61f83ceec99c701af58ca03b4458643155390486cbde34be4d6",
+          "jobExecution": {
+            "errors": [],
+            "status": "completed"
+          },
+          "observations": [],
+          "trajectoryId": "eval:run_83c79HYyNq8w:case_JEbmRBkjuf1E:tpc_Em3jA6SUUIbp:thd_WQy7lvaiDJ160GEx",
+          "schemaVersion": 1
+        },
+        "schemaVersion": 2,
+        "evidenceReviews": []
+      },
+      "processed": {
+        "claimed": true,
+        "stale": false,
+        "job": {
+          "id": "2caddd41-6c10-5cb7-a3e1-7185304d2d94",
+          "status": "success",
+          "createdAt": "2026-11-14T08:42:09.017Z",
+          "updatedAt": "2026-11-14T08:42:09.198Z",
+          "error": null,
+          "inputDigest": "00c60bed5d8bb61f83ceec99c701af58ca03b4458643155390486cbde34be4d6",
+          "scope": {
+            "runId": "run_83c79HYyNq8w",
+            "caseId": "case_JEbmRBkjuf1E",
+            "topicId": "tpc_Em3jA6SUUIbp",
+            "threadId": "thd_WQy7lvaiDJ160GEx",
+            "operationId": "missing_call-operation",
+            "traceIds": []
+          },
+          "trajectoryId": "eval:run_83c79HYyNq8w:case_JEbmRBkjuf1E:tpc_Em3jA6SUUIbp:thd_WQy7lvaiDJ160GEx",
+          "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+          "result": {
+            "schemaVersion": 1,
+            "trajectoryId": "eval:run_83c79HYyNq8w:case_JEbmRBkjuf1E:tpc_Em3jA6SUUIbp:thd_WQy7lvaiDJ160GEx",
+            "inputDigest": "00c60bed5d8bb61f83ceec99c701af58ca03b4458643155390486cbde34be4d6",
+            "scope": {
+              "runId": "run_83c79HYyNq8w",
+              "caseId": "case_JEbmRBkjuf1E",
+              "topicId": "tpc_Em3jA6SUUIbp",
+              "threadId": "thd_WQy7lvaiDJ160GEx",
+              "operationId": "missing_call-operation",
+              "traceIds": []
+            },
+            "jobExecution": {
+              "status": "completed",
+              "errors": []
+            },
+            "diagnosis": {
+              "status": "unknown",
+              "category": null,
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "No supported root-cause conclusion",
+              "evidenceRefs": [],
+              "reasonCodes": [
+                "incomplete_source_coverage",
+                "missing_or_ambiguous_tool_call",
+                "no_supported_failure_signal",
+                "unknown_tool_source"
+              ]
+            },
+            "observations": [],
+            "coverage": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "missing_or_ambiguous_tool_call",
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "provenance": {
+              "rulesVersion": "round1-structured-v1",
+              "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+            },
+            "review": {
+              "existence": {
+                "status": "not_applicable",
+                "issues": []
+              },
+              "support": {
+                "status": "not_applicable",
+                "issues": []
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "worker_failure",
+      "runId": "run_GCnFeCnbI1mg",
+      "caseId": "case_OvSVxp7EB8DH",
+      "threadId": "thd_KDQKfDw5zKniwOqq",
+      "passed": false,
+      "job": {
+        "id": "f39f9b2f-a7a4-509a-a715-10b8f6d84cd8",
+        "status": "error",
+        "createdAt": "2026-11-14T08:42:09.275Z",
+        "updatedAt": "2026-11-14T08:42:09.291Z",
+        "error": {
+          "code": "python_spawn",
+          "message": "Attribution failed; the original evaluation result was preserved"
+        },
+        "inputDigest": "bfa33563210dc066e4c63d0b0efb4c522284014bf525122451695c57a441ce3f",
+        "scope": {
+          "runId": "run_GCnFeCnbI1mg",
+          "caseId": "case_OvSVxp7EB8DH",
+          "topicId": "tpc_aO2CjeKHnbjo",
+          "threadId": "thd_KDQKfDw5zKniwOqq",
+          "operationId": "worker_failure-operation",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_GCnFeCnbI1mg:case_OvSVxp7EB8DH:tpc_aO2CjeKHnbjo:thd_KDQKfDw5zKniwOqq",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0"
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_GCnFeCnbI1mg:case_OvSVxp7EB8DH:tpc_aO2CjeKHnbjo:thd_KDQKfDw5zKniwOqq",
+        "inputDigest": "bfa33563210dc066e4c63d0b0efb4c522284014bf525122451695c57a441ce3f",
+        "scope": {
+          "runId": "run_GCnFeCnbI1mg",
+          "caseId": "case_OvSVxp7EB8DH",
+          "topicId": "tpc_aO2CjeKHnbjo",
+          "threadId": "thd_KDQKfDw5zKniwOqq",
+          "operationId": "worker_failure-operation",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_kkdjXjS7uefW",
+            "messageId": "msg_kkdjXjS7uefW",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\":\"case_OvSVxp7EB8DH\",\"year\":2025}",
+            "sourcePointer": "messages/msg_kkdjXjS7uefW",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-14T08:42:08.028Z"
+          },
+          {
+            "id": "message:msg_DoO2Q5mtcOVY",
+            "messageId": "msg_DoO2Q5mtcOVY",
+            "parentId": "message:msg_kkdjXjS7uefW",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_DoO2Q5mtcOVY",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-14T08:42:08.038Z"
+          },
+          {
+            "id": "call:msg_DoO2Q5mtcOVY:0",
+            "messageId": "msg_DoO2Q5mtcOVY",
+            "parentId": "message:msg_DoO2Q5mtcOVY",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_DoO2Q5mtcOVY/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_OvSVxp7EB8DH\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-14T08:42:08.038Z"
+          },
+          {
+            "id": "message:msg_HYXzfjOQ6m4J",
+            "messageId": "msg_HYXzfjOQ6m4J",
+            "parentId": "message:msg_DoO2Q5mtcOVY",
+            "role": "tool",
+            "content": "{\"success\":false,\"error\":\"service unavailable\"}",
+            "sourcePointer": "messages/msg_HYXzfjOQ6m4J",
+            "errorSourcePointer": "message_plugins/msg_HYXzfjOQ6m4J/error",
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_OvSVxp7EB8DH\",\"year\":2025}",
+            "error": {
+              "message": "service unavailable"
+            },
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-14T08:42:08.048Z"
+          },
+          {
+            "id": "message:msg_zTnb3gNMdhaG",
+            "messageId": "msg_zTnb3gNMdhaG",
+            "parentId": "message:msg_HYXzfjOQ6m4J",
+            "role": "assistant",
+            "content": "{\"orderId\":\"case_OvSVxp7EB8DH\",\"status\":\"pending\"}",
+            "sourcePointer": "messages/msg_zTnb3gNMdhaG",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-14T08:42:08.058Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Isolated worker_failure",
+          "expected": "absent-reference",
+          "actual": "{\"orderId\":\"case_OvSVxp7EB8DH\",\"status\":\"pending\"}",
+          "criteria": null
+        }
+      },
+      "processed": {
+        "claimed": true,
+        "job": {
+          "id": "f39f9b2f-a7a4-509a-a715-10b8f6d84cd8",
+          "status": "error",
+          "createdAt": "2026-11-14T08:42:09.275Z",
+          "updatedAt": "2026-11-14T08:42:09.291Z",
+          "error": {
+            "code": "python_spawn",
+            "message": "Attribution failed; the original evaluation result was preserved"
+          },
+          "inputDigest": "bfa33563210dc066e4c63d0b0efb4c522284014bf525122451695c57a441ce3f",
+          "scope": {
+            "runId": "run_GCnFeCnbI1mg",
+            "caseId": "case_OvSVxp7EB8DH",
+            "topicId": "tpc_aO2CjeKHnbjo",
+            "threadId": "thd_KDQKfDw5zKniwOqq",
+            "operationId": "worker_failure-operation",
+            "traceIds": []
+          },
+          "trajectoryId": "eval:run_GCnFeCnbI1mg:case_OvSVxp7EB8DH:tpc_aO2CjeKHnbjo:thd_KDQKfDw5zKniwOqq",
+          "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0"
+        }
+      }
+    },
+    {
+      "name": "worker_timeout",
+      "runId": "run_sq0KSSrFOZjj",
+      "caseId": "case_a2buKmKWVaeX",
+      "threadId": "thd_3sPpWw7pcRwBCL9k",
+      "passed": false,
+      "job": {
+        "id": "c062e5e5-1cbb-5e05-a8a6-f0783b8d7fd7",
+        "status": "error",
+        "createdAt": "2026-11-14T08:42:09.306Z",
+        "updatedAt": "2026-11-14T08:42:09.439Z",
+        "error": {
+          "code": "python_timeout",
+          "message": "Attribution failed; the original evaluation result was preserved"
+        },
+        "inputDigest": "fdd13aa6a3d8015f3021ec3683c9a2d650f2ff37a3af35c9a1c0d9195f89bfde",
+        "scope": {
+          "runId": "run_sq0KSSrFOZjj",
+          "caseId": "case_a2buKmKWVaeX",
+          "topicId": "tpc_jKs1QX1MuEP6",
+          "threadId": "thd_3sPpWw7pcRwBCL9k",
+          "operationId": "worker_timeout-operation",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_sq0KSSrFOZjj:case_a2buKmKWVaeX:tpc_jKs1QX1MuEP6:thd_3sPpWw7pcRwBCL9k",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0"
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_sq0KSSrFOZjj:case_a2buKmKWVaeX:tpc_jKs1QX1MuEP6:thd_3sPpWw7pcRwBCL9k",
+        "inputDigest": "fdd13aa6a3d8015f3021ec3683c9a2d650f2ff37a3af35c9a1c0d9195f89bfde",
+        "scope": {
+          "runId": "run_sq0KSSrFOZjj",
+          "caseId": "case_a2buKmKWVaeX",
+          "topicId": "tpc_jKs1QX1MuEP6",
+          "threadId": "thd_3sPpWw7pcRwBCL9k",
+          "operationId": "worker_timeout-operation",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_UOi1Q6OLyUdb",
+            "messageId": "msg_UOi1Q6OLyUdb",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\":\"case_a2buKmKWVaeX\",\"year\":2025}",
+            "sourcePointer": "messages/msg_UOi1Q6OLyUdb",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-14T08:42:08.038Z"
+          },
+          {
+            "id": "message:msg_Bi6kHATeIojX",
+            "messageId": "msg_Bi6kHATeIojX",
+            "parentId": "message:msg_UOi1Q6OLyUdb",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_Bi6kHATeIojX",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-14T08:42:08.048Z"
+          },
+          {
+            "id": "call:msg_Bi6kHATeIojX:0",
+            "messageId": "msg_Bi6kHATeIojX",
+            "parentId": "message:msg_Bi6kHATeIojX",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_Bi6kHATeIojX/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_a2buKmKWVaeX\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-14T08:42:08.048Z"
+          },
+          {
+            "id": "message:msg_759jfmYynwgo",
+            "messageId": "msg_759jfmYynwgo",
+            "parentId": "message:msg_Bi6kHATeIojX",
+            "role": "tool",
+            "content": "{\"success\":false,\"error\":\"service unavailable\"}",
+            "sourcePointer": "messages/msg_759jfmYynwgo",
+            "errorSourcePointer": "message_plugins/msg_759jfmYynwgo/error",
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_a2buKmKWVaeX\",\"year\":2025}",
+            "error": {
+              "message": "service unavailable"
+            },
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-14T08:42:08.058Z"
+          },
+          {
+            "id": "message:msg_ret2sVNqFsCA",
+            "messageId": "msg_ret2sVNqFsCA",
+            "parentId": "message:msg_759jfmYynwgo",
+            "role": "assistant",
+            "content": "{\"orderId\":\"case_a2buKmKWVaeX\",\"status\":\"pending\"}",
+            "sourcePointer": "messages/msg_ret2sVNqFsCA",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-14T08:42:08.068Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Isolated worker_timeout",
+          "expected": "absent-reference",
+          "actual": "{\"orderId\":\"case_a2buKmKWVaeX\",\"status\":\"pending\"}",
+          "criteria": null
+        }
+      },
+      "processed": {
+        "claimed": true,
+        "job": {
+          "id": "c062e5e5-1cbb-5e05-a8a6-f0783b8d7fd7",
+          "status": "error",
+          "createdAt": "2026-11-14T08:42:09.306Z",
+          "updatedAt": "2026-11-14T08:42:09.439Z",
+          "error": {
+            "code": "python_timeout",
+            "message": "Attribution failed; the original evaluation result was preserved"
+          },
+          "inputDigest": "fdd13aa6a3d8015f3021ec3683c9a2d650f2ff37a3af35c9a1c0d9195f89bfde",
+          "scope": {
+            "runId": "run_sq0KSSrFOZjj",
+            "caseId": "case_a2buKmKWVaeX",
+            "topicId": "tpc_jKs1QX1MuEP6",
+            "threadId": "thd_3sPpWw7pcRwBCL9k",
+            "operationId": "worker_timeout-operation",
+            "traceIds": []
+          },
+          "trajectoryId": "eval:run_sq0KSSrFOZjj:case_a2buKmKWVaeX:tpc_jKs1QX1MuEP6:thd_3sPpWw7pcRwBCL9k",
+          "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0"
+        }
+      }
+    },
+    {
+      "name": "semantic_on",
+      "runId": "run_BRhkKgVj7otP",
+      "caseId": "case_2XSjmKcV7bts",
+      "threadId": "thd_jxBDs9pBglr8B4t9",
+      "passed": false,
+      "job": {
+        "id": "7e9688c7-8be9-5024-aa2b-526372b1ee3a",
+        "status": "success",
+        "createdAt": "2026-11-14T08:42:09.457Z",
+        "updatedAt": "2026-11-14T08:42:09.641Z",
+        "error": null,
+        "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+        "scope": {
+          "runId": "run_BRhkKgVj7otP",
+          "caseId": "case_2XSjmKcV7bts",
+          "topicId": "tpc_G48XqQRIxmJb",
+          "threadId": "thd_jxBDs9pBglr8B4t9",
+          "operationId": "semantic_on-operation",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_BRhkKgVj7otP:case_2XSjmKcV7bts:tpc_G48XqQRIxmJb:thd_jxBDs9pBglr8B4t9",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_BRhkKgVj7otP:case_2XSjmKcV7bts:tpc_G48XqQRIxmJb:thd_jxBDs9pBglr8B4t9",
+          "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+          "scope": {
+            "runId": "run_BRhkKgVj7otP",
+            "caseId": "case_2XSjmKcV7bts",
+            "topicId": "tpc_G48XqQRIxmJb",
+            "threadId": "thd_jxBDs9pBglr8B4t9",
+            "operationId": "semantic_on-operation",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "observations": [],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "not_applicable",
+              "issues": []
+            },
+            "support": {
+              "status": "not_applicable",
+              "issues": []
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_BRhkKgVj7otP:case_2XSjmKcV7bts:tpc_G48XqQRIxmJb:thd_jxBDs9pBglr8B4t9",
+        "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+        "scope": {
+          "runId": "run_BRhkKgVj7otP",
+          "caseId": "case_2XSjmKcV7bts",
+          "topicId": "tpc_G48XqQRIxmJb",
+          "threadId": "thd_jxBDs9pBglr8B4t9",
+          "operationId": "semantic_on-operation",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_2R24hyjMDuLw",
+            "messageId": "msg_2R24hyjMDuLw",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\":\"case_2XSjmKcV7bts\",\"year\":2025}",
+            "sourcePointer": "messages/msg_2R24hyjMDuLw",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-14T08:42:08.050Z"
+          },
+          {
+            "id": "message:msg_cHk6ouuZbChU",
+            "messageId": "msg_cHk6ouuZbChU",
+            "parentId": "message:msg_2R24hyjMDuLw",
+            "role": "assistant",
+            "content": "Calling tool",
+            "sourcePointer": "messages/msg_cHk6ouuZbChU",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-14T08:42:08.060Z"
+          },
+          {
+            "id": "call:msg_cHk6ouuZbChU:0",
+            "messageId": "msg_cHk6ouuZbChU",
+            "parentId": "message:msg_cHk6ouuZbChU",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_cHk6ouuZbChU/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_2XSjmKcV7bts\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-14T08:42:08.060Z"
+          },
+          {
+            "id": "message:msg_6FouwXWQTTXy",
+            "messageId": "msg_6FouwXWQTTXy",
+            "parentId": "message:msg_cHk6ouuZbChU",
+            "role": "tool",
+            "content": "{\"success\":true,\"data\":{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"pending\"}}",
+            "sourcePointer": "messages/msg_6FouwXWQTTXy",
+            "errorSourcePointer": null,
+            "toolCallId": "call-0",
+            "toolSource": "mcp",
+            "toolName": "orders____lookup",
+            "arguments": "{\"orderId\":\"case_2XSjmKcV7bts\",\"year\":2025}",
+            "error": null,
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-14T08:42:08.070Z"
+          },
+          {
+            "id": "message:msg_Ki52zLHWYZyA",
+            "messageId": "msg_Ki52zLHWYZyA",
+            "parentId": "message:msg_6FouwXWQTTXy",
+            "role": "assistant",
+            "content": "{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"shipped\"}",
+            "sourcePointer": "messages/msg_Ki52zLHWYZyA",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-14T08:42:08.080Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Isolated semantic_on",
+          "expected": "absent-reference",
+          "actual": "{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"shipped\"}",
+          "criteria": null
+        }
+      },
+      "artifact": {
+        "scope": {
+          "runId": "run_BRhkKgVj7otP",
+          "caseId": "case_2XSjmKcV7bts",
+          "topicId": "tpc_G48XqQRIxmJb",
+          "threadId": "thd_jxBDs9pBglr8B4t9",
+          "traceIds": [],
+          "operationId": "semantic_on-operation"
+        },
+        "semantic": {
+          "review": {
+            "scope": {
+              "runId": "run_BRhkKgVj7otP",
+              "caseId": "case_2XSjmKcV7bts",
+              "topicId": "tpc_G48XqQRIxmJb",
+              "threadId": "thd_jxBDs9pBglr8B4t9",
+              "traceIds": [],
+              "operationId": "semantic_on-operation"
+            },
+            "reviews": [
+              {
+                "id": "m1",
+                "issues": [],
+                "support": "supported",
+                "existence": "valid"
+              }
+            ],
+            "coverage": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "decision": "supported",
+            "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+            "schemaVersion": 1,
+            "supportedObservations": [
+              {
+                "id": "m1",
+                "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed.",
+                "category": "answer_tool_mismatch",
+                "claimLevel": "observation",
+                "comparison": {
+                  "key": "status",
+                  "actual": "shipped",
+                  "expected": "pending"
+                },
+                "evidenceRefs": [
+                  {
+                    "field": "content",
+                    "quote": "{\"success\":true,\"data\":{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"pending\"}}",
+                    "nodeId": "message:msg_6FouwXWQTTXy"
+                  },
+                  {
+                    "field": "content",
+                    "quote": "{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"shipped\"}",
+                    "nodeId": "message:msg_Ki52zLHWYZyA"
+                  }
+                ]
+              }
+            ]
+          },
+          "status": "completed",
+          "candidate": {
+            "scope": {
+              "runId": "run_BRhkKgVj7otP",
+              "caseId": "case_2XSjmKcV7bts",
+              "topicId": "tpc_G48XqQRIxmJb",
+              "threadId": "thd_jxBDs9pBglr8B4t9",
+              "traceIds": [],
+              "operationId": "semantic_on-operation"
+            },
+            "decision": "candidates",
+            "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+            "observations": [
+              {
+                "id": "m1",
+                "summary": "Fixture comparison, not real model reasoning.",
+                "category": "answer_tool_mismatch",
+                "claimLevel": "observation",
+                "comparison": {
+                  "key": "status",
+                  "actual": "shipped",
+                  "expected": "pending"
+                },
+                "evidenceRefs": [
+                  {
+                    "field": "content",
+                    "quote": "{\"success\":true,\"data\":{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"pending\"}}",
+                    "nodeId": "message:msg_6FouwXWQTTXy"
+                  },
+                  {
+                    "field": "content",
+                    "quote": "{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"shipped\"}",
+                    "nodeId": "message:msg_Ki52zLHWYZyA"
+                  }
+                ]
+              }
+            ],
+            "schemaVersion": 1
+          },
+          "generation": "external_ModelRuntime",
+          "providerMetadata": {
+            "mode": "offline",
+            "model": "local-model",
+            "usage": {
+              "total_tokens": 20,
+              "prompt_tokens": 10,
+              "completion_tokens": 10
+            },
+            "provider": "openai",
+            "latencyMs": 23.55069999999978,
+            "actualCost": null,
+            "promptVersion": "acceptance-v1"
+          },
+          "modelCallsInPython": 0
+        },
+        "diagnosis": {
+          "status": "needs_review",
+          "moduleId": null,
+          "rootCause": null,
+          "claimLevel": "observation"
+        },
+        "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+        "persistence": "sidecar_only_no_score_write",
+        "observations": [
+          {
+            "id": "m1",
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed.",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "actual": "shipped",
+              "expected": "pending"
+            },
+            "evidenceRefs": [
+              {
+                "field": "content",
+                "quote": "{\"success\":true,\"data\":{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"pending\"}}",
+                "nodeId": "message:msg_6FouwXWQTTXy"
+              },
+              {
+                "field": "content",
+                "quote": "{\"orderId\":\"case_2XSjmKcV7bts\",\"status\":\"shipped\"}",
+                "nodeId": "message:msg_Ki52zLHWYZyA"
+              }
+            ]
+          }
+        ],
+        "rulesBaseline": {
+          "scope": {
+            "runId": "run_BRhkKgVj7otP",
+            "caseId": "case_2XSjmKcV7bts",
+            "topicId": "tpc_G48XqQRIxmJb",
+            "threadId": "thd_jxBDs9pBglr8B4t9",
+            "traceIds": [],
+            "operationId": "semantic_on-operation"
+          },
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "diagnosis": {
+            "status": "unknown",
+            "summary": "No supported root-cause conclusion",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ],
+            "evidenceRefs": []
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+          "jobExecution": {
+            "errors": [],
+            "status": "completed"
+          },
+          "observations": [],
+          "trajectoryId": "eval:run_BRhkKgVj7otP:case_2XSjmKcV7bts:tpc_G48XqQRIxmJb:thd_jxBDs9pBglr8B4t9",
+          "schemaVersion": 1
+        },
+        "schemaVersion": 2,
+        "evidenceReviews": []
+      },
+      "processed": {
+        "claimed": true,
+        "stale": false,
+        "job": {
+          "id": "7e9688c7-8be9-5024-aa2b-526372b1ee3a",
+          "status": "success",
+          "createdAt": "2026-11-14T08:42:09.457Z",
+          "updatedAt": "2026-11-14T08:42:09.641Z",
+          "error": null,
+          "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+          "scope": {
+            "runId": "run_BRhkKgVj7otP",
+            "caseId": "case_2XSjmKcV7bts",
+            "topicId": "tpc_G48XqQRIxmJb",
+            "threadId": "thd_jxBDs9pBglr8B4t9",
+            "operationId": "semantic_on-operation",
+            "traceIds": []
+          },
+          "trajectoryId": "eval:run_BRhkKgVj7otP:case_2XSjmKcV7bts:tpc_G48XqQRIxmJb:thd_jxBDs9pBglr8B4t9",
+          "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+          "result": {
+            "schemaVersion": 1,
+            "trajectoryId": "eval:run_BRhkKgVj7otP:case_2XSjmKcV7bts:tpc_G48XqQRIxmJb:thd_jxBDs9pBglr8B4t9",
+            "inputDigest": "6a729307ab4577bc78c0fd96f6aeddbd09754ed07ed9d6fee5214ee942d97dbc",
+            "scope": {
+              "runId": "run_BRhkKgVj7otP",
+              "caseId": "case_2XSjmKcV7bts",
+              "topicId": "tpc_G48XqQRIxmJb",
+              "threadId": "thd_jxBDs9pBglr8B4t9",
+              "operationId": "semantic_on-operation",
+              "traceIds": []
+            },
+            "jobExecution": {
+              "status": "completed",
+              "errors": []
+            },
+            "diagnosis": {
+              "status": "unknown",
+              "category": null,
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "No supported root-cause conclusion",
+              "evidenceRefs": [],
+              "reasonCodes": [
+                "incomplete_source_coverage",
+                "no_supported_failure_signal"
+              ]
+            },
+            "observations": [],
+            "coverage": {
+              "source": "database_messages",
+              "complete": false,
+              "warnings": [
+                "operation_events_unavailable",
+                "provider_request_payload_unavailable",
+                "trace_id_unavailable"
+              ]
+            },
+            "provenance": {
+              "rulesVersion": "round1-structured-v1",
+              "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+            },
+            "review": {
+              "existence": {
+                "status": "not_applicable",
+                "issues": []
+              },
+              "support": {
+                "status": "not_applicable",
+                "issues": []
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "checks": {
+    "scoreJudgeRunMessagesUnchanged": true,
+    "shadowCalls": 5,
+    "modelMockRequests": 1,
+    "paidModelRequests": 0,
+    "normalAndRecoveredPassedSkipped": true,
+    "duplicateJobsIdempotent": true,
+    "traceIdentity": true,
+    "unprovenRoots": 0,
+    "accessIsolation": true
+  },
+  "runtimeExecution": "Seeded persisted messages, not a new live Agent model execution"
+}

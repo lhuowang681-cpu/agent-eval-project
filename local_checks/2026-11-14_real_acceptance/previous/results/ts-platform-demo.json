@@ -1,0 +1,237 @@
+{
+  "result": {
+    "schemaVersion": 1,
+    "trajectoryId": "integration",
+    "inputDigest": "integration-digest",
+    "scope": {
+      "runId": "integrationrun",
+      "caseId": "integration",
+      "topicId": "integrationtopic",
+      "threadId": null,
+      "operationId": "integrationop",
+      "traceIds": []
+    },
+    "jobExecution": {
+      "status": "completed",
+      "errors": []
+    },
+    "diagnosis": {
+      "status": "unknown",
+      "category": null,
+      "moduleId": null,
+      "claimLevel": "observation",
+      "summary": "No supported root-cause conclusion",
+      "evidenceRefs": [],
+      "reasonCodes": [
+        "incomplete_source_coverage",
+        "no_supported_failure_signal"
+      ]
+    },
+    "observations": [],
+    "coverage": {
+      "source": "database_messages",
+      "complete": false,
+      "warnings": [
+        "provider_request_payload_unavailable"
+      ]
+    },
+    "provenance": {
+      "rulesVersion": "round1-structured-v1",
+      "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+    },
+    "review": {
+      "existence": {
+        "status": "not_applicable",
+        "issues": []
+      },
+      "support": {
+        "status": "not_applicable",
+        "issues": []
+      }
+    }
+  },
+  "artifact": {
+    "schemaVersion": 2,
+    "scope": {
+      "runId": "integrationrun",
+      "caseId": "integration",
+      "topicId": "integrationtopic",
+      "threadId": null,
+      "operationId": "integrationop",
+      "traceIds": []
+    },
+    "inputDigest": "integration-digest",
+    "rulesBaseline": {
+      "schemaVersion": 1,
+      "trajectoryId": "integration",
+      "inputDigest": "integration-digest",
+      "scope": {
+        "runId": "integrationrun",
+        "caseId": "integration",
+        "topicId": "integrationtopic",
+        "threadId": null,
+        "operationId": "integrationop",
+        "traceIds": []
+      },
+      "jobExecution": {
+        "status": "completed",
+        "errors": []
+      },
+      "diagnosis": {
+        "status": "unknown",
+        "category": null,
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "No supported root-cause conclusion",
+        "evidenceRefs": [],
+        "reasonCodes": [
+          "incomplete_source_coverage",
+          "no_supported_failure_signal"
+        ]
+      },
+      "observations": [],
+      "coverage": {
+        "source": "database_messages",
+        "complete": false,
+        "warnings": [
+          "provider_request_payload_unavailable"
+        ]
+      },
+      "provenance": {
+        "rulesVersion": "round1-structured-v1",
+        "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+      }
+    },
+    "evidenceReviews": [],
+    "semantic": {
+      "status": "completed",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "integrationrun",
+          "caseId": "integration",
+          "topicId": "integrationtopic",
+          "threadId": null,
+          "operationId": "integrationop",
+          "traceIds": []
+        },
+        "inputDigest": "integration-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "A bounded field mismatch; causal owner unknown.",
+            "evidenceRefs": [
+              {
+                "nodeId": "integration-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"integration-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "integration-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"integration-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "integrationrun",
+          "caseId": "integration",
+          "topicId": "integrationtopic",
+          "threadId": null,
+          "operationId": "integrationop",
+          "traceIds": []
+        },
+        "inputDigest": "integration-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "integration-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"integration-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "integration-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"integration-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "modelCalls": 1,
+      "error": null
+    },
+    "observations": [
+      {
+        "id": "s1",
+        "category": "answer_tool_mismatch",
+        "claimLevel": "observation",
+        "comparison": {
+          "key": "status",
+          "expected": "pending",
+          "actual": "shipped"
+        },
+        "evidenceRefs": [
+          {
+            "nodeId": "integration-r",
+            "field": "content",
+            "quote": "{\"success\": true, \"data\": {\"orderId\": \"integration-order\", \"status\": \"pending\", \"year\": 2025}}"
+          },
+          {
+            "nodeId": "integration-a",
+            "field": "content",
+            "quote": "{\"orderId\": \"integration-order\", \"status\": \"shipped\", \"year\": 2025}"
+          }
+        ],
+        "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+      }
+    ],
+    "diagnosis": {
+      "status": "needs_review",
+      "claimLevel": "observation",
+      "moduleId": null,
+      "rootCause": null
+    },
+    "persistence": "sidecar_only_no_score_write"
+  },
+  "inputUnchanged": true,
+  "databaseRunNotPerformed": true
+}

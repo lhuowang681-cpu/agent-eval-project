@@ -1,0 +1,240 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794127746774,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Class:packages/builtin-tool-calculator/src/ExecutionRuntime/index.ts:CalculatorExecutionRuntime",
+    "name": "CalculatorExecutionRuntime",
+    "type": "Class",
+    "filePath": "packages/builtin-tool-calculator/src/ExecutionRuntime/index.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 21,
+  "risk": "LOW",
+  "riskSharedAxes": "LOW",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "summary": {
+    "direct": 2,
+    "processes_affected": 0,
+    "modules_affected": 0
+  },
+  "byDepthCounts": {
+    "1": 2,
+    "2": 3,
+    "3": 16
+  },
+  "affected_processes": [],
+  "affected_modules": [],
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "File:packages/builtin-tool-calculator/src/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-calculator/src/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:src/server/services/toolExecution/serverRuntimes/calculator.ts",
+        "name": "calculator.ts",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/calculator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ],
+    "2": [
+      {
+        "depth": 2,
+        "id": "File:packages/builtin-tools/src/identifiers.ts",
+        "name": "identifiers.ts",
+        "filePath": "packages/builtin-tools/src/identifiers.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:packages/builtin-tools/src/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tools/src/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "File:src/server/services/toolExecution/serverRuntimes/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      }
+    ],
+    "3": [
+      {
+        "depth": 3,
+        "id": "File:src/features/ChatInput/ActionBar/Tools/useControls.tsx",
+        "name": "useControls.tsx",
+        "filePath": "src/features/ChatInput/ActionBar/Tools/useControls.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/features/Conversation/Messages/AssistantGroup/Tool/Inspector/ToolTitle.tsx",
+        "name": "ToolTitle.tsx",
+        "filePath": "src/features/Conversation/Messages/AssistantGroup/Tool/Inspector/ToolTitle.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/helpers/toolEngineering/index.ts",
+        "name": "index.ts",
+        "filePath": "src/helpers/toolEngineering/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/routes/(main)/community/(detail)/agent/features/Details/Capabilities/PluginItem.tsx",
+        "name": "PluginItem.tsx",
+        "filePath": "src/routes/(main)/community/(detail)/agent/features/Details/Capabilities/PluginItem.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/modules/Mecha/AgentToolsEngine/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/modules/Mecha/AgentToolsEngine/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "name": "AgentRuntimeService.ts",
+        "filePath": "src/server/services/agentRuntime/AgentRuntimeService.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/aiAgent/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/discover/index.ts",
+        "name": "index.ts",
+        "filePath": "src/server/services/discover/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/services/toolExecution/builtin.ts",
+        "name": "builtin.ts",
+        "filePath": "src/server/services/toolExecution/builtin.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/store/chat/agents/createAgentExecutors.ts",
+        "name": "createAgentExecutors.ts",
+        "filePath": "src/store/chat/agents/createAgentExecutors.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/store/chat/slices/aiChat/actions/streamingExecutor.ts",
+        "name": "streamingExecutor.ts",
+        "filePath": "src/store/chat/slices/aiChat/actions/streamingExecutor.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/store/chat/slices/plugin/actions/internals.ts",
+        "name": "internals.ts",
+        "filePath": "src/store/chat/slices/plugin/actions/internals.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/store/tool/slices/builtin/action.ts",
+        "name": "action.ts",
+        "filePath": "src/store/tool/slices/builtin/action.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/store/tool/slices/builtin/executors/lobe-activator.ts",
+        "name": "lobe-activator.ts",
+        "filePath": "src/store/tool/slices/builtin/executors/lobe-activator.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/store/tool/slices/builtin/initialState.ts",
+        "name": "initialState.ts",
+        "filePath": "src/store/tool/slices/builtin/initialState.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/store/tool/slices/builtin/selectors.ts",
+        "name": "selectors.ts",
+        "filePath": "src/store/tool/slices/builtin/selectors.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      }
+    ]
+  }
+}

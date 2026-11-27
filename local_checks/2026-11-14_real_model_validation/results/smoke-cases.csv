@@ -1,0 +1,7 @@
+﻿case,state,httpStatus,contractValid,reason
+parameter_closed,failed,200,False,missing scope/inputDigest
+answer_mismatch,not_run,,,stopped after first smoke failure
+stale_result,not_run,,,stopped after first smoke failure
+normal,not_run,,,stopped after first smoke failure
+recovered,not_run,,,stopped after first smoke failure
+insufficient,not_run,,,stopped after first smoke failure

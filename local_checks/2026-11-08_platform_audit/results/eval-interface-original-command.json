@@ -1,0 +1,20 @@
+{
+  "label": "eval-interface-original",
+  "cwd": "platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/server/routers/lambda/__tests__/integration/agentEval",
+    "--environment=node",
+    "--maxWorkers=1",
+    "--fileParallelism=false",
+    "--testTimeout=20000",
+    "--hookTimeout=60000",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../results/eval-interface-original.json"
+  ],
+  "exitCode": 0,
+  "seconds": 70.73
+}

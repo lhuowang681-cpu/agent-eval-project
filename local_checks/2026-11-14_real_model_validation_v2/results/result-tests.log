@@ -1,0 +1,11 @@
+test_answer_supported_with_original_evidence (__main__.ResultsTests.test_answer_supported_with_original_evidence) ... ok
+test_budget_and_cost_not_invoice (__main__.ResultsTests.test_budget_and_cost_not_invoice) ... ok
+test_invalid_enum_still_rejected (__main__.ResultsTests.test_invalid_enum_still_rejected) ... ok
+test_missing_identity_still_rejected (__main__.ResultsTests.test_missing_identity_still_rejected) ... ok
+test_normal_recovered_abstain (__main__.ResultsTests.test_normal_recovered_abstain) ... ok
+test_numeric_string_still_rejected (__main__.ResultsTests.test_numeric_string_still_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.007s
+
+OK

@@ -1,0 +1,541 @@
+{
+  "startedAt": "2026-11-08T07:35:46.833Z",
+  "baseURL": "http://127.0.0.1:13010",
+  "steps": [
+    {
+      "name": "00-api-fixture-setup",
+      "status": "passed",
+      "milliseconds": 2288,
+      "signupHTTP": 422,
+      "signinHTTP": 200,
+      "fixtureAgentId": "agt_UPMVH6nRulJc",
+      "sessionUserId": "user_Xwc2Ex5OVadgL4lAEr54aI1XeQ8",
+      "cookiesClearedBeforeUILogin": true
+    },
+    {
+      "name": "01-signin",
+      "status": "passed",
+      "milliseconds": 15999,
+      "authMode": "UI form",
+      "authenticatedSession": true,
+      "finalPath": "/eval"
+    },
+    {
+      "name": "02-create-benchmark",
+      "status": "passed",
+      "milliseconds": 1300,
+      "benchmarkId": "evb_ekQnI3JKf1dt"
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    }
+  ],
+  "pageErrors": [],
+  "requestFailed": [
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-3PPSOAF3.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-MLAXNUIV.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-SEEW3BSQ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-I5EUJD5U.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-URVATGEP.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-XEFYH2SI.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-JOMNMPT7.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-5543ADZV.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-FH724MO3.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-G74TY5TS.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-YSDTX2PZ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-PEGWMM4L.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-3WU76LEZ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-KT3BNVTQ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-ZKTCMKPN.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-MASECBYO.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-MZ5O5A5C.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-XCACHZNR.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-XNLAGQPE.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-5GL42JFG.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/src/business/client/BusinessDesktopRoutes.tsx",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-K5DK3NZT.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-V57OX2HX.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-DA7OQ6T7.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-3JKHZ4UL.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-2YVECYFG.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-SVNMAOJT.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-ZEJB4J7J.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/src/layout/SPAGlobalProvider/index.tsx",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-3XZJCKAS.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-65JWFOWF.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-RBGVKYP2.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-YBSQAGNP.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-6W2TJONH.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-Y6WE43LN.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-KYYDH6U5.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-KUNSVPSC.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-25D3LJNK.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-PSEB2JZC.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-S4LYXJA2.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-SKW5AP4A.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-TN3V3ACH.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-7GHVCMNN.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-6BELTSVC.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-S5VBNNLQ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-TF6XAECF.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-BGFBXY7F.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-JNRPBO7S.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-EHVKM3YX.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-HLRK6G2G.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-CWMJDDVP.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/src/features/AgentTasks/routeMeta.ts",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-GGFY3DLZ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-AX2S6ZXP.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-QVB2LMQK.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-LKSQLCAH.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-WN65UPEQ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-P2Z5ET6Z.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-V6NX44OT.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-TNWRY3TP.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-TIMKHJ4P.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-4UJW227C.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-ACUA6CNE.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-RKYFYZZI.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-2AGOQHPU.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-NQFFORW7.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-SDSVMNSV.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-UA2BPALT.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-K7XNRKUA.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-KRZ6LGLD.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-OXC23LVP.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-NQM2VDU2.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-IYBXLZY3.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-U7HEJTJT.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-CJCM5XSA.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-RNARGERN.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-M7MIQMPJ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-47RXCJJA.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-73GOSRVV.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-ROOR7FS5.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-ICGONWS7.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-B2YLSRON.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-IPF2P7AP.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-RSZWBXLU.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-4IQRTCVG.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-O3MFZ6ZV.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-RR6DE75K.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-TK67TWYQ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-LJQK54J3.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-GWFNQMI2.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-USC4NAFM.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://localhost:9876/node_modules/.vite/deps/chunk-C63QMVMJ.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "url": "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+      "error": "net::ERR_FAILED"
+    }
+  ],
+  "httpErrors": [],
+  "method": "Headless installed Edge, real BetterAuth session, no development auth header",
+  "blockedNonBusinessAssets": [
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Regular.woff",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-harmony-sans-sc/1.0.0/files/fonts/HarmonyOS_Sans_SC_Medium.woff",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Bold.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Medium.woff2",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist-mono/1.0.0/files/fonts/GeistMono-Regular.otf",
+    "https://registry.npmmirror.com/@lobehub/webfont-geist/1.0.0/files/fonts/Geist-Regular.woff2"
+  ],
+  "currentStep": "03-create-dataset",
+  "authenticatedSession": true,
+  "authMode": "UI form",
+  "pendingRequests": []
+}

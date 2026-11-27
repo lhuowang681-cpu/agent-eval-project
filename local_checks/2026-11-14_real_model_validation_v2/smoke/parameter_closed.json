@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "trajectoryId": "dev",
+  "inputDigest": "dev-digest",
+  "scope": {
+    "runId": "devrun",
+    "caseId": "dev",
+    "topicId": "devtopic",
+    "threadId": null,
+    "operationId": "devop",
+    "traceIds": []
+  },
+  "nodes": [
+    {
+      "id": "dev-u",
+      "messageId": "u",
+      "parentId": null,
+      "role": "user",
+      "content": "{\"task\": \"User supplied closed query policy\", \"parameterConstraints\": {\"year\": {\"allowed\": [2025], \"closed\": true}}}",
+      "sourcePointer": "synthetic/u",
+      "error": null,
+      "toolCallId": null,
+      "toolSource": "unknown",
+      "toolName": null,
+      "arguments": null,
+      "traceId": null,
+      "sequence": 0,
+      "createdAt": null
+    },
+    {
+      "id": "dev-c",
+      "messageId": "c",
+      "parentId": null,
+      "role": "call",
+      "content": "",
+      "sourcePointer": "synthetic/c",
+      "error": null,
+      "toolCallId": "tc1",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": "{\"year\": 2024, \"orderId\": \"dev-order\"}",
+      "traceId": null,
+      "sequence": 1,
+      "createdAt": null
+    },
+    {
+      "id": "dev-r",
+      "messageId": "r",
+      "parentId": null,
+      "role": "tool",
+      "content": "{\"success\": true, \"data\": {\"orderId\": \"dev-order\", \"status\": \"pending\", \"year\": 2024}}",
+      "sourcePointer": "synthetic/r",
+      "error": null,
+      "toolCallId": "tc1",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": null,
+      "traceId": null,
+      "sequence": 2,
+      "createdAt": null
+    },
+    {
+      "id": "dev-a",
+      "messageId": "a",
+      "parentId": null,
+      "role": "assistant",
+      "content": "{\"orderId\": \"dev-order\", \"status\": \"pending\", \"year\": 2024}",
+      "sourcePointer": "synthetic/a",
+      "error": null,
+      "toolCallId": null,
+      "toolSource": "unknown",
+      "toolName": null,
+      "arguments": null,
+      "traceId": null,
+      "sequence": 8,
+      "createdAt": null
+    }
+  ],
+  "coverage": {
+    "source": "database_messages",
+    "complete": false,
+    "warnings": [
+      "provider_request_payload_unavailable"
+    ]
+  },
+  "evaluation": {
+    "status": "failed",
+    "score": 0,
+    "task": "{\"orderId\": \"dev-order\", \"year\": 2025}",
+    "expected": null,
+    "actual": "{\"orderId\": \"dev-order\", \"status\": \"pending\", \"year\": 2024}",
+    "criteria": null
+  }
+}

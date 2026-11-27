@@ -1,0 +1,77 @@
+{
+  "conditions": "Offline AST-extracted pure functions only; no imports of llm_classifier, dotenv, LLM calls, or business edits",
+  "taxonomy_module_count": 56,
+  "evidence_gate_gap": {
+    "input": {
+      "module_id": "L2.2",
+      "confidence": 0.99,
+      "badcase_kind": "not_an_allowed_kind",
+      "original_error_type": "FabricatedError",
+      "first_abnormal_node_id": "missing-node",
+      "root_cause_evidence_node_ids": [
+        "missing-node"
+      ],
+      "evidence": [
+        "missing-node: claimed Agent generated bad parameters"
+      ]
+    },
+    "normalized": {
+      "trace_id": "synthetic-trace",
+      "trace_name": "",
+      "trace_timestamp": "",
+      "badcase_kind": "not_an_allowed_kind",
+      "error_category": "unknown_badcase",
+      "error_category_zh": "unknown_badcase",
+      "original_error_type": "FabricatedError",
+      "error_phase": "",
+      "layer_id": "L2",
+      "layer_name": "Agent 编排层",
+      "module_id": "L2.2",
+      "module_name": "GeneralChatAgent",
+      "confidence": 0.99,
+      "needs_review": false,
+      "first_abnormal_node_id": "missing-node",
+      "root_cause_evidence_node_ids": [
+        "missing-node"
+      ],
+      "trace_causal_summary": "",
+      "denoising_stats": {},
+      "evidence": [
+        "missing-node: claimed Agent generated bad parameters"
+      ],
+      "reason": "",
+      "candidate_modules": []
+    },
+    "observed_missing_node_retained": true,
+    "observed_needs_review_false": true
+  },
+  "illegal_module_fallback": {
+    "trace_id": "synthetic-trace",
+    "trace_name": "",
+    "trace_timestamp": "",
+    "badcase_kind": "classification_failed",
+    "error_category": "classification_failed",
+    "error_category_zh": "归因失败",
+    "original_error_type": "ActualError",
+    "error_phase": "",
+    "layer_id": "UNCLASSIFIED",
+    "layer_name": "未分类",
+    "module_id": "UNCLASSIFIED",
+    "module_name": "未分类",
+    "confidence": 0.0,
+    "needs_review": true,
+    "first_abnormal_node_id": "",
+    "root_cause_evidence_node_ids": [],
+    "trace_causal_summary": "",
+    "denoising_stats": {},
+    "evidence": [],
+    "reason": "模型返回非法模块 L99.9",
+    "candidate_modules": []
+  },
+  "interpretation": "Source normalization checks module membership but not evidence existence/support; accepts non-enum kind and overrides real original_error_type. Existing prompt requirements are not runtime validation.",
+  "source_sha256": {
+    "source-reference\\attribution\\llm_classifier.py": "3d883dae6c256e48601f2210498958dab684b002e3d4b8a60f6c7414ecce4736",
+    "source-reference\\attribution\\taxonomy.py": "b41704dfa7635d6349af0269af47fa2733cf9bb8628330b739204bde1e5fc43f",
+    "local_checks\\2026-11-08_round1\\attribution\\structured_jsonl_attribution.py": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+  }
+}

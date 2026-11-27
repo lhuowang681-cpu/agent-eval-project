@@ -1,0 +1,17 @@
+{
+  "label": "type-check",
+  "cwd": "../../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "--max-old-space-size=6144",
+    "node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "--pretty",
+    "false",
+    "--incremental",
+    "--tsBuildInfoFile",
+    "../../2026-11-08_round1/compression_judge/typecheck.tsbuildinfo"
+  ],
+  "exitCode": 2,
+  "seconds": 239.69
+}

@@ -1,0 +1,135 @@
+
+ RUN  v3.2.4 C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform
+
+ ❯ packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts (19 tests | 7 failed) 13ms
+   ✓ matchLLMRubric > should pass when LLM returns high score 1ms
+   ✓ matchLLMRubric > should fail when LLM returns low score 0ms
+   ✓ matchLLMRubric > should respect custom threshold from rubric 0ms
+   × matchLLMRubric > should reject a score outside the declared judge schema [0, 1] 4ms
+     → expected true to be false // Object.is equality
+   × matchLLMRubric > accepts zero as a valid judge score and keeps its explanation 2ms
+     → expected { passed: false, …(2) } to deeply equal { passed: false, …(2) }
+   × matchLLMRubric > rejects malformed judge output {"reason":"negative","score":-0.1} 1ms
+     → expected 'negative' to contain 'invalid score or reason'
+   × matchLLMRubric > rejects malformed judge output {"reason":"NaN","score":null} 0ms
+     → expected 'LLM judge did not return a score' to contain 'invalid score or reason'
+   × matchLLMRubric > rejects malformed judge output {"reason":"infinite","score":null} 0ms
+     → expected true to be false // Object.is equality
+   × matchLLMRubric > rejects malformed judge output {"reason":"","score":0.9} 0ms
+     → expected true to be false // Object.is equality
+   × matchLLMRubric > rejects malformed judge output {"reason":"  ","score":0.9} 0ms
+     → expected true to be false // Object.is equality
+   ✓ matchLLMRubric > should return score 0 when generateObject is not available 0ms
+   ✓ matchLLMRubric > should handle LLM call failure gracefully 0ms
+   ✓ matchLLMRubric > should use rubric config model/provider over context judgeModel 1ms
+   ✓ matchLLMRubric > should fallback to context.judgeModel when rubric config has no model 0ms
+   ✓ matchLLMRubric > should return score 0 when no judge model configured 0ms
+   ✓ matchLLMRubric > should include expected in user prompt when provided 0ms
+   ✓ matchLLMRubric > should omit expected section when not provided 0ms
+   ✓ matchLLMRubric > should use custom systemRole from rubric config 0ms
+   ✓ matchLLMRubric > should use default systemRole when not configured 0ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts > matchLLMRubric > should reject a score outside the declared judge schema [0, 1]
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts:81:27
+     79|     const result = await matchLLMRubric('x', undefined, rubric({ crite…
+     80| 
+     81|     expect(result.passed).toBe(false);
+       |                           ^
+     82|     expect(result.score).toBe(0);
+     83|     expect(result.reason).toContain('invalid score or reason');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/7]⎯
+
+ FAIL  packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts > matchLLMRubric > accepts zero as a valid judge score and keeps its explanation
+AssertionError: expected { passed: false, …(2) } to deeply equal { passed: false, …(2) }
+
+- Expected
++ Received
+
+  {
+    "passed": false,
+-   "reason": "Completely incorrect",
++   "reason": "LLM judge did not return a score",
+    "score": 0,
+  }
+
+ ❯ packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts:89:20
+     87|     mockGenerateObject.mockResolvedValue({ reason: 'Completely incorre…
+     88|     const result = await matchLLMRubric('x', undefined, rubric(), cont…
+     89|     expect(result).toEqual({ passed: false, reason: 'Completely incorr…
+       |                    ^
+     90|   });
+     91| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/7]⎯
+
+ FAIL  packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts > matchLLMRubric > rejects malformed judge output {"reason":"negative","score":-0.1}
+AssertionError: expected 'negative' to contain 'invalid score or reason'
+
+Expected: "invalid score or reason"
+Received: "negative"
+
+ ❯ packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts:102:27
+    100|     const result = await matchLLMRubric('x', undefined, rubric(), cont…
+    101|     expect(result.passed).toBe(false);
+    102|     expect(result.reason).toContain('invalid score or reason');
+       |                           ^
+    103|   });
+    104| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/7]⎯
+
+ FAIL  packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts > matchLLMRubric > rejects malformed judge output {"reason":"NaN","score":null}
+AssertionError: expected 'LLM judge did not return a score' to contain 'invalid score or reason'
+
+Expected: "invalid score or reason"
+Received: "LLM judge did not return a score"
+
+ ❯ packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts:102:27
+    100|     const result = await matchLLMRubric('x', undefined, rubric(), cont…
+    101|     expect(result.passed).toBe(false);
+    102|     expect(result.reason).toContain('invalid score or reason');
+       |                           ^
+    103|   });
+    104| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/7]⎯
+
+ FAIL  packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts > matchLLMRubric > rejects malformed judge output {"reason":"infinite","score":null}
+ FAIL  packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts > matchLLMRubric > rejects malformed judge output {"reason":"","score":0.9}
+ FAIL  packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts > matchLLMRubric > rejects malformed judge output {"reason":"  ","score":0.9}
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts:101:27
+     99|     mockGenerateObject.mockResolvedValue(value);
+    100|     const result = await matchLLMRubric('x', undefined, rubric(), cont…
+    101|     expect(result.passed).toBe(false);
+       |                           ^
+    102|     expect(result.reason).toContain('invalid score or reason');
+    103|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/7]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  7 failed | 12 passed (19)
+   Start at  15:12:05
+   Duration  434ms (transform 39ms, setup 11ms, collect 37ms, tests 13ms, environment 0ms, prepare 102ms)
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_round1/scoring/judge-before.json

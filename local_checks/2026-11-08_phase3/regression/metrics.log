@@ -1,0 +1,13 @@
+test_abstention_is_not_correct_known_root_or_perfect_precision (__main__.MetricsTests.test_abstention_is_not_correct_known_root_or_perfect_precision) ... ok
+test_bad_reference_types_do_not_crash_statistics (__main__.MetricsTests.test_bad_reference_types_do_not_crash_statistics) ... ok
+test_correct_root_is_scored_only_against_known_root_label (__main__.MetricsTests.test_correct_root_is_scored_only_against_known_root_label) ... ok
+test_coverage_eligibility_cannot_replace_a_support_annotation (__main__.MetricsTests.test_coverage_eligibility_cannot_replace_a_support_annotation) ... ok
+test_duplicate_or_missing_results_cannot_inflate_coverage (__main__.MetricsTests.test_duplicate_or_missing_results_cannot_inflate_coverage) ... ok
+test_execution_error_is_separate_from_normal_abstention (__main__.MetricsTests.test_execution_error_is_separate_from_normal_abstention) ... ok
+test_reference_presence_does_not_prove_support_or_correctness (__main__.MetricsTests.test_reference_presence_does_not_prove_support_or_correctness) ... ok
+test_unknown_truth_is_not_automatically_a_wrong_attribution (__main__.MetricsTests.test_unknown_truth_is_not_automatically_a_wrong_attribution) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

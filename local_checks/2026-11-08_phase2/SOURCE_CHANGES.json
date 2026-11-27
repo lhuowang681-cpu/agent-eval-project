@@ -1,0 +1,481 @@
+{
+  "baseline": "Verified round1-snapshot physical source copy",
+  "baselineFilesVerified": 9313,
+  "changedFiles": [
+    {
+      "path": "locales/zh-CN/eval.json",
+      "kind": "modified",
+      "sha256": "f33e805cc5ece8f35d4e0232080e6dc4a825fb9cbf09d994340ade60772a6bb7",
+      "baselineSha256": "aea92d0f1e6a7709d9ffb27c23ede948e284dfbb2ad3de77f93bec241e77be52",
+      "addedLines": 8,
+      "removedLines": 1
+    },
+    {
+      "path": "packages/builtin-tool-calculator/src/ExecutionRuntime/index.ts",
+      "kind": "modified",
+      "sha256": "e7016c9d5ac99720410432a36c77b3dfa4f76a90b25367b8f1e562a921689c41",
+      "baselineSha256": "c4be2607115ef7f84af7216c10ef65c158145a521a3cf4d9b936b8b980eab4b1",
+      "addedLines": 1,
+      "removedLines": 0
+    },
+    {
+      "path": "packages/database/src/models/__tests__/messages/message.create.test.ts",
+      "kind": "modified",
+      "sha256": "5c10a5fe3594c8e8f1a333679a3e56a3de30202acba958cd194696b8e3192095",
+      "baselineSha256": "88322357aca057b407e75ad67de792130d02ba5ac136bc4cf42b7673756c9150",
+      "addedLines": 25,
+      "removedLines": 0
+    },
+    {
+      "path": "packages/database/src/models/agentEval/run.ts",
+      "kind": "modified",
+      "sha256": "fdcd4c16f46b583722e831635c80a6a0612a2d015cc5985cb07f8b2892d8f503",
+      "baselineSha256": "152237dc3b7a759da30e5d4f10a029f5ff6cdd8edec8079f67926b26604430fa",
+      "addedLines": 16,
+      "removedLines": 0
+    },
+    {
+      "path": "packages/database/src/models/agentEval/runTopic.ts",
+      "kind": "modified",
+      "sha256": "95f752af1ef4675e8acf9129da52354412d071084e0d67962b592f8fa4a37ec6",
+      "baselineSha256": "ac7ec871c8dbe6aa54f1f07a309cbd44d79ab0f3254cff302af3aec745969d11",
+      "addedLines": 75,
+      "removedLines": 1
+    },
+    {
+      "path": "packages/database/src/models/message.ts",
+      "kind": "modified",
+      "sha256": "5f12fe744065807c8f2c4923a5676347da308b0e38c39a102e1e3cdac206a153",
+      "baselineSha256": "dcf4e9f51700e618009ce12deb2464f99b7ae01ce2212a98cc91e170e6f03971",
+      "addedLines": 2,
+      "removedLines": 0
+    },
+    {
+      "path": "packages/eval-rubric/src/evaluate.ts",
+      "kind": "modified",
+      "sha256": "50587680e7fc5877060c6d4b6478f64901fd39f4feaf1645744dedd59a7308b5",
+      "baselineSha256": "304d8d17377eafc88c8ff47ec1137958a681d191a4687ddf7b777a9ba5505e12",
+      "addedLines": 5,
+      "removedLines": 1
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/index.ts",
+      "kind": "modified",
+      "sha256": "33a20b8b6057f2f6649d01ced939e2dcf8d37e78b3f34c262900ab007cf0b793",
+      "baselineSha256": "efbbe9fb0fb4c7e3a8217b9b38b0ef430016749f20c857fd3d33d4314d0a25be",
+      "addedLines": 4,
+      "removedLines": 1
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/llmEq.ts",
+      "kind": "modified",
+      "sha256": "15eb62120ac9a4aa8ea17694d41944fd33f3188c9e11fbf93ede5593362d8bd2",
+      "baselineSha256": "b4bb5261f32801d7c9729bd856ed26dfdbf9d29ed936573349906a2cd4294943",
+      "addedLines": 21,
+      "removedLines": 2
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/llmRubric.ts",
+      "kind": "modified",
+      "sha256": "8e12a05185dcea480cb07e4e9d6af6d5ed4aefcd404c75f38dd950027c8b5ff6",
+      "baselineSha256": "66f4d5c813a9e880bb9a896e9b2a1d1a43fd196a6f71a4d4e5594ca4f20d9243",
+      "addedLines": 14,
+      "removedLines": 2
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/types.ts",
+      "kind": "modified",
+      "sha256": "a2e49d340d8e2cb86294e45eda63d5f93d04e7cac10f7674eae65fbb6636c963",
+      "baselineSha256": "4b5655e040fe9ccb0b96af14f73f1f4b7a55546a61161df764aefcf8e6be4365",
+      "addedLines": 3,
+      "removedLines": 0
+    },
+    {
+      "path": "packages/types/src/eval/agentEval.ts",
+      "kind": "modified",
+      "sha256": "ff20cd616ee81c7a572206f0e7124adca9f896c6cf8cdd3c9eebe519d131b081",
+      "baselineSha256": "180bbb79d31c8f7b2aaf009f75e1d2bd03244b13516fe197cc1f9522d6bedd1a",
+      "addedLines": 20,
+      "removedLines": 0
+    },
+    {
+      "path": "packages/types/src/eval/rubric.ts",
+      "kind": "modified",
+      "sha256": "199d69b911d8d53d94ff35390311c02202e437b088b6b3957bd6ad1403b73450",
+      "baselineSha256": "54efb3e537b37665712c0bb1d3a9b5e69c60c06f0b1e87603d212db5c84c7ff5",
+      "addedLines": 5,
+      "removedLines": 1
+    },
+    {
+      "path": "src/locales/default/eval.ts",
+      "kind": "modified",
+      "sha256": "7e3a6c029f80ae9002a213610925fe7adf1db4a3c5488237be46fa5c7ff283b7",
+      "baselineSha256": "c6452ddc84fe84ee7b5b5ea71bd778debc52d1a5db7ea53d7145db759525cbb0",
+      "addedLines": 8,
+      "removedLines": 0
+    },
+    {
+      "path": "src/routes/(main)/eval/features/DatasetCreateModal/index.tsx",
+      "kind": "modified",
+      "sha256": "7d1f7d7889a265c2856e733adf35daaccab6f63a091e4ce49aa7230f1bc4e1ad",
+      "baselineSha256": "2e8b5e589bca275f8731498193f053b721cc3567177ed1788778c7d1cd0a5d52",
+      "addedLines": 9,
+      "removedLines": 9
+    },
+    {
+      "path": "src/routes/(main)/eval/features/DatasetEditModal/index.tsx",
+      "kind": "modified",
+      "sha256": "d84dfa13487256cfa41c47b13e8e30d5d5c8e1786ee368aaf7048ab3dd38d53b",
+      "baselineSha256": "be930b96a358eac63049a2d41ba3d4bd41c2d57bc986d11a37706eb57c4d3cda",
+      "addedLines": 8,
+      "removedLines": 22
+    },
+    {
+      "path": "src/routes/(main)/eval/features/TestCaseCreateModal/index.tsx",
+      "kind": "modified",
+      "sha256": "0a307d259042b56c35c6bec590d00e26f5b5e47c2e63760c5d52401fd2bd6f28",
+      "baselineSha256": "51327e9b22f27705baad3a5e6516208bb5dd9bddf13ae4ee3410025fd24ca941",
+      "addedLines": 5,
+      "removedLines": 8
+    },
+    {
+      "path": "src/routes/(main)/eval/features/TestCaseEditModal/index.tsx",
+      "kind": "modified",
+      "sha256": "4fd003d351285df34e39f68f4167f57479d6337d99716044f1f613555cfd3c40",
+      "baselineSha256": "bc9df7c4d39c6d5b7d981e747f1f96950167b1b9c768d0924c0d13e0ecfc3871",
+      "addedLines": 5,
+      "removedLines": 8
+    },
+    {
+      "path": "src/server/routers/lambda/agentEval.ts",
+      "kind": "modified",
+      "sha256": "5ec55899d8d624bef2939263ec170444358fb8d88d87bd84358410f5cf0f026f",
+      "baselineSha256": "eaa259ba6e889913198e7004f23b16572d1688671c00c259a1b3ecfd133ed544",
+      "addedLines": 10,
+      "removedLines": 1
+    },
+    {
+      "path": "src/server/routers/lambda/agentEvalExternal.ts",
+      "kind": "modified",
+      "sha256": "de8d10a308911b74f12f400a5fec246695a020238fba90eabbf1f47996d9186d",
+      "baselineSha256": "d2ed9f6fdb9bfdc8774c7aa17fe1305547f8214c33a4bbe8fd4d5d4690e60aef",
+      "addedLines": 53,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalRun/index.ts",
+      "kind": "modified",
+      "sha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9",
+      "baselineSha256": "8ab1c5f8c903b47dbb6ffedbabac08f127a28a515f1c075aeb434a8c7f0baf53",
+      "addedLines": 126,
+      "removedLines": 76
+    },
+    {
+      "path": "src/server/services/agentEvalRun/orchestrator.ts",
+      "kind": "modified",
+      "sha256": "8185577af189c10bc11ed63f84e634f5fd835124e9ab49bc252a873287307468",
+      "baselineSha256": "d06f68c0e1a8e4a03a8cb1bca431fcf584dbe006e5fa9e84ffa0a52a54d9e57e",
+      "addedLines": 15,
+      "removedLines": 1
+    },
+    {
+      "path": "tools/mock-llm/scenarios.ts",
+      "kind": "modified",
+      "sha256": "0a278f4846d2051e8b5645a2877ae1a3b67fa10537982308ee82472526c78930",
+      "baselineSha256": "9067145f30b72b4484f1c16bc9bf2529bc89fac7cce1c78ae2d9cfad1452f7fe",
+      "addedLines": 10,
+      "removedLines": 0
+    },
+    {
+      "path": "tools/mock-llm/server.ts",
+      "kind": "modified",
+      "sha256": "a852e6665255de2966f86502a8ceeb1e935640183899162f9002048699dfbbc0",
+      "baselineSha256": "6d024ff8ca8e148d7d3342486e97f67bb99d37a1f37071ac32d627d77a0f0442",
+      "addedLines": 32,
+      "removedLines": 3
+    },
+    {
+      "path": "packages/builtin-tool-calculator/src/ExecutionRuntime/index.test.ts",
+      "kind": "added",
+      "sha256": "b61e65582a2702a6f166e15a3e9f3423ba98009d44eb7ee9418cc6101af7c689",
+      "baselineSha256": null,
+      "addedLines": 26,
+      "removedLines": 0
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/judgeContext.test.ts",
+      "kind": "added",
+      "sha256": "6f3d56009063da3b9e3296a2c5d29b53b53775e901fce8d7cfdc1a941f777920",
+      "baselineSha256": null,
+      "addedLines": 74,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/adapter.py",
+      "kind": "added",
+      "sha256": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b",
+      "baselineSha256": null,
+      "addedLines": 194,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/engine-version.json",
+      "kind": "added",
+      "sha256": "b79f89306373c0e6ff09752626cc505a6a7186da8b84dd4db5727ffb78fb3a53",
+      "baselineSha256": null,
+      "addedLines": 11,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/evidence_review.py",
+      "kind": "added",
+      "sha256": "d9ea1fb10ade950a05118904cade82882fba26227735bb0474eeff67aa986f29",
+      "baselineSha256": null,
+      "addedLines": 144,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/provenance.json",
+      "kind": "added",
+      "sha256": "711907b0f4c9273a1d24c475e09e530290d7c1854d40197855335f8ed25d3347",
+      "baselineSha256": null,
+      "addedLines": 16,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/README.md",
+      "kind": "added",
+      "sha256": "cd4d409df9d8ce97f4c29cdcb13a3e5914a31496355ec093ac6e05df3bbd5f2e",
+      "baselineSha256": null,
+      "addedLines": 45,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/review_cli.py",
+      "kind": "added",
+      "sha256": "d08346f1ff38745b2616a616e5ed88374e7cfcfb9e9e1e97e01fbb69f7b914d2",
+      "baselineSha256": null,
+      "addedLines": 34,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/rules_pure.py",
+      "kind": "added",
+      "sha256": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e",
+      "baselineSha256": null,
+      "addedLines": 78,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/test_adapter.py",
+      "kind": "added",
+      "sha256": "108c2f9d18ae0883ab3a53e024b8aa9161e4bc329fe5b1ebaf654ebb6d088e0b",
+      "baselineSha256": null,
+      "addedLines": 159,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/eval-attribution/test_evidence_review.py",
+      "kind": "added",
+      "sha256": "8d09b0a937c9f7923b33ab7f0e1ddb7b6d12663e016705bb714d58f9ed8a5258",
+      "baselineSha256": null,
+      "addedLines": 177,
+      "removedLines": 0
+    },
+    {
+      "path": "scripts/local/evalAttribution.ts",
+      "kind": "added",
+      "sha256": "453ca341babfe88e32848e21eaf5345fdc64aaa6cf2b59b7d018bd6fff0bbfdd",
+      "baselineSha256": null,
+      "addedLines": 42,
+      "removedLines": 0
+    },
+    {
+      "path": "src/routes/(main)/eval/config/judgeConfig.test.ts",
+      "kind": "added",
+      "sha256": "c664ef0f06c421cadf676f2ba124e5db0dbb83279c6d4585a3e60f29d784fdf8",
+      "baselineSha256": null,
+      "addedLines": 18,
+      "removedLines": 0
+    },
+    {
+      "path": "src/routes/(main)/eval/config/judgeConfig.ts",
+      "kind": "added",
+      "sha256": "de21eba6bddf906ace79ca431967402c8efcda4e86bb4b8782371da49dad6f1d",
+      "baselineSha256": null,
+      "addedLines": 11,
+      "removedLines": 0
+    },
+    {
+      "path": "src/routes/(main)/eval/features/JudgeConfigFields.tsx",
+      "kind": "added",
+      "sha256": "f6a2b1d0e74d18e9dcfa78b5a9353030f22fa01e03934bb62ab6ba1b0c749d2d",
+      "baselineSha256": null,
+      "addedLines": 40,
+      "removedLines": 0
+    },
+    {
+      "path": "src/routes/(main)/eval/features/JudgeModals.render.test.tsx",
+      "kind": "added",
+      "sha256": "d67da3177661fcdaaab6e31d0b9826ade6a489014eb442e36863454dc129ca03",
+      "baselineSha256": null,
+      "addedLines": 97,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/contracts.ts",
+      "kind": "added",
+      "sha256": "49bcd2079652d978abbdfb57a034c7bf1e2bf5539bea88dbd405599ba17ac232",
+      "baselineSha256": null,
+      "addedLines": 315,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/index.ts",
+      "kind": "added",
+      "sha256": "1ca7f043c6bff140cf1289b39812c3c8260cb5c468d2be105c7158f06e3ea766",
+      "baselineSha256": null,
+      "addedLines": 272,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/python.ts",
+      "kind": "added",
+      "sha256": "081ae50eecbc05758cb9244a358163dd7d79a7b76e8a0b47f789f0d549b311f0",
+      "baselineSha256": null,
+      "addedLines": 126,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/trace.ts",
+      "kind": "added",
+      "sha256": "350efb6e44830a233a4a5acc2dfc94aa92d5e1577d733deabeddfac055ec0ee4",
+      "baselineSha256": null,
+      "addedLines": 256,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/contracts.test.ts",
+      "kind": "added",
+      "sha256": "ce44e87d6e6f8e605d37c05bb59cf84e75904f6b4121ef896ae4343eceaad9f0",
+      "baselineSha256": null,
+      "addedLines": 71,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/fixtures.ts",
+      "kind": "added",
+      "sha256": "107fd3413d6d150b48bd9f4ad4c15d29020a3601135a5ff3c7adca6a7ad0c9ca",
+      "baselineSha256": null,
+      "addedLines": 97,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/python.integration.test.ts",
+      "kind": "added",
+      "sha256": "54a5a190328e5f6ed80d3f1038f5f4525b9feae6e462b02cec2fd67627d66ee8",
+      "baselineSha256": null,
+      "addedLines": 148,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/review-gate.test.ts",
+      "kind": "added",
+      "sha256": "a78c69a97dcecfe03fc28bad38893eb8301b7fb3c19fa2075f18176e49eaf4b3",
+      "baselineSha256": null,
+      "addedLines": 30,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/tasks.integration.test.ts",
+      "kind": "added",
+      "sha256": "a9b7f4286d2822dae787a5044290ba2e7841696507e758ec8f348be414fe67dd",
+      "baselineSha256": null,
+      "addedLines": 215,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/trace.integration.test.ts",
+      "kind": "added",
+      "sha256": "5a5454c993f292ad16cb9dd53450d29a4e8f8b185a0bda80a95b84c10c7bf411",
+      "baselineSha256": null,
+      "addedLines": 455,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalRun/judge.ts",
+      "kind": "added",
+      "sha256": "0eaacbfc2ac4a36ce3bcbf5eb58bec683f517e18f80402b545cca1e69f6a656d",
+      "baselineSha256": null,
+      "addedLines": 99,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts",
+      "kind": "added",
+      "sha256": "96f2980e9dd109c1261efd57c8bebfd3c63ef2f90514f8863522641c2b001a3a",
+      "baselineSha256": null,
+      "addedLines": 119,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/judgeDeadline.test.ts",
+      "kind": "added",
+      "sha256": "e50298413ca9f06ddc37f932246316f780013c43c3514c3f0cba7d0bec44dd74",
+      "baselineSha256": null,
+      "addedLines": 98,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/judgeLifecycle.test.ts",
+      "kind": "added",
+      "sha256": "5ab6623740bd194f7e6782c2d165f7fb94271ba09b9880507fb949fd126c8a4c",
+      "baselineSha256": null,
+      "addedLines": 206,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/judgeMock.test.ts",
+      "kind": "added",
+      "sha256": "6a53f5e58ad7752c3f04e99725bbb6080a987128f14efae368e1f79196f9aff3",
+      "baselineSha256": null,
+      "addedLines": 31,
+      "removedLines": 0
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts",
+      "kind": "added",
+      "sha256": "afbafa33c1b2823d024b2c22e3891c3092d22dcffce0620aa9e2d61632089b2a",
+      "baselineSha256": null,
+      "addedLines": 292,
+      "removedLines": 0
+    },
+    {
+      "path": "tools/mock-llm/attributionFixture.test.ts",
+      "kind": "added",
+      "sha256": "ad2428240d138910f59f0e0ec590fab7037bdc7f345c83157b832d3aba573836",
+      "baselineSha256": null,
+      "addedLines": 13,
+      "removedLines": 0
+    },
+    {
+      "path": "tools/mock-llm/attributionFixture.ts",
+      "kind": "added",
+      "sha256": "91f0b9238e3faa49bb92166cd5bcd5ee940d646de4bc174b6d6d9c2d28962791",
+      "baselineSha256": null,
+      "addedLines": 14,
+      "removedLines": 0
+    },
+    {
+      "path": "tools/mock-llm/judge.ts",
+      "kind": "added",
+      "sha256": "c8bdc42ec810fb643923833bc2fefd46c1016f9b0d18d49ad8962d56d3a59229",
+      "baselineSha256": null,
+      "addedLines": 46,
+      "removedLines": 0
+    }
+  ],
+  "protectedReferences": 96,
+  "referencesUnchanged": true,
+  "referenceDifferences": []
+}

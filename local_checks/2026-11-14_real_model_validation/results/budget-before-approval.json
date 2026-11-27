@@ -1,0 +1,8 @@
+{
+  "stage": "smoke",
+  "approved": false,
+  "approvedRequests": 0,
+  "maxUsd": 0,
+  "formalRequestsAuthorized": 0,
+  "reason": "Await explicit user approval for 6 requests and USD 0.05 cap."
+}

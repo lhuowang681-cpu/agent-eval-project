@@ -1,0 +1,2 @@
+[handleOpenAIError][temp-instrumentation] no parsed body: status=undefined message=Request was aborted. request_id=undefined code=undefined type=undefined headers=undefined error.error=undefined
+{"tests":10,"passed":10,"requests":7,"paidRequests":0}

@@ -1,0 +1,1162 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agent评测工程 · 逆向构建课程蓝图</title><style>body{margin:0;background:#f7f5ef;color:#242a34;font:17px/1.85 system-ui,"Microsoft YaHei",sans-serif}nav{position:fixed;width:235px;inset:0 auto 0 0;padding:28px 20px;overflow:auto;background:#173449;color:#fff}nav a{display:block;color:#dce7ec;padding:7px 0;font-size:14px;text-decoration:none}nav h2{font-size:20px;line-height:1.5;color:#fff}main{margin-left:275px;max-width:1040px;padding:34px 40px}article{background:#fff;padding:36px;margin-bottom:24px;border-radius:10px}h1,h2,h3,h4{line-height:1.5;color:#173449}a{color:#1c607c;text-underline-offset:3px}code{background:#eff3f5;padding:2px 4px;border-radius:3px;font-size:.86em;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#eff3f5;padding:18px;border-radius:5px;line-height:1.6}table{border-collapse:collapse;font-size:14px;min-width:600px;width:100%}th,td{padding:9px 10px;vertical-align:top;border-bottom:1px solid #dce4e8;text-align:left}th{background:#edf2f4}.table-wrap{overflow:auto}article:target,[id]:target{scroll-margin-top:20px}.line{white-space:pre-wrap;display:block;font:13px/1.6 monospace}.line:target{background:#fff1b5}.num{display:inline-block;min-width:48px;color:#718399}footer{font-size:13px;color:#6d7880}@media(max-width:800px){nav{position:static;width:auto}main{margin:0;padding:12px}article{padding:18px}}</style><nav><h2>Agent评测工程<br>逆向构建蓝图</h2><p>2026-11-08 · 10阶段</p><a href="#doc00">00_阅读指南</a><a href="#doc01">01_项目全景地图</a><a href="#doc02">02_从零到一逆向开发课程</a><a href="#doc03">03_核心技术与源码证据</a><a href="#doc04">04_面试问题与最终验收</a><a href="#doc05">05_真实性审计与待核实事项</a><a href="#doc06">06_网页端ChatGPT交接说明</a><a href="#doc07">07_学习进度表</a><a href="#doc08">08_关键源码清单</a><a href="#doc09">09_实验事实卡</a><hr><a href="#v0">直接定位V0</a><a href="#doc07">学习进度</a><p>仅蓝图；没有开始授课。<br>Ctrl+F可搜索全文。</p></nav><main><article id="doc00"><h1>阅读指南：当前工程版教学蓝图</h1>
+<p>版本：2026-11-08。用途是交给新对话逐节互动教学，当前只制作课程，不代表已授课。V0—V9是教学模拟的开发顺序，不是原作者Git历史。</p>
+<p>这个项目现在包括：已有Agent工作空间中的评测主链、已接入的单机Python诊断，以及独立的旧归因/报表参考与质量实验。旧学习包的“桥接尚未实现”已经过时，本包按当前默认源码重新核对。第三轮候选没有推广，默认审核已恢复第二阶段版本。</p>
+<h2>先读哪些</h2>
+<ul>
+<li>读01建立用户、输入输出、8个核心模块及三条实际路线的全景。</li>
+<li>读02的版本总览，然后由网页端按V0→V9展开；主要单元60—90分钟，复杂点可分两次，不为每个基础定义单独停课提问。</li>
+<li>03是证据和A级深入路线，随当前单元选2—3个关键位置核对，不要求通读源码。</li>
+<li>05先划清事实、模拟和实验边界；06可直接交给接手教师。</li>
+<li>07记录真实学习和验收，初始全部未开始。V9后用04做项目讲述、追问和闭卷重建。</li>
+<li>08列出精简源码副本及分单元上传清单；09是脱离旧日志也能理解的实验事实卡。</li>
+</ul>
+<p>建议首轮10个单元约10—15小时，只是教学主线；A级深化和复述通常还需额外时间，不能把课时预算当掌握证明。有20分钟就完成一个设计片段，有60分钟走通一段，有90分钟再加源码/验收。不要求每天5小时，也不因中断就从总介绍重讲。</p>
+<h2>四种事实标签</h2>
+<ul>
+<li><strong>真实实现</strong>：当前默认源码能定位的行为。函数/字段存在不等于所有入口都会调用。</li>
+<li><strong>模拟推演</strong>：为理解需求而构造的V0、故障情境、替代设计，不冒充开发事故或真实历史。</li>
+<li><strong>真实实验</strong>：有保存的执行结果；必须同时说清Mock、PGlite/真实PG、合成标签及验证范围。</li>
+<li><strong>尚未核实</strong>：缺真实供应商、完整轨迹、可信gold或生产验证，明确留空。</li>
+</ul>
+<p>每单元的G节会把已有实验与尚未执行的学习练习分开。作业是流程图、合同、算例、决策卡或复述，不以重写庞大平台作为前提。</p>
+<h2>网页端交接</h2>
+<p>把study_pack.zip作为课程资料交给能读取文件的新对话。如果当前界面不能读取ZIP，先解压，上传00、01、02、05、06、07；03、04及本单元源码按需补充。新对话不能凭本机路径访问源码，没收到文件就明确说未核对。复制06末尾的启动文本即可，不用重新规划课程。</p>
+<p>包内index.html是离线跳转阅读入口，文档和源码链接无需网络；它是蓝图阅读器，不自动记录掌握度。跨电脑带整个ZIP或解压目录，Markdown/HTML都可阅读。进度以07及LEARNING_PROGRESS.json手动回传，不承诺跨对话自动记忆。</p>
+<p>本包不含.env、真实凭据、用户历史报表、模型权重、依赖或大日志；key_sources是教学只读副本，不是完整可部署工程，不运行旧入口来“验证读过”。旧版study_pack另存档，旧学习记录未覆盖。</p></article><article id="doc01"><h1>项目全景地图</h1>
+<h2>项目究竟做什么</h2>
+<p>它面向开发和调试Agent的人：配置/选择被测Agent及测试题，执行任务并评分、查看结果，再对失败执行显式请求轨迹诊断，获得带原始身份、引文和审核状态的故障观察，辅助修改后重新评测。</p>
+<p>它是<strong>应用评测平台＋诊断研究的混合工程</strong>。平台承载可配置Agent；Python诊断器分析执行记录；旧Langfuse/JSONL/Excel脚本是另外的分析路线。没有证据表明所有旧脚本已经统一成一个自动产品。</p>
+<p>输入包括task、expected、rubric、Agent/provider/model配置和实际执行消息；输出包括Case分数/状态、Run指标、独立diagnosis/observations/review。当前能力重心是故障观察与保守审核，不是已经证明准确的内部根因定位。</p>
+<p>当前执行主链读取平台自己保存的Agent配置；agentEvalExternal提供外部评分/诊断扩展，不能据此说“任意外部部署Agent都有通用自动接入协议”。这个范围和归因系统分析已有Trace的研究目标需要区分。</p>
+<h2>实际业务链路</h2>
+<pre><code>flowchart TD
+ A[登录并配置Agent/测试集] --&gt; B[创建Run与pending题目]
+ B --&gt; C[启动有界批量与K条轨迹]
+ C --&gt; D[Agent Brain / Runtime / Executor]
+ D --&gt; E[模型与工具执行]
+ E --&gt; F[保存messages与plugin error]
+ D --&gt; G[完成或超时钩子]
+ G --&gt; H[规则Judge或配置的LLM Judge]
+ H --&gt; I[条件回写Case/Thread并聚合Run]
+ I --&gt; J[查看评测报告 / 修改后新建运行]
+ F --&gt; K[显式diagnosisRequest或CLI]
+ I --&gt; K
+ K --&gt; L[按Run/Case/Thread提取轨迹]
+ L --&gt; M[独立async_tasks与批处理worker]
+ M --&gt; N[固定Python规则观察与审核]
+ N --&gt; O[关联原身份的诊断查询 / review与coverage]</code></pre>
+<p>文本替代：配置→创建→执行→保存→评分→报告→重测；诊断支线需显式请求并运行worker。当前没有自动把所有失败评分回调转成Python任务，也未新增完整的诊断专用UI。诊断API/CLI与评测结果页不是同一个已验证页面能力。</p>
+<h2>核心模块：8个教学职责</h2>
+<p>这8个模块是学习视角的职责拆解，不是8个独立部署服务。</p>
+<div class="table-wrap"><table><thead><tr><th>模块</th><th>职责</th><th>关键证据</th><th>重点</th></tr></thead><tbody>
+<tr><td>M1 评测资产与配置</td><td>Benchmark/Dataset/Case、Run、Agent配置审计</td><td><a href="#p01">P01</a>；<a href="#p03">P03</a>；<a href="#p04">P04</a></td><td>B；可复现边界为A</td></tr>
+<tr><td>M2 执行编排与生命周期</td><td>启动、分页/并发、K线程、超时/取消、终态聚合</td><td><a href="#p02">P02</a>；<a href="#p09">P09</a>；<a href="#p11">P11</a>；<a href="#p16">P16</a>；<a href="#p17">P17</a></td><td>A</td></tr>
+<tr><td>M3 被测Agent运行时</td><td>Brain→指令→Runtime/Executor→模型/工具→消息</td><td><a href="#p05">P05</a>；<a href="#p06">P06</a>；<a href="#p07">P07</a>；<a href="#p08">P08</a></td><td>A；预算细节B</td></tr>
+<tr><td>M4 规则与LLM评分</td><td>任务/标准上下文、加权、结构化分数、评分器错误</td><td><a href="#p12">P12</a>；<a href="#p13">P13</a>；<a href="#p14">P14</a>；<a href="#p15">P15</a></td><td>A</td></tr>
+<tr><td>M5 轨迹与证据合同</td><td>Run/Case/Thread所属、原message、工具配对、coverage</td><td><a href="#b02">B02</a>；<a href="#b03">B03</a></td><td>A</td></tr>
+<tr><td>M6 跨语言诊断任务</td><td>显式请求、async_tasks、固定Python进程、版本与lease</td><td><a href="#b01">B01</a>；<a href="#b04">B04</a>；<a href="#b05">B05</a>；<a href="#b06">B06</a>；<a href="#b07">B07</a></td><td>A</td></tr>
+<tr><td>M7 故障观察与证据审核</td><td>失败封装、类别、存在性/支持性、根因边界与弃权</td><td><a href="#b07">B07</a>；<a href="#b08">B08</a>；<a href="#l04">L04</a>；<a href="#l05">L05</a></td><td>A</td></tr>
+<tr><td>M8 报告与质量研究</td><td>平台指标、旧离线排序/选样、独立标签与五组消融</td><td><a href="#p18">P18</a>；<a href="#l06">L06</a>；<a href="#l07">L07</a>；<a href="#l08">L08</a>；<a href="#l09">L09</a>；<a href="#l10">L10</a>；<a href="#l11">L11</a>；<a href="#r01">R01</a>；<a href="#r02">R02</a></td><td>质量A；旧报表B</td></tr>
+</tbody></table></div>
+<h2>必须区分的三条路线</h2>
+<div class="table-wrap"><table><thead><tr><th>路线</th><th>输入/入口</th><th>实际产物及边界</th></tr></thead><tbody>
+<tr><td>当前平台</td><td>agentEval创建/运行/报告；agentEvalExternal诊断扩展</td><td>Agent执行/评分闭环与独立Python观察；使用本机DB消息合同</td></tr>
+<tr><td>旧模型分析</td><td>badcase_analysis.run_pipeline</td><td>拉取或缓存→可选去噪→LLM分类→聚合/报表；offline不保证不调用模型，未统一必经严格validator</td></tr>
+<tr><td>旧规则/报表</td><td>structured_jsonl_attribution及多份日报/选样脚本</td><td>独立JSONL扫描及离线表格，不能自动挂到当前平台每个结果上</td></tr>
+</tbody></table></div>
+<p>review_cli.safeCandidate是单独白名单输出；adapter主链即使review不支持仍保留规则诊断/观察并附复核标志。因此“实验完整审核组0安全输出”不等于“平台数据库0诊断记录”。</p>
+<h2>关键对象和状态</h2>
+<p>Benchmark组织标准，Dataset组织题目，Case定义输入/参考；Run是一次评测，RunTopic关联题目和执行Topic，K&gt;1有eval Thread，operation标识运行操作，TraceID有时缺失，message/toolCallId用于定位事实。普通聊天Topic与评测Case不是同一概念。</p>
+<p>Case的passed/failed是评分结论，error/timeout是执行或评分异常。Run的completed表示运行完成，不保证所有Case答对。诊断任务pending/processing/success/error属于另一生命周期；job success只说明分析器执行成功。needs_review/unknown不等于已证根因，也不等于没有业务问题。</p>
+<p>配置快照是记录，不是执行冻结：createRun保存snapshot，execAgent重新读当前配置；不能由一个快照字段推出全实验可精确重放。</p>
+<h2>实际技术与学习价值</h2>
+<div class="table-wrap"><table><thead><tr><th>技术</th><th>实际用途/证据</th><th>学习等级与边界</th></tr></thead><tbody>
+<tr><td>TypeScript、Next.js/React、tRPC/Zod</td><td>登录后评测界面及实际路由/schema；P02/B01</td><td>B；重点追数据流，不讲完整通用工作空间UI</td></tr>
+<tr><td>PostgreSQL、Drizzle；测试中PGlite</td><td>表关系、user作用域、条件写和原任务表；P01/P16/B05</td><td>B基础，终态/幂等A；组件用PGlite不冒充真实PG</td></tr>
+<tr><td>AgentRuntime/GeneralChatAgent</td><td>按phase产指令、执行模型/工具；P06/P07</td><td>A；这是项目实际抽象，不包装成新造大模型</td></tr>
+<tr><td>原ModelRuntime结构化调用、AbortController/硬截止</td><td>LLM Judge；P14/P15</td><td>A；真实模型质量仍未知</td></tr>
+<tr><td>tokenx与记录usage</td><td>token预算估算、65%默认触发；P08</td><td>B；不是已证最优参数、不是证据去噪</td></tr>
+<tr><td>Python标准库子进程＋JSON合同</td><td>当前桥接/固定审核；B03/B06/B07</td><td>A；主链不新增Python常驻服务或分布式队列</td></tr>
+<tr><td>旧pandas/规则、TF-IDF与余弦medoid</td><td>旧离线表格/代表样例；L07/L08</td><td>B；不称当前RAG向量数据库或已优化的代表算法</td></tr>
+<tr><td>Vitest、Python unittest、固定候选五组回放</td><td>工程与质量分开验证；R01/R02、09实验卡</td><td>A；Mock和合成标签不证明模型效果</td></tr>
+</tbody></table></div>
+<p>未把仓库依赖中的所有语音、多模态、向量检索或分布式组件列成本项目教学核心；有入口/调用才讨论实际使用。</p>
+<h2>学习依赖</h2>
+<pre><code>flowchart LR
+ V0[评测问题/Baseline] --&gt; V1[Agent执行]
+ V1 --&gt; V2[资产/身份/运行]
+ V2 --&gt; V3[并发/K/终态]
+ V3 --&gt; V4[Judge]
+ V4 --&gt; V5[轨迹证据]
+ V5 --&gt; V6[Python任务]
+ V6 --&gt; V7[审核/弃权]
+ V7 --&gt; V8[统计/代表Case]
+ V8 --&gt; V9[实验/全项目面试]</code></pre>
+<p>首轮顺序依业务生长，不按文件夹排序。A级深入专题在对应V完成后按薄弱处补，不在V0灌入所有技术。</p></article><article id="doc02"><h1>从零到一逆向开发课程</h1>
+<p>V0—V9共10个主要单元，每单元建议60—90分钟，复杂的V3/V6/V7可分两次。版本是教学推演，不是Git历史；既有事故和真实实验明确标注。这里只给可实施蓝图，正式讲解由后续教师展开。</p>
+<p>贯穿例子【模拟】：查询订单A17，工具可能成功、外部500或无异常但答案错误。同一Case可多轮Run、一个Case可K次执行；此例只是用来设计，具体实验看09，不把教学参数当生产数据。</p>
+<div class="table-wrap"><table><thead><tr><th>版本</th><th>前置能力</th><th>本版新增</th><th>验收产物</th></tr></thead><tbody>
+<tr><td><a href="#v0">V0</a> 先定义评测问题，做最小可解释Baseline</td><td>只有需求：开发者想知道Agent能否完成任务、失败在哪里。</td><td>从无评测到单题输入/实际/预期/评分账本。</td><td>一页业务定义＋三类对照的预期账本。</td></tr>
+<tr><td><a href="#v1">V1</a> 让被测Agent真正执行：从一次模型调用长出工具循环</td><td>V0已有单题评分，actual仍由人工给定。</td><td>新增Agent执行与步骤状态，自动获得actual和消息。</td><td>一张三层Agent执行图＋一段正常/异常步骤账本。</td></tr>
+<tr><td><a href="#v2">V2</a> 管理测试集与运行：先有身份，再谈可复现</td><td>V1能执行并评分一题，但内容和结果零散。</td><td>新增Benchmark/Dataset/Case/Run及配置审计记录。</td><td>ER图＋一次创建到报告的数据流＋快照边界卡。</td></tr>
+<tr><td><a href="#v3">V3</a> 批量执行与K采样：用状态机守住结果</td><td>V2已保存测试资产和Run，每题仍按一次同步完成理解。</td><td>新增批量编排、题目/线程状态与终态条件更新。</td><td>终态转换图＋一张竞态时序图＋K指标算例。</td></tr>
+<tr><td><a href="#v4">V4</a> 从规则评分到LLM Judge：先保证评分器可信</td><td>V3已有可管理的批量运行，主要依靠固定规则。</td><td>新增结构化模型评分合同和评分器错误生命周期。</td><td>Judge输入输出合同＋异常矩阵＋一页校准方案。</td></tr>
+<tr><td><a href="#v5">V5</a> 从结果分数走向诊断：建立轨迹证据合同</td><td>V4能稳定区分答错与评分错误，仍解释不了工具失败来源。</td><td>新增按原Run/Case/Thread提取的规范证据包。</td><td>scope/nodes合同＋五节点证据图＋缺失层级说明。</td></tr>
+<tr><td><a href="#v6">V6</a> 接入Python故障观察：将诊断与评分解耦</td><td>V5已有规范可追溯轨迹，分析仍可由人完成。</td><td>新增单机批处理、跨语言合同和独立诊断状态。</td><td>跨语言调用图＋两套状态表＋lease竞态图。</td></tr>
+<tr><td><a href="#v7">V7</a> 证据审核与弃权：失败曝光不等于源码责任</td><td>V6能生成诊断观察，尚不能相信每条解释。</td><td>新增结构/引用/支持分层审核，明确不确定性。</td><td>四层审核矩阵＋claim强度卡＋候选不推广复盘。</td></tr>
+<tr><td><a href="#v8">V8</a> 影响统计与代表案例：让报告帮助开发者行动</td><td>V7已有带身份及不确定性的单例诊断。</td><td>新增计数口径、排序和代表样例的独立分析视角。</td><td>事件到任务的计数表＋两种代表样本比较＋模块报告草图。</td></tr>
+<tr><td><a href="#v9">V9</a> 实验验收与全项目复述：允许没有提升</td><td>V8已能运行、评分、诊断和解释报告；尚无质量保证。</td><td>新增冻结评测协议、消融、回滚决策及整项目验收。</td><td>一页冻结实验协议＋负结果报告＋闭卷系统设计与面试讲述。</td></tr>
+</tbody></table></div>
+<a id="v0"></a>
+<h2>V0 先定义评测问题，做最小可解释Baseline</h2>
+<p>前置：只有需求：开发者想知道Agent能否完成任务、失败在哪里。</p>
+<p>本版新增：从无评测到单题输入/实际/预期/评分账本。</p>
+<h3>A. 当前开发背景</h3>
+<p>先只评一个订单查询。交给学习者一条固定输出，明确用户是Agent开发者，评测对象是一次任务执行，目标是辅助改进。故障诊断要到取得执行证据后再加，第一版不承诺定位源码责任。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】用一个本地对象保存task、expected、actual，contains/equals得0或1，输出caseId、分数和理由。先让人能复核，再讨论自动化；此V0不是仓库Git历史。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>字符串包含能匹配到答案，也可能放过“不是这个答案”；错误答案可能没有任何运行异常，工具失败也未必导致最终失败。评分失败、执行异常和根因未知必须从第一张表分列。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>人工看答案</td><td>最少样本、可解释需求</td><td>慢且标注不一致</td></tr>
+<tr><td>确定性匹配</td><td>低成本、可回归</td><td>表达变化及语义错误难覆盖</td></tr>
+<tr><td>直接让模型评判</td><td>有望处理开放答案</td><td>需要输入标准、校准及错误处理</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】eval-rubric提供抽取、matcher和加权评分，校验权重/阈值；平台另保存status/passed/score。缺标准路径可返回reason与0分，服务另有跳过分支，并非所有配置缺陷都已统一typed error。本V0使用显式标准；把配置问题与答错分开是设计要求，不把要求冒称已全面实现。</p>
+<p>源码核对：<a href="#p12">P12</a>；<a href="#p15">P15</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 评测对象和正确性边界</td><td>能解释评分失败≠运行异常≠内部根因；需要看P12返回结构</td></tr>
+<tr><td>B 任务/参考答案/实际输出/标准</td><td>能写最小输入合同，不背字段全集</td></tr>
+<tr><td>C 普通打印与文件格式</td><td>知道如何保存即可，不拆独立课</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】第二阶段评分包回归包含合法0分、非法阈值/权重边界，见实验卡X1；这些是代码行为验证，不是模型准确率。</li>
+<li>【教学练习，未执行】手工设计正常答案、语义否定含关键词、没有运行异常却答错三个对照；先写预期，不填虚构准确率。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>第一版给开发者什么可操作输出？</li>
+<li>为什么contains通过不等于任务一定完成？</li>
+<li>同样score=0，配置坏了和答案错了该怎样区分？</li>
+<li>如何在第一版就避免声称已定位根因？</li>
+</ul>
+<p>教师验收判据：能定义输入输出、比较Baseline代价，并用同一例子区分三层判断；不要求记matcher函数名。</p>
+<p>可复用成果：一页业务定义＋三类对照的预期账本。</p>
+<p>完成本版的能力变化：从无评测到单题输入/实际/预期/评分账本。</p>
+<p>下一版：V1让系统自己执行Agent，解释实际输出与轨迹怎样产生。</p>
+<a id="v1"></a>
+<h2>V1 让被测Agent真正执行：从一次模型调用长出工具循环</h2>
+<p>前置：V0已有单题评分，actual仍由人工给定。</p>
+<p>本版新增：新增Agent执行与步骤状态，自动获得actual和消息。</p>
+<h3>A. 当前开发背景</h3>
+<p>开发者不想手填actual，希望模型能查询订单再回答。一次LLM响应可能是工具调用指令，而非最终答案，因此需要一个能继续推进的执行器。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】while循环：调用模型→如果返回工具调用就执行→把结果追加消息→再次调用模型，直到返回文本。先画循环，不一开始引入完整平台部署。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>把决策和副作用全塞进循环会使测试、取消和不同工具适配困难；模型可能一直调用工具，消息增长也会超预算。工具权限/人工审批可能阻塞，不能把“等待”当完成。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>单个while循环</td><td>原型最快</td><td>副作用耦合、难恢复和替换执行器</td></tr>
+<tr><td>Brain/Runtime/Executor分工</td><td>决策可测、执行可替换</td><td>增加指令/状态合同</td></tr>
+<tr><td>外部Agent框架重写</td><td>已有生态</td><td>本项目已有Runtime，重写会丢既有集成与证据</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】GeneralChatAgent.runner按phase选指令；AgentRuntime.step执行、产出state/events/nextContext；服务端Executor处理真实模型/工具和持久化。平台承载可配置Agent。当前主要构造未传模型窗口，默认128K预算的65%即83200、严格大于才触发压缩；不是自动模型窗口，也不表示压缩后保留65%内容或已证质量提升。</p>
+<p>源码核对：<a href="#p05">P05</a>；<a href="#p06">P06</a>；<a href="#p07">P07</a>；<a href="#p08">P08</a>；<a href="#p10">P10</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 决策与副作用分离、状态推进</td><td>能画user_input→llm_result→tools_result→finish并指出三个职责，读P06/P07关键分支</td></tr>
+<tr><td>A 终止/阻塞/强制收尾</td><td>能说明步数限制如何避免循环，取消请求不等于外部服务已停止</td></tr>
+<tr><td>B 工具Schema、token预算和压缩</td><td>理解接口与损失风险，核对P08；不逐行讲全部插件</td></tr>
+<tr><td>C 供应商选项/普通参数</td><td>知道经原ModelRuntime适配，非本课主体</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】平台Runtime/计算器Mock回归支撑循环和工具路径；调用本地Mock不证明规划能力。</li>
+<li>【教学练习】画一次工具成功与一次工具失败的步骤图，圈出模型调用、工具副作用、保存消息三个时间点；完整重试算法不凭图宣称已验证。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>Brain与Runtime各自能做什么，为什么分开？</li>
+<li>工具返回错误后，是否一定要立即判整个任务失败？</li>
+<li>如果模型永远调用工具，哪里控制终止？</li>
+<li>65%阈值、token估算与证据去噪是同一件事吗？</li>
+</ul>
+<p>教师验收判据：能沿一个工具调用讲清决策、执行、状态和输出；能解释压缩与终止的代价，不把框架依赖当功能。</p>
+<p>可复用成果：一张三层Agent执行图＋一段正常/异常步骤账本。</p>
+<p>完成本版的能力变化：新增Agent执行与步骤状态，自动获得actual和消息。</p>
+<p>下一版：V2把一次执行扩为可管理、可比较的评测资产与运行。</p>
+<a id="v2"></a>
+<h2>V2 管理测试集与运行：先有身份，再谈可复现</h2>
+<p>前置：V1能执行并评分一题，但内容和结果零散。</p>
+<p>本版新增：新增Benchmark/Dataset/Case/Run及配置审计记录。</p>
+<h3>A. 当前开发背景</h3>
+<p>需要保存三道订单题，修改Agent后再次运行，并回看上一轮结果。现在要决定题目、运行和聊天记录分别属于谁，如何关联。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】一张表同时放题目、模型配置、最后输出和分数，修改时覆盖旧行。它能展示最近一次结果，却很快失去比较依据。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>同题会有多轮执行，多次采样又产生多条轨迹；只存“最新值”会串轮次。用户A不能读用户B的证据；配置记录和执行时实际使用配置还可能不一致。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>单表覆盖</td><td>简单CRUD</td><td>历史丢失、身份不清</td></tr>
+<tr><td>评测资产/Run/执行Topic分离</td><td>保留历史、支持重测</td><td>要维护关联与唯一性</td></tr>
+<tr><td>完整不可变实验快照</td><td>重放更可靠</td><td>需冻结题目/标准/配置/模型版本，当前并未全部做到</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】agentEvals表族分资产和运行，createRun记录agentSnapshot并预建pending Topics/RunTopics。注意：execAgent会重新读当前Agent配置；“存快照”不能说明执行严格按创建时快照。评测标准也不能无证据宣称全量版本冻结。课程理想版可讨论不可变配置，但必须标为模拟建议。</p>
+<p>源码核对：<a href="#p01">P01</a>；<a href="#p02">P02</a>；<a href="#p03">P03</a>；<a href="#p04">P04</a>；<a href="#p05">P05</a>；<a href="#p18">P18</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 身份层级与实验可复现</td><td>能解释Case/Run/Topic/Thread/operation不同，核对快照的写入与读取，不只看字段存在</td></tr>
+<tr><td>B PG、Drizzle、tRPC与用户作用域</td><td>理解schema/模型/路由职责，能追一条createRun，不背CRUD</td></tr>
+<tr><td>C 页面样式、目录与普通索引</td><td>了解作用即可，复杂查询优化留作有数据后再谈</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】阶段一/二真实PG创建、执行、评分、报告与重测有保存证据；快照保留证明审计记录未被覆盖，不证明严格执行快照。</li>
+<li>【教学练习】画ER关系并提出“创建Run后修改Agent再启动”的反例；本轮未执行该新动态反例，只凭代码指出边界。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>为什么Case不能同时充当一次Run的身份？</li>
+<li>保存配置快照是否足以重现一次结果？</li>
+<li>创建后、执行前改配置，当前实现会读哪里？</li>
+<li>多用户隔离应放在页面、API还是数据库查询上？</li>
+</ul>
+<p>教师验收判据：能画最小数据模型，并清楚区分配置审计、执行冻结和精确重放三种能力。</p>
+<p>可复用成果：ER图＋一次创建到报告的数据流＋快照边界卡。</p>
+<p>完成本版的能力变化：新增Benchmark/Dataset/Case/Run及配置审计记录。</p>
+<p>下一版：V3解决多题并发、K条轨迹和迟到回调。</p>
+<a id="v3"></a>
+<h2>V3 批量执行与K采样：用状态机守住结果</h2>
+<p>前置：V2已保存测试资产和Run，每题仍按一次同步完成理解。</p>
+<p>本版新增：新增批量编排、题目/线程状态与终态条件更新。</p>
+<h3>A. 当前开发背景</h3>
+<p>三题同时跑，某题又采样K=2。HTTP接口需要快速返回，而完成、超时、取消和重复回调会在不同时间发生。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】for循环依次执行每题，最后统计一次。并发原型可直接Promise.all，但没有持久化终态就无法处理迟到和重入。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>超时先写入，模型晚成功又覆盖；重复完成使metrics/duration变化；K最后一条结束却没触发聚合会一直running。线程数不是题目数，重试不是新用户任务。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>同步串行</td><td>易理解</td><td>慢且请求生命周期过长</td></tr>
+<tr><td>有界批量＋持久状态＋完成回调</td><td>复用平台编排，局部修复</td><td>需幂等和终态约束</td></tr>
+<tr><td>新增分布式队列重构</td><td>可扩展</td><td>本项目本机稳定任务不需要先堆部署组件，生产可靠性另验</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】Orchestrator按固定分块分页/分批执行，当前API的maxConcurrency没有被调度消费。服务记录线程完成并聚合，updateIfUnfinished和finalizeIfActive保护终态。K聚合使用anyPassed/allPassed和bestScore，主资源字段按线程平均，total*另存；这不是通用无偏pass@k估计器。API受理、Agent结束、Case评分完成和Run完成要分开。</p>
+<p>源码核对：<a href="#p09">P09</a>；<a href="#p10">P10</a>；<a href="#p11">P11</a>；<a href="#p16">P16</a>；<a href="#p17">P17</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 状态机与条件更新</td><td>能画timeout先于success、abort先于callback两条时序，解释谁有权写终态</td></tr>
+<tr><td>A 幂等与聚合计数</td><td>能说明K=2混合结果怎样影响case及run，不混平均与累计</td></tr>
+<tr><td>B 有界并发/分页与回调</td><td>理解吞吐和压力取舍，非背分页常量</td></tr>
+<tr><td>C 所有状态字符串/调度选项</td><td>能查表即可，不逐个记忆</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】阶段二发现并修复本地K=2漏finalize、迟到operationId及重复finalize等，有红绿和真实HTTP记录；不是模拟事故。</li>
+<li>【教学练习】给两线程结果(1分通过、0分失败)手算当前bestScore、passAtK、passAllK及资源汇总，再设计重复回调反例。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>为什么完成回调到达两次仍只能产生一次有效终结？</li>
+<li>超时后迟到成功应如何保存，怎样避免改原分数？</li>
+<li>K=2一对一错时，该题和运行指标分别怎么算？</li>
+<li>为什么“HTTP返回成功”不能作为整个评测已完成的证明？</li>
+</ul>
+<p>教师验收判据：能设计并解释终态守卫，按真实实现手算K指标，并说明本机路径验收不能推成跨进程高可用。</p>
+<p>可复用成果：终态转换图＋一张竞态时序图＋K指标算例。</p>
+<p>完成本版的能力变化：新增批量编排、题目/线程状态与终态条件更新。</p>
+<p>下一版：V4用更有表达能力的Judge评分，并把评分器错误隔离。</p>
+<a id="v4"></a>
+<h2>V4 从规则评分到LLM Judge：先保证评分器可信</h2>
+<p>前置：V3已有可管理的批量运行，主要依靠固定规则。</p>
+<p>本版新增：新增结构化模型评分合同和评分器错误生命周期。</p>
+<h3>A. 当前开发背景</h3>
+<p>订单答案可能有多种正确说法，contains不足以判断。现在模型充当评分器，但它同样可能超时、编造、返回坏JSON。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】把expected和actual拼成一句“打几分”，提取文本里的第一个数字。它容易混淆任务、参考答案和评判标准，也无法可靠处理供应商异常。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>缺task/criteria上下文会错评；合法0分与空响应都可能被写成0；AbortSignal不一定被provider遵守；用户改Case配置可能覆盖整份Dataset配置而非补字段。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>继续规则</td><td>廉价确定</td><td>语义覆盖有限，应保留作Baseline</td></tr>
+<tr><td>原ModelRuntime＋结构化评分＋硬截止</td><td>复用provider配置和接口，异常可追踪</td><td>仍需真实质量/偏差校准</td></tr>
+<tr><td>另造独立模型客户端</td><td>短期方便</td><td>重复密钥/超时/兼容逻辑，维护分叉</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】evaluateCase按Case→Dataset→Benchmark选择标准，evaluate做权重/阈值检查；当前支持的LLM评分模式经evaluateOutput接原ModelRuntime。Judge传task、expected、actual、criteria等，验证score范围/非空reason，硬截止覆盖初始化，区分scoringSource和typed errorCode。不是schema列出的所有评分模式都已真实供应商验证。</p>
+<p>源码核对：<a href="#p12">P12</a>；<a href="#p13">P13</a>；<a href="#p14">P14</a>；<a href="#p15">P15</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 评分合同与错误语义</td><td>能写一份完整Judge输入和0分/错误对照，读P14关键异常路径</td></tr>
+<tr><td>A 结构正确与评分有效性</td><td>能说明JSON合法不代表评判正确，设计人工校准思路</td></tr>
+<tr><td>B 上下文优先级及模型适配</td><td>能指出整个Case配置覆盖的代价，知道初始化在哪</td></tr>
+<tr><td>C 所有rubric名称与供应商参数</td><td>按使用查询，不全量背诵</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】阶段二原SDK→本机Mock→真实PG回写验证合法分、0分、坏JSON、越界/空理由/provider失败/超时和K=2；四表单真实登录保存也通过。</li>
+<li>【尚未核实】真实模型评分质量、不同供应商取消/费用；教学只能设计校准集和盲测，不能给提升百分比。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>Judge最少必须知道哪些信息才能评分？</li>
+<li>模型判0分与评分器执行失败为什么不能合并？</li>
+<li>provider忽略signal时，硬截止解决了什么、没解决什么？</li>
+<li>Case只填criteria时，为什么可能丢失Dataset的model配置？</li>
+</ul>
+<p>教师验收判据：能完整描述评分生命周期和校准需求，不把Mock端到端成功说成真实模型公正。</p>
+<p>可复用成果：Judge输入输出合同＋异常矩阵＋一页校准方案。</p>
+<p>完成本版的能力变化：新增结构化模型评分合同和评分器错误生命周期。</p>
+<p>下一版：V5为失败解释补足可回查的原始轨迹和身份。</p>
+<a id="v5"></a>
+<h2>V5 从结果分数走向诊断：建立轨迹证据合同</h2>
+<p>前置：V4能稳定区分答错与评分错误，仍解释不了工具失败来源。</p>
+<p>本版新增：新增按原Run/Case/Thread提取的规范证据包。</p>
+<h3>A. 当前开发背景</h3>
+<p>报告里只有“订单失败”无法行动。要找到哪个工具返回什么、与哪次调用相连，同时不把别的Case或主聊天消息混进来。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】把该Topic所有消息拼成文本传给分析器。第一次容易工作，却丢失ID、角色、参数来源和采样边界。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>不同Case可重复toolCallId；K线程和主Topic不能混读；error可能在插件表，工具来源字段也存在历史命名差异。没有TraceID/Provider请求时不能假装因果图完整，截断会破坏证据。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>全文字符串</td><td>开发快</td><td>难做作用域/引用校验</td></tr>
+<tr><td>规范nodes＋scope＋sourcePointer＋coverage</td><td>保留身份且跨语言可检验</td><td>需要显式兼容和大小边界</td></tr>
+<tr><td>完整分布式追踪图</td><td>证据更丰富</td><td>当前数据库未保存全部事件，不能画图就宣称已获得</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】extractTrajectory只读原表，按所属用户/运行/题目/线程限制范围，从assistant.tools派生call节点并保留原字段位置；同时读取message_plugins.error。coverage明确缺operation/provider/trace证据，大轨迹整包拒绝而非静默截断。派生call节点不是原生span。</p>
+<p>源码核对：<a href="#b01">B01</a>；<a href="#b02">B02</a>；<a href="#b03">B03</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 身份/作用域与证据血缘</td><td>能从一个error回到原message字段并解释为何不可跨Case借引用</td></tr>
+<tr><td>A 全局完整度与局部可证命题</td><td>能区分“看到失败”与“证明起因”，读B02覆盖警告</td></tr>
+<tr><td>B 角色规范化/调用配对/JSON序列化</td><td>理解兼容成本，不背500节点字段全集</td></tr>
+<tr><td>C 外部Trace厂商配置</td><td>知道是数据源之一，当前桥接并不要求在线拉Langfuse</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】15项轨迹集成覆盖只读、归属、跨线程、同ID、未知来源及大小限制；阶段二真实工具error丢失曾沿runtime→message持久化修复，最新bundle可回查。</li>
+<li>【教学练习】画五节点图，并标完整、缺失、派生三类；给同ID跨Case和错误quote两个反例。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>原message ID、toolCallId、TraceID和operationId分别定位什么？</li>
+<li>为何知道工具名称也不能直接猜builtin或MCP来源？</li>
+<li>全局覆盖不完整时，哪些弱结论仍可能有证据？</li>
+<li>证据提取遗漏与源头根本没记录，怎样区分？</li>
+</ul>
+<p>教师验收判据：能设计最小轨迹合同并解释每个身份和覆盖标志的作用；明确当前持久化图不完整。</p>
+<p>可复用成果：scope/nodes合同＋五节点证据图＋缺失层级说明。</p>
+<p>完成本版的能力变化：新增按原Run/Case/Thread提取的规范证据包。</p>
+<p>下一版：V6将轨迹送入Python，独立处理诊断任务。</p>
+<a id="v6"></a>
+<h2>V6 接入Python故障观察：将诊断与评分解耦</h2>
+<p>前置：V5已有规范可追溯轨迹，分析仍可由人完成。</p>
+<p>本版新增：新增单机批处理、跨语言合同和独立诊断状态。</p>
+<h3>A. 当前开发背景</h3>
+<p>既有故障规则在Python，平台为TypeScript。希望评分失败后创建分析任务，允许重复请求、超时或进程失败，而原分数不被破坏。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】在评分回调中同步exec一条拼接命令，拿stdout直接更新Case分数。它混合两种职责，超时和重复触发会破坏原记录。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>重复请求会放大计算；进程崩溃后重领，旧进程迟到输出可能覆盖新结果；Python导入旧入口可能联网或读密钥；序列化差异会使同一引文校验失败。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>同步子进程直接嵌评分</td><td>部署少</td><td>等待长、错误污染评分风险</td></tr>
+<tr><td>既有async_tasks＋固定子进程worker</td><td>输入快照/lease隔离，复用数据库</td><td>需显式启动批处理，不是自动daemon</td></tr>
+<tr><td>新Python常驻服务或分布式队列</td><td>跨主机潜力</td><td>增加部署/网络状态，本轮无必要</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】显式diagnosisRequest入独立async_tasks；ID绑定用户、输入摘要与engineRevision；CLI处理pending，原子claim并用lease token隔离迟到；runPython固定脚本、最小环境、有超时和输出上限。adapter复用原纯函数，只输出observations和needs_review/unknown，不自动确认56模块责任。它没有自动接到每次评分回调，也没有修改原分数。</p>
+<p>源码核对：<a href="#b01">B01</a>；<a href="#b04">B04</a>；<a href="#b05">B05</a>；<a href="#b06">B06</a>；<a href="#b07">B07</a>；<a href="#b09">B09</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 任务幂等、lease与结果隔离</td><td>能设计重复请求/重领时序并说明原评分不变</td></tr>
+<tr><td>A 跨语言合同/原始引文</td><td>能说明inputDigest和scope验证，不要求背摘要函数</td></tr>
+<tr><td>B spawn无shell、stdio和资源上限</td><td>理解固定入口、最小环境的工程作用</td></tr>
+<tr><td>C Python部署/常驻调度选项</td><td>知道当前依赖本机Python和显式worker，不扩成分布式课</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】真实PG评测失败→SQL轨迹→Python进程→诊断回查已通过，包含重复enqueue、跨用户访问隔离和原评分不变；TS相关71项第三轮恢复默认后复测通过。</li>
+<li>【教学练习】画两worker同claim和旧lease迟到的时序，分别写评分status与诊断status；job成功不表示根因正确。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>为什么Python异常不该把已经完成的评测改成失败？</li>
+<li>确定任务ID解决重复请求，为什么还需要lease token？</li>
+<li>规则返回unknown是执行失败吗？</li>
+<li>修改分析器代码后，为什么不覆盖旧诊断、而应新建版本结果？</li>
+</ul>
+<p>教师验收判据：能讲清从失败评测到独立诊断的全链路和可靠性边界，知道worker是批处理而非后台必然运行。</p>
+<p>可复用成果：跨语言调用图＋两套状态表＋lease竞态图。</p>
+<p>完成本版的能力变化：新增单机批处理、跨语言合同和独立诊断状态。</p>
+<p>下一版：V7审核诊断能证明到什么程度，并认识旧脚本多路线边界。</p>
+<a id="v7"></a>
+<h2>V7 证据审核与弃权：失败曝光不等于源码责任</h2>
+<p>前置：V6能生成诊断观察，尚不能相信每条解释。</p>
+<p>本版新增：新增结构/引用/支持分层审核，明确不确定性。</p>
+<h3>A. 当前开发背景</h3>
+<p>分析器声称“外部500由内部参数模块造成”，给了真实节点ID。现在需要判断引用是否存在、内容是否支持、责任是否确立，这是比JSON合法更强的问题。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】检查moduleId在56类内、证据ID存在就接受；再加一个confidence阈值。它无法验证因果，也可能把正确但不同措辞的解释拒掉。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>同节点成功content可能借未引error混过；success=true中的业务false可能被误读；全局coverage不全会一律拒绝局部观察；严格字符串模板挡住正确改写。控制错误归因与覆盖损失必须一起看。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>结构/引用校验</td><td>可确定实现</td><td>不证明支持性或因果</td></tr>
+<tr><td>规则支持审核＋弃权</td><td>便宜、可追溯</td><td>继承规则盲点，可能过度保守</td></tr>
+<tr><td>模型二次审查/因果验证</td><td>有潜在语义能力</td><td>需要独立数据、可靠最早异常链，当前尚未验证</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】默认evidence_review已恢复阶段二原版：根因/module命题保守拒，观察还受规则类别、模板摘要、coverage门禁。adapter主链必经审核，但不支持时仍保留规则观察/diagnosis并标needs_review及审核理由；review_cli.safeCandidate才是单独的白名单输出。旧reattribution_validator不是legacy模型主入口必经。第三轮候选有兼容退步，未推广。</p>
+<p>源码核对：<a href="#b03">B03</a>；<a href="#b07">B07</a>；<a href="#b08">B08</a>；<a href="#b09">B09</a>；<a href="#l01">L01</a>；<a href="#l04">L04</a>；<a href="#l05">L05</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 证据存在/支持/因果层级</td><td>能用同一个真实引用构造支持观察但不支持根因的例子</td></tr>
+<tr><td>A 弃权与结论强度</td><td>能解释unknown、needs_review、execution error不同，不以弃权刷准确率</td></tr>
+<tr><td>B 旧提示分类与独立validator</td><td>理解两路线边界，避免把函数存在当已接入</td></tr>
+<tr><td>C 完整56模块名称</td><td>知道分类字典用途，不背所有叶子</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】原版28份审核离线重算一致；当前全局coverage误拒、模板误拒和潜在错引问题都有证据；第三轮独立28例完整审核组safeCandidate均null，不代表平台没有任何诊断记录，也不能称高准确率。</li>
+<li>【教学练习】填写“结构合法/引用有效/观察支持/内部根因支持”四列表，至少包含外部500、伪ID、正确改写和任务答错四种。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>为什么引用真实也可能支持不了结论？</li>
+<li>工具参数本身合法、外部500时能否直接归内部模块？</li>
+<li>对局部观察检查coverage与证明完整因果图，门槛该相同吗？</li>
+<li>为什么不直接移除摘要白名单提高通过率？</li>
+</ul>
+<p>教师验收判据：能界定系统现有能力是可追溯故障观察与保守审核，能讲一个减少误拒但未获推广的真实负结果。</p>
+<p>可复用成果：四层审核矩阵＋claim强度卡＋候选不推广复盘。</p>
+<p>完成本版的能力变化：新增结构/引用/支持分层审核，明确不确定性。</p>
+<p>下一版：V8把多个事件变成可行动统计和报告，但不把高频当正确。</p>
+<a id="v8"></a>
+<h2>V8 影响统计与代表案例：让报告帮助开发者行动</h2>
+<p>前置：V7已有带身份及不确定性的单例诊断。</p>
+<p>本版新增：新增计数口径、排序和代表样例的独立分析视角。</p>
+<h3>A. 当前开发背景</h3>
+<p>开发者想先处理哪类问题、看哪个典型Case。一个任务重试三次与三个任务各失败一次，工程影响不同；报告需要将数量、可信度和行动顺序分开。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】按error行数排序，每类选第一条最长的Trace作为典型。它容易奖励重试多和日志长，而非真实影响或代表性。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>调用/事件/Trace/任务分母不同；启发式优先分不是正确性概率；一个TF-IDF中心样本也未必有最完整因果证据。当前平台报告和旧Excel报表不共用一套自动流程。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>频次数＋第一条</td><td>透明易复核</td><td>易被重试/样本缺失影响</td></tr>
+<tr><td>独立去重口径＋启发式排序</td><td>可解释开发优先级</td><td>权重未校准，不能当准确率</td></tr>
+<tr><td>簇中心medoid或证据完整度选样</td><td>分别强调典型性/可审计性</td><td>目标不同，两个算法不能混称同一必经步骤</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实现】平台getRunDetails/metrics服务报告已有评分；legacy模型pipeline聚合与报表是独立路线。development_priority、cause_convergence、representative_case_selector分别有不同输入和算法；TF-IDF/余弦medoid在旧离线脚本，不是当前Agent RAG向量检索。三指标历史材料不证明动态30天生产采集管线。</p>
+<p>源码核对：<a href="#p11">P11</a>；<a href="#p18">P18</a>；<a href="#l02">L02</a>；<a href="#l06">L06</a>；<a href="#l07">L07</a>；<a href="#l08">L08</a>；<a href="#l09">L09</a>；<a href="#l10">L10</a>；<a href="#l11">L11</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 统计单位/样本偏差/决策含义</td><td>能从事件表解释受影响任务和故障调用区别，不机械拆成重复基础题</td></tr>
+<tr><td>B 启发式优先分与代表Case算法</td><td>能比较medoid与完整度选择的目标，不推导全部公式</td></tr>
+<tr><td>B 平台报告/旧报表/历史看台边界</td><td>能标出哪些线接通、哪些只是独立材料</td></tr>
+<tr><td>C Excel样式/图表颜色/模板细节</td><td>了解产物用途即可</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】三轮材料提供真实回归和合成实验；未验证旧报表排序优于人工决策，也未证明代表Case算法提高归因质量。</li>
+<li>【教学练习】对两任务多次失败算调用数/去重影响；同一簇挑“典型样本”和“证据最完整样本”，解释为何可不同。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>一次故障重试三次怎样影响各层计数？</li>
+<li>高开发优先分能证明内部根因正确吗？</li>
+<li>medoid与挑证据最完整样本分别优化什么目标？</li>
+<li>哪些旧离线报表能力不能直接说成当前平台UI已自动接入？</li>
+</ul>
+<p>教师验收判据：能把统计、优先级、代表性和证据充分性四件事分开，给出有依据的开发报告结构。</p>
+<p>可复用成果：事件到任务的计数表＋两种代表样本比较＋模块报告草图。</p>
+<p>完成本版的能力变化：新增计数口径、排序和代表样例的独立分析视角。</p>
+<p>下一版：V9用独立实验决定是否改算法，再闭卷重建和面试串讲。</p>
+<a id="v9"></a>
+<h2>V9 实验验收与全项目复述：允许没有提升</h2>
+<p>前置：V8已能运行、评分、诊断和解释报告；尚无质量保证。</p>
+<p>本版新增：新增冻结评测协议、消融、回滚决策及整项目验收。</p>
+<h3>A. 当前开发背景</h3>
+<p>需要回答“方法是否真的更好”。不能拿工程测试通过数、Model Mock成功或审核接受率当模型/根因准确率。现在把算法质量与工程可靠性分别验收。</p>
+<h3>B. 最朴素实现</h3>
+<p>【模拟推演】在同一批样例上反复改门槛，看总体准确率上升就发布。它泄漏测试集，并可能把全部弃权包装成零错误。</p>
+<h3>C. 潜在问题与技术挑战</h3>
+<p>标签可能只是合成作者设定；generic与子类定义不清会使错对难判；不同候选或上下文的方案不可比。真实provider不可用、token/cost未测时必须留空，不编数。</p>
+<h3>D. 方案探索与比较</h3>
+<div class="table-wrap"><table><thead><tr><th>方案</th><th>适用/收益</th><th>代价/边界</th></tr></thead><tbody>
+<tr><td>开发集反复试</td><td>方便发现bug</td><td>不能证明泛化</td></tr>
+<tr><td>冻结dev/holdout＋同候选五组消融＋逐例记录</td><td>能隔离政策效果和风险</td><td>人工标签/合成分布限制仍在</td></tr>
+<tr><td>真实模型＋独立真实gold</td><td>更接近有效性</td><td>当前配置、标签和脱敏尚不具备，先记录阻塞</td></tr>
+</tbody></table></div>
+<h3>E. 真实项目采取的方案</h3>
+<p>【真实实验】第三轮冻结原版/候选、独立作者28例，比较规则、直接候选、结构、引用及完整审核；候选只是离线夹具，不是LLM推理。开发1/9→2/9未迁移到独立0/24→0/24，后验发现兼容退步，最终恢复默认原版。全部440行版本/方法/案例指标保留。</p>
+<p>源码核对：<a href="#r01">R01</a>；<a href="#r02">R02</a>；<a href="#b08">B08</a>。</p>
+<h3>F. 知识和掌握深度</h3>
+<div class="table-wrap"><table><thead><tr><th>等级与知识</th><th>应掌握什么、为何学、是否看源码</th></tr></thead><tbody>
+<tr><td>A 独立标签/隔离/消融</td><td>能解释候选固定、算法冻结、后验反例与正式holdout区别</td></tr>
+<tr><td>A 选择性预测与风险覆盖</td><td>能计算可判/未知、弃权、根因与观察指标；无输出准确率为NA</td></tr>
+<tr><td>A 工程验证与质量验证及不推广决策</td><td>能讲真实收益/负结果，个人贡献以实际理解和参与为准</td></tr>
+<tr><td>B 成本/延迟记录</td><td>区分本地审核耗时和真实模型耗时；未测为null</td></tr>
+</tbody></table></div>
+<h3>G. 实际效果与验证</h3>
+<ul>
+<li>【真实实验】阶段二945项是当时选定工程回归；阶段三36 Python/71相关TS复测，不累计重复。真实供应商质量与生产root gold仍未验证。</li>
+<li>【学习验收，未发生】先写一页实验预注册，再用04闭卷重新设计和1/3/5—8分钟串讲验收，不能自动把看过报告当掌握。</li>
+</ul>
+<h3>H. 学习验收与面试追问</h3>
+<ul>
+<li>为什么五组必须用同一候选，并保证worker看不到标签？</li>
+<li>全弃权时正确率和覆盖率应该怎样报告？</li>
+<li>规则输出有12条类别粒度不可判，为什么不能直接记12错或12对？</li>
+<li>候选局部改善但独立无提升又有兼容退步，为什么恢复原版？</li>
+</ul>
+<p>教师验收判据：能独立画出全系统、给出可比实验和不确定性边界，并完成面试追问；不声称真实模型胜率或亲自开发整个上游平台。</p>
+<p>可复用成果：一页冻结实验协议＋负结果报告＋闭卷系统设计与面试讲述。</p>
+<p>完成本版的能力变化：新增冻结评测协议、消融、回滚决策及整项目验收。</p>
+<p>下一版：转入A级薄弱点复习和模拟面试；没有真实验收不标完成。</p></article><article id="doc03"><h1>核心技术与源码证据</h1>
+<p>路径基准为agent-eval-project；P/B指当前默认平台，L指旧参考路线，R指第三轮研究脚本。每个锚点核对原文件和行号并记录SHA，不把旧runtime-reviewed当最新平台。key_sources保留相同相对目录，源码只作定位，课堂每次选2—3处。</p>
+<h2>A级深入路线</h2>
+<a id="t1"></a>
+<h3>T1 Agent指令与状态驱动执行</h3>
+<ul>
+<li>时机：V1后，约60—90分钟；按薄弱处选，不预先全讲。</li>
+<li>核心原理：把下一步决策表达成指令，将模型/工具等副作用交Executor；phase与state决定后继，不是把所有行为叫一次LLM调用。</li>
+<li>项目作用/实现：GeneralChatAgent产指令，Runtime.step推进状态；服务端Runtime/Executor接执行与保存。</li>
+<li>替代方案与代价：单循环原型更少抽象；状态/指令分工更容易测试与替换执行器，代价是合同和阻塞态处理。</li>
+<li>核对源码：<a href="#p05">P05</a>；<a href="#p06">P06</a>；<a href="#p07">P07</a>；<a href="#p08">P08</a>。</li>
+<li>边界与局限：默认预算helper为128000×0.65=83200且严格大于才触发；主要构造链只传enabled，不能声称自动读取当前模型窗口。步数、forceFinish、等待人工和取消分别讨论。</li>
+<li>面试解释方式：先讲一次工具往返，再讲谁决策/谁执行/谁保存，最后用超预算和取消解释边界。</li>
+<li>进一步追问：工具已经发出后取消能否撤销副作用？哪些信息被压缩会影响后续工具调用？</li>
+</ul>
+<a id="t2"></a>
+<h3>T2 批量运行、K指标与终态幂等</h3>
+<ul>
+<li>时机：V3后，约60—90分钟；按薄弱处选，不预先全讲。</li>
+<li>核心原理：将请求受理、执行完成、评分完成和Run聚合分层；通过数据库条件写阻止终态被迟到覆盖。</li>
+<li>项目作用/实现：本地完成hook、线程完成聚合、updateIfUnfinished/finalizeIfActive构成关键保护链。</li>
+<li>替代方案与代价：只在内存设finished标志难跨重入；条件更新可依赖DB原子性；全面改队列并不自动解决业务幂等。</li>
+<li>核对源码：<a href="#p09">P09</a>；<a href="#p10">P10</a>；<a href="#p11">P11</a>；<a href="#p16">P16</a>；<a href="#p17">P17</a>。</li>
+<li>边界与局限：K任一通过计该题passed，全部通过另记；score为max，不是均值。资源primary按线程平均并另存total。当前maxConcurrency仅声明未在编排消费，不能做调参效果承诺。</li>
+<li>面试解释方式：用超时→迟到成功、重复回调、K最后线程完成三个时序讲设计和真实修复。</li>
+<li>进一步追问：重复finalize如何保护duration/metrics？completed中含failed题该怎样对用户解释？</li>
+</ul>
+<a id="t3"></a>
+<h3>T3 LLM Judge输入与评分器可靠性</h3>
+<ul>
+<li>时机：V4后，约60—90分钟；按薄弱处选，不预先全讲。</li>
+<li>核心原理：评分本身也是不可靠外部调用：先定义任务、参考、输出、标准，再限定分数结构和错误语义。</li>
+<li>项目作用/实现：evaluate选择matcher并计算Σ(wᵢsᵢ)/Σwᵢ；阈值默认0.6。generateJudgeObject把初始化计入硬截止，接原ModelRuntime。</li>
+<li>替代方案与代价：规则更确定但语义有限；结构化LLM更灵活但要校准；另造客户端会复制配置/取消逻辑。</li>
+<li>核对源码：<a href="#p12">P12</a>；<a href="#p13">P13</a>；<a href="#p14">P14</a>；<a href="#p15">P15</a>。</li>
+<li>边界与局限：合法0分≠error；NaN/越界/空reason不接受。Case配置整份覆盖，非字段深合并。硬截止不保证供应商停止计费，Run资源指标不能自动认为含Judge开销。</li>
+<li>面试解释方式：以“答错”“空JSON”“忽略signal”三种情况说明评分与评测生命周期的分工。</li>
+<li>进一步追问：模型JSON合法但判断偏差如何测？为什么不把所有异常记0分后算通过率？</li>
+</ul>
+<a id="t4"></a>
+<h3>T4 证据身份、跨语言合同与独立任务</h3>
+<ul>
+<li>时机：V5—V6后，约60—90分钟；按薄弱处选，不预先全讲。</li>
+<li>核心原理：同一证据跨存储/语言仍要保持所属和原字段语义；诊断使用独立任务状态，不能污染评分。</li>
+<li>项目作用/实现：SQL提取→scope/nodes/digest→async_tasks输入快照→版本化Python→validateDiagnostic→独立result。</li>
+<li>替代方案与代价：拼文本最简单但不可审计；固定本地进程少部署；常驻HTTP服务/分布式队列需更强需求才引入。</li>
+<li>核对源码：<a href="#b01">B01</a>；<a href="#b02">B02</a>；<a href="#b03">B03</a>；<a href="#b04">B04</a>；<a href="#b05">B05</a>；<a href="#b06">B06</a>；<a href="#b07">B07</a>。</li>
+<li>边界与局限：派生call非原生span；缺provider/operation事件保留coverage。重复ID去重仍需lease fence；序列化/Unicode/数值表示必须一致，错误引用不能靠补造字段通过。</li>
+<li>面试解释方式：拿一次真实持久化工具error讲来源，再讲两个worker和迟到结果；“job执行成功”不提升为“根因正确”。</li>
+<li>进一步追问：输入摘要能替代userId校验吗？engine变更后怎样保留旧诊断？</li>
+</ul>
+<a id="t5"></a>
+<h3>T5 因果边界、选择性预测与实验验收</h3>
+<ul>
+<li>时机：V7—V9后，约60—90分钟；按薄弱处选，不预先全讲。</li>
+<li>核心原理：结构合法、引用存在、观察支持、内部根因支持是逐级更强的命题；弃权会改变覆盖，不能只看接受后精度。</li>
+<li>项目作用/实现：默认审核严格且有误拒；旧validator不统一必经。phase3固定候选五组、冻结原/候选与holdout，独立输出裁决保留类别歧义。</li>
+<li>替代方案与代价：一味放宽可能错误归因；一味严格可以全弃权。应同数据同候选比较结构/引用/支持门禁，区分根因与观察。</li>
+<li>核对源码：<a href="#b08">B08</a>；<a href="#l01">L01</a>；<a href="#l04">L04</a>；<a href="#l05">L05</a>；<a href="#r01">R01</a>；<a href="#r02">R02</a>。</li>
+<li>边界与局限：模型/审核共享弱规则会继承盲点；未知不算正确，无法判真也不能直接记错。全无安全输出时准确率NA。完整审核组safeCandidate=null不抹掉adapter存储的带标记观察。</li>
+<li>面试解释方式：讲第三轮开发局部改善、独立无提升、后验退步及恢复原版的决策；这比只报测试数更能说明工程判断。</li>
+<li>进一步追问：怎样避免标签泄漏？generic fallback是否允许当子类上位结论？怎样验证一条真实最早异常链？</li>
+</ul>
+<h2>重要B级：理解目标，不扩成另一套大课</h2>
+<p>PG/Drizzle掌握实体、关联、用户作用域与条件更新；页面/tRPC掌握请求如何到服务；旧去噪理解保留祖先/邻域的证据视图，和运行时压缩分开；旧排序/代表Case理解频率、优先级、典型性与证据完整度的差别。L07/L08的TF-IDF/余弦medoid不是embedding检索。其余平台语音、多模态、市场、主题等不列本项目核心能力。</p>
+<h2>可追溯证据索引</h2>
+<a id="p01"></a>
+<h3>P01 · agentEvalRuns</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/agentEvals.ts</code>，L165（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/agentEvals.ts">只读源码副本</a> · <a href="source_view/P01.html#L165">按行阅读</a></li>
+<li>功能与价值：评测资产、运行和题目关系的真实表结构。</li>
+<li>上下游：Benchmark→Dataset→TestCase；Run→RunTopic→Topic/Thread。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p02"></a>
+<h3>P02 · startRun</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEval.ts</code>，L716（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEval.ts">只读源码副本</a> · <a href="source_view/P02.html#L716">按行阅读</a></li>
+<li>功能与价值：认证、启动请求和异步受理的边界。</li>
+<li>上下游：页面/客户端→agentEval.startRun→asyncCaller.eval.runBenchmark。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p03"></a>
+<h3>P03 · createRun</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts</code>，L62（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts">只读源码副本</a> · <a href="source_view/P03.html#L62">按行阅读</a></li>
+<li>功能与价值：记录Agent快照并预建pending题目。</li>
+<li>上下游：createRun→snapshotAgentConfig→runModel.create→Topics/RunTopics。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p04"></a>
+<h3>P04 · snapshotAgentConfig</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts</code>，L1618（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts">只读源码副本</a> · <a href="source_view/P04.html#L1618">按行阅读</a></li>
+<li>功能与价值：可审计快照，不能等同执行时冻结配置。</li>
+<li>上下游：createRun→snapshotAgentConfig；执行另由execAgent读取配置。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p05"></a>
+<h3>P05 · execAgent</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/aiAgent/index.ts</code>，L272（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/aiAgent/index.ts">只读源码副本</a> · <a href="source_view/P05.html#L272">按行阅读</a></li>
+<li>功能与价值：Agent执行入口重新读取当前配置。</li>
+<li>上下游：executeTrajectory→AiAgentService.execAgent→AgentRuntimeService。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p06"></a>
+<h3>P06 · AgentRuntime.step</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/core/runtime.ts</code>，L80（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/core/runtime.ts">只读源码副本</a> · <a href="source_view/P06.html#L80">按行阅读</a></li>
+<li>功能与价值：Brain产生指令，Runtime选择Executor推进状态。</li>
+<li>上下游：runtime.step→agent.runner→executor→state/events/nextContext。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p07"></a>
+<h3>P07 · GeneralChatAgent.runner</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/agents/GeneralChatAgent.ts</code>，L386（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/agents/GeneralChatAgent.ts">只读源码副本</a> · <a href="source_view/P07.html#L386">按行阅读</a></li>
+<li>功能与价值：按phase决定模型/工具/完成与压缩指令。</li>
+<li>上下游：user_input/llm_result/tools_batch_result→指令。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p08"></a>
+<h3>P08 · shouldCompress</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/utils/tokenCounter.ts</code>，L114（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/utils/tokenCounter.ts">只读源码副本</a> · <a href="source_view/P08.html#L114">按行阅读</a></li>
+<li>功能与价值：token预算触发压缩，默认窗口比例0.65。</li>
+<li>上下游：GeneralChatAgent→shouldCompress→getCompressionThreshold。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p09"></a>
+<h3>P09 · runBenchmark</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/orchestrator.ts</code>，L58（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/orchestrator.ts">只读源码副本</a> · <a href="source_view/P09.html#L58">按行阅读</a></li>
+<li>功能与价值：分页、分批、K条轨迹与完成聚合。</li>
+<li>上下游：runBenchmark→paginateTestCases→executeTestCase→trajectory/completion→finalize。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p10"></a>
+<h3>P10 · executeTrajectory</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts</code>，L251（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts">只读源码副本</a> · <a href="source_view/P10.html#L251">按行阅读</a></li>
+<li>功能与价值：评测任务发起Agent执行并设置完成钩子。</li>
+<li>上下游：Orchestrator→executeTrajectory→execAgent→onComplete→evaluateCase/finalize。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p11"></a>
+<h3>P11 · aggregateThreadResults</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts</code>，L842（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts">只读源码副本</a> · <a href="source_view/P11.html#L842">按行阅读</a></li>
+<li>功能与价值：K样本至少一次通过、全部通过、最佳分及资源汇总。</li>
+<li>上下游：recordThreadCompletion→aggregateThreadResults→runTopic.updateIfUnfinished。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p12"></a>
+<h3>P12 · evaluate</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/evaluate.ts</code>，L45（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/evaluate.ts">只读源码副本</a> · <a href="source_view/P12.html#L45">按行阅读</a></li>
+<li>功能与价值：抽取/匹配、权重与阈值校验、加权评分。</li>
+<li>上下游：evaluateOutput→evaluate→extract/match→weightedScore。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p13"></a>
+<h3>P13 · matchLLMRubric</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/matchers/llmRubric.ts</code>，L44（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/matchers/llmRubric.ts">只读源码副本</a> · <a href="source_view/P13.html#L44">按行阅读</a></li>
+<li>功能与价值：模型评分提示、schema和任务/标准上下文。</li>
+<li>上下游：match→llm-rubric matcher→generateObject。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p14"></a>
+<h3>P14 · generateJudgeObject</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/judge.ts</code>，L27（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/judge.ts">只读源码副本</a> · <a href="source_view/P14.html#L27">按行阅读</a></li>
+<li>功能与价值：含初始化的硬截止、结构化分数和错误分类。</li>
+<li>上下游：evaluateOutput→generateJudgeObject→原ModelRuntime.generateObject。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p15"></a>
+<h3>P15 · evaluateCase</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts</code>，L1419（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts">只读源码副本</a> · <a href="source_view/P15.html#L1419">按行阅读</a></li>
+<li>功能与价值：Case优先配置、最后Assistant输出及external分流。</li>
+<li>上下游：完成钩子→evaluateCase→evaluateOutput→条件回写。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p16"></a>
+<h3>P16 · updateIfUnfinished</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/runTopic.ts</code>，L216（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/runTopic.ts">只读源码副本</a> · <a href="source_view/P16.html#L216">按行阅读</a></li>
+<li>功能与价值：终态条件写，不让迟到评分覆盖超时/终止。</li>
+<li>上下游：评分/完成聚合→updateIfUnfinished→数据库原子条件。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p17"></a>
+<h3>P17 · finalizeIfActive</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/run.ts</code>，L98（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/run.ts">只读源码副本</a> · <a href="source_view/P17.html#L98">按行阅读</a></li>
+<li>功能与价值：运行级终态聚合的条件更新。</li>
+<li>上下游：orchestrator.finalizeRun→finalizeIfActive。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="p18"></a>
+<h3>P18 · getRunDetails</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts</code>，L964（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts">只读源码副本</a> · <a href="source_view/P18.html#L964">按行阅读</a></li>
+<li>功能与价值：报告读回与超时处理，不是新评分模型。</li>
+<li>上下游：agentEval.getRunDetails→runService→run/topics/metrics。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b01"></a>
+<h3>B01 · diagnosisRequest</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEvalExternal.ts</code>，L290（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEvalExternal.ts">只读源码副本</a> · <a href="source_view/B01.html#L290">按行阅读</a></li>
+<li>功能与价值：原扩展路由新增独立诊断，区别外部评分回调。</li>
+<li>上下游：diagnosisRequest→归因service；reportResult仍属评分生命周期。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b02"></a>
+<h3>B02 · extractTrajectory</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts</code>，L41（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts">只读源码副本</a> · <a href="source_view/B02.html#L41">按行阅读</a></li>
+<li>功能与价值：按用户、Run/Case/Thread只读导出证据和缺失覆盖。</li>
+<li>上下游：enqueue→extractTrajectory→messages/message_plugins→规范nodes。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b03"></a>
+<h3>B03 · validateDiagnostic</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts</code>，L275（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts">只读源码副本</a> · <a href="source_view/B03.html#L275">按行阅读</a></li>
+<li>功能与价值：严格schema、身份、coverage和原字段引文核验。</li>
+<li>上下游：runPython→validateDiagnostic→独立诊断结果。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b04"></a>
+<h3>B04 · enqueue</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts</code>，L64（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts">只读源码副本</a> · <a href="source_view/B04.html#L64">按行阅读</a></li>
+<li>功能与价值：确定ID、版本、输入快照与去重。</li>
+<li>上下游：diagnosisRequest→enqueueRun→enqueue→async_tasks。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b05"></a>
+<h3>B05 · processJob</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts</code>，L171（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts">只读源码副本</a> · <a href="source_view/B05.html#L171">按行阅读</a></li>
+<li>功能与价值：原子claim、lease token和迟到结果隔离。</li>
+<li>上下游：CLI.processPending→processJob→runner→按lease写result。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b06"></a>
+<h3>B06 · runPython</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/python.ts</code>，L33（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/python.ts">只读源码副本</a> · <a href="source_view/B06.html#L33">按行阅读</a></li>
+<li>功能与价值：固定Python子进程、截止/输出上限和最小环境。</li>
+<li>上下游：processJob→runPython→adapter.py stdin/stdout→合同验证。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b07"></a>
+<h3>B07 · analyze</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py</code>，L88（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py">只读源码副本</a> · <a href="source_view/B07.html#L88">按行阅读</a></li>
+<li>功能与价值：重用原规则，仅生成有限故障观察，不自动推内部模块。</li>
+<li>上下游：analyze_reviewed→analyze→failure_envelope/分类→observations。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b08"></a>
+<h3>B08 · review_candidate</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py</code>，L33（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py">只读源码副本</a> · <a href="source_view/B08.html#L33">按行阅读</a></li>
+<li>功能与价值：当前默认原版审核：存在、支持、根因拒绝、摘要/覆盖门禁。</li>
+<li>上下游：adapter.analyze_reviewed/review_cli→audited_candidate→review_candidate。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="b09"></a>
+<h3>B09 · failure_envelope / classify_builtin / classify_external</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py</code>，L41（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py">只读源码副本</a> · <a href="source_view/B09.html#L41">按行阅读</a></li>
+<li>功能与价值：当前桥接实际复用的失败封装与规则类别；与旧快照分开。</li>
+<li>上下游：adapter.analyze及evidence_review共享纯分类函数→观察类别。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l01"></a>
+<h3>L01 · run_pipeline</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/badcase_analysis.py</code>，L33（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/badcase_analysis.py">只读源码副本</a> · <a href="source_view/L01.html#L33">按行阅读</a></li>
+<li>功能与价值：旧模型离线分析路线，offline不保证无模型调用。</li>
+<li>上下游：拉取/缓存→可选补充→classify_batch→聚合/报告。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l02"></a>
+<h3>L02 · scan</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/structured_jsonl_attribution.py</code>，L103（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/structured_jsonl_attribution.py">只读源码副本</a> · <a href="source_view/L02.html#L103">按行阅读</a></li>
+<li>功能与价值：旧JSONL确定性规则路线，独立于旧模型入口。</li>
+<li>上下游：messages→tool_call_id关联→失败封装/分类→事件表。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l03"></a>
+<h3>L03 · denoise_trace_nodes</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/trace_denoiser.py</code>，L65（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/trace_denoiser.py">只读源码副本</a> · <a href="source_view/L03.html#L65">按行阅读</a></li>
+<li>功能与价值：保留错误/祖先/邻域的证据视图，不等于模型上下文压缩。</li>
+<li>上下游：enrich路径→denoise_trace_nodes→带来源ID的视图。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l04"></a>
+<h3>L04 · classify_batch</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/llm_classifier.py</code>，L139（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/llm_classifier.py">只读源码副本</a> · <a href="source_view/L04.html#L139">按行阅读</a></li>
+<li>功能与价值：旧提示分类56模块，输出normalize不证明引用支持。</li>
+<li>上下游：run_pipeline→classify_batch→classify_single→normalize。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l05"></a>
+<h3>L05 · validate</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/reattribution_validator.py</code>，L6（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/reattribution_validator.py">只读源码副本</a> · <a href="source_view/L05.html#L6">按行阅读</a></li>
+<li>功能与价值：单独存在的责任验证，不是所有入口必经。</li>
+<li>上下游：部分报表调用validate；run_pipeline没有统一调用。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l06"></a>
+<h3>L06 · calculate_priority</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/development_priority.py</code>，L92（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/development_priority.py">只读源码副本</a> · <a href="source_view/L06.html#L92">按行阅读</a></li>
+<li>功能与价值：启发式开发优先分，与证据正确性和评分不同。</li>
+<li>上下游：可用分类/证据字段→evidence_score→calculate_priority。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l07"></a>
+<h3>L07 · converge</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/cause_convergence.py</code>，L99（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/cause_convergence.py">只读源码副本</a> · <a href="source_view/L07.html#L99">按行阅读</a></li>
+<li>功能与价值：按签名分簇、严重度/影响排序及medoid代表。</li>
+<li>上下游：调用方rows→converge→signature/severity/score→medoid。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l08"></a>
+<h3>L08 · medoid</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/cause_convergence.py</code>，L92（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/cause_convergence.py">只读源码副本</a> · <a href="source_view/L08.html#L92">按行阅读</a></li>
+<li>功能与价值：词袋/TF-IDF余弦距离选真实代表，不是向量库检索。</li>
+<li>上下游：胜出簇→medoid→实际trace代表。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l09"></a>
+<h3>L09 · select_representative_trace</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/representative_case_selector.py</code>，L31（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/representative_case_selector.py">只读源码副本</a> · <a href="source_view/L09.html#L31">按行阅读</a></li>
+<li>功能与价值：另一路按类别/签名与完整度选代表，非同一算法。</li>
+<li>上下游：classified/events/raw_nodes→候选→完整度排序。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l10"></a>
+<h3>L10 · aggregate</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/aggregator.py</code>，L17（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/aggregator.py">只读源码副本</a> · <a href="source_view/L10.html#L17">按行阅读</a></li>
+<li>功能与价值：旧离线聚合指标，需核对计数口径。</li>
+<li>上下游：run_pipeline→aggregate→类别/模块表。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="l11"></a>
+<h3>L11 · build_report</h3>
+<ul>
+<li>原相对路径：<code>source-reference/attribution/high_frequency_case_report.py</code>，L102（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/source-reference/attribution/high_frequency_case_report.py">只读源码副本</a> · <a href="source_view/L11.html#L102">按行阅读</a></li>
+<li>功能与价值：旧Excel代表Case报告，不是当前UI诊断页。</li>
+<li>上下游：classified+原工作簿→build_report→Case工作簿。</li>
+<li>重点：B；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="r01"></a>
+<h3>R01 · summarize</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_phase3/experiment/metrics.py</code>，L62（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_phase3/experiment/metrics.py">只读源码副本</a> · <a href="source_view/R01.html#L62">按行阅读</a></li>
+<li>功能与价值：弃权/未知/错误、root与观察、风险上下界。</li>
+<li>上下游：固定oracle+保存输出+单独裁决→summarize。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<a id="r02"></a>
+<h3>R02 · evaluate</h3>
+<ul>
+<li>原相对路径：<code>local_checks/2026-11-08_phase3/experiment/engine_worker.py</code>，L48（起始锚点，不伪造整函数范围）。</li>
+<li><a href="key_sources/local_checks/2026-11-08_phase3/experiment/engine_worker.py">只读源码副本</a> · <a href="source_view/R02.html#L48">按行阅读</a></li>
+<li>功能与价值：同一人工候选五组政策，不作真实模型推理。</li>
+<li>上下游：标签盲worker→rules/direct/structured/citations/full。</li>
+<li>重点：A；完整SHA见SOURCE_EVIDENCE.json。</li>
+</ul>
+<h2>如何验证一项技术判断</h2>
+<p>先找入口，再找实际调用，再看返回/写入，再读测试或实验条件。字段声明不等于消费，helper存在不等于主链传入了真实模型窗口，validator存在不等于模型入口必经。源码确认实现，实验确认特定条件下的行为；两者都不能代替真实质量标签。</p></article><article id="doc04"><h1>面试与最终验收蓝图</h1>
+<p>这是学习结束后的计划，目前没有成绩。题目由教师在实际授课后选择，不在新课开场连续盘问。不会时先讲清，再要求复述。</p>
+<h2>1分钟项目概述模板</h2>
+<p>“这是一个面向Agent开发者的评测与故障诊断工程。平台配置Agent和测试集，批量执行任务，使用规则或配置的LLM Judge评分并保存报告；失败执行可显式请求Python分析，从原消息提取证据，输出故障观察及复核状态。重点是区分答错、运行失败和内部根因，并保证诊断失败不改原分数。工程链路已有本机Mock与真实PG证据，但真实模型质量和生产根因gold还未验证。”</p>
+<p>这是项目事实描述，不是个人贡献证明。不要把“已有平台”换成“我独立开发了整个平台”。</p>
+<h2>3分钟讲述结构</h2>
+<ul>
+<li>0:00—0:35：用户/输入输出，用订单查询说明评测与诊断解决不同问题。</li>
+<li>0:35—1:15：配置/Run→Agent循环→消息落库→Judge→报告，明确Case/Thread/Run三层。</li>
+<li>1:15—2:00：显式诊断请求→规范轨迹→独立任务/lease→固定Python→关联结果，原评分不变。</li>
+<li>2:00—2:40：选一个有证据的难点，如迟到回调或证据存在不支持根因；点出源码与边界。</li>
+<li>2:40—3:00：工程回归与质量验证分别说明；完整审核组0安全输出不能说成高准确率。</li>
+</ul>
+<h2>5—8分钟深入讲述结构</h2>
+<ul>
+<li>用需求说明为什么先有V0规则Baseline，再增加运行、管理和语义评分。</li>
+<li>用步骤/时序图说明Brain/Runtime/Executor与K回调终态保护。</li>
+<li>用scope/call/error/sourcePointer说明可追溯性；解释缺哪些因果证据。</li>
+<li>比较同步跨语言调用、现有表批处理、新常驻服务，说明当前选型。</li>
+<li>比较结构、引用有效性、完整支持审核，解释UNKNOWN、needs_review和执行error。</li>
+<li>讲真实第三轮负结果：开发改善未迁移到独立合成测试，出现兼容退步，候选未推广。</li>
+<li>交代真实模型、gold、生产可靠性和完全配置冻结缺口；不塞入没有入口证据的RAG/分布式亮点。</li>
+</ul>
+<p>讲稿是结构，不要求按字背。每次录音后删掉没有输入、流程、取舍、证据或结论的技术名词。</p>
+<h2>分模块追问与教师观察点</h2>
+<div class="table-wrap"><table><thead><tr><th>模块</th><th>主问题</th><th>有深度的追问</th><th>应有依据</th></tr></thead><tbody>
+<tr><td>M1资产</td><td>为什么分Case和Run？</td><td>存了snapshot为什么仍可能执行新配置？</td><td>P01/P03—P05；区分审计与冻结</td></tr>
+<tr><td>M2生命周期</td><td>重复回调为何不能改终态？</td><td>K=2混合分数/超时如何聚合，maxConcurrency真的起作用吗？</td><td>P09/P11/P16/P17；公式与实际分支</td></tr>
+<tr><td>M3运行时</td><td>模型返回工具调用后谁继续？</td><td>终止、等待人工、取消和压缩如何影响状态？</td><td>P06—P08；当前路径而非概念堆叠</td></tr>
+<tr><td>M4Judge</td><td>怎么保证评分器错误不变成Agent零分？</td><td>schema合法但语义偏差如何测？硬截止有何局限？</td><td>P12—P15；真实Mock条件与未测provider</td></tr>
+<tr><td>M5证据</td><td>ID存在为什么还不能证明根因？</td><td>同callId跨Case、错误字段不在message主表怎样处理？</td><td>B02/B03；来源与作用域</td></tr>
+<tr><td>M6任务</td><td>为什么不在评分回调同步执行Python？</td><td>重复任务与旧lease迟到怎样隔离？</td><td>B01/B04—B07；原评分不变</td></tr>
+<tr><td>M7审核</td><td>合法参数+外部500能归内部参数模块吗？</td><td>正确短引文与最小上下文怎样兼容？</td><td>B08/L05及phase3退步；不伪造责任</td></tr>
+<tr><td>M8质量</td><td>引用全有效为何仍可能错误？</td><td>全弃权怎么算？12条类别歧义如何处理？</td><td>R01/R02；未知与错误分列、风险范围</td></tr>
+<tr><td>旧分析路线</td><td>排序/medoid能证明归因正确吗？</td><td>旧validator是否所有入口都执行，旧看台是否自动动态统计？</td><td>L01/L05—L11；真实调用关系</td></tr>
+</tbody></table></div>
+<p>每话题最多选三次追问，围绕回答的缺口，不把每个文件名当知识点。</p>
+<h2>闭卷重新设计：最终掌握度任务</h2>
+<p>先隐藏01的模块图及02版本表。只给需求：“开发者提交一组Agent任务，希望批量执行、评分、查看失败证据并在修改后重测；外部服务会失败，模型结果不稳定。”</p>
+<p>用30—45分钟产出：最小V0输入输出；模块/数据模型；Agent/Case/Run/诊断两套状态；同步/异步取舍；Judge错误矩阵；证据作用域与根因边界；包含弃权的实验方案；下一版开发顺序。允许纸笔/文档，不必写业务代码。</p>
+<p>随后对照源码复盘：哪些设计相同、哪些是合理替代、哪些只是理想方案而当前未实现。特别核对执行快照pin、配置并发参数、Judge成本、Trace完整度、旧脚本接入和候选推广状态。</p>
+<h2>掌握度检查表（全部未验收）</h2>
+<ul>
+<li>[ ] 不看图能说清项目服务谁、输入输出和8个模块。</li>
+<li>[ ] 能画执行/评分主链和显式触发的诊断支线。</li>
+<li>[ ] 能手算K通过/最佳分/平均与累计资源，并说明口径限制。</li>
+<li>[ ] 能解释0分、评分error、任务error、UNKNOWN与needs_review。</li>
+<li>[ ] 能设计并发/迟到回调/lease反例，不背代码也能解释守卫。</li>
+<li>[ ] 能定位关键源码，区分字段声明与实际消费。</li>
+<li>[ ] 能给出可比五组实验和风险—覆盖指标，不把Mock/弃权计作能力。</li>
+<li>[ ] 能完整解释候选为何没推广，以及当前版本仍有哪些已知限制。</li>
+<li>[ ] 能讲清个人实际参与，不冒认上游开发、付费模型成绩或生产SLA。</li>
+</ul>
+<p>验收看事实、流程、取舍、证据四项：每项记“独立完成/提示后完成/需补课”，留下回答原文或产物；没有作答就不打分。过关后再按真实薄弱点安排复习，不给虚构证书。</p></article><article id="doc05"><h1>真实性审计与待核实事项</h1>
+<p>本次是2026-11-08课程制作，只静态阅读、核对保存结果和打包；没有启动高成本实验、调用付费API或修改业务功能。完整锚点SHA见SOURCE_EVIDENCE及audit事实底稿。</p>
+<h2>已由当前源码确认</h2>
+<ul>
+<li>平台有评测资产、运行、Agent调用、规则/LLM评分、报告读取和重测入口；主线不是只写在README。</li>
+<li>Run保存Agent快照，但execAgent重新读配置；不能称严格快照执行或精确历史重放。</li>
+<li>编排有分页/固定分块；maxConcurrency虽然在API声明，当前未见编排消费，不能说参数已调控实际并发。</li>
+<li>K指标取实际K次中的any/all和bestScore，不是组合无偏pass@k估计。Run completed不等于全题正确。</li>
+<li>LLM Judge经原ModelRuntime结构化调用、输入必要任务/标准、硬截止及错误分型；Run成本没有证据显示完整计入Judge usage。</li>
+<li>规则权重/阈值有校验，但缺标准路径可能返回reason与0分或跳过；不能说所有配置缺陷都有统一错误状态，本课程练习使用显式评分标准。</li>
+<li>65%预算helper会进入真实压缩指令路径；主要构造链仅传enabled，缺省128K/83200，不是已自动绑定每个模型窗口。</li>
+<li>诊断需显式请求与批处理worker；不是评分失败后必然自动运行，也不是新诊断专用UI已经全部接好。</li>
+<li>TS→固定Python合同保留scope、原消息与引文；诊断任务不调用评分回写。Trace缺provider/operation事件，不证明有完整因果图。</li>
+<li>当前adapter.main必经审核，但审核不足仍保留带标记的规则诊断/观察；独立review_cli.safeCandidate为null不等于没有诊断记录。</li>
+<li>旧模型主入口和旧JSONL路线独立，不统一必经legacy validator；旧优先分、medoid、完整度选样和报表也不是一条必经管线。</li>
+<li>第三轮四文件候选已恢复，当前默认是阶段二原版审核。三指标历史看台材料不能当成已完成的动态30天生产指标系统。</li>
+</ul>
+<h2>真实实验及证据范围</h2>
+<div class="table-wrap"><table><thead><tr><th>事实卡</th><th>已保存结果</th><th>能证明</th><th>不能证明</th></tr></thead><tbody>
+<tr><td>X1阶段二工程</td><td>945项去重选定TS回归，36项Python</td><td>对应测试条件下的行为；不是全库覆盖率</td><td>全库类型通过、真实模型准确率、生产SLA</td></tr>
+<tr><td>X2真实本机链路</td><td>PG16.15+pgvector、本地Mock Judge/Agent、Python进程、真实登录四表单、HTTP冒烟27项</td><td>本机执行/保存/评分/查询与配置保存</td><td>Mock推理质量、所有工具/部署模式、全量UI能力</td></tr>
+<tr><td>X3第三轮质量</td><td>dev12、holdout28、历史受控回放4；五组固定候选，440行指标</td><td>审核政策、标签与弃权的工程研究</td><td>真实供应商推理效果、生产根因gold成绩</td></tr>
+<tr><td>X4负结果/恢复</td><td>dev完整审核1/9→2/9，独立safeCandidate有效观察0/24→0/24；兼容退步后未推广</td><td>局部改善不等于可推广；默认恢复有回执</td><td>新算法已提高真实归因准确率</td></tr>
+<tr><td>X5第三轮相关回归</td><td>默认恢复后36 Python、71相关TS；另有8指标/8数据校验测试</td><td>相关链路和研究合同</td><td>本轮重新跑过全部945或新PG/UI验收</td></tr>
+</tbody></table></div>
+<p>阶段二全库类型仍295个历史诊断位置，不能叫295个已确认业务bug；阶段三没有改TS或重跑全库类型。本次课程制作也没有重新运行这些平台测试。完整审核组无输出时准确率NA，不是100%；规则12条类别粒度歧义保留不可判。</p>
+<h2>为教学设计的模拟情境</h2>
+<p>V0单对象打分、单表覆盖历史、while工具循环、同步子进程污染评分等，是用于推导的朴素方案；没有证据证明作者真实按这个顺序开发。订单A17及课堂预期表是教学例，不是生产用户。理想的不可变实验快照、完整因果链及新语义审核只是可讨论替代，不在当前实现清单里。</p>
+<p>K本地漏finalize、评分上下文遗漏、插件error落库遗漏、字段source/type差异等有保存的真实工程修复记录，不能与模拟故障混淆；这些协作修复也不能自动成为学习者本人独立完成的贡献。</p>
+<h2>尚未核实/明确局限</h2>
+<ul>
+<li>未获得已确认真实provider/model实验配置；真实评分偏差、归因质量、取消/计费和Token成本未测，数值为null。</li>
+<li>没有经独立复核的生产根因gold、完整真实Trace集；历史脱敏命名XLSX不等于完成标签/隐私验收。</li>
+<li>合成oracle是单作者设定；部分已知机制没在真实平台注入。内部代理输出裁决不等于多标注员人工真值。</li>
+<li>类别generic fallback与具体类别粒度不清；当前审核继承弱规则、模板限制及全局coverage误拒，候选又有短引文语境丢失。</li>
+<li>动态MCP来源、其它工具错误持久化、完整span/provider输入、生产负载与跨进程恢复未全面验证。</li>
+<li>本机BM25/pg_search缺失，相关2迁移明确跳过；私有依赖存根和本地Mock限制可外推范围。</li>
+</ul>
+<p>面试时可以解释这些边界及怎么验证，不能用更响亮的技术词或推测指标补齐它们。</p></article><article id="doc06"><h1>给接手教学的ChatGPT</h1>
+<h2>你的任务与课程身份</h2>
+<p>你是工程老师与技术面试辅导者。用户准备AI Agent/大模型应用实习，需要能独立设计、讲述和应对追问，不是逐文件维护上游巨型平台。源码少量核对，工程推导为主。此包已完成规划，不要重新发明课表。</p>
+<p>项目定位：已有Agent工作空间中的评测主链＋当前TS/Python独立诊断＋旧离线分析材料与质量实验。8模块见01；V0—V9共10单元见02。路线是全景→最小Baseline→逐版长出需求/方案→源码验证→串讲→面试。每单元A—H就是教学依据，当前只做了蓝图，没有正式授课成绩。</p>
+<h2>从哪里开始</h2>
+<p>先读01、02总览、05和07；第一次正式授课从V0的业务/最小Baseline完整段落开始。如果新进度已有真实记录，则读continuation位置续讲；不要重讲全部总览。每次选当前V的03证据2—3处，没上传源码就明确未核对，不声称读过用户电脑。</p>
+<h2>新课怎样教</h2>
+<p>先用完整业务例解释“现在已有何能力→新需求→朴素方案→具体失效→2—3种有意义选择→当前实现→验证与限制”。不要开场就让用户回答尚未教的概念。简单定义集中带过；重点是状态/数据流、设计取舍和失效机制。按60—90分钟单元组织，20分钟可只完成一个连续片段，不强制5小时，不每几句打断提问。</p>
+<p>每单元形成02规定的一件学习成果。段落末最多一个综合检查；用户不会时先用更具体例子讲清，再做复述，别把所有内容降成初级问答。只有真实作答才反馈/评估。复习与面试可先作答后反馈，一次一题，追问围绕真实回答。</p>
+<h2>重点技术与真实边界</h2>
+<p>A级依次是Agent指令/状态、批量终态幂等、Judge错误合同、证据身份/跨语言任务、因果边界与选择性实验。CRUD/UI/普通配置只做必要解释，旧排序/选样理解目标和局限，不通读60脚本。</p>
+<p>别误讲：snapshot≠执行pin；maxConcurrency声明≠被调度消费；65%默认不是自动模型窗口/最优值；有ID≠支持结论；job success≠根因正确；全局coverage≠局部证据充分性。review不足时adapter仍可保存带标记观察；实验safeCandidate=0不等于平台0诊断。</p>
+<p>旧模型pipeline/旧JSONL/多个报表不统一，legacy validator不必经；当前固定adapter主链则确实过review。第三轮候选未推广，当前默认回到阶段二；不能把optimized目录当默认实现。</p>
+<p>945是阶段二工程回归，第三轮当前相关36 Python/71 TS；真实PG/登录是在保存验收条件下通过，不能外推全库类型或模型效果。五组消融中需要模型候选的位置，本轮实际使用固定人工候选回放，没有真实推理。完整审核组独立28例0安全输出/24可观察，精度为NA；数据/摘要/类别歧义与退步应讲清。</p>
+<h2>如何记进度和复习</h2>
+<p>07与LEARNING_PROGRESS.json是这套新课程记录，初始全部未开始；旧聊天/旧E课不自动折算过关。状态只能是未开始、正在学习、已理解但尚未通过验收、已通过验收、需要复习。</p>
+<p>每次收尾输出一张可复制续学卡：日期与时区、V/小节、实际讲过内容、用户原回答或answer=null、已产生成果、尚缺证据/薄弱点、验收状态、下次具体位置。没真实回答不生成分数；没完成产物不打勾。无法写回文件就让用户保存更新文本，不承诺自动跨对话记忆。</p>
+<p>仅在真实学习之后按需要安排1/3/7天复习，日期取真实会话，不预造到期队列；中断续讲先5分钟检查阻塞项，不重启整个课程。验收用04的事实/流程/取舍/证据四维，源码背诵不是评分维度。用户预算变化时优先一个完整工程片段，阶段不按日历自动完成。</p>
+<h2>面试与贡献</h2>
+<p>04的1/3/5—8分钟讲述用于课程结束后。项目背景、上游实现、本次协作修复、学习者实际独立完成的部分要分开。当前用户尚未验收，不能替他声称熟练、手写整个平台、验证真实模型效果。闭卷设计允许合理替代方案，对照实际代码说明差异即可。</p>
+<h2>可直接复制的启动文本</h2>
+<p>请按附件06的教学约定接手课程。先读取01、02、05和07，不重新规划，不马上考我没学的内容。若07仍全部未开始，从V0按“需求→朴素方案→问题→选择→真实实现→验证”展开一个完整工程段落，基础快速带过、关键取舍讲透。当前可用时间由我告诉你。每次收尾给可复制续学卡，没有回答/产物不替我判通过。源码没收到就明确未核对，不把模拟情境、Mock成绩或未推广候选当真实已实现效果。</p></article><article id="doc07"><h1>学习进度表</h1>
+<p>这是新蓝图的初始进度，旧历史保留但不自动折算。讲过、理解、验收是不同状态。</p>
+<p>状态：未开始｜正在学习｜已理解但尚未通过验收｜已通过验收｜需要复习。未正式授课不预填成绩、日期或复习队列。</p>
+<div class="table-wrap"><table><thead><tr><th>单元</th><th>状态</th><th>掌握情况/验收证据</th><th>薄弱点</th><th>下次具体位置</th></tr></thead><tbody>
+<tr><td>V0 先定义评测问题，做最小可解释Baseline</td><td>未开始</td><td>—</td><td>—</td><td>V0 A节</td></tr>
+<tr><td>V1 让被测Agent真正执行：从一次模型调用长出工具循环</td><td>未开始</td><td>—</td><td>—</td><td>V1 A节</td></tr>
+<tr><td>V2 管理测试集与运行：先有身份，再谈可复现</td><td>未开始</td><td>—</td><td>—</td><td>V2 A节</td></tr>
+<tr><td>V3 批量执行与K采样：用状态机守住结果</td><td>未开始</td><td>—</td><td>—</td><td>V3 A节</td></tr>
+<tr><td>V4 从规则评分到LLM Judge：先保证评分器可信</td><td>未开始</td><td>—</td><td>—</td><td>V4 A节</td></tr>
+<tr><td>V5 从结果分数走向诊断：建立轨迹证据合同</td><td>未开始</td><td>—</td><td>—</td><td>V5 A节</td></tr>
+<tr><td>V6 接入Python故障观察：将诊断与评分解耦</td><td>未开始</td><td>—</td><td>—</td><td>V6 A节</td></tr>
+<tr><td>V7 证据审核与弃权：失败曝光不等于源码责任</td><td>未开始</td><td>—</td><td>—</td><td>V7 A节</td></tr>
+<tr><td>V8 影响统计与代表案例：让报告帮助开发者行动</td><td>未开始</td><td>—</td><td>—</td><td>V8 A节</td></tr>
+<tr><td>V9 实验验收与全项目复述：允许没有提升</td><td>未开始</td><td>—</td><td>—</td><td>V9 A节</td></tr>
+</tbody></table></div>
+<h2>最近续学卡（待真实学习后填写）</h2>
+<ul>
+<li>实际日期/时长：未发生。</li>
+<li>当前单元/讲到位置：尚未开始。</li>
+<li>本次讲解/用户回答：无；不打分。</li>
+<li>成果与验收：无。</li>
+<li>薄弱点/下次动作：从V0背景开始。</li>
+<li>复习日期：暂无。</li>
+</ul>
+<p>JSON版见LEARNING_PROGRESS.json。网页端不能直接写本机文件时，收尾输出更新文本供保存。状态变化须附真实作答/成果；复习发生后记录表现，不自动按时间判完成。</p></article><article id="doc08"><h1>关键源码清单与上传顺序</h1>
+<p>共40个定位点，去重后33份精简源码，不复制整个工作空间。原相对路径从agent-eval-project计算，key_sources保持相同结构；它不是完整可运行仓库。源码默认可选阅读，每单元先选2—3处，不一次上传全部长文件。</p>
+<p>副本按需脱敏机器路径/私有服务地址/凭据字面量，保持行数；原始源码未改，两个SHA与规则见SOURCE_COPY_MANIFEST。原文件SHA和起始行见SOURCE_EVIDENCE。教师如未获得副本不能声称核对。</p>
+<div class="table-wrap"><table><thead><tr><th>单元</th><th>优先源码ID（细读2—3处，其余按需）</th></tr></thead><tbody>
+<tr><td>V0</td><td><a href="#p12">P12</a>；<a href="#p15">P15</a></td></tr>
+<tr><td>V1</td><td><a href="#p05">P05</a>；<a href="#p06">P06</a>；<a href="#p07">P07</a>；<a href="#p08">P08</a>；<a href="#p10">P10</a></td></tr>
+<tr><td>V2</td><td><a href="#p01">P01</a>；<a href="#p02">P02</a>；<a href="#p03">P03</a>；<a href="#p04">P04</a>；<a href="#p05">P05</a>；<a href="#p18">P18</a></td></tr>
+<tr><td>V3</td><td><a href="#p09">P09</a>；<a href="#p10">P10</a>；<a href="#p11">P11</a>；<a href="#p16">P16</a>；<a href="#p17">P17</a></td></tr>
+<tr><td>V4</td><td><a href="#p12">P12</a>；<a href="#p13">P13</a>；<a href="#p14">P14</a>；<a href="#p15">P15</a></td></tr>
+<tr><td>V5</td><td><a href="#b01">B01</a>；<a href="#b02">B02</a>；<a href="#b03">B03</a></td></tr>
+<tr><td>V6</td><td><a href="#b01">B01</a>；<a href="#b04">B04</a>；<a href="#b05">B05</a>；<a href="#b06">B06</a>；<a href="#b07">B07</a>；<a href="#b09">B09</a></td></tr>
+<tr><td>V7</td><td><a href="#b03">B03</a>；<a href="#b07">B07</a>；<a href="#b08">B08</a>；<a href="#b09">B09</a>；<a href="#l01">L01</a>；<a href="#l04">L04</a>；<a href="#l05">L05</a></td></tr>
+<tr><td>V8</td><td><a href="#p11">P11</a>；<a href="#p18">P18</a>；<a href="#l02">L02</a>；<a href="#l06">L06</a>；<a href="#l07">L07</a>；<a href="#l08">L08</a>；<a href="#l09">L09</a>；<a href="#l10">L10</a>；<a href="#l11">L11</a></td></tr>
+<tr><td>V9</td><td><a href="#r01">R01</a>；<a href="#r02">R02</a>；<a href="#b08">B08</a></td></tr>
+</tbody></table></div>
+<h2>去重文件列表</h2>
+<div class="table-wrap"><table><thead><tr><th>相对路径</th><th>主要定位点</th></tr></thead><tbody>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/agentEvals.ts">local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/agentEvals.ts</a></td><td>P01</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEval.ts">local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEval.ts</a></td><td>P02</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts">local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts</a></td><td>P03, P04, P10, P11, P15, P18</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/aiAgent/index.ts">local_checks/2026-11-08_platform_audit/platform/src/server/services/aiAgent/index.ts</a></td><td>P05</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/core/runtime.ts">local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/core/runtime.ts</a></td><td>P06</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/agents/GeneralChatAgent.ts">local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/agents/GeneralChatAgent.ts</a></td><td>P07</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/utils/tokenCounter.ts">local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/utils/tokenCounter.ts</a></td><td>P08</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/orchestrator.ts">local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/orchestrator.ts</a></td><td>P09</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/evaluate.ts">local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/evaluate.ts</a></td><td>P12</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/matchers/llmRubric.ts">local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/matchers/llmRubric.ts</a></td><td>P13</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/judge.ts">local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/judge.ts</a></td><td>P14</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/runTopic.ts">local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/runTopic.ts</a></td><td>P16</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/run.ts">local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/run.ts</a></td><td>P17</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEvalExternal.ts">local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEvalExternal.ts</a></td><td>B01</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts">local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts</a></td><td>B02</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts">local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts</a></td><td>B03</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts">local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts</a></td><td>B04, B05</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/python.ts">local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/python.ts</a></td><td>B06</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py">local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py</a></td><td>B07</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py">local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py</a></td><td>B08</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py">local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py</a></td><td>B09</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/badcase_analysis.py">source-reference/attribution/badcase_analysis.py</a></td><td>L01</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/structured_jsonl_attribution.py">source-reference/attribution/structured_jsonl_attribution.py</a></td><td>L02</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/trace_denoiser.py">source-reference/attribution/trace_denoiser.py</a></td><td>L03</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/llm_classifier.py">source-reference/attribution/llm_classifier.py</a></td><td>L04</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/reattribution_validator.py">source-reference/attribution/reattribution_validator.py</a></td><td>L05</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/development_priority.py">source-reference/attribution/development_priority.py</a></td><td>L06</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/cause_convergence.py">source-reference/attribution/cause_convergence.py</a></td><td>L07, L08</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/representative_case_selector.py">source-reference/attribution/representative_case_selector.py</a></td><td>L09</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/aggregator.py">source-reference/attribution/aggregator.py</a></td><td>L10</td></tr>
+<tr><td><a href="key_sources/source-reference/attribution/high_frequency_case_report.py">source-reference/attribution/high_frequency_case_report.py</a></td><td>L11</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_phase3/experiment/metrics.py">local_checks/2026-11-08_phase3/experiment/metrics.py</a></td><td>R01</td></tr>
+<tr><td><a href="key_sources/local_checks/2026-11-08_phase3/experiment/engine_worker.py">local_checks/2026-11-08_phase3/experiment/engine_worker.py</a></td><td>R02</td></tr>
+</tbody></table></div>
+<p>默认课程看当前P/B；L系旧分析路线用于比较，不替换最新平台。第三轮optimized候选源码没有作为默认教学副本混入；若深入研究未推广方案，应另读evidence的推广决策和原实验包，不凭名字猜当前生效。</p></article><article id="doc09"><h1>实验事实卡：能引用什么，不能推出什么</h1>
+<p>日期/阶段按保存证据记。本课程制作不重跑平台、模型或质量实验；下面为已有结果的索引。</p>
+<h2>X1 阶段二工程基线</h2>
+<p>945项是选定Vitest断言按文件与全名去重后的结果，含评分/运行/数据库/路由/归因/计算器等；另36项Python。不等于全库测试、类型全过、真实Agent胜率。源码里的Mock是确定条件，不提供生产质量。evidence/phase2_REGRESSION_SUMMARY.json保留组别；全库当时仍295历史诊断位置。</p>
+<h2>X2 实际本机链路</h2>
+<p>真实PostgreSQL16.15+pgvector、本地Next/Vite与原ModelRuntime→localhost Mock、真实工具/消息持久化、Python进程；登录四表单/API读回与原HTTP冒烟27项通过。BM25两迁移明确未做、私有依赖stub存在，不能推广到所有环境/工具/模型。当前课程包不是全平台安装包。</p>
+<h2>X3 归因质量：28例独立作者合成holdout</h2>
+<p>24例可观察、12例合成机制已知；候选是人工指定，无真实LLM推理。表里的完整审核输出特指safeCandidate；adapter存储可仍保留带review标记的观察。</p>
+<div class="table-wrap"><table><thead><tr><th>组（离线固定候选）</th><th>输出</th><th>对/错/不可判</th><th>引用有效</th><th>有效观察</th><th>root标签命中</th></tr></thead><tbody>
+<tr><td>规则</td><td>20/28</td><td>8/0/12</td><td>40/40</td><td>8/24</td><td>0/12</td></tr>
+<tr><td>直接候选</td><td>25/28</td><td>14/11/0</td><td>38/39</td><td>7/24</td><td>7/12</td></tr>
+<tr><td>结构</td><td>25/28</td><td>14/11/0</td><td>38/39</td><td>7/24</td><td>7/12</td></tr>
+<tr><td>引用有效性</td><td>24/28</td><td>14/10/0</td><td>38/38</td><td>7/24</td><td>7/12</td></tr>
+<tr><td>完整审核safeCandidate</td><td>0/28</td><td>0/0/0</td><td>NA</td><td>0/24</td><td>0/12</td></tr>
+</tbody></table></div>
+<p>0安全输出时接受准确率为NA。规则12条fallback粒度歧义不直接计错/对，全部输出错误风险界0—60%；直接候选7个root标签命中并非模型成绩。来源为evidence/phase3_ATTRIBUTION_QUALITY_REPORT.md和ABLATION_RESULTS；最终统计经内部代理裁决，不是人类gold。</p>
+<h2>X4 局部改善与不推广</h2>
+<p>开发集完整审核有效观察1/9→2/9；历史真实执行/合成任务的Calculator回放0/1→1/1。独立完整审核safeCandidate有效观察0/24→0/24；后验有效短摘录出现兼容退步，候选未推广。当前四文件已恢复到阶段二SHA，见evidence/phase3_RESTORE_RECEIPT.json。不能讲成新算法已提高真实归因率。</p>
+<h2>X5 回归与统计修正</h2>
+<p>第三轮当前默认36 Python、71相关TS通过，另有8指标合同及8校验器测试；候选相同链路也测过，不能重复累计。早期指标代码曾把支持资格当证据充分、忽略未知人口或缺失记录，已修正并保留过程反例。只有同标签/同输入/同候选的结果才适合比较。</p>
+<h2>不能填的数字</h2>
+<p>真实模型归因准确率、真实Judge评分一致性、供应商Token/费用/延迟、生产并发SLA、完整因果图覆盖率均尚未核实。NULL/NA不是0，不是通过。历史XLSX和指标HTML不构成可信生产root gold。课堂新练习未执行，也没有学生成绩。</p></article><footer>本地静态阅读，无网络脚本，无自动进度写入。</footer></main></html>

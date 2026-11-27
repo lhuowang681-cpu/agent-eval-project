@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform
+
+ ✓ src/server/services/agentEvalAttribution/__tests__/python.integration.test.ts (27 tests) 883ms
+ ✓ src/server/services/agentEvalAttribution/__tests__/contracts.test.ts (15 tests) 9ms
+
+ Test Files  2 passed (2)
+      Tests  42 passed (42)
+   Start at  17:24:06
+   Duration  1.95s (transform 86ms, setup 0ms, collect 164ms, tests 892ms, environment 0ms, prepare 494ms)
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase2/increment3/ts-bridge/results.json

@@ -1,0 +1,552 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-23",
+  "currentMode": "teach",
+  "teachingPreferences": {
+    "updatedAt": "2026-10-23",
+    "pace": "基础快速带过，按完整工程段落推进",
+    "focus": [
+      "本项目框架",
+      "真实工程实现",
+      "数据与模块合同",
+      "有依据的取舍和验证",
+      "项目面试表达"
+    ],
+    "checks": "基础快速合并，一次可讲多个关联工程机制；不逐点问答，必要时段落末一个综合检查，或继续；局部不懂局部补讲。",
+    "recording": "按工程段落批量保存真实记录，不按每句回答重建表格。",
+    "goal": "系统理解本项目的工程实现和框架，为大厂项目面试准备；贡献和指标必须真实",
+    "style": "老师视角：架构位置→实际入口和数据流→取舍与实现局限→验证/增量→面试表达"
+  },
+  "nextTopic": "E01",
+  "topics": {
+    "E01": {
+      "status": "in_progress",
+      "sessions": 1,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E02": {
+      "status": "in_progress",
+      "sessions": 1,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E03": {
+      "status": "in_progress",
+      "sessions": 1,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E04": {
+      "status": "in_progress",
+      "sessions": 1,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E05": {
+      "status": "in_progress",
+      "sessions": 1,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E06": {
+      "status": "in_progress",
+      "sessions": 1,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": [
+        "跨Trace综合计数及Session未知已补讲，用户自述理解；待换例子复习确认，不视为未理解，也不推断已独立掌握。"
+      ]
+    },
+    "E07": {
+      "status": "in_progress",
+      "sessions": 1,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E08": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E09": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E10": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E11": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E12": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E13": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E14": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E15": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E16": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E17": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    },
+    "E18": {
+      "status": "unassessed",
+      "sessions": 0,
+      "latestScore": null,
+      "highestScore": null,
+      "gaps": []
+    }
+  },
+  "history": [
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "session_started",
+      "topic": "E01",
+      "buildTaskIds": [
+        "A1"
+      ],
+      "userRequest": "今天有1小时，开始安排",
+      "timeBudgetMinutes": 60,
+      "actualMinutes": null,
+      "question": null,
+      "answer": null,
+      "score": null,
+      "gaps": [],
+      "feedback": null,
+      "next": "先讲项目总介绍和A1完整案例，再进行一题理解检查；尚未作答，不推断掌握。"
+    },
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "understanding_check",
+      "topic": "E01",
+      "scope": "A1业务边界：外部失败与内部责任的证据要求",
+      "buildTaskIds": [
+        "A1"
+      ],
+      "taughtSummary": "已讲总介绍、执行平台与分析器的职责、订单参数错误的完整案例、两次失败调用与一个任务、主要技术职责及个人贡献边界。",
+      "question": "订单日期参数完全合法，外部订单服务返回了500；Agent随后按约定停止，并提示服务暂时不可用。这时，归因报告能不能写“Agent内部参数生成错误”？为什么？",
+      "answer": "不能，因为参数本身是合法的，只是外部服务返回了500，虽然没办法保证参数没有在进入外部的时候被修改，但是也不能武断的说内部参数生成错误。",
+      "score": null,
+      "scoreReason": "本题仅检查证据边界，不足以评估整个E01或四项完整维度。",
+      "gaps": [],
+      "feedback": "正确拒绝无证据的内部参数错误归因，并主动注意发送与接收参数之间的传递边界。题目设定参数完全合法，无须另设被修改；真实日志若只有发送参数则应核对实际接收。500响应不能单独定位具体根因，也不能排除全部内部问题。",
+      "artifact": "docs/learning/build-records/A1_范围图.md",
+      "actualMinutes": null,
+      "next": "核对用户能否独立说明归因工具的使用者、输入和输出，A1暂不标完成。"
+    },
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "understanding_check",
+      "topic": "E01",
+      "scope": "A1归因工具的使用者、输入、输出与改进用途",
+      "buildTaskIds": [
+        "A1"
+      ],
+      "question": "这个归因工具读什么数据，产出什么，能帮助你做什么？",
+      "answer": "这个工具是给那些想测试自己搭建的agent哪里有问题的人提供的。会读取agent在工作过程中产生的一系列trace，根据这些trace来判断具体是哪里出现问题了，给出带有证据的意见，然后让被评测者进行优化",
+      "score": null,
+      "scoreReason": "两次局部检查满足A1验收，不足以对整个E01给出四维总分。",
+      "gaps": [],
+      "feedback": "正确说明面向Agent开发者，读取运行Trace，输出带证据的分析意见用于改进。措辞可收紧为可见证据范围内的判断和待复核机制；第一题已体现证据意识，不将本次措辞固化为知识缺口。",
+      "artifact": "docs/learning/build-records/A1_范围图.md",
+      "actualMinutes": null,
+      "next": "A1本次验收完成，开始A2身份与计数；E01仍进行中。"
+    },
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "understanding_check",
+      "topic": "E06",
+      "relatedTopics": [
+        "E01"
+      ],
+      "scope": "A2重复采集、真实重试与受影响任务的计数",
+      "buildTaskIds": [
+        "A2"
+      ],
+      "taughtSummary": "已讲Task/Trace/Node/Call/Session的不同用途、调用与返回关联、重复采集去重和任务影响去重。",
+      "question": "task-A/trace-1/c1/r1失败被重复导出两遍，另有task-A/trace-1/c2/r2重试失败。应统计几次真实失败事件、几个受影响任务，为什么？",
+      "answer": "2个真实失败，1个受影响任务吧.因为重复的不算，总的失败了两次，但是是同一个任务",
+      "score": null,
+      "scoreReason": "本题仅检查局部计数，不据此对E06或四维能力给出总分。",
+      "gaps": [],
+      "feedback": "正确：重复导出不增加真实事件，新重试仍是另一次失败，同属一个任务所以影响任务数为1。继续讲稳定身份、跨Trace关联和缺失Session的处理，不将未问内容认定为用户缺口。",
+      "artifact": "docs/learning/build-records/A2_身份字典.md",
+      "actualMinutes": null,
+      "next": "继续A2：同样错误文字不等于同一事件；可靠Task标识与Session未知分别保留，随后用跨Trace账本检查理解。"
+    },
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "explanation_requested",
+      "topic": "E06",
+      "scope": "A2跨Trace任务计数和Session缺失",
+      "buildTaskIds": [
+        "A2"
+      ],
+      "question": "可靠标识均为task-A的两次真实失败分别在trace-1/c1和trace-2/c2中，Session均未记录且无重复采集。失败事件数、Trace数、受影响任务数、会话数分别报告什么？",
+      "answer": "这我不太清楚",
+      "score": null,
+      "gaps": [
+        "综合计数尚需拆开解释，未确认具体卡点。"
+      ],
+      "feedback": "直接补讲：两次不同调用失败是2次事件，两个Trace ID是2条Trace，同一可靠task-A是1个受影响任务，Session未记录所以数量未知，不能填0或按Trace填2。保留此前正确回答，不将本次不清楚固化为全局能力判断。",
+      "artifact": "docs/learning/build-records/A2_身份字典.md",
+      "actualMinutes": null,
+      "next": "先拆解Task、Trace和Session的计数含义，暂缓新增概念；次日复习同类小例子，A2保持进行中。"
+    },
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "self_report_after_explanation",
+      "topic": "E06",
+      "buildTaskIds": [
+        "A2"
+      ],
+      "question": null,
+      "answer": "懂了",
+      "score": null,
+      "gaps": [],
+      "feedback": "用户确认理解四项拆解。保留此前正确作答与补讲历史，已补讲点转为待迁移复习；未新增独立验收结果，不标整个A2完成。",
+      "artifact": "docs/learning/build-records/A2_身份字典.md",
+      "actualMinutes": null,
+      "next": "继续相关结果合同讲解：调用失败、恢复与任务最终完成分开；后续复习确认跨Trace计数。"
+    },
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "teaching_pace_adjusted",
+      "userRequest": "我觉得这些简单的就讲快一点？不然我感觉根本学不完，而且这些也是很简单的一些东西",
+      "question": null,
+      "answer": null,
+      "score": null,
+      "feedback": "基础讲解和确认问题过碎，调整为完整工程段落推进。上一道任务完成判断题尚未作答，不推断答错或据此新增知识缺口。",
+      "actualMinutes": null,
+      "next": "基础状态区别直接收束，讲完整Agent执行循环、结果回填及故障定位，不追加基础确认题。"
+    },
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "engineering_block_started",
+      "topic": "E02",
+      "relatedTopics": [
+        "E03"
+      ],
+      "buildTaskIds": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "userRequest": "可以，继续，可以一次性多讲一点",
+      "artifact": "docs/learning/2026-10-23_服务端执行与可靠性讲解.md",
+      "question": null,
+      "answer": null,
+      "score": null,
+      "actualMinutes": null,
+      "feedback": "按用户新节奏以完整工程段落讲授服务端分步调度、存储责任、并发与幂等、调度一致性、取消预算审批和可观测验证。只记录讲授范围，不推断用户验收通过；较早执行循环讲解亦关联本轮。",
+      "next": "继续到轨迹采集与输入合同；A2待迁移复习、A3及本段待综合核对，不逐个基础点问答。"
+    },
+    {
+      "date": "2026-10-23",
+      "mode": "teach",
+      "event": "project_framework_block_started",
+      "topic": "E04",
+      "relatedTopics": [
+        "E05",
+        "E07"
+      ],
+      "buildTaskIds": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "userRequest": "可以，继续。然后我觉得你好像讲的风格有点问题，还是尽可能以一个老师的角度，带我去学这个项目里的工程实现、项目框架等，以达到能去大厂面试的目的",
+      "artifact": "docs/learning/2026-10-23_项目框架与归因输入链路.md",
+      "question": null,
+      "answer": null,
+      "score": null,
+      "actualMinutes": null,
+      "feedback": "调整为老师视角的系统项目教学：归因整体职责、两条真实入口、输入关联和失败事实、去噪/候选/校验区别、实现缺口与反例验证。未将同意继续推断为验收通过。",
+      "next": "按整体框架逐模块深化，继续数据合同和证据审核；复习时用综合案例核对，不逐个术语提问。"
+    }
+  ],
+  "reviewQueue": [
+    {
+      "id": "A1-evidence-2026-10-23-d1",
+      "topic": "E01",
+      "scope": "A1业务范围与证据边界",
+      "buildTaskIds": [
+        "A1"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-24",
+      "intervalDays": 1,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 1,
+      "additionalHistoryIndices": [
+        2
+      ]
+    },
+    {
+      "id": "A1-evidence-2026-10-23-d3",
+      "topic": "E01",
+      "scope": "A1业务范围与证据边界",
+      "buildTaskIds": [
+        "A1"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-26",
+      "intervalDays": 3,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 1,
+      "additionalHistoryIndices": [
+        2
+      ]
+    },
+    {
+      "id": "A1-evidence-2026-10-23-d7",
+      "topic": "E01",
+      "scope": "A1业务范围与证据边界",
+      "buildTaskIds": [
+        "A1"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-30",
+      "intervalDays": 7,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 1,
+      "additionalHistoryIndices": [
+        2
+      ]
+    },
+    {
+      "id": "A2-counting-2026-10-23-d1",
+      "topic": "E06",
+      "scope": "A2重复采集、真实重试与任务影响计数",
+      "buildTaskIds": [
+        "A2"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-24",
+      "intervalDays": 1,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 3
+    },
+    {
+      "id": "A2-counting-2026-10-23-d3",
+      "topic": "E06",
+      "scope": "A2重复采集、真实重试与任务影响计数",
+      "buildTaskIds": [
+        "A2"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-26",
+      "intervalDays": 3,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 3
+    },
+    {
+      "id": "A2-counting-2026-10-23-d7",
+      "topic": "E06",
+      "scope": "A2重复采集、真实重试与任务影响计数",
+      "buildTaskIds": [
+        "A2"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-30",
+      "intervalDays": 7,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 3
+    },
+    {
+      "id": "runtime-service-2026-10-23-d1",
+      "topic": "E02",
+      "relatedTopics": [
+        "E03"
+      ],
+      "scope": "运行循环与服务端可靠性：合并复习一个工程案例，不逐条考概念",
+      "buildTaskIds": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-24",
+      "intervalDays": 1,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 7
+    },
+    {
+      "id": "runtime-service-2026-10-23-d3",
+      "topic": "E02",
+      "relatedTopics": [
+        "E03"
+      ],
+      "scope": "运行循环与服务端可靠性：合并复习一个工程案例，不逐条考概念",
+      "buildTaskIds": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-26",
+      "intervalDays": 3,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 7
+    },
+    {
+      "id": "runtime-service-2026-10-23-d7",
+      "topic": "E02",
+      "relatedTopics": [
+        "E03"
+      ],
+      "scope": "运行循环与服务端可靠性：合并复习一个工程案例，不逐条考概念",
+      "buildTaskIds": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-30",
+      "intervalDays": 7,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 7
+    },
+    {
+      "id": "attribution-input-2026-10-23-d1",
+      "topic": "E04",
+      "scope": "两条入口与输入到可信候选；与运行时复习合并为工程案例，按每日复习预算取舍",
+      "buildTaskIds": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-24",
+      "intervalDays": 1,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 8
+    },
+    {
+      "id": "attribution-input-2026-10-23-d3",
+      "topic": "E04",
+      "scope": "两条入口与输入到可信候选；与运行时复习合并为工程案例，按每日复习预算取舍",
+      "buildTaskIds": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-26",
+      "intervalDays": 3,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 8
+    },
+    {
+      "id": "attribution-input-2026-10-23-d7",
+      "topic": "E04",
+      "scope": "两条入口与输入到可信候选；与运行时复习合并为工程案例，按每日复习预算取舍",
+      "buildTaskIds": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "taughtAt": "2026-10-23",
+      "dueAt": "2026-10-30",
+      "intervalDays": 7,
+      "status": "pending",
+      "reviewedAt": null,
+      "historyIndex": 8
+    }
+  ],
+  "note": "No assessment is inferred from generated lessons or browser self-checks."
+}

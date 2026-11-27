@@ -1,0 +1,16 @@
+{
+  "archive": "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\study_pack.zip",
+  "bytes": 590805,
+  "sha256": "37ff173cccaf296c18ef0502d11e58e9d292f3376068d566745b0666e64aced1",
+  "entries": 107,
+  "allEntryHashesVerified": true,
+  "modules": 8,
+  "units": 10,
+  "sourceCopies": 33,
+  "sourceAnchors": 40,
+  "requiredDocumentsComplete": true,
+  "teachingStarted": false,
+  "businessCodeChanged": false,
+  "oldCourseDirectory": "deliverables/study_pack_before_2026-11-08",
+  "oldCourseZip": "deliverables/study_pack_before_2026-11-08.zip"
+}

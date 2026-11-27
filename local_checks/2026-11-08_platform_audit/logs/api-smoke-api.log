@@ -1,0 +1,20 @@
+════════════════════════════════════════════════════════════
+离线冒烟测试 — PLAN.md 阶段 4 检查点 5-10
+════════════════════════════════════════════════════════════
+
+▶ 基础健康与鉴权
+  ✅ 检查点5 /api/v1/health
+  ✅ 检查点6 /api/agent/run
+  ✅ 检查点7 tRPC lambda.healthcheck — i'm live!
+  ✅ 检查点8 dev 旁路 /api/v1/users/me — audit-user
+  ✅ 无凭证被拒（注意：实现返回 500 而非 401，见附录 A.4） — HTTP 401
+
+▶ 检查点9 纯文本闭环（场景 simple）
+  ✅ 取得 inbox 内置 agent — agt_K0lVQ0B10VYl
+  ✅ 创建 topic — tpc_lagQCXBpDeVl
+
+💥 冒烟测试异常终止: Error: trpc aiChat.sendMessageInServer failed: {"message":"S3 environment variables are not set completely, please check your env","code":-32603,"data":{"code":"INTERNAL_SERVER_ERROR","httpStatus":500,"stack":"Error: S3 environment variables are not set completely, please check your env\n    at new S3 (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\src_server_modules_84257f69._.js:140:66)\n    at new FileS3 (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\src_server_modules_84257f69._.js:261:9)\n    at new S3StaticFileImpl (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\src_server_services_4463f05d._.js:377:19)\n    at createFileServiceModule (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\src_server_services_4463f05d._.js:477:12)\n    at new FileService (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\src_server_services_4463f05d._.js:514:202)\n    at new AiChatService (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\src_server_services_a8eeeb5d._.js:14402:28)\n    at C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\src_server_routers_lambda_319fc4cd._.js:4440:28\n    at callRecursive (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\0866b_@trpc_server_dist_a281dd28._.js:3846:30)\n    at Object.next (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\0866b_@trpc_server_dist_a281dd28._.js:3852:24)\n    at C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\src_libs_8a1258f9._.js:3090:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async callRecursive (C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform\\.next\\dev\\server\\chunks\\0866b_@trpc_server_dist_a281dd28._.js:3846:24)","path":"aiChat.sendMessageInServer"}}
+    at trpcMutate (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\tools\api-test\client.ts:44:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async runAgentOnce (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\tools\api-test\smoke.ts:39:16)
+    at async main (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\tools\api-test\smoke.ts:138:17)

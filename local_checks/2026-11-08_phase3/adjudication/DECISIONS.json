@@ -1,0 +1,224 @@
+{
+  "reviewer": "internal-agent-not-human-gold",
+  "inputSha256": "9dd348c6d6f58a15a2a4a524fb426bd926ecaa44f59e60b5e5180b090bbc2915",
+  "decisions": [
+    {
+      "id": "claim-001",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "external500_wrong_L2_2-result.error原文为Upstream HTTP 500/status=500，toolSource=mcp；对应call.arguments可定位本次订单调用。可支持external_tool_failure这一有限事故观察，不证明L2.2或参数责任。"
+    },
+    {
+      "id": "claim-002",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "valid_quote_no_causal_chain-result.error明确Upstream HTTP 500，引用真实且来源为mcp，call参数与toolCallId匹配。输出只陈述外部工具失败并不定责，有限命题可支持。"
+    },
+    {
+      "id": "claim-003",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "本次output所引fabricated_node-result.error实际存在且含HTTP 500，call.arguments也真实。只依据本次引用而非case名称判断；外部工具失败观察成立，未提出模块责任。"
+    },
+    {
+      "id": "claim-004",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "cross_case_node-result与call均在当前trajectory节点中，引用error的HTTP 500原文和对应参数存在。当前这份规范观察并未跨scope引用，外部失败可支持。"
+    },
+    {
+      "id": "claim-005",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "missing_parent-result.error明确HTTP 500，mcp来源和相同toolCallId的call存在。dangling_parent限制因果归属，不能否定该结果节点自身的失败观察；输出moduleId=null。"
+    },
+    {
+      "id": "claim-006",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "invalid_category_module-result.error及本次call引用均真实，HTTP 500来自mcp。当前输出类别external_tool_failure且moduleId=null，未沿用case名称暗示的非法类别或模块。"
+    },
+    {
+      "id": "claim-007",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "extra_causal_summary-result.error直接给HTTP 500，所引call参数存在；当前摘要没有额外内部参数变更断言，仅观察失败、不定责，因此可支持。"
+    },
+    {
+      "id": "claim-008",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "valid_observation_template-result.error有HTTP 500，mcp来源和工具调用身份可核对。有限external_tool_failure与oracle类别一致，未声称根因已知。"
+    },
+    {
+      "id": "claim-009",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "supported_paraphrase-result.error直接记录HTTP 500，本次输出为有限事故观察，refs对应真实结果及call参数。只判这份输出，不推断其他摘要或根因的正确性。"
+    },
+    {
+      "id": "claim-010",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "message:msg_d8HurSqGsdwnIK.error实际为CalculationError/Unexpected end of expression，引用call参数expression=invalid(与同一toolCallId匹配且来源builtin。可确认builtin失败；按给定oracle允许unclassified观察，不推断最早责任。"
+    },
+    {
+      "id": "claim-011",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-006:n03.error.name=TimeoutError且message为No response before 8000ms deadline，证据支持外部超时；oracle只列external_timeout，输出为external_tool_failure。未提供generic类别是否可作上位类的合同，故exact事实与该类别支持均保留null，而非因存在失败就计正确。"
+    },
+    {
+      "id": "claim-012",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "ho-012:n03.content顶层success=false并给出E_JOB_773，来源builtin，所引call参数task=T9存在。未提供更具体故障含义，有限builtin_tool_failure_unclassified与oracle一致。"
+    },
+    {
+      "id": "claim-013",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-017:n03.error明确工具参数JSON缺闭括号，call.arguments也为不完整JSON；oracle列builtin_tool_contract_invalid，输出builtin_tool_failure_unclassified。源可证失败且有更具体契约信号，但未定义unclassified能否包含此已细分事实，保留null；不由stage字段推模块责任。"
+    },
+    {
+      "id": "claim-014",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-001:n03.content明确success=false/status=503/upstream unavailable，来源mcp，足以观察外部服务异常。oracle仅external_transport，输出external_tool_failure；未定义粗细类别包含关系，correct/supported均null。"
+    },
+    {
+      "id": "claim-015",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-010:n03.error明确No runtime registered for reports.render，来源builtin，对应call参数存在。oracle为builtin_tool_unavailable，输出unclassified；工具不可用事实可查，但fallback是否允许替代具体类别无合同，保留null。"
+    },
+    {
+      "id": "claim-016",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "ho-018:n03.content顶层success=false、code401且明确credential does not belong to account，来源mcp。可支持external_credential有限观察；未引用的CredentialSelector审计不用于追加模块责任。"
+    },
+    {
+      "id": "claim-017",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "ho-014:n01.error直接给出text content blocks must contain non-whitespace text，并附转换后空text块。所引error完整存在，可支持provider_payload_invalid这一请求内容违规观察，不据component字段认定上游根因。"
+    },
+    {
+      "id": "claim-018",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "ho-026:n03.content为success=false/status502/bad gateway，mcp来源与配对call清晰，支持external_transport。后续另一个用户轮次的天气成功不抵消原失败，本次未声称任务恢复。"
+    },
+    {
+      "id": "claim-019",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-011:n03.error为Result JSON parse failed并有receivedPrefix=<html>，builtin来源，支持结果解析失败事实。oracle为builtin_result_parse_failed，输出unclassified；未定义fallback与具体类关系，保留null。"
+    },
+    {
+      "id": "claim-020",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "ho-005:n03.content为success=false/code429/monthly quota exhausted，来源plugin，对应call查询参数存在。引用直接支持external_quota，未外推内部预算或配额生成责任。"
+    },
+    {
+      "id": "claim-021",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "ho-003:n03.content为ok=false/code403/access denied by policy，来源plugin，call参数匹配。可支持external_permission有限观察，不推断权限配置最早由谁造成。"
+    },
+    {
+      "id": "claim-022",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-021:n00.content明确success=false/status503/temporarily unavailable且来源mcp；即使缺请求及运行事件，单节点仍能证失败。oracle仅external_transport，输出external_tool_failure；粗细类别无包含合同，null来自分类边界而非缺父链。"
+    },
+    {
+      "id": "claim-023",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-022:n03.content为success=false/code403/policy blocked account，来源plugin，支持权限/策略拒绝事实。oracle为external_permission，输出external_tool_failure，未定义generic是否可作上位类，故保留null。"
+    },
+    {
+      "id": "claim-024",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-009:n03.error.code=SCHEMA_VALIDATION、message=limit must be integer，配对call却传limit=several，builtin来源。oracle列builtin_tool_contract_invalid，输出unclassified；失败事实明确，fallback类别资格不明，保留null，亦不把拒参直接当Agent最早责任。"
+    },
+    {
+      "id": "claim-025",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "ho-028:n03.content顶层success=false/message=record unavailable，mcp来源且引用call参数存在。没有更具体原因，external_tool_failure有限观察与oracle一致，不能进一步定责。"
+    },
+    {
+      "id": "claim-026",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-004:n03.content为success=false/code401/token_expired，mcp来源，证据支持凭据过期这一具体外部失败。oracle只列external_credential，输出external_tool_failure；未定义fallback是否包含该具体类，保留null。"
+    },
+    {
+      "id": "claim-027",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-019:n03.error明确No executor found for calculator.calculate并有空constructedEntries，builtin来源，可观察工具执行器不可用。oracle为builtin_tool_unavailable，输出unclassified，fallback是否能替代具体类未知，保留null，不推断注册组件根因。"
+    },
+    {
+      "id": "claim-028",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-002:n03.content顶层success=false/status503/upstream unavailable，mcp来源及配对call可查。oracle仅external_transport，输出external_tool_failure，粒度边界未定义，保留null而不把粗失败自动算精确类别正确。"
+    },
+    {
+      "id": "claim-029",
+      "supported": true,
+      "correct": true,
+      "categoryExactMatch": true,
+      "rationale": "ho-008:n03.content顶层success=false/message=operation rejected; reason unavailable，来源mcp，配对call参数真实。原因明确未提供，external_tool_failure观察与oracle一致，未声称可归因到具体模块。"
+    },
+    {
+      "id": "claim-030",
+      "supported": null,
+      "correct": null,
+      "categoryExactMatch": false,
+      "rationale": "ho-020:n03.error.message明确JSON parse failed on [object Object]并有conversionAudit，builtin来源，支持结果解析失败。oracle为builtin_result_parse_failed，输出unclassified；未定义fallback类别是否包含细分类，保留null，不因组件审计字段就补根因结论。"
+    }
+  ],
+  "limitations": [
+    "本次只读取供裁决INPUT.json及进行独立stdlib字段/quote检查；未读取MAP.json、实验results、原holdout文件或优化算法，也未调用审核器/分类器。",
+    "这是内部代理复核，不是独立人工gold；审阅者有历史项目上下文，trajectory/case名称可见，只实现方法名和review结论遮蔽，并非完全双盲。",
+    "30条材料的oracle均eligible=true，不能据这个子集推断未提供负例上的错误率、整体方法准确率或真实模型泛化。",
+    "12条generic/unclassified输出与oracle具体类别不一致；缺少明确类别包含合同，correct与supported保留null，不强制判错、也不因存在失败自动计正确。",
+    "categoryExactMatch只是和给定oracle类别列表的精确成员匹配，不是真值裁决；原oracle/输入/算法未修改。",
+    "correct只评价给定有限观察命题；所有输出均moduleId=null，不将事故证据、模板摘要或弃权计成根因正确。"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "role": "byte-identical frozen offline reference, not another active implementation",
+  "files": {
+    "frozen/reviewer/baseline.py": "d512cb1c9fbe274f1fae75bf1983e332e0e64e2a059ac8eda1d37f4aa6146a7e",
+    "frozen/reviewer/facts.py": "46ac60691cbf162a39967527e5fd1bc0ebd3e348c8fdb7f33284f7dec27a9d49",
+    "frozen/reviewer/review.py": "2fb2fe203e974826ff7eece1276bd507fa93006daae1daebe8a48a6ff8526de2",
+    "frozen/rules/adapter.py": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b",
+    "frozen/rules/evidence_review.py": "d9ea1fb10ade950a05118904cade82882fba26227735bb0474eeff67aa986f29",
+    "frozen/rules/rules_pure.py": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e"
+  }
+}

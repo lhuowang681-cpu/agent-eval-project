@@ -1,0 +1,19 @@
+{
+  "label": "service-final",
+  "cwd": "../../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/server/services/agentEvalRun/__tests__",
+    "--environment=node",
+    "--maxWorkers=2",
+    "--testTimeout=20000",
+    "--hookTimeout=60000",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_round1/compression_judge/service-final.json"
+  ],
+  "exitCode": 0,
+  "seconds": 150.25
+}

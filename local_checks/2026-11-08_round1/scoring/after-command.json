@@ -1,0 +1,17 @@
+{
+  "command": [
+    "node",
+    "../tooling/node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "../tooling/audit-core.config.mts",
+    "packages/eval-rubric",
+    "packages/eval-dataset-parser",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_round1\\scoring\\after.json"
+  ],
+  "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform",
+  "exitCode": 0,
+  "seconds": 8.339
+}

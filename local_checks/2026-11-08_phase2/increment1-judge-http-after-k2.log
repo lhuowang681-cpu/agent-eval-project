@@ -1,0 +1,56 @@
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\Lib\urllib\request.py", line 1319, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              encode_chunked=req.has_header('Transfer-encoding'))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1338, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1384, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1003, in connect
+    self.sock = self._create_connection(
+                ~~~~~~~~~~~~~~~~~~~~~~~^
+        (self.host,self.port), self.timeout, self.source_address)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\ProgramData\anaconda3\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] ����Ŀ�����������ܾ����޷����ӡ�
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\1\Desktop\��ҵagent\agent-eval-project\local_checks\2026-11-08_phase2\judge_http.py", line 9, in <module>
+    with urllib.request.urlopen(urllib.request.Request(MOCK+'/__mock/config',data=b'{"scenario":"simple","firstTokenDelayMs":0,"tokensPerSecond":0}',headers={'Content-Type':'application/json'})) as response: response.read()
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\ProgramData\anaconda3\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\ProgramData\anaconda3\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\ProgramData\anaconda3\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\urllib\request.py", line 1322, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] ����Ŀ�����������ܾ����޷����ӡ�>
+{"status": "failed_or_blocked", "events": 1}

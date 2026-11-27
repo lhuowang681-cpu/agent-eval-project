@@ -1,0 +1,130 @@
+{
+  "courseVersion": "2026-11-08",
+  "mode": "blueprint_only_not_taught",
+  "currentUnit": "V0",
+  "continuation": "V0 A.当前开发背景；尚未开始正式教学",
+  "units": [
+    {
+      "id": "V0",
+      "title": "先定义评测问题，做最小可解释Baseline",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V1",
+      "title": "让被测Agent真正执行：从一次模型调用长出工具循环",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V2",
+      "title": "管理测试集与运行：先有身份，再谈可复现",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V3",
+      "title": "批量执行与K采样：用状态机守住结果",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V4",
+      "title": "从规则评分到LLM Judge：先保证评分器可信",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V5",
+      "title": "从结果分数走向诊断：建立轨迹证据合同",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V6",
+      "title": "接入Python故障观察：将诊断与评分解耦",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V7",
+      "title": "证据审核与弃权：失败曝光不等于源码责任",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V8",
+      "title": "影响统计与代表案例：让报告帮助开发者行动",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    },
+    {
+      "id": "V9",
+      "title": "实验验收与全项目复述：允许没有提升",
+      "status": "未开始",
+      "taughtAt": null,
+      "artifact": null,
+      "answer": null,
+      "assessment": null,
+      "weakPoints": [],
+      "reviewDue": null,
+      "continuation": null
+    }
+  ],
+  "reviewQueue": [],
+  "history": []
+}

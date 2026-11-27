@@ -1,0 +1,265 @@
+{
+  "events": [
+    {
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "--ignore-space-change",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase2\\platform-phase2.patch"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--ignore-space-change",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase2\\platform-phase2.patch"
+      ],
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "files": [
+    {
+      "path": "locales/zh-CN/eval.json",
+      "matches": true
+    },
+    {
+      "path": "packages/builtin-tool-calculator/src/ExecutionRuntime/index.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/database/src/models/__tests__/messages/message.create.test.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/database/src/models/agentEval/run.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/database/src/models/agentEval/runTopic.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/database/src/models/message.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/evaluate.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/index.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/llmEq.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/llmRubric.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/types.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/types/src/eval/agentEval.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/types/src/eval/rubric.ts",
+      "matches": true
+    },
+    {
+      "path": "src/locales/default/eval.ts",
+      "matches": true
+    },
+    {
+      "path": "src/routes/(main)/eval/features/DatasetCreateModal/index.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/routes/(main)/eval/features/DatasetEditModal/index.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/routes/(main)/eval/features/TestCaseCreateModal/index.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/routes/(main)/eval/features/TestCaseEditModal/index.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/server/routers/lambda/agentEval.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/routers/lambda/agentEvalExternal.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/index.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/orchestrator.ts",
+      "matches": true
+    },
+    {
+      "path": "tools/mock-llm/scenarios.ts",
+      "matches": true
+    },
+    {
+      "path": "tools/mock-llm/server.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/builtin-tool-calculator/src/ExecutionRuntime/index.test.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/judgeContext.test.ts",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/adapter.py",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/engine-version.json",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/evidence_review.py",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/provenance.json",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/README.md",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/review_cli.py",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/rules_pure.py",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/test_adapter.py",
+      "matches": true
+    },
+    {
+      "path": "scripts/eval-attribution/test_evidence_review.py",
+      "matches": true
+    },
+    {
+      "path": "scripts/local/evalAttribution.ts",
+      "matches": true
+    },
+    {
+      "path": "src/routes/(main)/eval/config/judgeConfig.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/routes/(main)/eval/config/judgeConfig.ts",
+      "matches": true
+    },
+    {
+      "path": "src/routes/(main)/eval/features/JudgeConfigFields.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/routes/(main)/eval/features/JudgeModals.render.test.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/contracts.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/index.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/python.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/trace.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/contracts.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/fixtures.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/python.integration.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/review-gate.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/tasks.integration.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalAttribution/__tests__/trace.integration.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/judge.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/judgeDeadline.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/judgeLifecycle.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/judgeMock.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts",
+      "matches": true
+    },
+    {
+      "path": "tools/mock-llm/attributionFixture.test.ts",
+      "matches": true
+    },
+    {
+      "path": "tools/mock-llm/attributionFixture.ts",
+      "matches": true
+    },
+    {
+      "path": "tools/mock-llm/judge.ts",
+      "matches": true
+    }
+  ],
+  "passed": true,
+  "comparison": "UTF-8 text after newline normalization; pristine round1 inputs verified with SHA256."
+}

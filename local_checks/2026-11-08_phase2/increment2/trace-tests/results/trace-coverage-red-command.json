@@ -1,0 +1,18 @@
+{
+  "label": "trace-coverage-red",
+  "cwd": "../../../../local_checks/2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/server/services/agentEvalAttribution/__tests__/trace.integration.test.ts",
+    "--environment=node",
+    "--maxWorkers=1",
+    "--hookTimeout=60000",
+    "--testTimeout=20000",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_phase2/increment2/trace-tests/coverage-red.json"
+  ],
+  "exitCode": 1,
+  "seconds": 4.24
+}

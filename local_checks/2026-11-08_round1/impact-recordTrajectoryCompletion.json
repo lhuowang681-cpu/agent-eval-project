@@ -1,0 +1,184 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794122298093,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordTrajectoryCompletion#1",
+    "name": "recordTrajectoryCompletion",
+    "type": "Method",
+    "filePath": "src/server/services/agentEvalRun/index.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 7,
+  "risk": "MEDIUM",
+  "riskSharedAxes": "MEDIUM",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "summary": {
+    "direct": 5,
+    "processes_affected": 1,
+    "modules_affected": 1
+  },
+  "byDepthCounts": {
+    "1": 5,
+    "2": 1,
+    "3": 1
+  },
+  "affected_processes": [
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts",
+      "affected_process_count": 9,
+      "total_hits": 9,
+      "earliest_broken_step": 1
+    }
+  ],
+  "affected_modules": [
+    {
+      "name": "AgentEvalRun",
+      "hits": 6,
+      "impact": "direct"
+    }
+  ],
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_179_post",
+            "label": "POST → FindByRunAndTestCase",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_291_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_820_post",
+            "label": "POST → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_118_post",
+            "label": "POST → Query",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_305_post",
+            "label": "POST → GetWorkflowUrl",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_289_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_290_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_292_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_780_post",
+            "label": "POST → GetDBInstance",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Function:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeTrajectory.handler@277:12",
+        "name": "handler",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.onTrajectoryComplete#1",
+        "name": "onTrajectoryComplete",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runAgentTrajectory#1",
+        "name": "runAgentTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ],
+    "2": [
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.executeTestCase#1",
+        "name": "executeTestCase",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ],
+    "3": [
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.paginateTestCases#1",
+        "name": "paginateTestCases",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ]
+  }
+}

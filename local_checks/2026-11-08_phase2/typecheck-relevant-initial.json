@@ -1,0 +1,10 @@
+{
+  "total": 300,
+  "relevant": [
+    "src/routes/(main)/eval/features/DatasetEditModal/index.tsx(113,12): error TS2552: Cannot find name 'Input'. Did you mean 'oninput'?",
+    "src/server/services/agentEvalAttribution/__tests__/trace.integration.test.ts(18,15): error TS2724: '\"@/database/schemas\"' has no exported member named 'NewMessage'. Did you mean 'messages'?",
+    "src/server/services/agentEvalAttribution/python.ts(27,9): error TS2739: Type '{ PYTHONIOENCODING: string; PYTHONNOUSERSITE: string; PYTHONDONTWRITEBYTECODE: string; }' is missing the following properties from type 'ProcessEnv': NODE_ENV, NEXT_PUBLIC_DEVELOPER_DEBUG, NEXT_PUBLIC_I18N_DEBUG, NEXT_PUBLIC_I18N_DEBUG_BROWSER, NEXT_PUBLIC_I18N_DEBUG_SERVER",
+    "src/server/services/agentEvalRun/__tests__/judgeLifecycle.test.ts(38,9): error TS7034: Variable 'threadIds' implicitly has type 'any[]' in some locations where its type cannot be determined.",
+    "src/server/services/agentEvalRun/__tests__/judgeLifecycle.test.ts(58,21): error TS7005: Variable 'threadIds' implicitly has an 'any[]' type."
+  ]
+}

@@ -1,0 +1,35 @@
+Judge UI forms 1794128687391
+Dashboard
+Datasets
+1
+Judge form dataset 1794128687391
+Runs
+No runs yet
+Back to Benchmark
+Judge form dataset 1794128687391
+Edit
+Delete
+Test Cases
+1 test case1}
+All
+Easy
+Medium
+Hard
+Import Test Cases
+Add Test Case
+#	Input	Expected Answer	Eval Mode	Category	
+1	
+
+Synthetic Judge form question 1794128687391
+
+	Synthetic expected answer	LLM Judge	-	
+Related Runs (0)
+New Run
+
+No runs yet
+
+Start your first evaluation run on this benchmark
+
+New Evaluation
+Dataset updated successfully
+Test case added successfully

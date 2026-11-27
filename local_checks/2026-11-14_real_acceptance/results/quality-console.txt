@@ -1,0 +1,146 @@
+{
+  "A": {
+    "cases": 40,
+    "claims": 13,
+    "correct": 10,
+    "incorrect": 3,
+    "unknown": 0,
+    "precision": 0.7692307692307693,
+    "recall": 0.37037037037037035,
+    "positiveCases": 24,
+    "coveredCases": 10,
+    "effectiveCoverage": 0.4166666666666667,
+    "goldObservations": 27,
+    "matchedObservations": 10,
+    "falseSupport": null,
+    "falseGap": null,
+    "abstentions": 27,
+    "abstentionRate": 0.675,
+    "validReferences": 26,
+    "references": 26,
+    "citationValidity": 1.0,
+    "normalRecoveredCases": 14,
+    "normalRecoveredFalsePositiveCases": 3,
+    "normalRecoveredFPR": 0.21428571428571427,
+    "rootClaims": 0,
+    "rootAccuracy": null,
+    "newCorrectVsRules": 0,
+    "newErrorsVsRules": 0,
+    "byType": {
+      "parameter_task_mismatch": {
+        "gold": 3,
+        "matched": 0
+      },
+      "answer_tool_mismatch": {
+        "gold": 12,
+        "matched": 0
+      },
+      "stale_information_use": {
+        "gold": 2,
+        "matched": 0
+      },
+      "execution_failure": {
+        "gold": 10,
+        "matched": 10
+      }
+    },
+    "realModelLatencyMs": null,
+    "realModelCost": null
+  },
+  "B_RULE_MOCK_NOT_LLM": {
+    "cases": 40,
+    "claims": 28,
+    "correct": 25,
+    "incorrect": 3,
+    "unknown": 0,
+    "precision": 0.8928571428571429,
+    "recall": 0.9259259259259259,
+    "positiveCases": 24,
+    "coveredCases": 22,
+    "effectiveCoverage": 0.9166666666666666,
+    "goldObservations": 27,
+    "matchedObservations": 25,
+    "falseSupport": null,
+    "falseGap": null,
+    "abstentions": 15,
+    "abstentionRate": 0.375,
+    "validReferences": 58,
+    "references": 58,
+    "citationValidity": 1.0,
+    "normalRecoveredCases": 14,
+    "normalRecoveredFalsePositiveCases": 3,
+    "normalRecoveredFPR": 0.21428571428571427,
+    "rootClaims": 0,
+    "rootAccuracy": null,
+    "newCorrectVsRules": 15,
+    "newErrorsVsRules": 0,
+    "byType": {
+      "parameter_task_mismatch": {
+        "gold": 3,
+        "matched": 3
+      },
+      "answer_tool_mismatch": {
+        "gold": 12,
+        "matched": 10
+      },
+      "stale_information_use": {
+        "gold": 2,
+        "matched": 2
+      },
+      "execution_failure": {
+        "gold": 10,
+        "matched": 10
+      }
+    },
+    "realModelLatencyMs": null,
+    "realModelCost": null
+  },
+  "C_RULE_MOCK_REVIEW_NOT_LLM": {
+    "cases": 40,
+    "claims": 25,
+    "correct": 25,
+    "incorrect": 0,
+    "unknown": 0,
+    "precision": 1.0,
+    "recall": 0.9259259259259259,
+    "positiveCases": 24,
+    "coveredCases": 22,
+    "effectiveCoverage": 0.9166666666666666,
+    "goldObservations": 27,
+    "matchedObservations": 25,
+    "falseSupport": 0,
+    "falseGap": 0,
+    "abstentions": 18,
+    "abstentionRate": 0.45,
+    "validReferences": 42,
+    "references": 42,
+    "citationValidity": 1.0,
+    "normalRecoveredCases": 14,
+    "normalRecoveredFalsePositiveCases": 0,
+    "normalRecoveredFPR": 0.0,
+    "rootClaims": 0,
+    "rootAccuracy": null,
+    "newCorrectVsRules": 15,
+    "newErrorsVsRules": 0,
+    "byType": {
+      "parameter_task_mismatch": {
+        "gold": 3,
+        "matched": 3
+      },
+      "answer_tool_mismatch": {
+        "gold": 12,
+        "matched": 10
+      },
+      "stale_information_use": {
+        "gold": 2,
+        "matched": 2
+      },
+      "execution_failure": {
+        "gold": 10,
+        "matched": 10
+      }
+    },
+    "realModelLatencyMs": null,
+    "realModelCost": null
+  }
+}

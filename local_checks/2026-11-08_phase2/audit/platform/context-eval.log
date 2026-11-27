@@ -1,0 +1,324 @@
+
+  GitNexus Context (1.6.12)
+{"level":40,"time":1794125212317,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "status": "found",
+  "symbol": {
+    "uid": "Class:src/server/services/agentEvalRun/index.ts:AgentEvalRunService",
+    "name": "AgentEvalRunService",
+    "kind": "Class",
+    "filePath": "src/server/services/agentEvalRun/index.ts",
+    "startLine": 33,
+    "endLine": 1490
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "incoming": {
+    "calls": [
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/finalize-run/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/finalize-run/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/resume-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/resume-agent-trajectory/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/resume-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/resume-thread-trajectory/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts"
+      },
+      {
+        "uid": "File:src/server/routers/lambda/agentEval.ts",
+        "name": "agentEval.ts",
+        "filePath": "src/server/routers/lambda/agentEval.ts"
+      },
+      {
+        "uid": "Function:src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts"
+      },
+      {
+        "uid": "Function:src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts"
+      },
+      {
+        "uid": "Function:src/server/routers/lambda/agentEval.ts:agentEvalProcedure",
+        "name": "agentEvalProcedure",
+        "filePath": "src/server/routers/lambda/agentEval.ts"
+      },
+      {
+        "uid": "Function:src/server/routers/lambda/agentEvalExternal.ts:agentEvalExternalProcedure",
+        "name": "agentEvalExternalProcedure",
+        "filePath": "src/server/routers/lambda/agentEvalExternal.ts"
+      },
+      {
+        "uid": "Function:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeThreadTrajectory.handler@419:12",
+        "name": "handler",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Function:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeTrajectory.handler@277:12",
+        "name": "handler",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.finalizeRun#1",
+        "name": "finalizeRun",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.onThreadComplete#1",
+        "name": "onThreadComplete",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.onTrajectoryComplete#1",
+        "name": "onTrajectoryComplete",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runAgentTrajectory#1",
+        "name": "runAgentTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runThreadTrajectory#1",
+        "name": "runThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts"
+      }
+    ],
+    "imports": [
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/finalize-run/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/finalize-run/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-trajectory-complete/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/resume-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/resume-agent-trajectory/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/resume-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/resume-thread-trajectory/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts"
+      },
+      {
+        "uid": "File:src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts"
+      },
+      {
+        "uid": "File:src/server/routers/lambda/agentEval.ts",
+        "name": "agentEval.ts",
+        "filePath": "src/server/routers/lambda/agentEval.ts"
+      },
+      {
+        "uid": "File:src/server/routers/lambda/agentEvalExternal.ts",
+        "name": "agentEvalExternal.ts",
+        "filePath": "src/server/routers/lambda/agentEvalExternal.ts"
+      },
+      {
+        "uid": "File:src/server/services/agentEvalRun/orchestrator.ts",
+        "name": "orchestrator.ts",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts"
+      }
+    ]
+  },
+  "outgoing": {
+    "has_method": [
+      {
+        "uid": "Function:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeThreadTrajectory.handler@419:12",
+        "name": "handler",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Function:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeTrajectory.handler@277:12",
+        "name": "handler",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.abortRun#1",
+        "name": "abortRun",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.aggregateThreadResults#1",
+        "name": "aggregateThreadResults",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.checkAndHandleRunTimeout#1",
+        "name": "checkAndHandleRunTimeout",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.constructor#2",
+        "name": "constructor",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.createRun#1",
+        "name": "createRun",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.deleteRun#1",
+        "name": "deleteRun",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.evaluateAndFinalizeRun#1",
+        "name": "evaluateAndFinalizeRun",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.evaluateCase#2",
+        "name": "evaluateCase",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.evaluateThread#1",
+        "name": "evaluateThread",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeMultiThreadTrajectory#1",
+        "name": "executeMultiThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeThreadTrajectory#1",
+        "name": "executeThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeTrajectory#1",
+        "name": "executeTrajectory",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.getAgentDisplayInfo#1",
+        "name": "getAgentDisplayInfo",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.getRunDetails#1",
+        "name": "getRunDetails",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.loadTrajectoryData#2",
+        "name": "loadTrajectoryData",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordThreadCompletion#1",
+        "name": "recordThreadCompletion",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordTrajectoryCompletion#1",
+        "name": "recordTrajectoryCompletion",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.retryErrorCases#1",
+        "name": "retryErrorCases",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.retrySingleCase#2",
+        "name": "retrySingleCase",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.snapshotAgentConfig#1",
+        "name": "snapshotAgentConfig",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      }
+    ],
+    "has_property": [
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.agentService",
+        "name": "agentService",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.benchmarkModel",
+        "name": "benchmarkModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.datasetModel",
+        "name": "datasetModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.db",
+        "name": "db",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.messageModel",
+        "name": "messageModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.runModel",
+        "name": "runModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.runTopicModel",
+        "name": "runTopicModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.testCaseModel",
+        "name": "testCaseModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      }
+    ]
+  },
+  "processes": []
+}

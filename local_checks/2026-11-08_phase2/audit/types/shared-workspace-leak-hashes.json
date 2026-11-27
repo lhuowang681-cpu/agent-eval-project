@@ -1,0 +1,20 @@
+[
+  {
+    "path": "packages/debug/src/index.ts",
+    "hashes": {
+      "current": "659794f0b15894c221fe08b1f186e06461d194511304e01a060cc17c3391bf09",
+      "baseline": "659794f0b15894c221fe08b1f186e06461d194511304e01a060cc17c3391bf09",
+      "round1-snapshot": "659794f0b15894c221fe08b1f186e06461d194511304e01a060cc17c3391bf09"
+    },
+    "identical": true
+  },
+  {
+    "path": "stubs/ctrip-vampire-core/src/index.ts",
+    "hashes": {
+      "current": "86278f0cc581d37890df258e40fc038997c6cfbb7478f6c3381ad55c6ff1ca81",
+      "baseline": "86278f0cc581d37890df258e40fc038997c6cfbb7478f6c3381ad55c6ff1ca81",
+      "round1-snapshot": "86278f0cc581d37890df258e40fc038997c6cfbb7478f6c3381ad55c6ff1ca81"
+    },
+    "identical": true
+  }
+]

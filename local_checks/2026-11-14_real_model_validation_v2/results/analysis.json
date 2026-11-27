@@ -1,0 +1,990 @@
+{
+  "summary": {
+    "realRequests": 6,
+    "sharedLedger": {
+      "attempts": 6,
+      "approved": 6
+    },
+    "versions": {
+      "v1": {
+        "calls": 1,
+        "contractValid": 0,
+        "supportedObservations": 0
+      },
+      "v2": {
+        "calls": 2,
+        "contractValid": 1,
+        "supportedObservations": 0
+      },
+      "v3": {
+        "calls": 3,
+        "contractValid": 3,
+        "supportedObservations": 1
+      }
+    },
+    "totalUsage": {
+      "prompt_tokens": 6444,
+      "completion_tokens": 772,
+      "total_tokens": 7216,
+      "prompt_cache_hit_tokens": 1024,
+      "prompt_cache_miss_tokens": 5420
+    },
+    "estimatedUsdRange": [
+      0.001279272,
+      0.002558544
+    ],
+    "actualBill": null,
+    "averageRequestMs": 1786.424966666667,
+    "maxRequestMs": 2857,
+    "acceptedLLMOnlyTotal": 0,
+    "acceptedUnprovenRootClaims": 0,
+    "v3NormalRecoveryCases": 2,
+    "v3NormalRecoveryRawFalsePositives": 0,
+    "formalHoldoutCalls": 0,
+    "smokeMissingCoverage": [
+      "stale positive not called",
+      "insufficient evidence not called",
+      "actual tool-error retry recovery not represented; recovery sample only newer status correction"
+    ],
+    "promotion": "NO: development iterations, tiny sample, no demonstrated enhanced-rule-exclusive semantic value"
+  },
+  "caseResults": [
+    {
+      "version": "v1",
+      "case": "parameter_closed",
+      "scope": {
+        "runId": "devrun",
+        "caseId": "dev",
+        "topicId": "devtopic",
+        "threadId": null,
+        "operationId": "devop",
+        "traceIds": []
+      },
+      "httpStatus": 200,
+      "providerContractValid": false,
+      "originalModelOutput": "{\"schemaVersion\":1,\"decision\":\"abstain\",\"observations\":[]}",
+      "candidate": {
+        "schemaVersion": 1,
+        "decision": "abstain",
+        "observations": []
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "devrun",
+          "caseId": "dev",
+          "topicId": "devtopic",
+          "threadId": null,
+          "operationId": "devop",
+          "traceIds": []
+        },
+        "inputDigest": "dev-digest",
+        "decision": "needs_review",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "error": "invalid_contract_or_identity"
+      },
+      "originalRuleObservations": [],
+      "enhancedRuleCandidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "devrun",
+          "caseId": "dev",
+          "topicId": "devtopic",
+          "threadId": null,
+          "operationId": "devop",
+          "traceIds": []
+        },
+        "inputDigest": "dev-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev-u",
+                "field": "content",
+                "quote": "{\"task\": \"User supplied closed query policy\", \"parameterConstraints\": {\"year\": {\"allowed\": [2025], \"closed\": true}}}"
+              },
+              {
+                "nodeId": "dev-c",
+                "field": "arguments",
+                "quote": "{\"year\": 2024, \"orderId\": \"dev-order\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "enhancedRuleReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "devrun",
+          "caseId": "dev",
+          "topicId": "devtopic",
+          "threadId": null,
+          "operationId": "devop",
+          "traceIds": []
+        },
+        "inputDigest": "dev-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "rule1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev-u",
+                "field": "content",
+                "quote": "{\"task\": \"User supplied closed query policy\", \"parameterConstraints\": {\"year\": {\"allowed\": [2025], \"closed\": true}}}"
+              },
+              {
+                "nodeId": "dev-c",
+                "field": "arguments",
+                "quote": "{\"year\": 2024, \"orderId\": \"dev-order\"}"
+              }
+            ],
+            "summary": "Observed parameter outside the explicitly closed allowed set for year; actual 2024. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "acceptedLLMOnly": [],
+      "expectedSemanticAbstention": false,
+      "rawSemanticAbstained": true,
+      "usage": {
+        "prompt_tokens": 719,
+        "completion_tokens": 17,
+        "total_tokens": 736,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 719
+      },
+      "latencyMs": 2857
+    },
+    {
+      "version": "v2",
+      "case": "parameter_closed",
+      "scope": {
+        "runId": "devrun",
+        "caseId": "dev",
+        "topicId": "devtopic",
+        "threadId": null,
+        "operationId": "devop",
+        "traceIds": []
+      },
+      "httpStatus": 200,
+      "providerContractValid": true,
+      "originalModelOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"devrun\",\"caseId\":\"dev\",\"topicId\":\"devtopic\",\"threadId\":null,\"operationId\":\"devop\",\"traceIds\":[]},\"inputDigest\":\"dev-digest\",\"decision\":\"needs_review\",\"observations\":[{\"id\":\"obs-1\",\"category\":\"parameter_task_mismatch\",\"claimLevel\":\"observation\",\"summary\":\"The most recent user message constrains year to the closed set [2025], but the orders.lookup call used year 2024, which is outside the allowed set.\",\"comparison\":{\"key\":\"year\",\"expected\":\"2025\",\"actual\":\"2024\"},\"evidenceRefs\":[{\"nodeId\":\"dev-u\",\"field\":\"content\",\"quote\":\"{\\\"task\\\": \\\"User supplied closed query policy\\\", \\\"parameterConstraints\\\": {\\\"year\\\": {\\\"allowed\\\": [2025], \\\"closed\\\": true}}}\"},{\"nodeId\":\"dev-c\",\"field\":\"arguments\",\"quote\":\"{\\\"year\\\": 2024, \\\"orderId\\\": \\\"dev-order\\\"}\"}]}]}",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "devrun",
+          "caseId": "dev",
+          "topicId": "devtopic",
+          "threadId": null,
+          "operationId": "devop",
+          "traceIds": []
+        },
+        "inputDigest": "dev-digest",
+        "decision": "needs_review",
+        "observations": [
+          {
+            "id": "obs-1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "summary": "The most recent user message constrains year to the closed set [2025], but the orders.lookup call used year 2024, which is outside the allowed set.",
+            "comparison": {
+              "key": "year",
+              "expected": "2025",
+              "actual": "2024"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev-u",
+                "field": "content",
+                "quote": "{\"task\": \"User supplied closed query policy\", \"parameterConstraints\": {\"year\": {\"allowed\": [2025], \"closed\": true}}}"
+              },
+              {
+                "nodeId": "dev-c",
+                "field": "arguments",
+                "quote": "{\"year\": 2024, \"orderId\": \"dev-order\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "devrun",
+          "caseId": "dev",
+          "topicId": "devtopic",
+          "threadId": null,
+          "operationId": "devop",
+          "traceIds": []
+        },
+        "inputDigest": "dev-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "obs-1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "closed_task_constraint_violation_not_proven"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "originalRuleObservations": [],
+      "enhancedRuleCandidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "devrun",
+          "caseId": "dev",
+          "topicId": "devtopic",
+          "threadId": null,
+          "operationId": "devop",
+          "traceIds": []
+        },
+        "inputDigest": "dev-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev-u",
+                "field": "content",
+                "quote": "{\"task\": \"User supplied closed query policy\", \"parameterConstraints\": {\"year\": {\"allowed\": [2025], \"closed\": true}}}"
+              },
+              {
+                "nodeId": "dev-c",
+                "field": "arguments",
+                "quote": "{\"year\": 2024, \"orderId\": \"dev-order\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "enhancedRuleReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "devrun",
+          "caseId": "dev",
+          "topicId": "devtopic",
+          "threadId": null,
+          "operationId": "devop",
+          "traceIds": []
+        },
+        "inputDigest": "dev-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "rule1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "dev-u",
+                "field": "content",
+                "quote": "{\"task\": \"User supplied closed query policy\", \"parameterConstraints\": {\"year\": {\"allowed\": [2025], \"closed\": true}}}"
+              },
+              {
+                "nodeId": "dev-c",
+                "field": "arguments",
+                "quote": "{\"year\": 2024, \"orderId\": \"dev-order\"}"
+              }
+            ],
+            "summary": "Observed parameter outside the explicitly closed allowed set for year; actual 2024. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "acceptedLLMOnly": [],
+      "expectedSemanticAbstention": false,
+      "rawSemanticAbstained": false,
+      "usage": {
+        "prompt_tokens": 1023,
+        "completion_tokens": 219,
+        "total_tokens": 1242,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1023
+      },
+      "latencyMs": 1197.5647999999992
+    },
+    {
+      "version": "v2",
+      "case": "answer_mismatch",
+      "scope": {
+        "runId": "smoke-answerrun",
+        "caseId": "smoke-answer",
+        "topicId": "smoke-answertopic",
+        "threadId": null,
+        "operationId": "smoke-answerop",
+        "traceIds": []
+      },
+      "httpStatus": 200,
+      "providerContractValid": false,
+      "originalModelOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"smoke-answerrun\",\"caseId\":\"smoke-answer\",\"topicId\":\"smoke-answertopic\",\"threadId\":null,\"operationId\":\"smoke-answerop\",\"traceIds\":[]},\"inputDigest\":\"smoke-answer-digest\",\"decision\":\"observed_fault\",\"observations\":[{\"id\":\"obs1\",\"category\":\"answer_tool_mismatch\",\"claimLevel\":\"observation\",\"summary\":\"Final answer reports status 'shipped' while the paired tool result for orderId smoke-answer-order reports status 'pending'.\",\"comparison\":{\"key\":\"status\",\"expected\":\"pending\",\"actual\":\"shipped\"},\"evidenceRefs\":[{\"nodeId\":\"smoke-answer-r\",\"field\":\"content\",\"quote\":\"\\\"status\\\": \\\"pending\\\"\"},{\"nodeId\":\"smoke-answer-a\",\"field\":\"content\",\"quote\":\"\\\"status\\\": \\\"shipped\\\"\"}]}]}",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-answer-digest",
+        "decision": "observed_fault",
+        "observations": [
+          {
+            "id": "obs1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Final answer reports status 'shipped' while the paired tool result for orderId smoke-answer-order reports status 'pending'.",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "smoke-answer-r",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "smoke-answer-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ]
+          }
+        ]
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-answer-digest",
+        "decision": "needs_review",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "error": "invalid_contract_or_identity"
+      },
+      "originalRuleObservations": [],
+      "enhancedRuleCandidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-answer-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "smoke-answer-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"smoke-answer-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "smoke-answer-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"smoke-answer-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ]
+          }
+        ]
+      },
+      "enhancedRuleReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-answer-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "smoke-answer-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"smoke-answer-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "smoke-answer-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"smoke-answer-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "acceptedLLMOnly": [],
+      "expectedSemanticAbstention": false,
+      "rawSemanticAbstained": false,
+      "usage": {
+        "prompt_tokens": 1057,
+        "completion_tokens": 194,
+        "total_tokens": 1251,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 801
+      },
+      "latencyMs": 2538.6639000000014
+    },
+    {
+      "version": "v3",
+      "case": "answer_mismatch",
+      "scope": {
+        "runId": "smoke-answerrun",
+        "caseId": "smoke-answer",
+        "topicId": "smoke-answertopic",
+        "threadId": null,
+        "operationId": "smoke-answerop",
+        "traceIds": []
+      },
+      "httpStatus": 200,
+      "providerContractValid": true,
+      "originalModelOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"smoke-answerrun\",\"caseId\":\"smoke-answer\",\"topicId\":\"smoke-answertopic\",\"threadId\":null,\"operationId\":\"smoke-answerop\",\"traceIds\":[]},\"inputDigest\":\"smoke-answer-digest\",\"decision\":\"candidates\",\"observations\":[{\"id\":\"obs-1\",\"category\":\"answer_tool_mismatch\",\"claimLevel\":\"observation\",\"summary\":\"Final answer reports status \\\"shipped\\\" but the paired orders.lookup result for this order reports status \\\"pending\\\".\",\"comparison\":{\"key\":\"status\",\"expected\":\"pending\",\"actual\":\"shipped\"},\"evidenceRefs\":[{\"nodeId\":\"smoke-answer-r\",\"field\":\"content\",\"quote\":\"\\\"status\\\": \\\"pending\\\"\"},{\"nodeId\":\"smoke-answer-a\",\"field\":\"content\",\"quote\":\"\\\"status\\\": \\\"shipped\\\"\"}]}]}",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-answer-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "obs-1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Final answer reports status \"shipped\" but the paired orders.lookup result for this order reports status \"pending\".",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "smoke-answer-r",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "smoke-answer-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ]
+          }
+        ]
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-answer-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "obs-1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "obs-1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "smoke-answer-r",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "smoke-answer-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "originalRuleObservations": [],
+      "enhancedRuleCandidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-answer-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "smoke-answer-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"smoke-answer-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "smoke-answer-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"smoke-answer-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ]
+          }
+        ]
+      },
+      "enhancedRuleReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-answer-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "smoke-answer-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"smoke-answer-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "smoke-answer-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"smoke-answer-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "acceptedLLMOnly": [],
+      "expectedSemanticAbstention": false,
+      "rawSemanticAbstained": false,
+      "usage": {
+        "prompt_tokens": 1154,
+        "completion_tokens": 193,
+        "total_tokens": 1347,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1154
+      },
+      "latencyMs": 1525.4534000000003
+    },
+    {
+      "version": "v3",
+      "case": "normal",
+      "scope": {
+        "runId": "smoke-normalrun",
+        "caseId": "smoke-normal",
+        "topicId": "smoke-normaltopic",
+        "threadId": null,
+        "operationId": "smoke-normalop",
+        "traceIds": []
+      },
+      "httpStatus": 200,
+      "providerContractValid": true,
+      "originalModelOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"smoke-normalrun\",\"caseId\":\"smoke-normal\",\"topicId\":\"smoke-normaltopic\",\"threadId\":null,\"operationId\":\"smoke-normalop\",\"traceIds\":[]},\"inputDigest\":\"smoke-normal-digest\",\"decision\":\"abstain\",\"observations\":[]}",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-normalrun",
+          "caseId": "smoke-normal",
+          "topicId": "smoke-normaltopic",
+          "threadId": null,
+          "operationId": "smoke-normalop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-normal-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-normalrun",
+          "caseId": "smoke-normal",
+          "topicId": "smoke-normaltopic",
+          "threadId": null,
+          "operationId": "smoke-normalop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-normal-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "originalRuleObservations": [],
+      "enhancedRuleCandidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-normalrun",
+          "caseId": "smoke-normal",
+          "topicId": "smoke-normaltopic",
+          "threadId": null,
+          "operationId": "smoke-normalop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-normal-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "enhancedRuleReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-normalrun",
+          "caseId": "smoke-normal",
+          "topicId": "smoke-normaltopic",
+          "threadId": null,
+          "operationId": "smoke-normalop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-normal-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "acceptedLLMOnly": [],
+      "expectedSemanticAbstention": true,
+      "rawSemanticAbstained": true,
+      "usage": {
+        "prompt_tokens": 1137,
+        "completion_tokens": 73,
+        "total_tokens": 1210,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 753
+      },
+      "latencyMs": 1495.5442999999996
+    },
+    {
+      "version": "v3",
+      "case": "recovered",
+      "scope": {
+        "runId": "smoke-recoveredrun",
+        "caseId": "smoke-recovered",
+        "topicId": "smoke-recoveredtopic",
+        "threadId": null,
+        "operationId": "smoke-recoveredop",
+        "traceIds": []
+      },
+      "httpStatus": 200,
+      "providerContractValid": true,
+      "originalModelOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"smoke-recoveredrun\",\"caseId\":\"smoke-recovered\",\"topicId\":\"smoke-recoveredtopic\",\"threadId\":null,\"operationId\":\"smoke-recoveredop\",\"traceIds\":[]},\"inputDigest\":\"smoke-recovered-digest\",\"decision\":\"abstain\",\"observations\":[]}",
+      "candidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-recoveredrun",
+          "caseId": "smoke-recovered",
+          "topicId": "smoke-recoveredtopic",
+          "threadId": null,
+          "operationId": "smoke-recoveredop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-recovered-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "review": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-recoveredrun",
+          "caseId": "smoke-recovered",
+          "topicId": "smoke-recoveredtopic",
+          "threadId": null,
+          "operationId": "smoke-recoveredop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-recovered-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "originalRuleObservations": [],
+      "enhancedRuleCandidate": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-recoveredrun",
+          "caseId": "smoke-recovered",
+          "topicId": "smoke-recoveredtopic",
+          "threadId": null,
+          "operationId": "smoke-recoveredop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-recovered-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "enhancedRuleReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "smoke-recoveredrun",
+          "caseId": "smoke-recovered",
+          "topicId": "smoke-recoveredtopic",
+          "threadId": null,
+          "operationId": "smoke-recoveredop",
+          "traceIds": []
+        },
+        "inputDigest": "smoke-recovered-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "acceptedLLMOnly": [],
+      "expectedSemanticAbstention": true,
+      "rawSemanticAbstained": true,
+      "usage": {
+        "prompt_tokens": 1354,
+        "completion_tokens": 76,
+        "total_tokens": 1430,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 970
+      },
+      "latencyMs": 1104.3234000000011
+    }
+  ]
+}

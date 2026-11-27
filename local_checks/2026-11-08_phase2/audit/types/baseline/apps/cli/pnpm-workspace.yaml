@@ -1,0 +1,7 @@
+packages:
+  - '../../packages/device-gateway-client'
+  - '../../packages/local-file-shell'
+  - '../../packages/file-loaders'
+  - '.'
+overrides:
+  xlsx: ^0.18.5

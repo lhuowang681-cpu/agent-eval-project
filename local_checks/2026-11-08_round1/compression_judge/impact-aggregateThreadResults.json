@@ -1,0 +1,239 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794122386873,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.aggregateThreadResults#1",
+    "name": "aggregateThreadResults",
+    "type": "Method",
+    "filePath": "src/server/services/agentEvalRun/index.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 7,
+  "risk": "LOW",
+  "riskSharedAxes": "LOW",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "summary": {
+    "direct": 1,
+    "processes_affected": 1,
+    "modules_affected": 1
+  },
+  "byDepthCounts": {
+    "1": 1,
+    "2": 5,
+    "3": 1
+  },
+  "affected_processes": [
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts",
+      "affected_process_count": 10,
+      "total_hits": 18,
+      "earliest_broken_step": 1
+    }
+  ],
+  "affected_modules": [
+    {
+      "name": "AgentEvalRun",
+      "hits": 5,
+      "impact": "direct"
+    }
+  ],
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordThreadCompletion#1",
+        "name": "recordThreadCompletion",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_112_post",
+            "label": "POST → RoundCost",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_117_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_114_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_116_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_177_post",
+            "label": "POST → Update",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_176_post",
+            "label": "POST → QueryByTopicId",
+            "processType": "intra_community",
+            "step": 2
+          },
+          {
+            "id": "proc_115_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_113_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 2
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "depth": 2,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Function:src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/on-thread-complete/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_176_post",
+            "label": "POST → QueryByTopicId",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_178_post",
+            "label": "POST → GetWorkflowUrl",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_113_post",
+            "label": "POST → UpdateByRunAndTopic",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_112_post",
+            "label": "POST → RoundCost",
+            "processType": "intra_community",
+            "step": 1
+          },
+          {
+            "id": "proc_115_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_778_post",
+            "label": "POST → GetDBInstance",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_114_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_116_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_177_post",
+            "label": "POST → Update",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_117_post",
+            "label": "POST → FindById",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Function:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeThreadTrajectory.handler@419:12",
+        "name": "handler",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.onThreadComplete#1",
+        "name": "onThreadComplete",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runThreadTrajectory#1",
+        "name": "runThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ],
+    "3": [
+      {
+        "depth": 3,
+        "id": "Function:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runAgentTrajectory.onThread@299:8",
+        "name": "onThread",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ]
+  }
+}

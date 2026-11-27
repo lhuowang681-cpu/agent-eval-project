@@ -1,0 +1,199 @@
+
+  GitNexus Context (1.6.12)
+{"level":40,"time":1794125198983,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "status": "found",
+  "symbol": {
+    "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.evaluateThread#1",
+    "name": "evaluateThread",
+    "kind": "Method",
+    "filePath": "src/server/services/agentEvalRun/index.ts",
+    "startLine": 648,
+    "endLine": 766
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "incoming": {
+    "has_method": [
+      {
+        "uid": "Class:src/server/services/agentEvalRun/index.ts:AgentEvalRunService",
+        "name": "AgentEvalRunService",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      }
+    ],
+    "calls": [
+      {
+        "uid": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.recordThreadCompletion#1",
+        "name": "recordThreadCompletion",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      }
+    ]
+  },
+  "outgoing": {
+    "calls": [
+      {
+        "uid": "Function:packages/eval-rubric/src/evaluate.ts:evaluate",
+        "name": "evaluate",
+        "filePath": "packages/eval-rubric/src/evaluate.ts"
+      },
+      {
+        "uid": "Function:src/server/services/agentEvalRun/index.ts:roundCost",
+        "name": "roundCost",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Method:packages/database/src/models/agentEval/benchmark.ts:AgentEvalBenchmarkModel.findById",
+        "name": "findById",
+        "filePath": "packages/database/src/models/agentEval/benchmark.ts"
+      },
+      {
+        "uid": "Method:packages/database/src/models/agentEval/dataset.ts:AgentEvalDatasetModel.findById",
+        "name": "findById",
+        "filePath": "packages/database/src/models/agentEval/dataset.ts"
+      },
+      {
+        "uid": "Method:packages/database/src/models/agentEval/run.ts:AgentEvalRunModel.findById",
+        "name": "findById",
+        "filePath": "packages/database/src/models/agentEval/run.ts"
+      },
+      {
+        "uid": "Method:packages/database/src/models/agentEval/testCase.ts:AgentEvalTestCaseModel.findById",
+        "name": "findById",
+        "filePath": "packages/database/src/models/agentEval/testCase.ts"
+      },
+      {
+        "uid": "Method:packages/database/src/models/message.ts:MessageModel.query",
+        "name": "query",
+        "filePath": "packages/database/src/models/message.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/anspire/index.ts:AnspireImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/anspire/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/baidu/index.ts:BaiduImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/baidu/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/bocha/index.ts:BochaImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/bocha/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/brave/index.ts:BraveImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/brave/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/exa/index.ts:ExaImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/exa/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/firecrawl/index.ts:FirecrawlImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/firecrawl/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/google/index.ts:GoogleImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/google/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/jina/index.ts:JinaImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/jina/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/kagi/index.ts:KagiImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/kagi/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/search1api/index.ts:Search1APIImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/search1api/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/searxng/index.ts:SearXNGImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/searxng/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/impls/tavily/index.ts:TavilyImpl.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/impls/tavily/index.ts"
+      },
+      {
+        "uid": "Method:src/server/services/search/index.ts:SearchService.query#2",
+        "name": "query",
+        "filePath": "src/server/services/search/index.ts"
+      }
+    ],
+    "accesses": [
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.benchmarkModel",
+        "name": "benchmarkModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.datasetModel",
+        "name": "datasetModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.messageModel",
+        "name": "messageModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.runModel",
+        "name": "runModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      },
+      {
+        "uid": "Property:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.testCaseModel",
+        "name": "testCaseModel",
+        "filePath": "src/server/services/agentEvalRun/index.ts"
+      }
+    ]
+  },
+  "processes": [
+    {
+      "id": "proc_114_post",
+      "name": "POST → FindById",
+      "step_index": 3,
+      "step_count": 4
+    },
+    {
+      "id": "proc_115_post",
+      "name": "POST → FindById",
+      "step_index": 3,
+      "step_count": 4
+    },
+    {
+      "id": "proc_116_post",
+      "name": "POST → FindById",
+      "step_index": 3,
+      "step_count": 4
+    },
+    {
+      "id": "proc_117_post",
+      "name": "POST → FindById",
+      "step_index": 3,
+      "step_count": 4
+    }
+  ]
+}

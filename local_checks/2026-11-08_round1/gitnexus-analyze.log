@@ -1,0 +1,44 @@
+
+  GitNexus Analyzer (1.6.12)
+
+  GitNexus Analyzer (1.6.12)
+  Warning: no .git directory found — commit-tracking and incremental updates disabled.
+
+(node:74072) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2K
+  Skipped 1 large files (>512KB, likely generated/vendored)
+[2K
+  - changelog/CHANGELOG.v1.md
+[2K
+  Set GITNEXUS_MAX_FILE_SIZE=<KB> to include files above the default cap.
+{"level":40,"time":1794122046653,"name":"gitnexus","lang":"typescript","dispatchFanoutSkipped":63,"dispatchFanoutSkippedNames":["ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)","ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)","ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)","ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)","ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)","ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)","ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)","ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)","ContextProcessor.name (39 targets; dropped: EvalContextSystemInjector.name, ForceFinishSummaryInjector.name, HistorySummaryProvider.name, SkillContextProvider.name, SystemDateProvider.name, +2 more)"],"fanoutCap":32,"msg":"interface-dispatch: members over the fan-out cap dropped implementors (their CALLS edges were not emitted)"}
+{"level":40,"time":1794122049793,"name":"gitnexus","lang":"typescript","skippedKeys":1,"skippedKeyNames":["onClick"],"fanoutCap":32,"msg":"property-dispatch: keys over the fan-out cap were dropped (no CALLS synthesized for them)"}
+{"level":40,"time":1794122052570,"name":"gitnexus","language":"typescript","context":"actual-formal-overflow:packages/model-runtime/src/providers/ai360/index.test.ts:62:21","candidateCount":33,"cap":32,"msg":"callable-value-flow: candidate set exceeded the cap; no partial CALLS emitted"}
+{"level":40,"time":1794122052570,"name":"gitnexus","language":"typescript","context":"actual-formal-overflow:packages/model-runtime/src/providers/ai360/index.test.ts:62:21","candidateCount":33,"cap":32,"msg":"callable-value-flow: candidate set exceeded the cap; no partial CALLS emitted"}
+{"level":40,"time":1794122052570,"name":"gitnexus","language":"typescript","context":"actual-formal:packages/model-runtime/src/providers/githubCopilot/index.ts:221:18:0","candidateCount":33,"cap":32,"msg":"callable-value-flow: candidate set exceeded the cap; no partial CALLS emitted"}
+{"level":40,"time":1794122052570,"name":"gitnexus","language":"typescript","context":"actual-formal:packages/model-runtime/src/providers/githubCopilot/index.ts:221:18:0","candidateCount":33,"cap":32,"msg":"callable-value-flow: candidate set exceeded the cap; no partial CALLS emitted"}
+{"level":40,"time":1794122052570,"name":"gitnexus","language":"typescript","context":"copy:packages/model-runtime/src/providers/githubCopilot/index.ts","candidateCount":33,"cap":32,"msg":"callable-value-flow: candidate set exceeded the cap; no partial CALLS emitted"}
+{"level":40,"time":1794122052570,"name":"gitnexus","language":"typescript","context":"copy:packages/model-runtime/src/providers/githubCopilot/index.ts","candidateCount":33,"cap":32,"msg":"callable-value-flow: candidate set exceeded the cap; no partial CALLS emitted"}
+{"level":40,"time":1794122054228,"name":"gitnexus","msg":"[scope-resolution] 390 property read/write site(s) name a field that IS defined in this workspace, but only in another language, so per-language inference declined to link them. Queries for these fields return an empty result that does NOT mean \"unused\" — it means the definition anchor is in a different language. Affected: __err (javascript), bytes (javascript), cloud (javascript), darwin (javascript), linux (javascript), win32 (javascript), DATABASE_DRIVER (typescript), DATABASE_URL (typescript), Domain (typescript), KEY_VAULTS_SECRET (typescript), …"}
+{"level":40,"time":1794122055635,"name":"gitnexus","truncation":{"truncated":true,"entryPointCandidatesDropped":8349,"entryPointsUnexplored":0,"walksCutByBudget":59,"tracesDepthCapped":4,"calleesDropped":5264,"processesDropped":0},"msg":"[processes] 848 flows reported, but whole flows are MISSING: 8349 of 8549 candidate entry point(s) never ranked in, 0 ranked entry point(s) never traced, 0 deduplicated flow(s) dropped at maxProcesses, 4 trace(s) cut at maxTraceDepth, 5264 callee(s) skipped at maxBranching, 59 walk(s) cut by the per-entry trace budget. An absent flow does NOT mean the code path does not exist."}
+[2K
+FTS disabled for this index. To enable keyword search, run gitnexus analyze without --skip-fts and with GITNEXUS_SKIP_FTS unset.
+
+  Analysis failed: Cannot find module 'C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_round1\tooling\node_modules\gitnexus\dist\core\platform\capabilities.js' imported from C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_round1\tooling\node_modules\gitnexus\dist\core\run-analyze.js
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_round1\tooling\node_modules\gitnexus\dist\core\platform\capabilities.js' imported from C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_round1\tooling\node_modules\gitnexus\dist\core\run-analyze.js
+    at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    at moduleResolve (node:internal/modules/esm/resolve:865:10)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    at #resolve (node:internal/modules/esm/loader:683:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    at node:internal/modules/esm/loader:632:32
+    at TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  A required module could not be loaded. The installation may be corrupt.
+  Suggestions:
+    1. Reinstall:   npm install -g gitnexus@latest
+    2. Clear cache: npm cache clean --force && npx gitnexus@latest analyze
+{"level":50,"time":1794122073531,"name":"gitnexus","recoveryHint":"module-not-found","msg":"  A required module could not be loaded. The installation may be corrupt.\n  Suggestions:\n    1. Reinstall:   npm install -g gitnexus@latest\n    2. Clear cache: npm cache clean --force && npx gitnexus@latest analyze\n"}

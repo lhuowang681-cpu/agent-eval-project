@@ -1,0 +1,49 @@
+{
+  "realRequests": 6,
+  "sharedLedger": {
+    "attempts": 6,
+    "approved": 6
+  },
+  "versions": {
+    "v1": {
+      "calls": 1,
+      "contractValid": 0,
+      "supportedObservations": 0
+    },
+    "v2": {
+      "calls": 2,
+      "contractValid": 1,
+      "supportedObservations": 0
+    },
+    "v3": {
+      "calls": 3,
+      "contractValid": 3,
+      "supportedObservations": 1
+    }
+  },
+  "totalUsage": {
+    "prompt_tokens": 6444,
+    "completion_tokens": 772,
+    "total_tokens": 7216,
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 5420
+  },
+  "estimatedUsdRange": [
+    0.001279272,
+    0.002558544
+  ],
+  "actualBill": null,
+  "averageRequestMs": 1786.424966666667,
+  "maxRequestMs": 2857,
+  "acceptedLLMOnlyTotal": 0,
+  "acceptedUnprovenRootClaims": 0,
+  "v3NormalRecoveryCases": 2,
+  "v3NormalRecoveryRawFalsePositives": 0,
+  "formalHoldoutCalls": 0,
+  "smokeMissingCoverage": [
+    "stale positive not called",
+    "insufficient evidence not called",
+    "actual tool-error retry recovery not represented; recovery sample only newer status correction"
+  ],
+  "promotion": "NO: development iterations, tiny sample, no demonstrated enhanced-rule-exclusive semantic value"
+}

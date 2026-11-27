@@ -1,0 +1,628 @@
+{
+  "baselineCount": 295,
+  "finalCount": 295,
+  "added": [
+    {
+      "file": "packages/database/src/core/getTestDB.ts",
+      "line": 47,
+      "column": 34,
+      "code": "TS2345",
+      "message": "Argument of type '[{ client: PGlite; schema: typeof import(\"C:/Users/1/Desktop/\\u5C31\\u4E1Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/index\"); }]' is not assignable to parameter of type '[] | [string | PGlite] | [string | PGlite, DrizzleConfig<typeof import(\"C:/Users/1/Desktop/\\u5C31\\u4E1Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/index\")>] | [...]'."
+    },
+    {
+      "file": "src/components/FeedbackModal/index.tsx",
+      "line": 77,
+      "column": 50,
+      "code": "TS2339",
+      "message": "Property 'submitFeedback' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/features/AgentProfileCard/AgentProfilePopup.tsx",
+      "line": 159,
+      "column": 18,
+      "code": "TS2345",
+      "message": "Argument of type '[\"agentProfile.skills\", { count: number; }]' is not assignable to parameter of type '[key: \"agents\" | TemplateStringsArray | \"historySummary\" | \"active\" | \"defaultAgent\" | \"members\" | \"defaultSession\" | \"historyRange\" | \"pin\" | \"pinOff\" | ... 797 more ... | (\"agents\" | ... 805 more ... | \"userFeedbackBlock.commentCount\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/features/AgentProfileCard/AgentProfilePopup.tsx",
+      "line": 167,
+      "column": 18,
+      "code": "TS2345",
+      "message": "Argument of type '[\"agentProfile.knowledgeBases\", { count: number; }]' is not assignable to parameter of type '[key: \"agents\" | TemplateStringsArray | \"historySummary\" | \"active\" | \"defaultAgent\" | \"members\" | \"defaultSession\" | \"historyRange\" | \"pin\" | \"pinOff\" | ... 797 more ... | (\"agents\" | ... 805 more ... | \"userFeedbackBlock.commentCount\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/features/AgentProfileCard/AgentProfilePopup.tsx",
+      "line": 175,
+      "column": 18,
+      "code": "TS2345",
+      "message": "Argument of type '[\"agentProfile.files\", { count: number; }]' is not assignable to parameter of type '[key: \"agents\" | TemplateStringsArray | \"historySummary\" | \"active\" | \"defaultAgent\" | \"members\" | \"defaultSession\" | \"historyRange\" | \"pin\" | \"pinOff\" | ... 797 more ... | (\"agents\" | ... 805 more ... | \"userFeedbackBlock.commentCount\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/features/PluginDevModal/index.tsx",
+      "line": 75,
+      "column": 9,
+      "code": "TS2322",
+      "message": "Type '{ args?: string[] | undefined; env?: Record<string, string> | undefined; command?: string | undefined; type: \"http\" | \"cloud\" | \"stdio\"; url?: string | undefined; cloudEndPoint?: string | undefined; auth?: { ...; } | undefined; headers?: Record<...> | undefined; }' is not assignable to type 'McpConnection'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/MarketAuthProvider.tsx",
+      "line": 43,
+      "column": 48,
+      "code": "TS2339",
+      "message": "Property 'oidc' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/MarketAuthProvider.tsx",
+      "line": 120,
+      "column": 52,
+      "code": "TS2339",
+      "message": "Property 'getUserByUsername' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/MarketAuthProvider.tsx",
+      "line": 190,
+      "column": 50,
+      "code": "TS2339",
+      "message": "Property 'oidc' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/MarketAuthProvider.tsx",
+      "line": 513,
+      "column": 50,
+      "code": "TS2339",
+      "message": "Property 'oidc' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/ProfileSetupModal.tsx",
+      "line": 215,
+      "column": 55,
+      "code": "TS2339",
+      "message": "Property 'updateUserProfile' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/useMarketUserProfile.ts",
+      "line": 11,
+      "column": 49,
+      "code": "TS2339",
+      "message": "Property 'getUserByUsername' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/routes/(main)/agent/profile/features/Header/index.tsx",
+      "line": 37,
+      "column": 33,
+      "code": "TS2345",
+      "message": "Argument of type '[string, { ns: \"discover\"; }]' is not assignable to parameter of type '[key: TemplateStringsArray | \"filter\" | \"back\" | \"footer.title\" | \"tab.home\" | \"tab.knowledgeBase\" | \"time.formatOtherYear\" | \"time.formatThisYear\" | ... 778 more ... | (TemplateStringsArray | ... 784 more ... | \"user.website\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/routes/(main)/community/(detail)/mcp/features/Sidebar/ActionButton/InstallMcp.tsx",
+      "line": 80,
+      "column": 70,
+      "code": "TS2367",
+      "message": "This comparison appears to be unintentional because the types '\"local\" | \"remote\" | \"hybrid\" | undefined' and '\"stdio\"' have no overlap."
+    },
+    {
+      "file": "src/routes/(main)/community/(list)/mcp/index.tsx",
+      "line": 41,
+      "column": 5,
+      "code": "TS2322",
+      "message": "Type '\"createdAt\" | \"updatedAt\" | \"installCount\" | undefined' is not assignable to type '\"updatedAt\" | \"installCount\" | \"recommended\" | undefined'."
+    },
+    {
+      "file": "src/routes/(main)/community/(list)/provider/features/List/Item.tsx",
+      "line": 100,
+      "column": 18,
+      "code": "TS2345",
+      "message": "Argument of type '[`${string}.description`, { ns: \"providers\"; }]' is not assignable to parameter of type '[key: TemplateStringsArray | \"mistral.description\" | \"ai21.description\" | \"ai302.description\" | \"ai360.description\" | \"ada.description\" | \"aihubmix.description\" | ... 70 more ... | (TemplateStringsArray | ... 75 more ... | \"ztrip.description\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/routes/(main)/group/profile/features/Header/GroupPublishButton/useMarketGroupPublish.ts",
+      "line": 58,
+      "column": 48,
+      "code": "TS2339",
+      "message": "Property 'agentGroup' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/routes/(main)/group/profile/features/Header/GroupPublishButton/useMarketGroupPublish.ts",
+      "line": 134,
+      "column": 48,
+      "code": "TS2339",
+      "message": "Property 'agentGroup' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/routes/(main)/resource/(home)/_layout/Body/LibraryList/Item/useDropdownMenu.tsx",
+      "line": 114,
+      "column": 30,
+      "code": "TS2345",
+      "message": "Argument of type '[string, { ns: \"discover\"; }]' is not assignable to parameter of type '[key: TemplateStringsArray | \"filter\" | \"back\" | \"footer.title\" | \"tab.home\" | \"tab.knowledgeBase\" | \"time.formatOtherYear\" | \"time.formatThisYear\" | ... 778 more ... | (TemplateStringsArray | ... 784 more ... | \"user.website\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/server/routers/lambda/knowledgeBase.ts",
+      "line": 288,
+      "column": 54,
+      "code": "TS2345",
+      "message": "Argument of type '{ id?: string | undefined; name?: string | undefined; description?: string | null | undefined; avatar?: string | null | undefined; accessedAt?: Date | undefined; createdAt?: Date | undefined; ... 9 more ...; settings?: Json | undefined; }' is not assignable to parameter of type 'Partial<KnowledgeBaseItem>'."
+    },
+    {
+      "file": "src/server/routers/lambda/session.ts",
+      "line": 94,
+      "column": 50,
+      "code": "TS2345",
+      "message": "Argument of type '{ config: { id?: string | undefined; description?: string | null | undefined; avatar?: string | null | undefined; accessedAt?: Date | undefined; createdAt?: Date | undefined; ... 20 more ...; sessionGroupId?: string | ... 1 more ... | undefined; } & { ...; }; type: \"agent\" | \"group\"; session: { ...; }; }' is not assignable to parameter of type '{ config?: Partial<{ userId: string; id?: string | undefined; plugins?: string[] | null | undefined; description?: string | null | undefined; avatar?: string | null | undefined; accessedAt?: Date | undefined; ... 25 more ...; sessionGroupId?: string | ... 1 more ... | undefined; }> | undefined; id?: string | undefin...'."
+    },
+    {
+      "file": "src/server/services/community/index.ts",
+      "line": 1980,
+      "column": 9,
+      "code": "TS2322",
+      "message": "Type 'unknown' is not assignable to type 'SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | LobeChatPluginManifest | null | undefined'."
+    },
+    {
+      "file": "src/server/services/community/index.ts",
+      "line": 1981,
+      "column": 9,
+      "code": "TS2322",
+      "message": "Type 'unknown' is not assignable to type 'SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | CustomPluginParams | null | undefined'."
+    },
+    {
+      "file": "src/server/services/community/index.ts",
+      "line": 2139,
+      "column": 11,
+      "code": "TS2322",
+      "message": "Type 'unknown' is not assignable to type 'SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | LobeChatPluginManifest | null | undefined'."
+    },
+    {
+      "file": "src/server/services/community/index.ts",
+      "line": 2140,
+      "column": 11,
+      "code": "TS2322",
+      "message": "Type 'unknown' is not assignable to type 'SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | CustomPluginParams | null | undefined'."
+    },
+    {
+      "file": "src/services/discover.ts",
+      "line": 440,
+      "column": 48,
+      "code": "TS2339",
+      "message": "Property 'registerM2MToken' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 89,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 93,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 97,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 103,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 112,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 123,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 141,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 153,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 160,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 167,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 177,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 188,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 203,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 212,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 219,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 234,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 241,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 252,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"PARSE_ERROR\" | \"BAD_REQUEST\" | \"INTERNAL_SERVER_ERROR\" | \"NOT_IMPLEMENTED\" | ... 16 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; mess...'."
+    }
+  ],
+  "removed": [
+    {
+      "file": "packages/database/src/core/getTestDB.ts",
+      "line": 47,
+      "column": 34,
+      "code": "TS2345",
+      "message": "Argument of type '[{ client: PGlite; schema: typeof import(\"C:/Users/1/Desktop/\\u5C31\\u4E1Aagent/agent-eval-project/local_checks/2026-11-08_phase2/audit/types/<workspace>/packages/database/src/schemas/index\"); }]' is not assignable to parameter of type '[] | [string | PGlite] | [string | PGlite, DrizzleConfig<typeof import(\"C:/Users/1/Desktop/\\u5C31\\u4E1Aagent/agent-eval-project/local_checks/2026-11-08_phase2/audit/types/<workspace>/packages/database/src/schemas/index\")>] | [...]'."
+    },
+    {
+      "file": "src/components/FeedbackModal/index.tsx",
+      "line": 77,
+      "column": 50,
+      "code": "TS2339",
+      "message": "Property 'submitFeedback' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/features/AgentProfileCard/AgentProfilePopup.tsx",
+      "line": 159,
+      "column": 18,
+      "code": "TS2345",
+      "message": "Argument of type '[\"agentProfile.skills\", { count: number; }]' is not assignable to parameter of type '[key: \"active\" | \"members\" | \"agents\" | \"clearCurrentMessages\" | \"defaultAgent\" | TemplateStringsArray | \"historySummary\" | \"owner\" | \"newAgent\" | \"inbox.title\" | ... 797 more ... | (\"active\" | ... 805 more ... | \"userFeedbackBlock.commentCount\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/features/AgentProfileCard/AgentProfilePopup.tsx",
+      "line": 167,
+      "column": 18,
+      "code": "TS2345",
+      "message": "Argument of type '[\"agentProfile.knowledgeBases\", { count: number; }]' is not assignable to parameter of type '[key: \"active\" | \"members\" | \"agents\" | \"clearCurrentMessages\" | \"defaultAgent\" | TemplateStringsArray | \"historySummary\" | \"owner\" | \"newAgent\" | \"inbox.title\" | ... 797 more ... | (\"active\" | ... 805 more ... | \"userFeedbackBlock.commentCount\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/features/AgentProfileCard/AgentProfilePopup.tsx",
+      "line": 175,
+      "column": 18,
+      "code": "TS2345",
+      "message": "Argument of type '[\"agentProfile.files\", { count: number; }]' is not assignable to parameter of type '[key: \"active\" | \"members\" | \"agents\" | \"clearCurrentMessages\" | \"defaultAgent\" | TemplateStringsArray | \"historySummary\" | \"owner\" | \"newAgent\" | \"inbox.title\" | ... 797 more ... | (\"active\" | ... 805 more ... | \"userFeedbackBlock.commentCount\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/features/PluginDevModal/index.tsx",
+      "line": 75,
+      "column": 9,
+      "code": "TS2322",
+      "message": "Type '{ args?: string[] | undefined; env?: Record<string, string> | undefined; command?: string | undefined; type: \"cloud\" | \"http\" | \"stdio\"; url?: string | undefined; cloudEndPoint?: string | undefined; auth?: { ...; } | undefined; headers?: Record<...> | undefined; }' is not assignable to type 'McpConnection'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/MarketAuthProvider.tsx",
+      "line": 43,
+      "column": 48,
+      "code": "TS2339",
+      "message": "Property 'oidc' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/MarketAuthProvider.tsx",
+      "line": 120,
+      "column": 52,
+      "code": "TS2339",
+      "message": "Property 'getUserByUsername' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/MarketAuthProvider.tsx",
+      "line": 190,
+      "column": 50,
+      "code": "TS2339",
+      "message": "Property 'oidc' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/MarketAuthProvider.tsx",
+      "line": 513,
+      "column": 50,
+      "code": "TS2339",
+      "message": "Property 'oidc' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/ProfileSetupModal.tsx",
+      "line": 215,
+      "column": 55,
+      "code": "TS2339",
+      "message": "Property 'updateUserProfile' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/layout/AuthProvider/MarketAuth/useMarketUserProfile.ts",
+      "line": 11,
+      "column": 49,
+      "code": "TS2339",
+      "message": "Property 'getUserByUsername' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/routes/(main)/agent/profile/features/Header/index.tsx",
+      "line": 37,
+      "column": 33,
+      "code": "TS2345",
+      "message": "Argument of type '[string, { ns: \"discover\"; }]' is not assignable to parameter of type '[key: \"create\" | \"filter\" | \"publishedTime\" | \"isFeatured\" | \"isClaimed\" | \"isOfficial\" | TemplateStringsArray | \"like\" | \"back\" | \"footer.title\" | \"tab.home\" | ... 775 more ... | (\"create\" | ... 784 more ... | \"user.website\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/routes/(main)/community/(detail)/mcp/features/Sidebar/ActionButton/InstallMcp.tsx",
+      "line": 80,
+      "column": 70,
+      "code": "TS2367",
+      "message": "This comparison appears to be unintentional because the types '\"remote\" | \"local\" | \"hybrid\" | undefined' and '\"stdio\"' have no overlap."
+    },
+    {
+      "file": "src/routes/(main)/community/(list)/mcp/index.tsx",
+      "line": 41,
+      "column": 5,
+      "code": "TS2322",
+      "message": "Type '\"createdAt\" | \"updatedAt\" | \"installCount\" | undefined' is not assignable to type '\"updatedAt\" | \"recommended\" | \"installCount\" | undefined'."
+    },
+    {
+      "file": "src/routes/(main)/community/(list)/provider/features/List/Item.tsx",
+      "line": 100,
+      "column": 18,
+      "code": "TS2345",
+      "message": "Argument of type '[`${string}.description`, { ns: \"providers\"; }]' is not assignable to parameter of type '[key: TemplateStringsArray | \"ai21.description\" | \"ai302.description\" | \"ai360.description\" | \"ada.description\" | \"aihubmix.description\" | \"akashchat.description\" | ... 70 more ... | (TemplateStringsArray | ... 75 more ... | \"ztrip.description\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/routes/(main)/group/profile/features/Header/GroupPublishButton/useMarketGroupPublish.ts",
+      "line": 58,
+      "column": 48,
+      "code": "TS2339",
+      "message": "Property 'agentGroup' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/routes/(main)/group/profile/features/Header/GroupPublishButton/useMarketGroupPublish.ts",
+      "line": 134,
+      "column": 48,
+      "code": "TS2339",
+      "message": "Property 'agentGroup' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/routes/(main)/resource/(home)/_layout/Body/LibraryList/Item/useDropdownMenu.tsx",
+      "line": 114,
+      "column": 30,
+      "code": "TS2345",
+      "message": "Argument of type '[string, { ns: \"discover\"; }]' is not assignable to parameter of type '[key: \"create\" | \"filter\" | \"publishedTime\" | \"isFeatured\" | \"isClaimed\" | \"isOfficial\" | TemplateStringsArray | \"like\" | \"back\" | \"footer.title\" | \"tab.home\" | ... 775 more ... | (\"create\" | ... 784 more ... | \"user.website\")[], options?: { ...; } | undefined] | [key: ...] | [key: ...]'."
+    },
+    {
+      "file": "src/server/routers/lambda/knowledgeBase.ts",
+      "line": 288,
+      "column": 54,
+      "code": "TS2345",
+      "message": "Argument of type '{ type?: string | null | undefined; id?: string | undefined; description?: string | null | undefined; settings?: Json | undefined; clientId?: string | null | undefined; name?: string | undefined; ... 9 more ...; isPublic?: boolean | ... 1 more ... | undefined; }' is not assignable to parameter of type 'Partial<KnowledgeBaseItem>'."
+    },
+    {
+      "file": "src/server/routers/lambda/session.ts",
+      "line": 94,
+      "column": 50,
+      "code": "TS2345",
+      "message": "Argument of type '{ type: \"group\" | \"agent\"; config: { title?: string | null | undefined; id?: string | undefined; params?: Json | undefined; description?: string | null | undefined; provider?: string | ... 1 more ... | undefined; ... 20 more ...; sessionGroupId?: string | ... 1 more ... | undefined; } & { ...; }; session: { ...; }; }' is not assignable to parameter of type '{ config?: Partial<{ userId: string; title?: string | null | undefined; id?: string | undefined; params?: unknown; description?: string | null | undefined; tts?: LobeAgentTTSConfig | null | undefined; ... 25 more ...; sessionGroupId?: string | ... 1 more ... | undefined; }> | undefined; id?: string | undefined; sess...'."
+    },
+    {
+      "file": "src/server/services/community/index.ts",
+      "line": 1980,
+      "column": 9,
+      "code": "TS2322",
+      "message": "Type 'unknown' is not assignable to type 'LobeChatPluginManifest | SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | null | undefined'."
+    },
+    {
+      "file": "src/server/services/community/index.ts",
+      "line": 1981,
+      "column": 9,
+      "code": "TS2322",
+      "message": "Type 'unknown' is not assignable to type 'CustomPluginParams | SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | null | undefined'."
+    },
+    {
+      "file": "src/server/services/community/index.ts",
+      "line": 2139,
+      "column": 11,
+      "code": "TS2322",
+      "message": "Type 'unknown' is not assignable to type 'LobeChatPluginManifest | SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | null | undefined'."
+    },
+    {
+      "file": "src/server/services/community/index.ts",
+      "line": 2140,
+      "column": 11,
+      "code": "TS2322",
+      "message": "Type 'unknown' is not assignable to type 'CustomPluginParams | SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | null | undefined'."
+    },
+    {
+      "file": "src/services/discover.ts",
+      "line": 440,
+      "column": 48,
+      "code": "TS2339",
+      "message": "Property 'registerM2MToken' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 89,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 93,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 97,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 103,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 112,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 123,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 141,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 153,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 160,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 167,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 177,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 188,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 203,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 212,
+      "column": 31,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 219,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 234,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 241,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    },
+    {
+      "file": "src/services/social.ts",
+      "line": 252,
+      "column": 32,
+      "code": "TS2339",
+      "message": "Property 'social' does not exist on type 'DecoratedProcedureRecord<{ transformer: true; errorShape: DefaultErrorShape | { data: { errorData: unknown; code: \"BAD_REQUEST\" | \"UNAUTHORIZED\" | \"PAYMENT_REQUIRED\" | \"FORBIDDEN\" | \"NOT_FOUND\" | ... 15 more ... | \"CLIENT_CLOSED_REQUEST\"; httpStatus: number; path?: string | undefined; stack?: string | undefined; }; ...'."
+    }
+  ],
+  "relocated": [],
+  "comparison": "Multiset of file + TS code + first diagnostic message; line/column shifts separately recorded. Original-versus-round1 exact comparison is in audit/types/comparison.json.",
+  "wholeRepositoryTypeCheckPassed": false,
+  "finalExitCode": 2
+}

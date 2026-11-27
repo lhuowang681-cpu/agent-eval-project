@@ -1,0 +1,11 @@
+[mock-llm] listening on http://127.0.0.1:18088
+[mock-llm] scenario: simple
+[mock-llm] firstTokenDelay=0ms tokensPerSecond=0
+[mock-llm] point the app at OPENAI_PROXY_URL=http://localhost:18088/v1
+[mock-llm] config updated: {
+  embeddingDimensions: 1536,
+  firstTokenDelayMs: 0,
+  port: 18088,
+  scenario: 'simple',
+  tokensPerSecond: 0
+}

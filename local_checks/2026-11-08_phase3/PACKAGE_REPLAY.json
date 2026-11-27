@@ -1,0 +1,118 @@
+{
+  "command": [
+    "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "experiment/run.py",
+    "data/development.jsonl",
+    "portable-replay"
+  ],
+  "exitCode": 0,
+  "developmentCases": 12,
+  "methodsPerEngine": 5,
+  "versions": 2,
+  "outputsMatchSavedIgnoringTiming": true,
+  "realModelCalls": 0,
+  "holdoutEngineRerun": false,
+  "holdoutHashValidatorExitCode": 0,
+  "noPlatformOrNodeDependenciesUsed": true,
+  "replayedSourceEntries": [
+    {
+      "path": "phase3/experiment/run.py",
+      "sha256": "51de35013ece485a09685c81153bd8cdaf7475f71440dd091fb26adb36e47f54"
+    },
+    {
+      "path": "phase3/experiment/engine_worker.py",
+      "sha256": "1f145e9dd86c2c9bc66b4be93014c7cd89434eb795732263b791d6375e8cba92"
+    },
+    {
+      "path": "phase3/experiment/metrics.py",
+      "sha256": "65c83aac8d3b14186b8a0f9d9e683c099349108b11cdf70349d16cf7999caac4"
+    },
+    {
+      "path": "phase3/data/development.jsonl",
+      "sha256": "bff0c6d21240ff74143453416e6e356abb810bccb9f8a47717c0c2423a10f583"
+    },
+    {
+      "path": "phase3/baseline/adapter.py",
+      "sha256": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b"
+    },
+    {
+      "path": "phase3/baseline/engine-version.json",
+      "sha256": "b79f89306373c0e6ff09752626cc505a6a7186da8b84dd4db5727ffb78fb3a53"
+    },
+    {
+      "path": "phase3/baseline/evidence_review.py",
+      "sha256": "d9ea1fb10ade950a05118904cade82882fba26227735bb0474eeff67aa986f29"
+    },
+    {
+      "path": "phase3/baseline/MANIFEST.json",
+      "sha256": "2420c3a663bfce501779af0943f996cc155db51f379db4dd853d73c9143002c5"
+    },
+    {
+      "path": "phase3/baseline/provenance.json",
+      "sha256": "711907b0f4c9273a1d24c475e09e530290d7c1854d40197855335f8ed25d3347"
+    },
+    {
+      "path": "phase3/baseline/README.md",
+      "sha256": "cd4d409df9d8ce97f4c29cdcb13a3e5914a31496355ec093ac6e05df3bbd5f2e"
+    },
+    {
+      "path": "phase3/baseline/review_cli.py",
+      "sha256": "d08346f1ff38745b2616a616e5ed88374e7cfcfb9e9e1e97e01fbb69f7b914d2"
+    },
+    {
+      "path": "phase3/baseline/rules_pure.py",
+      "sha256": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e"
+    },
+    {
+      "path": "phase3/baseline/test_adapter.py",
+      "sha256": "108c2f9d18ae0883ab3a53e024b8aa9161e4bc329fe5b1ebaf654ebb6d088e0b"
+    },
+    {
+      "path": "phase3/baseline/test_evidence_review.py",
+      "sha256": "8d09b0a937c9f7923b33ab7f0e1ddb7b6d12663e016705bb714d58f9ed8a5258"
+    },
+    {
+      "path": "phase3/optimized/adapter.py",
+      "sha256": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b"
+    },
+    {
+      "path": "phase3/optimized/engine-version.json",
+      "sha256": "19247aef34d91a02ae4f93ae94ba027c3874c5823a62729a6716093725f445b7"
+    },
+    {
+      "path": "phase3/optimized/evidence_review.py",
+      "sha256": "310fd00767ef9da00eb2a222d497ed1e58d95132854dd4d11d1b96515c1a52ff"
+    },
+    {
+      "path": "phase3/optimized/MANIFEST.json",
+      "sha256": "5e1c207297a16fe4ef987c5f6cfabdd1be5261e1e60a9a5d2ccd27bac5947373"
+    },
+    {
+      "path": "phase3/optimized/provenance.json",
+      "sha256": "711907b0f4c9273a1d24c475e09e530290d7c1854d40197855335f8ed25d3347"
+    },
+    {
+      "path": "phase3/optimized/README.md",
+      "sha256": "83a1bd06a4af444a6e100e6ec88a0b208c868b5b491f806152abb3049d122b46"
+    },
+    {
+      "path": "phase3/optimized/review_cli.py",
+      "sha256": "d08346f1ff38745b2616a616e5ed88374e7cfcfb9e9e1e97e01fbb69f7b914d2"
+    },
+    {
+      "path": "phase3/optimized/rules_pure.py",
+      "sha256": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e"
+    },
+    {
+      "path": "phase3/optimized/test_adapter.py",
+      "sha256": "108c2f9d18ae0883ab3a53e024b8aa9161e4bc329fe5b1ebaf654ebb6d088e0b"
+    },
+    {
+      "path": "phase3/optimized/test_evidence_review.py",
+      "sha256": "77bc139da75307df830f6db12e1698ca6254562ddfd1844e29078214da7ff5fa"
+    }
+  ]
+}

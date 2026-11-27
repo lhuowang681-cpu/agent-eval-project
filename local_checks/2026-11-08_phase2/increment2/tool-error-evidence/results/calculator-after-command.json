@@ -1,0 +1,15 @@
+{
+  "label": "calculator-after",
+  "cwd": "../../../../local_checks/2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "../../2026-11-08_phase2/increment2/tool-error-evidence/vitest.config.mts",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_phase2/increment2/tool-error-evidence/after.json"
+  ],
+  "exitCode": 0,
+  "seconds": 5.91
+}

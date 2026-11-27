@@ -1,0 +1,19 @@
+node:internal/modules/esm/resolve:314
+  return new ERR_PACKAGE_PATH_NOT_EXPORTED(
+         ^
+
+Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: No "exports" main defined in C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\packages\builtin-tool-local-system\node_modules\path-browserify-esm\package.json
+    at exportsNotFound (node:internal/modules/esm/resolve:314:10)
+    at packageExportsResolve (node:internal/modules/esm/resolve:605:13)
+    at resolveExports (node:internal/modules/cjs/loader:707:36)
+    at Module._findPath (node:internal/modules/cjs/loader:774:31)
+    at node:internal/modules/cjs/loader:1502:27
+    at T._resolveFilename (file:///C:/Users/1/Desktop/%E5%B0%B1%E4%B8%9Aagent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/.pnpm/tsx@4.23.0/node_modules/tsx/dist/register-D5KIhaFJ.mjs:2:15244)
+    at nextResolveSimple (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:10:1017)
+    at C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:9:4613
+    at C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:9:3894
+    at resolveTsPaths (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\tsx@4.23.0\node_modules\tsx\dist\register-BLUABhh3.cjs:10:770) {
+  code: 'ERR_PACKAGE_PATH_NOT_EXPORTED'
+}
+
+Node.js v24.19.0

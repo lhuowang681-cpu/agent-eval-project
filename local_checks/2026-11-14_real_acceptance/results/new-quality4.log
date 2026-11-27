@@ -1,0 +1,9 @@
+test_canonical_object_reference (__main__.QualityTests.test_canonical_object_reference) ... ok
+test_explicit_category_granularity (__main__.QualityTests.test_explicit_category_granularity) ... ok
+test_fake_reference_not_valid (__main__.QualityTests.test_fake_reference_not_valid) ... ok
+test_semantic_type_strict (__main__.QualityTests.test_semantic_type_strict) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

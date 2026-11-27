@@ -1,0 +1,363 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform[39m
+
+2026-11-08T09:03:53.940Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_vBXHVJO7RNVi
+2026-11-08T09:03:53.944Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-08T09:03:53.947Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1041,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mkeeps completed metrics and duration on a delayed sequential duplicate
+[22m[39m[finalize-run] Run run_vBXHVJO7RNVi completed: score=1.00 pass=1/1 error=0
+
+2026-11-08T09:03:53.952Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_vBXHVJO7RNVi
+2026-11-08T09:03:53.956Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-08T09:03:53.956Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 31048,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mkeeps completed metrics and duration on a delayed sequential duplicate
+[22m[39m[finalize-run] Run run_vBXHVJO7RNVi completed: score=1.00 pass=1/1 error=0
+
+2026-11-08T09:03:54.030Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_0JxSfbVMYZk0
+2026-11-08T09:03:54.035Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-08T09:03:54.035Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 31018,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mpreserves already terminal failed
+[22m[39m[finalize-run] Run run_0JxSfbVMYZk0 completed: score=1.00 pass=1/1 error=0
+
+2026-11-08T09:03:54.117Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_oi1oc8FnkoZc
+2026-11-08T09:03:54.118Z lobe-server:agent-eval-run:orchestrator Run aborted, skipping finalize: runId=run_oi1oc8FnkoZc
+2026-11-08T09:03:54.195Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_3mxSkf78gJFJ
+2026-11-08T09:03:54.204Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-08T09:03:54.256Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_3mxSkf78gJFJ
+2026-11-08T09:03:54.260Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-08T09:03:54.317Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1041,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2matomically keeps the first finalization when two callbacks computed different durations
+[22m[39m[finalize-run] Run run_3mxSkf78gJFJ completed: score=1.00 pass=1/1 error=0
+
+2026-11-08T09:03:54.320Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 31093,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2matomically keeps the first finalization when two callbacks computed different durations
+[22m[39m[finalize-run] Run run_3mxSkf78gJFJ completed: score=1.00 pass=1/1 error=0
+
+2026-11-08T09:03:54.394Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_YwSoxVx1H8bq
+2026-11-08T09:03:54.399Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-08T09:03:54.457Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1047,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mdoes not overwrite an abort which arrives after metrics calculation
+[22m[39m[finalize-run] Run run_YwSoxVx1H8bq completed: score=1.00 pass=1/1 error=0
+
+2026-11-08T09:03:54.524Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_pCpJ03fLRa4p
+2026-11-08T09:03:54.527Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-08T09:03:54.527Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1027,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mallows valid external to finalize after external scoring or retry
+[22m[39m[finalize-run] Run run_pCpJ03fLRa4p completed: score=1.00 pass=1/1 error=0
+
+2026-11-08T09:03:54.595Z lobe-server:agent-eval-run:orchestrator finalizeRun: runId=run_bbMyAvEtinDX
+2026-11-08T09:03:54.598Z lobe-server:agent-eval-run:orchestrator Total RunTopics: 1
+2026-11-08T09:03:54.599Z lobe-server:agent-eval-run:orchestrator Metrics: {
+  averageScore: 1,
+  completedCases: 1,
+  cost: undefined,
+  duration: 1029,
+  errorCases: 0,
+  externalCases: undefined,
+  failedCases: 0,
+  llmCalls: undefined,
+  passRate: 1,
+  passedCases: 1,
+  perCaseCost: undefined,
+  perCaseLlmCalls: undefined,
+  perCaseSteps: undefined,
+  perCaseTokens: undefined,
+  perCaseToolCalls: undefined,
+  rubricScores: { 'eval-mode-contains': 1 },
+  steps: undefined,
+  timeoutCases: 0,
+  tokens: undefined,
+  toolCalls: undefined,
+  totalCases: 1,
+  totalCost: undefined,
+  totalDuration: undefined,
+  totalTokens: undefined
+}
+[90mstdout[2m | src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22m[2mrun finalization idempotency[2m > [22m[2mallows valid running to finalize after external scoring or retry
+[22m[39m[finalize-run] Run run_bbMyAvEtinDX completed: score=1.00 pass=1/1 error=0
+
+ [31m❯[39m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts [2m([22m[2m7 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[33m 743[2mms[22m[39m
+[31m   [31m×[31m run finalization idempotency[2m > [22mkeeps completed metrics and duration on a delayed sequential duplicate[39m[32m 114[2mms[22m[39m
+[31m     → expected { duration: 31048, passRate: 1, …(8) } to deeply equal { duration: 1041, passRate: 1, …(8) }[39m
+[31m   [31m×[31m run finalization idempotency[2m > [22mpreserves already terminal failed[39m[32m 67[2mms[22m[39m
+[31m     → expected 'completed' to be 'failed' // Object.is equality[39m
+   [32m✓[39m run finalization idempotency[2m > [22mpreserves already terminal aborted[32m 79[2mms[22m[39m
+[31m   [31m×[31m run finalization idempotency[2m > [22matomically keeps the first finalization when two callbacks computed different durations[39m[32m 204[2mms[22m[39m
+[31m     → expected { duration: 31093, passRate: 1, …(8) } to deeply equal { duration: 1041, passRate: 1, …(8) }[39m
+[31m   [31m×[31m run finalization idempotency[2m > [22mdoes not overwrite an abort which arrives after metrics calculation[39m[32m 139[2mms[22m[39m
+[31m     → expected 'completed' to be 'aborted' // Object.is equality[39m
+   [32m✓[39m run finalization idempotency[2m > [22mallows valid external to finalize after external scoring or retry[32m 68[2mms[22m[39m
+   [32m✓[39m run finalization idempotency[2m > [22mallows valid running to finalize after external scoring or retry[32m 70[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 4 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22mrun finalization idempotency[2m > [22mkeeps completed metrics and duration on a delayed sequential duplicate
+[31m[1mAssertionError[22m: expected { duration: 31048, passRate: 1, …(8) } to deeply equal { duration: 1041, passRate: 1, …(8) }[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -1,9 +1,9 @@[39m
+[2m  {[22m
+[2m    "averageScore": 1,[22m
+[2m    "completedCases": 1,[22m
+[32m-   "duration": 1041,[39m
+[31m+   "duration": 31048,[39m
+[2m    "errorCases": 0,[22m
+[2m    "failedCases": 0,[22m
+[2m    "passRate": 1,[22m
+[2m    "passedCases": 1,[22m
+[2m    "rubricScores": {[22m
+
+[36m [2m❯[22m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts:[2m32:31[22m[39m
+    [90m 30| [39m    [35mconst[39m repeated [33m=[39m [35mawait[39m chain[33m.[39mmodel[33m.[39m[34mfindById[39m(chain[33m.[39mrun[33m.[39mid)[33m;[39m
+    [90m 31| [39m    [34mexpect[39m(repeated[33m?.[39mstatus)[33m.[39m[34mtoBe[39m([32m'completed'[39m)[33m;[39m
+    [90m 32| [39m    [34mexpect[39m(repeated[33m?.[39mmetrics)[33m.[39m[34mtoEqual[39m(frozen[33m?.[39mmetrics)[33m;[39m
+    [90m   | [39m                              [31m^[39m
+    [90m 33| [39m    [34mexpect[39m(repeated[33m?.[39mupdatedAt)[33m.[39m[34mtoEqual[39m(frozen[33m?.[39mupdatedAt)[33m;[39m
+    [90m 34| [39m  })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22mrun finalization idempotency[2m > [22mpreserves already terminal failed
+[31m[1mAssertionError[22m: expected 'completed' to be 'failed' // Object.is equality[39m
+
+Expected: [32m"[7mfail[27med"[39m
+Received: [31m"[7mcomplet[27med"[39m
+
+[36m [2m❯[22m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts:[2m42:30[22m[39m
+    [90m 40| [39m    await chain.orchestrator.finalizeRun({ runId: chain.run.id, userId…
+    [90m 41| [39m    [35mconst[39m repeated [33m=[39m [35mawait[39m chain[33m.[39mmodel[33m.[39m[34mfindById[39m(chain[33m.[39mrun[33m.[39mid)[33m;[39m
+    [90m 42| [39m    expect(repeated?.status).toBe(status); expect(repeated?.metrics).t…
+    [90m   | [39m                             [31m^[39m
+    [90m 43| [39m  })[33m;[39m
+    [90m 44| [39m  it('atomically keeps the first finalization when two callbacks compu…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22mrun finalization idempotency[2m > [22matomically keeps the first finalization when two callbacks computed different durations
+[31m[1mAssertionError[22m: expected { duration: 31093, passRate: 1, …(8) } to deeply equal { duration: 1041, passRate: 1, …(8) }[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -1,9 +1,9 @@[39m
+[2m  {[22m
+[2m    "averageScore": 1,[22m
+[2m    "completedCases": 1,[22m
+[32m-   "duration": 1041,[39m
+[31m+   "duration": 31093,[39m
+[2m    "errorCases": 0,[22m
+[2m    "failedCases": 0,[22m
+[2m    "passRate": 1,[22m
+[2m    "passedCases": 1,[22m
+[2m    "rubricScores": {[22m
+
+[36m [2m❯[22m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts:[2m61:65[22m[39m
+    [90m 59| [39m    [35mconst[39m frozen [33m=[39m [35mawait[39m chain[33m.[39mmodel[33m.[39m[34mfindById[39m(chain[33m.[39mrun[33m.[39mid)[33m;[39m
+    [90m 60| [39m    releases[[34m1[39m]()[33m;[39m [35mawait[39m second[33m;[39m
+    [90m 61| [39m    expect((await chain.model.findById(chain.run.id))?.metrics).toEqua…
+    [90m   | [39m                                                                [31m^[39m
+    [90m 62| [39m  })[33m;[39m
+    [90m 63| [39m  it('does not overwrite an abort which arrives after metrics calculat…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts[2m > [22mrun finalization idempotency[2m > [22mdoes not overwrite an abort which arrives after metrics calculation
+[31m[1mAssertionError[22m: expected 'completed' to be 'aborted' // Object.is equality[39m
+
+Expected: [32m"[7mabor[27mted"[39m
+Received: [31m"[7mcomple[27mted"[39m
+
+[36m [2m❯[22m src/server/services/agentEvalRun/__tests__/finalizeIdempotency.integration.test.ts:[2m77:64[22m[39m
+    [90m 75| [39m    [35mconst[39m frozen [33m=[39m [35mawait[39m chain[33m.[39mmodel[33m.[39m[34mfindById[39m(chain[33m.[39mrun[33m.[39mid)[33m;[39m
+    [90m 76| [39m    [34mrelease[39m()[33m;[39m [35mawait[39m pending[33m;[39m
+    [90m 77| [39m    expect((await chain.model.findById(chain.run.id))?.status).toBe('a…
+    [90m   | [39m                                                               [31m^[39m
+    [90m 78| [39m    expect((await chain.model.findById(chain.run.id))?.metrics).toEqua…
+    [90m 79| [39m  })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m3 passed[39m[22m[90m (7)[39m
+[2m   Start at [22m 17:03:25
+[2m   Duration [22m 29.38s[2m (transform 5.07s, setup 3.60s, collect 24.56s, tests 743ms, environment 0ms, prepare 125ms)[22m
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase2/increment1/finalize-before.json

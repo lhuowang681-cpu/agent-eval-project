@@ -1,0 +1,24 @@
+▲ Next.js 16.1.5 (Turbopack)
+- Local:         http://127.0.0.1:54559
+- Network:       http://127.0.0.1:54559
+- Experiments (use with caution):
+  · optimizePackageImports
+  ⨯ serverMinification
+  · webVitalsAttribution
+
+✓ Starting...
+○ Compiling instrumentation Node.js ...
+○ Compiling proxy ...
+[instrumentation] vampire-core serverHook activated
+[instrumentation] vampire-core bootstrap() invoked
+[instrumentation] node.ts loaded
+[bootstrap] ZXQSTASH_TOKEN not set — skipping schedule "lobe-task-schedule-dispatch".
+[bootstrap] ZXQSTASH_TOKEN not set — skipping schedule "memory-user-memory.call-cron-hourly-analysis".
+[bootstrap] ZXQSTASH_TOKEN not set — skipping schedule "lobe-agent-operation-watchdog".
+2026-11-08T06:33:21.579Z lobe-server:api-key-cache-bus Redis not configured — API key cache invalidation falls back to TTL only
+✓ Ready in 25.5s
+(node:47968) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+○ Compiling /[variants]/signin ...
+ GET /zh-CN__0/signin?callbackUrl=http%3A%2F%2F127.0.0.1%3A54559%2F 200 in 7.7s (compile: 6.8s, render: 852ms)
+ GET /zh-CN__0/signin?callbackUrl=http%3A%2F%2F127.0.0.1%3A54559%2Feval 200 in 114ms (compile: 14ms, render: 101ms)

@@ -1,0 +1,9 @@
+{
+  "scope": "Ephemeral authorization values only; request/status/error evidence retained.",
+  "files": [
+    {
+      "path": "http/next-increment12-accepted.log",
+      "count": 48
+    }
+  ]
+}

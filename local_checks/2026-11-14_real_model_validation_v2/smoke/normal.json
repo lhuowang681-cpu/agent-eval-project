@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "trajectoryId": "smoke-normal",
+  "inputDigest": "smoke-normal-digest",
+  "scope": {
+    "runId": "smoke-normalrun",
+    "caseId": "smoke-normal",
+    "topicId": "smoke-normaltopic",
+    "threadId": null,
+    "operationId": "smoke-normalop",
+    "traceIds": []
+  },
+  "nodes": [
+    {
+      "id": "smoke-normal-u",
+      "messageId": "u",
+      "parentId": null,
+      "role": "user",
+      "content": "{\"orderId\": \"smoke-normal-order\", \"year\": 2025}",
+      "sourcePointer": "synthetic/u",
+      "error": null,
+      "toolCallId": null,
+      "toolSource": "unknown",
+      "toolName": null,
+      "arguments": null,
+      "traceId": null,
+      "sequence": 0,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-normal-c",
+      "messageId": "c",
+      "parentId": null,
+      "role": "call",
+      "content": "",
+      "sourcePointer": "synthetic/c",
+      "error": null,
+      "toolCallId": "tc1",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": "{\"orderId\": \"smoke-normal-order\", \"year\": 2025}",
+      "traceId": null,
+      "sequence": 1,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-normal-r",
+      "messageId": "r",
+      "parentId": null,
+      "role": "tool",
+      "content": "{\"success\": true, \"data\": {\"orderId\": \"smoke-normal-order\", \"status\": \"pending\", \"year\": 2025}}",
+      "sourcePointer": "synthetic/r",
+      "error": null,
+      "toolCallId": "tc1",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": null,
+      "traceId": null,
+      "sequence": 2,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-normal-a",
+      "messageId": "a",
+      "parentId": null,
+      "role": "assistant",
+      "content": "{\"orderId\": \"smoke-normal-order\", \"status\": \"pending\", \"year\": 2025}",
+      "sourcePointer": "synthetic/a",
+      "error": null,
+      "toolCallId": null,
+      "toolSource": "unknown",
+      "toolName": null,
+      "arguments": null,
+      "traceId": null,
+      "sequence": 8,
+      "createdAt": null
+    }
+  ],
+  "coverage": {
+    "source": "database_messages",
+    "complete": false,
+    "warnings": [
+      "provider_request_payload_unavailable"
+    ]
+  },
+  "evaluation": {
+    "status": "failed",
+    "score": 0,
+    "task": "{\"orderId\": \"smoke-normal-order\", \"year\": 2025}",
+    "expected": null,
+    "actual": "{\"orderId\": \"smoke-normal-order\", \"status\": \"pending\", \"year\": 2025}",
+    "criteria": null
+  }
+}

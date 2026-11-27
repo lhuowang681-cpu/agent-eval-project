@@ -1,0 +1,245 @@
+--- original/packages/eval-rubric/src/evaluate.ts
++++ round1/packages/eval-rubric/src/evaluate.ts
+@@ -49,6 +49,10 @@
+   const { actual: actualOutput, rubrics: inputRubrics, testCase } = params;
+   const { passThreshold = 0.6, matchContext } = options;
+ 
++  if (!Number.isFinite(passThreshold) || passThreshold < 0 || passThreshold > 1) {
++    throw new Error('Invalid pass threshold: expected a finite number between 0 and 1');
++  }
++
+   let rubrics = inputRubrics;
+ 
+   if (!rubrics || rubrics.length === 0) {
+@@ -65,6 +69,13 @@
+     } else {
+       return { passed: false, reason: 'No rubrics configured', rubricResults: [], score: 0 };
+     }
++  }
++
++  if (rubrics.some(({ weight }) => !Number.isFinite(weight) || weight < 0)) {
++    throw new Error('Invalid rubric weight: expected a finite non-negative number');
++  }
++  if (!rubrics.some(({ weight }) => weight > 0)) {
++    throw new Error('Invalid rubric weights: at least one weight must be positive');
+   }
+ 
+   const rubricResults: RubricResult[] = [];
+@@ -85,6 +96,12 @@
+     if (rubric.type !== 'any-of' && expected && isJsonArray(expected)) {
+       // Auto any-of: try each candidate
+       const candidates: string[] = JSON.parse(expected);
++      if (
++        candidates.length === 0 ||
++        candidates.some((candidate) => typeof candidate !== 'string')
++      ) {
++        throw new Error('Expected candidates must be a non-empty array of strings');
++      }
+       const results: MatchResult[] = [];
+       for (const c of candidates) {
+         results.push(
+--- original/packages/eval-rubric/src/matchers/numeric.ts
++++ round1/packages/eval-rubric/src/matchers/numeric.ts
+@@ -8,8 +8,13 @@
+   config: RubricConfig,
+ ): MatchResult => {
+   const cfg = config as { tolerance?: number; value: number };
+-  const actualNum = Number.parseFloat(actual.replaceAll(/[^.\-\d]/g, ''));
+-  if (Number.isNaN(actualNum)) {
++  // Extract one complete number; deleting letters would turn "1e3" into "13"
++  // and concatenate unrelated values such as "1 and 3".
++  const numbers = actual.match(
++    /[+-]?(?:\d{1,3}(?:,\d{3})+(?:\.\d*)?|\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?/g,
++  );
++  const actualNum = numbers?.length === 1 ? Number(numbers[0].replaceAll(',', '')) : Number.NaN;
++  if (!Number.isFinite(actualNum)) {
+     return { passed: false, reason: `Could not parse number from "${actual}"`, score: 0 };
+   }
+   const tolerance = cfg.tolerance ?? 0.01;
+--- original/packages/eval-rubric/src/matchers/regex.ts
++++ round1/packages/eval-rubric/src/matchers/regex.ts
+@@ -4,6 +4,15 @@
+ 
+ export const matchRegex = (actual: string, config: RubricConfig): MatchResult => {
+   const cfg = config as { pattern: string };
+-  const passed = new RegExp(cfg.pattern, 'i').test(actual);
++  if (typeof cfg.pattern !== 'string') {
++    throw new Error('Invalid regex rubric pattern: expected a string');
++  }
++  let pattern: RegExp;
++  try {
++    pattern = new RegExp(cfg.pattern, 'i');
++  } catch {
++    throw new Error('Invalid regex rubric pattern: could not compile regular expression');
++  }
++  const passed = pattern.test(actual);
+   return { passed, score: passed ? 1 : 0 };
+ };
+--- original/packages/eval-rubric/src/matchers/llmRubric.ts
++++ round1/packages/eval-rubric/src/matchers/llmRubric.ts
+@@ -64,7 +64,7 @@
+       schema: JUDGE_SCORE_SCHEMA,
+     });
+ 
+-    if (!result?.score) {
++    if (result?.score === undefined || result.score === null) {
+       return { passed: false, reason: 'LLM judge did not return a score', score: 0 };
+     }
+ 
+--- original/packages/eval-dataset-parser/src/parsers/jsonl.ts
++++ round1/packages/eval-dataset-parser/src/parsers/jsonl.ts
+@@ -3,17 +3,17 @@
+ export function parseJSONL(content: string, options?: ParseOptions): ParseResult {
+   const lines = content
+     .split('\n')
+-    .map((line) => line.trim())
+-    .filter(Boolean);
++    .map((line, index) => ({ line: line.trim(), lineNumber: index + 1 }))
++    .filter(({ line }) => Boolean(line));
+ 
+   const totalCount = lines.length;
+   const linesToParse = options?.preview ? lines.slice(0, options.preview) : lines;
+ 
+-  const rows = linesToParse.map((line, index) => {
++  const rows = linesToParse.map(({ line, lineNumber }) => {
+     try {
+       return JSON.parse(line);
+     } catch {
+-      throw new Error(`Invalid JSON at line ${index + 1}: ${line.slice(0, 100)}`);
++      throw new Error(`Invalid JSON at line ${lineNumber}: ${line.slice(0, 100)}`);
+     }
+   });
+ 
+--- original/packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts
++++ round1/packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts
+@@ -81,6 +81,12 @@
+     expect(result.score).toBe(1);
+   });
+ 
++  it('accepts zero as a valid judge score and keeps its explanation', async () => {
++    mockGenerateObject.mockResolvedValue({ reason: 'Completely incorrect', score: 0 });
++    const result = await matchLLMRubric('x', undefined, rubric(), context);
++    expect(result).toEqual({ passed: false, reason: 'Completely incorrect', score: 0 });
++  });
++
+   it('should return score 0 when generateObject is not available', async () => {
+     const result = await matchLLMRubric('x', undefined, rubric({ criteria: 'test' }));
+ 
+--- /dev/null
++++ round1/packages/eval-rubric/__tests__/boundaries.test.ts
+@@ -0,0 +1,97 @@
++import type { EvalBenchmarkRubric } from '@lobechat/types';
++import { describe, expect, it } from 'vitest';
++
++import { evaluate } from '../src';
++import { matchNumeric } from '../src/matchers/numeric';
++import { matchRegex } from '../src/matchers/regex';
++
++const rubric: EvalBenchmarkRubric = {
++  config: { value: '' },
++  id: 'exact',
++  name: 'Exact',
++  type: 'equals',
++  weight: 1,
++};
++
++describe('scoring input boundaries', () => {
++  it.each(['[]', '[42]', '[null]', '["ok", {}]'])(
++    'rejects invalid expected candidates %s',
++    async (expected: string) => {
++      await expect(
++        evaluate({ actual: 'ok', rubrics: [rubric], testCase: { input: 'question', expected } }),
++      ).rejects.toThrow(/expected.*non-empty.*strings/i);
++    },
++  );
++
++  it.each([-1, Number.NaN, Number.POSITIVE_INFINITY])(
++    'rejects invalid weight %s instead of producing an unbounded score',
++    async (weight: number) => {
++      await expect(
++        evaluate({
++          actual: 'ok',
++          rubrics: [
++            { ...rubric, weight },
++            { ...rubric, id: 'other', weight: 2 },
++          ],
++          testCase: { input: '?', expected: 'ok' },
++        }),
++      ).rejects.toThrow(/weight/i);
++    },
++  );
++
++  it('rejects a configuration with no positive weight', async () => {
++    await expect(
++      evaluate({
++        actual: 'ok',
++        rubrics: [{ ...rubric, weight: 0 }],
++        testCase: { input: '?', expected: 'ok' },
++      }),
++    ).rejects.toThrow(/weight/i);
++  });
++
++  it.each([-0.1, 1.1, Number.NaN, Number.POSITIVE_INFINITY])(
++    'rejects invalid pass threshold %s',
++    async (passThreshold: number) => {
++      await expect(
++        evaluate(
++          { actual: 'ok', rubrics: [rubric], testCase: { input: '?', expected: 'ok' } },
++          { passThreshold },
++        ),
++      ).rejects.toThrow(/threshold/i);
++    },
++  );
++
++  it('allows zero-weight rubrics alongside a positive weight', async () => {
++    const result = await evaluate({
++      actual: 'ok',
++      rubrics: [
++        { ...rubric, weight: 0 },
++        { ...rubric, id: 'other', weight: 2 },
++      ],
++      testCase: { input: '?', expected: 'ok' },
++    });
++    expect(result.score).toBe(1);
++  });
++
++  it('reports an invalid regular expression as a configuration error', () => {
++    expect(() => matchRegex('answer', { pattern: '[' })).toThrow(/invalid.*regex/i);
++  });
++
++  it.each([
++    ['1e3', '1000'],
++    ['-2.5E-2', '-0.025'],
++    ['The answer is +1.2e+3 units.', '1200'],
++    ['$1,234.50', '1234.5'],
++    ['.5', '0.5'],
++  ])('preserves numeric meaning of %s', (actual: string, expected: string) => {
++    expect(matchNumeric(actual, expected, { value: 0 }).passed).toBe(true);
++  });
++
++  it('does not turn 1e3 into 13', () => {
++    expect(matchNumeric('1e3', '13', { value: 0 }).passed).toBe(false);
++  });
++
++  it('does not concatenate unrelated numbers', () => {
++    expect(matchNumeric('1 and 3', '13', { value: 0 }).passed).toBe(false);
++  });
++});
+--- /dev/null
++++ round1/packages/eval-dataset-parser/__tests__/jsonl-lines.test.ts
+@@ -0,0 +1,15 @@
++import { describe, expect, it } from 'vitest';
++
++import { parseJSONL } from '../src/parsers/jsonl';
++
++describe('JSONL physical line numbers', () => {
++  it('locates malformed JSON after a blank line', () => {
++    expect(() => parseJSONL('{"input":"ok"}\n\ninvalid')).toThrow('Invalid JSON at line 3:');
++  });
++
++  it('keeps preview and totalCount based on records rather than physical lines', () => {
++    const result = parseJSONL('\n{"input":"first"}\n \n{"input":"second"}\n', { preview: 1 });
++    expect(result.rows).toEqual([{ input: 'first' }]);
++    expect(result.totalCount).toBe(2);
++  });
++});

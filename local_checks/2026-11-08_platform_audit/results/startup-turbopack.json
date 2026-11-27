@@ -1,0 +1,39 @@
+{
+  "mode": "turbopack",
+  "ports": {
+    "database": 54558,
+    "next": 54559
+  },
+  "events": [
+    {
+      "stage": "pglite",
+      "tcpReady": true,
+      "exitCode": null
+    },
+    {
+      "stage": "seed",
+      "exitCode": 0
+    },
+    {
+      "stage": "next",
+      "tcpReady": true,
+      "exitCode": null
+    },
+    {
+      "stage": "http",
+      "path": "/",
+      "status": 200,
+      "bytes": 99241,
+      "seconds": 33.91
+    },
+    {
+      "stage": "http",
+      "path": "/eval",
+      "status": 200,
+      "bytes": 100593,
+      "seconds": 0.16
+    }
+  ],
+  "allOwnedProcessesStopped": true,
+  "conditions": "PGlite without BM25; private dependencies use original stubs; no model credentials supplied; no browser interaction tested"
+}

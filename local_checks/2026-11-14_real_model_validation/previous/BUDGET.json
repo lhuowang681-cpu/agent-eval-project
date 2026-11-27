@@ -1,0 +1,17 @@
+{
+  "authorizedPaidRequests": 0,
+  "actualPaidRequests": 0,
+  "paidEnabledByDefault": false,
+  "futureProposalRequiresNewAuthorization": {
+    "requests": 4,
+    "maxOutputTokensPerRequest": 800,
+    "totalOutputTokenCap": 3200,
+    "inputTraceByteCap": 12000,
+    "maxNodes": 30,
+    "deadlineMs": 15000,
+    "model": null,
+    "rate": null,
+    "monetaryEstimate": null,
+    "reason": "No chosen model/rates or approved monetary cap; do not send requests."
+  }
+}

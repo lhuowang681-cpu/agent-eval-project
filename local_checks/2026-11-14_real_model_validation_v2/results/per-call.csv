@@ -1,0 +1,7 @@
+﻿version,case,contractValid,rawClaims,supported,originalRules,enhancedRulesSupported,LLMOnly,latencyMs
+v1,parameter_closed,False,0,0,0,1,0,2857
+v2,parameter_closed,True,1,0,0,1,0,1197.5647999999992
+v2,answer_mismatch,False,1,0,0,1,0,2538.6639000000014
+v3,answer_mismatch,True,1,1,0,1,0,1525.4534000000003
+v3,normal,True,0,0,0,0,0,1495.5442999999996
+v3,recovered,True,0,0,0,0,0,1104.3234000000011

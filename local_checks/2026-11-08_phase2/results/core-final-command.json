@@ -1,0 +1,21 @@
+{
+  "label": "core-final",
+  "cwd": "../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "../tooling/node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "../tooling/audit-core.config.mts",
+    "packages/agent-runtime",
+    "packages/eval-rubric",
+    "packages/eval-dataset-parser",
+    "--maxWorkers=2",
+    "--fileParallelism=true",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_phase2/regression-core-final.json"
+  ],
+  "exitCode": 0,
+  "seconds": 5.78
+}

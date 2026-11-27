@@ -1,0 +1,678 @@
+{
+  "status": "passed",
+  "conditions": "Real PostgreSQL 16.15 + pgvector; 2 BM25 migrations skipped. Real HTTP/Agent runtime/async eval routes; original local Mock LLM, not model quality evidence; browser evidence recorded separately in ui directory",
+  "events": [
+    {
+      "version": "v1",
+      "runId": "run_URuVoSruWG1L",
+      "startResponse": {
+        "success": true,
+        "runId": "run_URuVoSruWG1L"
+      },
+      "detail": {
+        "id": "run_URuVoSruWG1L",
+        "datasetId": "ds_orRWhK1PvxUC",
+        "targetAgentId": "agt_eu7HEgBsAcRt",
+        "userId": "round1-audit-user",
+        "name": "v1",
+        "status": "completed",
+        "config": {
+          "timeout": 60000,
+          "maxSteps": 8,
+          "agentSnapshot": {
+            "model": "mock-model",
+            "params": {
+              "top_p": 1,
+              "temperature": 1,
+              "presence_penalty": 0,
+              "frequency_penalty": 0
+            },
+            "plugins": [],
+            "provider": "openai",
+            "chatConfig": {
+              "searchMode": "auto",
+              "historyCount": 20,
+              "searchFCModel": {
+                "model": "claude-sonnet-4-6",
+                "provider": "openai"
+              },
+              "enableReasoning": true,
+              "enableStreaming": true,
+              "enableHistoryCount": false,
+              "reasoningBudgetToken": 1024,
+              "enableAutoCreateTopic": true,
+              "enableCompressHistory": true,
+              "enableAdaptiveThinking": true,
+              "autoCreateTopicThreshold": 2,
+              "enableContextCompression": true
+            },
+            "systemRole": "Synthetic v1",
+            "description": null
+          },
+          "maxConcurrency": 1
+        },
+        "metrics": {
+          "steps": 3,
+          "tokens": 36255,
+          "duration": 2242,
+          "llmCalls": 3,
+          "passRate": 1,
+          "errorCases": 0,
+          "totalCases": 3,
+          "failedCases": 0,
+          "passedCases": 3,
+          "totalTokens": 36255,
+          "averageScore": 1,
+          "perCaseSteps": 1,
+          "rubricScores": {
+            "eval-mode-contains": 1
+          },
+          "timeoutCases": 0,
+          "perCaseTokens": 12085,
+          "totalDuration": 2677,
+          "completedCases": 3,
+          "perCaseLlmCalls": 1
+        },
+        "startedAt": "2026-11-08T07:32:53.705Z",
+        "accessedAt": "2026-11-08T07:32:55.949Z",
+        "createdAt": "2026-11-08T07:32:41.879Z",
+        "updatedAt": "2026-11-08T07:32:55.948Z",
+        "dataset": {
+          "id": "ds_orRWhK1PvxUC",
+          "benchmarkId": "evb_np2UMFX7QzZ5",
+          "identifier": "three-1794123161494411100",
+          "userId": "round1-audit-user",
+          "name": "Three synthetic cases",
+          "description": null,
+          "evalMode": "contains",
+          "evalConfig": null,
+          "metadata": null,
+          "accessedAt": "2026-11-08T07:32:41.540Z",
+          "createdAt": "2026-11-08T07:32:41.540Z",
+          "updatedAt": "2026-11-08T07:32:41.540Z",
+          "testCases": [
+            {
+              "id": "case_YzOddP4gR45q",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 0",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            {
+              "id": "case_EQy0CDE96Yst",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 1",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            {
+              "id": "case_09G7rrXhotXL",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 2",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            }
+          ]
+        },
+        "targetAgent": {
+          "avatar": null,
+          "id": "agt_eu7HEgBsAcRt",
+          "model": "mock-model",
+          "provider": "openai",
+          "title": null
+        },
+        "topics": [
+          {
+            "createdAt": "2026-11-08T07:32:41.906Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12085,
+              "duration": 1023,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123174852_agt_eu7HEgBsAcRt_tpc_jMuejVfJ40KQ_r3cnuxS9",
+              "rubricScores": [
+                {
+                  "score": 1,
+                  "rubricId": "eval-mode-contains"
+                }
+              ],
+              "completionReason": "done"
+            },
+            "passed": true,
+            "score": 1,
+            "status": "passed",
+            "testCase": {
+              "id": "case_YzOddP4gR45q",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 0",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            "testCaseId": "case_YzOddP4gR45q",
+            "topic": {
+              "id": "tpc_jMuejVfJ40KQ",
+              "title": "[Eval Case #1] Synthetic question 0...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:32:55.406Z",
+              "createdAt": "2026-11-08T07:32:41.896Z",
+              "updatedAt": "2026-11-08T07:32:55.406Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T07:32:41.906Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12085,
+              "duration": 791,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123174812_agt_eu7HEgBsAcRt_tpc_wRyzxUJ4Ye95_JzPnuf2b",
+              "rubricScores": [
+                {
+                  "score": 1,
+                  "rubricId": "eval-mode-contains"
+                }
+              ],
+              "completionReason": "done"
+            },
+            "passed": true,
+            "score": 1,
+            "status": "passed",
+            "testCase": {
+              "id": "case_EQy0CDE96Yst",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 1",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            "testCaseId": "case_EQy0CDE96Yst",
+            "topic": {
+              "id": "tpc_wRyzxUJ4Ye95",
+              "title": "[Eval Case #2] Synthetic question 1...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:32:55.196Z",
+              "createdAt": "2026-11-08T07:32:41.896Z",
+              "updatedAt": "2026-11-08T07:32:55.196Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T07:32:41.906Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12085,
+              "duration": 863,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123174855_agt_eu7HEgBsAcRt_tpc_kLiaj36SYnZ4_9Wjiz9x9",
+              "rubricScores": [
+                {
+                  "score": 1,
+                  "rubricId": "eval-mode-contains"
+                }
+              ],
+              "completionReason": "done"
+            },
+            "passed": true,
+            "score": 1,
+            "status": "passed",
+            "testCase": {
+              "id": "case_09G7rrXhotXL",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 2",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            "testCaseId": "case_09G7rrXhotXL",
+            "topic": {
+              "id": "tpc_kLiaj36SYnZ4",
+              "title": "[Eval Case #3] Synthetic question 2...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:32:55.410Z",
+              "createdAt": "2026-11-08T07:32:41.896Z",
+              "updatedAt": "2026-11-08T07:32:55.410Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "version": "v2",
+      "runId": "run_TucxSkIGmriw",
+      "startResponse": {
+        "success": true,
+        "runId": "run_TucxSkIGmriw"
+      },
+      "detail": {
+        "id": "run_TucxSkIGmriw",
+        "datasetId": "ds_orRWhK1PvxUC",
+        "targetAgentId": "agt_eu7HEgBsAcRt",
+        "userId": "round1-audit-user",
+        "name": "v2",
+        "status": "completed",
+        "config": {
+          "timeout": 60000,
+          "maxSteps": 8,
+          "agentSnapshot": {
+            "model": "mock-model",
+            "params": {
+              "top_p": 1,
+              "temperature": 1,
+              "presence_penalty": 0,
+              "frequency_penalty": 0
+            },
+            "plugins": [],
+            "provider": "openai",
+            "chatConfig": {
+              "searchMode": "auto",
+              "historyCount": 20,
+              "searchFCModel": {
+                "model": "claude-sonnet-4-6",
+                "provider": "openai"
+              },
+              "enableReasoning": true,
+              "enableStreaming": true,
+              "enableHistoryCount": false,
+              "reasoningBudgetToken": 1024,
+              "enableAutoCreateTopic": true,
+              "enableCompressHistory": true,
+              "enableAdaptiveThinking": true,
+              "autoCreateTopicThreshold": 2,
+              "enableContextCompression": true
+            },
+            "systemRole": "Synthetic v2",
+            "description": null
+          },
+          "maxConcurrency": 1
+        },
+        "metrics": {
+          "steps": 3,
+          "tokens": 36255,
+          "duration": 1168,
+          "llmCalls": 3,
+          "passRate": 1,
+          "errorCases": 0,
+          "totalCases": 3,
+          "failedCases": 0,
+          "passedCases": 3,
+          "totalTokens": 36255,
+          "averageScore": 1,
+          "perCaseSteps": 1,
+          "rubricScores": {
+            "eval-mode-contains": 1
+          },
+          "timeoutCases": 0,
+          "perCaseTokens": 12085,
+          "totalDuration": 1720,
+          "completedCases": 3,
+          "perCaseLlmCalls": 1
+        },
+        "startedAt": "2026-11-08T07:32:57.418Z",
+        "accessedAt": "2026-11-08T07:32:58.587Z",
+        "createdAt": "2026-11-08T07:32:57.116Z",
+        "updatedAt": "2026-11-08T07:32:58.586Z",
+        "dataset": {
+          "id": "ds_orRWhK1PvxUC",
+          "benchmarkId": "evb_np2UMFX7QzZ5",
+          "identifier": "three-1794123161494411100",
+          "userId": "round1-audit-user",
+          "name": "Three synthetic cases",
+          "description": null,
+          "evalMode": "contains",
+          "evalConfig": null,
+          "metadata": null,
+          "accessedAt": "2026-11-08T07:32:41.540Z",
+          "createdAt": "2026-11-08T07:32:41.540Z",
+          "updatedAt": "2026-11-08T07:32:41.540Z",
+          "testCases": [
+            {
+              "id": "case_YzOddP4gR45q",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 0",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            {
+              "id": "case_EQy0CDE96Yst",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 1",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            {
+              "id": "case_09G7rrXhotXL",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 2",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            }
+          ]
+        },
+        "targetAgent": {
+          "avatar": null,
+          "id": "agt_eu7HEgBsAcRt",
+          "model": "mock-model",
+          "provider": "openai",
+          "title": null
+        },
+        "topics": [
+          {
+            "createdAt": "2026-11-08T07:32:57.126Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12085,
+              "duration": 587,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123177769_agt_eu7HEgBsAcRt_tpc_7rh56rDDvdUc_mbhedygl",
+              "rubricScores": [
+                {
+                  "score": 1,
+                  "rubricId": "eval-mode-contains"
+                }
+              ],
+              "completionReason": "done"
+            },
+            "passed": true,
+            "score": 1,
+            "status": "passed",
+            "testCase": {
+              "id": "case_YzOddP4gR45q",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 0",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            "testCaseId": "case_YzOddP4gR45q",
+            "topic": {
+              "id": "tpc_7rh56rDDvdUc",
+              "title": "[Eval Case #1] Synthetic question 0...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:32:58.012Z",
+              "createdAt": "2026-11-08T07:32:57.120Z",
+              "updatedAt": "2026-11-08T07:32:58.012Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T07:32:57.126Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12085,
+              "duration": 570,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123177767_agt_eu7HEgBsAcRt_tpc_XuDcBYNTtarG_A50G6stJ",
+              "rubricScores": [
+                {
+                  "score": 1,
+                  "rubricId": "eval-mode-contains"
+                }
+              ],
+              "completionReason": "done"
+            },
+            "passed": true,
+            "score": 1,
+            "status": "passed",
+            "testCase": {
+              "id": "case_EQy0CDE96Yst",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 1",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            "testCaseId": "case_EQy0CDE96Yst",
+            "topic": {
+              "id": "tpc_XuDcBYNTtarG",
+              "title": "[Eval Case #2] Synthetic question 1...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:32:58.073Z",
+              "createdAt": "2026-11-08T07:32:57.120Z",
+              "updatedAt": "2026-11-08T07:32:58.073Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T07:32:57.126Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12085,
+              "duration": 563,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123177853_agt_eu7HEgBsAcRt_tpc_LDK4meECLgWy_MODW1gcw",
+              "rubricScores": [
+                {
+                  "score": 1,
+                  "rubricId": "eval-mode-contains"
+                }
+              ],
+              "completionReason": "done"
+            },
+            "passed": true,
+            "score": 1,
+            "status": "passed",
+            "testCase": {
+              "id": "case_09G7rrXhotXL",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_orRWhK1PvxUC",
+              "content": {
+                "input": "Synthetic question 2",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T07:32:41.597Z",
+              "createdAt": "2026-11-08T07:32:41.597Z",
+              "updatedAt": "2026-11-08T07:32:41.597Z"
+            },
+            "testCaseId": "case_09G7rrXhotXL",
+            "topic": {
+              "id": "tpc_LDK4meECLgWy",
+              "title": "[Eval Case #3] Synthetic question 2...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:32:58.210Z",
+              "createdAt": "2026-11-08T07:32:57.120Z",
+              "updatedAt": "2026-11-08T07:32:58.209Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stage": "old-snapshot-after-reconfigure",
+      "runId": "run_URuVoSruWG1L",
+      "systemRole": "Synthetic v1",
+      "status": "completed"
+    }
+  ]
+}

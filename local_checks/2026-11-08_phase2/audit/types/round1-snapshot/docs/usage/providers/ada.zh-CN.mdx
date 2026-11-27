@@ -1,0 +1,44 @@
+---
+title: 在 LobeYoYo 中使用 Ada API Key
+description: >-
+  了解如何在 LobeYoYo 中配置和使用 Ada API Key，访问精选聊天模型，包括 Claude、Qwen 和 GLM。
+tags:
+  - Ada
+  - 聊天
+  - API Key
+  - Web UI
+---
+
+# 在 LobeYoYo 中使用 Ada
+
+<Image alt={'在 LobeYoYo 中使用 Ada'} cover src={'https://hub-apac-1.lobeobjects.space/docs/ada-cover.png'} />
+
+Ada 提供了精选聊天模型的统一网关，使用 Anthropic 兼容 API。它支持 Claude Sonnet 4.6、Claude Haiku 4.5、Qwen3.6 Plus 和 GLM-5.1 等模型。本指南将引导您在 LobeYoYo 中使用 Ada：
+
+<Steps>
+  ### 第一步：获取 Ada API Key 和 Endpoint
+
+  - 注册 Ada 平台账号；
+  - 前往 Ada 平台控制台获取 API Key；
+  - 从应用设置中复制 Endpoint URL（Anthropic 兼容格式）；
+  - 确保你的应用已申请所需模型的访问权限。
+
+  ### 第二步：在 LobeYoYo 中配置 Ada
+
+  - 在 LobeYoYo 中进入「设置」页面；
+  - 在「AI 服务商」下找到 `Ada` 的配置区域；
+
+  <Image alt={'输入 API Key 和 Endpoint'} inStep src={'https://hub-apac-1.lobeobjects.space/docs/ada-config.png'} />
+
+  - 粘贴你获取的 API Key；
+  - 填写 Endpoint URL；
+  - 选择 Ada 模型（如 `Claude Sonnet 4.6`、`Claude Haiku 4.5`、`Qwen3.6 Plus`、`GLM-5.1`）进行对话。
+
+  <Image alt={'选择 Ada 模型进行对话'} inStep src={'https://hub-apac-1.lobeobjects.space/docs/ada-model-select.png'} />
+
+  <Callout type={'warning'}>
+    启用模型前，请确认 Ada 平台 Endpoint 对应应用已申请该模型。
+  </Callout>
+</Steps>
+
+完成！你现在可以在 LobeYoYo 中使用 Ada 的精选聊天模型了。

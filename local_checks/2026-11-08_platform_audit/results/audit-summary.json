@@ -1,0 +1,76 @@
+{
+  "comparedExtractedFiles": 11256,
+  "changedExtractedFiles": [],
+  "changedReferenceFiles": [],
+  "suites": {
+    "runtime-original": {
+      "success": false,
+      "numTotalTests": 258,
+      "numPassedTests": 254,
+      "numFailedTests": 4,
+      "numPendingTests": 0,
+      "failedAssertions": [
+        "tokenCounter getCompressionThreshold should use default values",
+        "tokenCounter getCompressionThreshold should use custom maxWindowToken",
+        "tokenCounter shouldCompress should return needsCompression=false when under threshold",
+        "tokenCounter shouldCompress should return needsCompression=true when over threshold"
+      ]
+    },
+    "rubric-original": {
+      "success": true,
+      "numTotalTests": 73,
+      "numPassedTests": 73,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failedAssertions": []
+    },
+    "parser-original": {
+      "success": true,
+      "numTotalTests": 16,
+      "numPassedTests": 16,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failedAssertions": []
+    },
+    "db-eval-original": {
+      "success": true,
+      "numTotalTests": 132,
+      "numPassedTests": 132,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failedAssertions": []
+    },
+    "eval-service-original": {
+      "success": true,
+      "numTotalTests": 69,
+      "numPassedTests": 69,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failedAssertions": []
+    },
+    "eval-interface-original": {
+      "success": true,
+      "numTotalTests": 54,
+      "numPassedTests": 54,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failedAssertions": []
+    },
+    "boundary-tests": {
+      "success": true,
+      "numTotalTests": 5,
+      "numPassedTests": 5,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failedAssertions": []
+    },
+    "three-case-flow": {
+      "success": true,
+      "numTotalTests": 1,
+      "numPassedTests": 1,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failedAssertions": []
+    }
+  }
+}

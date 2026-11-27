@@ -1,0 +1,36 @@
+{
+  "utc": "2026-11-14T08:28:03.551406+00:00",
+  "beforeEvaluation": true,
+  "singleAuthor": true,
+  "sourceSha": "11024d010df603a5af6164457c8eb2af8e2893fc0b2cd07839fb286731b556be",
+  "addGold": [
+    {
+      "id": "fresh-28",
+      "observation": {
+        "kind": "answer_tool_mismatch",
+        "key": "state",
+        "expected": 2027,
+        "actual": 2023,
+        "evidenceScope": [
+          [
+            "fresh-28-n2",
+            "content"
+          ],
+          [
+            "fresh-28-n3",
+            "content"
+          ]
+        ],
+        "rootClaimVerified": false
+      },
+      "reason": "Two-error scenario must include both parameter and answer contradictions."
+    }
+  ],
+  "excludeUnsupportedGold": [
+    {
+      "id": "fresh-37",
+      "kind": "answer_tool_mismatch",
+      "reason": "Trace has only failed tool result; latent expected state is not evidence. Keep explicit execution event, semantic judgement is unknown."
+    }
+  ]
+}

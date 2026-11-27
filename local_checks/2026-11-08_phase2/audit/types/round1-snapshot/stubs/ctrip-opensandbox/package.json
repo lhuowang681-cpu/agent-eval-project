@@ -1,0 +1,11 @@
+{
+  "name": "@ctrip/opensandbox",
+  "version": "0.1.8",
+  "private": true,
+  "description": "Local stub. Cloud sandbox execution is unavailable offline.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts"
+}

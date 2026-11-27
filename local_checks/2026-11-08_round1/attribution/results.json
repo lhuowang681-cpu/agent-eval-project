@@ -1,0 +1,163 @@
+{
+  "baseline": "10 tests: 1 pass, 6 failures, 3 errors",
+  "after": "10 tests passed",
+  "original_sha256": "7abe33df7817faffdac8f911583fe94b53f0996d4232201b362c732080f09a71",
+  "original_unchanged": true,
+  "runs": [
+    {
+      "label": "before",
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\test_attribution.py"
+      ],
+      "exit_code": 1,
+      "seconds": 2.495
+    },
+    {
+      "label": "after",
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\test_attribution.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.566
+    },
+    {
+      "label": "cli-basic",
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\structured_jsonl_attribution.py",
+        "--input-dir",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_cpu_smoke\\inputs\\basic",
+        "--output-dir",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\outputs\\basic"
+      ],
+      "exit_code": 0,
+      "seconds": 1.183,
+      "summary": {
+        "input_traces": 6,
+        "failure_events": 5,
+        "failure_topics": 4,
+        "internal_events": 4,
+        "internal_topics": 3,
+        "external_events": 1,
+        "external_topics": 1,
+        "tool_sources": {
+          "builtin": 3,
+          "mcp": 1,
+          "provider_runtime": 1
+        },
+        "internal_categories": {
+          "builtin_tool_contract_invalid": 3,
+          "model_missing": 1
+        },
+        "external_categories": {
+          "external_transport": 1
+        },
+        "input_lines": 6,
+        "blank_lines": 0,
+        "invalid_lines": 0,
+        "raw_failure_events": 7,
+        "duplicate_failure_events": 2,
+        "input_complete": true
+      }
+    },
+    {
+      "label": "cli-batch_1000",
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\structured_jsonl_attribution.py",
+        "--input-dir",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_cpu_smoke\\inputs\\batch_1000",
+        "--output-dir",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\outputs\\batch_1000"
+      ],
+      "exit_code": 0,
+      "seconds": 1.355,
+      "summary": {
+        "input_traces": 1000,
+        "failure_events": 750,
+        "failure_topics": 750,
+        "internal_events": 750,
+        "internal_topics": 750,
+        "external_events": 0,
+        "external_topics": 0,
+        "tool_sources": {
+          "builtin": 750
+        },
+        "internal_categories": {
+          "builtin_tool_contract_invalid": 750
+        },
+        "external_categories": {},
+        "input_lines": 1000,
+        "blank_lines": 0,
+        "invalid_lines": 0,
+        "raw_failure_events": 750,
+        "duplicate_failure_events": 0,
+        "input_complete": true
+      }
+    },
+    {
+      "label": "cli-no_failures",
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\structured_jsonl_attribution.py",
+        "--input-dir",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_cpu_smoke\\inputs\\no_failures",
+        "--output-dir",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\outputs\\no_failures"
+      ],
+      "exit_code": 0,
+      "seconds": 1.158,
+      "summary": {
+        "input_traces": 1,
+        "failure_events": 0,
+        "failure_topics": 0,
+        "internal_events": 0,
+        "internal_topics": 0,
+        "external_events": 0,
+        "external_topics": 0,
+        "tool_sources": {},
+        "internal_categories": {},
+        "external_categories": {},
+        "input_lines": 1,
+        "blank_lines": 0,
+        "invalid_lines": 0,
+        "raw_failure_events": 0,
+        "duplicate_failure_events": 0,
+        "input_complete": true
+      }
+    },
+    {
+      "label": "cli-malformed_json",
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\structured_jsonl_attribution.py",
+        "--input-dir",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_cpu_smoke\\inputs\\malformed_json",
+        "--output-dir",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\attribution\\outputs\\malformed_json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.116,
+      "summary": {
+        "input_traces": 1,
+        "failure_events": 0,
+        "failure_topics": 0,
+        "internal_events": 0,
+        "internal_topics": 0,
+        "external_events": 0,
+        "external_topics": 0,
+        "tool_sources": {},
+        "internal_categories": {},
+        "external_categories": {},
+        "input_lines": 2,
+        "blank_lines": 0,
+        "invalid_lines": 1,
+        "raw_failure_events": 0,
+        "duplicate_failure_events": 0,
+        "input_complete": false
+      }
+    }
+  ]
+}

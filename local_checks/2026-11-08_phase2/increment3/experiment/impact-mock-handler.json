@@ -1,0 +1,60 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794129761722,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Function:tools/mock-llm/server.ts:handleChatCompletions",
+    "name": "handleChatCompletions",
+    "type": "Function",
+    "filePath": "tools/mock-llm/server.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 1,
+  "risk": "LOW",
+  "riskSharedAxes": "LOW",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "summary": {
+    "direct": 1,
+    "processes_affected": 0,
+    "modules_affected": 1
+  },
+  "byDepthCounts": {
+    "1": 1
+  },
+  "affected_processes": [],
+  "affected_modules": [
+    {
+      "name": "Mock-llm",
+      "hits": 1,
+      "impact": "direct"
+    }
+  ],
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "Function:tools/mock-llm/server.ts:server",
+        "name": "server",
+        "filePath": "tools/mock-llm/server.ts",
+        "relationType": "CALLS",
+        "confidence": 0.8,
+        "processes": []
+      }
+    ]
+  }
+}

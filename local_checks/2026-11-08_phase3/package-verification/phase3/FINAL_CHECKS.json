@@ -1,0 +1,169 @@
+{
+  "checks": [
+    {
+      "name": "bridge-tasks.json",
+      "passed": true
+    },
+    {
+      "name": "bridge-candidate.json",
+      "passed": true
+    },
+    {
+      "name": "python-current.log",
+      "passed": true
+    },
+    {
+      "name": "python-candidate-working-tree.log",
+      "passed": true
+    },
+    {
+      "name": "policy-after.log",
+      "passed": true
+    },
+    {
+      "name": "metrics.log",
+      "passed": true
+    },
+    {
+      "name": "development red evidence retained",
+      "passed": true
+    },
+    {
+      "name": "development cases",
+      "passed": true
+    },
+    {
+      "name": "development baseline input/evaluation integrity",
+      "passed": true
+    },
+    {
+      "name": "development optimized input/evaluation integrity",
+      "passed": true
+    },
+    {
+      "name": "controlled cases",
+      "passed": true
+    },
+    {
+      "name": "controlled baseline input/evaluation integrity",
+      "passed": true
+    },
+    {
+      "name": "controlled optimized input/evaluation integrity",
+      "passed": true
+    },
+    {
+      "name": "holdout cases",
+      "passed": true
+    },
+    {
+      "name": "holdout baseline input/evaluation integrity",
+      "passed": true
+    },
+    {
+      "name": "holdout optimized input/evaluation integrity",
+      "passed": true
+    },
+    {
+      "name": "440 distinct per-case-method-version rows",
+      "passed": true
+    },
+    {
+      "name": "candidate not promoted",
+      "passed": true
+    },
+    {
+      "name": "reversible patch and protected originals",
+      "passed": true
+    },
+    {
+      "name": "baseline frozen hashes",
+      "passed": true
+    },
+    {
+      "name": "optimized frozen hashes",
+      "passed": true
+    },
+    {
+      "name": "output adjudication bound to inputs",
+      "passed": true
+    },
+    {
+      "name": "holdout frozen structural/hash validation",
+      "passed": true
+    },
+    {
+      "name": "top-level source links",
+      "passed": true
+    }
+  ],
+  "sourceLinks": [
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase3/baseline/adapter.py",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase3/baseline/evidence_review.py",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase3/optimized/evidence_review.py",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase3/optimized/evidence_review.py",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase3/experiment/engine_worker.py",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase3/experiment/engine_worker.py",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase3/experiment/metrics.py",
+      "exists": true
+    },
+    {
+      "file": "LEARNING_INDEX.md",
+      "target": "C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_phase3/experiment/metrics.py",
+      "exists": true
+    }
+  ],
+  "passed": true,
+  "holdoutValidation": {
+    "exitCode": 0,
+    "stdout": "{\"status\": \"passed\", \"cases\": 28, \"checks\": [\"strict_structure\", \"identity_and_digest\", \"label_type_consistency\", \"unlabeled_projection\", \"no_structural_label_leakage\", \"frozen_hashes\"], \"semanticOracle\": \"single_author_synthetic_not_real_annotation\", \"productionReviewerRun\": false}\n",
+    "stderr": ""
+  },
+  "meaning": "Artifact, regression and reproducibility checks only; negative quality results remain negative."
+}

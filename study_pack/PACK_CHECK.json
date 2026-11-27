@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "00 through 07 required files",
+      "passed": true
+    },
+    {
+      "name": "8 modules and 10 sequential units",
+      "passed": true
+    },
+    {
+      "name": "A-H complete for every unit",
+      "passed": true
+    },
+    {
+      "name": "3-5 meaningful question slots per unit",
+      "passed": true
+    },
+    {
+      "name": "all unstarted without synthetic learning history",
+      "passed": true
+    },
+    {
+      "name": "business/reference/historical progress unchanged",
+      "passed": true
+    },
+    {
+      "name": "copy hashes and no original edits",
+      "passed": true
+    },
+    {
+      "name": "Python teaching copies parse without executing",
+      "passed": true
+    },
+    {
+      "name": "40 original anchors match exact current lines",
+      "passed": true
+    },
+    {
+      "name": "all static HTML links and anchors local and valid",
+      "passed": true
+    },
+    {
+      "name": "reader has no network scripts",
+      "passed": true
+    },
+    {
+      "name": "no env/keys/raw data/log bundles included",
+      "passed": true
+    }
+  ],
+  "protectedInputFiles": 121,
+  "sourceFiles": 33,
+  "sourceAnchors": 40,
+  "htmlFilesChecked": 41,
+  "brokenHtmlLinks": [],
+  "courseCharacters": 17429,
+  "teachingStarted": false,
+  "businessCodeModified": false,
+  "platformTestsRerun": false
+}

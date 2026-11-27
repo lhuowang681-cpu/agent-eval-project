@@ -1,0 +1,39 @@
+{
+  "realRequests": 1,
+  "httpStatus": 200,
+  "apiCredentialAccepted": true,
+  "modelReturned": "deepseek-flash",
+  "jsonValid": true,
+  "candidateContractValid": false,
+  "missingFields": [
+    "inputDigest",
+    "scope"
+  ],
+  "modelDecision": "abstain",
+  "generatedObservations": 0,
+  "semanticPositiveDetection": false,
+  "normalRecoveredAbstention": "NOT_RUN",
+  "usage": {
+    "prompt_tokens": 719,
+    "completion_tokens": 17,
+    "total_tokens": 736,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 719
+  },
+  "elapsedMs": 2857,
+  "priceSource": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "estimatedUsdRange": [
+    0.00011805,
+    0.0002361
+  ],
+  "actualBill": null,
+  "formalCalls": 0,
+  "remainingApprovedRequests": 5,
+  "approvalMaxUsd": 0.05,
+  "protocolUnchanged": true,
+  "outcome": "FAILED_SMOKE_STOPPED_NO_FALLBACK",
+  "promotion": "KEEP_SHADOW_DISABLED"
+}

@@ -1,0 +1,120 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794128396301,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.finalizeRun#1",
+    "name": "finalizeRun",
+    "type": "Method",
+    "filePath": "src/server/services/agentEvalRun/orchestrator.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 7,
+  "risk": "LOW",
+  "riskSharedAxes": "LOW",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "summary": {
+    "direct": 4,
+    "processes_affected": 0,
+    "modules_affected": 1
+  },
+  "byDepthCounts": {
+    "1": 4,
+    "2": 2,
+    "3": 1
+  },
+  "affected_processes": [],
+  "affected_modules": [
+    {
+      "name": "AgentEvalRun",
+      "hits": 6,
+      "impact": "direct"
+    }
+  ],
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.onThreadComplete#1",
+        "name": "onThreadComplete",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.onTrajectoryComplete#1",
+        "name": "onTrajectoryComplete",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runAgentTrajectory#1",
+        "name": "runAgentTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runThreadTrajectory#1",
+        "name": "runThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ],
+    "2": [
+      {
+        "depth": 2,
+        "id": "Function:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runAgentTrajectory.onThread@299:8",
+        "name": "onThread",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.executeTestCase#1",
+        "name": "executeTestCase",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ],
+    "3": [
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.paginateTestCases#1",
+        "name": "paginateTestCases",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ]
+  }
+}

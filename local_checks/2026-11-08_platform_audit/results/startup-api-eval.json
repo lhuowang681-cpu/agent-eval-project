@@ -1,0 +1,35 @@
+{
+  "mode": "api-eval",
+  "ports": {
+    "database": 58888,
+    "next": 58889
+  },
+  "events": [
+    {
+      "stage": "pglite",
+      "tcpReady": true,
+      "exitCode": null
+    },
+    {
+      "stage": "seed",
+      "exitCode": 0
+    },
+    {
+      "stage": "next",
+      "tcpReady": true,
+      "exitCode": null
+    },
+    {
+      "stage": "mocks",
+      "llmReady": true,
+      "toolsReady": true
+    },
+    {
+      "stage": "original-http-smoke",
+      "exitCode": 1,
+      "timeoutSeconds": 150
+    }
+  ],
+  "allOwnedProcessesStopped": true,
+  "conditions": "PGlite without BM25; private dependencies use original stubs; no model credentials supplied; no browser interaction tested"
+}

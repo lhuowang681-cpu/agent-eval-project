@@ -1,0 +1,11 @@
+test_bad_quote_and_scope (__main__.EvidenceTests.test_bad_quote_and_scope) ... ok
+test_empty_and_mutation (__main__.EvidenceTests.test_empty_and_mutation) ... ok
+test_nested_history_not_current_failure (__main__.EvidenceTests.test_nested_history_not_current_failure) ... ok
+test_no_borrowed_error (__main__.EvidenceTests.test_no_borrowed_error) ... ok
+test_partial_trace_local_supported (__main__.EvidenceTests.test_partial_trace_local_supported) ... ok
+test_root_not_upgraded (__main__.EvidenceTests.test_root_not_upgraded) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

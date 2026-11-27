@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-11-08T08:08:12.067Z",
+  "mode": "local matcher + injected callback; no model/network",
+  "records": [
+    {
+      "type": "llm-rubric",
+      "containsInput": false,
+      "containsExpected": true,
+      "containsActual": true,
+      "containsCriteria": true,
+      "result": {
+        "passed": true,
+        "reason": "Synthetic controlled fixture; no HTTP request",
+        "score": 1
+      }
+    },
+    {
+      "type": "answer-relevance",
+      "containsInput": true,
+      "containsExpected": true,
+      "containsActual": true,
+      "containsCriteria": false,
+      "result": {
+        "passed": true,
+        "reason": "Synthetic controlled fixture; no HTTP request",
+        "score": 1
+      }
+    }
+  ]
+}

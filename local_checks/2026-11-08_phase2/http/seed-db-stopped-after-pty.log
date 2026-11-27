@@ -1,0 +1,23 @@
+
+❌ seedDevUser failed: DrizzleQueryError: Failed query: select "id", "username", "email", "normalized_email", "avatar", "phone", "first_name", "last_name", "full_name", "interests", "feishu_open_id", "feishu_union_id", "mcp_ada_token", "is_onboarded", "onboarding", "clerk_created_at", "email_verified", "email_verified_at", "preference", "role", "banned", "ban_reason", "ban_expires", "two_factor_enabled", "phone_number_verified", "last_active_at", "accessed_at", "created_at", "updated_at" from "users" "users" where "users"."id" = $1 limit $2
+params: phase2-audit-user,1
+    at NodePgPreparedQuery.queryWithCache (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\drizzle-orm@0.45.1_@electri_4b0cefc0c016ebcda864cc2ad807685c\node_modules\drizzle-orm\pg-core\session.js:41:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async <anonymous> (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\drizzle-orm@0.45.1_@electri_4b0cefc0c016ebcda864cc2ad807685c\node_modules\drizzle-orm\node-postgres\session.js:117:22)
+    at async main (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\scripts\local\seedDevUser.ts:54:20) {
+  query: 'select "id", "username", "email", "normalized_email", "avatar", "phone", "first_name", "last_name", "full_name", "interests", "feishu_open_id", "feishu_union_id", "mcp_ada_token", "is_onboarded", "onboarding", "clerk_created_at", "email_verified", "email_verified_at", "preference", "role", "banned", "ban_reason", "ban_expires", "two_factor_enabled", "phone_number_verified", "last_active_at", "accessed_at", "created_at", "updated_at" from "users" "users" where "users"."id" = $1 limit $2',
+  params: [ 'phase2-audit-user', 1 ],
+  cause: Error: connect ECONNREFUSED 127.0.0.1:15433
+      at C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\pg-pool@3.14.0_pg@8.17.2\node_modules\pg-pool\index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async <anonymous> (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\drizzle-orm@0.45.1_@electri_4b0cefc0c016ebcda864cc2ad807685c\node_modules\drizzle-orm\node-postgres\session.js:124:18)
+      at async NodePgPreparedQuery.queryWithCache (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\drizzle-orm@0.45.1_@electri_4b0cefc0c016ebcda864cc2ad807685c\node_modules\drizzle-orm\pg-core\session.js:39:16)
+      at async <anonymous> (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\node_modules\.pnpm\drizzle-orm@0.45.1_@electri_4b0cefc0c016ebcda864cc2ad807685c\node_modules\drizzle-orm\node-postgres\session.js:117:22)
+      at async main (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-08_platform_audit\platform\scripts\local\seedDevUser.ts:54:20) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 15433
+  }
+}

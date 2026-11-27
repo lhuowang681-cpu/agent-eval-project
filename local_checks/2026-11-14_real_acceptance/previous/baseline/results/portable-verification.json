@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "test_round2",
+        "test_metrics"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "reproduce.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "legacy_comparison.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "run_experiment.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "analyze_results.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "verify_delivery.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "review_cli.py"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "sameMetricsAndVerdicts": true,
+  "externalCalls": 0,
+  "platformRequired": false
+}

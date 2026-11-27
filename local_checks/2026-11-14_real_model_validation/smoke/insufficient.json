@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "trajectoryId": "smoke-missing",
+  "inputDigest": "smoke-missing-digest",
+  "scope": {
+    "runId": "smoke-missingrun",
+    "caseId": "smoke-missing",
+    "topicId": "smoke-missingtopic",
+    "threadId": null,
+    "operationId": "smoke-missingop",
+    "traceIds": []
+  },
+  "nodes": [
+    {
+      "id": "smoke-missing-u",
+      "messageId": "u",
+      "parentId": null,
+      "role": "user",
+      "content": "{\"orderId\": \"smoke-missing-order\", \"year\": 2025}",
+      "sourcePointer": "synthetic/u",
+      "error": null,
+      "toolCallId": null,
+      "toolSource": "unknown",
+      "toolName": null,
+      "arguments": null,
+      "traceId": null,
+      "sequence": 0,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-missing-c",
+      "messageId": "c",
+      "parentId": null,
+      "role": "call",
+      "content": "",
+      "sourcePointer": "synthetic/c",
+      "error": null,
+      "toolCallId": "tc1",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": "{\"orderId\": \"smoke-missing-order\", \"year\": 2025}",
+      "traceId": null,
+      "sequence": 1,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-missing-a",
+      "messageId": "a",
+      "parentId": null,
+      "role": "assistant",
+      "content": "{\"orderId\": \"smoke-missing-order\", \"status\": \"shipped\", \"year\": 2025}",
+      "sourcePointer": "synthetic/a",
+      "error": null,
+      "toolCallId": null,
+      "toolSource": "unknown",
+      "toolName": null,
+      "arguments": null,
+      "traceId": null,
+      "sequence": 8,
+      "createdAt": null
+    }
+  ],
+  "coverage": {
+    "source": "database_messages",
+    "complete": false,
+    "warnings": [
+      "provider_request_payload_unavailable"
+    ]
+  },
+  "evaluation": {
+    "status": "failed",
+    "score": 0,
+    "task": "{\"orderId\": \"smoke-missing-order\", \"year\": 2025}",
+    "expected": null,
+    "actual": "{\"orderId\": \"smoke-missing-order\", \"status\": \"shipped\", \"year\": 2025}",
+    "criteria": null
+  }
+}

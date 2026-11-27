@@ -1,0 +1,385 @@
+{
+  "auditDate": "2026-11-08",
+  "purpose": "逆向构建课程的源码事实核对；不授课、不改业务、不改study_pack。",
+  "scope": "只读legacy归因两主链、报表/排序/指标材料、当前Python桥接及最新phase3负结果；不读.env、不复制原始用户轨迹/凭据。",
+  "anchorCount": 12,
+  "anchors": [
+    {
+      "id": "A01",
+      "path": "source-reference/attribution/badcase_analysis.py",
+      "symbol": "run_pipeline",
+      "line": 33,
+      "sha256": "ace80bf06c42d801f1681b99960b497a4f9a7a83b01ccb942a3dab3eececdf5f",
+      "callChain": "main → run_pipeline → fetch/cache → [optional XLSX denoise] → classify_batch → aggregator → visualizer → optional build_report",
+      "engineeringFocus": "将离线分析拆成采集、清洗、分类、聚合、交付阶段；理解缓存与重跑入口。",
+      "limitations": "这是原始模型主链；不调用统一证据审核、development_priority或cause_convergence。offline跳过抓取，仍可能调用模型；skip_classify才复用分类缓存。",
+      "related": []
+    },
+    {
+      "id": "A02",
+      "path": "source-reference/attribution/llm_classifier.py",
+      "symbol": "normalize_result / classify_single",
+      "line": 94,
+      "sha256": "3d883dae6c256e48601f2210498958dab684b002e3d4b8a60f6c7414ecce4736",
+      "callChain": "classify_batch → classify_single:125 → OpenAI-compatible client → normalize_result:94",
+      "engineeringFocus": "模型输出契约、taxonomy归一化、重试与失败UNKNOWN降级。",
+      "limitations": "module/格式检查与confidence截断不验证证据节点存在、原文字段一致或因果支持；提示词要求不等于执行保证。代码能调用真实模型，不代表质量已验证。",
+      "related": []
+    },
+    {
+      "id": "A03",
+      "path": "source-reference/attribution/trace_denoiser.py",
+      "symbol": "denoise_trace_nodes",
+      "line": 65,
+      "sha256": "87661e458e2138cbe2df801261cdf6e2e5afe531c01a052e269d2c36ee0435c8",
+      "callChain": "run_pipeline[提供source_xlsx时] → enrich_traces_from_xlsx:108 → denoise_trace_nodes",
+      "engineeringFocus": "按ID去重、父链与错误时间窗口保留，平衡噪声、长度与可观测性。",
+      "limitations": "只在特定入口条件使用；父链/邻居等启发式及截断不保证保留完整因果上下文。",
+      "related": []
+    },
+    {
+      "id": "A04",
+      "path": "source-reference/attribution/structured_jsonl_attribution.py",
+      "symbol": "scan / main",
+      "line": 103,
+      "sha256": "7abe33df7817faffdac8f911583fe94b53f0996d4232201b362c732080f09a71",
+      "callChain": "main:141 → scan:103 → assistant tool_call配对 → failure_envelope:64 → builtin/external rules → CSV/JSON",
+      "engineeringFocus": "结构化失败封装、call/result配对、事件去重、来源分流；区分规则与模型依赖。",
+      "limitations": "另一独立CLI，不是run_pipeline的下一步；tool_source基于命名启发式，不等于当前平台持久化来源字段。原始快照保留空输入/坏行/跨工具恢复判断等历史边界，不能当作已修复生产副本。",
+      "related": []
+    },
+    {
+      "id": "A05",
+      "path": "source-reference/attribution/reattribution_validator.py",
+      "symbol": "validate",
+      "line": 6,
+      "sha256": "a8a2ad6c49d04c837ffd7956cf1c563c54d3a6ee1195e4ae6c700f0afc689e07",
+      "callChain": "generate_top5_single_trace_report → validate_attribution → validate",
+      "engineeringFocus": "审核器实际调用位置比名字更重要；下游失败信号与上游责任必须分离。",
+      "limitations": "只在部分报表路径调用；不在两条legacy主链必经。它本身是启发式映射，不是当前node/field/quote与support审核器。",
+      "related": []
+    },
+    {
+      "id": "A06",
+      "path": "source-reference/attribution/development_priority.py",
+      "symbol": "calculate_priority",
+      "line": 92,
+      "sha256": "365aee205ca2f5f58f565e3594481e0583912d0d432b8e09bb5466d8c66a52d9",
+      "callChain": "generate_new_export_deliverable_v2 → calculate_priority → actionability/evidence/impact/frequency",
+      "engineeringFocus": "显式业务排序政策：0.45可修复性+0.30证据+0.15影响+0.10频率；对数频率和硬排除。",
+      "limitations": "这是开发优先级，不是归因置信概率。先验/关键词补分仍有证据局限；eligible门槛对actionability依组45/70/80并要求evidence≥30，不是总分阈值。",
+      "related": []
+    },
+    {
+      "id": "A07",
+      "path": "source-reference/attribution/representative_case_selector.py",
+      "symbol": "select_representative_trace",
+      "line": 31,
+      "sha256": "9711546d4b47763294d64923271510aa9f964ff034c8b8aed02110dc1fbf227f",
+      "callChain": "多个representative/native/three_stage报表 → select_representative_trace",
+      "engineeringFocus": "用主导错误签名、可调试性、证据完整度、频率、距离与稳定tie-break挑可读案例。",
+      "limitations": "先按去重trace数选最高频类别，再按多键排序；不是TF-IDF medoid，也不是最严重样本或原因已证实。",
+      "related": []
+    },
+    {
+      "id": "A08",
+      "path": "source-reference/attribution/cause_convergence.py",
+      "symbol": "converge / score / medoid",
+      "line": 99,
+      "sha256": "335b756f6b9ec3e29a4c6ff0292ad08cf48a327c27744c9fbcdcd1ab87f9ee0e",
+      "callChain": "generate_top5_single_trace_report → converge → signature/severity_for → score:88 → winning cluster → medoid:92",
+      "engineeringFocus": "将事故严重度与触达频率分开：默认severityWeight×log2(1+独立session数)，再选簇内TF-IDF余弦medoid。",
+      "limitations": "实际是确定性规则；文件内LLM提示词未被converge调用。severity和签名是启发式；文本中心样本不等于证据最全或根因正确。与A06/A07不是同一算法。",
+      "related": []
+    },
+    {
+      "id": "A09",
+      "path": "source-reference/attribution/high_frequency_case_report.py",
+      "symbol": "build_report",
+      "line": 102,
+      "sha256": "f404e66e80c7dda72d919cdfcd46dfda42cb807c231bf99ffee6a395f0cd8b0c",
+      "callChain": "run_pipeline → build_report → category/module rankings + selected cases + multi-sheet XLSX",
+      "engineeringFocus": "把事件统计、开发关注范围、代表案例与原始追溯视图分层交付。",
+      "limitations": "默认9个sheet与DELIVERY_README的17sheet交付要求/其它模板脚本不同；case_score是confidence×100+min(event_count,20)，不是A06/A08。L8.3/观测缺口从开发榜过滤不等于解决根因。",
+      "related": []
+    },
+    {
+      "id": "A10",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts",
+      "symbol": "AgentEvalAttributionService.enqueue / processJob",
+      "line": 64,
+      "sha256": "1ca7f043c6bff140cf1289b39812c3c8260cb5c468d2be105c7158f06e3ea766",
+      "callChain": "router diagnosisRequest → enqueue → extractTrajectory → digest/engineRevision → async_tasks pending → explicit worker processPending → processJob:171 → conditional lease result write",
+      "engineeringFocus": "所有权隔离、K>1 thread选择、稳定内容标识、幂等排队、租约防旧worker覆盖和评分/诊断解耦。",
+      "limitations": "当前为显式worker原型，不是已验证的生产分布式调度。DB消息轨迹缺provider/operation等源事件；成功任务不代表root_cause resolved。",
+      "related": [
+        {
+          "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts",
+          "symbol": "extractTrajectory",
+          "line": 41
+        },
+        {
+          "path": "local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEvalExternal.ts",
+          "symbol": "diagnosisRequest / diagnosisTrace",
+          "line": 290
+        },
+        {
+          "path": "local_checks/2026-11-08_platform_audit/platform/scripts/local/evalAttribution.ts",
+          "symbol": "main",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "id": "A11",
+      "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py",
+      "symbol": "analyze_reviewed / main",
+      "line": 152,
+      "sha256": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b",
+      "callChain": "TS runPython → fixed adapter.py main:175 → analyze_reviewed:152 → pure analyze:88 → audited_candidate → review_candidate → TS validateDiagnostic",
+      "engineeringFocus": "跨语言输入输出合同、无shell子进程、大小/超时/错误隔离；引用存在与证据支持双层审核。",
+      "limitations": "当前固定子进程入口必经review，但纯analyze可被研究脚本单独调用。拒绝时adapter保留规则观察并标needs_review/unknown及reasonCode；review_cli.safeCandidate才是白名单输出。module/root_cause一律不获支持，模板摘要+全局coverage门禁有已知误拒。",
+      "related": [
+        {
+          "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/python.ts",
+          "symbol": "runPython",
+          "line": 33
+        },
+        {
+          "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py",
+          "symbol": "review_candidate / audited_candidate",
+          "line": 33
+        },
+        {
+          "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts",
+          "symbol": "validateDiagnostic",
+          "line": 275
+        }
+      ]
+    },
+    {
+      "id": "A12",
+      "path": "local_checks/2026-11-08_phase3/experiment/metrics.py",
+      "symbol": "summarize",
+      "line": 62,
+      "sha256": "65c83aac8d3b14186b8a0f9d9e683c099349108b11cdf70349d16cf7999caac4",
+      "callChain": "frozen split/oracle + raw outputs → metrics.summarize → explicit adjudication → comparison-adjudicated → promotion decision",
+      "engineeringFocus": "根因正确与故障观察正确分层；UNKNOWN不算正确；引用有效、事实正确、支持性、覆盖和选择性风险分别核算。",
+      "limitations": "离线人工候选不是模型成绩；generic类别12条保留不可判。0接受时准确率/选择性风险NA。开发例提升不能代替独立holdout，未推广候选也值得保留教学。",
+      "related": []
+    }
+  ],
+  "gateSummary": {
+    "legacyModelRouteMandatory": false,
+    "legacyStructuredRuleRouteMandatory": false,
+    "legacyReportValidatorPartial": true,
+    "currentFixedAdapterMandatory": true,
+    "rawAnalyzeIsIndependentlyCallable": true,
+    "rejectedPlatformRecordsMayRemainMarkedNeedsReview": true,
+    "safeCandidateDistinctFromRetainedObservation": true
+  },
+  "threeMetricMaterials": {
+    "archiveEntry": "somethingelse-main-main/somethingelse-main/Langfuse三指标评测Skill_最终归档_2026-08-06.zip",
+    "declaredDesign": {
+      "dailyWindow": "rolling24h",
+      "metricWindow": "rolling30d",
+      "latency": "valid Trace.latency; do not sum generation latency",
+      "ttft": "valid streaming Generation.timeToFirstToken",
+      "cost": "aggregate Generation.totalCost under trace; positive cost sample subset",
+      "tail": "worst 10%, K=ceil(0.1*N); requirements mention sample/coverage safeguards"
+    },
+    "actualImplementation": "归档build_dashboard.py无函数定义，顶层load_workbook读现有工作簿并将硬编码历史指标卡/表格写HTML；validate_dashboard_metrics.py仅比对固定expected字符串。未发现该归档自动查询Langfuse并动态重算30d三指标的通用实现。",
+    "boundary": "Skill/manifest是设计和使用材料；静态展示验证不证明动态采集、实时准确性、真实供应商成本或当前平台Benchmark闭环。原始trace ID和用户内容不复制。",
+    "sourceLocations": [
+      {
+        "path": "scripts/build_dashboard.py",
+        "lines": [
+          8,
+          11,
+          17,
+          33
+        ]
+      },
+      {
+        "path": "scripts/validate_dashboard_metrics.py",
+        "lines": [
+          4,
+          5,
+          10,
+          17
+        ]
+      },
+      {
+        "path": "ARCHIVE_MANIFEST.md",
+        "lines": [
+          5,
+          6
+        ]
+      }
+    ]
+  },
+  "latestExperiment": {
+    "sourceReport": "local_checks/2026-11-08_phase3/ATTRIBUTION_QUALITY_REPORT.md",
+    "promotionDecision": "local_checks/2026-11-08_phase3/PROMOTION_DECISION.md",
+    "results": "local_checks/2026-11-08_phase3/QUALITY_RESULTS.json",
+    "restoreReceipt": "local_checks/2026-11-08_phase3/RESTORE_RECEIPT.json",
+    "phase2HistoricalRegression": {
+      "typescriptSelected": 945,
+      "python": 36,
+      "note": "phase2历史回归计数；phase3未重跑全部945，不是945个质量样本。"
+    },
+    "phase3Regression": {
+      "pythonCurrentPassed": 36,
+      "typescriptBridgeTrajectoryTaskPassed": 71,
+      "note": "回读真实日志/命令收据，未在本课程审计重新执行；候选与恢复后71不能累计为142个独立测试。"
+    },
+    "data": {
+      "developmentSyntheticCases": 12,
+      "controlledActualExecutionSyntheticTasks": 4,
+      "independentlyAuthoredSyntheticHoldout": 28,
+      "holdoutObservablePositiveCases": 24,
+      "holdoutKnownSyntheticMechanisms": 12,
+      "naturalProductionRootGoldVerified": false,
+      "note": "三组不合并为44个真实根因案例；独立作者合成oracle不是多标注员生产gold，预设机制未实际注入平台。"
+    },
+    "realModelCalls": 0,
+    "modelEffectMeasured": false,
+    "modelTokens": null,
+    "supplierCost": null,
+    "realLLMLatency": null,
+    "holdout": [
+      {
+        "method": "rules",
+        "claims": 20,
+        "correct": 8,
+        "wrong": 0,
+        "unjudged": 12,
+        "effectiveObservations": 8,
+        "observablePositiveDenominator": 24,
+        "rootLabelHits": 0,
+        "rootDenominator": 12
+      },
+      {
+        "method": "direct_offline_candidate",
+        "claims": 25,
+        "correct": 14,
+        "wrong": 11,
+        "unjudged": 0,
+        "effectiveObservations": 7,
+        "observablePositiveDenominator": 24,
+        "rootLabelHits": 7,
+        "rootDenominator": 12
+      },
+      {
+        "method": "structure_only",
+        "claims": 25,
+        "correct": 14,
+        "wrong": 11,
+        "unjudged": 0,
+        "effectiveObservations": 7,
+        "observablePositiveDenominator": 24,
+        "rootLabelHits": 7,
+        "rootDenominator": 12
+      },
+      {
+        "method": "structure_and_valid_refs",
+        "claims": 24,
+        "correct": 14,
+        "wrong": 10,
+        "unjudged": 0,
+        "effectiveObservations": 7,
+        "observablePositiveDenominator": 24,
+        "rootLabelHits": 7,
+        "rootDenominator": 12
+      },
+      {
+        "method": "full_review_baseline_and_candidate",
+        "claims": 0,
+        "correct": 0,
+        "wrong": 0,
+        "unjudged": 0,
+        "effectiveObservations": 0,
+        "observablePositiveDenominator": 24,
+        "rootLabelHits": 0,
+        "rootDenominator": 12,
+        "acceptedAccuracy": null,
+        "selectiveRisk": null
+      }
+    ],
+    "keyNegativeFindings": [
+      "引用组38/38引用有效，仍10条事实错误、11条证据不足命题；引用存在不证明支持。",
+      "规则12条通用类别与具体oracle粒度不清，保留不可判；全部输出风险区间0—60%。",
+      "原版与候选均拒绝13条正确且有支持的原候选；独立集完整审核0/24→0/24。",
+      "开发完整审核有效观察1/9→2/9；历史Calculator回放0/1→1/1，仅开发/历史回放改善。",
+      "测试后短摘录兼容探针发现候选丢失同字段失败封装上下文，误拒合法permission-denied摘录；不加入holdout分数，不用该28例继续调参。"
+    ],
+    "candidatePromoted": false,
+    "defaultPlatformRestored": true,
+    "restorationIndependentReadOnlyCheck": {
+      "checkedAtUtc": "2026-11-08T15:08:18.445550+00:00",
+      "receiptPassed": true,
+      "allFourLiveHashesMatchReceiptBaseline": true,
+      "files": {
+        "engine-version.json": "b79f89306373c0e6ff09752626cc505a6a7186da8b84dd4db5727ffb78fb3a53",
+        "evidence_review.py": "d9ea1fb10ade950a05118904cade82882fba26227735bb0474eeff67aa986f29",
+        "README.md": "cd4d409df9d8ce97f4c29cdcb13a3e5914a31496355ec093ac6e05df3bbd5f2e",
+        "test_evidence_review.py": "8d09b0a937c9f7923b33ab7f0e1ddb7b6d12663e016705bb714d58f9ed8a5258"
+      }
+    }
+  },
+  "teachingPitfalls": [
+    {
+      "id": "M01",
+      "wrong": "把legacy全部脚本讲成一个已集成的平台流程，offline等于不调用模型。",
+      "correct": "模型run_pipeline和结构化JSONL规则CLI独立；去噪/模板/报表有条件，offline仍可分类调用模型。当前TS-Python桥接是后续独立集成。"
+    },
+    {
+      "id": "M02",
+      "wrong": "每条历史链都必经证据门禁，有nodeId或合法引文就证明内部根因。",
+      "correct": "legacy normalize只归一化，validator仅部分报表调用；当前固定adapter必经审核但拒绝仍保留标记观察，safeCandidate与原记录不同。存在性≠支持性≠因果责任。"
+    },
+    {
+      "id": "M03",
+      "wrong": "开发优先分、严重度频率分和代表case选择是同一个置信度算法。",
+      "correct": "四维政策分、严重度×对数触达、可调试性排序、TF-IDF medoid、默认报表confidence/event_count五种目的和调用路径分开。"
+    },
+    {
+      "id": "M04",
+      "wrong": "945/36说明最新归因高准确；Mock或人工候选是模型质量，优化已上线。",
+      "correct": "945/36是phase2工程基线；phase3当前36/71，真实模型0调用，独立合成集完整审核0输出，候选未推广并恢复原版。工程通过与质量未通过同时成立。"
+    },
+    {
+      "id": "M05",
+      "wrong": "多sheet规范和三指标Skill意味着当前平台已有动态30d看板、完整Benchmark与可信真实根因数据。",
+      "correct": "默认9sheet、17sheet交付要求、各模板/快照脚本分开；三指标归档实际是工作簿+历史HTML渲染，未证通用动态计算。历史数据缺独立根因标签/脱敏验收，不纳入gold。"
+    }
+  ],
+  "evidenceFileSha256": {
+    "source-reference/attribution/badcase_analysis.py": "ace80bf06c42d801f1681b99960b497a4f9a7a83b01ccb942a3dab3eececdf5f",
+    "source-reference/attribution/llm_classifier.py": "3d883dae6c256e48601f2210498958dab684b002e3d4b8a60f6c7414ecce4736",
+    "source-reference/attribution/trace_denoiser.py": "87661e458e2138cbe2df801261cdf6e2e5afe531c01a052e269d2c36ee0435c8",
+    "source-reference/attribution/structured_jsonl_attribution.py": "7abe33df7817faffdac8f911583fe94b53f0996d4232201b362c732080f09a71",
+    "source-reference/attribution/reattribution_validator.py": "a8a2ad6c49d04c837ffd7956cf1c563c54d3a6ee1195e4ae6c700f0afc689e07",
+    "source-reference/attribution/development_priority.py": "365aee205ca2f5f58f565e3594481e0583912d0d432b8e09bb5466d8c66a52d9",
+    "source-reference/attribution/representative_case_selector.py": "9711546d4b47763294d64923271510aa9f964ff034c8b8aed02110dc1fbf227f",
+    "source-reference/attribution/cause_convergence.py": "335b756f6b9ec3e29a4c6ff0292ad08cf48a327c27744c9fbcdcd1ab87f9ee0e",
+    "source-reference/attribution/high_frequency_case_report.py": "f404e66e80c7dda72d919cdfcd46dfda42cb807c231bf99ffee6a395f0cd8b0c",
+    "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts": "1ca7f043c6bff140cf1289b39812c3c8260cb5c468d2be105c7158f06e3ea766",
+    "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b",
+    "local_checks/2026-11-08_phase3/experiment/metrics.py": "65c83aac8d3b14186b8a0f9d9e683c099349108b11cdf70349d16cf7999caac4",
+    "local_checks/2026-11-08_phase3/ATTRIBUTION_QUALITY_REPORT.md": "d024d28e0aa982ba4be04584325e4b871dbe85b679474e384795ef96369039ce",
+    "local_checks/2026-11-08_phase3/QUALITY_RESULTS.json": "7006407517355b8b51736ac2d521045db3b54f63141fdb1081ec25abf56c9986",
+    "local_checks/2026-11-08_phase3/PROMOTION_DECISION.md": "5d8f4d9cee67ac7fc7f96a4ca0a5ddcd21f19b073b8d5264e9ee765bed300147",
+    "local_checks/2026-11-08_phase3/RESTORE_RECEIPT.json": "1bcd3f13202a49e2448446fa865906ebd8e0cd76acda751c105ef78a6b46e33d",
+    "local_checks/2026-11-08_phase3/regression/python-current-command.json": "a07899a25ca12d748fb826e18c5a604a6b4b33e718901de7fa14c37575264945",
+    "local_checks/2026-11-08_phase3/regression/python-current.log": "88e7af30a503a8c185dd91ec87ba106491d40c64ff0b6a7001007868b50d681d",
+    "local_checks/2026-11-08_phase3/regression/bridge-tasks-command.json": "8e96816935f537cc4dff83be8b5e674401adfd76fcbd7c3c346f9fbe7a754a0b",
+    "local_checks/2026-11-08_phase3/regression/bridge-tasks.json": "2af27c7568d868f07f2abfbd753f25a0bfcd0cce33fb4a4d593caf441b8a648f",
+    "local_checks/2026-11-08_phase2/FINAL_REPORT.md": "771a7fb6c4e63bf7ce75d774ccf5312ef666b8ed39db2b6ac8dd67cdabd1ef45"
+  },
+  "verificationLimits": [
+    "本次不重跑测试、不调用模型、不访问外网；测试数字来自保存的真实命令/日志和报告。",
+    "本次不把设计文档当实现，不声称legacy真实模型质量、生产级根因或自动动态三指标已验证。",
+    "来源快照与现平台是不同版本；当前恢复四文件哈希与phase3收据baseline一致。"
+  ]
+}

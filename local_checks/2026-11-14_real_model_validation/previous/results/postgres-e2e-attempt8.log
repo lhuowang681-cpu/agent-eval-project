@@ -1,0 +1,6 @@
+2026-11-14T08:27:53.639Z lobe-mcp:deps-check Installation checker registered: npm
+2026-11-14T08:27:53.640Z lobe-mcp:deps-check Installation checker registered: python
+2026-11-14T08:27:53.640Z lobe-mcp:deps-check Installation checker registered: manual
+(node:66008) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"status":"passed","cases":9,"shadowCalls":4}

@@ -1,0 +1,10 @@
+{
+  "stage": "smoke",
+  "approved": true,
+  "approvedRequests": 6,
+  "maxUsd": 0.05,
+  "formalRequestsAuthorized": 0,
+  "approvalContext": "User responded to the 6-request / USD0.05 proposal by instructing use of the previously supplied DeepSeek API credential.",
+  "userMessage": "之前不是给你了一个DeepSeek的API？用那个",
+  "recordedAtUtc": "2026-11-14T09:33:15.661417+00:00"
+}

@@ -1,0 +1,11 @@
+# 迁移与回滚
+
+没有生产迁移。平台既有Python/TS符号、数据库Schema、评分/Judge和客户端行为均未修改；没有启用默认Provider，没有后台服务。全部新增代码在本日期目录。
+
+显式接入建议：已有AgentEvalAttributionService构造选项支持runner，可传createShadowRunner(runPython,{enabled:true,shadow,record})；record保存独立sidecar制品。演示已用原runPython完成，未在默认路由创建新配置或自动注册服务。
+
+不要将版本2 sidecar直接写进旧Diagnostic字段；它的存在性、局部支持和因果条件不是旧Schema状态。不要把sidecar异常映射成Agent评测失败，也不要让Provider获得评分写权限。原base执行失败原样传播，只有shadow/sink异常被隔离。
+
+关闭：不传包装器或enabled保持false；独立批量分析停止运行即可。原始基线在baseline，0-baseline.json记录活跃源码与快照Hash；无需反向数据库迁移、删除历史文件或替换adapter.py。每阶段结果单独保存，可独立停用新审核、Provider或grouping。
+
+如果未来准备移入产品目录，必须先有可用Git工作树、完成原AGENTS要求的impact分析、独立质量和真实数据库验收，再生成小补丁。当前不能因缺Git而声称未提交改动不存在，也不据文件名直接清理Unknown目录。旧实验负结果、失败、回滚补丁全部保留。

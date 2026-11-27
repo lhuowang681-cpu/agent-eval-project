@@ -1,0 +1,20 @@
+{
+  "label": "attribution-tasks",
+  "cwd": "../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/server/services/agentEvalAttribution/__tests__/tasks.integration.test.ts",
+    "--environment=node",
+    "--maxWorkers=1",
+    "--fileParallelism=false",
+    "--testTimeout=20000",
+    "--hookTimeout=60000",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_phase2/increment2/tasks-initial.json"
+  ],
+  "exitCode": 0,
+  "seconds": 21.08
+}

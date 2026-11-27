@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-08T16:08:12.3438161+08:00",
+  "scope": "Current audit process only. No values read; no .env or database credential lookup; no paid request.",
+  "variables": [
+    {
+      "name": "OPENAI_API_KEY",
+      "processVariableExists": false
+    },
+    {
+      "name": "OPENAI_PROXY_URL",
+      "processVariableExists": false
+    },
+    {
+      "name": "OPENAI_BASE_URL",
+      "processVariableExists": false
+    },
+    {
+      "name": "AIHUBMIX_API_KEY",
+      "processVariableExists": false
+    },
+    {
+      "name": "AZURE_API_KEY",
+      "processVariableExists": false
+    },
+    {
+      "name": "ANTHROPIC_API_KEY",
+      "processVariableExists": false
+    },
+    {
+      "name": "GOOGLE_API_KEY",
+      "processVariableExists": false
+    },
+    {
+      "name": "DEEPSEEK_API_KEY",
+      "processVariableExists": false
+    },
+    {
+      "name": "OPENROUTER_API_KEY",
+      "processVariableExists": false
+    }
+  ],
+  "availability": "Presence cannot prove validity, non-placeholder status, provider permissions, configured DB credentials or quota."
+}

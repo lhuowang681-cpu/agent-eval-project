@@ -1,0 +1,26 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mC:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform[39m
+
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/jsonSchema.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m packages/eval-dataset-parser/__tests__/parseDataset.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/__tests__/boundaries.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/__tests__/evaluate.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/__tests__/extractors.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m packages/eval-dataset-parser/__tests__/jsonl-lines.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/numeric.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/levenshtein.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/eval-dataset-parser/__tests__/detectFormat.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/contains.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/anyOf.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/endsWith.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/equals.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/startsWith.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/eval-rubric/src/matchers/__tests__/regex.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m16 passed[39m[22m[90m (16)[39m
+[2m      Tests [22m [1m[32m113 passed[39m[22m[90m (113)[39m
+[2m   Start at [22m 15:21:29
+[2m   Duration [22m 7.20s[2m (transform 255ms, setup 58ms, collect 1.24s, tests 110ms, environment 3ms, prepare 2.04s)[22m
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_round1/scoring/after.json

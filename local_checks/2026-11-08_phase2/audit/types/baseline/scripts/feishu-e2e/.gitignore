@@ -1,0 +1,6 @@
+# 含真实凭证（cookies + 飞书 UAT），严禁提交
+.auth/
+# 运行产物
+videos/
+screenshots/
+reports/

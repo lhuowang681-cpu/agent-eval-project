@@ -1,0 +1,13 @@
+{
+  "platformFilesUnchanged": 10,
+  "previousFilesUnchanged": 159,
+  "protocolUnchangedAfterEvaluation": true,
+  "unjudgeableCases": 6,
+  "rootPositiveCases": 0,
+  "sourceKinds": [
+    "real PostgreSQL with synthetic persisted rows",
+    "real ModelRuntime to localhost fixed HTTP Mock",
+    "frozen single-author synthetic quality set"
+  ],
+  "paidRequests": 0
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "parameter_closed",
+    "file": "smoke/parameter_closed.json",
+    "sha256": "3e48d8bd51272b53cdf42c8e87831509a5ac104210c1245de41143565d01ff73",
+    "source": "older development fixture, not independent test",
+    "traceUtf8Bytes": 1817,
+    "expectedSemanticAbstention": false
+  },
+  {
+    "name": "answer_mismatch",
+    "file": "smoke/answer_mismatch.json",
+    "sha256": "2a141baf74fb932de34a8b53cd6d77283dc8a2cb4e461cfcea77c6830785318f",
+    "source": "older development fixture, not independent test",
+    "traceUtf8Bytes": 1877,
+    "expectedSemanticAbstention": false
+  },
+  {
+    "name": "stale_result",
+    "file": "smoke/stale_result.json",
+    "sha256": "328f1f84c783a2c2617503bc8cc2768113ab283ef308af5741f8be1c79b31417",
+    "source": "older development fixture, not independent test",
+    "traceUtf8Bytes": 2525,
+    "expectedSemanticAbstention": false
+  },
+  {
+    "name": "normal",
+    "file": "smoke/normal.json",
+    "sha256": "c37612d8e0fab825a5407df7ddc2e8d06a203d4707982a5433e22c3b411ec3a8",
+    "source": "older development fixture, not independent test",
+    "traceUtf8Bytes": 1877,
+    "expectedSemanticAbstention": true
+  },
+  {
+    "name": "recovered",
+    "file": "smoke/recovered.json",
+    "sha256": "0ec16df08b0ee475600b75f4ef9307092584f2d12ebf63f60afdb4a60637e318",
+    "source": "older development fixture, not independent test",
+    "traceUtf8Bytes": 2605,
+    "expectedSemanticAbstention": true
+  }
+]

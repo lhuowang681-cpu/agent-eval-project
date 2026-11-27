@@ -1,0 +1,21 @@
+{
+  "label": "pending-merge-regression",
+  "cwd": "../../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/server/services/agentEvalRun/__tests__/localThreadCompletion.integration.test.ts",
+    "-t",
+    "keeps existing pending metadata",
+    "--environment=node",
+    "--maxWorkers=1",
+    "--testTimeout=20000",
+    "--hookTimeout=60000",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_phase2/increment1/pending-merge-regression.json"
+  ],
+  "exitCode": 0,
+  "seconds": 30.9
+}

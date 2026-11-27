@@ -1,0 +1,18 @@
+2026-11-14T08:25:58.853Z lobe-mcp:deps-check Installation checker registered: npm
+2026-11-14T08:25:58.853Z lobe-mcp:deps-check Installation checker registered: python
+2026-11-14T08:25:58.853Z lobe-mcp:deps-check Installation checker registered: manual
+(node:34544) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok((typeof v==='string'?v:JSON.stringify(v)).includes(ref.quote))
+
+    at main (C:\Users\1\Desktop\就业agent\agent-eval-project\local_checks\2026-11-14_real_acceptance\integration\postgres.ts:73:211)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

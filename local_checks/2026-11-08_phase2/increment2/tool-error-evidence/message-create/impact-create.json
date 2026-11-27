@@ -1,0 +1,874 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794129023892,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Method:packages/database/src/models/message.ts:MessageModel.create",
+    "name": "create",
+    "type": "Method",
+    "filePath": "packages/database/src/models/message.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 30,
+  "risk": "CRITICAL",
+  "riskSharedAxes": "MEDIUM",
+  "riskScale": {
+    "comparableAcrossKinds": true,
+    "unusedAxes": []
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "summary": {
+    "direct": 3,
+    "processes_affected": 5,
+    "modules_affected": 8
+  },
+  "byDepthCounts": {
+    "1": 3,
+    "2": 11,
+    "3": 16
+  },
+  "affected_processes": [
+    {
+      "name": "createResponse",
+      "type": "Function",
+      "filePath": "packages/openapi/src/controllers/responses.controller.ts",
+      "affected_process_count": 11,
+      "total_hits": 35,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "POST",
+      "type": "Function",
+      "filePath": "src/app/(backend)/api/agent/route.ts",
+      "affected_process_count": 10,
+      "total_hits": 20,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "createMessage",
+      "type": "Function",
+      "filePath": "src/server/services/message/index.ts",
+      "affected_process_count": 9,
+      "total_hits": 9,
+      "earliest_broken_step": 1
+    },
+    {
+      "name": "heartbeatTick",
+      "type": "Function",
+      "filePath": "src/server/workflows-hono/task/handlers/heartbeatTick.ts",
+      "affected_process_count": 4,
+      "total_hits": 8,
+      "earliest_broken_step": 2
+    },
+    {
+      "name": "scheduleExecute",
+      "type": "Function",
+      "filePath": "src/server/workflows-hono/task/handlers/scheduleExecute.ts",
+      "affected_process_count": 5,
+      "total_hits": 5,
+      "earliest_broken_step": 2
+    }
+  ],
+  "affected_modules": [
+    {
+      "name": "Models",
+      "hits": 5,
+      "impact": "indirect"
+    },
+    {
+      "name": "AiAgent",
+      "hits": 4,
+      "impact": "direct"
+    },
+    {
+      "name": "Services",
+      "hits": 4,
+      "impact": "direct"
+    },
+    {
+      "name": "AgentEvalRun",
+      "hits": 3,
+      "impact": "indirect"
+    },
+    {
+      "name": "Bot",
+      "hits": 3,
+      "impact": "indirect"
+    },
+    {
+      "name": "PlanRuntime",
+      "hits": 2,
+      "impact": "direct"
+    },
+    {
+      "name": "Controllers",
+      "hits": 1,
+      "impact": "indirect"
+    },
+    {
+      "name": "Local",
+      "hits": 1,
+      "impact": "indirect"
+    }
+  ],
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "Class:src/server/services/toolExecution/serverRuntimes/lobeAgent.ts:LobeAgentServerExecutionRuntime",
+        "name": "LobeAgentServerExecutionRuntime",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/lobeAgent.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execAgent#1",
+        "name": "execAgent",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_11_createresponse",
+            "label": "CreateResponse → Merge",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_13_createresponse",
+            "label": "CreateResponse → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_75_createresponse",
+            "label": "CreateResponse → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_241_post",
+            "label": "POST → GetAppConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_12_createresponse",
+            "label": "CreateResponse → GetAppConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_240_post",
+            "label": "POST → Merge",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_278_post",
+            "label": "POST → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_8_createresponse",
+            "label": "CreateResponse → GetServiceModelTaskConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_46_post",
+            "label": "POST → GetMergedModelDevParams",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_5_post",
+            "label": "POST → GetFallbackTaskConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_277_post",
+            "label": "POST → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_7_post",
+            "label": "POST → ResolveTaskEntry",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_47_post",
+            "label": "POST → CleanObject",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_76_createresponse",
+            "label": "CreateResponse → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 4
+          },
+          {
+            "id": "proc_242_post",
+            "label": "POST → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_6_post",
+            "label": "POST → GetQConfigServiceModelConfig",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 1,
+        "id": "Method:src/server/services/message/index.ts:MessageService.createMessage#1",
+        "name": "createMessage",
+        "filePath": "src/server/services/message/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_489_createmessage",
+            "label": "CreateMessage → ModalContent",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_517_createmessage",
+            "label": "CreateMessage → StopMonitor",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_544_createmessage",
+            "label": "CreateMessage → Cleanup",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_547_createmessage",
+            "label": "CreateMessage → GetLobehubAuth",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_511_createmessage",
+            "label": "CreateMessage → RefreshKlavisServerTools",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_535_createmessage",
+            "label": "CreateMessage → CheckLobehubStatus",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_543_createmessage",
+            "label": "CreateMessage → SkillConnectionPopupBlockedError",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_846_createmessage",
+            "label": "CreateMessage → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_523_createmessage",
+            "label": "CreateMessage → CreateMCPError",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "depth": 2,
+        "id": "Function:src/app/(backend)/api/agent/route.ts:POST",
+        "name": "POST",
+        "filePath": "src/app/(backend)/api/agent/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_5_post",
+            "label": "POST → GetFallbackTaskConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_277_post",
+            "label": "POST → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_6_post",
+            "label": "POST → GetQConfigServiceModelConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_7_post",
+            "label": "POST → ResolveTaskEntry",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_47_post",
+            "label": "POST → CleanObject",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_242_post",
+            "label": "POST → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_46_post",
+            "label": "POST → GetMergedModelDevParams",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_240_post",
+            "label": "POST → Merge",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_278_post",
+            "label": "POST → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_241_post",
+            "label": "POST → GetAppConfig",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Function:src/server/services/toolExecution/serverRuntimes/lobeAgent.ts:lobeAgentRuntime.factory",
+        "name": "factory",
+        "filePath": "src/server/services/toolExecution/serverRuntimes/lobeAgent.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:packages/openapi/src/services/responses.service.ts:ResponsesService.createResponse#1",
+        "name": "createResponse",
+        "filePath": "packages/openapi/src/services/responses.service.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:packages/openapi/src/services/responses.service.ts:ResponsesService.createStreamingResponse#1",
+        "name": "createStreamingResponse",
+        "filePath": "packages/openapi/src/services/responses.service.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_75_createresponse",
+            "label": "CreateResponse → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_100_createresponse",
+            "label": "CreateResponse → ExtractInputInstructions",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_11_createresponse",
+            "label": "CreateResponse → Merge",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_13_createresponse",
+            "label": "CreateResponse → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_76_createresponse",
+            "label": "CreateResponse → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_152_createresponse",
+            "label": "CreateResponse → ExtractPrompt",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_153_createresponse",
+            "label": "CreateResponse → ExtractTopicIdFromResponseId",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_12_createresponse",
+            "label": "CreateResponse → GetAppConfig",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_8_createresponse",
+            "label": "CreateResponse → GetServiceModelTaskConfig",
+            "processType": "cross_community",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeThreadTrajectory#1",
+        "name": "executeThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/agentEvalRun/index.ts:AgentEvalRunService.executeTrajectory#1",
+        "name": "executeTrajectory",
+        "filePath": "src/server/services/agentEvalRun/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execAgentThreadRun#2",
+        "name": "execAgentThreadRun",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execGroupAgent#1",
+        "name": "execGroupAgent",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/bot/AgentBridgeService.ts:AgentBridgeService.executeWithHooksLocalMode#3",
+        "name": "executeWithHooksLocalMode",
+        "filePath": "src/server/services/bot/AgentBridgeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/bot/AgentBridgeService.ts:AgentBridgeService.executeWithHooksQueueMode#4",
+        "name": "executeWithHooksQueueMode",
+        "filePath": "src/server/services/bot/AgentBridgeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 2,
+        "id": "Method:src/server/services/taskRunner/index.ts:TaskRunnerService.runTask#1",
+        "name": "runTask",
+        "filePath": "src/server/services/taskRunner/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_67_heartbeattick",
+            "label": "HeartbeatTick → Where",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_320_heartbeattick",
+            "label": "HeartbeatTick → Set",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_132_heartbeattick",
+            "label": "HeartbeatTick → GetBuiltinAgent",
+            "processType": "cross_community",
+            "step": 3
+          },
+          {
+            "id": "proc_66_heartbeattick",
+            "label": "HeartbeatTick → Where",
+            "processType": "cross_community",
+            "step": 3
+          }
+        ]
+      }
+    ],
+    "3": [
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/resume-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/resume-agent-trajectory/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/resume-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/resume-thread-trajectory/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-agent-trajectory/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts",
+        "name": "route.ts",
+        "filePath": "src/app/(backend)/api/workflows/agent-eval-run/run-thread-trajectory/route.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:src/server/routers/lambda/task.ts",
+        "name": "task.ts",
+        "filePath": "src/server/routers/lambda/task.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/server/services/taskRunner/heartbeatTick.ts:runHeartbeatTick",
+        "name": "runHeartbeatTick",
+        "filePath": "src/server/services/taskRunner/heartbeatTick.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_132_heartbeattick",
+            "label": "HeartbeatTick → GetBuiltinAgent",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_66_heartbeattick",
+            "label": "HeartbeatTick → Where",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_320_heartbeattick",
+            "label": "HeartbeatTick → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_67_heartbeattick",
+            "label": "HeartbeatTick → Where",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Function:src/server/services/taskRunner/scheduleTick.ts:runScheduleTick",
+        "name": "runScheduleTick",
+        "filePath": "src/server/services/taskRunner/scheduleTick.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_270_scheduleexecute",
+            "label": "ScheduleExecute → Where",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_269_scheduleexecute",
+            "label": "ScheduleExecute → Where",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_372_scheduleexecute",
+            "label": "ScheduleExecute → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_348_scheduleexecute",
+            "label": "ScheduleExecute → Set",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_413_scheduleexecute",
+            "label": "ScheduleExecute → Set",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/openapi/src/controllers/responses.controller.ts:ResponsesController.createResponse#1",
+        "name": "createResponse",
+        "filePath": "packages/openapi/src/controllers/responses.controller.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_75_createresponse",
+            "label": "CreateResponse → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_100_createresponse",
+            "label": "CreateResponse → ExtractInputInstructions",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_11_createresponse",
+            "label": "CreateResponse → Merge",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_13_createresponse",
+            "label": "CreateResponse → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_752_createresponse",
+            "label": "CreateResponse → GetDBInstance",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_76_createresponse",
+            "label": "CreateResponse → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_152_createresponse",
+            "label": "CreateResponse → ExtractPrompt",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_153_createresponse",
+            "label": "CreateResponse → ExtractTopicIdFromResponseId",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_795_createresponse",
+            "label": "CreateResponse → Json",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_12_createresponse",
+            "label": "CreateResponse → GetAppConfig",
+            "processType": "cross_community",
+            "step": 1
+          },
+          {
+            "id": "proc_8_createresponse",
+            "label": "CreateResponse → GetServiceModelTaskConfig",
+            "processType": "cross_community",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Method:packages/openapi/src/controllers/responses.controller.ts:ResponsesController.handleStreamingResponse#3",
+        "name": "handleStreamingResponse",
+        "filePath": "packages/openapi/src/controllers/responses.controller.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": [
+          {
+            "id": "proc_76_createresponse",
+            "label": "CreateResponse → GetUserSettingsDefaultAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_152_createresponse",
+            "label": "CreateResponse → ExtractPrompt",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_153_createresponse",
+            "label": "CreateResponse → ExtractTopicIdFromResponseId",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_75_createresponse",
+            "label": "CreateResponse → GetAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_8_createresponse",
+            "label": "CreateResponse → GetServiceModelTaskConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_12_createresponse",
+            "label": "CreateResponse → GetAppConfig",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_100_createresponse",
+            "label": "CreateResponse → ExtractInputInstructions",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_11_createresponse",
+            "label": "CreateResponse → Merge",
+            "processType": "cross_community",
+            "step": 2
+          },
+          {
+            "id": "proc_13_createresponse",
+            "label": "CreateResponse → ParseAgentConfig",
+            "processType": "cross_community",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runAgentTrajectory#1",
+        "name": "runAgentTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/agentEvalRun/orchestrator.ts:AgentEvalRunOrchestrator.runThreadTrajectory#1",
+        "name": "runThreadTrajectory",
+        "filePath": "src/server/services/agentEvalRun/orchestrator.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execSubAgentTask#1",
+        "name": "execSubAgentTask",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/aiAgent/index.ts:AiAgentService.execVirtualSubAgent#1",
+        "name": "execVirtualSubAgent",
+        "filePath": "src/server/services/aiAgent/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/bot/AgentBridgeService.ts:AgentBridgeService.executeWithCallback#3",
+        "name": "executeWithCallback",
+        "filePath": "src/server/services/bot/AgentBridgeService.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/task/index.ts:TaskService.runReadySubtasks#1",
+        "name": "runReadySubtasks",
+        "filePath": "src/server/services/task/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "Method:src/server/services/taskRunner/index.ts:TaskRunnerService.cascadeOnCompletion#1",
+        "name": "cascadeOnCompletion",
+        "filePath": "src/server/services/taskRunner/index.ts",
+        "relationType": "CALLS",
+        "confidence": 0.85,
+        "processes": []
+      }
+    ]
+  }
+}

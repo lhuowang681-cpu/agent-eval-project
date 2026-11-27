@@ -1,0 +1,15 @@
+{
+  "label": "completion-before-red",
+  "cwd": "../../2026-11-08_platform_audit/platform",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/server/services/agentEvalRun/__tests__/localCompletion.integration.test.ts",
+    "--maxWorkers=1",
+    "--reporter=json",
+    "--outputFile=../../2026-11-08_round1/completion/before-red.json"
+  ],
+  "exitCode": 1,
+  "seconds": 30.61
+}

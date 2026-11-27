@@ -1,0 +1,74 @@
+▲ Next.js 16.1.5 (webpack)
+- Local:         http://127.0.0.1:56847
+- Network:       http://127.0.0.1:56847
+- Experiments (use with caution):
+  · optimizePackageImports
+  ⨯ serverMinification
+  · webVitalsAttribution
+
+✓ Starting...
+○ Compiling /instrumentation ...
+⨯ ./packages/builtin-skills/src/docx/SKILL.md
+Module parse failed: Assigning to rvalue (1:2)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> ---
+| name: docx
+| description: "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation."
+
+Import trace for requested module:
+./packages/builtin-skills/src/docx/SKILL.md
+./packages/builtin-skills/src/docx/index.ts
+./packages/builtin-skills/src/index.ts
+./src/server/services/aiAgent/index.ts
+./packages/openapi/src/services/responses.service.ts
+./packages/openapi/src/controllers/responses.controller.ts
+./packages/openapi/src/routes/responses.route.ts
+./packages/openapi/src/routes/index.ts
+./packages/openapi/src/app.ts
+./packages/openapi/src/index.ts
+./src/server/services/apiKeyCacheBus.ts
+./src/instrumentation.node.ts
+✓ Ready in 89.2s
+⨯ ./packages/builtin-skills/src/docx/SKILL.md
+Module parse failed: Assigning to rvalue (1:2)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> ---
+| name: docx
+| description: "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation."
+
+Import trace for requested module:
+./packages/builtin-skills/src/docx/SKILL.md
+./packages/builtin-skills/src/docx/index.ts
+./packages/builtin-skills/src/index.ts
+./src/server/services/aiAgent/index.ts
+./packages/openapi/src/services/responses.service.ts
+./packages/openapi/src/controllers/responses.controller.ts
+./packages/openapi/src/routes/responses.route.ts
+./packages/openapi/src/routes/index.ts
+./packages/openapi/src/app.ts
+./packages/openapi/src/index.ts
+./src/server/services/apiKeyCacheBus.ts
+./src/instrumentation.node.ts
+
+<--- Last few GCs --->
+
+[2128:000001F08993A000]   136721 ms: Scavenge (interleaved) 3924.5 (4052.7) -> 3923.3 (4052.7) MB, pooled: 0 MB, 4.49 / 0.01 ms  (average mu = 0.277, current mu = 0.212) task; 
+[2128:000001F08993A000]   137460 ms: Mark-Compact (reduce) 3925.1 (4052.7) -> 3919.4 (4042.3) MB, pooled: 0 MB, 469.01 / 0.00 ms  (+ 132.1 ms in 40 steps since start of marking, biggest step 6.5 ms, walltime since start of marking 654 ms) (average mu = 0.
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF7010C50BF node::OnFatalError+1343
+ 2: 00007FF6FFCEDD27 v8::Function::NewInstance+423
+ 3: 00007FF6FFAEE567 X509_STORE_get_lookup_certs+54423
+ 4: 00007FF6FFAF2274 X509_STORE_get_lookup_certs+70052
+ 5: 00007FF6FFB011DC v8::internal::StrongRootAllocatorBase::deallocate_impl+16604
+ 6: 00007FF6FFB00A1B v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+ 7: 00007FF7013E7DED node::AsyncResource::CallbackScope::CallbackScope+2124541
+ 8: 00007FF6FFAEC030 X509_STORE_get_lookup_certs+44896
+ 9: 00007FF6FFB0688A X509_STORE_set_cleanup+5098
+10: 00007FF6FFB126E8 uv_timer_set_repeat+19096
+11: 00007FF6FFB2DA45 uv_timer_set_repeat+130549
+12: 00007FF6FFB2D9AC uv_timer_set_repeat+130396
+13: 00007FF6FF24A103 v8::base::TimeDelta::TimeDelta+24979
+14: 00007FF6FF6C2E84 v8::String::Utf8Value::~Utf8Value+10420
+15: 000001F0C20775FA 

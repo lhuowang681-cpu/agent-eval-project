@@ -1,0 +1,493 @@
+{
+  "engine": "baseline",
+  "engineDirectory": "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_phase3\\baseline",
+  "records": [
+    {
+      "id": "controlled-1",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 8.31e-05
+        },
+        "direct": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 7.5e-06
+        },
+        "structured": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1e-05
+        },
+        "citations": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.8e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "not_applicable",
+                "issues": []
+              },
+              "support": {
+                "status": "not_applicable",
+                "issues": []
+              }
+            },
+            "sourceDigest": "759d8a6babae4220fb32746cac4b49a54e7bfa3604d4141d846b17ec877d1c6c",
+            "scope": {
+              "runId": "run_w0hAyO5QBk5x",
+              "caseId": "case_EMgQQ2Ozv7py",
+              "topicId": "tpc_WlpbNygYKkCQ",
+              "threadId": null,
+              "operationId": "op_1794130216461_agt_J6iQ4aCn1EMc_tpc_WlpbNygYKkCQ_zeD9iHFy",
+              "traceIds": []
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.79e-05
+        }
+      }
+    },
+    {
+      "id": "controlled-2",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.2e-05
+        },
+        "direct": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 4.8e-06
+        },
+        "structured": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.9e-06
+        },
+        "citations": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.8e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "not_applicable",
+                "issues": []
+              },
+              "support": {
+                "status": "not_applicable",
+                "issues": []
+              }
+            },
+            "sourceDigest": "4c8d2c851ff69e55e23ef35dc39bfe2cd3ddc9b0179bfdf6f520674822da3e6a",
+            "scope": {
+              "runId": "run_w0hAyO5QBk5x",
+              "caseId": "case_71xg8CyuWSrx",
+              "topicId": "tpc_r6DtA89WWCgy",
+              "threadId": null,
+              "operationId": "op_1794130216462_agt_J6iQ4aCn1EMc_tpc_r6DtA89WWCgy_KJmk0ec9",
+              "traceIds": []
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.29e-05
+        }
+      }
+    },
+    {
+      "id": "controlled-3",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "ruleObservations": [],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 9.9e-06
+        },
+        "direct": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 5.1e-06
+        },
+        "structured": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.5e-06
+        },
+        "citations": {
+          "output": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 6.3e-06
+        },
+        "full": {
+          "output": null,
+          "issues": [],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "not_applicable",
+                "issues": []
+              },
+              "support": {
+                "status": "not_applicable",
+                "issues": []
+              }
+            },
+            "sourceDigest": "bb29f49b8180de42dd9fc5d9152cdab6de795733644625535453c11014210cef",
+            "scope": {
+              "runId": "run_w0hAyO5QBk5x",
+              "caseId": "case_UXzmrQeGPZJW",
+              "topicId": "tpc_JaPK1D6Xekfn",
+              "threadId": null,
+              "operationId": "op_1794130216682_agt_J6iQ4aCn1EMc_tpc_JaPK1D6Xekfn_2DySzcZJ",
+              "traceIds": []
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 1.03e-05
+        }
+      }
+    },
+    {
+      "id": "controlled-4",
+      "outcomes": {
+        "rules": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_d8HurSqGsdwnIK",
+                "field": "error",
+                "quote": "{\"message\": \"Failed to evaluate expression: Unexpected end of expression (char 9)\", \"type\": \"CalculationError\"}"
+              },
+              {
+                "nodeId": "call:msg_ovkTVIEMiYUVTu:0",
+                "field": "arguments",
+                "quote": "{\"expression\":\"invalid(\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "incomplete_source_coverage"
+            ]
+          },
+          "ruleObservations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_d8HurSqGsdwnIK",
+                  "field": "error",
+                  "quote": "{\"message\": \"Failed to evaluate expression: Unexpected end of expression (char 9)\", \"type\": \"CalculationError\"}"
+                },
+                {
+                  "nodeId": "call:msg_ovkTVIEMiYUVTu:0",
+                  "field": "arguments",
+                  "quote": "{\"expression\":\"invalid(\"}"
+                }
+              ]
+            }
+          ],
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 0.0005716
+        },
+        "direct": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_d8HurSqGsdwnIK",
+                "field": "error",
+                "quote": "{\"message\": \"Failed to evaluate expression: Unexpected end of expression (char 9)\", \"type\": \"CalculationError\"}"
+              },
+              {
+                "nodeId": "call:msg_ovkTVIEMiYUVTu:0",
+                "field": "arguments",
+                "quote": "{\"expression\":\"invalid(\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "evidence_review_not_supported",
+              "incomplete_source_coverage"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.2e-05
+        },
+        "structured": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_d8HurSqGsdwnIK",
+                "field": "error",
+                "quote": "{\"message\": \"Failed to evaluate expression: Unexpected end of expression (char 9)\", \"type\": \"CalculationError\"}"
+              },
+              {
+                "nodeId": "call:msg_ovkTVIEMiYUVTu:0",
+                "field": "arguments",
+                "quote": "{\"expression\":\"invalid(\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "evidence_review_not_supported",
+              "incomplete_source_coverage"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 1.57e-05
+        },
+        "citations": {
+          "output": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_d8HurSqGsdwnIK",
+                "field": "error",
+                "quote": "{\"message\": \"Failed to evaluate expression: Unexpected end of expression (char 9)\", \"type\": \"CalculationError\"}"
+              },
+              {
+                "nodeId": "call:msg_ovkTVIEMiYUVTu:0",
+                "field": "arguments",
+                "quote": "{\"expression\":\"invalid(\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "evidence_review_not_supported",
+              "incomplete_source_coverage"
+            ]
+          },
+          "issues": [],
+          "executionError": null,
+          "localSeconds": 2.33e-05
+        },
+        "full": {
+          "output": null,
+          "issues": [
+            "incomplete_source_coverage"
+          ],
+          "audit": {
+            "review": {
+              "existence": {
+                "status": "valid",
+                "issues": []
+              },
+              "support": {
+                "status": "insufficient",
+                "issues": [
+                  {
+                    "code": "incomplete_source_coverage",
+                    "nodeId": null,
+                    "message": "Source coverage is incomplete"
+                  }
+                ]
+              }
+            },
+            "sourceDigest": "3b09568bfcb4e3640b4da945657d6991ba57ce8931c304e4ea576b30583f73b6",
+            "scope": {
+              "runId": "run_nCcshmbgpbgC",
+              "caseId": "case_2NydKZWYakke",
+              "topicId": "tpc_NQBWVXR62ahb",
+              "threadId": null,
+              "operationId": "op_1794130218346_agt_J6iQ4aCn1EMc_tpc_NQBWVXR62ahb_LcceHlEO",
+              "traceIds": []
+            },
+            "safeCandidate": null
+          },
+          "executionError": null,
+          "localSeconds": 0.0001342
+        }
+      }
+    }
+  ],
+  "modelCalls": 0,
+  "tokenUsage": null,
+  "modelLatencySeconds": null,
+  "supplierCost": null,
+  "candidateGeneration": "Fixed offline fixtures; no LLM inference."
+}

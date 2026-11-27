@@ -1,0 +1,125 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime[39m
+
+ [32m✓[39m src/agents/__tests__/GeneralChatAgent.test.ts [2m([22m[2m63 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m src/core/__tests__/runtime.test.ts [2m([22m[2m49 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m src/core/__tests__/InterventionChecker.test.ts [2m([22m[2m57 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/core/__tests__/UsageCounter.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/groupOrchestration/__tests__/GroupOrchestrationSupervisor.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [31m❯[39m src/utils/tokenCounter.test.ts [2m([22m[2m23 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 10[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mestimateTokens[2m > [22mshould estimate tokens for string content[32m 1[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mestimateTokens[2m > [22mshould return 0 for empty string[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mestimateTokens[2m > [22mshould handle null/undefined content[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mestimateTokens[2m > [22mshould handle object content by JSON stringifying[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mestimateTokens[2m > [22mshould handle array content[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mcalculateMessageTokens[2m > [22mshould use totalOutputTokens for assistant messages when available[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mcalculateMessageTokens[2m > [22mshould estimate tokens for assistant messages without usage data[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mcalculateMessageTokens[2m > [22mshould estimate tokens for user messages[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mcalculateMessageTokens[2m > [22mshould estimate tokens for system messages[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mcalculateMessageTokens[2m > [22mshould sum tokens from multiple messages[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mcalculateMessageTokens[2m > [22mshould handle empty messages array[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mcalculateMessageTokens[2m > [22mshould handle messages with empty content[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mcalculateMessageTokens[2m > [22mshould skip assistant usage with 0 tokens and estimate instead[32m 0[2mms[22m[39m
+[31m   [31m×[31m tokenCounter[2m > [22mgetCompressionThreshold[2m > [22mshould use default values[39m[32m 5[2mms[22m[39m
+[31m     → expected 83200 to be 64000 // Object.is equality[39m
+[31m   [31m×[31m tokenCounter[2m > [22mgetCompressionThreshold[2m > [22mshould use custom maxWindowToken[39m[32m 0[2mms[22m[39m
+[31m     → expected 130000 to be 100000 // Object.is equality[39m
+   [32m✓[39m tokenCounter[2m > [22mgetCompressionThreshold[2m > [22mshould use custom thresholdRatio[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mgetCompressionThreshold[2m > [22mshould use both custom values[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mgetCompressionThreshold[2m > [22mshould floor the result[32m 0[2mms[22m[39m
+[31m   [31m×[31m tokenCounter[2m > [22mshouldCompress[2m > [22mshould return needsCompression=false when under threshold[39m[32m 1[2mms[22m[39m
+[31m     → expected 83200 to be 64000 // Object.is equality[39m
+[31m   [31m×[31m tokenCounter[2m > [22mshouldCompress[2m > [22mshould return needsCompression=true when over threshold[39m[32m 0[2mms[22m[39m
+[31m     → expected false to be true // Object.is equality[39m
+   [32m✓[39m tokenCounter[2m > [22mshouldCompress[2m > [22mshould return needsCompression=false when exactly at threshold[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mshouldCompress[2m > [22mshould use custom options[32m 0[2mms[22m[39m
+   [32m✓[39m tokenCounter[2m > [22mshouldCompress[2m > [22mshould handle empty messages[32m 0[2mms[22m[39m
+ [32m✓[39m src/audit/__tests__/createSecurityBlacklistAudit.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m src/utils/messageSelectors.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m src/utils/stepContextComputer.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 4 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/utils/tokenCounter.test.ts[2m > [22mtokenCounter[2m > [22mgetCompressionThreshold[2m > [22mshould use default values
+[31m[1mAssertionError[22m: expected 83200 to be 64000 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 64000[39m
+[31m+ 83200[39m
+
+[36m [2m❯[22m src/utils/tokenCounter.test.ts:[2m112:25[22m[39m
+    [90m110| [39m      [35mconst[39m threshold [33m=[39m [34mgetCompressionThreshold[39m()[33m;[39m
+    [90m111| [39m      expect(threshold).toBe(Math.floor(DEFAULT_MAX_CONTEXT * DEFAULT_…
+    [90m112| [39m      [34mexpect[39m(threshold)[33m.[39m[34mtoBe[39m([34m64_000[39m)[33m;[39m [90m// 128k * 0.5[39m
+    [90m   | [39m                        [31m^[39m
+    [90m113| [39m    })[33m;[39m
+    [90m114| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/utils/tokenCounter.test.ts[2m > [22mtokenCounter[2m > [22mgetCompressionThreshold[2m > [22mshould use custom maxWindowToken
+[31m[1mAssertionError[22m: expected 130000 to be 100000 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 100000[39m
+[31m+ 130000[39m
+
+[36m [2m❯[22m src/utils/tokenCounter.test.ts:[2m117:25[22m[39m
+    [90m115| [39m    [34mit[39m([32m'should use custom maxWindowToken'[39m[33m,[39m () [33m=>[39m {
+    [90m116| [39m      const threshold = getCompressionThreshold({ maxWindowToken: 200_…
+    [90m117| [39m      [34mexpect[39m(threshold)[33m.[39m[34mtoBe[39m([34m100_000[39m)[33m;[39m [90m// 200k * 0.5[39m
+    [90m   | [39m                        [31m^[39m
+    [90m118| [39m    })[33m;[39m
+    [90m119| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/utils/tokenCounter.test.ts[2m > [22mtokenCounter[2m > [22mshouldCompress[2m > [22mshould return needsCompression=false when under threshold
+[31m[1mAssertionError[22m: expected 83200 to be 64000 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 64000[39m
+[31m+ 83200[39m
+
+[36m [2m❯[22m src/utils/tokenCounter.test.ts:[2m149:32[22m[39m
+    [90m147| [39m      [34mexpect[39m(result[33m.[39mneedsCompression)[33m.[39m[34mtoBe[39m([35mfalse[39m)[33m;[39m
+    [90m148| [39m      [34mexpect[39m(result[33m.[39mcurrentTokenCount)[33m.[39m[34mtoBeGreaterThan[39m([34m0[39m)[33m;[39m
+    [90m149| [39m      [34mexpect[39m(result[33m.[39mthreshold)[33m.[39m[34mtoBe[39m([34m64_000[39m)[33m;[39m [90m// 128k * 0.5[39m
+    [90m   | [39m                               [31m^[39m
+    [90m150| [39m    })[33m;[39m
+    [90m151| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/utils/tokenCounter.test.ts[2m > [22mtokenCounter[2m > [22mshouldCompress[2m > [22mshould return needsCompression=true when over threshold
+[31m[1mAssertionError[22m: expected false to be true // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- true[39m
+[31m+ false[39m
+
+[36m [2m❯[22m src/utils/tokenCounter.test.ts:[2m163:39[22m[39m
+    [90m161| [39m      [35mconst[39m result [33m=[39m [34mshouldCompress[39m(messages)[33m;[39m
+    [90m162| [39m
+    [90m163| [39m      [34mexpect[39m(result[33m.[39mneedsCompression)[33m.[39m[34mtoBe[39m([35mtrue[39m)[33m;[39m
+    [90m   | [39m                                      [31m^[39m
+    [90m164| [39m      [34mexpect[39m(result[33m.[39mcurrentTokenCount)[33m.[39m[34mtoBe[39m([34m70_000[39m)[33m;[39m
+    [90m165| [39m      [34mexpect[39m(result[33m.[39mthreshold)[33m.[39m[34mtoBe[39m([34m64_000[39m)[33m;[39m [90m// 128k * 0.5[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m8 passed[39m[22m[90m (9)[39m
+[2m      Tests [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m254 passed[39m[22m[90m (258)[39m
+[2m   Start at [22m 14:25:16
+[2m   Duration [22m 9.01s[2m (transform 261ms, setup 0ms, collect 463ms, tests 90ms, environment 5.44s, prepare 1.20s)[22m
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/results/runtime-original.json

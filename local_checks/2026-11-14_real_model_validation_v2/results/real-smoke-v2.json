@@ -1,0 +1,280 @@
+{
+  "stage": "development_smoke_v2_NOT_holdout",
+  "firstV1RequestPreserved": true,
+  "formalCalls": 0,
+  "records": [
+    {
+      "case": "parameter_closed",
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "dev",
+        "inputDigest": "dev-digest",
+        "scope": {
+          "runId": "devrun",
+          "caseId": "dev",
+          "topicId": "devtopic",
+          "threadId": null,
+          "operationId": "devop",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "dev-u",
+            "messageId": "u",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"task\": \"User supplied closed query policy\", \"parameterConstraints\": {\"year\": {\"allowed\": [2025], \"closed\": true}}}",
+            "sourcePointer": "synthetic/u",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "dev-c",
+            "messageId": "c",
+            "parentId": null,
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/c",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": "{\"year\": 2024, \"orderId\": \"dev-order\"}",
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "dev-r",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"dev-order\", \"status\": \"pending\", \"year\": 2024}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "dev-a",
+            "messageId": "a",
+            "parentId": null,
+            "role": "assistant",
+            "content": "{\"orderId\": \"dev-order\", \"status\": \"pending\", \"year\": 2024}",
+            "sourcePointer": "synthetic/a",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 8,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "{\"orderId\": \"dev-order\", \"year\": 2025}",
+          "expected": null,
+          "actual": "{\"orderId\": \"dev-order\", \"status\": \"pending\", \"year\": 2024}",
+          "criteria": null
+        }
+      },
+      "response": {
+        "candidate": {
+          "schemaVersion": 1,
+          "scope": {
+            "runId": "devrun",
+            "caseId": "dev",
+            "topicId": "devtopic",
+            "threadId": null,
+            "operationId": "devop",
+            "traceIds": []
+          },
+          "inputDigest": "dev-digest",
+          "decision": "needs_review",
+          "observations": [
+            {
+              "id": "obs-1",
+              "category": "parameter_task_mismatch",
+              "claimLevel": "observation",
+              "summary": "The most recent user message constrains year to the closed set [2025], but the orders.lookup call used year 2024, which is outside the allowed set.",
+              "comparison": {
+                "key": "year",
+                "expected": "2025",
+                "actual": "2024"
+              },
+              "evidenceRefs": [
+                {
+                  "nodeId": "dev-u",
+                  "field": "content",
+                  "quote": "{\"task\": \"User supplied closed query policy\", \"parameterConstraints\": {\"year\": {\"allowed\": [2025], \"closed\": true}}}"
+                },
+                {
+                  "nodeId": "dev-c",
+                  "field": "arguments",
+                  "quote": "{\"year\": 2024, \"orderId\": \"dev-order\"}"
+                }
+              ]
+            }
+          ]
+        },
+        "rawOutput": "{\"schemaVersion\":1,\"scope\":{\"runId\":\"devrun\",\"caseId\":\"dev\",\"topicId\":\"devtopic\",\"threadId\":null,\"operationId\":\"devop\",\"traceIds\":[]},\"inputDigest\":\"dev-digest\",\"decision\":\"needs_review\",\"observations\":[{\"id\":\"obs-1\",\"category\":\"parameter_task_mismatch\",\"claimLevel\":\"observation\",\"summary\":\"The most recent user message constrains year to the closed set [2025], but the orders.lookup call used year 2024, which is outside the allowed set.\",\"comparison\":{\"key\":\"year\",\"expected\":\"2025\",\"actual\":\"2024\"},\"evidenceRefs\":[{\"nodeId\":\"dev-u\",\"field\":\"content\",\"quote\":\"{\\\"task\\\": \\\"User supplied closed query policy\\\", \\\"parameterConstraints\\\": {\\\"year\\\": {\\\"allowed\\\": [2025], \\\"closed\\\": true}}}\"},{\"nodeId\":\"dev-c\",\"field\":\"arguments\",\"quote\":\"{\\\"year\\\": 2024, \\\"orderId\\\": \\\"dev-order\\\"}\"}]}]}",
+        "usage": {
+          "prompt_tokens": 1023,
+          "completion_tokens": 219,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1023
+        },
+        "returnedModel": "deepseek-flash",
+        "finishReason": "stop",
+        "model": "deepseek-flash",
+        "provider": "openai",
+        "promptVersion": "acceptance-v2-complete-envelope",
+        "latencyMs": 1197.5647999999992,
+        "actualCost": null,
+        "mode": "paid"
+      },
+      "audits": [
+        {
+          "status": 200,
+          "responseBody": "{\"id\":\"dd1f1912-7bca-4349-88e9-61827e2a8832\",\"object\":\"chat.completion\",\"created\":1794649539,\"model\":\"deepseek-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":1,\\\"scope\\\":{\\\"runId\\\":\\\"devrun\\\",\\\"caseId\\\":\\\"dev\\\",\\\"topicId\\\":\\\"devtopic\\\",\\\"threadId\\\":null,\\\"operationId\\\":\\\"devop\\\",\\\"traceIds\\\":[]},\\\"inputDigest\\\":\\\"dev-digest\\\",\\\"decision\\\":\\\"needs_review\\\",\\\"observations\\\":[{\\\"id\\\":\\\"obs-1\\\",\\\"category\\\":\\\"parameter_task_mismatch\\\",\\\"claimLevel\\\":\\\"observation\\\",\\\"summary\\\":\\\"The most recent user message constrains year to the closed set [2025], but the orders.lookup call used year 2024, which is outside the allowed set.\\\",\\\"comparison\\\":{\\\"key\\\":\\\"year\\\",\\\"expected\\\":\\\"2025\\\",\\\"actual\\\":\\\"2024\\\"},\\\"evidenceRefs\\\":[{\\\"nodeId\\\":\\\"dev-u\\\",\\\"field\\\":\\\"content\\\",\\\"quote\\\":\\\"{\\\\\\\"task\\\\\\\": \\\\\\\"User supplied closed query policy\\\\\\\", \\\\\\\"parameterConstraints\\\\\\\": {\\\\\\\"year\\\\\\\": {\\\\\\\"allowed\\\\\\\": [2025], \\\\\\\"closed\\\\\\\": true}}}\\\"},{\\\"nodeId\\\":\\\"dev-c\\\",\\\"field\\\":\\\"arguments\\\",\\\"quote\\\":\\\"{\\\\\\\"year\\\\\\\": 2024, \\\\\\\"orderId\\\\\\\": \\\\\\\"dev-order\\\\\\\"}\\\"}]}]}\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1023,\"completion_tokens\":219,\"total_tokens\":1242,\"prompt_tokens_details\":{\"cached_tokens\":0},\"prompt_cache_hit_tokens\":0,\"prompt_cache_miss_tokens\":1023},\"system_fingerprint\":\"bc19ba97cbe016479903222bb1578db6\"}"
+        }
+      ],
+      "expectedSemanticAbstention": false
+    },
+    {
+      "case": "answer_mismatch",
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "smoke-answer",
+        "inputDigest": "smoke-answer-digest",
+        "scope": {
+          "runId": "smoke-answerrun",
+          "caseId": "smoke-answer",
+          "topicId": "smoke-answertopic",
+          "threadId": null,
+          "operationId": "smoke-answerop",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "smoke-answer-u",
+            "messageId": "u",
+            "parentId": null,
+            "role": "user",
+            "content": "{\"orderId\": \"smoke-answer-order\", \"year\": 2025}",
+            "sourcePointer": "synthetic/u",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-answer-c",
+            "messageId": "c",
+            "parentId": null,
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/c",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": "{\"orderId\": \"smoke-answer-order\", \"year\": 2025}",
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-answer-r",
+            "messageId": "r",
+            "parentId": null,
+            "role": "tool",
+            "content": "{\"success\": true, \"data\": {\"orderId\": \"smoke-answer-order\", \"status\": \"pending\", \"year\": 2025}}",
+            "sourcePointer": "synthetic/r",
+            "error": null,
+            "toolCallId": "tc1",
+            "toolSource": "mcp",
+            "toolName": "orders.lookup",
+            "arguments": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "smoke-answer-a",
+            "messageId": "a",
+            "parentId": null,
+            "role": "assistant",
+            "content": "{\"orderId\": \"smoke-answer-order\", \"status\": \"shipped\", \"year\": 2025}",
+            "sourcePointer": "synthetic/a",
+            "error": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "traceId": null,
+            "sequence": 8,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "{\"orderId\": \"smoke-answer-order\", \"year\": 2025}",
+          "expected": null,
+          "actual": "{\"orderId\": \"smoke-answer-order\", \"status\": \"shipped\", \"year\": 2025}",
+          "criteria": null
+        }
+      },
+      "error": "provider_request_or_structure_failed:http:Error",
+      "elapsedMs": 2538.6639000000014,
+      "audits": [
+        {
+          "status": 200,
+          "responseBody": "{\"id\":\"dd818e6b-89e5-46e3-8a11-d179cbc24ec6\",\"object\":\"chat.completion\",\"created\":1794649541,\"model\":\"deepseek-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"schemaVersion\\\":1,\\\"scope\\\":{\\\"runId\\\":\\\"smoke-answerrun\\\",\\\"caseId\\\":\\\"smoke-answer\\\",\\\"topicId\\\":\\\"smoke-answertopic\\\",\\\"threadId\\\":null,\\\"operationId\\\":\\\"smoke-answerop\\\",\\\"traceIds\\\":[]},\\\"inputDigest\\\":\\\"smoke-answer-digest\\\",\\\"decision\\\":\\\"observed_fault\\\",\\\"observations\\\":[{\\\"id\\\":\\\"obs1\\\",\\\"category\\\":\\\"answer_tool_mismatch\\\",\\\"claimLevel\\\":\\\"observation\\\",\\\"summary\\\":\\\"Final answer reports status 'shipped' while the paired tool result for orderId smoke-answer-order reports status 'pending'.\\\",\\\"comparison\\\":{\\\"key\\\":\\\"status\\\",\\\"expected\\\":\\\"pending\\\",\\\"actual\\\":\\\"shipped\\\"},\\\"evidenceRefs\\\":[{\\\"nodeId\\\":\\\"smoke-answer-r\\\",\\\"field\\\":\\\"content\\\",\\\"quote\\\":\\\"\\\\\\\"status\\\\\\\": \\\\\\\"pending\\\\\\\"\\\"},{\\\"nodeId\\\":\\\"smoke-answer-a\\\",\\\"field\\\":\\\"content\\\",\\\"quote\\\":\\\"\\\\\\\"status\\\\\\\": \\\\\\\"shipped\\\\\\\"\\\"}]}]}\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":1057,\"completion_tokens\":194,\"total_tokens\":1251,\"prompt_tokens_details\":{\"cached_tokens\":256},\"prompt_cache_hit_tokens\":256,\"prompt_cache_miss_tokens\":801},\"system_fingerprint\":\"bc19ba97cbe016479903222bb1578db6\"}"
+        }
+      ]
+    }
+  ],
+  "ledger": {
+    "attempts": 3,
+    "approved": 6
+  },
+  "actualBill": null
+}

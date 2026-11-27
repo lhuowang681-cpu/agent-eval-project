@@ -1,0 +1,18 @@
+{
+  "acceptedAtUtc": "2026-11-08T09:19:16.741661+00:00",
+  "increment1": {
+    "status": "accepted_offline_mock",
+    "http": "increment1/http/results.json",
+    "ui": "increment1/ui/attempt2/result.json",
+    "realSupplier": "blocked: no confirmed usable real model configuration in isolated acceptance environment"
+  },
+  "increment2": {
+    "status": "accepted",
+    "http": "increment2/http/results.json",
+    "regressions": 68,
+    "regressionFile": "increment2/gate-final.json",
+    "pythonComponent": "increment2/python/results.json"
+  },
+  "increment3AllowedToActivate": true,
+  "note": "Prepared/staged reviewer tests before this gate were not stage acceptance."
+}

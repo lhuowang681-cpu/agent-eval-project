@@ -1,0 +1,36 @@
+{
+  "ports": {
+    "database": 56846,
+    "next": 56847
+  },
+  "events": [
+    {
+      "stage": "pglite",
+      "tcpReady": true,
+      "exitCode": null
+    },
+    {
+      "stage": "seed",
+      "exitCode": 0
+    },
+    {
+      "stage": "next",
+      "tcpReady": true,
+      "exitCode": null
+    },
+    {
+      "stage": "http",
+      "path": "/",
+      "error": "TimeoutError: timed out",
+      "seconds": 90.22
+    },
+    {
+      "stage": "http",
+      "path": "/eval",
+      "error": "ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+      "seconds": 46.41
+    }
+  ],
+  "allOwnedProcessesStopped": true,
+  "conditions": "PGlite without BM25; private dependencies use original stubs; no model credentials supplied; no browser interaction tested"
+}

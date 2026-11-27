@@ -1,0 +1,18 @@
+{
+  "checks": [
+    [
+      "-m",
+      "unittest",
+      "test_review",
+      "test_system"
+    ],
+    [
+      "verify.py"
+    ],
+    [
+      "sidecar.py"
+    ]
+  ],
+  "platformRequired": false,
+  "externalCalls": 0
+}

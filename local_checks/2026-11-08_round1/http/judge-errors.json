@@ -1,0 +1,636 @@
+{
+  "status": "passed",
+  "conditions": "Real PostgreSQL/HTTP/runtime. Unconfigured and deliberately invalid structured output from original localhost Mock. Valid judge output tested separately with stub runtime, no paid supplier or quality claim.",
+  "events": [
+    {
+      "configured": false,
+      "detail": {
+        "id": "run_yJHICqQrXOq7",
+        "datasetId": "ds_0gdZzk9KYXuj",
+        "targetAgentId": "agt_eu7HEgBsAcRt",
+        "userId": "round1-audit-user",
+        "name": "Judge infrastructure error",
+        "status": "failed",
+        "config": {
+          "timeout": 60000,
+          "maxSteps": 8,
+          "agentSnapshot": {
+            "model": "mock-model",
+            "params": {
+              "top_p": 1,
+              "temperature": 1,
+              "presence_penalty": 0,
+              "frequency_penalty": 0
+            },
+            "plugins": [],
+            "provider": "openai",
+            "chatConfig": {
+              "searchMode": "auto",
+              "historyCount": 20,
+              "searchFCModel": {
+                "model": "claude-sonnet-4-6",
+                "provider": "openai"
+              },
+              "enableReasoning": true,
+              "enableStreaming": true,
+              "enableHistoryCount": false,
+              "reasoningBudgetToken": 1024,
+              "enableAutoCreateTopic": true,
+              "enableCompressHistory": true,
+              "enableAdaptiveThinking": true,
+              "autoCreateTopicThreshold": 2,
+              "enableContextCompression": true
+            },
+            "systemRole": "Judge error fixture",
+            "description": null
+          }
+        },
+        "metrics": {
+          "steps": 3,
+          "tokens": 36264,
+          "duration": 1062,
+          "llmCalls": 3,
+          "passRate": 0,
+          "errorCases": 3,
+          "totalCases": 3,
+          "failedCases": 0,
+          "passedCases": 0,
+          "totalTokens": 36264,
+          "averageScore": 0,
+          "perCaseSteps": 1,
+          "rubricScores": {},
+          "timeoutCases": 0,
+          "perCaseTokens": 12088,
+          "totalDuration": 1703,
+          "completedCases": 3,
+          "perCaseLlmCalls": 1
+        },
+        "startedAt": "2026-11-08T07:34:40.650Z",
+        "accessedAt": "2026-11-08T07:34:41.712Z",
+        "createdAt": "2026-11-08T07:34:40.502Z",
+        "updatedAt": "2026-11-08T07:34:41.712Z",
+        "dataset": {
+          "id": "ds_0gdZzk9KYXuj",
+          "benchmarkId": "evb_zFTz2YsEmw2e",
+          "identifier": "judge-1794123280282124600",
+          "userId": "round1-audit-user",
+          "name": "Unconfigured judge",
+          "description": null,
+          "evalMode": "llm-rubric",
+          "evalConfig": {},
+          "metadata": null,
+          "accessedAt": "2026-11-08T07:34:40.341Z",
+          "createdAt": "2026-11-08T07:34:40.341Z",
+          "updatedAt": "2026-11-08T07:34:40.341Z",
+          "testCases": [
+            {
+              "id": "case_28J61v9Emohx",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_0gdZzk9KYXuj",
+              "content": {
+                "input": "Judge error fixture False 0",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T07:34:40.415Z",
+              "createdAt": "2026-11-08T07:34:40.415Z",
+              "updatedAt": "2026-11-08T07:34:40.415Z"
+            },
+            {
+              "id": "case_nPb2LJJ2LDOS",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_0gdZzk9KYXuj",
+              "content": {
+                "input": "Judge error fixture False 1",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T07:34:40.415Z",
+              "createdAt": "2026-11-08T07:34:40.415Z",
+              "updatedAt": "2026-11-08T07:34:40.415Z"
+            },
+            {
+              "id": "case_QCY2LpwTmSe7",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_0gdZzk9KYXuj",
+              "content": {
+                "input": "Judge error fixture False 2",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T07:34:40.415Z",
+              "createdAt": "2026-11-08T07:34:40.415Z",
+              "updatedAt": "2026-11-08T07:34:40.415Z"
+            }
+          ]
+        },
+        "targetAgent": {
+          "avatar": null,
+          "id": "agt_eu7HEgBsAcRt",
+          "model": "mock-model",
+          "provider": "openai",
+          "title": null
+        },
+        "topics": [
+          {
+            "createdAt": "2026-11-08T07:34:40.513Z",
+            "evalResult": {
+              "cost": 0,
+              "error": "LLM judge requires an explicit model and provider",
+              "steps": 1,
+              "tokens": 12088,
+              "duration": 633,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123281007_agt_eu7HEgBsAcRt_tpc_b9VoETlPTcFO_mJBwOAdu",
+              "rubricScores": [],
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "error",
+            "testCase": {
+              "id": "case_28J61v9Emohx",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_0gdZzk9KYXuj",
+              "content": {
+                "input": "Judge error fixture False 0",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T07:34:40.415Z",
+              "createdAt": "2026-11-08T07:34:40.415Z",
+              "updatedAt": "2026-11-08T07:34:40.415Z"
+            },
+            "testCaseId": "case_28J61v9Emohx",
+            "topic": {
+              "id": "tpc_b9VoETlPTcFO",
+              "title": "[Eval Case #1] Judge error fixture False 0...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:34:41.333Z",
+              "createdAt": "2026-11-08T07:34:40.508Z",
+              "updatedAt": "2026-11-08T07:34:41.333Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T07:34:40.513Z",
+            "evalResult": {
+              "cost": 0,
+              "error": "LLM judge requires an explicit model and provider",
+              "steps": 1,
+              "tokens": 12088,
+              "duration": 455,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123280989_agt_eu7HEgBsAcRt_tpc_rARIa9DfL3BI_rYqaCVO1",
+              "rubricScores": [],
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "error",
+            "testCase": {
+              "id": "case_nPb2LJJ2LDOS",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_0gdZzk9KYXuj",
+              "content": {
+                "input": "Judge error fixture False 1",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T07:34:40.415Z",
+              "createdAt": "2026-11-08T07:34:40.415Z",
+              "updatedAt": "2026-11-08T07:34:40.415Z"
+            },
+            "testCaseId": "case_nPb2LJJ2LDOS",
+            "topic": {
+              "id": "tpc_rARIa9DfL3BI",
+              "title": "[Eval Case #2] Judge error fixture False 1...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:34:41.209Z",
+              "createdAt": "2026-11-08T07:34:40.508Z",
+              "updatedAt": "2026-11-08T07:34:41.209Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T07:34:40.513Z",
+            "evalResult": {
+              "cost": 0,
+              "error": "LLM judge requires an explicit model and provider",
+              "steps": 1,
+              "tokens": 12088,
+              "duration": 615,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123281027_agt_eu7HEgBsAcRt_tpc_8Gqszigkx1Uq_mAlxDvZ4",
+              "rubricScores": [],
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "error",
+            "testCase": {
+              "id": "case_QCY2LpwTmSe7",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_0gdZzk9KYXuj",
+              "content": {
+                "input": "Judge error fixture False 2",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T07:34:40.415Z",
+              "createdAt": "2026-11-08T07:34:40.415Z",
+              "updatedAt": "2026-11-08T07:34:40.415Z"
+            },
+            "testCaseId": "case_QCY2LpwTmSe7",
+            "topic": {
+              "id": "tpc_8Gqszigkx1Uq",
+              "title": "[Eval Case #3] Judge error fixture False 2...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:34:41.424Z",
+              "createdAt": "2026-11-08T07:34:40.508Z",
+              "updatedAt": "2026-11-08T07:34:41.424Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "configured": true,
+      "detail": {
+        "id": "run_IVqHaBMeAShh",
+        "datasetId": "ds_97kh30dLsZdK",
+        "targetAgentId": "agt_eu7HEgBsAcRt",
+        "userId": "round1-audit-user",
+        "name": "Judge infrastructure error",
+        "status": "failed",
+        "config": {
+          "timeout": 60000,
+          "maxSteps": 8,
+          "agentSnapshot": {
+            "model": "mock-model",
+            "params": {
+              "top_p": 1,
+              "temperature": 1,
+              "presence_penalty": 0,
+              "frequency_penalty": 0
+            },
+            "plugins": [],
+            "provider": "openai",
+            "chatConfig": {
+              "searchMode": "auto",
+              "historyCount": 20,
+              "searchFCModel": {
+                "model": "claude-sonnet-4-6",
+                "provider": "openai"
+              },
+              "enableReasoning": true,
+              "enableStreaming": true,
+              "enableHistoryCount": false,
+              "reasoningBudgetToken": 1024,
+              "enableAutoCreateTopic": true,
+              "enableCompressHistory": true,
+              "enableAdaptiveThinking": true,
+              "autoCreateTopicThreshold": 2,
+              "enableContextCompression": true
+            },
+            "systemRole": "Judge error fixture",
+            "description": null
+          }
+        },
+        "metrics": {
+          "steps": 3,
+          "tokens": 36264,
+          "duration": 1090,
+          "llmCalls": 3,
+          "passRate": 0,
+          "errorCases": 3,
+          "totalCases": 3,
+          "failedCases": 0,
+          "passedCases": 0,
+          "totalTokens": 36264,
+          "averageScore": 0,
+          "perCaseSteps": 1,
+          "rubricScores": {},
+          "timeoutCases": 0,
+          "perCaseTokens": 12088,
+          "totalDuration": 1618,
+          "completedCases": 3,
+          "perCaseLlmCalls": 1
+        },
+        "startedAt": "2026-11-08T07:34:42.385Z",
+        "accessedAt": "2026-11-08T07:34:43.475Z",
+        "createdAt": "2026-11-08T07:34:42.212Z",
+        "updatedAt": "2026-11-08T07:34:43.475Z",
+        "dataset": {
+          "id": "ds_97kh30dLsZdK",
+          "benchmarkId": "evb_zFTz2YsEmw2e",
+          "identifier": "judge-1794123281966644900",
+          "userId": "round1-audit-user",
+          "name": "Configured invalid JSON",
+          "description": null,
+          "evalMode": "llm-rubric",
+          "evalConfig": {
+            "model": "mock-model",
+            "criteria": "Check answer",
+            "provider": "openai"
+          },
+          "metadata": null,
+          "accessedAt": "2026-11-08T07:34:42.017Z",
+          "createdAt": "2026-11-08T07:34:42.017Z",
+          "updatedAt": "2026-11-08T07:34:42.017Z",
+          "testCases": [
+            {
+              "id": "case_qtEUhRvuZl6e",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_97kh30dLsZdK",
+              "content": {
+                "input": "Judge error fixture True 0",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T07:34:42.085Z",
+              "createdAt": "2026-11-08T07:34:42.085Z",
+              "updatedAt": "2026-11-08T07:34:42.085Z"
+            },
+            {
+              "id": "case_57nSu2Dvt9F4",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_97kh30dLsZdK",
+              "content": {
+                "input": "Judge error fixture True 1",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T07:34:42.085Z",
+              "createdAt": "2026-11-08T07:34:42.085Z",
+              "updatedAt": "2026-11-08T07:34:42.085Z"
+            },
+            {
+              "id": "case_MMUliIgU5OgS",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_97kh30dLsZdK",
+              "content": {
+                "input": "Judge error fixture True 2",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T07:34:42.085Z",
+              "createdAt": "2026-11-08T07:34:42.085Z",
+              "updatedAt": "2026-11-08T07:34:42.085Z"
+            }
+          ]
+        },
+        "targetAgent": {
+          "avatar": null,
+          "id": "agt_eu7HEgBsAcRt",
+          "model": "mock-model",
+          "provider": "openai",
+          "title": null
+        },
+        "topics": [
+          {
+            "createdAt": "2026-11-08T07:34:42.218Z",
+            "evalResult": {
+              "cost": 0,
+              "error": "Structured output JSON parse failed (model=mock-model)",
+              "steps": 1,
+              "tokens": 12088,
+              "duration": 517,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123282669_agt_eu7HEgBsAcRt_tpc_gvEQdlvORl75_VC2jMV6B",
+              "rubricScores": [],
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "error",
+            "testCase": {
+              "id": "case_qtEUhRvuZl6e",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_97kh30dLsZdK",
+              "content": {
+                "input": "Judge error fixture True 0",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T07:34:42.085Z",
+              "createdAt": "2026-11-08T07:34:42.085Z",
+              "updatedAt": "2026-11-08T07:34:42.085Z"
+            },
+            "testCaseId": "case_qtEUhRvuZl6e",
+            "topic": {
+              "id": "tpc_gvEQdlvORl75",
+              "title": "[Eval Case #1] Judge error fixture True 0...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:34:42.910Z",
+              "createdAt": "2026-11-08T07:34:42.214Z",
+              "updatedAt": "2026-11-08T07:34:42.910Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T07:34:42.218Z",
+            "evalResult": {
+              "cost": 0,
+              "error": "Structured output JSON parse failed (model=mock-model)",
+              "steps": 1,
+              "tokens": 12088,
+              "duration": 544,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123282637_agt_eu7HEgBsAcRt_tpc_1j2ij5mqsKpZ_GNwyzped",
+              "rubricScores": [],
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "error",
+            "testCase": {
+              "id": "case_57nSu2Dvt9F4",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_97kh30dLsZdK",
+              "content": {
+                "input": "Judge error fixture True 1",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T07:34:42.085Z",
+              "createdAt": "2026-11-08T07:34:42.085Z",
+              "updatedAt": "2026-11-08T07:34:42.085Z"
+            },
+            "testCaseId": "case_57nSu2Dvt9F4",
+            "topic": {
+              "id": "tpc_1j2ij5mqsKpZ",
+              "title": "[Eval Case #2] Judge error fixture True 1...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:34:42.909Z",
+              "createdAt": "2026-11-08T07:34:42.214Z",
+              "updatedAt": "2026-11-08T07:34:42.909Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T07:34:42.218Z",
+            "evalResult": {
+              "cost": 0,
+              "error": "Structured output JSON parse failed (model=mock-model)",
+              "steps": 1,
+              "tokens": 12088,
+              "duration": 557,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794123282632_agt_eu7HEgBsAcRt_tpc_lgecyZvcAaa6_wAJJnlGS",
+              "rubricScores": [],
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "error",
+            "testCase": {
+              "id": "case_MMUliIgU5OgS",
+              "userId": "round1-audit-user",
+              "datasetId": "ds_97kh30dLsZdK",
+              "content": {
+                "input": "Judge error fixture True 2",
+                "expected": "Mock LLM"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T07:34:42.085Z",
+              "createdAt": "2026-11-08T07:34:42.085Z",
+              "updatedAt": "2026-11-08T07:34:42.085Z"
+            },
+            "testCaseId": "case_MMUliIgU5OgS",
+            "topic": {
+              "id": "tpc_lgecyZvcAaa6",
+              "title": "[Eval Case #3] Judge error fixture True 2...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_eu7HEgBsAcRt",
+              "groupId": null,
+              "userId": "round1-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T07:34:42.908Z",
+              "createdAt": "2026-11-08T07:34:42.214Z",
+              "updatedAt": "2026-11-08T07:34:42.908Z"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

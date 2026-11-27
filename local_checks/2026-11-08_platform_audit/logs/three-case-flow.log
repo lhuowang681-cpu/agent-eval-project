@@ -1,0 +1,12 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit[39m
+
+ [32m✓[39m tooling/flow.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 408[2mms[22m[39m
+   [33m[2m✓[22m[39m Three-case service integration with a synthetic execution substitute[2m > [22mpersists config, imports cases, runs callbacks/scores, and compares an amended config [33m 406[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m   Start at [22m 14:36:49
+[2m   Duration [22m 28.86s[2m (transform 5.03s, setup 2.93s, collect 25.09s, tests 408ms, environment 0ms, prepare 115ms)[22m
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/results/three-case-flow.json

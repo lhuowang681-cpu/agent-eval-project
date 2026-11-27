@@ -1,0 +1,16 @@
+{
+  "label": "rubric-original",
+  "cwd": "platform/packages/eval-rubric",
+  "command": [
+    "node",
+    "../../node_modules/vitest/vitest.mjs",
+    "run",
+    "--maxWorkers=1",
+    "--fileParallelism=false",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../../results/rubric-original.json"
+  ],
+  "exitCode": 0,
+  "seconds": 52.8
+}

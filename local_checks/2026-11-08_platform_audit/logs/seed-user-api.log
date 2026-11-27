@@ -1,0 +1,6 @@
+✅ dev user already exists: audit-user (offline-dev@localhost)
+   Pass --force to overwrite the user row.
+
+[rbac] 权限定义 119 条
+[rbac] rbac_permissions 现有 119 条
+[rbac] admin 角色已授予（role_id=qI2tE3cBwBQ0r39N），该用户 user_roles=1

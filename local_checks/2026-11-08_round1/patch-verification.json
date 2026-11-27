@@ -1,0 +1,88 @@
+{
+  "events": [
+    {
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "--ignore-space-change",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\platform.patch"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--ignore-space-change",
+        "C:\\Users\\1\\Desktop\\就业agent\\agent-eval-project\\local_checks\\2026-11-08_round1\\platform.patch"
+      ],
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "files": [
+    {
+      "path": "packages/agent-runtime/src/utils/tokenCounter.test.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/agent-runtime/src/utils/tokenCounter.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-dataset-parser/src/parsers/jsonl.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/evaluate.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/__tests__/llmRubric.test.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/llmRubric.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/numeric.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/src/matchers/regex.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/routers/lambda/agentEval.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/index.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-rubric/__tests__/boundaries.test.ts",
+      "matches": true
+    },
+    {
+      "path": "packages/eval-dataset-parser/__tests__/jsonl-lines.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/agentEvalRunService.judge.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/services/agentEvalRun/__tests__/localCompletion.integration.test.ts",
+      "matches": true
+    },
+    {
+      "path": "src/server/routers/lambda/__tests__/integration/agentEval.inboxAlias.integration.test.ts",
+      "matches": true
+    }
+  ],
+  "passed": true
+}

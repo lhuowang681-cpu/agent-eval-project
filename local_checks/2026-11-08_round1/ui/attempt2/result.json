@@ -1,0 +1,57 @@
+{
+  "startedAt": "2026-11-08T07:26:19.616Z",
+  "baseURL": "http://127.0.0.1:13010",
+  "steps": [
+    {
+      "name": "00-api-fixture-setup",
+      "status": "passed",
+      "milliseconds": 13446,
+      "signupHTTP": 422,
+      "signinHTTP": 200,
+      "fixtureAgentId": "agt_UPMVH6nRulJc",
+      "sessionUserId": "user_Xwc2Ex5OVadgL4lAEr54aI1XeQ8",
+      "cookiesClearedBeforeUILogin": true
+    },
+    {
+      "name": "01-signin",
+      "status": "failed",
+      "error": "page.waitForURL: net::ERR_HTTP_RESPONSE_CODE_FAILURE\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+      "milliseconds": 16215
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 ()"
+    }
+  ],
+  "pageErrors": [],
+  "requestFailed": [
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "error": "net::ERR_HTTP_RESPONSE_CODE_FAILURE"
+    },
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "error": "net::ERR_HTTP_RESPONSE_CODE_FAILURE"
+    }
+  ],
+  "httpErrors": [
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "status": 500
+    },
+    {
+      "url": "http://127.0.0.1:13010/eval",
+      "status": 500
+    }
+  ],
+  "method": "Headless installed Edge, real BetterAuth session, no development auth header",
+  "status": "failed",
+  "error": "page.waitForURL: net::ERR_HTTP_RESPONSE_CODE_FAILURE\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+  "finishedAt": "2026-11-08T07:26:50.299Z"
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-14T09:48:22.241220+00:00",
+  "beforeRealV3": true,
+  "sharedLedgerInitial": {
+    "attempts": 3,
+    "approved": 6
+  },
+  "files": {
+    "integration/provider-v3.ts": "eb8ac926a33612bd9050e5a278729091a5bf8572e334352749d87b0a73ec2564",
+    "integration/run-v3.ts": "ec8beb50ba0f764d2819fb2bc3899e447f5b47c066743d9a682926af03006980",
+    "smoke/CASES_V3.json": "9b9613f97ec1425e4df7375bbf5f3465f1c7b9cc67ff6bc8ee3de2878eeea996",
+    "REVISION_V3.md": "593203b8e53239c39d4bc355676c48d3221666c6af09d71496820a75bbaeea1b"
+  },
+  "reviewRulesChanged": false,
+  "formalCalls": 0
+}

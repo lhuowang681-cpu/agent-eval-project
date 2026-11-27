@@ -1,0 +1,16 @@
+{
+  "label": "parser-original",
+  "cwd": "platform/packages/eval-dataset-parser",
+  "command": [
+    "node",
+    "../../node_modules/vitest/vitest.mjs",
+    "run",
+    "--maxWorkers=1",
+    "--fileParallelism=false",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../../results/parser-original.json"
+  ],
+  "exitCode": 0,
+  "seconds": 2.79
+}

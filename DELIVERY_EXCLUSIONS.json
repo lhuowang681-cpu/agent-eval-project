@@ -1,0 +1,1066 @@
+[
+  {
+    "path": "Agent评测平台_修改源码_2026-11-09.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "Agent评测系统_完整项目源码_2026-11-09.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "study_pack.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "第三轮归因质量评估与实验材料_2026-11-08.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "第二阶段修复与验收材料_2026-11-08.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "deliverables/Agent归因学习手册_跨电脑离线包_2026-10-22.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "deliverables/Agent归因工程教材_2.0_跨电脑学习包_2026-10-23.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "deliverables/Agent归因工程教材_2.1_跨电脑学习包_2026-10-23.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "deliverables/study_pack_before_2026-11-08.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/Semantic_VNext_Round2_2026-11-12.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/Semantic_VNext_Shadow_2026-11-10.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/System_VNext_2026-11-14.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/System_VNext_Real_Acceptance_2026-11-14.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/System_VNext_Real_Model_Continuation_2026-11-14.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/System_VNext_Real_Model_Smoke_2026-11-14.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline.tsbuildinfo",
+    "reason": "private key/database or generated cache"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot.tsbuildinfo",
+    "reason": "private key/database or generated cache"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/.conductor/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/.next/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/calcifer.env",
+    "reason": "local credentials/configuration; safe template supplied"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/docker-compose/production/grafana/init_data.json",
+    "reason": "private deployment signing material"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/e2e/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/agent-gateway-client/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/agent-manager-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/agent-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/agent-tracing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-agents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-mcp-feishu/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-mcps/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-skills/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-activator/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-agent-builder/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-agent-documents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-agent-management/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-brief/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-calculator/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-cloud-sandbox/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-group-agent-builder/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-group-management/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-knowledge-base/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-lobe-agent/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-local-system/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-memory/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-notebook/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-page-agent/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-remote-device/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-skill-store/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-skills/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-task/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-tools/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-topic-reference/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tool-web-browsing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/builtin-tools/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/business/config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/business/model-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/chat-adapter-feishu/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/const/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/context-engine/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/conversation-flow/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/database/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/debug/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/device-gateway-client/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/edge-config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/editor-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/electron-client-ipc/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/electron-server-ipc/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/eval-dataset-parser/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/eval-rubric/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/fetch-sse/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/file-loaders/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/heterogeneous-agents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/llm-generation-tracing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/local-file-shell/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/memory-user-memory/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/model-bank/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/model-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/observability-otel/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/openapi/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/prompts/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/python-interpreter/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/ssrf-safe-fetch/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/types/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/utils/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/packages/web-crawler/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/scripts/clerk-to-betterauth/prod/put_clerk_exported_users_csv_here.txt",
+    "reason": "deployment/account runtime data"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/baseline/scripts/clerk-to-betterauth/test/put_clerk_exported_users_csv_here.txt",
+    "reason": "deployment/account runtime data"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/.conductor/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/.next/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/calcifer.env",
+    "reason": "local credentials/configuration; safe template supplied"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/docker-compose/production/grafana/init_data.json",
+    "reason": "private deployment signing material"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/e2e/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/agent-gateway-client/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/agent-manager-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/agent-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/agent-tracing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-agents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-mcp-feishu/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-mcps/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-skills/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-activator/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-agent-builder/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-agent-documents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-agent-management/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-brief/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-calculator/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-cloud-sandbox/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-group-agent-builder/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-group-management/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-knowledge-base/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-lobe-agent/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-local-system/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-memory/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-notebook/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-page-agent/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-remote-device/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-skill-store/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-skills/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-task/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-tools/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-topic-reference/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tool-web-browsing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/builtin-tools/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/business/config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/business/model-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/chat-adapter-feishu/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/const/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/context-engine/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/conversation-flow/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/database/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/debug/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/device-gateway-client/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/edge-config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/editor-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/electron-client-ipc/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/electron-server-ipc/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/eval-dataset-parser/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/eval-rubric/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/fetch-sse/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/file-loaders/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/heterogeneous-agents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/llm-generation-tracing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/local-file-shell/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/memory-user-memory/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/model-bank/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/model-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/observability-otel/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/openapi/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/prompts/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/python-interpreter/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/ssrf-safe-fetch/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/types/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/utils/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/packages/web-crawler/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/scripts/clerk-to-betterauth/prod/put_clerk_exported_users_csv_here.txt",
+    "reason": "deployment/account runtime data"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase2/audit/types/round1-snapshot/scripts/clerk-to-betterauth/test/put_clerk_exported_users_csv_here.txt",
+    "reason": "deployment/account runtime data"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase3/baseline/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase3/experiment/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase3/holdout/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase3/optimized/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase3/package-verification/phase3/baseline/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase3/package-verification/phase3/optimized/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_phase3/regression/baseline-layout/local_checks/frozen/platform/scripts/eval-attribution/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/npm-cache/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/pglite-startup-data/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/pnpm-store/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/.agent-tracing/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/.conductor/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/.gitnexus/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/.next/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/.pglite-data/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/calcifer.env",
+    "reason": "local credentials/configuration; safe template supplied"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/tsconfig.tsbuildinfo",
+    "reason": "private key/database or generated cache"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/docker-compose/production/grafana/init_data.json",
+    "reason": "private deployment signing material"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/e2e/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/agent-gateway-client/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/agent-manager-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/agent-tracing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-agents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-mcp-feishu/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-mcps/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-skills/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-activator/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-agent-builder/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-agent-documents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-agent-management/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-brief/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-calculator/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-cloud-sandbox/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-group-agent-builder/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-group-management/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-knowledge-base/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-lobe-agent/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-local-system/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-memory/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-notebook/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-page-agent/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-remote-device/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-skill-store/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-skills/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-task/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-tools/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-topic-reference/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tool-web-browsing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/builtin-tools/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/business/config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/business/model-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/chat-adapter-feishu/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/const/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/context-engine/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/conversation-flow/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/database/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/debug/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/device-gateway-client/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/edge-config/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/editor-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/electron-client-ipc/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/electron-server-ipc/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/eval-dataset-parser/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/fetch-sse/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/file-loaders/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/heterogeneous-agents/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/llm-generation-tracing/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/local-file-shell/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/memory-user-memory/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/model-bank/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/model-runtime/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/observability-otel/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/openapi/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/prompts/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/python-interpreter/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/ssrf-safe-fetch/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/types/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/utils/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/packages/web-crawler/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/scripts/clerk-to-betterauth/prod/put_clerk_exported_users_csv_here.txt",
+    "reason": "deployment/account runtime data"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/scripts/clerk-to-betterauth/test/put_clerk_exported_users_csv_here.txt",
+    "reason": "deployment/account runtime data"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_platform_audit/tooling/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/conda-cache/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/gitnexus-home/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/postgres-portable/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/pgvector.conda",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/postgresql-16.15.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/修复与验收材料_2026-11-08.zip",
+    "reason": "old archive/dependency distribution; extracted project material retained"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/attribution/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/compression_judge/typecheck.tsbuildinfo",
+    "reason": "private key/database or generated cache"
+  },
+  {
+    "path": "local_checks/2026-11-08_round1/tooling/node_modules/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-10_semantic_vnext/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-10_semantic_vnext/shadow/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-14_real_acceptance/previous/baseline/candidate/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-14_real_acceptance/previous/baseline/previous/baseline/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-14_real_acceptance/previous/vnext/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-14_system_vnext/baseline/candidate/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-14_system_vnext/baseline/previous/baseline/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "local_checks/2026-11-14_system_vnext/vnext/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  },
+  {
+    "path": "source-reference/attribution/__pycache__/",
+    "reason": "installed dependency, generated cache/database/runtime or filesystem link"
+  }
+]

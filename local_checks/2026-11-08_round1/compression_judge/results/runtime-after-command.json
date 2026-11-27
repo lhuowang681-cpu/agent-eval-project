@@ -1,0 +1,14 @@
+{
+  "label": "runtime-after",
+  "cwd": "../../2026-11-08_platform_audit/platform/packages/agent-runtime",
+  "command": [
+    "node",
+    "../../node_modules/vitest/vitest.mjs",
+    "run",
+    "--maxWorkers=1",
+    "--reporter=json",
+    "--outputFile=../../../../2026-11-08_round1/compression_judge/runtime-after.json"
+  ],
+  "exitCode": 0,
+  "seconds": 15.45
+}

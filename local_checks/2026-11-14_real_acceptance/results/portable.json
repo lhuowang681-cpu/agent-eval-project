@@ -1,0 +1,39 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "test_quality.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "quality.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "review_probes.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "verify_delivery.py"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "sameMetricsAndVerdicts": true,
+  "databaseRequiredForPythonReplay": false,
+  "paidRequests": 0
+}

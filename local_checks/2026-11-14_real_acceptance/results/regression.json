@@ -1,0 +1,102 @@
+[
+  {
+    "name": "new-quality4",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "test_quality.py"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-14_real_acceptance",
+    "exitCode": 0,
+    "seconds": 0.153
+  },
+  {
+    "name": "previous14",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "test_review",
+      "test_system"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-14_real_acceptance\\previous",
+    "exitCode": 0,
+    "seconds": 0.288
+  },
+  {
+    "name": "previous18",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "test_round2",
+      "test_metrics"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-14_real_acceptance\\previous\\baseline",
+    "exitCode": 0,
+    "seconds": 0.222
+  },
+  {
+    "name": "previous15",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "test_shadow.py"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-14_real_acceptance\\previous\\baseline\\previous",
+    "exitCode": 0,
+    "seconds": 0.98
+  },
+  {
+    "name": "originalPython36",
+    "command": [
+      "C:\\Users\\1\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/eval-attribution",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform",
+    "exitCode": 0,
+    "seconds": 0.511
+  },
+  {
+    "name": "ts-score-and-attribution",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "src/server/services/agentEvalAttribution",
+      "src/server/services/agentEvalRun",
+      "--environment=node",
+      "--maxWorkers=2",
+      "--testTimeout=20000",
+      "--hookTimeout=60000",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-14_real_acceptance\\results\\ts-regression.json"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform",
+    "exitCode": 0,
+    "seconds": 158.733
+  },
+  {
+    "name": "provider-config4",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-14_real_acceptance\\integration\\config.test.ts"
+    ],
+    "cwd": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_platform_audit\\platform",
+    "exitCode": 0,
+    "seconds": 8.322
+  }
+]

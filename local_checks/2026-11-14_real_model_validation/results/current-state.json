@@ -1,0 +1,10 @@
+{
+  "realRequests": 1,
+  "http200": true,
+  "smokePassed": false,
+  "formalRequests": 0,
+  "remainingApprovedSmokeRequests": 5,
+  "stoppedByFrozenProtocol": true,
+  "shadowEnabled": false,
+  "credentialSaved": false
+}

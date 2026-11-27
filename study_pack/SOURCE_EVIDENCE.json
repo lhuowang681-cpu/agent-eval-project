@@ -1,0 +1,498 @@
+{
+  "date": "2026-11-08",
+  "pathBase": "agent-eval-project",
+  "defaultReviewer": "phase2 baseline restored; phase3 candidate not promoted",
+  "evidence": [
+    {
+      "id": "P01",
+      "path": "local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/agentEvals.ts",
+      "symbol": "agentEvalRuns",
+      "line": 165,
+      "anchor": "export const agentEvalRuns = pgTable(",
+      "meaning": "评测资产、运行和题目关系的真实表结构",
+      "flow": "Benchmark→Dataset→TestCase；Run→RunTopic→Topic/Thread",
+      "level": "B",
+      "sha256": "5d50e0dae6c43686f39e5057a4f1be0c60c4372d827958b4dd02f231e7bfbf69"
+    },
+    {
+      "id": "P02",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEval.ts",
+      "symbol": "startRun",
+      "line": 716,
+      "anchor": "startRun: agentEvalProcedure",
+      "meaning": "认证、启动请求和异步受理的边界",
+      "flow": "页面/客户端→agentEval.startRun→asyncCaller.eval.runBenchmark",
+      "level": "B",
+      "sha256": "5ec55899d8d624bef2939263ec170444358fb8d88d87bd84358410f5cf0f026f"
+    },
+    {
+      "id": "P03",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts",
+      "symbol": "createRun",
+      "line": 62,
+      "anchor": "async createRun(params: {",
+      "meaning": "记录Agent快照并预建pending题目",
+      "flow": "createRun→snapshotAgentConfig→runModel.create→Topics/RunTopics",
+      "level": "A",
+      "sha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9"
+    },
+    {
+      "id": "P04",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts",
+      "symbol": "snapshotAgentConfig",
+      "line": 1618,
+      "anchor": "private async snapshotAgentConfig(agentId: string): Promise<EvalRunAgentSnapshot | undefined> {",
+      "meaning": "可审计快照，不能等同执行时冻结配置",
+      "flow": "createRun→snapshotAgentConfig；执行另由execAgent读取配置",
+      "level": "A",
+      "sha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9"
+    },
+    {
+      "id": "P05",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/aiAgent/index.ts",
+      "symbol": "execAgent",
+      "line": 272,
+      "anchor": "async execAgent(params: InternalExecAgentParams): Promise<ExecAgentResult> {",
+      "meaning": "Agent执行入口重新读取当前配置",
+      "flow": "executeTrajectory→AiAgentService.execAgent→AgentRuntimeService",
+      "level": "A",
+      "sha256": "40d75e821571b40b95fe0cfb599b005869edae210bcf4776fbb28e8d70bc5153"
+    },
+    {
+      "id": "P06",
+      "path": "local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/core/runtime.ts",
+      "symbol": "AgentRuntime.step",
+      "line": 80,
+      "anchor": "async step(",
+      "meaning": "Brain产生指令，Runtime选择Executor推进状态",
+      "flow": "runtime.step→agent.runner→executor→state/events/nextContext",
+      "level": "A",
+      "sha256": "bd18236dc394c718dcc4a886eb223888a84fda1e1d66802cf5fc17d1202958cf"
+    },
+    {
+      "id": "P07",
+      "path": "local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/agents/GeneralChatAgent.ts",
+      "symbol": "GeneralChatAgent.runner",
+      "line": 386,
+      "anchor": "async runner(",
+      "meaning": "按phase决定模型/工具/完成与压缩指令",
+      "flow": "user_input/llm_result/tools_batch_result→指令",
+      "level": "A",
+      "sha256": "34d3effa82988cb08e8b9486f9940cc1d9614f43dd48047a22b43dd794e0e40f"
+    },
+    {
+      "id": "P08",
+      "path": "local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/utils/tokenCounter.ts",
+      "symbol": "shouldCompress",
+      "line": 114,
+      "anchor": "export function shouldCompress(",
+      "meaning": "token预算触发压缩，默认窗口比例0.65",
+      "flow": "GeneralChatAgent→shouldCompress→getCompressionThreshold",
+      "level": "B",
+      "sha256": "37d04e6dabc0891aab6caab2aed84d6fdee2325bd251cadf341b8dc69df1d1ef"
+    },
+    {
+      "id": "P09",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/orchestrator.ts",
+      "symbol": "runBenchmark",
+      "line": 58,
+      "anchor": "async runBenchmark(payload: RunBenchmarkPayload) {",
+      "meaning": "分页、分批、K条轨迹与完成聚合",
+      "flow": "runBenchmark→paginateTestCases→executeTestCase→trajectory/completion→finalize",
+      "level": "A",
+      "sha256": "8185577af189c10bc11ed63f84e634f5fd835124e9ab49bc252a873287307468"
+    },
+    {
+      "id": "P10",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts",
+      "symbol": "executeTrajectory",
+      "line": 251,
+      "anchor": "async executeTrajectory(params: {",
+      "meaning": "评测任务发起Agent执行并设置完成钩子",
+      "flow": "Orchestrator→executeTrajectory→execAgent→onComplete→evaluateCase/finalize",
+      "level": "A",
+      "sha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9"
+    },
+    {
+      "id": "P11",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts",
+      "symbol": "aggregateThreadResults",
+      "line": 842,
+      "anchor": "private async aggregateThreadResults(params: {",
+      "meaning": "K样本至少一次通过、全部通过、最佳分及资源汇总",
+      "flow": "recordThreadCompletion→aggregateThreadResults→runTopic.updateIfUnfinished",
+      "level": "A",
+      "sha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9"
+    },
+    {
+      "id": "P12",
+      "path": "local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/evaluate.ts",
+      "symbol": "evaluate",
+      "line": 45,
+      "anchor": "export const evaluate = async (",
+      "meaning": "抽取/匹配、权重与阈值校验、加权评分",
+      "flow": "evaluateOutput→evaluate→extract/match→weightedScore",
+      "level": "A",
+      "sha256": "50587680e7fc5877060c6d4b6478f64901fd39f4feaf1645744dedd59a7308b5"
+    },
+    {
+      "id": "P13",
+      "path": "local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/matchers/llmRubric.ts",
+      "symbol": "matchLLMRubric",
+      "line": 44,
+      "anchor": "export const matchLLMRubric = async (",
+      "meaning": "模型评分提示、schema和任务/标准上下文",
+      "flow": "match→llm-rubric matcher→generateObject",
+      "level": "A",
+      "sha256": "8e12a05185dcea480cb07e4e9d6af6d5ed4aefcd404c75f38dd950027c8b5ff6"
+    },
+    {
+      "id": "P14",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/judge.ts",
+      "symbol": "generateJudgeObject",
+      "line": 27,
+      "anchor": "export async function generateJudgeObject(",
+      "meaning": "含初始化的硬截止、结构化分数和错误分类",
+      "flow": "evaluateOutput→generateJudgeObject→原ModelRuntime.generateObject",
+      "level": "A",
+      "sha256": "0eaacbfc2ac4a36ce3bcbf5eb58bec683f517e18f80402b545cca1e69f6a656d"
+    },
+    {
+      "id": "P15",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts",
+      "symbol": "evaluateCase",
+      "line": 1419,
+      "anchor": "private async evaluateCase(",
+      "meaning": "Case优先配置、最后Assistant输出及external分流",
+      "flow": "完成钩子→evaluateCase→evaluateOutput→条件回写",
+      "level": "A",
+      "sha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9"
+    },
+    {
+      "id": "P16",
+      "path": "local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/runTopic.ts",
+      "symbol": "updateIfUnfinished",
+      "line": 216,
+      "anchor": "updateIfUnfinished = async (",
+      "meaning": "终态条件写，不让迟到评分覆盖超时/终止",
+      "flow": "评分/完成聚合→updateIfUnfinished→数据库原子条件",
+      "level": "A",
+      "sha256": "95f752af1ef4675e8acf9129da52354412d071084e0d67962b592f8fa4a37ec6"
+    },
+    {
+      "id": "P17",
+      "path": "local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/run.ts",
+      "symbol": "finalizeIfActive",
+      "line": 98,
+      "anchor": "finalizeIfActive = async (id: string, value: Pick<NewAgentEvalRun, 'metrics' | 'status'>) => {",
+      "meaning": "运行级终态聚合的条件更新",
+      "flow": "orchestrator.finalizeRun→finalizeIfActive",
+      "level": "A",
+      "sha256": "fdcd4c16f46b583722e831635c80a6a0612a2d015cc5985cb07f8b2892d8f503"
+    },
+    {
+      "id": "P18",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts",
+      "symbol": "getRunDetails",
+      "line": 964,
+      "anchor": "async getRunDetails(id: string) {",
+      "meaning": "报告读回与超时处理，不是新评分模型",
+      "flow": "agentEval.getRunDetails→runService→run/topics/metrics",
+      "level": "B",
+      "sha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9"
+    },
+    {
+      "id": "B01",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEvalExternal.ts",
+      "symbol": "diagnosisRequest",
+      "line": 290,
+      "anchor": "diagnosisRequest: agentEvalExternalProcedure",
+      "meaning": "原扩展路由新增独立诊断，区别外部评分回调",
+      "flow": "diagnosisRequest→归因service；reportResult仍属评分生命周期",
+      "level": "A",
+      "sha256": "de8d10a308911b74f12f400a5fec246695a020238fba90eabbf1f47996d9186d"
+    },
+    {
+      "id": "B02",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts",
+      "symbol": "extractTrajectory",
+      "line": 41,
+      "anchor": "export async function extractTrajectory(",
+      "meaning": "按用户、Run/Case/Thread只读导出证据和缺失覆盖",
+      "flow": "enqueue→extractTrajectory→messages/message_plugins→规范nodes",
+      "level": "A",
+      "sha256": "350efb6e44830a233a4a5acc2dfc94aa92d5e1577d733deabeddfac055ec0ee4"
+    },
+    {
+      "id": "B03",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts",
+      "symbol": "validateDiagnostic",
+      "line": 275,
+      "anchor": "export function validateDiagnostic(value: unknown, input: Trajectory): Diagnostic {",
+      "meaning": "严格schema、身份、coverage和原字段引文核验",
+      "flow": "runPython→validateDiagnostic→独立诊断结果",
+      "level": "A",
+      "sha256": "49bcd2079652d978abbdfb57a034c7bf1e2bf5539bea88dbd405599ba17ac232"
+    },
+    {
+      "id": "B04",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts",
+      "symbol": "enqueue",
+      "line": 64,
+      "anchor": "async enqueue(request: { runId: string; caseId: string; threadId?: string | null }) {",
+      "meaning": "确定ID、版本、输入快照与去重",
+      "flow": "diagnosisRequest→enqueueRun→enqueue→async_tasks",
+      "level": "A",
+      "sha256": "1ca7f043c6bff140cf1289b39812c3c8260cb5c468d2be105c7158f06e3ea766"
+    },
+    {
+      "id": "B05",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts",
+      "symbol": "processJob",
+      "line": 171,
+      "anchor": "async processJob(id: string) {",
+      "meaning": "原子claim、lease token和迟到结果隔离",
+      "flow": "CLI.processPending→processJob→runner→按lease写result",
+      "level": "A",
+      "sha256": "1ca7f043c6bff140cf1289b39812c3c8260cb5c468d2be105c7158f06e3ea766"
+    },
+    {
+      "id": "B06",
+      "path": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/python.ts",
+      "symbol": "runPython",
+      "line": 33,
+      "anchor": "export async function runPython(",
+      "meaning": "固定Python子进程、截止/输出上限和最小环境",
+      "flow": "processJob→runPython→adapter.py stdin/stdout→合同验证",
+      "level": "A",
+      "sha256": "081ae50eecbc05758cb9244a358163dd7d79a7b76e8a0b47f789f0d549b311f0"
+    },
+    {
+      "id": "B07",
+      "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py",
+      "symbol": "analyze",
+      "line": 88,
+      "anchor": "def analyze(payload):",
+      "meaning": "重用原规则，仅生成有限故障观察，不自动推内部模块",
+      "flow": "analyze_reviewed→analyze→failure_envelope/分类→observations",
+      "level": "A",
+      "sha256": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b"
+    },
+    {
+      "id": "B08",
+      "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py",
+      "symbol": "review_candidate",
+      "line": 33,
+      "anchor": "def review_candidate(payload, candidate):",
+      "meaning": "当前默认原版审核：存在、支持、根因拒绝、摘要/覆盖门禁",
+      "flow": "adapter.analyze_reviewed/review_cli→audited_candidate→review_candidate",
+      "level": "A",
+      "sha256": "d9ea1fb10ade950a05118904cade82882fba26227735bb0474eeff67aa986f29"
+    },
+    {
+      "id": "B09",
+      "path": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py",
+      "symbol": "failure_envelope / classify_builtin / classify_external",
+      "line": 41,
+      "anchor": "def failure_envelope(content):",
+      "meaning": "当前桥接实际复用的失败封装与规则类别；与旧快照分开",
+      "flow": "adapter.analyze及evidence_review共享纯分类函数→观察类别",
+      "level": "A",
+      "sha256": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e"
+    },
+    {
+      "id": "L01",
+      "path": "source-reference/attribution/badcase_analysis.py",
+      "symbol": "run_pipeline",
+      "line": 33,
+      "anchor": "def run_pipeline(args: argparse.Namespace) -> None:",
+      "meaning": "旧模型离线分析路线，offline不保证无模型调用",
+      "flow": "拉取/缓存→可选补充→classify_batch→聚合/报告",
+      "level": "B",
+      "sha256": "ace80bf06c42d801f1681b99960b497a4f9a7a83b01ccb942a3dab3eececdf5f"
+    },
+    {
+      "id": "L02",
+      "path": "source-reference/attribution/structured_jsonl_attribution.py",
+      "symbol": "scan",
+      "line": 103,
+      "anchor": "def scan(input_dir):",
+      "meaning": "旧JSONL确定性规则路线，独立于旧模型入口",
+      "flow": "messages→tool_call_id关联→失败封装/分类→事件表",
+      "level": "B",
+      "sha256": "7abe33df7817faffdac8f911583fe94b53f0996d4232201b362c732080f09a71"
+    },
+    {
+      "id": "L03",
+      "path": "source-reference/attribution/trace_denoiser.py",
+      "symbol": "denoise_trace_nodes",
+      "line": 65,
+      "anchor": "def denoise_trace_nodes(rows:list[dict],max_nodes=40)->dict:",
+      "meaning": "保留错误/祖先/邻域的证据视图，不等于模型上下文压缩",
+      "flow": "enrich路径→denoise_trace_nodes→带来源ID的视图",
+      "level": "B",
+      "sha256": "87661e458e2138cbe2df801261cdf6e2e5afe531c01a052e269d2c36ee0435c8"
+    },
+    {
+      "id": "L04",
+      "path": "source-reference/attribution/llm_classifier.py",
+      "symbol": "classify_batch",
+      "line": 139,
+      "anchor": "def classify_batch(traces: list[dict], sleep_between=0.2, on_progress=None):",
+      "meaning": "旧提示分类56模块，输出normalize不证明引用支持",
+      "flow": "run_pipeline→classify_batch→classify_single→normalize",
+      "level": "B",
+      "sha256": "3d883dae6c256e48601f2210498958dab684b002e3d4b8a60f6c7414ecce4736"
+    },
+    {
+      "id": "L05",
+      "path": "source-reference/attribution/reattribution_validator.py",
+      "symbol": "validate",
+      "line": 6,
+      "anchor": "def validate(category,rep,dev_issue):",
+      "meaning": "单独存在的责任验证，不是所有入口必经",
+      "flow": "部分报表调用validate；run_pipeline没有统一调用",
+      "level": "A",
+      "sha256": "a8a2ad6c49d04c837ffd7956cf1c563c54d3a6ee1195e4ae6c700f0afc689e07"
+    },
+    {
+      "id": "L06",
+      "path": "source-reference/attribution/development_priority.py",
+      "symbol": "calculate_priority",
+      "line": 92,
+      "anchor": "def calculate_priority(row,max_topic_count):",
+      "meaning": "启发式开发优先分，与证据正确性和评分不同",
+      "flow": "可用分类/证据字段→evidence_score→calculate_priority",
+      "level": "B",
+      "sha256": "365aee205ca2f5f58f565e3594481e0583912d0d432b8e09bb5466d8c66a52d9"
+    },
+    {
+      "id": "L07",
+      "path": "source-reference/attribution/cause_convergence.py",
+      "symbol": "converge",
+      "line": 99,
+      "anchor": "def converge(rows,session_of=lambda r:r.get('session_key'),config=None):",
+      "meaning": "按签名分簇、严重度/影响排序及medoid代表",
+      "flow": "调用方rows→converge→signature/severity/score→medoid",
+      "level": "B",
+      "sha256": "335b756f6b9ec3e29a4c6ff0292ad08cf48a327c27744c9fbcdcd1ab87f9ee0e"
+    },
+    {
+      "id": "L08",
+      "path": "source-reference/attribution/cause_convergence.py",
+      "symbol": "medoid",
+      "line": 92,
+      "anchor": "def medoid(rows,text_key='trace_summary'):",
+      "meaning": "词袋/TF-IDF余弦距离选真实代表，不是向量库检索",
+      "flow": "胜出簇→medoid→实际trace代表",
+      "level": "B",
+      "sha256": "335b756f6b9ec3e29a4c6ff0292ad08cf48a327c27744c9fbcdcd1ab87f9ee0e"
+    },
+    {
+      "id": "L09",
+      "path": "source-reference/attribution/representative_case_selector.py",
+      "symbol": "select_representative_trace",
+      "line": 31,
+      "anchor": "def select_representative_trace(classified:pd.DataFrame,events:pd.DataFrame,raw_nodes:pd.DataFrame,exclude_attribution_quality=True):",
+      "meaning": "另一路按类别/签名与完整度选代表，非同一算法",
+      "flow": "classified/events/raw_nodes→候选→完整度排序",
+      "level": "B",
+      "sha256": "9711546d4b47763294d64923271510aa9f964ff034c8b8aed02110dc1fbf227f"
+    },
+    {
+      "id": "L10",
+      "path": "source-reference/attribution/aggregator.py",
+      "symbol": "aggregate",
+      "line": 17,
+      "anchor": "def aggregate(df):",
+      "meaning": "旧离线聚合指标，需核对计数口径",
+      "flow": "run_pipeline→aggregate→类别/模块表",
+      "level": "B",
+      "sha256": "254de50fb78106e88323db4f6742b23f29204a260126bcad4258a8f575c6ecf6"
+    },
+    {
+      "id": "L11",
+      "path": "source-reference/attribution/high_frequency_case_report.py",
+      "symbol": "build_report",
+      "line": 102,
+      "anchor": "def build_report(classified_path: str, source_xlsx: str|None, output_path: str, case_count=5, max_trace_nodes=12):",
+      "meaning": "旧Excel代表Case报告，不是当前UI诊断页",
+      "flow": "classified+原工作簿→build_report→Case工作簿",
+      "level": "B",
+      "sha256": "f404e66e80c7dda72d919cdfcd46dfda42cb807c231bf99ffee6a395f0cd8b0c"
+    },
+    {
+      "id": "R01",
+      "path": "local_checks/2026-11-08_phase3/experiment/metrics.py",
+      "symbol": "summarize",
+      "line": 62,
+      "anchor": "def summarize(cases,result):",
+      "meaning": "弃权/未知/错误、root与观察、风险上下界",
+      "flow": "固定oracle+保存输出+单独裁决→summarize",
+      "level": "A",
+      "sha256": "65c83aac8d3b14186b8a0f9d9e683c099349108b11cdf70349d16cf7999caac4"
+    },
+    {
+      "id": "R02",
+      "path": "local_checks/2026-11-08_phase3/experiment/engine_worker.py",
+      "symbol": "evaluate",
+      "line": 48,
+      "anchor": "def evaluate(trajectory,candidate,method):",
+      "meaning": "同一人工候选五组政策，不作真实模型推理",
+      "flow": "标签盲worker→rules/direct/structured/citations/full",
+      "level": "A",
+      "sha256": "1f145e9dd86c2c9bc66b4be93014c7cd89434eb795732263b791d6375e8cba92"
+    }
+  ],
+  "experiments": [
+    {
+      "originalPath": "local_checks/2026-11-08_phase2/FINAL_REPORT.md",
+      "sha256": "771a7fb6c4e63bf7ce75d774ccf5312ef666b8ed39db2b6ac8dd67cdabd1ef45",
+      "copyPath": "evidence/phase2_FINAL_REPORT.md",
+      "copySha256": "e3def6bf219e0ef2adbdd6342b51d3a10b699595f94d6881cef8e15ea3edfecb",
+      "redactions": []
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_phase2/REGRESSION_SUMMARY.json",
+      "sha256": "f2f9507035f2062fb1c1dc6b6880aa8acb3b1f6e3efd2e1cc9ace0c7ecb07eb9",
+      "copyPath": "evidence/phase2_REGRESSION_SUMMARY.json",
+      "copySha256": "d435214f17bb656f9b0ca83a4d0e07537acd063629a92270124e7911a6614c22",
+      "redactions": []
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_phase2/INCREMENT_GATES.json",
+      "sha256": "6c8496fedd5194bc09dbeff4011e1c0748643471587836ede0cee34792a8a2b5",
+      "copyPath": "evidence/phase2_INCREMENT_GATES.json",
+      "copySha256": "edcd3b660d34d32928a670e6b70dbe423dd83be865daa2cefe58848e81d2d77a",
+      "redactions": []
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_phase3/ATTRIBUTION_QUALITY_REPORT.md",
+      "sha256": "d024d28e0aa982ba4be04584325e4b871dbe85b679474e384795ef96369039ce",
+      "copyPath": "evidence/phase3_ATTRIBUTION_QUALITY_REPORT.md",
+      "copySha256": "c9588b0759c5b7e96e94f282d528a7d3bb5be2bf29ca3aedb9915c714981771a",
+      "redactions": []
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_phase3/ABLATION_RESULTS.md",
+      "sha256": "7e18bd557f9595ec8a4bcda539ecc89c2075dbd3c0fd5c24f451e67e37ce39b3",
+      "copyPath": "evidence/phase3_ABLATION_RESULTS.md",
+      "copySha256": "7e18bd557f9595ec8a4bcda539ecc89c2075dbd3c0fd5c24f451e67e37ce39b3",
+      "redactions": []
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_phase3/PROMOTION_DECISION.md",
+      "sha256": "5d8f4d9cee67ac7fc7f96a4ca0a5ddcd21f19b073b8d5264e9ee765bed300147",
+      "copyPath": "evidence/phase3_PROMOTION_DECISION.md",
+      "copySha256": "681860b910c461a979a2f05b57e5e437bfdd4e4eac206267d496c757958c098f",
+      "redactions": []
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_phase3/RESTORE_RECEIPT.json",
+      "sha256": "1bcd3f13202a49e2448446fa865906ebd8e0cd76acda751c105ef78a6b46e33d",
+      "copyPath": "evidence/phase3_RESTORE_RECEIPT.json",
+      "copySha256": "ea5328f60c231005fba6ffc7a21b50c8a97102447e1119b525047e2322c9d4c1",
+      "redactions": []
+    }
+  ]
+}

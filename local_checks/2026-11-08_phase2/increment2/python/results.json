@@ -1,0 +1,14 @@
+{
+  "increment": 2,
+  "status": "passed",
+  "tests": 15,
+  "existing_category_cases": 14,
+  "command": "C:/Users/1/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe -B -m unittest discover -s platform/scripts/eval-attribution -p test_adapter.py -v",
+  "conditions": "stdlib offline synthetic contract tests; no LLM and no platform integration claimed",
+  "files": {
+    "adapter.py": "a89654211adafd69438f63829782134b69c6c7213c364e76ecee80803a69dcaf",
+    "rules_pure.py": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e",
+    "test_adapter.py": "108c2f9d18ae0883ab3a53e024b8aa9161e4bc329fe5b1ebaf654ebb6d088e0b",
+    "provenance.json": "711907b0f4c9273a1d24c475e09e530290d7c1854d40197855335f8ed25d3347"
+  }
+}

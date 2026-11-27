@@ -1,0 +1,1002 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794125551602,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "target": {
+    "id": "Interface:packages/types/src/eval/agentEval.ts:EvalRunTopicResult",
+    "name": "EvalRunTopicResult",
+    "type": "Interface",
+    "filePath": "packages/types/src/eval/agentEval.ts"
+  },
+  "direction": "upstream",
+  "impactedCount": 1064,
+  "risk": "CRITICAL",
+  "riskSharedAxes": "CRITICAL",
+  "riskScale": {
+    "comparableAcrossKinds": false,
+    "unusedAxes": [
+      {
+        "axis": "processes",
+        "reason": "enrichment-truncated"
+      },
+      {
+        "axis": "modules",
+        "reason": "enrichment-truncated"
+      }
+    ]
+  },
+  "epistemic": "lower-bound",
+  "boundaries": [
+    "Scope-extraction completeness was not recorded for this index, so actual impact may be higher."
+  ],
+  "causes": {
+    "scopeExtractionFiles": 0,
+    "receiverTyping": 0,
+    "dispatchBoundary": 0,
+    "externalBoundary": 0,
+    "undecidedSatisfaction": 0,
+    "callableValueReferences": 0
+  },
+  "partial": true,
+  "summary": {
+    "direct": 3,
+    "processes_affected": 0,
+    "modules_affected": 0
+  },
+  "byDepthCounts": {
+    "1": 3,
+    "2": 1,
+    "3": 1060
+  },
+  "affected_processes": [],
+  "affected_modules": [],
+  "pagination": {
+    "limit": 100,
+    "offset": 0,
+    "truncated": true
+  },
+  "byDepth": {
+    "1": [
+      {
+        "depth": 1,
+        "id": "File:packages/types/src/eval/agentEvalDataset.ts",
+        "name": "agentEvalDataset.ts",
+        "filePath": "packages/types/src/eval/agentEvalDataset.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:packages/types/src/eval/agentEvalRun.ts",
+        "name": "agentEvalRun.ts",
+        "filePath": "packages/types/src/eval/agentEvalRun.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 1,
+        "id": "File:packages/types/src/eval/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/types/src/eval/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      }
+    ],
+    "2": [
+      {
+        "depth": 2,
+        "id": "File:packages/types/src/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/types/src/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      }
+    ],
+    "3": [
+      {
+        "depth": 3,
+        "id": "File:packages/agent-manager-runtime/src/AgentManagerRuntime.ts",
+        "name": "AgentManagerRuntime.ts",
+        "filePath": "packages/agent-manager-runtime/src/AgentManagerRuntime.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-manager-runtime/src/types.ts",
+        "name": "types.ts",
+        "filePath": "packages/agent-manager-runtime/src/types.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/agents/GeneralChatAgent.ts",
+        "name": "GeneralChatAgent.ts",
+        "filePath": "packages/agent-runtime/src/agents/GeneralChatAgent.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/audit/createSecurityBlacklistAudit.ts",
+        "name": "createSecurityBlacklistAudit.ts",
+        "filePath": "packages/agent-runtime/src/audit/createSecurityBlacklistAudit.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/audit/defaultSecurityBlacklist.ts",
+        "name": "defaultSecurityBlacklist.ts",
+        "filePath": "packages/agent-runtime/src/audit/defaultSecurityBlacklist.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/audit/globalAudit.ts",
+        "name": "globalAudit.ts",
+        "filePath": "packages/agent-runtime/src/audit/globalAudit.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/core/InterventionChecker.ts",
+        "name": "InterventionChecker.ts",
+        "filePath": "packages/agent-runtime/src/core/InterventionChecker.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/core/UsageCounter.ts",
+        "name": "UsageCounter.ts",
+        "filePath": "packages/agent-runtime/src/core/UsageCounter.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/core/runtime.ts",
+        "name": "runtime.ts",
+        "filePath": "packages/agent-runtime/src/core/runtime.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/types/event.ts",
+        "name": "event.ts",
+        "filePath": "packages/agent-runtime/src/types/event.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/types/generalAgent.ts",
+        "name": "generalAgent.ts",
+        "filePath": "packages/agent-runtime/src/types/generalAgent.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/types/instruction.ts",
+        "name": "instruction.ts",
+        "filePath": "packages/agent-runtime/src/types/instruction.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/types/state.ts",
+        "name": "state.ts",
+        "filePath": "packages/agent-runtime/src/types/state.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/types/usage.ts",
+        "name": "usage.ts",
+        "filePath": "packages/agent-runtime/src/types/usage.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/utils/messageSelectors.ts",
+        "name": "messageSelectors.ts",
+        "filePath": "packages/agent-runtime/src/utils/messageSelectors.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/agent-runtime/src/utils/stepContextComputer.ts",
+        "name": "stepContextComputer.ts",
+        "filePath": "packages/agent-runtime/src/utils/stepContextComputer.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-agents/src/types.ts",
+        "name": "types.ts",
+        "filePath": "packages/builtin-agents/src/types.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/artifacts/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/artifacts/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/docx/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/docx/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/feishu-cli/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/feishu-cli/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/file-reading/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/file-reading/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/find-skills/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/find-skills/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/interactive-widgets/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/interactive-widgets/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/opencli/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/opencli/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/pdf/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/pdf/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/pptx/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/pptx/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/task/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/task/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/tripyoyo/helpers.ts",
+        "name": "helpers.ts",
+        "filePath": "packages/builtin-skills/src/tripyoyo/helpers.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/tripyoyo/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/tripyoyo/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-skills/src/xlsx/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-skills/src/xlsx/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-activator/src/ExecutionRuntime/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-activator/src/ExecutionRuntime/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-activator/src/client/Inspector/ActivateSkill/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-activator/src/client/Inspector/ActivateSkill/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-activator/src/client/Inspector/ActivateTools/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-activator/src/client/Inspector/ActivateTools/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-activator/src/client/Render/ActivateSkill/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-activator/src/client/Render/ActivateSkill/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-activator/src/executor/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-activator/src/executor/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-activator/src/manifest.ts",
+        "name": "manifest.ts",
+        "filePath": "packages/builtin-tool-activator/src/manifest.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Inspector/GetAvailableModels/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Inspector/GetAvailableModels/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Inspector/InstallPlugin/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Inspector/InstallPlugin/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Inspector/SearchMarketTools/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Inspector/SearchMarketTools/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Inspector/UpdateConfig/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Inspector/UpdateConfig/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Inspector/UpdatePrompt/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Inspector/UpdatePrompt/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Inspector/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Inspector/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Intervention/InstallPlugin.tsx",
+        "name": "InstallPlugin.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Intervention/InstallPlugin.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Render/GetAvailableModels.tsx",
+        "name": "GetAvailableModels.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Render/GetAvailableModels.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Render/InstallPlugin.tsx",
+        "name": "InstallPlugin.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Render/InstallPlugin.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Render/SearchMarketTools.tsx",
+        "name": "SearchMarketTools.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Render/SearchMarketTools.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Render/UpdateConfig.tsx",
+        "name": "UpdateConfig.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Render/UpdateConfig.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Render/UpdatePrompt.tsx",
+        "name": "UpdatePrompt.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Render/UpdatePrompt.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Streaming/UpdatePrompt/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Streaming/UpdatePrompt/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/client/Streaming/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-agent-builder/src/client/Streaming/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/executor.ts",
+        "name": "executor.ts",
+        "filePath": "packages/builtin-tool-agent-builder/src/executor.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/manifest.ts",
+        "name": "manifest.ts",
+        "filePath": "packages/builtin-tool-agent-builder/src/manifest.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-builder/src/types.ts",
+        "name": "types.ts",
+        "filePath": "packages/builtin-tool-agent-builder/src/types.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-documents/src/ExecutionRuntime/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-agent-documents/src/ExecutionRuntime/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-documents/src/client/Inspector/AgentDocumentsInspector/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-documents/src/client/Inspector/AgentDocumentsInspector/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-documents/src/client/Inspector/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-agent-documents/src/client/Inspector/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-documents/src/executor/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-agent-documents/src/executor/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-documents/src/manifest.ts",
+        "name": "manifest.ts",
+        "filePath": "packages/builtin-tool-agent-documents/src/manifest.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Inspector/CallAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Inspector/CallAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Inspector/CreateAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Inspector/CreateAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Inspector/SearchAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Inspector/SearchAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Inspector/UpdateAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Inspector/UpdateAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Inspector/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Inspector/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Render/CallAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Render/CallAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Render/CreateAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Render/CreateAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Render/SearchAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Render/SearchAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Render/UpdateAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Render/UpdateAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Streaming/CreateAgent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Streaming/CreateAgent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/client/Streaming/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-agent-management/src/client/Streaming/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/executor.ts",
+        "name": "executor.ts",
+        "filePath": "packages/builtin-tool-agent-management/src/executor.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/manifest.ts",
+        "name": "manifest.ts",
+        "filePath": "packages/builtin-tool-agent-management/src/manifest.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-agent-management/src/types.ts",
+        "name": "types.ts",
+        "filePath": "packages/builtin-tool-agent-management/src/types.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-brief/src/manifest.ts",
+        "name": "manifest.ts",
+        "filePath": "packages/builtin-tool-brief/src/manifest.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-calculator/src/ExecutionRuntime/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-calculator/src/ExecutionRuntime/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-calculator/src/executor/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-calculator/src/executor/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-calculator/src/manifest.ts",
+        "name": "manifest.ts",
+        "filePath": "packages/builtin-tool-calculator/src/manifest.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "name": "index.ts",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/ExecutionRuntime/index.ts",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/EditLocalFile/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/EditLocalFile/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/ExecuteCode/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/ExecuteCode/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/GlobLocalFiles/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/GlobLocalFiles/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/GrepContent/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/GrepContent/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/ListLocalFiles/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/ListLocalFiles/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/ReadLocalFile/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/ReadLocalFile/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/RunCommand/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/RunCommand/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/SearchLocalFiles/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/SearchLocalFiles/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Inspector/WriteLocalFile/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Inspector/WriteLocalFile/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Intervention/EditLocalFile/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Intervention/EditLocalFile/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Intervention/ExecuteCode/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Intervention/ExecuteCode/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Intervention/MoveLocalFiles/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Intervention/MoveLocalFiles/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Intervention/RunCommand/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Intervention/RunCommand/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Intervention/WriteFile/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Intervention/WriteFile/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Render/EditLocalFile/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Render/EditLocalFile/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Render/ExecuteCode/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Render/ExecuteCode/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Render/ExportFile/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Render/ExportFile/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Render/ListFiles/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Render/ListFiles/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Render/MoveLocalFiles/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Render/MoveLocalFiles/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Render/ReadLocalFile/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Render/ReadLocalFile/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Render/RunCommand/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Render/RunCommand/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      },
+      {
+        "depth": 3,
+        "id": "File:packages/builtin-tool-cloud-sandbox/src/client/Render/SearchFiles/index.tsx",
+        "name": "index.tsx",
+        "filePath": "packages/builtin-tool-cloud-sandbox/src/client/Render/SearchFiles/index.tsx",
+        "relationType": "IMPORTS",
+        "confidence": 1,
+        "processes": []
+      }
+    ]
+  }
+}

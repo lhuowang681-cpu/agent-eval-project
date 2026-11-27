@@ -1,0 +1,9 @@
+{
+  "recordedAt": "2026-11-10T08:49:42.087507+00:00",
+  "files": {
+    "shadow\\client.py": "b4adf5b99e29cb96b42188bc02d171916305e4d868f35decbf2e1efc0d65f6ea",
+    "shadow\\semantic_review.py": "9a7878d29a80f6a5f0de4336d27005417db907d6926475bec306605c3bc36223"
+  },
+  "holdoutAlreadyCreatedAndReplayed": true,
+  "limitation": "Initial freeze command failed due cwd; do NOT claim pre-test hash freeze or independent unseen gold."
+}

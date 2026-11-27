@@ -1,0 +1,21 @@
+{
+  "label": "db-final",
+  "cwd": "../2026-11-08_platform_audit/platform/packages/database",
+  "command": [
+    "node",
+    "../../node_modules/vitest/vitest.mjs",
+    "run",
+    "src/models/agentEval/__tests__",
+    "src/models/__tests__/messages/message.create.test.ts",
+    "--environment=node",
+    "--maxWorkers=2",
+    "--fileParallelism=true",
+    "--testTimeout=20000",
+    "--hookTimeout=60000",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../../../2026-11-08_phase2/regression-db-final.json"
+  ],
+  "exitCode": 0,
+  "seconds": 40.63
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "trajectoryId": "smoke-recovered",
+  "inputDigest": "smoke-recovered-digest",
+  "scope": {
+    "runId": "smoke-recoveredrun",
+    "caseId": "smoke-recovered",
+    "topicId": "smoke-recoveredtopic",
+    "threadId": null,
+    "operationId": "smoke-recoveredop",
+    "traceIds": []
+  },
+  "nodes": [
+    {
+      "id": "smoke-recovered-u",
+      "messageId": "u",
+      "parentId": null,
+      "role": "user",
+      "content": "{\"orderId\": \"smoke-recovered-order\", \"year\": 2025}",
+      "sourcePointer": "synthetic/u",
+      "error": null,
+      "toolCallId": null,
+      "toolSource": "unknown",
+      "toolName": null,
+      "arguments": null,
+      "traceId": null,
+      "sequence": 0,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-recovered-c",
+      "messageId": "c",
+      "parentId": null,
+      "role": "call",
+      "content": "",
+      "sourcePointer": "synthetic/c",
+      "error": null,
+      "toolCallId": "tc1",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": "{\"orderId\": \"smoke-recovered-order\", \"year\": 2025}",
+      "traceId": null,
+      "sequence": 1,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-recovered-r",
+      "messageId": "r",
+      "parentId": null,
+      "role": "tool",
+      "content": "{\"success\": true, \"data\": {\"orderId\": \"smoke-recovered-order\", \"status\": \"shipped\", \"year\": 2025}}",
+      "sourcePointer": "synthetic/r",
+      "error": null,
+      "toolCallId": "tc1",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": null,
+      "traceId": null,
+      "sequence": 2,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-recovered-c2",
+      "messageId": "c",
+      "parentId": null,
+      "role": "call",
+      "content": "",
+      "sourcePointer": "synthetic/c",
+      "error": null,
+      "toolCallId": "tc2",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": "{\"orderId\": \"smoke-recovered-order\", \"year\": 2025}",
+      "traceId": null,
+      "sequence": 3,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-recovered-r2",
+      "messageId": "r",
+      "parentId": null,
+      "role": "tool",
+      "content": "{\"success\": true, \"data\": {\"orderId\": \"smoke-recovered-order\", \"status\": \"pending\", \"year\": 2025}}",
+      "sourcePointer": "synthetic/r",
+      "error": null,
+      "toolCallId": "tc2",
+      "toolSource": "mcp",
+      "toolName": "orders.lookup",
+      "arguments": null,
+      "traceId": null,
+      "sequence": 4,
+      "createdAt": null
+    },
+    {
+      "id": "smoke-recovered-a",
+      "messageId": "a",
+      "parentId": null,
+      "role": "assistant",
+      "content": "{\"orderId\": \"smoke-recovered-order\", \"status\": \"pending\", \"year\": 2025}",
+      "sourcePointer": "synthetic/a",
+      "error": null,
+      "toolCallId": null,
+      "toolSource": "unknown",
+      "toolName": null,
+      "arguments": null,
+      "traceId": null,
+      "sequence": 8,
+      "createdAt": null
+    }
+  ],
+  "coverage": {
+    "source": "database_messages",
+    "complete": false,
+    "warnings": [
+      "provider_request_payload_unavailable"
+    ]
+  },
+  "evaluation": {
+    "status": "failed",
+    "score": 0,
+    "task": "{\"orderId\": \"smoke-recovered-order\", \"year\": 2025}",
+    "expected": null,
+    "actual": "{\"orderId\": \"smoke-recovered-order\", \"status\": \"pending\", \"year\": 2025}",
+    "criteria": null
+  }
+}

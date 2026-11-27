@@ -1,0 +1,20 @@
+{
+  "boundary": "Local static course artifact QA only; no platform or model executed.",
+  "errors": [],
+  "externalRequests": [],
+  "steps": [
+    {
+      "name": "chapter navigation",
+      "passed": true
+    },
+    {
+      "name": "version navigation",
+      "passed": true
+    },
+    {
+      "name": "source line navigation",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

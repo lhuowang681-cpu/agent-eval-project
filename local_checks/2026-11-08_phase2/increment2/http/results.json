@@ -1,0 +1,1284 @@
+{
+  "status": "passed",
+  "conditions": "Real PostgreSQL, original runtime/tool executor and HTTP; actual fixed Python child process. Synthetic source executions, not real-user labeled accuracy.",
+  "events": [
+    {
+      "stage": "quality-source-run",
+      "detail": {
+        "id": "run_w0hAyO5QBk5x",
+        "datasetId": "ds_CX7WAaep3EP9",
+        "targetAgentId": "agt_J6iQ4aCn1EMc",
+        "userId": "phase2-audit-user",
+        "name": "Quality failures without established root cause",
+        "status": "completed",
+        "config": {
+          "k": 1,
+          "timeout": 60000,
+          "maxSteps": 8,
+          "agentSnapshot": {
+            "model": "mock-model",
+            "params": {
+              "top_p": 1,
+              "temperature": 1,
+              "presence_penalty": 0,
+              "frequency_penalty": 0
+            },
+            "plugins": [],
+            "provider": "openai",
+            "chatConfig": {
+              "searchMode": "auto",
+              "historyCount": 20,
+              "searchFCModel": {
+                "model": "claude-sonnet-4-6",
+                "provider": "openai"
+              },
+              "enableReasoning": true,
+              "enableStreaming": true,
+              "enableHistoryCount": false,
+              "reasoningBudgetToken": 1024,
+              "enableAutoCreateTopic": true,
+              "enableCompressHistory": true,
+              "enableAdaptiveThinking": true,
+              "autoCreateTopicThreshold": 2,
+              "enableContextCompression": true
+            },
+            "systemRole": "Phase2 synthetic agent",
+            "description": null
+          }
+        },
+        "metrics": {
+          "steps": 3,
+          "tokens": 36279,
+          "duration": 808,
+          "llmCalls": 3,
+          "passRate": 0,
+          "errorCases": 0,
+          "totalCases": 3,
+          "failedCases": 3,
+          "passedCases": 0,
+          "totalTokens": 36279,
+          "averageScore": 0,
+          "perCaseSteps": 1,
+          "rubricScores": {
+            "eval-mode-contains": 0
+          },
+          "timeoutCases": 0,
+          "perCaseTokens": 12093,
+          "totalDuration": 1335,
+          "completedCases": 3,
+          "perCaseLlmCalls": 1
+        },
+        "startedAt": "2026-11-08T09:30:16.341Z",
+        "accessedAt": "2026-11-08T09:30:17.149Z",
+        "createdAt": "2026-11-08T09:30:16.158Z",
+        "updatedAt": "2026-11-08T09:30:17.149Z",
+        "dataset": {
+          "id": "ds_CX7WAaep3EP9",
+          "benchmarkId": "evb_k1Siwk78n0Iz",
+          "identifier": "phase2-1794130215889347200",
+          "userId": "phase2-audit-user",
+          "name": "Synthetic contains",
+          "description": null,
+          "evalMode": "contains",
+          "evalConfig": {},
+          "metadata": null,
+          "accessedAt": "2026-11-08T09:30:15.959Z",
+          "createdAt": "2026-11-08T09:30:15.959Z",
+          "updatedAt": "2026-11-08T09:30:15.959Z",
+          "testCases": [
+            {
+              "id": "case_EMgQQ2Ozv7py",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_CX7WAaep3EP9",
+              "content": {
+                "input": "Quality failure fixture 1794130215889338300 0",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T09:30:16.097Z",
+              "createdAt": "2026-11-08T09:30:16.097Z",
+              "updatedAt": "2026-11-08T09:30:16.097Z"
+            },
+            {
+              "id": "case_71xg8CyuWSrx",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_CX7WAaep3EP9",
+              "content": {
+                "input": "Quality failure fixture 1794130215889343000 1",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T09:30:16.097Z",
+              "createdAt": "2026-11-08T09:30:16.097Z",
+              "updatedAt": "2026-11-08T09:30:16.097Z"
+            },
+            {
+              "id": "case_UXzmrQeGPZJW",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_CX7WAaep3EP9",
+              "content": {
+                "input": "Quality failure fixture 1794130215889344100 2",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T09:30:16.097Z",
+              "createdAt": "2026-11-08T09:30:16.097Z",
+              "updatedAt": "2026-11-08T09:30:16.097Z"
+            }
+          ]
+        },
+        "targetAgent": {
+          "avatar": null,
+          "id": "agt_J6iQ4aCn1EMc",
+          "model": "mock-model",
+          "provider": "openai",
+          "title": null
+        },
+        "topics": [
+          {
+            "createdAt": "2026-11-08T09:30:16.177Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12093,
+              "duration": 450,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794130216461_agt_J6iQ4aCn1EMc_tpc_WlpbNygYKkCQ_zeD9iHFy",
+              "rubricScores": [
+                {
+                  "score": 0,
+                  "rubricId": "eval-mode-contains",
+                  "scoringSource": "rule"
+                }
+              ],
+              "scoringSource": "rule",
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "failed",
+            "testCase": {
+              "id": "case_EMgQQ2Ozv7py",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_CX7WAaep3EP9",
+              "content": {
+                "input": "Quality failure fixture 1794130215889338300 0",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T09:30:16.097Z",
+              "createdAt": "2026-11-08T09:30:16.097Z",
+              "updatedAt": "2026-11-08T09:30:16.097Z"
+            },
+            "testCaseId": "case_EMgQQ2Ozv7py",
+            "topic": {
+              "id": "tpc_WlpbNygYKkCQ",
+              "title": "[Eval Case #1] Quality failure fixture 1794130215889338300 0...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_J6iQ4aCn1EMc",
+              "groupId": null,
+              "userId": "phase2-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T09:30:16.646Z",
+              "createdAt": "2026-11-08T09:30:16.165Z",
+              "updatedAt": "2026-11-08T09:30:16.646Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T09:30:16.177Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12093,
+              "duration": 449,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794130216462_agt_J6iQ4aCn1EMc_tpc_r6DtA89WWCgy_KJmk0ec9",
+              "rubricScores": [
+                {
+                  "score": 0,
+                  "rubricId": "eval-mode-contains",
+                  "scoringSource": "rule"
+                }
+              ],
+              "scoringSource": "rule",
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "failed",
+            "testCase": {
+              "id": "case_71xg8CyuWSrx",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_CX7WAaep3EP9",
+              "content": {
+                "input": "Quality failure fixture 1794130215889343000 1",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 1,
+              "accessedAt": "2026-11-08T09:30:16.097Z",
+              "createdAt": "2026-11-08T09:30:16.097Z",
+              "updatedAt": "2026-11-08T09:30:16.097Z"
+            },
+            "testCaseId": "case_71xg8CyuWSrx",
+            "topic": {
+              "id": "tpc_r6DtA89WWCgy",
+              "title": "[Eval Case #2] Quality failure fixture 1794130215889343000 1...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_J6iQ4aCn1EMc",
+              "groupId": null,
+              "userId": "phase2-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T09:30:16.645Z",
+              "createdAt": "2026-11-08T09:30:16.165Z",
+              "updatedAt": "2026-11-08T09:30:16.645Z"
+            }
+          },
+          {
+            "createdAt": "2026-11-08T09:30:16.177Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 1,
+              "tokens": 12093,
+              "duration": 436,
+              "llmCalls": 1,
+              "toolCalls": 0,
+              "operationId": "op_1794130216682_agt_J6iQ4aCn1EMc_tpc_JaPK1D6Xekfn_2DySzcZJ",
+              "rubricScores": [
+                {
+                  "score": 0,
+                  "rubricId": "eval-mode-contains",
+                  "scoringSource": "rule"
+                }
+              ],
+              "scoringSource": "rule",
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "failed",
+            "testCase": {
+              "id": "case_UXzmrQeGPZJW",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_CX7WAaep3EP9",
+              "content": {
+                "input": "Quality failure fixture 1794130215889344100 2",
+                "expected": "INTENTIONALLY_ABSENT_REFERENCE"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 2,
+              "accessedAt": "2026-11-08T09:30:16.097Z",
+              "createdAt": "2026-11-08T09:30:16.097Z",
+              "updatedAt": "2026-11-08T09:30:16.097Z"
+            },
+            "testCaseId": "case_UXzmrQeGPZJW",
+            "topic": {
+              "id": "tpc_JaPK1D6Xekfn",
+              "title": "[Eval Case #3] Quality failure fixture 1794130215889344100 2...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_J6iQ4aCn1EMc",
+              "groupId": null,
+              "userId": "phase2-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T09:30:16.983Z",
+              "createdAt": "2026-11-08T09:30:16.165Z",
+              "updatedAt": "2026-11-08T09:30:16.983Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stage": "idempotent-enqueue",
+      "queued": [
+        {
+          "id": "8667d80f-f6c2-5730-ae89-2a5034d94cf4",
+          "created": true,
+          "status": "pending",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_EMgQQ2Ozv7py",
+            "topicId": "tpc_WlpbNygYKkCQ",
+            "threadId": null,
+            "operationId": "op_1794130216461_agt_J6iQ4aCn1EMc_tpc_WlpbNygYKkCQ_zeD9iHFy",
+            "traceIds": []
+          }
+        },
+        {
+          "id": "b2a1cbb3-b309-5ded-a1db-8d4d0042a98d",
+          "created": true,
+          "status": "pending",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_71xg8CyuWSrx",
+            "topicId": "tpc_r6DtA89WWCgy",
+            "threadId": null,
+            "operationId": "op_1794130216462_agt_J6iQ4aCn1EMc_tpc_r6DtA89WWCgy_KJmk0ec9",
+            "traceIds": []
+          }
+        },
+        {
+          "id": "5bdc02ef-641e-5bfa-a8fd-88409da3ef43",
+          "created": true,
+          "status": "pending",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_UXzmrQeGPZJW",
+            "topicId": "tpc_JaPK1D6Xekfn",
+            "threadId": null,
+            "operationId": "op_1794130216682_agt_J6iQ4aCn1EMc_tpc_JaPK1D6Xekfn_2DySzcZJ",
+            "traceIds": []
+          }
+        }
+      ],
+      "duplicate": [
+        {
+          "id": "8667d80f-f6c2-5730-ae89-2a5034d94cf4",
+          "created": false,
+          "status": "pending",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_EMgQQ2Ozv7py",
+            "topicId": "tpc_WlpbNygYKkCQ",
+            "threadId": null,
+            "operationId": "op_1794130216461_agt_J6iQ4aCn1EMc_tpc_WlpbNygYKkCQ_zeD9iHFy",
+            "traceIds": []
+          }
+        },
+        {
+          "id": "b2a1cbb3-b309-5ded-a1db-8d4d0042a98d",
+          "created": false,
+          "status": "pending",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_71xg8CyuWSrx",
+            "topicId": "tpc_r6DtA89WWCgy",
+            "threadId": null,
+            "operationId": "op_1794130216462_agt_J6iQ4aCn1EMc_tpc_r6DtA89WWCgy_KJmk0ec9",
+            "traceIds": []
+          }
+        },
+        {
+          "id": "5bdc02ef-641e-5bfa-a8fd-88409da3ef43",
+          "created": false,
+          "status": "pending",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_UXzmrQeGPZJW",
+            "topicId": "tpc_JaPK1D6Xekfn",
+            "threadId": null,
+            "operationId": "op_1794130216682_agt_J6iQ4aCn1EMc_tpc_JaPK1D6Xekfn_2DySzcZJ",
+            "traceIds": []
+          }
+        }
+      ]
+    },
+    {
+      "stage": "tool-source-run",
+      "detail": {
+        "id": "run_nCcshmbgpbgC",
+        "datasetId": "ds_elXdXZN4leKP",
+        "targetAgentId": "agt_J6iQ4aCn1EMc",
+        "userId": "phase2-audit-user",
+        "name": "Actual failed tool execution",
+        "status": "completed",
+        "config": {
+          "k": 1,
+          "timeout": 60000,
+          "maxSteps": 8,
+          "agentSnapshot": {
+            "model": "mock-model",
+            "params": {
+              "top_p": 1,
+              "temperature": 1,
+              "presence_penalty": 0,
+              "frequency_penalty": 0
+            },
+            "plugins": [
+              "lobe-calculator"
+            ],
+            "provider": "openai",
+            "chatConfig": {
+              "searchMode": "auto",
+              "historyCount": 20,
+              "searchFCModel": {
+                "model": "claude-sonnet-4-6",
+                "provider": "openai"
+              },
+              "enableReasoning": true,
+              "enableStreaming": true,
+              "enableHistoryCount": false,
+              "reasoningBudgetToken": 1024,
+              "enableAutoCreateTopic": true,
+              "enableCompressHistory": true,
+              "enableAdaptiveThinking": true,
+              "autoCreateTopicThreshold": 2,
+              "enableContextCompression": true
+            },
+            "systemRole": "Phase2 synthetic agent",
+            "description": null
+          }
+        },
+        "metrics": {
+          "steps": 3,
+          "tokens": 26797,
+          "duration": 855,
+          "llmCalls": 2,
+          "passRate": 0,
+          "toolCalls": 1,
+          "errorCases": 0,
+          "totalCases": 1,
+          "failedCases": 1,
+          "passedCases": 0,
+          "totalTokens": 26797,
+          "averageScore": 0,
+          "perCaseSteps": 3,
+          "rubricScores": {
+            "eval-mode-contains": 0
+          },
+          "timeoutCases": 0,
+          "perCaseTokens": 26797,
+          "totalDuration": 731,
+          "completedCases": 1,
+          "perCaseLlmCalls": 2,
+          "perCaseToolCalls": 1
+        },
+        "startedAt": "2026-11-08T09:30:18.259Z",
+        "accessedAt": "2026-11-08T09:30:19.114Z",
+        "createdAt": "2026-11-08T09:30:18.061Z",
+        "updatedAt": "2026-11-08T09:30:19.114Z",
+        "dataset": {
+          "id": "ds_elXdXZN4leKP",
+          "benchmarkId": "evb_k1Siwk78n0Iz",
+          "identifier": "phase2-1794130217739486900",
+          "userId": "phase2-audit-user",
+          "name": "Synthetic contains",
+          "description": null,
+          "evalMode": "contains",
+          "evalConfig": {},
+          "metadata": null,
+          "accessedAt": "2026-11-08T09:30:17.916Z",
+          "createdAt": "2026-11-08T09:30:17.916Z",
+          "updatedAt": "2026-11-08T09:30:17.916Z",
+          "testCases": [
+            {
+              "id": "case_2NydKZWYakke",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_elXdXZN4leKP",
+              "content": {
+                "input": "Controlled calculator syntax failure 1794130217739480300",
+                "expected": "INTENTIONALLY_ABSENT_TOOL_SUCCESS"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T09:30:17.976Z",
+              "createdAt": "2026-11-08T09:30:17.976Z",
+              "updatedAt": "2026-11-08T09:30:17.976Z"
+            }
+          ]
+        },
+        "targetAgent": {
+          "avatar": null,
+          "id": "agt_J6iQ4aCn1EMc",
+          "model": "mock-model",
+          "provider": "openai",
+          "title": null
+        },
+        "topics": [
+          {
+            "createdAt": "2026-11-08T09:30:18.080Z",
+            "evalResult": {
+              "cost": 0,
+              "steps": 3,
+              "tokens": 26797,
+              "duration": 731,
+              "llmCalls": 2,
+              "toolCalls": 1,
+              "operationId": "op_1794130218346_agt_J6iQ4aCn1EMc_tpc_NQBWVXR62ahb_LcceHlEO",
+              "rubricScores": [
+                {
+                  "score": 0,
+                  "rubricId": "eval-mode-contains",
+                  "scoringSource": "rule"
+                }
+              ],
+              "scoringSource": "rule",
+              "completionReason": "done"
+            },
+            "passed": false,
+            "score": 0,
+            "status": "failed",
+            "testCase": {
+              "id": "case_2NydKZWYakke",
+              "userId": "phase2-audit-user",
+              "datasetId": "ds_elXdXZN4leKP",
+              "content": {
+                "input": "Controlled calculator syntax failure 1794130217739480300",
+                "expected": "INTENTIONALLY_ABSENT_TOOL_SUCCESS"
+              },
+              "evalMode": null,
+              "evalConfig": null,
+              "metadata": null,
+              "sortOrder": 0,
+              "accessedAt": "2026-11-08T09:30:17.976Z",
+              "createdAt": "2026-11-08T09:30:17.976Z",
+              "updatedAt": "2026-11-08T09:30:17.976Z"
+            },
+            "testCaseId": "case_2NydKZWYakke",
+            "topic": {
+              "id": "tpc_NQBWVXR62ahb",
+              "title": "[Eval Case #1] Controlled calculator syntax failure 1794130217739...",
+              "favorite": false,
+              "sessionId": null,
+              "content": null,
+              "editorData": null,
+              "agentId": "agt_J6iQ4aCn1EMc",
+              "groupId": null,
+              "userId": "phase2-audit-user",
+              "clientId": null,
+              "description": null,
+              "historySummary": null,
+              "metadata": null,
+              "trigger": "eval",
+              "mode": null,
+              "status": null,
+              "completedAt": null,
+              "accessedAt": "2026-11-08T09:30:18.918Z",
+              "createdAt": "2026-11-08T09:30:18.074Z",
+              "updatedAt": "2026-11-08T09:30:18.918Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stage": "actual-python-batch",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/local/evalAttribution.ts",
+        "--user-id",
+        "phase2-audit-user",
+        "--process-only",
+        "--limit",
+        "100"
+      ],
+      "exitCode": 0,
+      "seconds": 10.861
+    },
+    {
+      "stage": "diagnostic-result",
+      "job": {
+        "id": "8667d80f-f6c2-5730-ae89-2a5034d94cf4",
+        "status": "success",
+        "createdAt": "2026-11-08T09:30:17.456Z",
+        "updatedAt": "2026-11-08T09:30:29.835Z",
+        "error": null,
+        "inputDigest": "759d8a6babae4220fb32746cac4b49a54e7bfa3604d4141d846b17ec877d1c6c",
+        "scope": {
+          "runId": "run_w0hAyO5QBk5x",
+          "caseId": "case_EMgQQ2Ozv7py",
+          "topicId": "tpc_WlpbNygYKkCQ",
+          "threadId": null,
+          "operationId": "op_1794130216461_agt_J6iQ4aCn1EMc_tpc_WlpbNygYKkCQ_zeD9iHFy",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_w0hAyO5QBk5x:case_EMgQQ2Ozv7py:tpc_WlpbNygYKkCQ:main",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_w0hAyO5QBk5x:case_EMgQQ2Ozv7py:tpc_WlpbNygYKkCQ:main",
+          "inputDigest": "759d8a6babae4220fb32746cac4b49a54e7bfa3604d4141d846b17ec877d1c6c",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_EMgQQ2Ozv7py",
+            "topicId": "tpc_WlpbNygYKkCQ",
+            "threadId": null,
+            "operationId": "op_1794130216461_agt_J6iQ4aCn1EMc_tpc_WlpbNygYKkCQ_zeD9iHFy",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "observations": [],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "not_applicable",
+              "issues": []
+            },
+            "support": {
+              "status": "not_applicable",
+              "issues": []
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_w0hAyO5QBk5x:case_EMgQQ2Ozv7py:tpc_WlpbNygYKkCQ:main",
+        "inputDigest": "759d8a6babae4220fb32746cac4b49a54e7bfa3604d4141d846b17ec877d1c6c",
+        "scope": {
+          "runId": "run_w0hAyO5QBk5x",
+          "caseId": "case_EMgQQ2Ozv7py",
+          "topicId": "tpc_WlpbNygYKkCQ",
+          "threadId": null,
+          "operationId": "op_1794130216461_agt_J6iQ4aCn1EMc_tpc_WlpbNygYKkCQ_zeD9iHFy",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_s5Vao0ErC5xKjW",
+            "messageId": "msg_s5Vao0ErC5xKjW",
+            "parentId": null,
+            "role": "user",
+            "content": "Quality failure fixture 1794130215889338300 0",
+            "sourcePointer": "messages/msg_s5Vao0ErC5xKjW",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-08T09:30:16.440Z"
+          },
+          {
+            "id": "message:msg_WCiIcxAxmZ0mFW",
+            "messageId": "msg_WCiIcxAxmZ0mFW",
+            "parentId": "message:msg_s5Vao0ErC5xKjW",
+            "role": "assistant",
+            "content": "这是来自本地 Mock LLM 的回答。当前请求没有触发任何工具调用，用于验证最短的 agent 闭环：createOperation → call_llm → finish。",
+            "sourcePointer": "messages/msg_WCiIcxAxmZ0mFW",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-08T09:30:16.458Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Quality failure fixture 1794130215889338300 0",
+          "expected": "INTENTIONALLY_ABSENT_REFERENCE",
+          "actual": "这是来自本地 Mock LLM 的回答。当前请求没有触发任何工具调用，用于验证最短的 agent 闭环：createOperation → call_llm → finish。",
+          "criteria": null
+        }
+      }
+    },
+    {
+      "stage": "diagnostic-result",
+      "job": {
+        "id": "b2a1cbb3-b309-5ded-a1db-8d4d0042a98d",
+        "status": "success",
+        "createdAt": "2026-11-08T09:30:17.480Z",
+        "updatedAt": "2026-11-08T09:30:29.906Z",
+        "error": null,
+        "inputDigest": "4c8d2c851ff69e55e23ef35dc39bfe2cd3ddc9b0179bfdf6f520674822da3e6a",
+        "scope": {
+          "runId": "run_w0hAyO5QBk5x",
+          "caseId": "case_71xg8CyuWSrx",
+          "topicId": "tpc_r6DtA89WWCgy",
+          "threadId": null,
+          "operationId": "op_1794130216462_agt_J6iQ4aCn1EMc_tpc_r6DtA89WWCgy_KJmk0ec9",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_w0hAyO5QBk5x:case_71xg8CyuWSrx:tpc_r6DtA89WWCgy:main",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_w0hAyO5QBk5x:case_71xg8CyuWSrx:tpc_r6DtA89WWCgy:main",
+          "inputDigest": "4c8d2c851ff69e55e23ef35dc39bfe2cd3ddc9b0179bfdf6f520674822da3e6a",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_71xg8CyuWSrx",
+            "topicId": "tpc_r6DtA89WWCgy",
+            "threadId": null,
+            "operationId": "op_1794130216462_agt_J6iQ4aCn1EMc_tpc_r6DtA89WWCgy_KJmk0ec9",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "observations": [],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "not_applicable",
+              "issues": []
+            },
+            "support": {
+              "status": "not_applicable",
+              "issues": []
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_w0hAyO5QBk5x:case_71xg8CyuWSrx:tpc_r6DtA89WWCgy:main",
+        "inputDigest": "4c8d2c851ff69e55e23ef35dc39bfe2cd3ddc9b0179bfdf6f520674822da3e6a",
+        "scope": {
+          "runId": "run_w0hAyO5QBk5x",
+          "caseId": "case_71xg8CyuWSrx",
+          "topicId": "tpc_r6DtA89WWCgy",
+          "threadId": null,
+          "operationId": "op_1794130216462_agt_J6iQ4aCn1EMc_tpc_r6DtA89WWCgy_KJmk0ec9",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_b7LKBzrCrTEqM6",
+            "messageId": "msg_b7LKBzrCrTEqM6",
+            "parentId": null,
+            "role": "user",
+            "content": "Quality failure fixture 1794130215889343000 1",
+            "sourcePointer": "messages/msg_b7LKBzrCrTEqM6",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-08T09:30:16.442Z"
+          },
+          {
+            "id": "message:msg_AseHliEBcNfXxZ",
+            "messageId": "msg_AseHliEBcNfXxZ",
+            "parentId": "message:msg_b7LKBzrCrTEqM6",
+            "role": "assistant",
+            "content": "这是来自本地 Mock LLM 的回答。当前请求没有触发任何工具调用，用于验证最短的 agent 闭环：createOperation → call_llm → finish。",
+            "sourcePointer": "messages/msg_AseHliEBcNfXxZ",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-08T09:30:16.459Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Quality failure fixture 1794130215889343000 1",
+          "expected": "INTENTIONALLY_ABSENT_REFERENCE",
+          "actual": "这是来自本地 Mock LLM 的回答。当前请求没有触发任何工具调用，用于验证最短的 agent 闭环：createOperation → call_llm → finish。",
+          "criteria": null
+        }
+      }
+    },
+    {
+      "stage": "diagnostic-result",
+      "job": {
+        "id": "5bdc02ef-641e-5bfa-a8fd-88409da3ef43",
+        "status": "success",
+        "createdAt": "2026-11-08T09:30:17.496Z",
+        "updatedAt": "2026-11-08T09:30:29.972Z",
+        "error": null,
+        "inputDigest": "bb29f49b8180de42dd9fc5d9152cdab6de795733644625535453c11014210cef",
+        "scope": {
+          "runId": "run_w0hAyO5QBk5x",
+          "caseId": "case_UXzmrQeGPZJW",
+          "topicId": "tpc_JaPK1D6Xekfn",
+          "threadId": null,
+          "operationId": "op_1794130216682_agt_J6iQ4aCn1EMc_tpc_JaPK1D6Xekfn_2DySzcZJ",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_w0hAyO5QBk5x:case_UXzmrQeGPZJW:tpc_JaPK1D6Xekfn:main",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_w0hAyO5QBk5x:case_UXzmrQeGPZJW:tpc_JaPK1D6Xekfn:main",
+          "inputDigest": "bb29f49b8180de42dd9fc5d9152cdab6de795733644625535453c11014210cef",
+          "scope": {
+            "runId": "run_w0hAyO5QBk5x",
+            "caseId": "case_UXzmrQeGPZJW",
+            "topicId": "tpc_JaPK1D6Xekfn",
+            "threadId": null,
+            "operationId": "op_1794130216682_agt_J6iQ4aCn1EMc_tpc_JaPK1D6Xekfn_2DySzcZJ",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "unknown",
+            "category": null,
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "No supported root-cause conclusion",
+            "evidenceRefs": [],
+            "reasonCodes": [
+              "incomplete_source_coverage",
+              "no_supported_failure_signal"
+            ]
+          },
+          "observations": [],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "not_applicable",
+              "issues": []
+            },
+            "support": {
+              "status": "not_applicable",
+              "issues": []
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_w0hAyO5QBk5x:case_UXzmrQeGPZJW:tpc_JaPK1D6Xekfn:main",
+        "inputDigest": "bb29f49b8180de42dd9fc5d9152cdab6de795733644625535453c11014210cef",
+        "scope": {
+          "runId": "run_w0hAyO5QBk5x",
+          "caseId": "case_UXzmrQeGPZJW",
+          "topicId": "tpc_JaPK1D6Xekfn",
+          "threadId": null,
+          "operationId": "op_1794130216682_agt_J6iQ4aCn1EMc_tpc_JaPK1D6Xekfn_2DySzcZJ",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_S3lv2oOVU702bU",
+            "messageId": "msg_S3lv2oOVU702bU",
+            "parentId": null,
+            "role": "user",
+            "content": "Quality failure fixture 1794130215889344100 2",
+            "sourcePointer": "messages/msg_S3lv2oOVU702bU",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-08T09:30:16.567Z"
+          },
+          {
+            "id": "message:msg_nMc5fC0aTdKK7j",
+            "messageId": "msg_nMc5fC0aTdKK7j",
+            "parentId": "message:msg_S3lv2oOVU702bU",
+            "role": "assistant",
+            "content": "这是来自本地 Mock LLM 的回答。当前请求没有触发任何工具调用，用于验证最短的 agent 闭环：createOperation → call_llm → finish。",
+            "sourcePointer": "messages/msg_nMc5fC0aTdKK7j",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-08T09:30:16.674Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Quality failure fixture 1794130215889344100 2",
+          "expected": "INTENTIONALLY_ABSENT_REFERENCE",
+          "actual": "这是来自本地 Mock LLM 的回答。当前请求没有触发任何工具调用，用于验证最短的 agent 闭环：createOperation → call_llm → finish。",
+          "criteria": null
+        }
+      }
+    },
+    {
+      "stage": "diagnostic-result",
+      "job": {
+        "id": "9db4621b-9297-5cb9-a8ee-918087a6eceb",
+        "status": "success",
+        "createdAt": "2026-11-08T09:30:19.276Z",
+        "updatedAt": "2026-11-08T09:30:30.043Z",
+        "error": null,
+        "inputDigest": "3b09568bfcb4e3640b4da945657d6991ba57ce8931c304e4ea576b30583f73b6",
+        "scope": {
+          "runId": "run_nCcshmbgpbgC",
+          "caseId": "case_2NydKZWYakke",
+          "topicId": "tpc_NQBWVXR62ahb",
+          "threadId": null,
+          "operationId": "op_1794130218346_agt_J6iQ4aCn1EMc_tpc_NQBWVXR62ahb_LcceHlEO",
+          "traceIds": []
+        },
+        "trajectoryId": "eval:run_nCcshmbgpbgC:case_2NydKZWYakke:tpc_NQBWVXR62ahb:main",
+        "engineRevision": "50b602653da797ee0973358bdbc62a5736bb7983b220effbf8b34b2ed23460d0",
+        "result": {
+          "schemaVersion": 1,
+          "trajectoryId": "eval:run_nCcshmbgpbgC:case_2NydKZWYakke:tpc_NQBWVXR62ahb:main",
+          "inputDigest": "3b09568bfcb4e3640b4da945657d6991ba57ce8931c304e4ea576b30583f73b6",
+          "scope": {
+            "runId": "run_nCcshmbgpbgC",
+            "caseId": "case_2NydKZWYakke",
+            "topicId": "tpc_NQBWVXR62ahb",
+            "threadId": null,
+            "operationId": "op_1794130218346_agt_J6iQ4aCn1EMc_tpc_NQBWVXR62ahb_LcceHlEO",
+            "traceIds": []
+          },
+          "jobExecution": {
+            "status": "completed",
+            "errors": []
+          },
+          "diagnosis": {
+            "status": "needs_review",
+            "category": "builtin_tool_failure_unclassified",
+            "moduleId": null,
+            "claimLevel": "observation",
+            "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+            "evidenceRefs": [
+              {
+                "nodeId": "message:msg_d8HurSqGsdwnIK",
+                "field": "error",
+                "quote": "{\"message\": \"Failed to evaluate expression: Unexpected end of expression (char 9)\", \"type\": \"CalculationError\"}"
+              },
+              {
+                "nodeId": "call:msg_ovkTVIEMiYUVTu:0",
+                "field": "arguments",
+                "quote": "{\"expression\":\"invalid(\"}"
+              }
+            ],
+            "reasonCodes": [
+              "causal_owner_unconfirmed",
+              "evidence_review_not_supported",
+              "incomplete_source_coverage"
+            ]
+          },
+          "observations": [
+            {
+              "category": "builtin_tool_failure_unclassified",
+              "moduleId": null,
+              "claimLevel": "observation",
+              "summary": "Builtin 工具失败但内部模块证据不足 (observed failure; causal owner unconfirmed)",
+              "evidenceRefs": [
+                {
+                  "nodeId": "message:msg_d8HurSqGsdwnIK",
+                  "field": "error",
+                  "quote": "{\"message\": \"Failed to evaluate expression: Unexpected end of expression (char 9)\", \"type\": \"CalculationError\"}"
+                },
+                {
+                  "nodeId": "call:msg_ovkTVIEMiYUVTu:0",
+                  "field": "arguments",
+                  "quote": "{\"expression\":\"invalid(\"}"
+                }
+              ]
+            }
+          ],
+          "coverage": {
+            "source": "database_messages",
+            "complete": false,
+            "warnings": [
+              "operation_events_unavailable",
+              "provider_request_payload_unavailable",
+              "trace_id_unavailable"
+            ]
+          },
+          "provenance": {
+            "rulesVersion": "round1-structured-v1",
+            "sourceSha256": "e90af4f86bbafdfdcab9a248b27a1854d4641036cbae63dda0ccdbdd597d9611"
+          },
+          "review": {
+            "existence": {
+              "status": "valid",
+              "issues": []
+            },
+            "support": {
+              "status": "insufficient",
+              "issues": [
+                {
+                  "code": "incomplete_source_coverage",
+                  "nodeId": null,
+                  "message": "Source coverage is incomplete"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "trace": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_nCcshmbgpbgC:case_2NydKZWYakke:tpc_NQBWVXR62ahb:main",
+        "inputDigest": "3b09568bfcb4e3640b4da945657d6991ba57ce8931c304e4ea576b30583f73b6",
+        "scope": {
+          "runId": "run_nCcshmbgpbgC",
+          "caseId": "case_2NydKZWYakke",
+          "topicId": "tpc_NQBWVXR62ahb",
+          "threadId": null,
+          "operationId": "op_1794130218346_agt_J6iQ4aCn1EMc_tpc_NQBWVXR62ahb_LcceHlEO",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_p6fxdVa5zZxS0t",
+            "messageId": "msg_p6fxdVa5zZxS0t",
+            "parentId": null,
+            "role": "user",
+            "content": "Controlled calculator syntax failure 1794130217739480300",
+            "sourcePointer": "messages/msg_p6fxdVa5zZxS0t",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-08T09:30:18.330Z"
+          },
+          {
+            "id": "message:msg_ovkTVIEMiYUVTu",
+            "messageId": "msg_ovkTVIEMiYUVTu",
+            "parentId": "message:msg_p6fxdVa5zZxS0t",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "messages/msg_ovkTVIEMiYUVTu",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-08T09:30:18.342Z"
+          },
+          {
+            "id": "call:msg_ovkTVIEMiYUVTu:0",
+            "messageId": "msg_ovkTVIEMiYUVTu",
+            "parentId": "message:msg_ovkTVIEMiYUVTu",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_ovkTVIEMiYUVTu/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call_mock_1794130218458_0",
+            "toolSource": "builtin",
+            "toolName": "lobe-calculator____calculate",
+            "arguments": "{\"expression\":\"invalid(\"}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-08T09:30:18.342Z"
+          },
+          {
+            "id": "message:msg_d8HurSqGsdwnIK",
+            "messageId": "msg_d8HurSqGsdwnIK",
+            "parentId": "message:msg_ovkTVIEMiYUVTu",
+            "role": "tool",
+            "content": "Calculation error: Failed to evaluate expression: Unexpected end of expression (char 9)",
+            "sourcePointer": "messages/msg_d8HurSqGsdwnIK",
+            "errorSourcePointer": "message_plugins/msg_d8HurSqGsdwnIK/error",
+            "toolCallId": "call_mock_1794130218458_0",
+            "toolSource": "builtin",
+            "toolName": "lobe-calculator____calculate",
+            "arguments": "{\"expression\":\"invalid(\"}",
+            "error": {
+              "type": "CalculationError",
+              "message": "Failed to evaluate expression: Unexpected end of expression (char 9)"
+            },
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-08T09:30:18.657Z"
+          },
+          {
+            "id": "message:msg_NvO1Jn8KzMgOuX",
+            "messageId": "msg_NvO1Jn8KzMgOuX",
+            "parentId": "message:msg_d8HurSqGsdwnIK",
+            "role": "assistant",
+            "content": "The controlled tool execution failed. Root cause ownership needs evidence review.",
+            "sourcePointer": "messages/msg_NvO1Jn8KzMgOuX",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-08T09:30:18.861Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Controlled calculator syntax failure 1794130217739480300",
+          "expected": "INTENTIONALLY_ABSENT_TOOL_SUCCESS",
+          "actual": "The controlled tool execution failed. Root cause ownership needs evidence review.",
+          "criteria": null
+        }
+      }
+    },
+    {
+      "stage": "original-scoring-unchanged",
+      "runIds": [
+        "run_w0hAyO5QBk5x",
+        "run_nCcshmbgpbgC"
+      ]
+    },
+    {
+      "stage": "trace-access-isolation",
+      "anonymousHTTP": 401,
+      "otherSessionHTTP": 404
+    }
+  ]
+}

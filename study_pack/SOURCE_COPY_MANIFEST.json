@@ -1,0 +1,303 @@
+{
+  "sourceFiles": 33,
+  "copies": [
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/agentEvals.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/schemas/agentEvals.ts",
+      "originalSha256": "5d50e0dae6c43686f39e5057a4f1be0c60c4372d827958b4dd02f231e7bfbf69",
+      "copySha256": "5d50e0dae6c43686f39e5057a4f1be0c60c4372d827958b4dd02f231e7bfbf69",
+      "bytes": 7263,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEval.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEval.ts",
+      "originalSha256": "5ec55899d8d624bef2939263ec170444358fb8d88d87bd84358410f5cf0f026f",
+      "copySha256": "5ec55899d8d624bef2939263ec170444358fb8d88d87bd84358410f5cf0f026f",
+      "bytes": 31042,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/index.ts",
+      "originalSha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9",
+      "copySha256": "62269aedd35a2ec34a80e98783df1f2ffe9b271e1dadf8d72633d64ad89ab0b9",
+      "bytes": 59175,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/services/aiAgent/index.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/aiAgent/index.ts",
+      "originalSha256": "40d75e821571b40b95fe0cfb599b005869edae210bcf4776fbb28e8d70bc5153",
+      "copySha256": "40d75e821571b40b95fe0cfb599b005869edae210bcf4776fbb28e8d70bc5153",
+      "bytes": 64328,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/core/runtime.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/core/runtime.ts",
+      "originalSha256": "bd18236dc394c718dcc4a886eb223888a84fda1e1d66802cf5fc17d1202958cf",
+      "copySha256": "bd18236dc394c718dcc4a886eb223888a84fda1e1d66802cf5fc17d1202958cf",
+      "bytes": 28167,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/agents/GeneralChatAgent.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/agents/GeneralChatAgent.ts",
+      "originalSha256": "34d3effa82988cb08e8b9486f9940cc1d9614f43dd48047a22b43dd794e0e40f",
+      "copySha256": "34d3effa82988cb08e8b9486f9940cc1d9614f43dd48047a22b43dd794e0e40f",
+      "bytes": 25382,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/utils/tokenCounter.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/packages/agent-runtime/src/utils/tokenCounter.ts",
+      "originalSha256": "37d04e6dabc0891aab6caab2aed84d6fdee2325bd251cadf341b8dc69df1d1ef",
+      "copySha256": "37d04e6dabc0891aab6caab2aed84d6fdee2325bd251cadf341b8dc69df1d1ef",
+      "bytes": 3711,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/orchestrator.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/orchestrator.ts",
+      "originalSha256": "8185577af189c10bc11ed63f84e634f5fd835124e9ab49bc252a873287307468",
+      "copySha256": "8185577af189c10bc11ed63f84e634f5fd835124e9ab49bc252a873287307468",
+      "bytes": 17302,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/evaluate.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/evaluate.ts",
+      "originalSha256": "50587680e7fc5877060c6d4b6478f64901fd39f4feaf1645744dedd59a7308b5",
+      "copySha256": "50587680e7fc5877060c6d4b6478f64901fd39f4feaf1645744dedd59a7308b5",
+      "bytes": 4456,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/matchers/llmRubric.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/src/matchers/llmRubric.ts",
+      "originalSha256": "8e12a05185dcea480cb07e4e9d6af6d5ed4aefcd404c75f38dd950027c8b5ff6",
+      "copySha256": "8e12a05185dcea480cb07e4e9d6af6d5ed4aefcd404c75f38dd950027c8b5ff6",
+      "bytes": 3113,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/judge.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalRun/judge.ts",
+      "originalSha256": "0eaacbfc2ac4a36ce3bcbf5eb58bec683f517e18f80402b545cca1e69f6a656d",
+      "copySha256": "0eaacbfc2ac4a36ce3bcbf5eb58bec683f517e18f80402b545cca1e69f6a656d",
+      "bytes": 3306,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/runTopic.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/runTopic.ts",
+      "originalSha256": "95f752af1ef4675e8acf9129da52354412d071084e0d67962b592f8fa4a37ec6",
+      "copySha256": "95f752af1ef4675e8acf9129da52354412d071084e0d67962b592f8fa4a37ec6",
+      "bytes": 9010,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/run.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/packages/database/src/models/agentEval/run.ts",
+      "originalSha256": "fdcd4c16f46b583722e831635c80a6a0612a2d015cc5985cb07f8b2892d8f503",
+      "copySha256": "fdcd4c16f46b583722e831635c80a6a0612a2d015cc5985cb07f8b2892d8f503",
+      "bytes": 3565,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEvalExternal.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/routers/lambda/agentEvalExternal.ts",
+      "originalSha256": "de8d10a308911b74f12f400a5fec246695a020238fba90eabbf1f47996d9186d",
+      "copySha256": "de8d10a308911b74f12f400a5fec246695a020238fba90eabbf1f47996d9186d",
+      "bytes": 18170,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/trace.ts",
+      "originalSha256": "350efb6e44830a233a4a5acc2dfc94aa92d5e1577d733deabeddfac055ec0ee4",
+      "copySha256": "350efb6e44830a233a4a5acc2dfc94aa92d5e1577d733deabeddfac055ec0ee4",
+      "bytes": 9988,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/contracts.ts",
+      "originalSha256": "49bcd2079652d978abbdfb57a034c7bf1e2bf5539bea88dbd405599ba17ac232",
+      "copySha256": "49bcd2079652d978abbdfb57a034c7bf1e2bf5539bea88dbd405599ba17ac232",
+      "bytes": 9390,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/index.ts",
+      "originalSha256": "1ca7f043c6bff140cf1289b39812c3c8260cb5c468d2be105c7158f06e3ea766",
+      "copySha256": "1ca7f043c6bff140cf1289b39812c3c8260cb5c468d2be105c7158f06e3ea766",
+      "bytes": 10100,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/python.ts",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/src/server/services/agentEvalAttribution/python.ts",
+      "originalSha256": "081ae50eecbc05758cb9244a358163dd7d79a7b76e8a0b47f789f0d549b311f0",
+      "copySha256": "081ae50eecbc05758cb9244a358163dd7d79a7b76e8a0b47f789f0d549b311f0",
+      "bytes": 4734,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/adapter.py",
+      "originalSha256": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b",
+      "copySha256": "b01d67cbc49778e60e5e0abdf748610514a001930fe15764521fad10d4624d2b",
+      "bytes": 10339,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/evidence_review.py",
+      "originalSha256": "d9ea1fb10ade950a05118904cade82882fba26227735bb0474eeff67aa986f29",
+      "copySha256": "d9ea1fb10ade950a05118904cade82882fba26227735bb0474eeff67aa986f29",
+      "bytes": 8345,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py",
+      "copyPath": "key_sources/local_checks/2026-11-08_platform_audit/platform/scripts/eval-attribution/rules_pure.py",
+      "originalSha256": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e",
+      "copySha256": "c8c2984316aa0e56d283bdeb3afa7f2d0ed53b87f02b0a9d2a4fbc8d2980767e",
+      "bytes": 5347,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/badcase_analysis.py",
+      "copyPath": "key_sources/source-reference/attribution/badcase_analysis.py",
+      "originalSha256": "ace80bf06c42d801f1681b99960b497a4f9a7a83b01ccb942a3dab3eececdf5f",
+      "copySha256": "ace80bf06c42d801f1681b99960b497a4f9a7a83b01ccb942a3dab3eececdf5f",
+      "bytes": 9999,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/structured_jsonl_attribution.py",
+      "copyPath": "key_sources/source-reference/attribution/structured_jsonl_attribution.py",
+      "originalSha256": "7abe33df7817faffdac8f911583fe94b53f0996d4232201b362c732080f09a71",
+      "copySha256": "7abe33df7817faffdac8f911583fe94b53f0996d4232201b362c732080f09a71",
+      "bytes": 11292,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/trace_denoiser.py",
+      "copyPath": "key_sources/source-reference/attribution/trace_denoiser.py",
+      "originalSha256": "87661e458e2138cbe2df801261cdf6e2e5afe531c01a052e269d2c36ee0435c8",
+      "copySha256": "87661e458e2138cbe2df801261cdf6e2e5afe531c01a052e269d2c36ee0435c8",
+      "bytes": 8104,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/llm_classifier.py",
+      "copyPath": "key_sources/source-reference/attribution/llm_classifier.py",
+      "originalSha256": "3d883dae6c256e48601f2210498958dab684b002e3d4b8a60f6c7414ecce4736",
+      "copySha256": "3d883dae6c256e48601f2210498958dab684b002e3d4b8a60f6c7414ecce4736",
+      "bytes": 9242,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/reattribution_validator.py",
+      "copyPath": "key_sources/source-reference/attribution/reattribution_validator.py",
+      "originalSha256": "a8a2ad6c49d04c837ffd7956cf1c563c54d3a6ee1195e4ae6c700f0afc689e07",
+      "copySha256": "a8a2ad6c49d04c837ffd7956cf1c563c54d3a6ee1195e4ae6c700f0afc689e07",
+      "bytes": 2110,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/development_priority.py",
+      "copyPath": "key_sources/source-reference/attribution/development_priority.py",
+      "originalSha256": "365aee205ca2f5f58f565e3594481e0583912d0d432b8e09bb5466d8c66a52d9",
+      "copySha256": "365aee205ca2f5f58f565e3594481e0583912d0d432b8e09bb5466d8c66a52d9",
+      "bytes": 7819,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/cause_convergence.py",
+      "copyPath": "key_sources/source-reference/attribution/cause_convergence.py",
+      "originalSha256": "335b756f6b9ec3e29a4c6ff0292ad08cf48a327c27744c9fbcdcd1ab87f9ee0e",
+      "copySha256": "335b756f6b9ec3e29a4c6ff0292ad08cf48a327c27744c9fbcdcd1ab87f9ee0e",
+      "bytes": 8516,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/representative_case_selector.py",
+      "copyPath": "key_sources/source-reference/attribution/representative_case_selector.py",
+      "originalSha256": "9711546d4b47763294d64923271510aa9f964ff034c8b8aed02110dc1fbf227f",
+      "copySha256": "9711546d4b47763294d64923271510aa9f964ff034c8b8aed02110dc1fbf227f",
+      "bytes": 7346,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/aggregator.py",
+      "copyPath": "key_sources/source-reference/attribution/aggregator.py",
+      "originalSha256": "254de50fb78106e88323db4f6742b23f29204a260126bcad4258a8f575c6ecf6",
+      "copySha256": "254de50fb78106e88323db4f6742b23f29204a260126bcad4258a8f575c6ecf6",
+      "bytes": 2461,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "source-reference/attribution/high_frequency_case_report.py",
+      "copyPath": "key_sources/source-reference/attribution/high_frequency_case_report.py",
+      "originalSha256": "f404e66e80c7dda72d919cdfcd46dfda42cb807c231bf99ffee6a395f0cd8b0c",
+      "copySha256": "f404e66e80c7dda72d919cdfcd46dfda42cb807c231bf99ffee6a395f0cd8b0c",
+      "bytes": 16160,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_phase3/experiment/metrics.py",
+      "copyPath": "key_sources/local_checks/2026-11-08_phase3/experiment/metrics.py",
+      "originalSha256": "65c83aac8d3b14186b8a0f9d9e683c099349108b11cdf70349d16cf7999caac4",
+      "copySha256": "65c83aac8d3b14186b8a0f9d9e683c099349108b11cdf70349d16cf7999caac4",
+      "bytes": 10700,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    },
+    {
+      "originalPath": "local_checks/2026-11-08_phase3/experiment/engine_worker.py",
+      "copyPath": "key_sources/local_checks/2026-11-08_phase3/experiment/engine_worker.py",
+      "originalSha256": "1f145e9dd86c2c9bc66b4be93014c7cd89434eb795732263b791d6375e8cba92",
+      "copySha256": "1f145e9dd86c2c9bc66b4be93014c7cd89434eb795732263b791d6375e8cba92",
+      "bytes": 4621,
+      "redactions": [],
+      "readOnlyTeachingCopy": true
+    }
+  ],
+  "note": "UTF-8/LF normalization and private literal replacements affect teaching copies only; original hashes and line positions retained."
+}

@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "mode": "paid",
+  "provider": "openai",
+  "model": "deepseek-flash",
+  "baseURL": "https://api.deepseek.com",
+  "approvedRequests": 0,
+  "maxTokens": 800,
+  "timeoutMs": 15000,
+  "responseFormat": "json_object",
+  "thinking": "disabled"
+}

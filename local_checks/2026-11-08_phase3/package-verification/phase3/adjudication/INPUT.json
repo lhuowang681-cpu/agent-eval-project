@@ -1,0 +1,3945 @@
+{
+  "instruction": "Independently assess whether the actual cited original fields support only this bounded output proposition. Do not infer responsible module or use the gate verdict. The observation oracle is synthetic, single-author; report ambiguity as null.",
+  "records": [
+    {
+      "id": "claim-001",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:external500_wrong_L2_2",
+        "inputDigest": "5d07f8146b23835cbb6e3f26be44214d7b32999660e7fd9653ce22047153a9fb",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "external500_wrong_L2_2",
+          "topicId": "topic-external500_wrong_L2_2",
+          "threadId": null,
+          "operationId": "op-external500_wrong_L2_2",
+          "traceIds": [
+            "trace-external500_wrong_L2_2"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "external500_wrong_L2_2-user",
+            "messageId": "external500_wrong_L2_2-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/external500_wrong_L2_2-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-external500_wrong_L2_2",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "external500_wrong_L2_2-assistant",
+            "messageId": "external500_wrong_L2_2-assistant",
+            "parentId": "external500_wrong_L2_2-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/external500_wrong_L2_2-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-external500_wrong_L2_2",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "external500_wrong_L2_2-call",
+            "messageId": "external500_wrong_L2_2-call",
+            "parentId": "external500_wrong_L2_2-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/external500_wrong_L2_2-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-external500_wrong_L2_2",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "external500_wrong_L2_2-result",
+            "messageId": "external500_wrong_L2_2-result",
+            "parentId": "external500_wrong_L2_2-assistant",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/external500_wrong_L2_2-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-external500_wrong_L2_2",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": true,
+          "warnings": []
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "external500_wrong_L2_2-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "external500_wrong_L2_2-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "cb65ff82630118f934e6eea35e0cdf7f8931fd9ccbcdb2c41c2ad6d901bf4864"
+    },
+    {
+      "id": "claim-002",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:valid_quote_no_causal_chain",
+        "inputDigest": "895570e379b9fbdda634412090f0f5d23a1a5b5750f0bf80d687aaa88c363ea4",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "valid_quote_no_causal_chain",
+          "topicId": "topic-valid_quote_no_causal_chain",
+          "threadId": null,
+          "operationId": "op-valid_quote_no_causal_chain",
+          "traceIds": [
+            "trace-valid_quote_no_causal_chain"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "valid_quote_no_causal_chain-user",
+            "messageId": "valid_quote_no_causal_chain-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/valid_quote_no_causal_chain-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-valid_quote_no_causal_chain",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "valid_quote_no_causal_chain-assistant",
+            "messageId": "valid_quote_no_causal_chain-assistant",
+            "parentId": "valid_quote_no_causal_chain-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/valid_quote_no_causal_chain-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-valid_quote_no_causal_chain",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "valid_quote_no_causal_chain-call",
+            "messageId": "valid_quote_no_causal_chain-call",
+            "parentId": "valid_quote_no_causal_chain-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/valid_quote_no_causal_chain-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-valid_quote_no_causal_chain",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "valid_quote_no_causal_chain-result",
+            "messageId": "valid_quote_no_causal_chain-result",
+            "parentId": "valid_quote_no_causal_chain-assistant",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/valid_quote_no_causal_chain-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-valid_quote_no_causal_chain",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": true,
+          "warnings": []
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "valid_quote_no_causal_chain-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "valid_quote_no_causal_chain-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "6e3beb972fcca236d8795fff333253a1b9f2e8a748d89c03a783aee1253cb38e"
+    },
+    {
+      "id": "claim-003",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:fabricated_node",
+        "inputDigest": "3df5c54ba68fcd9eb4ff06fe2a3f406eb96e2a0252231ef5f2daac4f464f71b0",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "fabricated_node",
+          "topicId": "topic-fabricated_node",
+          "threadId": null,
+          "operationId": "op-fabricated_node",
+          "traceIds": [
+            "trace-fabricated_node"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "fabricated_node-user",
+            "messageId": "fabricated_node-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/fabricated_node-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-fabricated_node",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "fabricated_node-assistant",
+            "messageId": "fabricated_node-assistant",
+            "parentId": "fabricated_node-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/fabricated_node-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-fabricated_node",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "fabricated_node-call",
+            "messageId": "fabricated_node-call",
+            "parentId": "fabricated_node-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/fabricated_node-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-fabricated_node",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "fabricated_node-result",
+            "messageId": "fabricated_node-result",
+            "parentId": "fabricated_node-assistant",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/fabricated_node-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-fabricated_node",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": true,
+          "warnings": []
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "fabricated_node-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "fabricated_node-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "e30f475e3e4c24938f6d71d43585bca33b86236be2c1d74aaedc9e6c1e942ce7"
+    },
+    {
+      "id": "claim-004",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:cross_case_node",
+        "inputDigest": "a7a601797e291fc51048c847304e3387a576c104176facf098810cc8db335b84",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "cross_case_node",
+          "topicId": "topic-cross_case_node",
+          "threadId": null,
+          "operationId": "op-cross_case_node",
+          "traceIds": [
+            "trace-cross_case_node"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "cross_case_node-user",
+            "messageId": "cross_case_node-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/cross_case_node-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-cross_case_node",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "cross_case_node-assistant",
+            "messageId": "cross_case_node-assistant",
+            "parentId": "cross_case_node-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/cross_case_node-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-cross_case_node",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "cross_case_node-call",
+            "messageId": "cross_case_node-call",
+            "parentId": "cross_case_node-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/cross_case_node-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-cross_case_node",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "cross_case_node-result",
+            "messageId": "cross_case_node-result",
+            "parentId": "cross_case_node-assistant",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/cross_case_node-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-cross_case_node",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": true,
+          "warnings": []
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "cross_case_node-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "cross_case_node-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "aca232a343346670931c2142898af956cd40afe280d49d8aeade6af62a1783c4"
+    },
+    {
+      "id": "claim-005",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:missing_parent",
+        "inputDigest": "8793ebf176ad319751f56e6711f51f255ef989c44443bc5aeb29031c33505da4",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "missing_parent",
+          "topicId": "topic-missing_parent",
+          "threadId": null,
+          "operationId": "op-missing_parent",
+          "traceIds": [
+            "trace-missing_parent"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "missing_parent-user",
+            "messageId": "missing_parent-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/missing_parent-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-missing_parent",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "missing_parent-assistant",
+            "messageId": "missing_parent-assistant",
+            "parentId": "missing_parent-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/missing_parent-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-missing_parent",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "missing_parent-call",
+            "messageId": "missing_parent-call",
+            "parentId": "missing_parent-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/missing_parent-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-missing_parent",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "missing_parent-result",
+            "messageId": "missing_parent-result",
+            "parentId": "missing-parent",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/missing_parent-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-missing_parent",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "dangling_parent"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "missing_parent-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "missing_parent-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "173019dd20e78b823050eb01afb99592416c05d54c02c61f8465ba5163d0d3d6"
+    },
+    {
+      "id": "claim-006",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:invalid_category_module",
+        "inputDigest": "e7b284d81aca476923ba321b81b99aaf411f7ec0a016ff989f8c13399d18e9ab",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "invalid_category_module",
+          "topicId": "topic-invalid_category_module",
+          "threadId": null,
+          "operationId": "op-invalid_category_module",
+          "traceIds": [
+            "trace-invalid_category_module"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "invalid_category_module-user",
+            "messageId": "invalid_category_module-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/invalid_category_module-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-invalid_category_module",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "invalid_category_module-assistant",
+            "messageId": "invalid_category_module-assistant",
+            "parentId": "invalid_category_module-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/invalid_category_module-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-invalid_category_module",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "invalid_category_module-call",
+            "messageId": "invalid_category_module-call",
+            "parentId": "invalid_category_module-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/invalid_category_module-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-invalid_category_module",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "invalid_category_module-result",
+            "messageId": "invalid_category_module-result",
+            "parentId": "invalid_category_module-assistant",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/invalid_category_module-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-invalid_category_module",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": true,
+          "warnings": []
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "invalid_category_module-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "invalid_category_module-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "11e5675074f49c03b786c3b0f6ff7c68a9c2824b9a2d5455f296f65516f941d4"
+    },
+    {
+      "id": "claim-007",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:extra_causal_summary",
+        "inputDigest": "9999b000d3f00176bd79eee50c63b5d0a6476669b1e119e0bafcb385f2fa06b2",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "extra_causal_summary",
+          "topicId": "topic-extra_causal_summary",
+          "threadId": null,
+          "operationId": "op-extra_causal_summary",
+          "traceIds": [
+            "trace-extra_causal_summary"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "extra_causal_summary-user",
+            "messageId": "extra_causal_summary-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/extra_causal_summary-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-extra_causal_summary",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "extra_causal_summary-assistant",
+            "messageId": "extra_causal_summary-assistant",
+            "parentId": "extra_causal_summary-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/extra_causal_summary-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-extra_causal_summary",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "extra_causal_summary-call",
+            "messageId": "extra_causal_summary-call",
+            "parentId": "extra_causal_summary-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/extra_causal_summary-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-extra_causal_summary",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "extra_causal_summary-result",
+            "messageId": "extra_causal_summary-result",
+            "parentId": "extra_causal_summary-assistant",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/extra_causal_summary-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-extra_causal_summary",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": true,
+          "warnings": []
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "extra_causal_summary-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "extra_causal_summary-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "5b2faa311269cdccb47ae59f14bd85eb9e1f5850ea9c4fa3d217800761c286c3"
+    },
+    {
+      "id": "claim-008",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:valid_observation_template",
+        "inputDigest": "8b61cbe30256b013f452b3d7192b9f6b12cd3514ef6761e95294fd981bdcb8db",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "valid_observation_template",
+          "topicId": "topic-valid_observation_template",
+          "threadId": null,
+          "operationId": "op-valid_observation_template",
+          "traceIds": [
+            "trace-valid_observation_template"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "valid_observation_template-user",
+            "messageId": "valid_observation_template-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/valid_observation_template-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-valid_observation_template",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "valid_observation_template-assistant",
+            "messageId": "valid_observation_template-assistant",
+            "parentId": "valid_observation_template-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/valid_observation_template-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-valid_observation_template",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "valid_observation_template-call",
+            "messageId": "valid_observation_template-call",
+            "parentId": "valid_observation_template-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/valid_observation_template-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-valid_observation_template",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "valid_observation_template-result",
+            "messageId": "valid_observation_template-result",
+            "parentId": "valid_observation_template-assistant",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/valid_observation_template-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-valid_observation_template",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": true,
+          "warnings": []
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "valid_observation_template-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "valid_observation_template-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "562b5c5adf21df797bd32d42f3bc672d6dd453ac2430b9ea7563adaec5d259d3"
+    },
+    {
+      "id": "claim-009",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "synthetic:supported_paraphrase",
+        "inputDigest": "4db3e19702599bb16a09f4aabe6818538f2436b274058806001df925d34fb4e7",
+        "scope": {
+          "runId": "synthetic-run",
+          "caseId": "supported_paraphrase",
+          "topicId": "topic-supported_paraphrase",
+          "threadId": null,
+          "operationId": "op-supported_paraphrase",
+          "traceIds": [
+            "trace-supported_paraphrase"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "supported_paraphrase-user",
+            "messageId": "supported_paraphrase-user",
+            "parentId": null,
+            "role": "user",
+            "content": "Check order A1",
+            "sourcePointer": "synthetic/supported_paraphrase-user",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-supported_paraphrase",
+            "sequence": 0,
+            "createdAt": null
+          },
+          {
+            "id": "supported_paraphrase-assistant",
+            "messageId": "supported_paraphrase-assistant",
+            "parentId": "supported_paraphrase-user",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "synthetic/supported_paraphrase-assistant",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": "trace-supported_paraphrase",
+            "sequence": 1,
+            "createdAt": null
+          },
+          {
+            "id": "supported_paraphrase-call",
+            "messageId": "supported_paraphrase-call",
+            "parentId": "supported_paraphrase-assistant",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "synthetic/supported_paraphrase-call",
+            "errorSourcePointer": null,
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": "{\"orderId\":\"A1\"}",
+            "error": null,
+            "traceId": "trace-supported_paraphrase",
+            "sequence": 2,
+            "createdAt": null
+          },
+          {
+            "id": "supported_paraphrase-result",
+            "messageId": "supported_paraphrase-result",
+            "parentId": "supported_paraphrase-assistant",
+            "role": "tool",
+            "content": "",
+            "sourcePointer": "synthetic/supported_paraphrase-result",
+            "errorSourcePointer": "synthetic/error",
+            "toolCallId": "tool-call",
+            "toolSource": "mcp",
+            "toolName": "orders____read",
+            "arguments": null,
+            "error": {
+              "message": "Upstream HTTP 500",
+              "status": 500
+            },
+            "traceId": "trace-supported_paraphrase",
+            "sequence": 3,
+            "createdAt": null
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": true,
+          "warnings": []
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Check order A1",
+          "expected": "Order details",
+          "actual": null,
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "supported_paraphrase-result",
+            "field": "error",
+            "quote": "{\"message\": \"Upstream HTTP 500\", \"status\": 500}"
+          },
+          {
+            "nodeId": "supported_paraphrase-call",
+            "field": "arguments",
+            "quote": "{\"orderId\":\"A1\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "b081a88fa3d1fb9e004d286933c332043e766fac6d2015ae70397cb147ce7f69"
+    },
+    {
+      "id": "claim-010",
+      "trajectory": {
+        "schemaVersion": 1,
+        "trajectoryId": "eval:run_nCcshmbgpbgC:case_2NydKZWYakke:tpc_NQBWVXR62ahb:main",
+        "inputDigest": "3b09568bfcb4e3640b4da945657d6991ba57ce8931c304e4ea576b30583f73b6",
+        "scope": {
+          "runId": "run_nCcshmbgpbgC",
+          "caseId": "case_2NydKZWYakke",
+          "topicId": "tpc_NQBWVXR62ahb",
+          "threadId": null,
+          "operationId": "op_1794130218346_agt_J6iQ4aCn1EMc_tpc_NQBWVXR62ahb_LcceHlEO",
+          "traceIds": []
+        },
+        "nodes": [
+          {
+            "id": "message:msg_p6fxdVa5zZxS0t",
+            "messageId": "msg_p6fxdVa5zZxS0t",
+            "parentId": null,
+            "role": "user",
+            "content": "Controlled calculator syntax failure 1794130217739480300",
+            "sourcePointer": "messages/msg_p6fxdVa5zZxS0t",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 0,
+            "createdAt": "2026-11-08T09:30:18.330Z"
+          },
+          {
+            "id": "message:msg_ovkTVIEMiYUVTu",
+            "messageId": "msg_ovkTVIEMiYUVTu",
+            "parentId": "message:msg_p6fxdVa5zZxS0t",
+            "role": "assistant",
+            "content": "",
+            "sourcePointer": "messages/msg_ovkTVIEMiYUVTu",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 1,
+            "createdAt": "2026-11-08T09:30:18.342Z"
+          },
+          {
+            "id": "call:msg_ovkTVIEMiYUVTu:0",
+            "messageId": "msg_ovkTVIEMiYUVTu",
+            "parentId": "message:msg_ovkTVIEMiYUVTu",
+            "role": "call",
+            "content": "",
+            "sourcePointer": "messages/msg_ovkTVIEMiYUVTu/tools/0",
+            "errorSourcePointer": null,
+            "toolCallId": "call_mock_1794130218458_0",
+            "toolSource": "builtin",
+            "toolName": "lobe-calculator____calculate",
+            "arguments": "{\"expression\":\"invalid(\"}",
+            "error": null,
+            "traceId": null,
+            "sequence": 2,
+            "createdAt": "2026-11-08T09:30:18.342Z"
+          },
+          {
+            "id": "message:msg_d8HurSqGsdwnIK",
+            "messageId": "msg_d8HurSqGsdwnIK",
+            "parentId": "message:msg_ovkTVIEMiYUVTu",
+            "role": "tool",
+            "content": "Calculation error: Failed to evaluate expression: Unexpected end of expression (char 9)",
+            "sourcePointer": "messages/msg_d8HurSqGsdwnIK",
+            "errorSourcePointer": "message_plugins/msg_d8HurSqGsdwnIK/error",
+            "toolCallId": "call_mock_1794130218458_0",
+            "toolSource": "builtin",
+            "toolName": "lobe-calculator____calculate",
+            "arguments": "{\"expression\":\"invalid(\"}",
+            "error": {
+              "type": "CalculationError",
+              "message": "Failed to evaluate expression: Unexpected end of expression (char 9)"
+            },
+            "traceId": null,
+            "sequence": 3,
+            "createdAt": "2026-11-08T09:30:18.657Z"
+          },
+          {
+            "id": "message:msg_NvO1Jn8KzMgOuX",
+            "messageId": "msg_NvO1Jn8KzMgOuX",
+            "parentId": "message:msg_d8HurSqGsdwnIK",
+            "role": "assistant",
+            "content": "The controlled tool execution failed. Root cause ownership needs evidence review.",
+            "sourcePointer": "messages/msg_NvO1Jn8KzMgOuX",
+            "errorSourcePointer": null,
+            "toolCallId": null,
+            "toolSource": "unknown",
+            "toolName": null,
+            "arguments": null,
+            "error": null,
+            "traceId": null,
+            "sequence": 4,
+            "createdAt": "2026-11-08T09:30:18.861Z"
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "operation_events_unavailable",
+            "provider_request_payload_unavailable",
+            "trace_id_unavailable"
+          ]
+        },
+        "evaluation": {
+          "status": "failed",
+          "score": 0,
+          "task": "Controlled calculator syntax failure 1794130217739480300",
+          "expected": "INTENTIONALLY_ABSENT_TOOL_SUCCESS",
+          "actual": "The controlled tool execution failed. Root cause ownership needs evidence review.",
+          "criteria": null
+        }
+      },
+      "output": {
+        "category": "builtin_tool_failure_unclassified",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "message:msg_d8HurSqGsdwnIK",
+            "field": "error",
+            "quote": "{\"message\": \"Failed to evaluate expression: Unexpected end of expression (char 9)\", \"type\": \"CalculationError\"}"
+          },
+          {
+            "nodeId": "call:msg_ovkTVIEMiYUVTu:0",
+            "field": "arguments",
+            "quote": "{\"expression\":\"invalid(\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "builtin_tool_failure_unclassified"
+        ]
+      },
+      "outputSha256": "49f590c09f2a87dfc03d8ddc5b6ded020ef6c77709260b85f3b0ae86488ef746"
+    },
+    {
+      "id": "claim-011",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "acdae9d70f25fae6f2f0362a27699262a3ccdc591451fdaf7fced1f46582d1dc",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-006:n00",
+            "messageId": "msg-ho-006-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-006-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-006"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-006:n01",
+            "messageId": "msg-ho-006-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-006-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-006"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-006:n02",
+            "messageId": "msg-ho-006-01",
+            "parentId": "ho-006:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-006-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-006"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": {
+              "message": "No response before 8000ms deadline",
+              "name": "TimeoutError"
+            },
+            "errorSourcePointer": "messages/msg-ho-006-03/error",
+            "id": "ho-006:n03",
+            "messageId": "msg-ho-006-03",
+            "parentId": "ho-006:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-006-03",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-006"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-006",
+          "operationId": "op-ho-006",
+          "runId": "run-ho-006",
+          "threadId": null,
+          "topicId": "topic-ho-006",
+          "traceIds": [
+            "trace-ho-006"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-006:case-ho-006:topic-ho-006:main"
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-006:n03",
+            "field": "error",
+            "quote": "{\"message\": \"No response before 8000ms deadline\", \"name\": \"TimeoutError\"}"
+          },
+          {
+            "nodeId": "ho-006:n02",
+            "field": "arguments",
+            "quote": "{\"id\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_timeout"
+        ]
+      },
+      "outputSha256": "d11c68a669f8cbaa2d9a6e0e950362b9df362dacde4d69d772811f290ba714db"
+    },
+    {
+      "id": "claim-012",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "7620db643519b18d1df9b9523eceadb9af7af62cdc2c2c2395be8922463203fe",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-012:n00",
+            "messageId": "msg-ho-012-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-012-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-012"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-012:n01",
+            "messageId": "msg-ho-012-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-012-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-012"
+          },
+          {
+            "arguments": "{\"task\":\"T9\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-012:n02",
+            "messageId": "msg-ho-012-01",
+            "parentId": "ho-012:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-012-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "tasks____launch",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-012"
+          },
+          {
+            "arguments": "{\"task\":\"T9\"}",
+            "content": "{\"success\":false,\"message\":\"E_JOB_773\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-012:n03",
+            "messageId": "msg-ho-012-03",
+            "parentId": "ho-012:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-012-03",
+            "toolCallId": "tc-1",
+            "toolName": "tasks____launch",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-012"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-012",
+          "operationId": "op-ho-012",
+          "runId": "run-ho-012",
+          "threadId": null,
+          "topicId": "topic-ho-012",
+          "traceIds": [
+            "trace-ho-012"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-012:case-ho-012:topic-ho-012:main"
+      },
+      "output": {
+        "category": "builtin_tool_failure_unclassified",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-012:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"message\":\"E_JOB_773\"}"
+          },
+          {
+            "nodeId": "ho-012:n02",
+            "field": "arguments",
+            "quote": "{\"task\":\"T9\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "builtin_tool_failure_unclassified"
+        ]
+      },
+      "outputSha256": "5adb01dafd44f455256a16afd6629d6bc6ab8e588a96f6d720d8399363cbba43"
+    },
+    {
+      "id": "claim-013",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "53f6b75790996c8f865da42d06fe2728d571d097e08e5dc7a6bcafb07a6941e8",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-017:n00",
+            "messageId": "msg-ho-017-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-017-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-017"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-017:n01",
+            "messageId": "msg-ho-017-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-017-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-017"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-017:n02",
+            "messageId": "msg-ho-017-01",
+            "parentId": "ho-017:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-017-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-017"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": {
+              "message": "tool arguments JSON parse failed: missing closing brace",
+              "serializationAudit": {
+                "emittedArguments": "{\"id\":\"A17\"",
+                "modelArguments": "{\"id\":\"A17\"}",
+                "stage": "InstructionExecutor"
+              }
+            },
+            "errorSourcePointer": "messages/msg-ho-017-03/error",
+            "id": "ho-017:n03",
+            "messageId": "msg-ho-017-03",
+            "parentId": "ho-017:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-017-03",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-017"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-017",
+          "operationId": "op-ho-017",
+          "runId": "run-ho-017",
+          "threadId": null,
+          "topicId": "topic-ho-017",
+          "traceIds": [
+            "trace-ho-017"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-017:case-ho-017:topic-ho-017:main"
+      },
+      "output": {
+        "category": "builtin_tool_failure_unclassified",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-017:n03",
+            "field": "error",
+            "quote": "{\"message\": \"tool arguments JSON parse failed: missing closing brace\", \"serializationAudit\": {\"emittedArguments\": \"{\\\"id\\\":\\\"A17\\\"\", \"modelArguments\": \"{\\\"id\\\":\\\"A17\\\"}\", \"stage\": \"InstructionExecutor\"}}"
+          },
+          {
+            "nodeId": "ho-017:n02",
+            "field": "arguments",
+            "quote": "{\"id\":\"A17\""
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "builtin_tool_contract_invalid"
+        ]
+      },
+      "outputSha256": "efa131324ae6bc6ffcf59a6ab2d16835710615d0e6dfeb09c3a8fa8aa9efe110"
+    },
+    {
+      "id": "claim-014",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "1a847f3d8b2d25af6d5279677b0fbd7f7dbaade56842bfa8270a4e78589397c5",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-001:n00",
+            "messageId": "msg-ho-001-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-001-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-001"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-001:n01",
+            "messageId": "msg-ho-001-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-001-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-001"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-001:n02",
+            "messageId": "msg-ho-001-01",
+            "parentId": "ho-001:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-001-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "lobe-orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-001"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "{\"success\":false,\"status\":503,\"message\":\"upstream unavailable\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-001:n03",
+            "messageId": "msg-ho-001-03",
+            "parentId": "ho-001:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-001-03",
+            "toolCallId": "tc-1",
+            "toolName": "lobe-orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-001"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-001",
+          "operationId": "op-ho-001",
+          "runId": "run-ho-001",
+          "threadId": null,
+          "topicId": "topic-ho-001",
+          "traceIds": [
+            "trace-ho-001"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-001:case-ho-001:topic-ho-001:main"
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-001:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"status\":503,\"message\":\"upstream unavailable\"}"
+          },
+          {
+            "nodeId": "ho-001:n02",
+            "field": "arguments",
+            "quote": "{\"id\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_transport"
+        ]
+      },
+      "outputSha256": "988c457ee8e67960eb654ebac16774fd9610d78fb0f9c71427f778cb2c623cf7"
+    },
+    {
+      "id": "claim-015",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "784fc3936537c3fdc20c23983ba3147572ce4a87738c4f16520e68a8cf5c38ea",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-010:n00",
+            "messageId": "msg-ho-010-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-010-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-010"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-010:n01",
+            "messageId": "msg-ho-010-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-010-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-010"
+          },
+          {
+            "arguments": "{\"order\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-010:n02",
+            "messageId": "msg-ho-010-01",
+            "parentId": "ho-010:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-010-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "reports____render",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-010"
+          },
+          {
+            "arguments": "{\"order\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": {
+              "message": "No runtime registered for reports.render"
+            },
+            "errorSourcePointer": "messages/msg-ho-010-03/error",
+            "id": "ho-010:n03",
+            "messageId": "msg-ho-010-03",
+            "parentId": "ho-010:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-010-03",
+            "toolCallId": "tc-1",
+            "toolName": "reports____render",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-010"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-010",
+          "operationId": "op-ho-010",
+          "runId": "run-ho-010",
+          "threadId": null,
+          "topicId": "topic-ho-010",
+          "traceIds": [
+            "trace-ho-010"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-010:case-ho-010:topic-ho-010:main"
+      },
+      "output": {
+        "category": "builtin_tool_failure_unclassified",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-010:n03",
+            "field": "error",
+            "quote": "{\"message\": \"No runtime registered for reports.render\"}"
+          },
+          {
+            "nodeId": "ho-010:n02",
+            "field": "arguments",
+            "quote": "{\"order\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "builtin_tool_unavailable"
+        ]
+      },
+      "outputSha256": "ad0a80cbad4606652cf38b105007d39bfe78b24b4fd2a641e4258e52746fe0f0"
+    },
+    {
+      "id": "claim-016",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "a3f9728bc0b51bcd755fc7bf6863f22c229d32e347b3aa58627e523b753d67ce",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-018:n00",
+            "messageId": "msg-ho-018-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-018-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-018"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-018:n01",
+            "messageId": "msg-ho-018-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-018-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-018"
+          },
+          {
+            "arguments": "{\"account\":\"acct-A\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-018:n02",
+            "messageId": "msg-ho-018-01",
+            "parentId": "ho-018:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-018-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "billing____read",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-018"
+          },
+          {
+            "arguments": "{\"account\":\"acct-A\"}",
+            "content": "{\"success\":false,\"code\":401,\"message\":\"credential does not belong to account\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-018:n03",
+            "messageId": "msg-ho-018-03",
+            "parentId": "ho-018:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-018-03",
+            "toolCallId": "tc-1",
+            "toolName": "billing____read",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-018"
+          },
+          {
+            "arguments": null,
+            "content": "",
+            "createdAt": "2026-11-09T00:00:04Z",
+            "error": {
+              "account": "acct-A",
+              "configuredFingerprint": "fp-A",
+              "message": "Credential selection audit",
+              "selectedFingerprint": "fp-B",
+              "stage": "CredentialSelector"
+            },
+            "errorSourcePointer": "messages/msg-ho-018-04/error",
+            "id": "ho-018:n04",
+            "messageId": "msg-ho-018-04",
+            "parentId": null,
+            "role": "error",
+            "sequence": 4,
+            "sourcePointer": "messages/msg-ho-018-04",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-018"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-018",
+          "operationId": "op-ho-018",
+          "runId": "run-ho-018",
+          "threadId": null,
+          "topicId": "topic-ho-018",
+          "traceIds": [
+            "trace-ho-018"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-018:case-ho-018:topic-ho-018:main"
+      },
+      "output": {
+        "category": "external_credential",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-018:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"code\":401,\"message\":\"credential does not belong to account\"}"
+          },
+          {
+            "nodeId": "ho-018:n02",
+            "field": "arguments",
+            "quote": "{\"account\":\"acct-A\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_credential"
+        ]
+      },
+      "outputSha256": "b61b9b9e7874b34f1fb281e2c83c4c1e4d5cd11930f0e9861b5fccaa2980cbc5"
+    },
+    {
+      "id": "claim-017",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "把订单说明改写成短句。"
+        },
+        "inputDigest": "349eec05efd08aa5c119ce7337fea9553d34732d17d11413cca5feabf61be6df",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "把订单说明改写成短句。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-014:n00",
+            "messageId": "msg-ho-014-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-014-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-014"
+          },
+          {
+            "arguments": null,
+            "content": "",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": {
+              "conversionRecord": {
+                "component": "OpenAIContextBuilder",
+                "convertedBlocks": [
+                  {
+                    "text": "",
+                    "type": "text"
+                  }
+                ],
+                "requestTag": "req-14",
+                "sourceText": "Ready"
+              },
+              "message": "text content blocks must contain non-whitespace text"
+            },
+            "errorSourcePointer": "messages/msg-ho-014-01/error",
+            "id": "ho-014:n01",
+            "messageId": "msg-ho-014-01",
+            "parentId": null,
+            "role": "error",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-014-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-014"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-014",
+          "operationId": "op-ho-014",
+          "runId": "run-ho-014",
+          "threadId": null,
+          "topicId": "topic-ho-014",
+          "traceIds": [
+            "trace-ho-014"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-014:case-ho-014:topic-ho-014:main"
+      },
+      "output": {
+        "category": "provider_payload_invalid",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-014:n01",
+            "field": "error",
+            "quote": "{\"conversionRecord\": {\"component\": \"OpenAIContextBuilder\", \"convertedBlocks\": [{\"text\": \"\", \"type\": \"text\"}], \"requestTag\": \"req-14\", \"sourceText\": \"Ready\"}, \"message\": \"text content blocks must contain non-whitespace text\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "provider_payload_invalid"
+        ]
+      },
+      "outputSha256": "6440cae50edadfba67f8c7b86100222ee66e4f3b12bbb5ddb492d0af9f1b3aa2"
+    },
+    {
+      "id": "claim-018",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "eb60a92d4a76ab85c857b1c5192197d590b5082275c66899a937433ea60a44d1",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-026:n00",
+            "messageId": "msg-ho-026-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-026-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-026"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-026:n01",
+            "messageId": "msg-ho-026-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-026-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-026"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-026:n02",
+            "messageId": "msg-ho-026-01",
+            "parentId": "ho-026:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-026-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-026"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "{\"success\":false,\"status\":502,\"message\":\"bad gateway\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-026:n03",
+            "messageId": "msg-ho-026-03",
+            "parentId": "ho-026:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-026-03",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-026"
+          },
+          {
+            "arguments": null,
+            "content": "另外问一下上海天气。",
+            "createdAt": "2026-11-09T00:00:04Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-026:n04",
+            "messageId": "msg-ho-026-04",
+            "parentId": null,
+            "role": "user",
+            "sequence": 4,
+            "sourcePointer": "messages/msg-ho-026-04",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-026"
+          },
+          {
+            "arguments": null,
+            "content": "切换到天气查询。",
+            "createdAt": "2026-11-09T00:00:05Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-026:n05",
+            "messageId": "msg-ho-026-05",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 5,
+            "sourcePointer": "messages/msg-ho-026-05",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-026"
+          },
+          {
+            "arguments": "{\"city\":\"Shanghai\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:06Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-026:n06",
+            "messageId": "msg-ho-026-05",
+            "parentId": "ho-026:n05",
+            "role": "call",
+            "sequence": 6,
+            "sourcePointer": "messages/msg-ho-026-05/tools/0",
+            "toolCallId": "tc-2",
+            "toolName": "weather____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-026"
+          },
+          {
+            "arguments": "{\"city\":\"Shanghai\"}",
+            "content": "{\"success\":true,\"temperature\":22}",
+            "createdAt": "2026-11-09T00:00:07Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-026:n07",
+            "messageId": "msg-ho-026-07",
+            "parentId": "ho-026:n05",
+            "role": "tool",
+            "sequence": 7,
+            "sourcePointer": "messages/msg-ho-026-07",
+            "toolCallId": "tc-2",
+            "toolName": "weather____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-026"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-026",
+          "operationId": "op-ho-026",
+          "runId": "run-ho-026",
+          "threadId": null,
+          "topicId": "topic-ho-026",
+          "traceIds": [
+            "trace-ho-026"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-026:case-ho-026:topic-ho-026:main"
+      },
+      "output": {
+        "category": "external_transport",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-026:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"status\":502,\"message\":\"bad gateway\"}"
+          },
+          {
+            "nodeId": "ho-026:n02",
+            "field": "arguments",
+            "quote": "{\"id\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_transport"
+        ]
+      },
+      "outputSha256": "3e3accdaabe343730a7f6a558fa4aa009f258933e852a0bee932a39bc2af33b6"
+    },
+    {
+      "id": "claim-019",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "094d53f19bf302cae9270029c66ae2cafe0dc0e4210214baaa8193d1fa8d6d9a",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-011:n00",
+            "messageId": "msg-ho-011-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-011-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-011"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-011:n01",
+            "messageId": "msg-ho-011-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-011-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-011"
+          },
+          {
+            "arguments": "{\"document\":\"D5\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-011:n02",
+            "messageId": "msg-ho-011-01",
+            "parentId": "ho-011:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-011-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "document____extract",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-011"
+          },
+          {
+            "arguments": "{\"document\":\"D5\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": {
+              "message": "Result JSON parse failed at position 0",
+              "receivedPrefix": "<html>"
+            },
+            "errorSourcePointer": "messages/msg-ho-011-03/error",
+            "id": "ho-011:n03",
+            "messageId": "msg-ho-011-03",
+            "parentId": "ho-011:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-011-03",
+            "toolCallId": "tc-1",
+            "toolName": "document____extract",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-011"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-011",
+          "operationId": "op-ho-011",
+          "runId": "run-ho-011",
+          "threadId": null,
+          "topicId": "topic-ho-011",
+          "traceIds": [
+            "trace-ho-011"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-011:case-ho-011:topic-ho-011:main"
+      },
+      "output": {
+        "category": "builtin_tool_failure_unclassified",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-011:n03",
+            "field": "error",
+            "quote": "{\"message\": \"Result JSON parse failed at position 0\", \"receivedPrefix\": \"<html>\"}"
+          },
+          {
+            "nodeId": "ho-011:n02",
+            "field": "arguments",
+            "quote": "{\"document\":\"D5\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "builtin_result_parse_failed"
+        ]
+      },
+      "outputSha256": "4800ccaf81f3f35b8e6bfae269259c06fd083a4294f2b2f40a68372663e6a426"
+    },
+    {
+      "id": "claim-020",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "98e6d55c92579ad2bc27b43624df15a428698905823860ac1ba63bf6a88b34ad",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-005:n00",
+            "messageId": "msg-ho-005-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-005-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-005"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-005:n01",
+            "messageId": "msg-ho-005-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-005-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-005"
+          },
+          {
+            "arguments": "{\"q\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-005:n02",
+            "messageId": "msg-ho-005-01",
+            "parentId": "ho-005:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-005-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "search____query",
+            "toolSource": "plugin",
+            "traceId": "trace-ho-005"
+          },
+          {
+            "arguments": "{\"q\":\"A17\"}",
+            "content": "{\"success\":false,\"code\":429,\"message\":\"monthly quota exhausted\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-005:n03",
+            "messageId": "msg-ho-005-03",
+            "parentId": "ho-005:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-005-03",
+            "toolCallId": "tc-1",
+            "toolName": "search____query",
+            "toolSource": "plugin",
+            "traceId": "trace-ho-005"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-005",
+          "operationId": "op-ho-005",
+          "runId": "run-ho-005",
+          "threadId": null,
+          "topicId": "topic-ho-005",
+          "traceIds": [
+            "trace-ho-005"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-005:case-ho-005:topic-ho-005:main"
+      },
+      "output": {
+        "category": "external_quota",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-005:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"code\":429,\"message\":\"monthly quota exhausted\"}"
+          },
+          {
+            "nodeId": "ho-005:n02",
+            "field": "arguments",
+            "quote": "{\"q\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_quota"
+        ]
+      },
+      "outputSha256": "8af10031c43adb6a1a7803e719287aa7e5a482b5488833f38170ce35a24a3784"
+    },
+    {
+      "id": "claim-021",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "a473f0cd8a11c4708b5b83942d30c1bf29e4a34a5e9abc81d63600fda41e4413",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-003:n00",
+            "messageId": "msg-ho-003-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-003-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-003"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-003:n01",
+            "messageId": "msg-ho-003-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-003-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-003"
+          },
+          {
+            "arguments": "{\"order\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-003:n02",
+            "messageId": "msg-ho-003-01",
+            "parentId": "ho-003:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-003-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "warehouse____read",
+            "toolSource": "plugin",
+            "traceId": "trace-ho-003"
+          },
+          {
+            "arguments": "{\"order\":\"A17\"}",
+            "content": "{\"ok\":false,\"code\":403,\"message\":\"access denied by policy\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-003:n03",
+            "messageId": "msg-ho-003-03",
+            "parentId": "ho-003:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-003-03",
+            "toolCallId": "tc-1",
+            "toolName": "warehouse____read",
+            "toolSource": "plugin",
+            "traceId": "trace-ho-003"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-003",
+          "operationId": "op-ho-003",
+          "runId": "run-ho-003",
+          "threadId": null,
+          "topicId": "topic-ho-003",
+          "traceIds": [
+            "trace-ho-003"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-003:case-ho-003:topic-ho-003:main"
+      },
+      "output": {
+        "category": "external_permission",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-003:n03",
+            "field": "content",
+            "quote": "{\"ok\":false,\"code\":403,\"message\":\"access denied by policy\"}"
+          },
+          {
+            "nodeId": "ho-003:n02",
+            "field": "arguments",
+            "quote": "{\"order\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_permission"
+        ]
+      },
+      "outputSha256": "4b3e5459f5dd53acd4f438fa55a615c6e463abf4e4c5130b7ff0dcbbe71c85b9"
+    },
+    {
+      "id": "claim-022",
+      "trajectory": {
+        "coverage": {
+          "complete": false,
+          "source": "database_messages",
+          "warnings": [
+            "request_and_runtime_events_missing"
+          ]
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "1436027033a3d2379b17ac47b407ecf7582aa4ca6fed6b642a324b6bbd24a61a",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "{\"success\":false,\"status\":503,\"message\":\"temporarily unavailable\"}",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-021:n00",
+            "messageId": "msg-ho-021-00",
+            "parentId": null,
+            "role": "tool",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-021-00",
+            "toolCallId": "tc-older",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-021"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-021",
+          "operationId": "op-ho-021",
+          "runId": "run-ho-021",
+          "threadId": null,
+          "topicId": "topic-ho-021",
+          "traceIds": [
+            "trace-ho-021"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-021:case-ho-021:topic-ho-021:main"
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-021:n00",
+            "field": "content",
+            "quote": "{\"success\":false,\"status\":503,\"message\":\"temporarily unavailable\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_transport"
+        ]
+      },
+      "outputSha256": "b2ebf6c24dd8818f6b75d8eae539ba11859c7c9eaa092106535b2dea53de627c"
+    },
+    {
+      "id": "claim-023",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "a3a6d873b1e0f82cb20955a85c1ed9a1f76bd17c878171ff97d7736460ceba2c",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-022:n00",
+            "messageId": "msg-ho-022-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-022-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-022"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-022:n01",
+            "messageId": "msg-ho-022-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-022-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-022"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-022:n02",
+            "messageId": "msg-ho-022-01",
+            "parentId": "ho-022:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-022-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "plugin",
+            "traceId": "trace-ho-022"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "{\"success\":false,\"code\":403,\"message\":\"policy blocked account\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-022:n03",
+            "messageId": "msg-ho-022-03",
+            "parentId": "ho-022:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-022-03",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "plugin",
+            "traceId": "trace-ho-022"
+          },
+          {
+            "arguments": null,
+            "content": "已确认是AgentStateManager内存状态被破坏，绝非权限策略。",
+            "createdAt": "2026-11-09T00:00:04Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-022:n04",
+            "messageId": "msg-ho-022-04",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 4,
+            "sourcePointer": "messages/msg-ho-022-04",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-022"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-022",
+          "operationId": "op-ho-022",
+          "runId": "run-ho-022",
+          "threadId": null,
+          "topicId": "topic-ho-022",
+          "traceIds": [
+            "trace-ho-022"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-022:case-ho-022:topic-ho-022:main"
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-022:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"code\":403,\"message\":\"policy blocked account\"}"
+          },
+          {
+            "nodeId": "ho-022:n02",
+            "field": "arguments",
+            "quote": "{\"id\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_permission"
+        ]
+      },
+      "outputSha256": "0ed11cb131e29cc56c0e96c4c7e00b02f59d46be9d91145cdae772890106615c"
+    },
+    {
+      "id": "claim-024",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "1a613b289ec70649419c2311ecbc522b53e5dd611fcf78e3f3489c49a5d58f93",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-009:n00",
+            "messageId": "msg-ho-009-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-009-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-009"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-009:n01",
+            "messageId": "msg-ho-009-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-009-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-009"
+          },
+          {
+            "arguments": "{\"limit\":\"several\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-009:n02",
+            "messageId": "msg-ho-009-01",
+            "parentId": "ho-009:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-009-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "catalog____search",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-009"
+          },
+          {
+            "arguments": "{\"limit\":\"several\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": {
+              "code": "SCHEMA_VALIDATION",
+              "message": "limit must be integer"
+            },
+            "errorSourcePointer": "messages/msg-ho-009-03/error",
+            "id": "ho-009:n03",
+            "messageId": "msg-ho-009-03",
+            "parentId": "ho-009:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-009-03",
+            "toolCallId": "tc-1",
+            "toolName": "catalog____search",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-009"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-009",
+          "operationId": "op-ho-009",
+          "runId": "run-ho-009",
+          "threadId": null,
+          "topicId": "topic-ho-009",
+          "traceIds": [
+            "trace-ho-009"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-009:case-ho-009:topic-ho-009:main"
+      },
+      "output": {
+        "category": "builtin_tool_failure_unclassified",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-009:n03",
+            "field": "error",
+            "quote": "{\"code\": \"SCHEMA_VALIDATION\", \"message\": \"limit must be integer\"}"
+          },
+          {
+            "nodeId": "ho-009:n02",
+            "field": "arguments",
+            "quote": "{\"limit\":\"several\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "builtin_tool_contract_invalid"
+        ]
+      },
+      "outputSha256": "8e5acae60ecf4550d4cdc78d0e71b98028c61f8b726f70364f9536a0c6bde197"
+    },
+    {
+      "id": "claim-025",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "6244fefafbe992f2b8254c14553d2204ee70f167def140ae4a549b9255ea0129",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-028:n00",
+            "messageId": "msg-ho-028-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-028-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-028"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-028:n01",
+            "messageId": "msg-ho-028-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-028-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-028"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-028:n02",
+            "messageId": "msg-ho-028-01",
+            "parentId": "ho-028:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-028-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-028"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "{\"success\":false,\"message\":\"record unavailable\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-028:n03",
+            "messageId": "msg-ho-028-03",
+            "parentId": "ho-028:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-028-03",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-028"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-028",
+          "operationId": "op-ho-028",
+          "runId": "run-ho-028",
+          "threadId": null,
+          "topicId": "topic-ho-028",
+          "traceIds": [
+            "trace-ho-028"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-028:case-ho-028:topic-ho-028:main"
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-028:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"message\":\"record unavailable\"}"
+          },
+          {
+            "nodeId": "ho-028:n02",
+            "field": "arguments",
+            "quote": "{\"id\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "f5eea325d6a6e6f7194c34ea0bea741fd5df5736a6d9b8f37bfab3926cd72ea9"
+    },
+    {
+      "id": "claim-026",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "c485ec3fde3fa513180b526bf68639bee65598c1439a10fe438a1ff1823caa51",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-004:n00",
+            "messageId": "msg-ho-004-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-004-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-004"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-004:n01",
+            "messageId": "msg-ho-004-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-004-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-004"
+          },
+          {
+            "arguments": "{\"sku\":\"S8\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-004:n02",
+            "messageId": "msg-ho-004-01",
+            "parentId": "ho-004:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-004-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "inventory____read",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-004"
+          },
+          {
+            "arguments": "{\"sku\":\"S8\"}",
+            "content": "{\"success\":false,\"code\":401,\"message\":\"token_expired\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-004:n03",
+            "messageId": "msg-ho-004-03",
+            "parentId": "ho-004:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-004-03",
+            "toolCallId": "tc-1",
+            "toolName": "inventory____read",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-004"
+          },
+          {
+            "arguments": null,
+            "content": "",
+            "createdAt": "2026-11-09T00:00:04Z",
+            "error": {
+              "configuredFingerprint": "fp-17",
+              "message": "Credential forwarding audit",
+              "sentFingerprint": "fp-17"
+            },
+            "errorSourcePointer": "messages/msg-ho-004-04/error",
+            "id": "ho-004:n04",
+            "messageId": "msg-ho-004-04",
+            "parentId": null,
+            "role": "error",
+            "sequence": 4,
+            "sourcePointer": "messages/msg-ho-004-04",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-004"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-004",
+          "operationId": "op-ho-004",
+          "runId": "run-ho-004",
+          "threadId": null,
+          "topicId": "topic-ho-004",
+          "traceIds": [
+            "trace-ho-004"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-004:case-ho-004:topic-ho-004:main"
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-004:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"code\":401,\"message\":\"token_expired\"}"
+          },
+          {
+            "nodeId": "ho-004:n02",
+            "field": "arguments",
+            "quote": "{\"sku\":\"S8\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_credential"
+        ]
+      },
+      "outputSha256": "17c49a17e67e120683b42d7fc1f7f694e2bf08b7397a45a397317e2e3a3519f0"
+    },
+    {
+      "id": "claim-027",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "96e98173a8efd6c24746cdc6c5b4fed5ddbd1d3920a5be8ad106e45d3b8425d7",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-019:n00",
+            "messageId": "msg-ho-019-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-019-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-019"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-019:n01",
+            "messageId": "msg-ho-019-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-019-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-019"
+          },
+          {
+            "arguments": "{\"expression\":\"6*7\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-019:n02",
+            "messageId": "msg-ho-019-01",
+            "parentId": "ho-019:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-019-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "calculator____calculate",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-019"
+          },
+          {
+            "arguments": "{\"expression\":\"6*7\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": {
+              "message": "No executor found for calculator.calculate",
+              "registryConstruction": {
+                "component": "BuiltinToolsExecutor",
+                "constructedEntries": [],
+                "manifestEntries": [
+                  "calculator.calculate"
+                ]
+              }
+            },
+            "errorSourcePointer": "messages/msg-ho-019-03/error",
+            "id": "ho-019:n03",
+            "messageId": "msg-ho-019-03",
+            "parentId": "ho-019:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-019-03",
+            "toolCallId": "tc-1",
+            "toolName": "calculator____calculate",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-019"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-019",
+          "operationId": "op-ho-019",
+          "runId": "run-ho-019",
+          "threadId": null,
+          "topicId": "topic-ho-019",
+          "traceIds": [
+            "trace-ho-019"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-019:case-ho-019:topic-ho-019:main"
+      },
+      "output": {
+        "category": "builtin_tool_failure_unclassified",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-019:n03",
+            "field": "error",
+            "quote": "{\"message\": \"No executor found for calculator.calculate\", \"registryConstruction\": {\"component\": \"BuiltinToolsExecutor\", \"constructedEntries\": [], \"manifestEntries\": [\"calculator.calculate\"]}}"
+          },
+          {
+            "nodeId": "ho-019:n02",
+            "field": "arguments",
+            "quote": "{\"expression\":\"6*7\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "builtin_tool_unavailable"
+        ]
+      },
+      "outputSha256": "65fce8cd3f919e757bdd1bb7ed436a2b9797c258c2cd777c5974be3f85066037"
+    },
+    {
+      "id": "claim-028",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "3475c4d7759ecf4d145b4ea6502af9066adbc0a7e2b049c92f223314f486b5dd",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-002:n00",
+            "messageId": "msg-ho-002-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-002-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-002"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-002:n01",
+            "messageId": "msg-ho-002-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-002-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-002"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-002:n02",
+            "messageId": "msg-ho-002-01",
+            "parentId": "ho-002:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-002-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-002"
+          },
+          {
+            "arguments": "{\"id\":\"A17\"}",
+            "content": "{\"success\":false,\"status\":503,\"message\":\"upstream unavailable\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-002:n03",
+            "messageId": "msg-ho-002-03",
+            "parentId": "ho-002:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-002-03",
+            "toolCallId": "tc-1",
+            "toolName": "orders____lookup",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-002"
+          },
+          {
+            "arguments": null,
+            "content": "",
+            "createdAt": "2026-11-09T00:00:04Z",
+            "error": {
+              "checkedArguments": {
+                "id": "A17"
+              },
+              "message": "Request validation completed",
+              "outboundArguments": {
+                "id": "A17"
+              },
+              "requestId": "req-b"
+            },
+            "errorSourcePointer": "messages/msg-ho-002-04/error",
+            "id": "ho-002:n04",
+            "messageId": "msg-ho-002-04",
+            "parentId": null,
+            "role": "error",
+            "sequence": 4,
+            "sourcePointer": "messages/msg-ho-002-04",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-002"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-002",
+          "operationId": "op-ho-002",
+          "runId": "run-ho-002",
+          "threadId": null,
+          "topicId": "topic-ho-002",
+          "traceIds": [
+            "trace-ho-002"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-002:case-ho-002:topic-ho-002:main"
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-002:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"status\":503,\"message\":\"upstream unavailable\"}"
+          },
+          {
+            "nodeId": "ho-002:n02",
+            "field": "arguments",
+            "quote": "{\"id\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_transport"
+        ]
+      },
+      "outputSha256": "9c854c0c53725570a598d2449a4d5f40c34e2ff4db2cd096639524b2d861dd5a"
+    },
+    {
+      "id": "claim-029",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "dbaa6ce20b4cdbfb64ac7dd2dd250c6e74ffbf8dd75baadd7510974c33bc2681",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-008:n00",
+            "messageId": "msg-ho-008-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-008-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-008"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-008:n01",
+            "messageId": "msg-ho-008-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-008-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-008"
+          },
+          {
+            "arguments": "{\"order\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-008:n02",
+            "messageId": "msg-ho-008-01",
+            "parentId": "ho-008:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-008-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "archive____fetch",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-008"
+          },
+          {
+            "arguments": "{\"order\":\"A17\"}",
+            "content": "{\"success\":false,\"message\":\"operation rejected; reason unavailable\"}",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-008:n03",
+            "messageId": "msg-ho-008-03",
+            "parentId": "ho-008:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-008-03",
+            "toolCallId": "tc-1",
+            "toolName": "archive____fetch",
+            "toolSource": "mcp",
+            "traceId": "trace-ho-008"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-008",
+          "operationId": "op-ho-008",
+          "runId": "run-ho-008",
+          "threadId": null,
+          "topicId": "topic-ho-008",
+          "traceIds": [
+            "trace-ho-008"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-008:case-ho-008:topic-ho-008:main"
+      },
+      "output": {
+        "category": "external_tool_failure",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-008:n03",
+            "field": "content",
+            "quote": "{\"success\":false,\"message\":\"operation rejected; reason unavailable\"}"
+          },
+          {
+            "nodeId": "ho-008:n02",
+            "field": "arguments",
+            "quote": "{\"order\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "external_tool_failure"
+        ]
+      },
+      "outputSha256": "638629e572d7cd2095544ca6a32c2116913171397720f615417e6641c5051048"
+    },
+    {
+      "id": "claim-030",
+      "trajectory": {
+        "coverage": {
+          "complete": true,
+          "source": "database_messages",
+          "warnings": []
+        },
+        "evaluation": {
+          "actual": "暂未取得订单状态",
+          "criteria": null,
+          "expected": "订单状态",
+          "score": 0,
+          "status": "failed",
+          "task": "查阅订单 A17 的当前状态。"
+        },
+        "inputDigest": "bd5768b3750e45033ef51ce6f133dd32871f897623ed1bda003d20ec3013774e",
+        "nodes": [
+          {
+            "arguments": null,
+            "content": "查阅订单 A17 的当前状态。",
+            "createdAt": "2026-11-09T00:00:00Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-020:n00",
+            "messageId": "msg-ho-020-00",
+            "parentId": null,
+            "role": "user",
+            "sequence": 0,
+            "sourcePointer": "messages/msg-ho-020-00",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-020"
+          },
+          {
+            "arguments": null,
+            "content": "先查询记录，再依据返回信息回答。",
+            "createdAt": "2026-11-09T00:00:01Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-020:n01",
+            "messageId": "msg-ho-020-01",
+            "parentId": null,
+            "role": "assistant",
+            "sequence": 1,
+            "sourcePointer": "messages/msg-ho-020-01",
+            "toolCallId": null,
+            "toolName": null,
+            "toolSource": "unknown",
+            "traceId": "trace-ho-020"
+          },
+          {
+            "arguments": "{\"order\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:02Z",
+            "error": null,
+            "errorSourcePointer": null,
+            "id": "ho-020:n02",
+            "messageId": "msg-ho-020-01",
+            "parentId": "ho-020:n01",
+            "role": "call",
+            "sequence": 2,
+            "sourcePointer": "messages/msg-ho-020-01/tools/0",
+            "toolCallId": "tc-1",
+            "toolName": "reports____build",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-020"
+          },
+          {
+            "arguments": "{\"order\":\"A17\"}",
+            "content": "",
+            "createdAt": "2026-11-09T00:00:03Z",
+            "error": {
+              "conversionAudit": {
+                "component": "BuiltinToolsExecutor",
+                "decodeAppliedAgain": true,
+                "receivedValueType": "object"
+              },
+              "message": "JSON parse failed on [object Object]"
+            },
+            "errorSourcePointer": "messages/msg-ho-020-03/error",
+            "id": "ho-020:n03",
+            "messageId": "msg-ho-020-03",
+            "parentId": "ho-020:n01",
+            "role": "tool",
+            "sequence": 3,
+            "sourcePointer": "messages/msg-ho-020-03",
+            "toolCallId": "tc-1",
+            "toolName": "reports____build",
+            "toolSource": "builtin",
+            "traceId": "trace-ho-020"
+          }
+        ],
+        "schemaVersion": 1,
+        "scope": {
+          "caseId": "case-ho-020",
+          "operationId": "op-ho-020",
+          "runId": "run-ho-020",
+          "threadId": null,
+          "topicId": "topic-ho-020",
+          "traceIds": [
+            "trace-ho-020"
+          ]
+        },
+        "trajectoryId": "eval:run-ho-020:case-ho-020:topic-ho-020:main"
+      },
+      "output": {
+        "category": "builtin_tool_failure_unclassified",
+        "moduleId": null,
+        "claimLevel": "observation",
+        "summary": "Failure signals observed; evidence does not establish the originating responsible module",
+        "evidenceRefs": [
+          {
+            "nodeId": "ho-020:n03",
+            "field": "error",
+            "quote": "{\"conversionAudit\": {\"component\": \"BuiltinToolsExecutor\", \"decodeAppliedAgain\": true, \"receivedValueType\": \"object\"}, \"message\": \"JSON parse failed on [object Object]\"}"
+          },
+          {
+            "nodeId": "ho-020:n02",
+            "field": "arguments",
+            "quote": "{\"order\":\"A17\"}"
+          }
+        ]
+      },
+      "observationOracle": {
+        "eligible": true,
+        "categories": [
+          "builtin_result_parse_failed"
+        ]
+      },
+      "outputSha256": "d7bea8f19a7532919e5b1f00c9af9547a59604cf0f41287c8657b1487d62f3de"
+    }
+  ]
+}

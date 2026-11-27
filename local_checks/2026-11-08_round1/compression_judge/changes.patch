@@ -1,0 +1,418 @@
+--- a/packages/agent-runtime/src/utils/tokenCounter.ts
++++ b/packages/agent-runtime/src/utils/tokenCounter.ts
+@@ -6,14 +6,14 @@
+ export interface TokenCountOptions {
+   /** Model's max context window token count */
+   maxWindowToken?: number;
+-  /** Threshold ratio for triggering compression, default 0.75 */
++  /** Threshold ratio for triggering compression, default 0.65 */
+   thresholdRatio?: number;
+ }
+ 
+ /** Default max context window (128k tokens) */
+ export const DEFAULT_MAX_CONTEXT = 128_000;
+ 
+-/** Default threshold ratio (50% of max context) */
++/** Default threshold ratio (65% of max context) */
+ export const DEFAULT_THRESHOLD_RATIO = 0.65;
+ 
+ /**
+--- a/packages/agent-runtime/src/utils/tokenCounter.test.ts
++++ b/packages/agent-runtime/src/utils/tokenCounter.test.ts
+@@ -109,17 +109,17 @@
+     it('should use default values', () => {
+       const threshold = getCompressionThreshold();
+       expect(threshold).toBe(Math.floor(DEFAULT_MAX_CONTEXT * DEFAULT_THRESHOLD_RATIO));
+-      expect(threshold).toBe(64_000); // 128k * 0.5
++      expect(threshold).toBe(83_200); // 128k * 0.65
+     });
+ 
+     it('should use custom maxWindowToken', () => {
+       const threshold = getCompressionThreshold({ maxWindowToken: 200_000 });
+-      expect(threshold).toBe(100_000); // 200k * 0.5
++      expect(threshold).toBe(130_000); // 200k * 0.65
+     });
+ 
+     it('should use custom thresholdRatio', () => {
+       const threshold = getCompressionThreshold({ thresholdRatio: 0.5 });
+-      expect(threshold).toBe(64_000); // 128k * 0.5
++      expect(threshold).toBe(64_000); // explicit 50% override
+     });
+ 
+     it('should use both custom values', () => {
+@@ -140,13 +140,20 @@
+   });
+ 
+   describe('shouldCompress', () => {
++    it('retains 65% default while allowing an explicit 50% policy', () => {
++      expect(DEFAULT_THRESHOLD_RATIO).toBe(0.65);
++      const messages = [{ role: 'assistant', metadata: { usage: { totalOutputTokens: 70_000 } } }];
++      expect(shouldCompress(messages).needsCompression).toBe(false);
++      expect(shouldCompress(messages, { thresholdRatio: 0.5 }).needsCompression).toBe(true);
++    });
++
+     it('should return needsCompression=false when under threshold', () => {
+       const messages = [{ content: 'Hi', role: 'user' }];
+       const result = shouldCompress(messages);
+ 
+       expect(result.needsCompression).toBe(false);
+       expect(result.currentTokenCount).toBeGreaterThan(0);
+-      expect(result.threshold).toBe(64_000); // 128k * 0.5
++      expect(result.threshold).toBe(83_200); // 128k * 0.65
+     });
+ 
+     it('should return needsCompression=true when over threshold', () => {
+@@ -154,22 +161,22 @@
+       const messages = [
+         {
+           content: '',
+-          metadata: { usage: { totalOutputTokens: 70_000 } },
++          metadata: { usage: { totalOutputTokens: 83_201 } },
+           role: 'assistant',
+         },
+       ];
+       const result = shouldCompress(messages);
+ 
+       expect(result.needsCompression).toBe(true);
+-      expect(result.currentTokenCount).toBe(70_000);
+-      expect(result.threshold).toBe(64_000); // 128k * 0.5
++      expect(result.currentTokenCount).toBe(83_201);
++      expect(result.threshold).toBe(83_200); // 128k * 0.65
+     });
+ 
+     it('should return needsCompression=false when exactly at threshold', () => {
+       const messages = [
+         {
+           content: '',
+-          metadata: { usage: { totalOutputTokens: 64_000 } },
++          metadata: { usage: { totalOutputTokens: 83_200 } },
+           role: 'assistant',
+         },
+       ];
+@@ -177,7 +184,7 @@
+ 
+       // Exactly at threshold should not trigger compression
+       expect(result.needsCompression).toBe(false);
+-      expect(result.currentTokenCount).toBe(64_000);
++      expect(result.currentTokenCount).toBe(83_200);
+     });
+ 
+     it('should use custom options', () => {
+--- a/src/server/services/agentEvalRun/index.ts
++++ b/src/server/services/agentEvalRun/index.ts
+@@ -1,5 +1,6 @@
+ import { type LobeChatDatabase } from '@lobechat/database';
+ import { evaluate } from '@lobechat/eval-rubric';
++import type { GenerateObjectSchema } from '@lobechat/model-runtime';
+ import type {
+   EvalBenchmarkRubric,
+   EvalRunAgentSnapshot,
+@@ -278,7 +279,7 @@
+             handler: async (event) => {
+               // Local mode: directly record completion
+               const service = new AgentEvalRunService(db, userId);
+-              await service.recordTrajectoryCompletion({
++              const { allDone } = await service.recordTrajectoryCompletion({
+                 runId,
+                 status: event.status || event.reason || 'done',
+                 telemetry: {
+@@ -294,6 +295,13 @@
+                 },
+                 testCaseId,
+               });
++              if (allDone) {
++                // Local hooks do not go through the webhook orchestrator. Complete
++                // the same finalization step once every case has reported back.
++                const { AgentEvalRunOrchestrator } = await import('./orchestrator');
++                const orchestrator = await AgentEvalRunOrchestrator.create(userId);
++                await orchestrator.finalizeRun({ runId, userId });
++              }
+             },
+             id: 'eval-trajectory-complete',
+             type: 'onComplete' as const,
+@@ -748,10 +756,22 @@
+     }
+ 
+     // Run evaluation
+-    const result = await evaluate(
+-      { actual: lastAssistantMsg.content, rubrics: effectiveRubrics, testCase: testCase.content },
+-      { passThreshold },
+-    );
++    let result;
++    try {
++      result = await this.evaluateOutput(
++        { actual: lastAssistantMsg.content, rubrics: effectiveRubrics, testCase: testCase.content },
++        passThreshold,
++      );
++    } catch (error) {
++      return {
++        ...baseMeta,
++        error: error instanceof Error ? error.message : 'Evaluation failed',
++        passed: false,
++        rubricScores: [],
++        score: 0,
++        status: 'error',
++      };
++    }
+ 
+     return {
+       ...baseMeta,
+@@ -804,13 +824,7 @@
+         rubricScores: meta.rubricScores as any,
+         score: meta.score as number | undefined,
+         status: meta.status as
+-          | 'error'
+-          | 'external'
+-          | 'failed'
+-          | 'passed'
+-          | 'running'
+-          | 'timeout'
+-          | undefined,
++          'error' | 'external' | 'failed' | 'passed' | 'running' | 'timeout' | undefined,
+         steps: meta.steps as number | undefined,
+         threadId: t.id,
+         tokens: meta.tokens as number | undefined,
+@@ -836,6 +850,7 @@
+     const anyPassed = threadResults.some((t) => t.passed === true);
+     // pass^k: all threads passed
+     const allPassed = threadResults.every((t) => t.passed === true);
++    const evaluationError = threadResults.find((t) => t.error)?.error;
+ 
+     // Best score (used as the representative score)
+     const scores = threadResults.filter((t) => t.score != null).map((t) => t.score!);
+@@ -869,6 +884,7 @@
+     await this.runTopicModel.updateByRunAndTopic(runId, topicId, {
+       evalResult: {
+         completionReason,
++        error: !anyPassed ? evaluationError : undefined,
+         cost: totalCost ? roundCost(totalCost / k) : undefined,
+         duration: totalDuration ? totalDuration / k : undefined,
+         llmCalls: totalLlmCalls ? Math.round((totalLlmCalls / k) * 10) / 10 : undefined,
+@@ -885,7 +901,7 @@
+       // pass@k: passed if any thread passed
+       passed: anyPassed,
+       score: bestScore,
+-      status: anyPassed ? 'passed' : 'failed',
++      status: anyPassed ? 'passed' : evaluationError ? 'error' : 'failed',
+     });
+   }
+ 
+@@ -1017,7 +1033,16 @@
+             await this.evaluateCase(runId, { ...runTopic, evalResult: evalResultWithTelemetry });
+           } catch (e) {
+             // Evaluation failure should not block telemetry or progress tracking
+-            console.error(e);
++            await this.runTopicModel.updateByRunAndTopic(runTopic.runId, runTopic.topicId, {
++              evalResult: {
++                ...evalResultWithTelemetry,
++                error: e instanceof Error ? e.message : 'Evaluation failed',
++                rubricScores: [],
++              },
++              passed: false,
++              score: 0,
++              status: 'error',
++            });
+           }
+         }
+       }
+@@ -1273,6 +1298,66 @@
+     return metrics;
+   }
+ 
++  /** Reuse the existing model runtime only for explicitly configured judge rubrics. */
++  private async evaluateOutput(params: Parameters<typeof evaluate>[0], passThreshold: number) {
++    for (const rubric of params.rubrics) {
++      if (rubric.type !== 'llm-rubric' && rubric.type !== 'answer-relevance') continue;
++      const config = rubric.config as { model?: string; provider?: string };
++      if (
++        !config ||
++        typeof config.model !== 'string' ||
++        !config.model.trim() ||
++        typeof config.provider !== 'string' ||
++        !config.provider.trim()
++      ) {
++        throw new Error('LLM judge requires an explicit model and provider');
++      }
++    }
++
++    // Matchers return failed results on generation errors; retain the infrastructure
++    // error separately so the service can mark it error instead of a wrong answer.
++    let judgeError: Error | undefined;
++    const result = await evaluate(params, {
++      matchContext: {
++        generateObject: async (payload) => {
++          try {
++            const { initModelRuntimeFromDB } = await import('@/server/modules/ModelRuntime');
++            const runtime = await initModelRuntimeFromDB(this.db, this.userId, payload.provider!);
++            const output = await runtime.generateObject(
++              {
++                messages: payload.messages,
++                model: payload.model,
++                schema: {
++                  name: 'eval_judge_score',
++                  schema: payload.schema as GenerateObjectSchema['schema'],
++                },
++              },
++              { signal: AbortSignal.timeout(60_000) },
++            );
++            const value = output as { reason?: unknown; score?: unknown } | null;
++            if (
++              !value ||
++              typeof value.score !== 'number' ||
++              !Number.isFinite(value.score) ||
++              value.score < 0 ||
++              value.score > 1 ||
++              typeof value.reason !== 'string'
++            ) {
++              throw new Error('LLM judge returned an invalid score or reason');
++            }
++            return { reason: value.reason, score: value.score };
++          } catch (error) {
++            judgeError = error instanceof Error ? error : new Error('LLM judge generation failed');
++            throw judgeError;
++          }
++        },
++      },
++      passThreshold,
++    });
++    if (judgeError) throw judgeError;
++    return result;
++  }
++
+   private async evaluateCase(
+     runId: string,
+     runTopic: {
+@@ -1347,9 +1432,9 @@
+     if (effectiveRubrics.length === 0) return;
+ 
+     // Run evaluation
+-    const result = await evaluate(
++    const result = await this.evaluateOutput(
+       { actual: lastAssistantMsg.content, rubrics: effectiveRubrics, testCase: testCase.content },
+-      { passThreshold },
++      passThreshold,
+     );
+ 
+     const evalResult: EvalRunTopicResult = {
+--- a/src/server/services/agentEvalRun/__tests__/agentEvalRunService.judge.test.ts
++++ b/src/server/services/agentEvalRun/__tests__/agentEvalRunService.judge.test.ts
+@@ -0,0 +1,119 @@
++import { beforeEach, describe, expect, it, vi } from 'vitest';
++
++import { AgentEvalRunModel, AgentEvalRunTopicModel } from '@/database/models/agentEval';
++import { ThreadModel } from '@/database/models/thread';
++import { messages } from '@/database/schemas';
++import { initModelRuntimeFromDB } from '@/server/modules/ModelRuntime';
++import { AgentEvalRunService } from '@/server/services/agentEvalRun';
++
++import { cleanupDB, serverDB, setupEvalChain, userId } from './_setup';
++
++vi.mock('@/server/modules/ModelRuntime', () => ({ initModelRuntimeFromDB: vi.fn() }));
++vi.mock('@/server/services/agentRuntime/AgentRuntimeService', () => ({
++  AgentRuntimeService: vi.fn().mockImplementation(() => ({ interruptOperation: vi.fn() })),
++}));
++
++beforeEach(async () => {
++  vi.clearAllMocks();
++  await cleanupDB();
++});
++
++describe('eval judge integration (local mocked model runtime)', () => {
++  for (const evalMode of ['llm-rubric', 'answer-relevance']) {
++    for (const threaded of [false, true]) {
++      for (const outcome of [
++        'pass',
++        'zero',
++        'unconfigured',
++        'provider-error',
++        'invalid-score',
++        'invalid-rubric',
++      ] as const) {
++        it(`${evalMode} ${threaded ? 'thread' : 'topic'}: ${outcome}`, async () => {
++          const generateObject = vi
++            .fn()
++            .mockResolvedValue({ reason: 'checked', score: outcome === 'zero' ? 0 : 1 });
++          if (outcome === 'provider-error')
++            generateObject.mockRejectedValue(new Error('Synthetic judge unavailable'));
++          if (outcome === 'invalid-score')
++            generateObject.mockResolvedValue({ reason: 'bad', score: NaN });
++          vi.mocked(initModelRuntimeFromDB).mockResolvedValue({ generateObject } as any);
++          const chain = await setupEvalChain({
++            assistantOutput: '42',
++            datasetEvalConfig:
++              outcome === 'unconfigured'
++                ? {}
++                : { criteria: 'Check arithmetic', model: 'synthetic-judge', provider: 'openai' },
++            datasetEvalMode: outcome === 'invalid-rubric' ? null : evalMode,
++            benchmarkRubrics:
++              outcome === 'invalid-rubric'
++                ? [
++                    {
++                      id: 'bad',
++                      name: 'bad',
++                      type: 'contains',
++                      config: { value: '42' },
++                      weight: -1,
++                    },
++                  ]
++                : [],
++            totalCases: 1,
++          });
++          const service = new AgentEvalRunService(serverDB, userId);
++          if (threaded) {
++            const thread = await new ThreadModel(serverDB, userId).create({
++              topicId: chain.topic.id,
++              type: 'eval',
++            });
++            await serverDB.insert(messages).values({
++              content: '42',
++              role: 'assistant',
++              threadId: thread!.id,
++              topicId: chain.topic.id,
++              userId,
++            });
++            const completion = await service.recordThreadCompletion({
++              runId: chain.run.id,
++              status: 'done',
++              telemetry: {},
++              testCaseId: chain.testCase.id,
++              threadId: thread!.id,
++              topicId: chain.topic.id,
++            });
++            expect(completion.allRunDone).toBe(true);
++          } else {
++            const completion = await service.recordTrajectoryCompletion({
++              runId: chain.run.id,
++              status: 'done',
++              telemetry: { completionReason: 'stop' },
++              testCaseId: chain.testCase.id,
++            });
++            expect(completion.allDone).toBe(true);
++          }
++          const [topic] = await new AgentEvalRunTopicModel(serverDB, userId).findByRunId(
++            chain.run.id,
++          );
++          const expectedStatus =
++            outcome === 'pass' ? 'passed' : outcome === 'zero' ? 'failed' : 'error';
++          expect(topic.status).toBe(expectedStatus);
++          if (expectedStatus === 'error') expect(topic.evalResult?.error).toBeTruthy();
++          const run = await new AgentEvalRunModel(serverDB, userId).findById(chain.run.id);
++          expect(run?.metrics?.errorCases ?? 0).toBe(expectedStatus === 'error' ? 1 : 0);
++          expect(run?.metrics?.failedCases ?? 0).toBe(outcome === 'zero' ? 1 : 0);
++          if (outcome === 'pass' || outcome === 'zero') {
++            expect(initModelRuntimeFromDB).toHaveBeenCalledWith(serverDB, userId, 'openai');
++            expect(generateObject).toHaveBeenCalledWith(
++              expect.objectContaining({
++                model: 'synthetic-judge',
++                schema: expect.objectContaining({ name: 'eval_judge_score' }),
++              }),
++              expect.objectContaining({ signal: expect.any(AbortSignal) }),
++            );
++          }
++          if (outcome === 'unconfigured' || outcome === 'invalid-rubric')
++            expect(generateObject).not.toHaveBeenCalled();
++        });
++      }
++    }
++  }
++});

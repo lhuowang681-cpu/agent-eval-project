@@ -1,0 +1,64 @@
+{
+  "winner": {
+    "cause_id": "argument_or_type_validation",
+    "cause_name": "argument_or_type_validation",
+    "discriminating_signals": [
+      "argument_or_type_validation"
+    ],
+    "n_sessions": 3,
+    "score": 16.0,
+    "severity_level": "S4",
+    "severity_weight": 8,
+    "has_irreversible_tail": false,
+    "confidence": 0.9,
+    "user_visibility": "direct",
+    "task_blocking": "blocks",
+    "recoverability": "manual",
+    "side_effect": "none",
+    "rationale": "Trace 最终为硬失败，任务被用户直接感知地阻断",
+    "trace_count": 3
+  },
+  "representative": {
+    "trace_id": "rep-0",
+    "session_key": "task-0",
+    "trace_summary": "invalid date argument",
+    "reason": "invalid argument",
+    "impact_status": "hard_failed",
+    "cause_id": "argument_or_type_validation",
+    "normalized_signature": "| | | | invalid argument | invalid date argument"
+  },
+  "scored_causes": [
+    {
+      "cause_id": "argument_or_type_validation",
+      "cause_name": "argument_or_type_validation",
+      "discriminating_signals": [
+        "argument_or_type_validation"
+      ],
+      "n_sessions": 3,
+      "score": 16.0,
+      "severity_level": "S4",
+      "severity_weight": 8,
+      "has_irreversible_tail": false,
+      "confidence": 0.9,
+      "user_visibility": "direct",
+      "task_blocking": "blocks",
+      "recoverability": "manual",
+      "side_effect": "none",
+      "rationale": "Trace 最终为硬失败，任务被用户直接感知地阻断",
+      "trace_count": 3
+    }
+  ],
+  "high_risk": [],
+  "needs_review": [],
+  "medoid_distances": {
+    "rep-0": 0.137969,
+    "rep-1": 0.137969,
+    "rep-2": 0.275938
+  },
+  "config": {
+    "confidence_threshold": 0.6,
+    "tie_tolerance": 0.05,
+    "frequency_method": "log2",
+    "beta": 0.5
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "label": "review-comparison",
+  "cwd": ".",
+  "command": [
+    "C:/Users/1/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "-E",
+    "-s",
+    "-X",
+    "utf8",
+    "run.py",
+    "compare"
+  ],
+  "exitCode": 0,
+  "seconds": 1.66
+}

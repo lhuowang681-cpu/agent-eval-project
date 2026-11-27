@@ -1,0 +1,20 @@
+test_context_and_privacy_gate (__main__.Tests.test_context_and_privacy_gate) ... ok
+test_cross_entity (__main__.Tests.test_cross_entity) ... ok
+test_free_text_not_proven (__main__.Tests.test_free_text_not_proven) ... ok
+test_identity_order_and_malformed (__main__.Tests.test_identity_order_and_malformed) ... ok
+test_impact_and_prose_untrusted (__main__.Tests.test_impact_and_prose_untrusted) ... ok
+test_invalid_candidates (__main__.Tests.test_invalid_candidates) ... ok
+test_metric_truth_evidence_and_unknown_separate (__main__.Tests.test_metric_truth_evidence_and_unknown_separate) ... ok
+test_negative_and_recovered (__main__.Tests.test_negative_and_recovered) ... ok
+test_partial_coverage_and_no_mutation (__main__.Tests.test_partial_coverage_and_no_mutation) ... ok
+test_real_http_mock_errors (__main__.Tests.test_real_http_mock_errors) ... ok
+test_scalar_false_not_zero (__main__.Tests.test_scalar_false_not_zero) ... ok
+test_short_excerpt_same_field_context (__main__.Tests.test_short_excerpt_same_field_context) ... ok
+test_three_types (__main__.Tests.test_three_types) ... ok
+test_transport_boundary_and_timeout (__main__.Tests.test_transport_boundary_and_timeout) ... ok
+test_unknown_source (__main__.Tests.test_unknown_source) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.665s
+
+OK

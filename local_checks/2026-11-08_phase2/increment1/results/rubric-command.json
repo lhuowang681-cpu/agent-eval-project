@@ -1,0 +1,15 @@
+{
+  "label": "rubric",
+  "cwd": "../../2026-11-08_platform_audit/platform/packages/eval-rubric",
+  "command": [
+    "node",
+    "../../node_modules/vitest/vitest.mjs",
+    "run",
+    "--maxWorkers=1",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=../../../../2026-11-08_phase2/increment1/rubric.json"
+  ],
+  "exitCode": 0,
+  "seconds": 78.97
+}

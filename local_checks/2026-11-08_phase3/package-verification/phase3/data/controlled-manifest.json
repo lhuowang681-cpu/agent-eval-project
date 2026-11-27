@@ -1,0 +1,8 @@
+{
+  "cases": 4,
+  "sourceSha256": "6ea52b6ecf35fcc7dc0bb1ce1878fe8d67ad5b11151b7c8ef643f37400fe6d36",
+  "sha256": "863b36a612b7532c4a273918e0d169a7df2eb76961d9d98465c8e78d15624ce6",
+  "source": "C:\\Users\\1\\Desktop\\\u5c31\u4e1aagent\\agent-eval-project\\local_checks\\2026-11-08_phase2\\increment2\\http\\results.json",
+  "provenance": "Saved real PostgreSQL/local Agent execution with Mock-generated tasks; not natural production or independently root-labelled data.",
+  "freshHttpOrDbRunThisRound": false
+}

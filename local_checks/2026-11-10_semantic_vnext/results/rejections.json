@@ -1,0 +1,136 @@
+[
+  {
+    "experiment": "replay-dev",
+    "id": "s1",
+    "kind": "fake",
+    "existence": "invalid",
+    "support": "insufficient",
+    "issues": [
+      "invalid_observation_or_reference"
+    ]
+  },
+  {
+    "experiment": "replay-dev",
+    "id": "dev8",
+    "kind": "scope",
+    "issues": [
+      "invalid_contract_or_identity"
+    ]
+  },
+  {
+    "experiment": "replay-dev",
+    "id": "s1",
+    "kind": "wrong",
+    "existence": "valid",
+    "support": "insufficient",
+    "issues": [
+      "comparison_not_proven_by_cited_local_facts"
+    ]
+  },
+  {
+    "experiment": "replay-dev",
+    "id": "s1",
+    "kind": "root",
+    "existence": "valid",
+    "support": "insufficient",
+    "issues": [
+      "causal_or_impact_claim_unverified"
+    ]
+  },
+  {
+    "experiment": "replay-dev",
+    "id": "s1",
+    "kind": "missing",
+    "existence": "invalid",
+    "support": "insufficient",
+    "issues": [
+      "invalid_observation_or_reference"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "s1",
+    "kind": "fake",
+    "existence": "invalid",
+    "support": "insufficient",
+    "issues": [
+      "invalid_observation_or_reference"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "holdout8",
+    "kind": "scope",
+    "issues": [
+      "invalid_contract_or_identity"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "s1",
+    "kind": "wrong",
+    "existence": "valid",
+    "support": "insufficient",
+    "issues": [
+      "comparison_not_proven_by_cited_local_facts"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "s1",
+    "kind": "root",
+    "existence": "valid",
+    "support": "insufficient",
+    "issues": [
+      "causal_or_impact_claim_unverified"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "s1",
+    "kind": "missing",
+    "existence": "invalid",
+    "support": "insufficient",
+    "issues": [
+      "invalid_observation_or_reference"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "s1",
+    "kind": "fake",
+    "existence": "invalid",
+    "support": "insufficient",
+    "issues": [
+      "invalid_observation_or_reference"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "holdout21",
+    "kind": "scope",
+    "issues": [
+      "invalid_contract_or_identity"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "s1",
+    "kind": "wrong",
+    "existence": "valid",
+    "support": "insufficient",
+    "issues": [
+      "comparison_not_proven_by_cited_local_facts"
+    ]
+  },
+  {
+    "experiment": "replay-holdout",
+    "id": "s1",
+    "kind": "missing",
+    "existence": "invalid",
+    "support": "insufficient",
+    "issues": [
+      "invalid_observation_or_reference"
+    ]
+  }
+]

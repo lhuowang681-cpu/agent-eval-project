@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-14T07:10:33.182174+00:00",
+  "files": {
+    "vnext/grouping.py": "0fd157730046c0c6cf9de3dac69a77d9dde1172a99d3defcce9afbe87c238e72",
+    "vnext/pipeline.py": "af8442afe7a1b7a8ecee5eecced866e46cf0d42c8bd168bf08ccbcf9029f324b",
+    "vnext/provider.py": "2222eaa6af7979ca42a0b3d8172371afd7ec78d1d82c0b232f398a79ade017bf",
+    "vnext/review.py": "a105cc8fe311e087fc74096d25bdc60182cc60a141e2a023ee770b5acfbe2665",
+    "integration/demo.ts": "a00e99485a5329d01ae132ee279b2a7e6261b83f24b3070c0e2d95bd9d43278a",
+    "integration/runner.ts": "8cd882162b1113809fe08da549e89dcf3e1a6f1ed3dcfa34a49e3d6158b41e58",
+    "integration/test.ts": "28cc5d6b1bd2a99e958aecfe34b455072058bb1de7cd8838e4d9cf56bcc61051"
+  },
+  "independentAuthor": false
+}

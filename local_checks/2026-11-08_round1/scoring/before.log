@@ -1,0 +1,383 @@
+
+ RUN  v3.2.4 C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts (21 tests | 18 failed) 16ms
+   × scoring input boundaries > rejects invalid expected candidates [] 4ms
+     → expected [Function] to throw error matching /expected.*non-empty.*strings/i but got 'Reduce of empty array with no initial…'
+   × scoring input boundaries > rejects invalid expected candidates [42] 2ms
+     → expected [Function] to throw error matching /expected.*non-empty.*strings/i but got 'text.trim is not a function'
+   × scoring input boundaries > rejects invalid expected candidates [null] 2ms
+     → promise resolved "{ passed: false, …(2) }" instead of rejecting
+   × scoring input boundaries > rejects invalid expected candidates ["ok", {}] 0ms
+     → expected [Function] to throw error matching /expected.*non-empty.*strings/i but got 'text.trim is not a function'
+   × scoring input boundaries > rejects invalid weight -1 instead of producing an unbounded score 1ms
+     → promise resolved "{ passed: true, …(2) }" instead of rejecting
+   × scoring input boundaries > rejects invalid weight NaN instead of producing an unbounded score 0ms
+     → promise resolved "{ passed: false, …(2) }" instead of rejecting
+   × scoring input boundaries > rejects invalid weight Infinity instead of producing an unbounded score 0ms
+     → promise resolved "{ passed: false, …(2) }" instead of rejecting
+   × scoring input boundaries > rejects a configuration with no positive weight 0ms
+     → promise resolved "{ passed: false, …(2) }" instead of rejecting
+   × scoring input boundaries > rejects invalid pass threshold -0.1 0ms
+     → promise resolved "{ passed: true, …(2) }" instead of rejecting
+   × scoring input boundaries > rejects invalid pass threshold 1.1 0ms
+     → promise resolved "{ passed: false, …(2) }" instead of rejecting
+   × scoring input boundaries > rejects invalid pass threshold NaN 0ms
+     → promise resolved "{ passed: false, …(2) }" instead of rejecting
+   × scoring input boundaries > rejects invalid pass threshold Infinity 0ms
+     → promise resolved "{ passed: false, …(2) }" instead of rejecting
+   ✓ scoring input boundaries > allows zero-weight rubrics alongside a positive weight 0ms
+   × scoring input boundaries > reports an invalid regular expression as a configuration error 0ms
+     → expected [Function] to throw error matching /invalid.*regex/i but got 'Invalid regular expression: /[/i: Unt…'
+   × scoring input boundaries > preserves numeric meaning of 1e3 1ms
+     → expected false to be true // Object.is equality
+   × scoring input boundaries > preserves numeric meaning of -2.5E-2 0ms
+     → expected false to be true // Object.is equality
+   × scoring input boundaries > preserves numeric meaning of The answer is +1.2e+3 units. 0ms
+     → expected false to be true // Object.is equality
+   ✓ scoring input boundaries > preserves numeric meaning of '1234.5',234.50 0ms
+   ✓ scoring input boundaries > preserves numeric meaning of .5 0ms
+   × scoring input boundaries > does not turn 1e3 into 13 0ms
+     → expected true to be false // Object.is equality
+   × scoring input boundaries > does not concatenate unrelated numbers 0ms
+     → expected true to be false // Object.is equality
+ ❯ packages/eval-dataset-parser/__tests__/jsonl-lines.test.ts (2 tests | 1 failed) 7ms
+   × JSONL physical line numbers > locates malformed JSON after a blank line 6ms
+     → expected [Function] to throw error including 'Invalid JSON at line 3:' but got 'Invalid JSON at line 2: invalid'
+   ✓ JSONL physical line numbers > keeps preview and totalCount based on records rather than physical lines 1ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 19 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid expected candidates []
+AssertionError: expected [Function] to throw error matching /expected.*non-empty.*strings/i but got 'Reduce of empty array with no initial…'
+
+- Expected: 
+/expected.*non-empty.*strings/i
+
++ Received: 
+"Reduce of empty array with no initial value"
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid expected candidates [42]
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid expected candidates ["ok", {}]
+AssertionError: expected [Function] to throw error matching /expected.*non-empty.*strings/i but got 'text.trim is not a function'
+
+- Expected: 
+/expected.*non-empty.*strings/i
+
++ Received: 
+"text.trim is not a function"
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:14:5
+     12| describe('scoring input boundaries', () => {
+     13|   it.each(['[]', '[42]', '[null]', '["ok", {}]'])('rejects invalid exp…
+     14|     await expect(evaluate({ actual: 'ok', rubrics: [rubric], testCase:…
+       |     ^
+     15|       .rejects.toThrow(/expected.*non-empty.*strings/i);
+     16|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid expected candidates [null]
+AssertionError: promise resolved "{ passed: false, …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "passed": false,
++   "rubricResults": [
++     {
++       "passed": false,
++       "reason": undefined,
++       "rubricId": "exact",
++       "score": 0,
++     },
++   ],
++   "score": 0,
+  }
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:14:106
+     12| describe('scoring input boundaries', () => {
+     13|   it.each(['[]', '[42]', '[null]', '["ok", {}]'])('rejects invalid exp…
+     14|     await expect(evaluate({ actual: 'ok', rubrics: [rubric], testCase:…
+       |                                                                                                          ^
+     15|       .rejects.toThrow(/expected.*non-empty.*strings/i);
+     16|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid weight -1 instead of producing an unbounded score
+AssertionError: promise resolved "{ passed: true, …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "passed": true,
++   "rubricResults": [
++     {
++       "passed": true,
++       "reason": undefined,
++       "rubricId": "exact",
++       "score": 1,
++     },
++     {
++       "passed": true,
++       "reason": undefined,
++       "rubricId": "other",
++       "score": 1,
++     },
++   ],
++   "score": 1,
+  }
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:19:159
+     17| 
+     18|   it.each([-1, Number.NaN, Number.POSITIVE_INFINITY])('rejects invalid…
+     19|     await expect(evaluate({ actual: 'ok', rubrics: [{ ...rubric, weigh…
+       |                                                                                                                                                               ^
+     20|       .rejects.toThrow(/weight/i);
+     21|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid weight NaN instead of producing an unbounded score
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid weight Infinity instead of producing an unbounded score
+AssertionError: promise resolved "{ passed: false, …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "passed": false,
++   "rubricResults": [
++     {
++       "passed": true,
++       "reason": undefined,
++       "rubricId": "exact",
++       "score": 1,
++     },
++     {
++       "passed": true,
++       "reason": undefined,
++       "rubricId": "other",
++       "score": 1,
++     },
++   ],
++   "score": 0,
+  }
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:19:159
+     17| 
+     18|   it.each([-1, Number.NaN, Number.POSITIVE_INFINITY])('rejects invalid…
+     19|     await expect(evaluate({ actual: 'ok', rubrics: [{ ...rubric, weigh…
+       |                                                                                                                                                               ^
+     20|       .rejects.toThrow(/weight/i);
+     21|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects a configuration with no positive weight
+AssertionError: promise resolved "{ passed: false, …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "passed": false,
++   "rubricResults": [
++     {
++       "passed": true,
++       "reason": undefined,
++       "rubricId": "exact",
++       "score": 1,
++     },
++   ],
++   "score": 0,
+  }
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:24:123
+     22| 
+     23|   it('rejects a configuration with no positive weight', async () => {
+     24|     await expect(evaluate({ actual: 'ok', rubrics: [{ ...rubric, weigh…
+       |                                                                                                                           ^
+     25|       .rejects.toThrow(/weight/i);
+     26|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid pass threshold -0.1
+AssertionError: promise resolved "{ passed: true, …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "passed": true,
++   "rubricResults": [
++     {
++       "passed": true,
++       "reason": undefined,
++       "rubricId": "exact",
++       "score": 1,
++     },
++   ],
++   "score": 1,
+  }
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:29:124
+     27| 
+     28|   it.each([-0.1, 1.1, Number.NaN, Number.POSITIVE_INFINITY])('rejects …
+     29|     await expect(evaluate({ actual: 'ok', rubrics: [rubric], testCase:…
+       |                                                                                                                            ^
+     30|       .rejects.toThrow(/threshold/i);
+     31|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid pass threshold 1.1
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid pass threshold NaN
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > rejects invalid pass threshold Infinity
+AssertionError: promise resolved "{ passed: false, …(2) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "passed": false,
++   "rubricResults": [
++     {
++       "passed": true,
++       "reason": undefined,
++       "rubricId": "exact",
++       "score": 1,
++     },
++   ],
++   "score": 1,
+  }
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:29:124
+     27| 
+     28|   it.each([-0.1, 1.1, Number.NaN, Number.POSITIVE_INFINITY])('rejects …
+     29|     await expect(evaluate({ actual: 'ok', rubrics: [rubric], testCase:…
+       |                                                                                                                            ^
+     30|       .rejects.toThrow(/threshold/i);
+     31|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > reports an invalid regular expression as a configuration error
+AssertionError: expected [Function] to throw error matching /invalid.*regex/i but got 'Invalid regular expression: /[/i: Unt…'
+
+- Expected: 
+/invalid.*regex/i
+
++ Received: 
+"Invalid regular expression: /[/i: Unterminated character class"
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:39:58
+     37| 
+     38|   it('reports an invalid regular expression as a configuration error',…
+     39|     expect(() => matchRegex('answer', { pattern: '[' })).toThrow(/inva…
+       |                                                          ^
+     40|   });
+     41| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > preserves numeric meaning of 1e3
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > preserves numeric meaning of -2.5E-2
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > preserves numeric meaning of The answer is +1.2e+3 units.
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:46:65
+     44|     ['$1,234.50', '1234.5'], ['.5', '0.5'],
+     45|   ])('preserves numeric meaning of %s', (actual, expected) => {
+     46|     expect(matchNumeric(actual, expected, { value: 0 }).passed).toBe(t…
+       |                                                                 ^
+     47|   });
+     48| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > does not turn 1e3 into 13
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:50:60
+     48| 
+     49|   it('does not turn 1e3 into 13', () => {
+     50|     expect(matchNumeric('1e3', '13', { value: 0 }).passed).toBe(false);
+       |                                                            ^
+     51|   });
+     52| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/19]⎯
+
+ FAIL  packages/eval-rubric/__tests__/boundaries.test.ts > scoring input boundaries > does not concatenate unrelated numbers
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ packages/eval-rubric/__tests__/boundaries.test.ts:54:64
+     52| 
+     53|   it('does not concatenate unrelated numbers', () => {
+     54|     expect(matchNumeric('1 and 3', '13', { value: 0 }).passed).toBe(fa…
+       |                                                                ^
+     55|   });
+     56| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/19]⎯
+
+ FAIL  packages/eval-dataset-parser/__tests__/jsonl-lines.test.ts > JSONL physical line numbers > locates malformed JSON after a blank line
+AssertionError: expected [Function] to throw error including 'Invalid JSON at line 3:' but got 'Invalid JSON at line 2: invalid'
+
+Expected: "Invalid JSON at line 3:"
+Received: "Invalid JSON at line 2: invalid"
+
+ ❯ packages/eval-dataset-parser/__tests__/jsonl-lines.test.ts:7:59
+      5| describe('JSONL physical line numbers', () => {
+      6|   it('locates malformed JSON after a blank line', () => {
+      7|     expect(() => parseJSONL('{"input":"ok"}\n\ninvalid')).toThrow('Inv…
+       |                                                           ^
+      8|   });
+      9| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/19]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  19 failed | 4 passed (23)
+   Start at  15:10:50
+   Duration  768ms (transform 80ms, setup 12ms, collect 201ms, tests 23ms, environment 0ms, prepare 178ms)
+
+JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_round1/scoring/before.json

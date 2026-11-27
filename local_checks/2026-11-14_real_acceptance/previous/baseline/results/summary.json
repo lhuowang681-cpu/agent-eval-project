@@ -1,0 +1,436 @@
+{
+  "A_original_rules": {
+    "cases": 48,
+    "claims": 4,
+    "correct": 3,
+    "incorrect": 0,
+    "unknown": 1,
+    "conclusionAccuracy": 0.75,
+    "judgedAccuracy": 1.0,
+    "caseCorrect": 9,
+    "definiteCases": 37,
+    "caseAccuracy": 0.24324324324324326,
+    "positiveCases": 28,
+    "coveredCases": 0,
+    "effectiveCoverage": 0.0,
+    "detectedObservations": 0,
+    "falseSupport": null,
+    "falseGap": null,
+    "trueObservationRejects": null,
+    "references": 8,
+    "validReferences": 8,
+    "citationValidity": 1.0,
+    "abstentions": 44,
+    "abstentionRate": 0.9166666666666666,
+    "byType": {
+      "A": {
+        "cases": 14,
+        "positiveCases": 7,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "B": {
+        "cases": 27,
+        "positiveCases": 18,
+        "coveredCases": 0,
+        "claims": 2
+      },
+      "normal": {
+        "cases": 3,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 1
+      },
+      "C": {
+        "cases": 2,
+        "positiveCases": 2,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "recovered": {
+        "cases": 1,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "multi": {
+        "cases": 1,
+        "positiveCases": 1,
+        "coveredCases": 0,
+        "claims": 1
+      }
+    }
+  },
+  "B_enhanced_rules": {
+    "cases": 48,
+    "claims": 22,
+    "correct": 22,
+    "incorrect": 0,
+    "unknown": 0,
+    "conclusionAccuracy": 1.0,
+    "judgedAccuracy": 1.0,
+    "caseCorrect": 28,
+    "definiteCases": 37,
+    "caseAccuracy": 0.7567567567567568,
+    "positiveCases": 28,
+    "coveredCases": 19,
+    "effectiveCoverage": 0.6785714285714286,
+    "detectedObservations": 22,
+    "falseSupport": null,
+    "falseGap": null,
+    "trueObservationRejects": null,
+    "references": 46,
+    "validReferences": 46,
+    "citationValidity": 1.0,
+    "abstentions": 29,
+    "abstentionRate": 0.6041666666666666,
+    "byType": {
+      "A": {
+        "cases": 14,
+        "positiveCases": 7,
+        "coveredCases": 5,
+        "claims": 5
+      },
+      "B": {
+        "cases": 27,
+        "positiveCases": 18,
+        "coveredCases": 11,
+        "claims": 11
+      },
+      "normal": {
+        "cases": 3,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "C": {
+        "cases": 2,
+        "positiveCases": 2,
+        "coveredCases": 2,
+        "claims": 4
+      },
+      "recovered": {
+        "cases": 1,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "multi": {
+        "cases": 1,
+        "positiveCases": 1,
+        "coveredCases": 1,
+        "claims": 2
+      }
+    }
+  },
+  "B_reviewed": {
+    "cases": 48,
+    "claims": 22,
+    "correct": 22,
+    "incorrect": 0,
+    "unknown": 0,
+    "conclusionAccuracy": 1.0,
+    "judgedAccuracy": 1.0,
+    "caseCorrect": 28,
+    "definiteCases": 37,
+    "caseAccuracy": 0.7567567567567568,
+    "positiveCases": 28,
+    "coveredCases": 19,
+    "effectiveCoverage": 0.6785714285714286,
+    "detectedObservations": 22,
+    "falseSupport": 0,
+    "falseGap": 0,
+    "trueObservationRejects": 0,
+    "references": 46,
+    "validReferences": 46,
+    "citationValidity": 1.0,
+    "abstentions": 29,
+    "abstentionRate": 0.6041666666666666,
+    "byType": {
+      "A": {
+        "cases": 14,
+        "positiveCases": 7,
+        "coveredCases": 5,
+        "claims": 5
+      },
+      "B": {
+        "cases": 27,
+        "positiveCases": 18,
+        "coveredCases": 11,
+        "claims": 11
+      },
+      "normal": {
+        "cases": 3,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "C": {
+        "cases": 2,
+        "positiveCases": 2,
+        "coveredCases": 2,
+        "claims": 4
+      },
+      "recovered": {
+        "cases": 1,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "multi": {
+        "cases": 1,
+        "positiveCases": 1,
+        "coveredCases": 1,
+        "claims": 2
+      }
+    }
+  },
+  "C_SCRIPTED_NOT_LLM": {
+    "cases": 48,
+    "claims": 47,
+    "correct": 28,
+    "incorrect": 6,
+    "unknown": 13,
+    "conclusionAccuracy": 0.5957446808510638,
+    "judgedAccuracy": 0.8235294117647058,
+    "caseCorrect": 29,
+    "definiteCases": 37,
+    "caseAccuracy": 0.7837837837837838,
+    "positiveCases": 28,
+    "coveredCases": 22,
+    "effectiveCoverage": 0.7857142857142857,
+    "detectedObservations": 25,
+    "falseSupport": null,
+    "falseGap": null,
+    "trueObservationRejects": null,
+    "references": 95,
+    "validReferences": 93,
+    "citationValidity": 0.9789473684210527,
+    "abstentions": 4,
+    "abstentionRate": 0.08333333333333333,
+    "byType": {
+      "A": {
+        "cases": 14,
+        "positiveCases": 7,
+        "coveredCases": 6,
+        "claims": 14
+      },
+      "B": {
+        "cases": 27,
+        "positiveCases": 18,
+        "coveredCases": 13,
+        "claims": 27
+      },
+      "normal": {
+        "cases": 3,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "C": {
+        "cases": 2,
+        "positiveCases": 2,
+        "coveredCases": 2,
+        "claims": 4
+      },
+      "recovered": {
+        "cases": 1,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "multi": {
+        "cases": 1,
+        "positiveCases": 1,
+        "coveredCases": 1,
+        "claims": 2
+      }
+    }
+  },
+  "C_citations_only": {
+    "cases": 48,
+    "claims": 45,
+    "correct": 27,
+    "incorrect": 6,
+    "unknown": 12,
+    "conclusionAccuracy": 0.6,
+    "judgedAccuracy": 0.8181818181818182,
+    "caseCorrect": 28,
+    "definiteCases": 37,
+    "caseAccuracy": 0.7567567567567568,
+    "positiveCases": 28,
+    "coveredCases": 22,
+    "effectiveCoverage": 0.7857142857142857,
+    "detectedObservations": 25,
+    "falseSupport": 20,
+    "falseGap": 0,
+    "trueObservationRejects": 1,
+    "references": 91,
+    "validReferences": 91,
+    "citationValidity": 1.0,
+    "abstentions": 6,
+    "abstentionRate": 0.125,
+    "byType": {
+      "A": {
+        "cases": 14,
+        "positiveCases": 7,
+        "coveredCases": 6,
+        "claims": 14
+      },
+      "B": {
+        "cases": 27,
+        "positiveCases": 18,
+        "coveredCases": 13,
+        "claims": 25
+      },
+      "normal": {
+        "cases": 3,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "C": {
+        "cases": 2,
+        "positiveCases": 2,
+        "coveredCases": 2,
+        "claims": 4
+      },
+      "recovered": {
+        "cases": 1,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "multi": {
+        "cases": 1,
+        "positiveCases": 1,
+        "coveredCases": 1,
+        "claims": 2
+      }
+    }
+  },
+  "D_SCRIPTED_reviewed": {
+    "cases": 48,
+    "claims": 17,
+    "correct": 17,
+    "incorrect": 0,
+    "unknown": 0,
+    "conclusionAccuracy": 1.0,
+    "judgedAccuracy": 1.0,
+    "caseCorrect": 23,
+    "definiteCases": 37,
+    "caseAccuracy": 0.6216216216216216,
+    "positiveCases": 28,
+    "coveredCases": 14,
+    "effectiveCoverage": 0.5,
+    "detectedObservations": 17,
+    "falseSupport": 0,
+    "falseGap": 8,
+    "trueObservationRejects": 11,
+    "references": 36,
+    "validReferences": 36,
+    "citationValidity": 1.0,
+    "abstentions": 34,
+    "abstentionRate": 0.7083333333333334,
+    "byType": {
+      "A": {
+        "cases": 14,
+        "positiveCases": 7,
+        "coveredCases": 4,
+        "claims": 4
+      },
+      "B": {
+        "cases": 27,
+        "positiveCases": 18,
+        "coveredCases": 7,
+        "claims": 7
+      },
+      "normal": {
+        "cases": 3,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "C": {
+        "cases": 2,
+        "positiveCases": 2,
+        "coveredCases": 2,
+        "claims": 4
+      },
+      "recovered": {
+        "cases": 1,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "multi": {
+        "cases": 1,
+        "positiveCases": 1,
+        "coveredCases": 1,
+        "claims": 2
+      }
+    }
+  },
+  "previous_review": {
+    "cases": 48,
+    "claims": 25,
+    "correct": 17,
+    "incorrect": 4,
+    "unknown": 4,
+    "conclusionAccuracy": 0.68,
+    "judgedAccuracy": 0.8095238095238095,
+    "caseCorrect": 19,
+    "definiteCases": 37,
+    "caseAccuracy": 0.5135135135135135,
+    "positiveCases": 28,
+    "coveredCases": 14,
+    "effectiveCoverage": 0.5,
+    "detectedObservations": 17,
+    "falseSupport": 8,
+    "falseGap": 8,
+    "trueObservationRejects": 11,
+    "references": 52,
+    "validReferences": 52,
+    "citationValidity": 1.0,
+    "abstentions": 26,
+    "abstentionRate": 0.5416666666666666,
+    "byType": {
+      "A": {
+        "cases": 14,
+        "positiveCases": 7,
+        "coveredCases": 4,
+        "claims": 10
+      },
+      "B": {
+        "cases": 27,
+        "positiveCases": 18,
+        "coveredCases": 7,
+        "claims": 9
+      },
+      "normal": {
+        "cases": 3,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "C": {
+        "cases": 2,
+        "positiveCases": 2,
+        "coveredCases": 2,
+        "claims": 4
+      },
+      "recovered": {
+        "cases": 1,
+        "positiveCases": 0,
+        "coveredCases": 0,
+        "claims": 0
+      },
+      "multi": {
+        "cases": 1,
+        "positiveCases": 1,
+        "coveredCases": 1,
+        "claims": 2
+      }
+    }
+  }
+}

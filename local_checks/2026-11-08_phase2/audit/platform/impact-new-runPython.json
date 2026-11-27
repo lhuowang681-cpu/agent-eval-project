@@ -1,0 +1,70 @@
+
+  GitNexus Impact (1.6.12)
+{"level":40,"time":1794126496976,"name":"gitnexus","msg":"GitNexus: FTS extension unavailable; continuing without FTS features. load-only policy (no install attempted); LOAD fts failed: Binder exception: Extension: fts is an official extension and has not been installed. You can install it by: install fts."}
+{
+  "status": "ambiguous",
+  "message": "Found 2 symbols matching 'runPython'. Blast radius differs per candidate (max 6 impacted at risk UNKNOWN; LOW among the candidates that resolved, and at least one could not be walked). Disambiguate with target_uid (or file_path/kind) for a single authoritative result.",
+  "target": {
+    "name": "runPython"
+  },
+  "direction": "upstream",
+  "totalCandidates": 2,
+  "impactedCount": null,
+  "risk": "UNKNOWN",
+  "maxImpactedCount": 6,
+  "maxRisk": "UNKNOWN",
+  "knownMaxRisk": "LOW",
+  "candidates": [
+    {
+      "uid": "Method:src/services/python.ts:PythonService.runPython#3",
+      "name": "runPython",
+      "kind": "Method",
+      "filePath": "src/services/python.ts",
+      "line": 7,
+      "score": 0.54,
+      "impactedCount": 6,
+      "risk": "LOW",
+      "riskSharedAxes": "LOW",
+      "riskScale": {
+        "comparableAcrossKinds": false,
+        "unusedAxes": [
+          {
+            "axis": "processes",
+            "reason": "enrichment-skipped"
+          },
+          {
+            "axis": "modules",
+            "reason": "enrichment-skipped"
+          }
+        ]
+      },
+      "direct": 1
+    },
+    {
+      "uid": "Method:packages/python-interpreter/src/worker.ts:PythonWorker.runPython#1",
+      "name": "runPython",
+      "kind": "Method",
+      "filePath": "packages/python-interpreter/src/worker.ts",
+      "line": 120,
+      "score": 0.54,
+      "impactedCount": 0,
+      "risk": "UNKNOWN",
+      "riskSharedAxes": "UNKNOWN",
+      "riskScale": {
+        "comparableAcrossKinds": false,
+        "unusedAxes": [
+          {
+            "axis": "processes",
+            "reason": "enrichment-skipped"
+          },
+          {
+            "axis": "modules",
+            "reason": "enrichment-skipped"
+          }
+        ]
+      },
+      "direct": 0,
+      "riskNote": "No callers resolved. Absence of edges is not evidence the symbol is unused: a caller reaching it through a reference class this index does not record — plain-object property access, a bare-identifier read of a module-scope const — produces no edge to find. Confirm with a text search before treating the change as safe."
+    }
+  ]
+}

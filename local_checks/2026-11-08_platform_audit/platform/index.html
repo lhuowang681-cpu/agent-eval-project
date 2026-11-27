@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!--SEO_META-->
+    <style>
+      :root {
+        --loading-bg: #f5f7fa;
+        --loading-brand: #0086f6;
+      }
+      html[data-theme='dark'] {
+        --loading-bg: #0f141a;
+        --loading-brand: #76bdff;
+      }
+      html body {
+        background: var(--loading-bg);
+      }
+      #loading-screen {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: inherit;
+        gap: 12px;
+      }
+      @keyframes loading-draw {
+        0% {
+          stroke-dashoffset: 600;
+          opacity: 0;
+        }
+        15% {
+          opacity: 1;
+        }
+        75% {
+          stroke-dashoffset: 0;
+          opacity: 1;
+        }
+        90% {
+          stroke-dashoffset: 0;
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes loading-fill {
+        0% {
+          fill: var(--loading-fill-from, #ffffff);
+        }
+        75% {
+          fill: var(--loading-fill-to, #000000);
+        }
+        90% {
+          fill: var(--loading-fill-to, #000000);
+        }
+        100% {
+          fill: var(--loading-fill-to, #000000);
+        }
+      }
+      #loading-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--loading-brand);
+      }
+      #loading-brand svg path {
+        fill: var(--loading-fill-from, #ffffff);
+        stroke: var(--loading-stroke, #000000);
+        stroke-width: 12;
+        stroke-linejoin: miter;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 10000;
+        stroke-dashoffset: 10000;
+        animation:
+          loading-draw 10s cubic-bezier(0.4, 0, 0.2, 1) infinite,
+          loading-fill 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      html[data-theme='dark'] {
+        --loading-fill-from: #000000;
+        --loading-fill-to: #ffffff;
+        --loading-stroke: #ffffff;
+      }
+    </style>
+    <script>
+      (function () {
+        function supportsImportMaps() {
+          return (
+            typeof HTMLScriptElement !== 'undefined' &&
+            typeof HTMLScriptElement.supports === 'function' &&
+            HTMLScriptElement.supports('importmap')
+          );
+        }
+
+        function supportsCascadeLayers() {
+          var el = document.createElement('div');
+          el.className = '__layer_test__';
+          el.style.position = 'absolute';
+          el.style.left = '-99999px';
+          el.style.top = '-99999px';
+
+          var style = document.createElement('style');
+          style.textContent =
+            '@layer a, b;' +
+            '@layer a { .__layer_test__ { color: rgb(1, 2, 3); } }' +
+            '@layer b { .__layer_test__ { color: rgb(4, 5, 6); } }';
+
+          document.documentElement.append(style);
+          document.documentElement.append(el);
+
+          var color = getComputedStyle(el).color;
+
+          el.remove();
+          style.remove();
+
+          return color === 'rgb(4, 5, 6)';
+        }
+
+        if (!(supportsImportMaps() && supportsCascadeLayers())) {
+          window.location.href = '/not-compatible.html';
+          return;
+        }
+
+        var theme = 'system';
+        try {
+          theme = localStorage.getItem('theme') || 'system';
+        } catch (_) {}
+        var systemTheme =
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
+        var resolvedTheme = theme === 'system' ? systemTheme : theme;
+        if (resolvedTheme === 'dark' || resolvedTheme === 'light') {
+          document.documentElement.setAttribute('data-theme', resolvedTheme);
+        }
+
+        var hl = new URLSearchParams(location.search).get('hl');
+        var m = document.cookie.match(/(?:^|;\s*)LOBE_LOCALE=([^;]*)/);
+        var cookie = m ? decodeURIComponent(m[1]) : '';
+        var locale = hl || cookie || navigator.language || 'en-US';
+        if (locale === 'auto') locale = navigator.language || 'en-US';
+        if (hl && !cookie) {
+          document.cookie =
+            'LOBE_LOCALE=' + encodeURIComponent(hl) + ';path=/;max-age=7776000;SameSite=Lax';
+        }
+        document.documentElement.lang = locale;
+        var rtl = ['ar', 'arc', 'dv', 'fa', 'ha', 'he', 'khw', 'ks', 'ku', 'ps', 'ur', 'yi'];
+        document.documentElement.dir =
+          rtl.indexOf(locale.split('-')[0].toLowerCase()) >= 0 ? 'rtl' : 'ltr';
+      })();
+    </script>
+    <script>
+      window.__SERVER_CONFIG__ = undefined; /* SERVER_CONFIG */
+    </script>
+  </head>
+
+  <body>
+    <div id="loading-screen">
+      <div id="loading-brand" aria-label="Loading" role="status">
+        <svg
+          fill="currentColor"
+          height="40"
+          style="flex: none; line-height: 1"
+          viewBox="0 0 3210 774"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>TripYoYo</title>
+          <path
+            d="M3000.43 618.466C2957.81 618.466 2920.88 609.091 2889.63 590.341C2858.38 571.591 2834.14 545.36 2816.9 511.648C2799.86 477.936 2791.34 438.542 2791.34 393.466C2791.34 348.39 2799.86 308.902 2816.9 275C2834.14 241.099 2858.38 214.773 2889.63 196.023C2920.88 177.273 2957.81 167.898 3000.43 167.898C3043.04 167.898 3079.97 177.273 3111.22 196.023C3142.47 214.773 3166.62 241.099 3183.66 275C3200.9 308.902 3209.52 348.39 3209.52 393.466C3209.52 438.542 3200.9 477.936 3183.66 511.648C3166.62 545.36 3142.47 571.591 3111.22 590.341C3079.97 609.091 3043.04 618.466 3000.43 618.466ZM3000.99 536.08C3024.1 536.08 3043.42 529.735 3058.95 517.046C3074.48 504.167 3086.03 486.932 3093.61 465.341C3101.37 443.75 3105.26 419.697 3105.26 393.182C3105.26 366.477 3101.37 342.33 3093.61 320.739C3086.03 298.958 3074.48 281.629 3058.95 268.75C3043.42 255.871 3024.1 249.432 3000.99 249.432C2977.32 249.432 2957.62 255.871 2941.9 268.75C2926.37 281.629 2914.73 298.958 2906.96 320.739C2899.38 342.33 2895.6 366.477 2895.6 393.182C2895.6 419.697 2899.38 443.75 2906.96 465.341C2914.73 486.932 2926.37 504.167 2941.9 517.046C2957.62 529.735 2977.32 536.08 3000.99 536.08Z"
+          />
+          <path
+            d="M2292.83 28.125H2411.86L2554.19 285.511H2559.87L2702.2 28.125H2821.24L2609.59 392.898V609.943H2504.47V392.898L2292.83 28.125Z"
+          />
+          <path
+            d="M2116.83 618.466C2074.22 618.466 2037.29 609.091 2006.04 590.341C1974.79 571.591 1950.54 545.36 1933.31 511.648C1916.26 477.936 1907.74 438.542 1907.74 393.466C1907.74 348.39 1916.26 308.902 1933.31 275C1950.54 241.099 1974.79 214.773 2006.04 196.023C2037.29 177.273 2074.22 167.898 2116.83 167.898C2159.45 167.898 2196.38 177.273 2227.63 196.023C2258.88 214.773 2283.03 241.099 2300.07 275C2317.31 308.902 2325.92 348.39 2325.92 393.466C2325.92 438.542 2317.31 477.936 2300.07 511.648C2283.03 545.36 2258.88 571.591 2227.63 590.341C2196.38 609.091 2159.45 618.466 2116.83 618.466ZM2117.4 536.08C2140.51 536.08 2159.82 529.735 2175.36 517.046C2190.89 504.167 2202.44 486.932 2210.01 465.341C2217.78 443.75 2221.66 419.697 2221.66 393.182C2221.66 366.477 2217.78 342.33 2210.01 320.739C2202.44 298.958 2190.89 281.629 2175.36 268.75C2159.82 255.871 2140.51 249.432 2117.4 249.432C2093.73 249.432 2074.03 255.871 2058.31 268.75C2042.78 281.629 2031.13 298.958 2023.37 320.739C2015.79 342.33 2012 366.477 2012 393.182C2012 419.697 2015.79 443.75 2023.37 465.341C2031.13 486.932 2042.78 504.167 2058.31 517.046C2074.03 529.735 2093.73 536.08 2117.4 536.08Z"
+          />
+          <path
+            d="M1409.23 28.125H1528.27L1670.6 285.511H1676.28L1818.61 28.125H1937.64L1725.99 392.898V609.943H1620.88V392.898L1409.23 28.125Z"
+          />
+          <path
+            d="M1029.62 773.58V173.58H1130.75V245.739H1136.72C1142.02 235.133 1149.5 223.864 1159.16 211.932C1168.82 199.811 1181.89 189.489 1198.37 180.966C1214.84 172.254 1235.87 167.898 1261.43 167.898C1295.15 167.898 1325.54 176.515 1352.63 193.75C1379.9 210.796 1401.49 236.08 1417.4 269.602C1433.5 302.936 1441.55 343.845 1441.55 392.33C1441.55 440.246 1433.69 480.966 1417.97 514.489C1402.25 548.011 1380.85 573.58 1353.76 591.193C1326.68 608.807 1296 617.614 1261.72 617.614C1236.72 617.614 1215.98 613.447 1199.5 605.114C1183.03 596.78 1169.77 586.743 1159.73 575C1149.88 563.068 1142.21 551.799 1136.72 541.193H1132.46V773.58H1029.62ZM1130.47 391.761C1130.47 419.981 1134.45 444.697 1142.4 465.909C1150.54 487.121 1162.19 503.693 1177.34 515.625C1192.68 527.368 1211.25 533.239 1233.03 533.239C1255.75 533.239 1274.79 527.178 1290.13 515.057C1305.47 502.746 1317.02 485.985 1324.79 464.773C1332.74 443.371 1336.72 419.034 1336.72 391.761C1336.72 364.678 1332.84 340.625 1325.07 319.602C1317.31 298.58 1305.75 282.102 1290.41 270.171C1275.07 258.239 1255.94 252.273 1233.03 252.273C1211.06 252.273 1192.4 258.049 1177.06 269.602C1161.72 281.155 1150.07 297.349 1142.12 318.182C1134.35 339.015 1130.47 363.542 1130.47 391.761Z"
+          />
+          <path
+            d="M821.023 609.943V173.58H923.864V609.943H821.023ZM872.727 111.648C856.439 111.648 842.424 106.25 830.682 95.4546C818.939 84.4697 813.068 71.3068 813.068 55.9659C813.068 40.4356 818.939 27.2727 830.682 16.4773C842.424 5.49243 856.439 0 872.727 0C889.205 0 903.22 5.49243 914.773 16.4773C926.515 27.2727 932.386 40.4356 932.386 55.9659C932.386 71.3068 926.515 84.4697 914.773 95.4546C903.22 106.25 889.205 111.648 872.727 111.648Z"
+          />
+          <path
+            d="M503.835 609.943V173.58H603.551V246.307H608.097C616.051 221.117 629.687 201.705 649.006 188.068C668.513 174.242 690.767 167.33 715.767 167.33C721.449 167.33 727.794 167.614 734.801 168.182C741.998 168.561 747.964 169.224 752.699 170.171V264.773C748.343 263.258 741.43 261.932 731.96 260.796C722.68 259.47 713.684 258.807 704.972 258.807C686.222 258.807 669.365 262.879 654.403 271.023C639.631 278.977 627.983 290.057 619.46 304.261C610.937 318.466 606.676 334.849 606.676 353.409V609.943H503.835Z"
+          />
+          <path d="M0 116.477V28.125H464.205V116.477H284.375V609.943H179.83V116.477H0Z" />
+        </svg>
+      </div>
+    </div>
+    <div id="root" style="height: 100%"></div>
+
+    <!--ANALYTICS_SCRIPTS-->
+    <script type="module" src="/src/spa/entry.web.tsx"></script>
+  </body>
+</html>

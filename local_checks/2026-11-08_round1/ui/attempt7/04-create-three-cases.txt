@@ -1,0 +1,47 @@
+Round1 UI 1794123906089
+Dashboard
+Datasets
+1
+UI Dataset 1794123906089
+Runs
+No runs yet
+Back to Benchmark
+UI Dataset 1794123906089
+Edit
+Delete
+Test Cases
+3 test case3}
+All
+Easy
+Medium
+Hard
+Import Test Cases
+Add Test Case
+#	Input	Expected Answer	Eval Mode	Category	
+1	
+
+Synthetic UI question 1
+
+	Mock LLM	Contains Match	-	
+
+2	
+
+Synthetic UI question 2
+
+	Mock LLM	Contains Match	-	
+
+3	
+
+Synthetic UI question 3
+
+	Mock LLM	Contains Match	-	
+Related Runs (0)
+New Run
+
+No runs yet
+
+Start your first evaluation run on this benchmark
+
+New Evaluation
+Test case added successfully
+Test case added successfully

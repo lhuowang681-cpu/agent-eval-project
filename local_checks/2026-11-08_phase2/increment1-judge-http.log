@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\1\Desktop\��ҵagent\agent-eval-project\local_checks\2026-11-08_phase2\judge_http.py", line 38, in <module>
+    detail=run_dataset(ds,'K2 structured Judge',k=2);events.append({'variant':'k2','detail':detail})
+  File "C:\Users\1\Desktop\��ҵagent\agent-eval-project\local_checks\2026-11-08_phase2\http_client.py", line 36, in run_dataset
+    return wait_run(run['id'])
+  File "C:\Users\1\Desktop\��ҵagent\agent-eval-project\local_checks\2026-11-08_phase2\http_client.py", line 21, in wait_run
+    if time.monotonic()>deadline: raise TimeoutError(f'Run {run_id} remained {details["status"]}')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: Run run_x7sVbng0jLFf remained running
+{"status": "failed_or_blocked", "events": 11}

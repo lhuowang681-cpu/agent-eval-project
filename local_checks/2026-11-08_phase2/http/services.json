@@ -1,0 +1,12 @@
+{
+  "app": "http://127.0.0.1:13010",
+  "mock": "http://127.0.0.1:18088",
+  "dbPort": 15433,
+  "nodePids": [
+    64376,
+    33712,
+    71464,
+    44936
+  ],
+  "conditions": "Real PostgreSQL 16.15 + pgvector; BM25 absent; original private dependency stubs; synthetic Mock LLM; no quality or production-performance claim."
+}

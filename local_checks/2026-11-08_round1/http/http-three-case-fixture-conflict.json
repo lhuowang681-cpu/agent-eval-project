@@ -1,0 +1,10 @@
+{
+  "status": "blocked_or_failed",
+  "conditions": "Real PostgreSQL 16.15 + pgvector; 2 BM25 migrations skipped. Real HTTP/Agent runtime/async eval routes; original local Mock LLM, not model quality evidence; browser evidence recorded separately in ui directory",
+  "events": [
+    {
+      "errorType": "HTTPError",
+      "error": "HTTP Error 409: Conflict"
+    }
+  ]
+}

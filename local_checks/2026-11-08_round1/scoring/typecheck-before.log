@@ -1,0 +1,31 @@
+__tests__/boundaries.test.ts(13,100): error TS7006: Parameter 'expected' implicitly has an 'any' type.
+__tests__/boundaries.test.ts(18,131): error TS7006: Parameter 'weight' implicitly has an 'any' type.
+__tests__/boundaries.test.ts(28,106): error TS7006: Parameter 'passThreshold' implicitly has an 'any' type.
+__tests__/boundaries.test.ts(45,42): error TS7006: Parameter 'actual' implicitly has an 'any' type.
+__tests__/boundaries.test.ts(45,50): error TS7006: Parameter 'expected' implicitly has an 'any' type.
+node_modules/@lobechat/types/node_modules/@lobechat/python-interpreter/src/interpreter.ts(7,52): error TS1343: The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020', 'es2022', 'esnext', 'system', 'node16', 'node18', 'node20', or 'nodenext'.
+node_modules/@lobechat/types/node_modules/@lobechat/python-interpreter/src/worker.ts(46,16): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+node_modules/@lobechat/types/node_modules/@lobechat/web-crawler/src/crawImpl/firecrawl.ts(1,27): error TS2307: Cannot find module '@lobechat/utils/server' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/@lobechat/utils/src/server/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@lobechat/types/node_modules/@lobechat/web-crawler/src/crawImpl/jina.ts(4,27): error TS2307: Cannot find module '@lobechat/utils/server' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/@lobechat/utils/src/server/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@lobechat/types/src/agent/item.ts(1,32): error TS2307: Cannot find module 'model-bank' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/node_modules/@lobechat/types/node_modules/model-bank/src/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@lobechat/types/src/aiProvider.ts(1,81): error TS2307: Cannot find module 'model-bank' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/node_modules/@lobechat/types/node_modules/model-bank/src/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@lobechat/types/src/discover/models.ts(1,49): error TS2307: Cannot find module 'model-bank' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/node_modules/@lobechat/types/node_modules/model-bank/src/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@lobechat/types/src/discover/providers.ts(1,49): error TS2307: Cannot find module 'model-bank' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/node_modules/@lobechat/types/node_modules/model-bank/src/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@lobechat/types/src/llm.ts(1,79): error TS2307: Cannot find module 'model-bank' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/node_modules/@lobechat/types/node_modules/model-bank/src/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@lobechat/types/src/plugins/mcp.ts(4,35): error TS2307: Cannot find module '@/libs/mcp' or its corresponding type declarations.
+node_modules/@lobechat/types/src/serverConfig.ts(3,41): error TS2307: Cannot find module '@/config/featureFlags' or its corresponding type declarations.
+node_modules/@lobechat/types/src/user/settings/modelProvider.ts(1,39): error TS2307: Cannot find module '@lobechat/model-runtime' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/node_modules/@lobechat/model-runtime/src/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@lobechat/types/src/user/settings/modelProvider.ts(2,38): error TS2307: Cannot find module 'model-bank' or its corresponding type declarations.
+  There are types at 'C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_platform_audit/platform/packages/eval-rubric/node_modules/@lobechat/types/node_modules/model-bank/src/index.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+src/matchers/__tests__/llmRubric.test.ts(156,44): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/matchers/__tests__/llmRubric.test.ts(172,44): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/matchers/__tests__/llmRubric.test.ts(190,46): error TS7006: Parameter 'm' implicitly has an 'any' type.
+src/matchers/__tests__/llmRubric.test.ts(200,46): error TS7006: Parameter 'm' implicitly has an 'any' type.

@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-14T09:42:20.597238+00:00",
+  "userInstruction": "那你继续弄呗",
+  "scope": "Continue development smoke after preserving v1 failure; reuse existing six-call/$0.05 total authorization, never reset shared ledger",
+  "previousRealCalls": 1,
+  "remainingMaxCalls": 5,
+  "totalMaxUsd": 0.05,
+  "formalCallsAuthorized": 0,
+  "reviewRulesChanged": false,
+  "promptVersionChanged": true,
+  "reason": "Complete-envelope protocol instruction and neutral JSON parsing guidance; only development Smoke feedback used, not formal Holdout results."
+}

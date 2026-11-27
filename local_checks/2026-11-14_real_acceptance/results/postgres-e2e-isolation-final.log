@@ -1,0 +1,11 @@
+2026-11-14T08:48:20.706Z lobe-mcp:deps-check Installation checker registered: npm
+2026-11-14T08:48:20.706Z lobe-mcp:deps-check Installation checker registered: python
+2026-11-14T08:48:20.706Z lobe-mcp:deps-check Installation checker registered: manual
+(node:35320) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-14T08:48:24.597Z lobe-model-runtime:openai:generateObject generateObject called with model: local-model, hasTools: false, hasSchema: true
+2026-11-14T08:48:24.601Z lobe-model-runtime:openai:shouldUseResponsesAPI using Chat Completions API for generateObject
+2026-11-14T08:48:24.601Z lobe-model-runtime:openai:generateObject calling chat.completions.create for structured output
+2026-11-14T08:48:24.620Z lobe-model-runtime:openai:generateObject received structured output from Chat Completions API, length: 818
+2026-11-14T08:48:24.620Z lobe-model-runtime:openai:generateObject successfully parsed JSON output
+{"status":"passed","cases":11,"shadowCalls":6,"shadowFailures":1,"modelMockRequests":1}

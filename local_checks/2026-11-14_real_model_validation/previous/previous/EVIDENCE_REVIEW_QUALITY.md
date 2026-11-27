@@ -1,0 +1,13 @@
+# Evidence Review实验
+
+新合同：existence为原节点字段摘录存在；source为已知调用来源/执行身份及scope；localSupport为仅被引字段足够支持局部事实；causalSupport始终insufficient（当前没有因果证明）；global原样保留complete和warnings。decision支持/复核，observations只规范局部事实，diagnosis不冒充原评分或根因。
+
+content只核验同字段顶层success=false或ok=false；允许短摘录使用同一字段上下文。error引用只在该结构确有错误且没有明确成功冲突时作局部证据；未引用error不作为content结论依据。嵌套history/data中的失败不算本次执行失败。来源/配对复用11-12身份解析，故障证明没有复用分类关键词。当前只验证工具执行见证，不覆盖所有provider错误与任意自然语言。
+
+测试先于实现（results/1-red.log为缺模块红灯，1-green为六条通过）。候选与TS代码先哈希冻结，再生成12条合同测试：4正例，8拒绝/复核例；同作者、同类开发机制，非独立泛化证据。
+
+实际旧审核在complete=false下接受0/4正例，新审核接受4/4、错误接受0、FalseGap0；根因接受0。样本小且结构化，不将4/4宣传为生产100%。完全弃权的旧版接受Precision为NA，不是零风险或100%。
+
+另保留将同样输入complete设true的反事实探针：旧版会支持嵌套失败、借未引error、跨scope等坏例。此操作只用于隔离门禁掩盖的问题，不是修改原Gold或旧Baseline成绩，输出在oldCounterfactualComplete字段。
+
+旧版的分类与摘要问题没有通过删除门禁直接上线；sidecar输出用独立类别observed_execution_failure，不宣称旧14细分类全部被独立证明。局部失败被恢复仍是历史事件，不代表最终任务失败。新审核部分拒绝只有粗粒度insufficient，详细拒绝码仍需完善；不推广成对外安全边界。

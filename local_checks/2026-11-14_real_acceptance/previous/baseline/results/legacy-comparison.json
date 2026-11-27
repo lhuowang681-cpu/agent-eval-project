@@ -1,0 +1,1160 @@
+{
+  "mode": "HISTORICAL_REAL_RESPONSES_OFFLINE_REUSE",
+  "historicalRealCalls": 6,
+  "newRealCalls": 0,
+  "records": [
+    {
+      "id": "holdout0",
+      "historicalRawModelOutput": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout0run",
+          "caseId": "holdout0",
+          "topicId": "holdout0topic",
+          "threadId": null,
+          "operationId": "holdout0op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout0-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "summary": "User requested year 2025 but the orders.lookup call used year 2024.",
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout0-u",
+                "field": "content",
+                "quote": "\"year\": 2025"
+              },
+              {
+                "nodeId": "holdout0-c",
+                "field": "arguments",
+                "quote": "\"year\": 2024"
+              }
+            ],
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            }
+          }
+        ]
+      },
+      "historicalTransport": {
+        "model": "deepseek-flash",
+        "seconds": 1.482,
+        "usage": {
+          "prompt_tokens": 990,
+          "completion_tokens": 175,
+          "total_tokens": 1165,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 990
+        },
+        "actualCost": null,
+        "error": null,
+        "returnedModel": "deepseek-flash"
+      },
+      "baseline": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout0run",
+          "caseId": "holdout0",
+          "topicId": "holdout0topic",
+          "threadId": null,
+          "operationId": "holdout0op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout0-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "baselineReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout0run",
+          "caseId": "holdout0",
+          "topicId": "holdout0topic",
+          "threadId": null,
+          "operationId": "holdout0op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout0-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "modelCandidateNewReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout0run",
+          "caseId": "holdout0",
+          "topicId": "holdout0topic",
+          "threadId": null,
+          "operationId": "holdout0op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout0-digest",
+        "decision": "needs_review",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "closed_task_constraint_violation_not_proven"
+            ]
+          }
+        ],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "newSupportedLLMOnly": [],
+      "neutralFieldComparisons": [
+        {
+          "category": "parameter_task_mismatch",
+          "comparison": {
+            "key": "year",
+            "expected": 2025,
+            "actual": 2024
+          },
+          "fieldDifferenceComputable": true,
+          "notAClaimOfBusinessViolation": true
+        }
+      ]
+    },
+    {
+      "id": "holdout1",
+      "historicalRawModelOutput": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout1run",
+          "caseId": "holdout1",
+          "topicId": "holdout1topic",
+          "threadId": null,
+          "operationId": "holdout1op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout1-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Final answer reports status shipped, but the latest orders.lookup result reported status pending for the same order.",
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout1-r",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "holdout1-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "historicalTransport": {
+        "model": "deepseek-flash",
+        "seconds": 1.669,
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 181,
+          "total_tokens": 1173,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 864
+        },
+        "actualCost": null,
+        "error": null,
+        "returnedModel": "deepseek-flash"
+      },
+      "baseline": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout1run",
+          "caseId": "holdout1",
+          "topicId": "holdout1topic",
+          "threadId": null,
+          "operationId": "holdout1op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout1-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout1-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout1-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "holdout1-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"holdout1-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ]
+          }
+        ]
+      },
+      "baselineReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout1run",
+          "caseId": "holdout1",
+          "topicId": "holdout1topic",
+          "threadId": null,
+          "operationId": "holdout1op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout1-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout1-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout1-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "holdout1-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"holdout1-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "modelCandidateNewReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout1run",
+          "caseId": "holdout1",
+          "topicId": "holdout1topic",
+          "threadId": null,
+          "operationId": "holdout1op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout1-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout1-r",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "holdout1-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "newSupportedLLMOnly": [],
+      "neutralFieldComparisons": [
+        {
+          "category": "answer_tool_mismatch",
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          },
+          "fieldDifferenceComputable": true,
+          "notAClaimOfBusinessViolation": false
+        }
+      ]
+    },
+    {
+      "id": "holdout2",
+      "historicalRawModelOutput": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout2run",
+          "caseId": "holdout2",
+          "topicId": "holdout2topic",
+          "threadId": null,
+          "operationId": "holdout2op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout2-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "stale_information_use",
+            "claimLevel": "observation",
+            "summary": "Final answer reports status 'shipped' from the earlier lookup result, while the later successful lookup for the same order shows status 'pending'.",
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout2-r",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              },
+              {
+                "nodeId": "holdout2-r2",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "holdout2-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          },
+          {
+            "id": "s2",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Final assistant content states status 'shipped' while the latest successful lookup for the same order returned status 'pending'.",
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout2-r2",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "holdout2-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "historicalTransport": {
+        "model": "deepseek-flash",
+        "seconds": 1.962,
+        "usage": {
+          "prompt_tokens": 1236,
+          "completion_tokens": 327,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1108
+        },
+        "actualCost": null,
+        "error": null,
+        "returnedModel": "deepseek-flash"
+      },
+      "baseline": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout2run",
+          "caseId": "holdout2",
+          "topicId": "holdout2topic",
+          "threadId": null,
+          "operationId": "holdout2op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout2-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout2-r2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout2-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "holdout2-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"holdout2-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ]
+          },
+          {
+            "id": "rule2",
+            "category": "stale_information_use",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout2-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout2-order\", \"status\": \"shipped\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "holdout2-r2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout2-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "holdout2-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"holdout2-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ]
+          }
+        ]
+      },
+      "baselineReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout2run",
+          "caseId": "holdout2",
+          "topicId": "holdout2topic",
+          "threadId": null,
+          "operationId": "holdout2op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout2-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          },
+          {
+            "id": "rule2",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout2-r2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout2-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "holdout2-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"holdout2-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          },
+          {
+            "id": "rule2",
+            "category": "stale_information_use",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout2-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout2-order\", \"status\": \"shipped\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "holdout2-r2",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout2-order\", \"status\": \"pending\", \"year\": 2025}}"
+              },
+              {
+                "nodeId": "holdout2-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"holdout2-order\", \"status\": \"shipped\", \"year\": 2025}"
+              }
+            ],
+            "summary": "Observed stale_information_use: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "modelCandidateNewReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout2run",
+          "caseId": "holdout2",
+          "topicId": "holdout2topic",
+          "threadId": null,
+          "operationId": "holdout2op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout2-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          },
+          {
+            "id": "s2",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s1",
+            "category": "stale_information_use",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout2-r",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              },
+              {
+                "nodeId": "holdout2-r2",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "holdout2-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "summary": "Observed stale_information_use: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          },
+          {
+            "id": "s2",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout2-r2",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "holdout2-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "newSupportedLLMOnly": [],
+      "neutralFieldComparisons": [
+        {
+          "category": "stale_information_use",
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          },
+          "fieldDifferenceComputable": true,
+          "notAClaimOfBusinessViolation": false
+        },
+        {
+          "category": "answer_tool_mismatch",
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          },
+          "fieldDifferenceComputable": true,
+          "notAClaimOfBusinessViolation": false
+        }
+      ]
+    },
+    {
+      "id": "holdout3",
+      "historicalRawModelOutput": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout3run",
+          "caseId": "holdout3",
+          "topicId": "holdout3topic",
+          "threadId": null,
+          "operationId": "holdout3op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout3-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "historicalTransport": {
+        "model": "deepseek-flash",
+        "seconds": 1.258,
+        "usage": {
+          "prompt_tokens": 990,
+          "completion_tokens": 71,
+          "total_tokens": 1061,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 862
+        },
+        "actualCost": null,
+        "error": null,
+        "returnedModel": "deepseek-flash"
+      },
+      "baseline": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout3run",
+          "caseId": "holdout3",
+          "topicId": "holdout3topic",
+          "threadId": null,
+          "operationId": "holdout3op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout3-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "baselineReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout3run",
+          "caseId": "holdout3",
+          "topicId": "holdout3topic",
+          "threadId": null,
+          "operationId": "holdout3op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout3-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "modelCandidateNewReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout3run",
+          "caseId": "holdout3",
+          "topicId": "holdout3topic",
+          "threadId": null,
+          "operationId": "holdout3op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout3-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "newSupportedLLMOnly": [],
+      "neutralFieldComparisons": []
+    },
+    {
+      "id": "holdout4",
+      "historicalRawModelOutput": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout4run",
+          "caseId": "holdout4",
+          "topicId": "holdout4topic",
+          "threadId": null,
+          "operationId": "holdout4op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout4-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "historicalTransport": {
+        "model": "deepseek-flash",
+        "seconds": 4.005,
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 71,
+          "total_tokens": 1305,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1106
+        },
+        "actualCost": null,
+        "error": null,
+        "returnedModel": "deepseek-flash"
+      },
+      "baseline": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout4run",
+          "caseId": "holdout4",
+          "topicId": "holdout4topic",
+          "threadId": null,
+          "operationId": "holdout4op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout4-digest",
+        "decision": "abstain",
+        "observations": []
+      },
+      "baselineReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout4run",
+          "caseId": "holdout4",
+          "topicId": "holdout4topic",
+          "threadId": null,
+          "operationId": "holdout4op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout4-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "modelCandidateNewReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout4run",
+          "caseId": "holdout4",
+          "topicId": "holdout4topic",
+          "threadId": null,
+          "operationId": "holdout4op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout4-digest",
+        "decision": "abstain",
+        "reviews": [],
+        "supportedObservations": [],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "newSupportedLLMOnly": [],
+      "neutralFieldComparisons": []
+    },
+    {
+      "id": "holdout5",
+      "historicalRawModelOutput": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout5run",
+          "caseId": "holdout5",
+          "topicId": "holdout5topic",
+          "threadId": null,
+          "operationId": "holdout5op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout5-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "s1",
+            "category": "parameter_task_mismatch",
+            "claimLevel": "observation",
+            "summary": "User requested year 2025 but the orders.lookup call used year 2024.",
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout5-u",
+                "field": "content",
+                "quote": "\"year\": 2025"
+              },
+              {
+                "nodeId": "holdout5-c",
+                "field": "arguments",
+                "quote": "\"year\": 2024"
+              }
+            ],
+            "comparison": {
+              "key": "year",
+              "expected": 2025,
+              "actual": 2024
+            }
+          },
+          {
+            "id": "s2",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Tool returned status pending but the final answer states status shipped.",
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout5-r",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "holdout5-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            }
+          }
+        ]
+      },
+      "historicalTransport": {
+        "model": "deepseek-flash",
+        "seconds": 1.996,
+        "usage": {
+          "prompt_tokens": 992,
+          "completion_tokens": 278,
+          "total_tokens": 1270,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 864
+        },
+        "actualCost": null,
+        "error": null,
+        "returnedModel": "deepseek-flash"
+      },
+      "baseline": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout5run",
+          "caseId": "holdout5",
+          "topicId": "holdout5topic",
+          "threadId": null,
+          "operationId": "holdout5op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout5-digest",
+        "decision": "candidates",
+        "observations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "summary": "Local comparison; impact and root unknown.",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout5-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout5-order\", \"status\": \"pending\", \"year\": 2024}}"
+              },
+              {
+                "nodeId": "holdout5-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"holdout5-order\", \"status\": \"shipped\", \"year\": 2024}"
+              }
+            ]
+          }
+        ]
+      },
+      "baselineReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout5run",
+          "caseId": "holdout5",
+          "topicId": "holdout5topic",
+          "threadId": null,
+          "operationId": "holdout5op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout5-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "rule1",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "rule1",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout5-r",
+                "field": "content",
+                "quote": "{\"success\": true, \"data\": {\"orderId\": \"holdout5-order\", \"status\": \"pending\", \"year\": 2024}}"
+              },
+              {
+                "nodeId": "holdout5-a",
+                "field": "content",
+                "quote": "{\"orderId\": \"holdout5-order\", \"status\": \"shipped\", \"year\": 2024}"
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "modelCandidateNewReview": {
+        "schemaVersion": 1,
+        "scope": {
+          "runId": "holdout5run",
+          "caseId": "holdout5",
+          "topicId": "holdout5topic",
+          "threadId": null,
+          "operationId": "holdout5op",
+          "traceIds": []
+        },
+        "inputDigest": "holdout5-digest",
+        "decision": "supported",
+        "reviews": [
+          {
+            "id": "s1",
+            "existence": "valid",
+            "support": "insufficient",
+            "issues": [
+              "closed_task_constraint_violation_not_proven"
+            ]
+          },
+          {
+            "id": "s2",
+            "existence": "valid",
+            "support": "supported",
+            "issues": []
+          }
+        ],
+        "supportedObservations": [
+          {
+            "id": "s2",
+            "category": "answer_tool_mismatch",
+            "claimLevel": "observation",
+            "comparison": {
+              "key": "status",
+              "expected": "pending",
+              "actual": "shipped"
+            },
+            "evidenceRefs": [
+              {
+                "nodeId": "holdout5-r",
+                "field": "content",
+                "quote": "\"status\": \"pending\""
+              },
+              {
+                "nodeId": "holdout5-a",
+                "field": "content",
+                "quote": "\"status\": \"shipped\""
+              }
+            ],
+            "summary": "Observed answer_tool_mismatch: status expected pending; actual shipped. Causal owner and task impact unconfirmed."
+          }
+        ],
+        "coverage": {
+          "source": "database_messages",
+          "complete": false,
+          "warnings": [
+            "provider_request_payload_unavailable"
+          ]
+        }
+      },
+      "newSupportedLLMOnly": [],
+      "neutralFieldComparisons": [
+        {
+          "category": "parameter_task_mismatch",
+          "comparison": {
+            "key": "year",
+            "expected": 2025,
+            "actual": 2024
+          },
+          "fieldDifferenceComputable": true,
+          "notAClaimOfBusinessViolation": true
+        },
+        {
+          "category": "answer_tool_mismatch",
+          "comparison": {
+            "key": "status",
+            "expected": "pending",
+            "actual": "shipped"
+          },
+          "fieldDifferenceComputable": true,
+          "notAClaimOfBusinessViolation": false
+        }
+      ]
+    }
+  ],
+  "baselineClaims": 4,
+  "baselineSupported": 4,
+  "historicalModelClaims": 6,
+  "historicalModelSupportedUnderNewReview": 4,
+  "newSupportedLLMOnly": 0,
+  "computableFieldComparisons": 6,
+  "limitation": "Old simple synthetic inputs were already observed; not an independent test. A missing closed constraint is now unverified, not a proven business violation."
+}

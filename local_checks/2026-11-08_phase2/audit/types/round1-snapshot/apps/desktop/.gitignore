@@ -1,0 +1,19 @@
+node_modules
+dist
+out
+.DS_Store
+.eslintcache
+*.log*
+standalone
+release
+
+bin
+
+# Vendored at build time by scripts/install-opencli.mjs
+resources/opencli
+
+# Built at build time by electron-builder.mjs beforePack (tripyoyo CLI sidecar)
+resources/cli-package.json
+
+# Written at build time by build.py (MCD), read by main process for auto-update
+resources/build-info.json
