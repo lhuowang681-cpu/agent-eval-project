@@ -1,4 +1,0 @@
-﻿module_id,module_name,layer_id,layer_name,count,pct
-L2.2,GeneralChatAgent,L2,L2,3,60.0
-L5.2,ModelParamsResolver,L5,L5,1,20.0
-L6.3,MCP Service,L6,L6,1,20.0

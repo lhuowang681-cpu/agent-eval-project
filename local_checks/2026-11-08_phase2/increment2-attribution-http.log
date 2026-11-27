@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\1\Desktop\��ҵagent\agent-eval-project\local_checks\2026-11-08_phase2\attribution_http.py", line 35, in <module>
-    before={quality['id']:scores(quality),failed['id']:scores(failed)}
-                          ~~~~~~^^^^^^^^^
-  File "C:\Users\1\Desktop\��ҵagent\agent-eval-project\local_checks\2026-11-08_phase2\attribution_http.py", line 14, in scores
-    return {'status':detail['status'],'metrics':detail['metrics'],'topics':[{'topicId':t['topicId'],'testCaseId':t['testCaseId'],'status':t['status'],'passed':t['passed'],'score':t['score'],'evalResult':t['evalResult']} for t in detail['topics']]}
-                                                                                       ~^^^^^^^^^^^
-KeyError: 'topicId'
-{"status": "failed_or_blocked", "events": 4}

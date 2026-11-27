@@ -1,2 +1,0 @@
-export const DEFAULT_SKILL_MARKET_ICON = '🧩';
-export const DEFAULT_MCP_MARKET_ICON = 'MCP_AVATAR';

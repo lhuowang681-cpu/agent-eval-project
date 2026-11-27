@@ -1,7 +1,0 @@
-﻿error_category,error_category_zh,count,pct,label
-builtin_tool_contract_invalid,Builtin 工具参数或命令不符合契约,3,60.0,"Builtin 工具参数或命令不符合契约
-(builtin_tool_contract_invalid)"
-external_transport,外部工具网络或服务异常,1,20.0,"外部工具网络或服务异常
-(external_transport)"
-model_missing,模型请求缺少 model,1,20.0,"模型请求缺少 model
-(model_missing)"

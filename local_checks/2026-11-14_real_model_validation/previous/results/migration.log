@@ -1,1 +1,0 @@
-{"version":"PostgreSQL 16.15, compiled by Visual C++ build 1944, 64-bit","applied":107,"skipped":2,"tables":110,"extensions":[{"extname":"plpgsql","extversion":"1.0"},{"extname":"vector","extversion":"0.8.6"}]}

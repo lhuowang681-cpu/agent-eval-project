@@ -1,6 +1,0 @@
-{
-  "stage": "portable_copy_integrity",
-  "cause": "Recursive ignore of FINAL_MANIFEST.json also omitted the immutable previous-version manifest.",
-  "candidateOrGoldChanged": false,
-  "fix": "Only omit the new root delivery manifest; preserve previous/FINAL_MANIFEST.json."
-}

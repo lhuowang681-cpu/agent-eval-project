@@ -1,5 +1,0 @@
-[mock-services] listening on http://127.0.0.1:58891
-[mock-services]   search  → /search?q=
-[mock-services]   crawler → /crawl?url=
-[mock-services]   market  → /market/*
-[mock-services]   index   → /local-index/{agents,plugins}.json

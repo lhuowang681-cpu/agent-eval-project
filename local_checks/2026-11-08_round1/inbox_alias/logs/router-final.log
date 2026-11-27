@@ -1,8 +1,0 @@
-2026-11-08T07:44:39.874Z lobe-async:init Initializing async tRPC with context and superjson transformer
-2026-11-08T07:44:39.875Z lobe-async:init Async tRPC initialized successfully
-2026-11-08T07:44:40.435Z lobe-async:init Initializing async tRPC with context and superjson transformer
-2026-11-08T07:44:40.436Z lobe-async:init Async tRPC initialized successfully
-2026-11-08T07:44:49.753Z lobe-mcp:deps-check Installation checker registered: npm
-2026-11-08T07:44:49.753Z lobe-mcp:deps-check Installation checker registered: python
-2026-11-08T07:44:49.753Z lobe-mcp:deps-check Installation checker registered: manual
-JSON report written to C:/Users/1/Desktop/就业agent/agent-eval-project/local_checks/2026-11-08_round1/inbox_alias/router-final.json

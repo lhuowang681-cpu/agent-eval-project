@@ -1,1 +1,0 @@
-﻿trace_id,topic_id,timestamp,category,category_zh,module_id,module_name,badcase_kind,actionability,needs_causal_review,tool_source,tool_name,tool_call_id,tool_arguments,signal,context,attribution_basis,error_exposure_node,abnormal_input_source,user_task,recovered,recovery_tool_call_id,recovery_scope,candidate_modules,source_file,source_line

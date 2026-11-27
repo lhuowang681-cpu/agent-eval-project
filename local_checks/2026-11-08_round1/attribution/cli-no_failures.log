@@ -1,4 +1,0 @@
-part_000.jsonl done 0
-{"input_traces": 1, "failure_events": 0, "failure_topics": 0, "internal_events": 0, "internal_topics": 0, "external_events": 0, "external_topics": 0, "tool_sources": {}, "internal_categories": {}, "external_categories": {}, "input_lines": 1, "blank_lines": 0, "invalid_lines": 0, "raw_failure_events": 0, "duplicate_failure_events": 0, "input_complete": true}
-
-Failed to find real location of C:\ProgramData\anaconda3\python.exe

@@ -1,0 +1,18 @@
+{
+  "archiveTag": "archive/2026-11-27-before-layout",
+  "archiveCommit": "379b403c205530d3274c0ea6b42d835ab7436e14",
+  "moves": {
+    "local_checks/2026-11-08_platform_audit/platform": "platform",
+    "local_checks/2026-11-14_system_vnext": "diagnostics",
+    "local_checks/2026-11-14_real_acceptance": "experiments/postgres-acceptance",
+    "local_checks/2026-11-14_real_model_validation_v2": "experiments/model-smoke",
+    "local_checks/2026-11-14_real_model_validation": "experiments/model-smoke-v1",
+    "study_pack": "docs/study-pack"
+  },
+  "archivedOnly": [
+    "local_checks: all other historical rounds",
+    "deliverables",
+    "root delivery manifests and old handoff files"
+  ],
+  "platformBusinessLogicChanged": false
+}

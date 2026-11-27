@@ -1,8 +1,0 @@
-{
-  "files": {
-    "dev.jsonl": "77dff0310ab180a3b6cd4b6798738ea7ef768c7ff672a8cfb2ddefde343ecc08",
-    "holdout.jsonl": "acd924f80d054e85449ac99221c12e5d56721b6e66a390d064544171bcf0c2e9"
-  },
-  "source": "new single-author synthetic cases; holdout temporal split, NOT independent author or production gold",
-  "notPhase3Holdout": true
-}

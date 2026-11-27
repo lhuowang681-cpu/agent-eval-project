@@ -1,6 +1,0 @@
-✅ dev user already exists: phase2-audit-user (offline-dev@localhost)
-   Pass --force to overwrite the user row.
-
-[rbac] 权限定义 119 条
-[rbac] rbac_permissions 现有 119 条
-[rbac] admin 角色已授予（role_id=Ch7e75TejbuR5zPh），该用户 user_roles=1

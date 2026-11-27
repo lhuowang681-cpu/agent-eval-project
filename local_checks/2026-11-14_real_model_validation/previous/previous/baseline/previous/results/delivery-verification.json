@@ -1,9 +1,0 @@
-{
-  "dataHashesUnchanged": true,
-  "availableOriginalFilesUnchanged": 10,
-  "portableBaselineMatchesOriginal": true,
-  "realCalls": 6,
-  "credentialPatternScanFiles": 52,
-  "credentialPatternMatches": 0,
-  "note": "Pattern scan is not comprehensive secret/PII certification; no production data exported."
-}
