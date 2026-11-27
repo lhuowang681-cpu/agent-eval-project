@@ -28,8 +28,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2441,
-      "sha256": "a24f21cf0ab02092c50c02ff974195c5f9407534eaf8ddc177b5ebee06e0594e"
+      "bytes": 9802,
+      "sha256": "da00bae6a18220055c73297ad11fbe4571492ba4681f0047536f803a34e4c763"
     },
     {
       "path": "SOURCE_MANIFEST.json",
@@ -152793,8 +152793,8 @@
     },
     {
       "path": "DELIVERY_MANIFEST.json",
-      "bytes": 8521515,
-      "sha256": "ed4c794bf1d033b5c4313384212f9c8dcf87820a3c6f7c0d15027b07a121f762"
+      "bytes": 8521519,
+      "sha256": "0b532a70f87274f99382c0dd27a497a21541493d591c2b8e9873244938befd15"
     }
   ],
   "exportRedactions": [],
