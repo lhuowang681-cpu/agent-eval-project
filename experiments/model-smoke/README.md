@@ -1,22 +1,35 @@
-> 当前目录由日期目录迁移而来。现在从仓库根运行 `python -B scripts/check.py` / `python -B scripts/demo.py`；本文后续为原阶段记录。原路径与冻结哈希对应整理前归档，见[仓库结构说明](../../docs/REPOSITORY_LAYOUT.md)。
+# 真实模型开发实验
 
-# Smoke输出合同修复与真实继续验证
+通过平台 ModelRuntime 执行 6 次真实模型请求，覆盖 4 个不同 Trace，对比 v1、v2、v3 三个 Prompt 版本的结构化输出、规则对照和证据审核结果。
 
-先看RESULTS.md。原授权累计6次已用完，40例正式调用0。v1失败、v2两次及v3三次全部保存；最终只有v3三条完整通过接口，不能宣传6/6成功。
+## 实现与验证
 
-integration/provider.ts是v2，provider-v3.ts是v3；所有版本仍复用原ModelRuntime，不新增供应商SDK。审核源为frozen/reviewer的逐字旧版快照，未放宽规则。v1输入/结果/配置在archive_inputs，旧原目录和ZIP保留；共享预算账本的最终快照为archive_inputs/v1-paid-smoke-ledger.json。
+- 复用 ModelRuntime 接入供应商，采用版本化 Prompt 和结构化候选合同。
+- 校验 scope、inputDigest、decision 枚举和比较值类型。
+- 逐次保存原始脱敏响应、Token 用量、请求延迟与审核结果。
+- v3 的 3 次输出通过结构校验，覆盖答案矛盾、正常轨迹和状态更新后的恢复轨迹。
+- 完成 6 项离线结果测试，检查身份字段、数值类型、枚举、证据支持、轨迹状态与调用记录。
 
-results/analysis.json保存六次原始模型输出、原规则、增强规则与证据审核并列结果；per-call.csv按调用列出，不把重复Trace算独立案例。results/real-smoke-v2.json/v3.json保存供应商脱敏响应、Token和延迟。
+## 离线检查
 
-仅需Python标准库即可离线重算：
-
-```powershell
-python -B analyze.py
+```bash
+cd experiments/model-smoke
 python -B test_results.py
 ```
 
-不需要Key，不产生模型请求。frozen/是便携引用快照，PROVENANCE有SHA，不代表另一个活跃分类器。实际TS/ModelRuntime重跑需原平台依赖，但当前预算已耗尽，不能删账本或覆盖真实结果来再次执行。
+也可在仓库根运行 `python -B scripts/check.py`，统一检查诊断模块、指标计算与模型结果。
 
-FREEZE及FREEZE_V3均在相应真实请求前保存。REVISION_PLAN/V3说明开发修订，AUTHORIZATION保留用户继续指令。程序保持原始身份、枚举和数值类型严格检查，未自动修复模型输出。
+## 文件导航
 
-默认Shadow未启用，平台评分/诊断源码、原Gold均未修改。Key仅隐藏输入传给已退出的子进程，报告和交付不含凭据。仍缺严格独立人工Gold与真实规则外增量证据，因此不推广。
+| 位置 | 内容 |
+| --- | --- |
+| `integration/provider.ts`、`provider-v3.ts` | v2 / v3 Provider 与 Prompt 实现 |
+| `frozen/` | 规则和审核器快照 |
+| `archive_inputs/` | v1 输入、结果与共享调用账本 |
+| `results/real-smoke-v2.json`、`real-smoke-v3.json` | 供应商响应、Token 与延迟 |
+| `results/analysis.json` | 六次请求的模型输出、规则对照与审核分析 |
+| `results/per-call.csv` | 逐次调用汇总 |
+| `analyze.py` | 逐次分析与指标汇总逻辑 |
+| `FREEZE.json`、`FREEZE_V3.json` | 各版本实验前的配置和源码记录 |
+
+实验结果见 [RESULTS.md](RESULTS.md)，Prompt 迭代过程见 [REVISION_PLAN.md](REVISION_PLAN.md) 和 [REVISION_V3.md](REVISION_V3.md)。

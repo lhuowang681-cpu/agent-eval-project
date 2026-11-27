@@ -1,11 +1,13 @@
 # 实验索引
 
-| 目录 | 主题 | 结果入口 |
+围绕诊断链路集成、规则与证据审核对照、真实模型输出三个方向组织实验。
+
+| 目录 | 实验内容 | 结果入口 |
 | --- | --- | --- |
-| [postgres-acceptance](postgres-acceptance/) | 真实数据库联调与 40 例合成离线对照 | [回归总账](postgres-acceptance/REGRESSION_REPORT.md)、[规则/审核对照](postgres-acceptance/BASELINE_SHADOW_COMPARISON.md) |
-| [model-smoke](model-smoke/) | 最新 6 次真实模型开发请求的版本比较与离线分析 | [结果](model-smoke/RESULTS.md) |
-| [model-smoke-v1](model-smoke-v1/) | 前序 Smoke、失败输入及共享预算账本 | [说明](model-smoke-v1/README.md) |
+| [postgres-acceptance](postgres-acceptance/README.md) | PostgreSQL 联调、ModelRuntime 适配与 40 例合成数据对照 | [联调回归](postgres-acceptance/REGRESSION_REPORT.md)、[规则与审核对照](postgres-acceptance/BASELINE_SHADOW_COMPARISON.md) |
+| [model-smoke](model-smoke/README.md) | 6 次真实模型请求、三个 Prompt 版本及逐次审核分析 | [模型结果](model-smoke/RESULTS.md) |
+| [model-smoke-v1](model-smoke-v1/README.md) | 首轮接口校验、前序输入与共享调用账本 | [首轮校验](model-smoke-v1/PROVIDER_REAL_VALIDATION.md) |
 
-这些是不同范围的历史实验，不将测试、样本或调用数量累加成统一质量成绩。运行 `python -B scripts/check.py` 可从仓库根进行离线检查；该命令不请求模型。
+从仓库根执行 `python -B scripts/check.py`，运行 sidecar、指标计算和已有模型输出的三组离线测试，共 24 项。
 
-目录已适配当前布局；历史报告与冻结清单保留原记录。严格复现当时环境和哈希，请参阅[归档与路径说明](../docs/REPOSITORY_LAYOUT.md)。
+实验目录包含数据协议、配置、冻结快照、原始输出与分析报告。目录对应关系见[仓库结构说明](../docs/REPOSITORY_LAYOUT.md)。

@@ -21,9 +21,9 @@
 
 归档标签：[archive/2026-11-27-before-layout](https://github.com/lhuowang681-cpu/agent-eval-project/tree/archive/2026-11-27-before-layout)，对应提交 `379b403c205530d3274c0ea6b42d835ab7436e14`。
 
-该标签保留整理前的全部文件，包括早期实验、两份完整平台基线、旧交付包、旧入口说明、学习交接和原路径校验清单。主分支移除了约 20,000 个仅用于这些历史材料的文件，未清除 Git 历史；原本地项目目录也没有改动。
+该标签保留整理前的全部文件，包括早期实验、两份完整平台基线、旧交付包、旧入口说明、学习交接和原路径校验清单。主分支集中展示当前平台、诊断模块和最新实验，约 20,000 个历史文件通过归档标签访问。
 
-若需严格按当时的路径与冻结哈希重放旧实验，可以另外检出该标签：
+检出归档标签以使用各阶段的原始目录和冻结哈希：
 
 ```bash
 git clone --branch archive/2026-11-27-before-layout https://github.com/lhuowang681-cpu/agent-eval-project.git agent-eval-history
@@ -43,11 +43,9 @@ git clone --branch archive/2026-11-27-before-layout https://github.com/lhuowang6
 
 机器可读对应关系见 [repository-layout.json](repository-layout.json)。
 
-## 验证边界
+## 检查与复现
 
-- 根目录离线检查覆盖 14 项 sidecar 测试、4 项指标测试和 6 项已有真实模型结果的离线断言；最后一组只读取历史结果，不调用模型。
-- 演示仍使用原合成输入和 Mock 候选，结果写到标准输出，不覆盖冻结结果文件。
-- 整理只改目录、导航及连接到平台的相对路径，没有修改平台业务逻辑、Gold、原始模型响应或评分算法。
-- 实验内的 `FREEZE`、`FINAL_MANIFEST` 和旧验证器是历史证据，其原路径/源码哈希对应归档标签。主分支的路径适配不改写这些历史记录；严格冻结实验应使用该标签。
-- 历史报告、教材中的日期、旧路径和原电脑绝对路径保留为当时记录。当前命令以根 README 和 `scripts/` 为准。
-- 本次没有安装平台依赖，也没有重跑 PostgreSQL、Web UI、完整 TypeScript 套件或付费模型。
+- `python -B scripts/check.py`：运行 14 项 sidecar 测试、4 项指标测试和 6 项模型结果离线断言。
+- `python -B scripts/demo.py`：读取合成轨迹与 Mock 候选，将结构化分析结果输出到终端。
+- 实验目录保存数据协议、Prompt、输入快照、逐例输出和执行记录。
+- 归档标签保存原目录结构及对应的 `FREEZE`、`FINAL_MANIFEST` 和校验器，可用于按原路径复现各阶段实验。

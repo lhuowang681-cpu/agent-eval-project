@@ -1,13 +1,21 @@
-> 当前目录由日期目录迁移而来。现在从仓库根运行 `python -B scripts/check.py` / `python -B scripts/demo.py`；本文后续为原阶段记录。原路径与冻结哈希对应整理前归档，见[仓库结构说明](../../docs/REPOSITORY_LAYOUT.md)。
+# 首轮真实模型接口校验
 
-# 真实模型Smoke已执行：首条失败后停止
+通过 DeepSeek 与 ModelRuntime 完成首轮真实请求，记录 HTTP 响应、候选 JSON、用量与审核裁决。此次调用返回 HTTP 200，使用 736 Token；结构校验识别出缺少 scope / inputDigest，并记录拒绝结果。
 
-已使用用户此前提供的DeepSeek凭据，实际请求1次、HTTP200、736 Token。候选JSON缺少scope/inputDigest，被结构校验拒绝。剩余5条Smoke及40例正式实验未运行，Shadow继续关闭。
+## 已完成工作
 
-先看PROVIDER_REAL_VALIDATION.md、COST_AND_LATENCY.md、EXPERIMENT_RESULTS.md、FINAL_DECISION.md。原始脱敏响应在results/real-smoke.json，逐例状态在smoke-cases.csv，裁决在SMOKE_VERDICT.json。
+- 实现真实供应商请求与结构化候选处理。
+- 验证任务身份字段的完整性校验。
+- 保存脱敏响应、逐例状态、Token 与延迟记录。
+- 建立实验协议、输入快照和共享调用账本，供[后续 Prompt 迭代](../model-smoke/README.md)使用。
 
-FREEZE/RUN_FREEZE、BUDGET_REQUEST、EXPERIMENT_PROTOCOL及readiness为调用前记录，保留原样；最新授权在BUDGET_AUTHORIZATION，实际次数在paid-smoke-ledger。不得删账本、覆盖结果或自动消耗剩余次数。
+## 阅读入口
 
-GOLD_REVIEW及逐例gold/REVIEW保留40例原标签和审查意见：单作者、部分任务带诊断提示，不是严格独立人工Gold。不能用旧Mock结果冒充真实模型效果。
+- [供应商接口校验](PROVIDER_REAL_VALIDATION.md)
+- [成本与延迟](COST_AND_LATENCY.md)
+- [实验结果](EXPERIMENT_RESULTS.md)
+- 原始输出：`results/real-smoke.json`
+- 逐例状态：`smoke-cases.csv`
+- 审核裁决：`SMOKE_VERDICT.json`
 
-密钥仅隐藏输入并传给子进程，交付不含凭据。原平台/Prompt/审核/Gold与调用前Hash一致。供应商实际账单未核验，估算见成本报告。原配置和脚本保留供审计；没有通过修改合同、自动补字段来放行本次失败。
+后续六次请求的综合分析见 [model-smoke/RESULTS.md](../model-smoke/RESULTS.md)。
